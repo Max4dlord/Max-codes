@@ -21,7 +21,6 @@ const STEPS = [
 export default function Landing() {
   const course = courses[0]
   const topics = getTopics(course.id)
-  const totalQ = questionBank[course.id]?.length || 0
 
   return (
     <>
