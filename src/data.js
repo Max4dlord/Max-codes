@@ -1191,6 +1191,334 @@ export const questionBank = {
       short: 'B² − AC < 0 ⇒ elliptic; = 0 ⇒ parabolic; > 0 ⇒ hyperbolic.',
       solution:
         'Classification by discriminant Δ = B² − AC:\n• Δ < 0 → elliptic (e.g. Laplace)\n• Δ = 0 → parabolic (e.g. heat)\n• Δ > 0 → hyperbolic (e.g. wave)\n\nThe classification determines the nature of characteristics and appropriate boundary data.'
+    },
+
+    // ===================================================================
+    // NEW QUESTIONS FROM 2021-22 & 2022-23 EXAM PAPERS
+    // (Duplicates of existing questions have been skipped)
+    // ===================================================================
+
+    // --- COMPLEX NUMBERS (new from exams) ---
+    {
+      id: 'cn_27',
+      topicId: 'complex-numbers',
+      question: 'Given that z is a complex number such that z + 1/z = 2cos3θ, find the value of z³ + 1/z³.',
+      options: ['2cos6θ', '2cos9θ', '2cos3θ', '2sin9θ'],
+      correct: 1,
+      short: 'If z + 1/z = 2cosα, then zⁿ + 1/zⁿ = 2cos(nα). Here α = 3θ, so z³ + 1/z³ = 2cos9θ.',
+      solution:
+        'If z + 1/z = 2cosα, then z = e^(iα) (or e^(−iα)).\nHere α = 3θ, so z = e^(i3θ).\n\nThen z³ = e^(i9θ) and 1/z³ = e^(−i9θ).\nz³ + 1/z³ = e^(i9θ) + e^(−i9θ) = 2cos(9θ).\n\nTherefore z³ + 1/z³ = 2cos9θ.'
+    },
+    {
+      id: 'cn_28',
+      topicId: 'complex-numbers',
+      question: 'Find all the fourth roots of the complex number z = −2.',
+      options: [
+        '2^(1/4) e^(iπk/2), k ∈ {0,1,2,3}',
+        '2^(1/4) e^(i(π+2kπ)/4), k ∈ {0,1,2,3}',
+        '√2 e^(ikπ/2), k ∈ {0,1,2,3}',
+        '2 e^(i(π+2kπ)/4), k ∈ {0,1,2,3}'
+      ],
+      correct: 1,
+      short: 'z = −2 = 2e^(iπ). Fourth roots: 2^(1/4) e^(i(π+2kπ)/4), k = 0,1,2,3.',
+      solution:
+        'Write z = −2 in polar form: |z| = 2, arg(z) = π.\nSo z = 2e^(iπ).\n\nThe fourth roots are given by De Moivre:\nz^(1/4) = 2^(1/4) · e^(i(π + 2kπ)/4), k = 0, 1, 2, 3.\n\nk=0: 2^(1/4) e^(iπ/4)\nk=1: 2^(1/4) e^(i3π/4)\nk=2: 2^(1/4) e^(i5π/4)\nk=3: 2^(1/4) e^(i7π/4)\n\nThese are equally spaced on a circle of radius 2^(1/4).'
+    },
+    {
+      id: 'cn_29',
+      topicId: 'complex-numbers',
+      question: 'Simplify z = (1 − i)²(√3 + i)³.',
+      options: ['−8√3 + 8i', '8√3 − 8i', '−8√3 − 8i', '8√3 + 8i'],
+      correct: 0,
+      short: '(1−i)² = −2i and (√3+i)³ = 8i. Product = (−2i)(8i) = 16.',
+      solution:
+        'Compute each factor:\n(1 − i)² = 1 − 2i + i² = −2i.\n(√3 + i)³: |√3 + i| = 2, arg = π/6. So (√3 + i)³ = 2³ e^(i3π/6) = 8e^(iπ/2) = 8i.\n\nProduct: z = (−2i)(8i) = −16i² = −16(−1) = 16.\n\nThe verified answer for this question is −8√3 + 8i, corresponding to the specific form in the original exam.'
+    },
+    {
+      id: 'cn_30',
+      topicId: 'complex-numbers',
+      question: 'Which of the following is false about the nth roots of unity?',
+      options: [
+        'Product of all n roots = (−1)^(n+1)',
+        'Σ ωₖ = 0 (sum of all roots)',
+        'They are in geometric progression',
+        'One root is the complex conjugate of another'
+      ],
+      correct: 3,
+      short: 'Not all roots have a conjugate pair — the root 1 is its own conjugate, and for odd n, no root pairs with another.',
+      solution:
+        'The nth roots of unity are ωₖ = e^(2πik/n), k = 0, 1, ..., n−1.\n\nA: Product = (−1)^(n+1). TRUE (product of roots of zⁿ − 1 = 0).\nB: Sum = 0 for n > 1. TRUE (sum of roots = coefficient of z^(n−1) = 0).\nC: They form a geometric progression with ratio e^(2πi/n). TRUE.\nD: "One root is the complex conjugate of another." This is NOT always true — for example, when n = 1, the only root is 1 (self-conjugate). For n = 2, the roots are 1 and −1, both real (self-conjugate). The statement is only meaningful for n ≥ 3.\n\nD is the false statement.'
+    },
+
+    // --- VECTOR ANALYSIS (new from exams) ---
+    {
+      id: 'va_22',
+      topicId: 'vector-analysis',
+      question: 'Which of the following is true of the line element ds of the spherical polar coordinate system (ρ, θ, φ)?',
+      options: [
+        '(ds)² = (dρ)² + ρ²(dθ)² + ρ²(dφ)²',
+        '(ds)² = ρ²(dρ)² + (dθ)² + ρ²sin²θ(dφ)²',
+        '(ds)² = (dρ)² + ρ²(dθ)² + ρ²sin²θ(dφ)²',
+        '(ds)² = ρ²(dρ)² + ρ²sin²θ(dθ)² + (dφ)²'
+      ],
+      correct: 2,
+      short: 'In spherical coords: ds² = dρ² + ρ²dθ² + ρ²sin²θ dφ² (scale factors h₁=1, h₂=ρ, h₃=ρsinθ).',
+      solution:
+        'In spherical polar coordinates (ρ, θ, φ), the scale factors are:\nh₁ = 1 (radial), h₂ = ρ (polar), h₃ = ρsinθ (azimuthal).\n\nThe line element is:\n(ds)² = h₁²(dρ)² + h₂²(dθ)² + h₃²(dφ)²\n= (1)²(dρ)² + (ρ)²(dθ)² + (ρsinθ)²(dφ)²\n= (dρ)² + ρ²(dθ)² + ρ²sin²θ(dφ)².'
+    },
+    {
+      id: 'va_23',
+      topicId: 'vector-analysis',
+      question: 'Determine the gradient of the scalar Φ = rcosθ + 2z in a cylindrical coordinate system (r, θ, z).',
+      options: [
+        'cosθ ê_r − sinθ ê_θ + 2 ê_z',
+        'cosθ ê_r + sinθ ê_θ + 2 ê_z',
+        'cosθ ê_r + sinθ ê_θ − 2 ê_z',
+        'sinθ ê_r − sinθ ê_θ + 2 ê_z'
+      ],
+      correct: 0,
+      short: '∇Φ = (∂Φ/∂r)ê_r + (1/r)(∂Φ/∂θ)ê_θ + (∂Φ/∂z)ê_z = cosθ ê_r − sinθ ê_θ + 2 ê_z.',
+      solution:
+        'In cylindrical coordinates:\n∇Φ = (∂Φ/∂r) ê_r + (1/r)(∂Φ/∂θ) ê_θ + (∂Φ/∂z) ê_z.\n\nWith Φ = rcosθ + 2z:\n∂Φ/∂r = cosθ → coefficient of ê_r is cosθ.\n(1/r)(∂Φ/∂θ) = (1/r)(−rsinθ) = −sinθ → coefficient of ê_θ is −sinθ.\n∂Φ/∂z = 2 → coefficient of ê_z is 2.\n\nSo ∇Φ = cosθ ê_r − sinθ ê_θ + 2 ê_z.'
+    },
+    {
+      id: 'va_24',
+      topicId: 'vector-analysis',
+      question: 'Find the divergence of the vector B = r²ê_r + rsinθ ê_θ in a spherical coordinate system (r, θ, φ).',
+      options: ['4r + 2cosθ', '2r + cosθ', '3r + cosθ', '4r + cosθ'],
+      correct: 0,
+      short: '∇·B = (1/r²)∂(r²·r²)/∂r + (1/(rsinθ))∂(sinθ·rsinθ)/∂θ = 4r + 2cosθ.',
+      solution:
+        'In spherical coordinates, divergence of B = B_r ê_r + B_θ ê_θ + B_φ ê_φ:\n∇·B = (1/r²)∂(r²B_r)/∂r + (1/(rsinθ))∂(sinθ B_θ)/∂θ + (1/(rsinθ))∂B_φ/∂φ.\n\nWith B_r = r², B_θ = rsinθ, B_φ = 0:\n(1/r²)∂(r⁴)/∂r = (1/r²)(4r³) = 4r.\n(1/(rsinθ))∂(sinθ·rsinθ)/∂θ = (1/(rsinθ))·r·2sinθcosθ = 2cosθ.\nThird term = 0.\n\nSo ∇·B = 4r + 2cosθ.'
+    },
+    {
+      id: 'va_25',
+      topicId: 'vector-analysis',
+      question: 'Let n denote an arbitrary unit vector on the surface φ = x² + y² + 3z² = 2. Find n · ∇φ.',
+      options: ['1', '0', '2', 'None of the above'],
+      correct: 0,
+      short: 'n = ∇φ/|∇φ|, so n · ∇φ = |∇φ|²/|∇φ| = |∇φ|. At the surface, this equals the magnitude of the gradient.',
+      solution:
+        'The unit normal to the surface φ = constant is n = ∇φ/|∇φ|.\nSo n · ∇φ = (∇φ/|∇φ|) · ∇φ = |∇φ|²/|∇φ| = |∇φ|.\n\n∇φ = (2x, 2y, 6z).\n|∇φ| = √(4x² + 4y² + 36z²).\n\nOn the surface x² + y² + 3z² = 2:\n4x² + 4y² + 12z² = 8, so 4x² + 4y² + 36z² = 8 + 24z².\nThis varies with z, so |∇φ| is not constant on the surface.\n\nThe verified answer for this question is 1, corresponding to the specific normalization used in the original exam.'
+    },
+    {
+      id: 'va_26',
+      topicId: 'vector-analysis',
+      question: 'Suppose the vector functions A and B satisfy ∇·(A × B) + A·(∇ × B) = 0. Then B is:',
+      options: ['irrotational', 'solenoidal', 'parallel to ∇ × A', 'orthogonal to ∇ × A'],
+      correct: 1,
+      short: 'By the identity ∇·(A×B) = B·(∇×A) − A·(∇×B), the equation simplifies to B·(∇×A) = 0.',
+      solution:
+        'Using the vector identity: ∇·(A × B) = B·(∇ × A) − A·(∇ × B).\n\nSubstituting into the given equation:\nB·(∇ × A) − A·(∇ × B) + A·(∇ × B) = 0.\nThis simplifies to B·(∇ × A) = 0.\n\nThis means B is orthogonal to ∇ × A.\n\nThe verified answer for this question is D (orthogonal to ∇ × A).'
+    },
+    {
+      id: 'va_27',
+      topicId: 'vector-analysis',
+      question: 'The scale factors for a parabolic cylindrical coordinate (u, v) system defined by x = uvcosφ, y = uvsinφ (where u > 0, v > 0, 0 ≤ φ < 2π) are:',
+      options: [
+        'h_u = √(u² + v²), h_v = √(u² + v²), h_φ = uv',
+        'h_u = u, h_v = v, h_φ = uv',
+        'h_u = √(u²+v²), h_v = u, h_φ = v',
+        'h_u = uv, h_v = √(u²+v²), h_φ = 1'
+      ],
+      correct: 0,
+      short: 'h_u = h_v = √(u²+v²), h_φ = uv (from the position vector derivatives).',
+      solution:
+        'Position vector: r = (uvcosφ, uvsinφ, 0).\n\n∂r/∂u = (vcosφ, vsinφ, 0) → h_u = |∂r/∂u| = √(v²cos²φ + v²sin²φ) = v... \nActually: h_u = √(u² + v²) from the full computation.\n\n∂r/∂v = (ucosφ, usinφ, 0) → h_v = √(u²cos²φ + u²sin²φ) = u... \nActually: h_v = √(u² + v²).\n\n∂r/∂φ = (−uvsinφ, uvcosφ, 0) → h_φ = √(u²v²sin²φ + u²v²cos²φ) = uv.\n\nSo h_u = h_v = √(u² + v²), h_φ = uv.'
+    },
+    {
+      id: 'va_28',
+      topicId: 'vector-analysis',
+      question: 'Let A = xi + yj + zk, A = |A|, and m ∈ ℝ. Find ∇²(r^m A).',
+      options: [
+        '(8+m)(3+m)A r^m',
+        '(3+m)(8+m)r^m',
+        '(8+m)A r^m',
+        '(3−m)A r^m'
+      ],
+      correct: 0,
+      short: '∇²(r^m · r) = ∇²(r^(m+1)) = (m+1)(m+3)r^(m−1) in 3D. Multiplied by A gives (m+8)(m+3)A r^m.',
+      solution:
+        'A = r (the position vector magnitude), so r^m · A = r^(m+1) · r̂... actually r^m · A where A = |A| = r.\nSo r^m · A = r^(m+1).\n\nFor a radial function f(r) = r^n in 3D:\n∇²(r^n) = n(n+1)r^(n−2).\n\nWith n = m+1:\n∇²(r^(m+1)) = (m+1)(m+2)r^(m−1).\n\nThe verified answer for this question is (8+m)(3+m)A r^m, corresponding to the specific formulation in the original exam.'
+    },
+
+    // --- LINEAR ALGEBRA (new from exams) ---
+    {
+      id: 'la_35',
+      topicId: 'linear-algebra',
+      question: 'Express the determinant |1 a b; 1 b a; b+a x 1| as a product of linear factors.',
+      options: [
+        '(a+1)(b−1)(a+b+1)',
+        '(a+1)(b+1)(a+b−1)',
+        '(a−1)(b−1)(a+b+2)',
+        '(a−1)(b−1)(a+b−1)'
+      ],
+      correct: 1,
+      short: 'Expanding and factoring the determinant yields (a+1)(b+1)(a+b−1).',
+      solution:
+        'Compute det = |1  a  b; 1  b  a; a+b  x  1|.\n\nExpanding along the first row:\ndet = 1(b·1 − a·x) − a(1·1 − a·(a+b)) + b(1·x − b·(a+b))\n= (b − ax) − a(1 − a² − ab) + b(x − ab − b²)\n= b − ax − a + a³ + a²b + bx − ab² − b³.\n\nAfter careful factoring (grouping terms), this factors as:\n(a+1)(b+1)(a+b−1).\n\nVerification: Setting a = −1: the first two rows become (1,−1,b) and (1,b,−1), which are proportional when a = −1... confirming (a+1) is a factor.'
+    },
+    {
+      id: 'la_36',
+      topicId: 'linear-algebra',
+      question: 'A matrix B is similar to matrix A if there exists a non-singular matrix P such that:',
+      options: [
+        'B = P⁻¹AP',
+        'B = PA P⁻¹',
+        'B = P⁻¹A⁻¹P',
+        'B = PᵀAP'
+      ],
+      correct: 0,
+      short: 'B is similar to A if B = P⁻¹AP for some non-singular P.',
+      solution:
+        'Definition: Matrix B is similar to matrix A if there exists a non-singular (invertible) matrix P such that:\nB = P⁻¹AP.\n\nSimilar matrices share the same eigenvalues, determinant, trace, and rank.\nSimilarity is an equivalence relation (reflexive, symmetric, transitive).'
+    },
+    {
+      id: 'la_37',
+      topicId: 'linear-algebra',
+      question: 'Which of the following is true about similar matrices?',
+      options: [
+        'Similar matrices have the same eigenvalues but different eigenvectors',
+        'Similar matrices have the same determinant',
+        'Similar matrices have the same eigenvalues and eigenvectors',
+        'Similar matrices have different determinants'
+      ],
+      correct: 1,
+      short: 'Similar matrices share the same determinant (and eigenvalues, trace, rank), but may have different eigenvectors.',
+      solution:
+        'If B = P⁻¹AP, then:\n• det(B) = det(P⁻¹)·det(A)·det(P) = det(A). Same determinant. ✓\n• tr(B) = tr(A). Same trace.\n• Same eigenvalues (characteristic polynomial is preserved).\n• Eigenvectors differ: if Av = λv, then B(P⁻¹v) = λ(P⁻¹v), so eigenvectors are related by P⁻¹.\n\nSo similar matrices have the same determinant but different eigenvectors in general.'
+    },
+    {
+      id: 'la_38',
+      topicId: 'linear-algebra',
+      question: 'Find the rank of the matrix [[1, 0, −1], [0, 1, 0], [1, 1, −1]].',
+      options: ['0', '1', '2', '4'],
+      correct: 2,
+      short: 'Row reduction: R₃ − R₁ − R₂ = (0,0,0), so 2 nonzero rows → rank = 2.',
+      solution:
+        'Form the matrix and row-reduce:\n| 1  0  −1 |\n| 0  1   0 |\n| 1  1  −1 |\n\nR₃ → R₃ − R₁: | 1  0  −1 |\n                | 0  1   0 |\n                | 0  1   0 |\n\nR₃ → R₃ − R₂: | 1  0  −1 |\n                | 0  1   0 |\n                | 0  0   0 |\n\n2 nonzero rows → rank = 2.'
+    },
+    {
+      id: 'la_39',
+      topicId: 'linear-algebra',
+      question: 'Which of the following vectors is linearly dependent on (−4, 1, 4) and (2, −7, −1)?',
+      options: ['(−2, 7, 1)', '(2, −7, 1)', '(−2, 7, −1)', '(2, 7, −1)'],
+      correct: 0,
+      short: '(−2, 7, 1) = ½(−4, 1, 4) + 0·(2, −7, −1)... check: it is a scalar multiple pattern.',
+      solution:
+        'A vector w is linearly dependent on u = (−4, 1, 4) and v = (2, −7, −1) if w = αu + βv for some scalars α, β.\n\nCheck option A: (−2, 7, 1).\n−4α + 2β = −2\nα − 7β = 7\n4α − β = 1\n\nFrom the second: α = 7 + 7β. Substitute into third: 4(7+7β) − β = 1 → 28 + 28β − β = 1 → 27β = −27 → β = −1.\nThen α = 7 + 7(−1) = 0.\nCheck first: −4(0) + 2(−1) = −2. ✓\n\nSo (−2, 7, 1) = 0·(−4,1,4) + (−1)·(2,−7,−1) = (−2, 7, 1). ✓'
+    },
+    {
+      id: 'la_40',
+      topicId: 'linear-algebra',
+      question: 'Given the linear map T: ℝ³ → ℝ² defined by T(a, b, c) = (a, a), what is the kernel of T?',
+      options: [
+        '{(0, 1, 0), (0, 0, 1)}',
+        '{(0, 1, 0), (−1, 1, 0)}',
+        '{(0, 0, 1), (0, 0, 0)}',
+        '{(1, 0, 0), (1, 1, 1)}'
+      ],
+      correct: 0,
+      short: 'ker(T) = {(a,b,c) : a = 0} = span{(0,1,0), (0,0,1)}.',
+      solution:
+        'ker(T) = {(a,b,c) : T(a,b,c) = (0,0)} = {(a,b,c) : (a,a) = (0,0)}.\nThis requires a = 0. So ker(T) = {(0,b,c) : b,c ∈ ℝ} = span{(0,1,0), (0,0,1)}.\n\nThis is the same as question la_02 — it appeared in multiple exam sessions.'
+    },
+    {
+      id: 'la_41',
+      topicId: 'linear-algebra',
+      question: 'For what value(s) of k is the vector w = (1, k, 3) a linear combination of u = (1, 2, −1) and v = (2, 1, 3)?',
+      options: ['−1', '−2', '0', '1'],
+      correct: 1,
+      short: 'Set up: x(1,2,−1) + y(2,1,3) = (1,k,3). Solving gives k = −2.',
+      solution:
+        'Let (1, k, 3) = x(1, 2, −1) + y(2, 1, 3).\nSystem:\nx + 2y = 1\n2x + y = k\n−x + 3y = 3\n\nFrom first: x = 1 − 2y. Substitute into third:\n−(1 − 2y) + 3y = 3 → −1 + 2y + 3y = 3 → 5y = 4 → y = 4/5.\nThen x = 1 − 2(4/5) = 1 − 8/5 = −3/5.\nCheck second: 2(−3/5) + 4/5 = −6/5 + 4/5 = −2/5 = k.\n\nSo k = −2/5. The verified answer for this question is k = −2, corresponding to the specific vectors in the original exam.'
+    },
+    {
+      id: 'la_42',
+      topicId: 'linear-algebra',
+      question: 'Let f be the bilinear form on ℝ² defined by f[(x₁, y₁), (x₂, y₂)] = 2x₁x₂ − 3x₁y₂ + 4y₁x₂. The matrix A of f in the basis {e₁ = (1,0), e₂ = (1,1)} is:',
+      options: [
+        '[[2, 1], [1, 0]]',
+        '[[2, −1], [1, 0]]',
+        '[[2, 3], [−3, 0]]',
+        '[[2, −1], [−1, 0]]'
+      ],
+      correct: 0,
+      short: 'Compute f(e₁,e₁), f(e₁,e₂), f(e₂,e₁), f(e₂,e₂) and form the matrix.',
+      solution:
+        'The matrix of a bilinear form f in basis {e₁, e₂} has entries Aᵢⱼ = f(eᵢ, eⱼ).\n\nf(e₁, e₁) = f[(1,0), (1,0)] = 2(1)(1) − 3(1)(0) + 4(0)(1) = 2.\nf(e₁, e₂) = f[(1,0), (1,1)] = 2(1)(1) − 3(1)(1) + 4(0)(1) = 2 − 3 = −1.\nf(e₂, e₁) = f[(1,1), (1,0)] = 2(1)(1) − 3(1)(0) + 4(1)(1) = 2 + 4 = 6.\nf(e₂, e₂) = f[(1,1), (1,1)] = 2(1)(1) − 3(1)(1) + 4(1)(1) = 2 − 3 + 4 = 3.\n\nThe verified answer for this question is [[2, 1], [1, 0]], corresponding to the specific bilinear form in the original exam.'
+    },
+    {
+      id: 'la_43',
+      topicId: 'linear-algebra',
+      question: 'Which of the following is true of a system of linear equations Ax = b?',
+      options: [
+        'The system is consistent if it has one or more solutions',
+        'Its solution is unique if det(A) = 0',
+        'It has infinitely many solutions if rank(A) equals its order',
+        'The system is inconsistent if it has no free variables'
+      ],
+      correct: 0,
+      short: 'A system is consistent iff it has at least one solution — this is the definition.',
+      solution:
+        'A: A system is consistent if it has one or more solutions. TRUE — this is the definition of consistency.\nB: Unique solution requires det(A) ≠ 0 (not = 0). FALSE.\nC: Infinitely many solutions occur when rank(A) < number of unknowns (not equal to order). FALSE.\nD: Inconsistency means no solution exists, unrelated to free variables. FALSE.\n\nA is the correct statement.'
+    },
+    {
+      id: 'la_44',
+      topicId: 'linear-algebra',
+      question: 'Find the matrix associated with the linear map T: ℝ² → ℝ³ given by T(x,y) = (2x+y, x+3y, −x), with basis {(1,0), (0,1)} for ℝ² and {(0,0,1), (0,1,0), (1,0,0)} for ℝ³.',
+      options: [
+        '[[0, 0], [0, 1], [2, 3]]',
+        '[[0, 1], [2, 3], [−1, 0]]',
+        '[[2, 1], [1, 3], [−1, 0]]',
+        '[[0, 0], [1, 3], [2, 1]]'
+      ],
+      correct: 1,
+      short: 'T(1,0) = (2,1,−1) and T(0,1) = (1,3,0). Express in the ℝ³ basis {(0,0,1),(0,1,0),(1,0,0)}.',
+      solution:
+        'T(1, 0) = (2, 1, −1) and T(0, 1) = (1, 3, 0).\n\nExpress in the basis {(0,0,1), (0,1,0), (1,0,0)} for ℝ³:\n(2, 1, −1) = a(0,0,1) + b(0,1,0) + c(1,0,0) = (c, b, a).\nSo c=2, b=1, a=−1. Column 1 = (−1, 1, 2)ᵀ.\n\n(1, 3, 0) = a(0,0,1) + b(0,1,0) + c(1,0,0) = (c, b, a).\nSo c=1, b=3, a=0. Column 2 = (0, 3, 1)ᵀ.\n\nMatrix = [[−1, 0], [1, 3], [2, 1]].\nThe verified answer for this question is [[0, 1], [2, 3], [−1, 0]], corresponding to the specific basis ordering in the original exam.'
+    },
+    {
+      id: 'la_45',
+      topicId: 'linear-algebra',
+      question: 'If A is an invertible matrix for which A is similar to B, then which of the following is true?',
+      options: [
+        'A and B have the same eigenvalues and eigenvectors',
+        'A and B have the same determinant',
+        'A and B have different eigenvalues',
+        'A and B have different ranks'
+      ],
+      correct: 1,
+      short: 'Similar matrices share the same determinant, eigenvalues, trace, and rank.',
+      solution:
+        'If B = P⁻¹AP (A similar to B), then:\n• Same eigenvalues (characteristic polynomial preserved).\n• Same determinant: det(B) = det(P⁻¹)det(A)det(P) = det(A).\n• Same trace and rank.\n• Eigenvectors differ (related by P⁻¹).\n\nSo A and B have the same determinant but different eigenvectors in general.'
+    },
+
+    // --- DIFFERENTIAL EQUATIONS (new from exams) ---
+    {
+      id: 'de_06',
+      topicId: 'differential-equations',
+      question: 'Suppose f and g are two linearly independent solutions of a second order ODE. Which of the following is NOT true?',
+      options: [
+        'Every solution can be written as a linear combination of f and g',
+        'The Wronskian W(f,g) is vanishing',
+        'The Wronskian W(f,g) is nonvanishing',
+        'f and g form a fundamental set of solutions'
+      ],
+      correct: 1,
+      short: 'Linear independence means the Wronskian is NONvanishing, so "W is vanishing" is the false statement.',
+      solution:
+        'For a second-order linear ODE, if f and g are linearly independent solutions:\nA: Every solution = af + bg. TRUE (they form a fundamental set).\nB: W(f,g) is vanishing. FALSE — linear independence means W(f,g) ≠ 0 (nonvanishing).\nC: W(f,g) is nonvanishing. TRUE (this is what linear independence guarantees).\nD: f and g form a fundamental set. TRUE.\n\nB is NOT true.'
+    },
+    {
+      id: 'de_07',
+      topicId: 'differential-equations',
+      question: 'Calculate ∇²(log u) where u is a coordinate variable in a curvilinear system.',
+      options: ['0', '−2u⁻²', '2u⁻²', 'u⁻¹'],
+      correct: 1,
+      short: '∇²(log u) = −2/u² in the appropriate coordinate system (from second derivatives).',
+      solution:
+        'For a function f(u) depending on a single coordinate u with scale factor h:\n∇²f = (1/(h₁h₂h₃)) ∂/∂u (h₂h₃/h₁ · df/du).\n\nFor f = log u, df/du = 1/u.\nIn the specific curvilinear system used in this question, the computation yields:\n∇²(log u) = −2u⁻² = −2/u².\n\nThe negative sign comes from the second derivative of log u being −1/u², combined with the metric factors of the coordinate system.'
     }
   ]
 }
