@@ -8,3 +8,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 )
+
+// Remove the loading screen once React has mounted
+requestAnimationFrame(() => {
+  const ls = document.getElementById('loading-screen')
+  if (ls) ls.remove()
+})
