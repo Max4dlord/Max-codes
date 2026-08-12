@@ -14,7 +14,7 @@ export default function Navbar() {
     <header className="nav">
       <Link to="/" className="nav-brand">
         <span className="nav-logo">∑</span>
-        <span className="nav-title">MTH&nbsp;202 · <em>CBT Lab</em></span>
+        <span className="nav-title">MaxPrep · <em>CBT Lab</em></span>
       </Link>
       <nav className="nav-links">
         <NavLink to="/" end>Home</NavLink>

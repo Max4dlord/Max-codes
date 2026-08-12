@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { courses, questionBank } from '../data.js'
+import { courses } from '../data.js'
 import { getTopics } from '../utils.js'
 
 const FEATURES = [
@@ -28,8 +28,7 @@ export default function Landing() {
       <section className="hero">
         <span className="badge"><span className="dot" /> CBT Practice Platform · Live</span>
         <h1>
-          Master <span className="grad">MTH 202 — Mathematical Methods</span><br />
-          with timed, topic-based CBT practice.
+          Master your exams with <span className="grad">MaxPrep CBT Lab</span>
         </h1>
         <p className="lead">
           A clean, exam-realistic testing environment for past questions. Configure your test,
@@ -43,10 +42,10 @@ export default function Landing() {
         <p className="hero-note">No sign-up needed · works offline · your progress is saved on this device</p>
 
         <div className="hero-card">
-          <div className="stat"><div className="num grad">{totalQ}+</div><div className="lbl">Past questions in bank</div></div>
-          <div className="stat"><div className="num">{topics.length}</div><div className="lbl">Topic categories</div></div>
-          <div className="stat"><div className="num">{courses.length}</div><div className="lbl">Courses ready to scale</div></div>
+          <div className="stat"><div className="num grad">{courses.length}</div><div className="lbl">Courses ready to scale</div></div>
+          <div className="stat"><div className="num">{getTopics(course.id).length}</div><div className="lbl">Topic categories</div></div>
           <div className="stat"><div className="num grad">100%</div><div className="lbl">Free to practice</div></div>
+          <div className="stat"><div className="num">∞</div><div className="lbl">Reshuffles per test</div></div>
         </div>
       </section>
 
@@ -90,7 +89,6 @@ export default function Landing() {
           {topics.map((t) => (
             <Link to="/dashboard" className="topic-chip" key={t.id} style={{ textDecoration: 'none' }}>
               <div className="t-name">{t.name}</div>
-              <div className="t-count">{t.count} questions available</div>
             </Link>
           ))}
         </div>

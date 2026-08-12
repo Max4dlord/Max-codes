@@ -137,10 +137,8 @@ export default function Dashboard() {
                     key={t.id}
                     className={`topic-chip ${topicId === t.id ? 'selected' : ''}`}
                     onClick={() => setTopicId(t.id)}
-                    disabled={t.count === 0}
                   >
                     <div className="t-name">{t.name}</div>
-                    <div className="t-count">{t.count} questions</div>
                   </button>
                 ))}
               </div>
@@ -184,19 +182,19 @@ export default function Dashboard() {
           </p>
         </div>
 
-        {/* ---- Bank overview / scaling ---- */}
+        {/* ---- Summary / scaling ---- */}
         <div className="card">
-          <h2>Question bank</h2>
+          <h2>Overview</h2>
           <p className="muted" style={{ fontSize: 14 }}>
-            {course.code} currently holds <strong style={{ color: 'var(--text)' }}>{getQuestionCount(courseId)}</strong> questions
-            across <strong style={{ color: 'var(--text)' }}>{topics.length}</strong> topics.
+            {course.code} currently has <strong style={{ color: 'var(--text)' }}>{getQuestionCount(courseId)}</strong> total questions
+            across <strong style={{ color: 'var(--text)' }}>{topics.length}</strong> topic categories.
           </p>
 
+          <h2 style={{ marginTop: 28, fontSize: 18 }}>Topic categories</h2>
           <div className="topic-grid" style={{ marginTop: 8 }}>
             {topics.map((t) => (
               <div key={t.id} style={{ padding: 14, borderRadius: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)' }}>
                 <div style={{ fontWeight: 700, fontSize: 14 }}>{t.name}</div>
-                <div className="muted" style={{ fontSize: 13, marginTop: 4 }}>{t.count} questions</div>
               </div>
             ))}
           </div>
