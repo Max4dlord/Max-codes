@@ -21,6 +21,9 @@ const STEPS = [
 export default function Landing() {
   const course = courses[0]
   const topics = getTopics(course.id)
+  function scrollToFeatures() {
+    document.getElementById('features')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
     <>
@@ -36,7 +39,7 @@ export default function Landing() {
         </p>
         <div className="hero-cta">
           <Link to="/dashboard" className="btn btn-primary btn-lg">Start a test →</Link>
-          <a href="#features" className="btn btn-ghost btn-lg">Explore features</a>
+          <button type="button" onClick={scrollToFeatures} className="btn btn-ghost btn-lg">Explore features</button>
         </div>
         <p className="hero-note">No sign-up needed · works offline · your progress is saved on this device</p>
 

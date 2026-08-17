@@ -24,8 +24,8 @@ export const courses = [
   {
     id: 'aee202',
     code: 'AEE 202',
-    title: 'Applied Electrical Engineering',
-    blurb: 'Coming soon — upload your past questions to enable this course.',
+    title: 'Agricultural Engineering',
+    blurb: 'Agricultural Engineering fundamentals — coming soon. Upload your past questions or course materials to enable this course.',
     accent: '#0ea5e9',
     available: false
   },
