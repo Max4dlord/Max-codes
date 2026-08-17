@@ -18,7 +18,7 @@ export const courses = [
     title: 'Mathematical Methods',
     blurb:
       'Core techniques for scientists & engineers: complex numbers, vector analysis, linear algebra, ordinary differential equations, Laplace & Fourier transforms, and partial differential equations.',
-    accent: '#6366f1',
+    accent: '#2563eb',
     available: true
   },
   {
@@ -26,7 +26,7 @@ export const courses = [
     code: 'AEE 202',
     title: 'Applied Electrical Engineering',
     blurb: 'Coming soon — upload your past questions to enable this course.',
-    accent: '#f59e0b',
+    accent: '#0ea5e9',
     available: false
   },
   {
@@ -34,7 +34,7 @@ export const courses = [
     code: 'MEE 206',
     title: 'Mechanical Engineering Fundamentals',
     blurb: 'Coming soon — upload your past questions to enable this course.',
-    accent: '#10b981',
+    accent: '#1e40af',
     available: false
   }
 ]
