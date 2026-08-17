@@ -276,7 +276,7 @@ export const questionBank = {
       question: "Which of the following statements is not true for any complex number z?",
       options: ["If z = z̄, then z is purely real","|z − 1| = |z̄ − 1|","sin²z + cos²z = 1","z · z̄ = |z|²","None of the above — all statements are true"],
       correct: 4,
-      short: "Check: A true (y=0), B true (|w|=|w̄|), C true (identity holds complex), D true (x²+y²). So no false statement gives E. Answer E.",
+      short: "Check: Option A is correct (y=0), Option B is correct (|w|=|w̄|), Option C is correct (identity holds complex), Option D is correct (x²+y²). So no false statement gives E. Answer E.",
       solution: "Concept: Test each universal statement.\nA: z=z̄ gives x+iy=x−iy gives y=0 gives real. True.\nB: |z−1|=|conjugate| because |w|=|w̄|. True.\nC: sin²z+cos²z=1 holds for complex via e^{iz} definitions. True.\nD: z·z̄=(x+iy)(x−iy)=x²+y²=|z|². True.\nConclusion: All A-D true, so “which is not true?” answer is “None — all are true” (option E)."
     },
     {
@@ -457,7 +457,7 @@ export const questionBank = {
       options: ["A conservative field is always irrotational","An irrotational field is always conservative","A gradient field is potential","A potential field is conservative","Line integrals of a conservative field are path-independent"],
       correct: 1,
       short: "Irrotational ⇒ conservative only if domain simply connected. So “always” is false gives B.",
-      solution: "Concept: Conservative ↔ exists potential φ with F=∇φ, path independent, irrotational.\nA true: Conservative ⇒ curl 0.\nB false: Curl 0 on domain with hole (e.g., ( -y/(x²+y²), x/(x²+y²))) is irrotational but not conservative globally.\nC/D/E true.\nAnswer: B is incorrect statement."
+      solution: "Concept: Conservative ↔ exists potential φ with F=∇φ, path independent, irrotational.\nOption A is correct: Conservative ⇒ curl 0.\nOption B is incorrect because Curl 0 on domain with hole (e.g., ( -y/(x²+y²), x/(x²+y²))) is irrotational but not conservative globally.\nC/D/E true.\nAnswer: B is incorrect statement."
     },
     {
       id: "va_19",
@@ -583,7 +583,7 @@ export const questionBank = {
       options: ["I and II","I and III","III only","II and III"],
       correct: 3,
       short: "Det=10≠0 gives independent, 3 vectors in R3 gives basis and spanning gives D.",
-      solution: "Concept: 3 vectors in R3: det≠0 ⇔ independent ⇔ basis ⇔ span.\nDet |1 1 0;0 2 −3;−1 1 2| =1(4+3)−1(0−3)=10≠0.\nSo I false, II true, III true gives D.\nWhy the other options are incorrect: I claims dependent, III only misses II."
+      solution: "Concept: 3 vectors in R3: det≠0 ⇔ independent ⇔ basis ⇔ span.\nDet |1 1 0;0 2 −3;−1 1 2| =1(4+3)−1(0−3)=10≠0.\nSo Statement I is incorrect, Statement II is correct, III true gives D.\nWhy the other options are incorrect: I claims dependent, III only misses II."
     },
     {
       id: "la_05",
@@ -628,7 +628,7 @@ export const questionBank = {
       options: ["I and II","I and III","III only","II and III"],
       correct: 1,
       short: "I false (many bases), III false (infinite-dimensional spaces exist), II true gives B.",
-      solution: "Concept: Basis theory.\nI false: R² has infinite bases. II true: dimension well-defined. III false: e.g., polynomials, C[0,1] infinite-dimensional.\nSo not necessarily true: I and III gives B."
+      solution: "Concept: Basis theory.\nStatement I is incorrect because R² has infinite bases. Statement II is correct because dimension well-defined. Statement III is incorrect because e.g., polynomials, C[0,1] infinite-dimensional.\nSo not necessarily true: I and III gives B."
     },
     {
       id: "la_10",
@@ -700,7 +700,7 @@ export const questionBank = {
       options: ["Multiplying all entries by α multiplies det by α","Transposition leaves det unaltered","Proportional rows make det = 0","Interchanging two rows multiplies det by −1"],
       correct: 0,
       short: "Det(αA)=αⁿ detA, not α·detA gives A false.",
-      solution: "Concept: det properties.\nA false: Scaling all n² entries gives each row scaled α gives det αⁿ. e.g., 3×3 α=2 gives 8×.\nB true: det Aᵀ=det A. C true: dependent rows gives0. D true: swap flips sign.\nAnswer: A."
+      solution: "Concept: det properties.\nOption A is incorrect because Scaling all n² entries gives each row scaled α gives det αⁿ. e.g., 3×3 α=2 gives 8×.\nOption B is correct: det Aᵀ=det A. Option C is correct: dependent rows gives0. Option D is correct: swap flips sign.\nAnswer: A."
     },
     {
       id: "la_18",
@@ -735,7 +735,7 @@ export const questionBank = {
       question: "Let A be n × n with rank(A) = r < n. Which is true?",
       options: ["A is invertible","Determinant of A is zero","A is nonsingular","Nullity of A is zero"],
       correct: 1,
-      short: "R<n gives not full rank gives det0, singular, nullity n−r>0 gives B true.",
+      short: "R<n gives not full rank gives det0, singular, nullity n−r>0 gives Option B is correct.",
       solution: "Concept: Rank <n gives dependent rows gives det0.\nA false, B true, C false (nonsingular needs rank n), D false nullity =n−r>0.\nAnswer: B."
     },
     {
@@ -780,7 +780,7 @@ export const questionBank = {
       question: "Given A = [[3, 2], [4, 1]] and B = [[2, 5], [4, 1]], which is true?",
       options: ["A is the inverse of B","(AB)² = A²B²","A is not similar to B","(AB)ᵀ = AᵀBᵀ"],
       correct: 2,
-      short: "TrA=4, trB=3 gives similar impossible gives C true. (AB)ᵀ=BᵀAᵀ not AᵀBᵀ.",
+      short: "TrA=4, trB=3 gives similar impossible gives Option C is correct. (AB)ᵀ=BᵀAᵀ not AᵀBᵀ.",
       solution: "Concept: Similar ⇒ same trace/det/eigenvalues.\ntrA=4, trB=3 different ⇒ not similar, C true. A false (AB≠I), B false (AB≠BA), D false (transpose reverses).\nAnswer: C."
     },
     {
@@ -808,7 +808,7 @@ export const questionBank = {
       options: ["U ∩ W is a subspace of W","U ∩ W is a subspace of V","U + W is a subspace of V","dim(U + W) = dim U + dim V + dim(U ∩ W)"],
       correct: 3,
       short: "Correct formula dim(U+W)=dimU+dimW−dim∩, not +dimV+∩ gives D false.",
-      solution: "Concept: Dimension formula.\nA/Options B and C true: intersections/sums are subspaces.\nD claims dim(U+W)=dimU+dimV+dim∩ gives wrong: should be dimU+dimW−dim∩, and V not W. So false.\nAnswer: D."
+      solution: "Concept: Dimension formula.\nA/Options B and Option C is correct: intersections/sums are subspaces.\nD claims dim(U+W)=dimU+dimV+dim∩ gives wrong: should be dimU+dimW−dim∩, and V not W. So false.\nAnswer: D."
     },
     {
       id: "la_30",
@@ -835,7 +835,7 @@ export const questionBank = {
       options: ["U + U ⊆ V","U + W ⊆ V","W + W ⊆ V","U ∩ W = ∅"],
       correct: 3,
       short: "Subspaces always contain 0, so intersection never empty gives D false.",
-      solution: "Concept: Subspace contains zero vector.\nSo 0∈U and 0∈W gives0∈U∩W gives intersection not empty (at least {0}).\nA/Options B and C true: sums stay in V.\nAnswer: D not true."
+      solution: "Concept: Subspace contains zero vector.\nSo 0∈U and 0∈W gives0∈U∩W gives intersection not empty (at least {0}).\nA/Options B and Option C is correct: sums stay in V.\nAnswer: D not true."
     },
     {
       id: "la_33",
@@ -879,7 +879,7 @@ export const questionBank = {
       question: "Which of the following is true about similar matrices?",
       options: ["Similar matrices have the same eigenvalues but different eigenvectors","Similar matrices have the same determinant","Similar matrices have the same eigenvalues and eigenvectors","Similar matrices have different determinants"],
       correct: 1,
-      short: "Similar gives same char poly, det, trace, eigenvalues; eigenvectors differ by P⁻¹ gives B true (A also true but B is exam choice).",
+      short: "Similar gives same char poly, det, trace, eigenvalues; eigenvectors differ by P⁻¹ gives Option B is correct (A also true but B is exam choice).",
       solution: "Concept: B=P⁻¹AP preserves trace, det, rank, eigenvalues, but eigenvectors transform: if Av=λv, then B(P⁻¹v)=λ(P⁻¹v).\nSo “same determinant” true (B), “same eigenvalues but different eigenvectors” (A) also true, but exam marks B as primary. Both Options A and B describe same fact; B is concise.\nWhy C/D wrong: Eigenvectors differ, determinant same.\nTip: Similar = same linear map in different basis."
     },
     {
@@ -933,8 +933,8 @@ export const questionBank = {
       question: "Which of the following is true of a system of linear equations Ax = b?",
       options: ["The system is consistent if it has one or more solutions","Its solution is unique if det(A) = 0","It has infinitely many solutions if rank(A) equals its order","The system is inconsistent if it has no free variables"],
       correct: 0,
-      short: "Consistent ⇔ at least one solution gives A true. Unique needs det≠0, infinite needs rank< n, free variables not decide inconsistency.",
-      solution: "Concept: Consistency definitions.\nA true by definition. B false: unique needs det≠0 (or full column rank). C false: infinite when rank < n (free variables) not equal order. D false: inconsistent means no solution, not about free variables (could be unique yet no free).\nAnswer: A."
+      short: "Consistent ⇔ at least one solution gives Option A is correct. Unique needs det≠0, infinite needs rank< n, free variables not decide inconsistency.",
+      solution: "Concept: Consistency definitions.\nA true by definition. Option B is incorrect because unique needs det≠0 (or full column rank). Option C is incorrect because infinite when rank < n (free variables) not equal order. Option D is incorrect because inconsistent means no solution, not about free variables (could be unique yet no free).\nAnswer: A."
     },
     {
       id: "la_44",
@@ -951,8 +951,8 @@ export const questionBank = {
       question: "If A is an invertible matrix for which A is similar to B, then which of the following is true?",
       options: ["A and B have the same eigenvalues and eigenvectors","A and B have the same determinant","A and B have different eigenvalues","A and B have different ranks"],
       correct: 1,
-      short: "Similar gives same eigenvalues, trace, det, rank; eigenvectors differ by P⁻¹ gives B true.",
-      solution: "Concept: Similarity preserves invariants.\nIf B=P⁻¹AP, det B=det P⁻¹·detA·detP=detA, same eigenvalues, rank, trace. Eigenvectors: Av=λv gives B(P⁻¹v)=λ(P⁻¹v) so different.\nAnswer: B (A would imply same eigenvectors, false).\nWhy C/D false: Eigenvalues same, ranks same."
+      short: "Similar gives same eigenvalues, trace, det, rank; eigenvectors differ by P⁻¹ gives Option B is correct.",
+      solution: "Concept: Similarity preserves invariants.\nIf B=P⁻¹AP, det B=det P⁻¹·detA·detP=detA, same eigenvalues, rank, trace. Eigenvectors: Av=λv gives B(P⁻¹v)=λ(P⁻¹v) so different.\nAnswer: B (A would imply same eigenvectors, false).\nWhy C/Option D is incorrect because Eigenvalues same, ranks same."
     },
     {
       id: "de_01",
@@ -1006,7 +1006,7 @@ export const questionBank = {
       options: ["Every solution can be written as a linear combination of f and g","The Wronskian W(f,g) is vanishing","The Wronskian W(f,g) is nonvanishing","f and g form a fundamental set of solutions"],
       correct: 1,
       short: "Independent gives Wronskian ≠0, so “W vanishing” is false gives B.",
-      solution: "Concept: Fundamental set ↔ independent ↔ Wronskian non-zero.\nA true: general solution = C1 f +C2 g. B claims W=0 false for independent. C true: W≠0. D true: they form fundamental set.\nAnswer: B is NOT true.\nTip: W=0 ⇔ dependent for second-order linear homogeneous."
+      solution: "Concept: Fundamental set ↔ independent ↔ Wronskian non-zero.\nOption A is correct: general solution = C1 f +C2 g. B claims W=0 false for independent. Option C is correct: W≠0. Option D is correct: they form fundamental set.\nAnswer: B is NOT true.\nTip: W=0 ⇔ dependent for second-order linear homogeneous."
     },
     {
       id: "de_07",
@@ -1167,8 +1167,8 @@ export const questionBank = {
       question: "Which of the following is false about the nth roots of unity?",
       options: ["Product of all n roots = (−1)^(n+1)","Σ ωₖ = 0 (sum of all roots)","They are in geometric progression","One root is the complex conjugate of another"],
       correct: 3,
-      short: "D fails for n=1,2 where roots are real self-conjugate; A/Options B and C true gives D false.",
-      solution: "Concept: nth roots: ω_k=e^{2πik/n}, k=0..n−1.\nA true: product = (−1)^{n+1} (constant term of z^n−1). B true: sum =0 for n>1 (coefficient of z^{n−1} zero). C true: ratio e^{2πi/n}. D “one root is conjugate of another” not universally true — for n=1 root 1 self-conjugate, n=2 roots 1,−1 both real, statement vacuous. So D is the false universal claim.\nAnswer: D."
+      short: "D fails for n=1,2 where roots are real self-conjugate; A/Options B and Option C is correct gives D false.",
+      solution: "Concept: nth roots: ω_k=e^{2πik/n}, k=0..n−1.\nOption A is correct: product = (−1)^{n+1} (constant term of z^n−1). Option B is correct: sum =0 for n>1 (coefficient of z^{n−1} zero). Option C is correct: ratio e^{2πi/n}. D “one root is conjugate of another” not universally true — for n=1 root 1 self-conjugate, n=2 roots 1,−1 both real, statement vacuous. So D is the false universal claim.\nAnswer: D."
     }
   ]
 }
