@@ -85,7 +85,7 @@ export default function Landing() {
       <section className="section">
         <div className="section-head">
           <h2>Topics covered in MTH 202</h2>
-          <p>Auto-classified from the question bank. Tag a question with a topic and it shows up here automatically.</p>
+          <p>Comprehensive coverage across all core areas you need to master.</p>
         </div>
         <div className="topic-grid">
           {topics.map((t) => (
@@ -103,8 +103,7 @@ export default function Landing() {
       </div>
 
       <footer>
-        MTH 202 · Mathematical Methods CBT Lab — built for focused, exam-realistic practice.
-        Replace the sample question bank in <code>src/data.js</code> with your past questions to go live.
+        © 2026 MaxPrep CBT Lab — Built for focused, exam-realistic practice.
       </footer>
     </>
   )

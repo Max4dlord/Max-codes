@@ -26,7 +26,7 @@ export default function Dashboard() {
   function startTest() {
     setError('')
     if (!course.available) {
-      setError('This course is not available yet. Add its question bank in src/data.js to enable it.')
+      setError('This course is coming soon. Please check back later or choose an available course.')
       return
     }
     if (mode === 'topic' && !topicId) {
@@ -39,7 +39,7 @@ export default function Dashboard() {
       count
     })
     if (set.length === 0) {
-      setError('No questions available for this selection. Try another topic or add questions to the bank.')
+      setError('No questions available for this selection. Please try another topic.')
       return
     }
 
@@ -130,7 +130,7 @@ export default function Dashboard() {
 
           {mode === 'topic' && (
             <div className="field">
-              <label>Pick a topic — auto-classified from the question bank</label>
+              <label>Pick a topic</label>
               <div className="topic-grid">
                 {topics.map((t) => (
                   <button
@@ -199,16 +199,7 @@ export default function Dashboard() {
             ))}
           </div>
 
-          <h2 style={{ marginTop: 28, fontSize: 18 }}>Add more courses or questions</h2>
-          <p className="muted" style={{ fontSize: 14 }}>
-            The platform scales with one file: <span className="kbd">src/data.js</span>.
-          </p>
-          <ul className="muted" style={{ fontSize: 14, paddingLeft: 20, lineHeight: 1.8 }}>
-            <li>Add a question → push an object to <span className="kbd">questionBank[courseId]</span> and tag it with a <span className="kbd">topicId</span>.</li>
-            <li>Add a topic → list it in <span className="kbd">topicMeta[courseId]</span>; it appears on this dashboard automatically.</li>
-            <li>Add a course → add to <span className="kbd">courses</span>, plus its <span className="kbd">topicMeta</span> and <span className="kbd">questionBank</span> entries.</li>
-          </ul>
-          <Link to="/" className="btn btn-ghost btn-sm" style={{ marginTop: 8 }}>← Back to home</Link>
+          <Link to="/" className="btn btn-ghost btn-sm" style={{ marginTop: 24 }}>← Back to home</Link>
         </div>
       </div>
     </div>
