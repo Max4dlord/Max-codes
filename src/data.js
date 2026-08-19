@@ -67,6 +67,10 @@ export const topicMeta = {
     {
       "id": "welding-defects",
       "name": "Welding Defects"
+    },
+    {
+      "id": "fasteners",
+      "name": "Fasteners"
     }
   ]
 }
@@ -2639,6 +2643,321 @@ export const questionBank = {
     "correct": 2,
     "short": "Excessive Penetration burns through too much, weakening. Option C.",
     "solution": "Penetration depth.\n\nGiven for Excessive Penetration: \"You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nToo deep → base metal thinned/burned.\nWeakens.\n\nWhy the other options are incorrect:\nOption A is Underfill/Concavity (valley on top).\nOption B is Slag.\nOption D is Porosity (holes).\n\n* Correct Option: C (Burning through too much of the work piece)"
+  },
+  {
+    "id": "aee_fast_01",
+    "topicId": "fasteners",
+    "question": "Which bolt is normally made with a round head for an attractive external appearance and has ribs or flats on the shank to prevent turning when tightened?",
+    "options": [
+      "Carriage bolt",
+      "Hex bolt",
+      "Lag bolt",
+      "Plow bolt",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Round head with ribs/flats to prevent turning is Carriage bolt. Option A.",
+    "solution": "Carriage bolts are made with a round head for an attractive appearance. The ribs or flats on the shank bite into the material and prevent the bolt from turning while the nut is tightened. Some versions need a prepunched square hole; others press into place.\n\nWhy the other options are incorrect:\nOption B Hex bolt has a hexagonal head for torque, not round.\nOption C Lag bolt has a square head with a conical point for wood/masonry.\nOption D Plow bolt has a square countersunk head for flush mounting.\nOption E is not correct because A is correct.\n\n* Correct Option: A (Carriage bolt)"
+  },
+  {
+    "id": "aee_fast_02",
+    "topicId": "fasteners",
+    "question": "The most commonly used standard bolt, supplied in three strength grades and diameters ¼ to 4 in., with greater strength and ease of torque than square head, is:",
+    "options": [
+      "Square bolt",
+      "Hex bolt",
+      "Track bolt",
+      "Aircraft bolt",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Most common, three grades, ¼-4 in., hex head is Hex bolt. Option B.",
+    "solution": "Hex bolts are the most commonly used standard fasteners. They come in three basic strength grades and shank diameters from ¼ to 4 in. The hex head offers greater strength, ease of torque input, and area for manufacturer’s identification than the square head.\n\nWhy the other options are incorrect:\nOption A Square bolt is supplied in only two grades, ¼ to 1½ in.\nOption C Track bolt has an elliptical head to prevent rotation in railroad tracks.\nOption D Aircraft bolt is a high-strength fastener to D.O.D. standards, not the most common.\n\n* Correct Option: B (Hex bolt)"
+  },
+  {
+    "id": "aee_fast_03",
+    "topicId": "fasteners",
+    "question": "Which bolt has an elliptical head to prevent rotation and is designed specifically for railroad tracks?",
+    "options": [
+      "Carriage bolt",
+      "Track bolt",
+      "Plow bolt",
+      "Elevator bolt",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Elliptical head for railroad tracks is Track bolt. Option B.",
+    "solution": "Track bolts are a family designed for railroad tracks. This version has an elliptical head that fits into the rail and prevents rotation when tightening.\n\nWhy the other options are incorrect:\nOption A Carriage has round head with ribs.\nOption C Plow has square countersunk head.\nOption D Elevator has large flat head for soft materials.\n\n* Correct Option: B (Track bolt)"
+  },
+  {
+    "id": "aee_fast_04",
+    "topicId": "fasteners",
+    "question": "A square-headed fastener with a threaded conical point, normally used in wood or masonry with an expansion anchor, is:",
+    "options": [
+      "Lag bolt",
+      "Bent bolt",
+      "Flanged bolt",
+      "Round bolt",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Square head with conical point for wood/masonry is Lag bolt. Option A.",
+    "solution": "Lag bolts have a square head and a threaded conical point. They are normally used in wood or masonry together with an expansion anchor.\n\nWhy the other options are incorrect:\nOption B Bent bolt is a threaded rod with an eye or right-angle bend.\nOption C Flanged bolt has a large bearing area head, often eliminating a washer.\nOption D Round bolt has a smooth round head tightened by the nut.\n\n* Correct Option: A (Lag bolt)"
+  },
+  {
+    "id": "aee_fast_05",
+    "topicId": "fasteners",
+    "question": "Which head style eliminates the need for a separate washer, increases bearing area, and protects the finish during assembly?",
+    "options": [
+      "Binding head",
+      "Fillister head",
+      "Washer (flanged) head",
+      "Oval head",
+      "None of the above"
+    ],
+    "correct": 2,
+    "short": "Flanged/Washer head eliminates separate washer and protects finish. Option C.",
+    "solution": "Washer head, also called flanged head, eliminates the need for a separate assembly step when a washer is required. It increases the bearing area of the head and protects the material finish during assembly.\n\nWhy the other options are incorrect:\nOption A Binding head is for electrical connections with an undercut to prevent fraying.\nOption B Fillister has a deep slot and small head for high torque.\nOption D Oval is similar to flat but preferred for neat appearance, not washer function.\n\n* Correct Option: C (Washer (flanged) head)"
+  },
+  {
+    "id": "aee_fast_06",
+    "topicId": "fasteners",
+    "question": "A head commonly used in electrical connections because the undercut prevents fraying of stranded wire is:",
+    "options": [
+      "Truss head",
+      "Pan head",
+      "Binding head",
+      "Flat head",
+      "None of the above"
+    ],
+    "correct": 2,
+    "short": "Undercut to prevent fraying in electrical work is Binding head. Option C.",
+    "solution": "Binding heads have an undercut that prevents fraying of stranded wire, so they are commonly used in electrical connections.\n\nWhy the other options are incorrect:\nOption A Truss head covers a large area for extra holding power.\nOption B Pan head combines truss, binding and round qualities.\nOption D Flat head centers well and provides a flush surface.\n\n* Correct Option: C (Binding head)"
+  },
+  {
+    "id": "aee_fast_07",
+    "topicId": "fasteners",
+    "question": "Which standard point is most widely used where cutting-in action is not objectionable and can be used on shafts up to Rockwell C 35 if the screw is at least Rockwell C 45?",
+    "options": [
+      "Cup point",
+      "Flat point",
+      "Cone point",
+      "Oval point",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Most widely used, cutting-in action, C45 on C35 shaft is Cup point. Option A.",
+    "solution": "Cup point is the most widely used where cutting-in action is not objectionable. Heat-treated screws of Rockwell C 45 or greater can be used on shafts with surface hardness up to Rockwell C 35 without deforming the point.\n\nWhy the other options are incorrect:\nOption B Flat point is for frequent resetting against hardened shafts or thin walls.\nOption C Cone point is for permanent location with greatest holding power.\nOption D Oval point has lowest holding power, for frequent adjustment.\n\n* Correct Option: A (Cup point)"
+  },
+  {
+    "id": "aee_fast_08",
+    "topicId": "fasteners",
+    "question": "Which point is preferred where walls are thin or the threaded member is a soft metal, and where frequent resetting is required?",
+    "options": [
+      "Cup point",
+      "Flat point",
+      "Cone point",
+      "Half Dog point",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Thin walls, soft metal, frequent resetting → Flat point. Option B.",
+    "solution": "Flat point is used when frequent resetting is required, particularly suited for hardened steel shafts, thin walls, or soft metals. A flat is usually ground on the shaft for better contact.\n\nWhy the other options are incorrect:\nOption A Cup is general cutting-in.\nOption C Cone is for permanent location.\nOption D Half Dog is for permanent location spotted in a shaft hole.\n\n* Correct Option: B (Flat point)"
+  },
+  {
+    "id": "aee_fast_09",
+    "topicId": "fasteners",
+    "question": "Which point develops the greatest axial and torsional holding power when bearing against material of Rockwell C 15 or greater, and is usually spotted in a hole to half its length?",
+    "options": [
+      "Flat point",
+      "Cone point",
+      "Oval point",
+      "Half Dog point",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Greatest holding power, spotted half length, Rockwell C15 → Cone point. Option B.",
+    "solution": "Cone point is used for permanent location of parts. It develops the greatest axial and torsional holding power when bearing against material of Rockwell C 15 or greater. It is usually spotted in a hole to half its length.\n\nWhy the other options are incorrect:\nOption A Flat has lower holding, for frequent resetting.\nOption C Oval has lowest holding power.\nOption D Half Dog is for permanent location but requires drilled hole matching point diameter.\n\n* Correct Option: B (Cone point)"
+  },
+  {
+    "id": "aee_fast_10",
+    "topicId": "fasteners",
+    "question": "A thread-forming screw for sheet metal up to 18 gage, resin-impregnated plywood, wood and asbestos, used in pierced holes where a sharp point is needed and fast driving is desired, is Type:",
+    "options": [
+      "AB",
+      "B",
+      "C",
+      "BP",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Sheet metal up to 18 gage, pierced holes, sharp point → Type AB. Option A.",
+    "solution": "Type AB thread-forming screws are for sheet metal up to 18 gage, resin-impregnated plywood, wood and asbestos compositions. Used in pierced or punched holes where a sharp point for starting is needed. Joint strength can be increased with pilot holes less than root diameter. Fast driving.\n\nWhy the other options are incorrect:\nOption B Type B is for heavy-gage sheetmetal where pilot hole is larger than root diameter.\nOption C Type C makes a chip-free assembly but needs high torque.\nOption D BP is for locating/piercing soft materials.\n\n* Correct Option: A (AB)"
+  },
+  {
+    "id": "aee_fast_11",
+    "topicId": "fasteners",
+    "question": "Which thread-cutting screw gives the highest clamping force for a given torque and is good for low-strength metals and rethreading clogged holes?",
+    "options": [
+      "Type D",
+      "Type T",
+      "Type F",
+      "Type G",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Highest clamping force for given torque, low-strength metals → Type D. Option A.",
+    "solution": "Type D thread-cutting screws require less driving torque than Type C and have longer thread engagement. Good for low-strength metals and plastics, high-stretch brittle metals, and rethreading clogged pretapped holes. Easy starting. Gives highest clamping force for a given torque.\n\nWhy the other options are incorrect:\nOption B Type T cuts easier with more chip clearance.\nOption C Type F is for wide range, fast driving.\nOption D Type G is similar to Type C but less torque.\n\n* Correct Option: A (Type D)"
+  },
+  {
+    "id": "aee_wd_23",
+    "topicId": "welding-defects",
+    "question": "Self-piercing screws form a pilot hole by:",
+    "options": [
+      "Using a self-contained drill bit",
+      "Deforming the metal under pressure from the assembly tool",
+      "Cutting threads with a single wide flute",
+      "Rolling threads with four-point contact",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Self-piercing forms pilot hole by deforming metal under pressure, increasing engagement. Option B.",
+    "solution": "Self-piercing screws have a pointed tip that forms a pilot hole under pressure from the assembly tool. After the point is driven in, the threaded portion forms threads. The metal deformation increases thread-engagement area.\n\nWhy the other options are incorrect:\nOption A describes self-drilling screws (with a drill bit).\nOption C describes Type BT thread-cutting.\nOption D describes Type SF thread-rolling.\n\n* Correct Option: B (Deforming the metal under pressure from the assembly tool)"
+  },
+  {
+    "id": "aee_fast_12",
+    "topicId": "fasteners",
+    "question": "Wing nuts are used where:",
+    "options": [
+      "Permanent location is desired",
+      "Frequent disassembly is anticipated",
+      "High torque and 360° engagement is needed",
+      "Joining perpendicular panels",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Wing nuts for frequent disassembly. Option B.",
+    "solution": "Wing nuts are used in applications where frequent disassembly is anticipated, because they can be turned by hand without tools.\n\nWhy the other options are incorrect:\nOption A is for cone/half-dog points.\nOption C is Dome nut (high torque, 360° engagement).\nOption D is Angle nut.\n\n* Correct Option: B (Frequent disassembly is anticipated)"
+  },
+  {
+    "id": "aee_fast_13",
+    "topicId": "fasteners",
+    "question": "Which insert is described as knurled, press-fit, or expansion, requires a hole slightly larger than OD, and is easiest to install for lightly loaded applications?",
+    "options": [
+      "Pressed-in (knurled) insert",
+      "Self-tapping insert",
+      "Solid-bushing insert",
+      "Molded-in insert",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Knurled, press-fit, larger hole, easiest for light loads → Pressed-in. Option A.",
+    "solution": "Pressed-in inserts, also called knurled, press-fit, or expansion inserts, are non-threaded and require a prepared hole slightly larger than the insert OD. They are frequently the easiest to install and are used chiefly for lightly loaded applications.\n\nWhy the other options are incorrect:\nOption B Self-tapping eliminates separate tapping, for nonferrous/plastics.\nOption C Solid-bushing is for any drill-and-tap material with mechanical locks.\nOption D Molded-in is cast in place, used with ceramics/rubber.\n\n* Correct Option: A (Pressed-in (knurled) insert)"
+  },
+  {
+    "id": "aee_fast_14",
+    "topicId": "fasteners",
+    "question": "Which rivet type has hole depth greater than 1.12 times shank diameter and can punch its own holes in soft materials, but has lower shear strength than semitubular?",
+    "options": [
+      "Compression rivet",
+      "Full tubular rivet",
+      "Bifurcated (split) rivet",
+      "Semitubular rivet",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Hole depth >1.12× diameter, punches own holes, lower shear than semitubular → Full tubular. Option B.",
+    "solution": "Full tubular rivets have hole depths greater than 1.12 times shank diameter. They can punch their own holes in fabric, some plastic sheet, and other soft materials. Shear strength is less than that of semitubular rivets.\n\nWhy the other options are incorrect:\nOption A Compression rivets form interference fit and are flush.\nOption C Bifurcated have split bodies/prongs.\nOption D Semitubular has depth never exceeds 1.12× and becomes essentially solid.\n\n* Correct Option: B (Full tubular rivet)"
+  },
+  {
+    "id": "aee_fast_15",
+    "topicId": "fasteners",
+    "question": "The most widely used rivet type, whose hole depth never exceeds 1.12 times shank diameter and becomes essentially solid when set, is:",
+    "options": [
+      "Full tubular",
+      "Bifurcated",
+      "Metal-piercing",
+      "Semitubular",
+      "None of the above"
+    ],
+    "correct": 3,
+    "short": "Most widely used, depth ≤1.12×, becomes solid → Semitubular. Option D.",
+    "solution": "Semitubular is the most widely used rivet type. It has a straight or tapered hole with depth never exceeding 1.12 times shank diameter. When properly set, it becomes essentially a solid member.\n\nWhy the other options are incorrect:\nOption A Full tubular has depth >1.12×.\nOption B Bifurcated is split.\nOption C Metal-piercing has greater column strength for piercing.\n\n* Correct Option: D (Semitubular)"
+  },
+  {
+    "id": "aee_fast_16",
+    "topicId": "fasteners",
+    "question": "Which blind-rivet type leaves part of the mandrel in the body as a plug to increase shear strength and may have a closed blind end?",
+    "options": [
+      "Pull-through",
+      "Break type",
+      "Nonbreak type",
+      "Drive-pin",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Mandrel breaks and stays as plug, increases shear → Break type. Option B.",
+    "solution": "Pull-mandrel blind rivets have three subclassifications:\n* Pull-through: mandrel pulled completely through, leaving hollow.\n* Break type: mandrel is pulled into or against the body and then breaks off, leaving part in the body as a plug. The retained section increases shear strength. May have closed blind end.\n* Nonbreak: mandrel pulled into body but does not break, removed later.\n\nTherefore, the described is Break type.\n\nWhy the other options are incorrect:\nOption A leaves hollow.\nOption C does not break.\nOption D is drive-pin, hammered to flare.\n\n* Correct Option: B (Break type)"
+  },
+  {
+    "id": "aee_fast_17",
+    "topicId": "fasteners",
+    "question": "Taper pins have a taper of ¼ in. per ft measured on diameter. If D is large-end diameter and L is length, the small-end diameter d is:",
+    "options": [
+      "d = D – 0.02088L",
+      "d = D + 0.02088L",
+      "d = D – 0.2088L",
+      "d = D × 0.02088L",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Taper pins: d = D – 0.02088L. Option A.",
+    "solution": "Taper pins have a taper of ¼ in. per foot measured on diameter. Basic dimension is large-end diameter. Formula: d = D – 0.02088L where D = large-end diameter (in.), L = pin length (in.). The factor 0.02088 comes from 0.25/12 = 0.020833...\n\nWhy the other options are incorrect:\nOption B adds instead of subtracts.\nOption C has 0.2088 (10× too large).\nOption D multiplies.\n\n* Correct Option: A (d = D – 0.02088L)"
+  },
+  {
+    "id": "aee_fast_18",
+    "topicId": "fasteners",
+    "question": "Cotter pins have been standardized into 18 sizes with diameters from 1/32 to ¾ in. Which materials are listed as available?",
+    "options": [
+      "Mild steel, brass, bronze, stainless steel, aluminum",
+      "Only mild steel",
+      "Only stainless steel",
+      "Hardened steel only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Cotter pins available in mild steel, brass, bronze, stainless, aluminum. Option A.",
+    "solution": "Cotter pins are available in 18 sizes (1/32 to ¾ in.). Available materials listed include mild steel, brass, bronze, stainless steel, and aluminum, with various point styles.\n\nWhy the other options are incorrect:\nOptions B, C, D list only one material, which is incomplete.\n\n* Correct Option: A (Mild steel, brass, bronze, stainless steel, aluminum)"
+  },
+  {
+    "id": "aee_fast_19",
+    "topicId": "fasteners",
+    "question": "Which retaining ring remains circular after installation and provides a tight grip against the groove bottom, with a tapered section similar to basic axial types?",
+    "options": [
+      "Crescent ring",
+      "E-ring",
+      "Interlocking ring",
+      "High-strength radial ring",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Tapered section, remains circular → Crescent ring. Option A.",
+    "solution": "Radially assembled retaining rings:\n* Crescent ring has a tapered section similar to basic axial types. It remains circular after installation and provides a tight grip.\n\nWhy the other options are incorrect:\nOption B E-ring has three heavy prongs for small shafts.\nOption C Interlocking has two semicircular halves.\nOption D High-strength has large lobes.\n\n* Correct Option: A (Crescent ring)"
+  },
+  {
+    "id": "aee_fast_20",
+    "topicId": "fasteners",
+    "question": "Which hose clamp is a single-use clamp slipped over the hose and crimped with special tools on the ear?",
+    "options": [
+      "Ear clamp",
+      "Quick-connect strap",
+      "Worm-gear drive",
+      "Latch clamp",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Single-use, slipped over, ear crimped → Ear clamp. Option A.",
+    "solution": "Ear clamp is a single-use clamp slipped over the holes or duct and the ear is crimped with special tools. Oetiker Inc.\n\nWhy the other options are incorrect:\nOption B Quick-connect strap has nylon worm gear, pulled then snugged.\nOption C Worm-gear drive has a worm gear and steel band.\nOption D Latch clamp has ratchet tooth-locking.\n\n* Correct Option: A (Ear clamp)"
   }
 ]
 }
