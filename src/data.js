@@ -151,6 +151,10 @@ export const topicMeta = {
     {
       "id": "jig-fixture-design",
       "name": "Jig and Fixture Design"
+    },
+    {
+      "id": "bench-work-fitting",
+      "name": "Bench Work & Fitting"
     }
   ]
 }
@@ -5205,6 +5209,216 @@ export const questionBank = {
     "correct": 0,
     "short": "Ejecting devices push workpiece out after operation, speeding unloading. Option A.",
     "solution": "Essential features — Ejecting devices – Proper ejecting devices should be incorporated in the body to push the workpiece out after operation. Speeds up unloading.\n\nWhy the other options are incorrect: They describe clamping, guiding, or coolant.\n\n* Correct Option: A (To push the workpiece out after operation and speed up unloading)"
+  },
+  {
+    "id": "aee_bw_01",
+    "topicId": "bench-work-fitting",
+    "question": "According to workshop safety rules, which of the following is listed?",
+    "options": [
+      "Safety first before work — Accidents don't occur, they are caused",
+      "Safety last",
+      "No safety needed",
+      "Accidents are unavoidable",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Safety first, accidents are caused not occur. Option A.",
+    "solution": "Workshop Safety Rules slide: \"Safety first before work - Accidents don't occur, they are caused.\"\n\nWhy the other options are incorrect: They contradict the rule.\n\n* Correct Option: A (Safety first before work — Accidents don't occur, they are caused)"
+  },
+  {
+    "id": "aee_bw_02",
+    "topicId": "bench-work-fitting",
+    "question": "Which of the following is a workshop safety rule regarding knowing your job?",
+    "options": [
+      "Know your job and follow instructions",
+      "Be too forward and assume you know it all",
+      "Avoid knowing where exit doors are",
+      "Don't prioritize PPEs",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Know your job and follow instructions. Option A.",
+    "solution": "Rules include: i) know your job and follow instructions. ii) Don't be too forward and don't assume you know it all.\n\nWhy the other options are incorrect:\nOption B says be too forward — should not.\nOption C says avoid knowing where exit doors — should know.\nOption D says don't prioritize PPEs — should prioritize.\n\n* Correct Option: A (Know your job and follow instructions)"
+  },
+  {
+    "id": "aee_bw_03",
+    "topicId": "bench-work-fitting",
+    "question": "Which PPE prioritization is listed?",
+    "options": [
+      "Prioritize the use of PPEs (eyeglasses, overall, etc)",
+      "Don't use PPEs",
+      "Only use PPEs sometimes",
+      "PPEs are not needed",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Prioritize PPEs eyeglasses, overall etc. Option A.",
+    "solution": "Rule: v) Prioritize the use of PPEs (Personal Protective Equipments) eyeglasses, overall, etc. Also know where important sections and tools are located e.g exit doors, safety/emergency room, fire extinguishers.\n\nWhy the other options are incorrect: They contradict.\n\n* Correct Option: A (Prioritize the use of PPEs (eyeglasses, overall, etc))"
+  },
+  {
+    "id": "aee_bw_04",
+    "topicId": "bench-work-fitting",
+    "question": "How is Bench Work defined?",
+    "options": [
+      "Creation of articles by means of hands on the bench",
+      "Assembling different components to form a whole",
+      "Both A and B",
+      "None of the above",
+      "All of the above"
+    ],
+    "correct": 0,
+    "short": "Bench Work is creation of articles by means of hands on the bench. Option A.",
+    "solution": "Definitions:\n\n* Bench Work involves the creation of articles by means of hands on the bench.\n* Fitting is the assembling of different components of a system to form a whole.\n\nSo Bench Work is creation, Fitting is assembling.\n\nWhy the other options are incorrect:\nOption B is Fitting, Option C mixes both.\n\n* Correct Option: A (Creation of articles by means of hands on the bench)"
+  },
+  {
+    "id": "aee_bw_05",
+    "topicId": "bench-work-fitting",
+    "question": "How is Fitting defined?",
+    "options": [
+      "Assembling different components of a system to form a whole",
+      "Creation of articles by means of hands on the bench",
+      "Both",
+      "None of the above",
+      "All of the above"
+    ],
+    "correct": 0,
+    "short": "Fitting is assembling different components to form a whole. Option A.",
+    "solution": "Fitting is the assembling of different components of a system to form a whole.\n\nWhy the other options are incorrect: Option B is Bench Work.\n\n* Correct Option: A (Assembling different components of a system to form a whole)"
+  },
+  {
+    "id": "aee_bw_06",
+    "topicId": "bench-work-fitting",
+    "question": "How are hack saw teeth arranged?",
+    "options": [
+      "Alternately towards the right and left and very third or fourth left straight",
+      "All to one side",
+      "Randomly",
+      "No arrangement",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Teeth alternately right and left and very third or fourth left straight. Option A.",
+    "solution": "Tools used include: Hack Saw: teeth are arranged alternately towards the right and left and very third or fourth left straight.\n\nWhy the other options are incorrect: They are not the listed arrangement.\n\n* Correct Option: A (Alternately towards the right and left and very third or fourth left straight)"
+  },
+  {
+    "id": "aee_bw_07",
+    "topicId": "bench-work-fitting",
+    "question": "What is a cold chisel used for and what are its angles?",
+    "options": [
+      "To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle",
+      "To remove thin layers",
+      "To polish",
+      "To measure",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Cold chisel removes thick layers, has clearance, Rake, Cutting angle. Option A.",
+    "solution": "Cold Chisel: to remove thick layers of metals. Its cutting edges are specially hardened and tempered. They have: * clearance angle * Rake angle * Cutting angle.\n\nWhy the other options are incorrect:\nOption B File removes thin layers, Option C is polishing, Option D is measuring.\n\n* Correct Option: A (To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle)"
+  },
+  {
+    "id": "aee_bw_08",
+    "topicId": "bench-work-fitting",
+    "question": "What is a file used for?",
+    "options": [
+      "To remove thin layers of metals, hardened piece with slanting cut of teeth",
+      "To remove thick layers",
+      "To mark lines",
+      "To hold cylindrical jobs",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "File removes thin layers, hardened with slanting cut teeth. Option A.",
+    "solution": "File: to remove thin layers of metals. It is a hardened piece of steel which has slanting cut of teeth.\n\nWhy the other options are incorrect:\nOption B is cold chisel, Option C is scriber, Option D is V-block.\n\n* Correct Option: A (To remove thin layers of metals, hardened piece with slanting cut of teeth)"
+  },
+  {
+    "id": "aee_bw_09",
+    "topicId": "bench-work-fitting",
+    "question": "How is a file classified by size/length?",
+    "options": [
+      "The (100-200mm) one for fine work, The (200-400mm) one for heavy work",
+      "Only one size",
+      "By color",
+      "By weight",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "100-200mm for fine work, 200-400mm for heavy work. Option A.",
+    "solution": "File classified by: i) Size or length: The (100-200mm) one for fine work, The (200-400mm) one for heavy work.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (The (100-200mm) one for fine work, The (200-400mm) one for heavy work)"
+  },
+  {
+    "id": "aee_bw_10",
+    "topicId": "bench-work-fitting",
+    "question": "What are the two types of cut of teeth for files?",
+    "options": [
+      "Single cut (60° with centre line) and Double cut (60° and 80° crossing)",
+      "Only single cut",
+      "Only double cut",
+      "No cut",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Single cut 60°, Double cut 60° and 80° crossing. Option A.",
+    "solution": "Cut of teeth: of two types: Single cut (makes 60° with the centre line) and Double cut (has two lines, one at 60°, the other at 80°; both cross each other).\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Single cut (60° with centre line) and Double cut (60° and 80° crossing))"
+  },
+  {
+    "id": "aee_bw_11",
+    "topicId": "bench-work-fitting",
+    "question": "What are the methods of filing?",
+    "options": [
+      "Cross filing (across workpiece) and Straight filing",
+      "Only cross filing",
+      "Only straight filing",
+      "No method",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Cross filing across and Straight filing. Option A.",
+    "solution": "Methods of Filing: i) Cross filing: done across the workpiece - file - workpiece, ii) Straight filing: - file - workpiece.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Cross filing (across workpiece) and Straight filing)"
+  },
+  {
+    "id": "aee_bw_12",
+    "topicId": "bench-work-fitting",
+    "question": "What is Marking Out?",
+    "options": [
+      "Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting",
+      "Process of assembling",
+      "Process of polishing",
+      "Process of painting",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Marking Out is scribing lines to provide guide for cutting etc. Option A.",
+    "solution": "Bench Fitting involves: Marking Out: is the process of scribing lines on a workpiece, to provide guide for subsequent operations like cutting.\n\nWhy the other options are incorrect: They are other operations.\n\n* Correct Option: A (Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting)"
+  },
+  {
+    "id": "aee_bw_13",
+    "topicId": "bench-work-fitting",
+    "question": "Which tools are used for marking out?",
+    "options": [
+      "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square",
+      "Only hammer",
+      "Only chisel",
+      "Only file",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square. Option A.",
+    "solution": "Tools used for marking out include:\n- Marking Out Surface or Table\n- Scriber, to mark out lines\n- Punch, to locate/mark points\n- V-block, to hold cylindrical jobs\n- Angle plate, to hold jobs at right angle\n- Try-Square, to set accuracy of two lines at right angle\n\nWhy the other options are incorrect: They list single tools.\n\n* Correct Option: A (Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square)"
+  },
+  {
+    "id": "aee_bw_14",
+    "topicId": "bench-work-fitting",
+    "question": "What is the purpose of Draw Filing?",
+    "options": [
+      "Done with both hands applied to the file for finishing",
+      "Done with one hand",
+      "Not a filing method",
+      "For rough work only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Draw Filing done with both hands applied to the file. Option A.",
+    "solution": "Methods include: Draw Filing done with both hands applied to the file.\n\nWhy the other options are incorrect: They misstate.\n\n* Correct Option: A (Done with both hands applied to the file for finishing)"
   }
 ]
 }
