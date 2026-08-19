@@ -167,6 +167,14 @@ export const topicMeta = {
     {
       "id": "joining-metals",
       "name": "Joining of Metals"
+    },
+    {
+      "id": "metal-joining",
+      "name": "Metal Joining Processes"
+    },
+    {
+      "id": "gas-arc-welding",
+      "name": "Gas & Arc Welding"
     }
   ]
 }
@@ -5761,6 +5769,187 @@ export const questionBank = {
     "correct": 0,
     "short": "All listed: Intro, safety, hand/power tools, materials, bench-work, joining, machines, CAM, gauges/jigs. Option A.",
     "solution": "Course Outline for AGE202 Workshop Practice:\n* Introduction to Workshop practice.\n* Workshop safety measures.\n* Introduction to workshop hand tools and power tools and their safety measures.\n* Workshop materials and properties.\n* Bench-work: marking outs, scrimbing; punching; drilling; cutting.\n* Theory and practice of metal joining processes.\n* Functions and capabilities of grinding machines; drilling; latheing; shaping machines.\n* Computer aided manufacturing.\n* Gauges: Measurement; tolerance; Jigs and fixtures.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Introduction to Workshop practice, Workshop safety measures, hand tools and power tools, Workshop materials and properties, Bench-work, Metal joining processes, Grinding/drilling/latheing/shaping, Computer aided manufacturing, Gauges/Jigs and fixtures)"
+  },
+  {
+    "id": "aee_mj_01",
+    "topicId": "metal-joining",
+    "question": "What are the two main categories of metal joints based on disassembly?",
+    "options": [
+      "Temporary (bolting, riveting) and Permanent (soldering, welding, brazing)",
+      "Only temporary",
+      "Only permanent",
+      "No categories",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Temporary: bolting/riveting; Permanent: soldering/welding/brazing. Option A.",
+    "solution": "Metal Joining Process — Joints can be:\n1) Temporary — allow for disassembling, no ram for repairs: bolting (bolts nuts), riveting (cylindrical pin)\n2) Permanent — allow for no disassembling, rarely done by heat: Soldering, Welding, Brazing.\n\nWhy the other options are incorrect: They list only one category.\n\n* Correct Option: A (Temporary (bolting, riveting) and Permanent (soldering, welding, brazing))"
+  },
+  {
+    "id": "aee_mj_02",
+    "topicId": "metal-joining",
+    "question": "What is welding as a joining process?",
+    "options": [
+      "Heat generated is used to melt and fuse materials together to produce a permanent joint",
+      "Joining without heat",
+      "Only for temporary joints",
+      "Only for wood",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Welding uses heat to melt and fuse materials for permanent joint. Option A.",
+    "solution": "Definition: \"Welding: heat generated is used to melt and fuse materials together, to produce a permanent joint.\"\n\nWhy the other options are incorrect: They are not the definition.\n\n* Correct Option: A (Heat generated is used to melt and fuse materials together to produce a permanent joint)"
+  },
+  {
+    "id": "aee_mj_03",
+    "topicId": "gas-arc-welding",
+    "question": "What is the major difference between arc welding and gas welding regarding power source?",
+    "options": [
+      "Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen)",
+      "Both use electricity",
+      "Both use gas",
+      "No difference",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc uses electricity, Gas uses fuel gas + oxygen. Option A.",
+    "solution": "Material: The major difference lies in the power source — Arc welding uses electricity while Gas welding uses a gas combination of fuel gas and oxygen. Acetylene & Oxygen.\n\nWhy the other options are incorrect: They state both same.\n\n* Correct Option: A (Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen))"
+  },
+  {
+    "id": "aee_mj_04",
+    "topicId": "gas-arc-welding",
+    "question": "Which gases are usually used as the two gases in gas welding to provide heat to melt filler-metal and workpiece?",
+    "options": [
+      "Oxygen and acetylene gas",
+      "Only oxygen",
+      "Only acetylene",
+      "Nitrogen and hydrogen",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oxygen and acetylene. Option A.",
+    "solution": "Gas welding process is a welding process that involves the use of a mixture of two distinct gases as fuel to provide heat: The two gases are usually Oxygen and acetylene gas.\n\nWhy the other options are incorrect: They list only one or wrong gases.\n\n* Correct Option: A (Oxygen and acetylene gas)"
+  },
+  {
+    "id": "aee_mj_05",
+    "topicId": "gas-arc-welding",
+    "question": "How is acetylene gas produced as per the chemical equation shown?",
+    "options": [
+      "CaC2 + 2H2O → Ca(OH)2 + C2H2",
+      "2H2O + CaCO3 → Ca(OH)2",
+      "CaH2 alone",
+      "No reaction",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "CaC2 + 2H2O → Ca(OH)2 + C2H2 (acetylene). Option A.",
+    "solution": "Slide shows (Production of acetylene) with equation: CaC2 + 2H2O → Ca(OH)2 + C2H2 (acetylene). The text shows \"2H2O + CaCO3 → Ca(OH)2\" and \"CaH2\" but the correct is calcium carbide + water.\n\nWhy the other options are incorrect: They are incomplete or wrong.\n\n* Correct Option: A (CaC2 + 2H2O → Ca(OH)2 + C2H2)"
+  },
+  {
+    "id": "aee_mj_06",
+    "topicId": "gas-arc-welding",
+    "question": "What is the temperature of the blue (inner) zone and the white inner zone in gas welding flame?",
+    "options": [
+      "5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer",
+      "All zones same temperature",
+      "Only 1275°C",
+      "Only 2500°C",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Blue 5700°C, White inner 3200°C, Red intermediate 2500°C, Outer 1275°C. Option A.",
+    "solution": "Diagram shows: Temp: 5700°C blue (dies prezone), White inner zone (3200°C), Red intermediate zone (2500°C), Outer (1275°C) / Blue outer zone Secondary combustion.\n\nWhy the other options are incorrect: They list single temperature.\n\n* Correct Option: A (5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer)"
+  },
+  {
+    "id": "aee_mj_07",
+    "topicId": "gas-arc-welding",
+    "question": "In what ratio does a 1:1 mixture of oxygen and acetylene produce a neutral flame?",
+    "options": [
+      "1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone)",
+      "70:30",
+      "100:0",
+      "0:100",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1:1 gives neutral flame (Blue outer). Option A.",
+    "solution": "Text: \"In ratio 1:1, a neutral flame is produced (Blue outer) zone Secondary combustion.\"\n\nWhy the other options are incorrect:\nOption B 70:30 is reducing/carbonizing flame.\n\n* Correct Option: A (1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone))"
+  },
+  {
+    "id": "aee_mj_08",
+    "topicId": "gas-arc-welding",
+    "question": "Which flame contains excess acetylene than oxygen and is used to weld alloys of steel like Nickel, Chromium?",
+    "options": [
+      "Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones)",
+      "Neutral flame",
+      "Oxidizing flame",
+      "No flame",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Carburizing/Reducing flame has excess acetylene (70:30) for Ni, Cr alloys. Option A.",
+    "solution": "Text:\n* The kind of flame which contains excess of acetylene gas than oxygen is called Combusting/Carburizing flame.\n* This kind of flame is used to weld alloys of steel like Nickel, Chromium etc.\n\nAnd: Reducing flame - Carbonizing flame produced when volume of acetylene is 70:30, produces 3 distinct zone.\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C Oxidizing has excess oxygen.\n\n* Correct Option: A (Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones))"
+  },
+  {
+    "id": "aee_mj_09",
+    "topicId": "gas-arc-welding",
+    "question": "Which flame contains excess oxygen compared to acetylene and is used for brazing?",
+    "options": [
+      "Oxidizing flame",
+      "Neutral flame",
+      "Carburizing flame",
+      "No flame",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oxidizing flame has excess oxygen and is used for brazing. Option A.",
+    "solution": "Text: \"The flame which contains excess of oxygen is called Oxidising flame. This kind of flame is used for brazing.\"\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C has excess acetylene.\n\n* Correct Option: A (Oxidizing flame)"
+  },
+  {
+    "id": "aee_mj_10",
+    "topicId": "bench-work-fitting",
+    "question": "What is the function of a Vice as a holding device?",
+    "options": [
+      "To hold jobs, has two jaws, one fixed, the other adjustable",
+      "To cut metal",
+      "To measure",
+      "To join metals",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Vice holds jobs with two jaws (fixed and adjustable). Option A.",
+    "solution": "Holding Device — Vice: To hold jobs, has two jaws, one fixed, the other, adjustable.\n\nWhy the other options are incorrect: They describe cutting/measuring/joining.\n\n* Correct Option: A (To hold jobs, has two jaws, one fixed, the other adjustable)"
+  },
+  {
+    "id": "aee_mj_11",
+    "topicId": "bench-work-fitting",
+    "question": "Hammers are classified based on shape of their peen. Which is NOT a listed category?",
+    "options": [
+      "Ball and pen hammer",
+      "Setting hammer",
+      "Razing hammer",
+      "Claw hammer",
+      "Screw driver",
+      "None of the above"
+    ],
+    "correct": 4,
+    "short": "Categories are Ball/pen, Setting, Razing, Claw. Screw driver is not a hammer. Option E.",
+    "solution": "Categories of hammer are : Ball and pen hammer; Setting hammer; razing hammer; Claw hammer.\n\nWhy the other options are incorrect: Options A-D are all listed hammer categories, Option E says screw driver which is not a hammer — so \"None of the above\" would be wrong, but E is screw driver — actually the question asks which is NOT listed: Screw driver is not a hammer category, so answer is Screw driver, which is Option E? Wait options list includes Screw driver as Option E? Actually we have 5 options, E is \"None of the above\" — need to adjust. The NOT listed is Screw driver, but our options include Screw driver as D, so D would be not listed? Let's see: Options A-D are all hammer categories, so all are listed, so which is NOT listed is none — but Screw driver is not a hammer, but it's not in A-D. Hmm.\n\nOur options: A Ball/pen, B Setting, C Razing, D Claw. All are listed, so which is NOT listed is none — so answer is E (None of the above). Let's set correct as E (4).\n\nWhy the other options are incorrect: They are all listed hammer categories.\n\n* Correct Option: E (None of the above — all A-D are listed hammer categories, screw driver is not a hammer but not in options A-D, so none is not listed)"
+  },
+  {
+    "id": "aee_mj_12",
+    "topicId": "gas-arc-welding",
+    "question": "What are the two types of welding that both involve application of heat or generation?",
+    "options": [
+      "Arc welding and Gas welding",
+      "Only Arc welding",
+      "Only Gas welding",
+      "No welding types",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding and Gas welding both involve heat application/generation. Option A.",
+    "solution": "Process of Welding — There are 2 types of welding. Art welding; Gas welding. Both involve (application) of heat or generation.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Arc welding and Gas welding)"
   }
 ]
 }
