@@ -99,6 +99,14 @@ export const topicMeta = {
     {
       "id": "bench-work",
       "name": "Bench Work & Finishing"
+    },
+    {
+      "id": "mig-welding",
+      "name": "MIG Welding"
+    },
+    {
+      "id": "tig-welding",
+      "name": "TIG Welding"
     }
   ]
 }
@@ -3507,6 +3515,302 @@ export const questionBank = {
     "correct": 0,
     "short": "Rolling machine is for bending rolls, rigid, all adjustments from operator side. Option A.",
     "solution": "Text: \"FRONT VIEW OF MACHINE All adjustments can be made easily from the operator’s normal working position. The design and steel fabrication of this Keetona Bending Roll ensure complete rigidity under all conditions and allow mobility of the machine without permanent fixing.\"\n\nWhy the other options are incorrect: Cutting, drilling, grinding are not rolling.\n\n* Correct Option: A (Bending rolls to shape metal, with all adjustments from operator’s position, rigid steel fabrication)"
+  },
+  {
+    "id": "aee_mig_01",
+    "topicId": "mig-welding",
+    "question": "Which of the following is a listed safety practice in MIG welding?",
+    "options": [
+      "Select the correct shaded lens and work in a well ventilated area",
+      "Work in a poorly ventilated area",
+      "Attempt to repair the machine yourself",
+      "Use a clear lens for all welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Select correct shaded lens and well ventilated area are MIG safety practices. Option A.",
+    "solution": "Safety practices in MIG welding listed include: Select the correct shaded lens, Work in a well ventilated area, Maintain cables as straight as possible, Turn off machine and gas supply when finished, Never attempt to repair machine.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says poorly ventilated — should be well ventilated.\nOption C says attempt to repair — should be never attempt.\nOption D says clear lens — should be shaded lens.\n\n* Correct Option: A (Select the correct shaded lens and work in a well ventilated area)"
+  },
+  {
+    "id": "aee_mig_02",
+    "topicId": "mig-welding",
+    "question": "Which three components are listed as parts of MIG equipment power supply?",
+    "options": [
+      "DCRP supply, Wire feeder, Gas control system",
+      "Nozzle, Contact tip, Cooling system",
+      "Liner, Cooling Water, Electrode",
+      "Nitrogen, Oxygen, Argon",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "DCRP supply, Wire feeder, Gas control system are parts of MIG power supply. Option A.",
+    "solution": "Material under PARTS OF MIG EQUIPMENT: POWER SUPPLY lists:\n\n• DCRP supply\n• Wire feeder\n• Gas control system\n\nWhy the other options are incorrect:\nOption B lists parts of MIG gun, Option C lists parts of water-cooled MIG gun, Option D lists atmosphere composition.\n\n* Correct Option: A (DCRP supply, Wire feeder, Gas control system)"
+  },
+  {
+    "id": "aee_mig_03",
+    "topicId": "mig-welding",
+    "question": "Which three are listed as MACHINE ADJUSTMENTS for MIG welding?",
+    "options": [
+      "Voltage control, Wire feed speed, Shielding gas flow rate",
+      "Nitrogen 78%, Oxygen 21%, Argon 0.94%",
+      "DCRP supply, Wire feeder, Gas control",
+      "Nozzle, Contact tip, Cooling system",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Voltage control, Wire feed speed, Shielding gas flow rate are machine adjustments. Option A.",
+    "solution": "Material lists under MACHINE ADJUSTMENTS:\n\n• Voltage control\n• Wire feed speed\n• Shielding gas flow rate\n\nWhy the other options are incorrect:\nOption B is atmosphere composition, Option C is power supply parts, Option D is MIG gun parts.\n\n* Correct Option: A (Voltage control, Wire feed speed, Shielding gas flow rate)"
+  },
+  {
+    "id": "aee_mig_04",
+    "topicId": "mig-welding",
+    "question": "What is the composition of normal atmosphere as listed?",
+    "options": [
+      "Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%",
+      "Nitrogen 50%, Oxygen 50%",
+      "Argon 100%",
+      "Helium 78%, Oxygen 21%",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%. Option A.",
+    "solution": "Table ATMOSPHERE COMPOSITION:\n\n• Nitrogen : 78%\n• Oxygen : 21%\n• Argon :0.94%\n• Others :0.06%\n\nWhy the other options are incorrect: They do not match the listed percentages.\n\n* Correct Option: A (Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%)"
+  },
+  {
+    "id": "aee_mig_05",
+    "topicId": "mig-welding",
+    "question": "Which shielding gas is correctly matched to its application as per the SHIELDING GASES table?",
+    "options": [
+      "Argon : thin sheet metal",
+      "Helium : thin sheet metal",
+      "Carbon diox. : thick non-ferrous metals",
+      "Arg & Oxy : thick metals",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Argon is for thin sheet metal. Option A.",
+    "solution": "Table SHIELDING GASES:\n\n• Argon : thin sheet metal\n• Helium : thick metals\n• Carbon diox. : low/medium carbon steel\n• Arg & Oxy : carbon/stainless steel\n• Arg & Hel : thick non-ferrous metals\n• Arg & CO2 : carbon/low alloy steels\n• He/Ar/CO2 : stainless steel\n\nOption A matches Argon : thin sheet metal.\n\nWhy the other options are incorrect:\nOption B Helium is for thick metals, not thin sheet.\nOption C Carbon diox. is for low/medium carbon steel, not thick non-ferrous.\nOption D Arg & Oxy is for carbon/stainless steel.\n\n* Correct Option: A (Argon : thin sheet metal)"
+  },
+  {
+    "id": "aee_mig_06",
+    "topicId": "mig-welding",
+    "question": "In AWS electrode classification ER 70 S 6, what does “70” represent?",
+    "options": [
+      "Tensile strength in 1,000 psi",
+      "Wire diameter in mm",
+      "Gas flow rate",
+      "Voltage",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "70 means tensile strength in 1,000 psi (70,000 psi). Option A.",
+    "solution": "AWS ELECTRODE CLASSIFICATION ER 70 S 6:\n\n• E : identifies it as electrode\n• R : identifies it as a rod\n• 70 : tensile strength in 1,000 psi\n• S : identifies solid bare wire\n• 6 : chemical composition variations\n\nSo 70 means 70 × 1,000 = 70,000 psi tensile strength.\n\nWhy the other options are incorrect: They are not the definition of the numeric code.\n\n* Correct Option: A (Tensile strength in 1,000 psi)"
+  },
+  {
+    "id": "aee_mig_07",
+    "topicId": "mig-welding",
+    "question": "What does “S” represent in ER 70 S 6?",
+    "options": [
+      "Solid bare wire",
+      "Shielding gas",
+      "Spray transfer",
+      "Short arc",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "S identifies solid bare wire. Option A.",
+    "solution": "From the same classification: S : identifies solid bare wire.\n\nWhy the other options are incorrect: They are not the meaning of S.\n\n* Correct Option: A (Solid bare wire)"
+  },
+  {
+    "id": "aee_mig_08",
+    "topicId": "mig-welding",
+    "question": "For metal thickness 1/32 to 1/8”, which wire diameter is recommended according to WORK PIECE AND WIRE SIZE table?",
+    "options": [
+      "0.020/0.030/0.035",
+      "0.045 to 1/16”",
+      "1/8”",
+      "0.035 only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1/32 to 1/8” uses 0.020/0.030/0.035. Option A.",
+    "solution": "Table WORK PIECE AND WIRE SIZE:\n\n* 1/32 to 1/8” — 0.020/0.030/0.035\n* 3/16 to 3/8” — 0.045 to 1/16”\n* Over ½” — 1/8”\n\nSo for thin 1/32 to 1/8”, use 0.020/0.030/0.035.\n\nWhy the other options are incorrect:\nOption B is for 3/16 to 3/8”, Option C is for over ½”.\n\n* Correct Option: A (0.020/0.030/0.035)"
+  },
+  {
+    "id": "aee_mig_09",
+    "topicId": "mig-welding",
+    "question": "Which are the two methods for STARTING the arc in MIG welding?",
+    "options": [
+      "Fuse start and Scratch start",
+      "Tapered current and Quick stop wire feed",
+      "Globular and Spray",
+      "Short-arc and Dip",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fuse start and Scratch start are starting methods. Option A.",
+    "solution": "Material under STARTING /STOPPING THE ARC:\n\n• STARTING — Fuse start, Scratch start\n• STOPPING — Tapered current, Quick stop wire feed\n\nWhy the other options are incorrect:\nOption B lists stopping methods, Options C and D list metal transfer patterns.\n\n* Correct Option: A (Fuse start and Scratch start)"
+  },
+  {
+    "id": "aee_mig_10",
+    "topicId": "mig-welding",
+    "question": "In welding positions, what are the work and travel angles shown in Fig. 7-21?",
+    "options": [
+      "90° work angle (top view), 15° work angle (end view), 15° travel angle (side view)",
+      "45° work, 45° travel",
+      "30° work, 60° travel",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fig. 7-21: 90° work angle top view, 15° work angle end view, 15° travel angle side view. Option A.",
+    "solution": "Fig. 7-21. (1) Top view—90° work angle, (2) end view—15° work angle, and (3) side view—15° travel angle.\n\nWhy the other options are incorrect: They do not match the figure.\n\n* Correct Option: A (90° work angle (top view), 15° work angle (end view), 15° travel angle (side view))"
+  },
+  {
+    "id": "aee_mig_11",
+    "topicId": "mig-welding",
+    "question": "According to Fig. 7-22 Effect of Gun Position, which position gives narrow bead width and deep penetration?",
+    "options": [
+      "Perpendicular — medium bead and penetration",
+      "Backhand — narrow bead and deep penetration",
+      "Forehand — wide bead and low penetration",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Backhand gives narrow bead and deep penetration. Option B.",
+    "solution": "Fig. 7-22. (1) Perpendicular—medium bead width and penetration, (2) backhand—narrow bead width and deep penetration, and (3) forehand—wide bead width and low penetration.\n\nWhy the other options are incorrect:\nOption A is perpendicular, Option C is forehand.\n\n* Correct Option: B (Backhand — narrow bead width and deep penetration)"
+  },
+  {
+    "id": "aee_mig_12",
+    "topicId": "mig-welding",
+    "question": "Which metal transfer pattern is described as “used on thin metals” and shows Globule, Arc, Base Metal?",
+    "options": [
+      "Globular transfer",
+      "Short-arc (dip) transfer",
+      "Spray transfer",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Globular transfer is used on thin metals. Option A.",
+    "solution": "Fig. 7-10. Globular transfer—used on thin metals. Shows Shielding Gas, MIG Wire, Globule, Arc, Base Metal.\n\nWhy the other options are incorrect:\nOption B Short-arc (dip) is 4-step cycle with short circuit, Option C Spray is fine droplets.\n\n* Correct Option: A (Globular transfer)"
+  },
+  {
+    "id": "aee_mig_13",
+    "topicId": "mig-welding",
+    "question": "Short-arc transfer is also known as:",
+    "options": [
+      "Dip transfer",
+      "Globular transfer",
+      "Spray transfer",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Short-arc is also known as dip transfer. Option A.",
+    "solution": "Fig. 7-11. Short arc transfer—also known as dip transfer: (1) Beginning, (2) molten electrode elongates, (3) touches puddle and short circuits, (4) drop separates and arc reignites.\n\nWhy the other options are incorrect: They are different transfer modes.\n\n* Correct Option: A (Dip transfer)"
+  },
+  {
+    "id": "aee_mig_14",
+    "topicId": "mig-welding",
+    "question": "Which of the following is listed as a COMMON WELD DEFECT in MIG welding?",
+    "options": [
+      "Burn-thru : hole in base metal",
+      "Crater cracks : hole cracks on weld",
+      "Porosity : blow holes in weld",
+      "All of the above",
+      "None of the above"
+    ],
+    "correct": 3,
+    "short": "All listed: Burn-thru, Crater cracks, Porosity, plus Low penetration, Overlap, Whiskers. Option D.",
+    "solution": "List COMMON WELD DEFECTS:\n\n• Burn-thru : hole in base metal\n• Crater cracks : hole cracks on weld\n• Low penetration : weld only on surface\n• Overlap : incomplete melting\n• Porosity : blow holes in weld\n• Whiskers : short-unmelted wire\n\nOption D \"All of the above\" is correct if the three are among them.\n\nWhy the other options are incomplete: Each alone is true but not exhaustive.\n\n* Correct Option: D (All of the above)"
+  },
+  {
+    "id": "aee_mig_15",
+    "topicId": "mig-welding",
+    "question": "What are “Whiskers” in MIG welding?",
+    "options": [
+      "Short-unmelted wire",
+      "Hole in base metal",
+      "Blow holes in weld",
+      "Incomplete melting",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Whiskers are short-unmelted wire. Option A.",
+    "solution": "List: Whiskers : short-unmelted wire (shown in Fig. 7-19 MIG bead with whiskers).\n\nWhy the other options are incorrect:\nOption B is Burn-thru, Option C is Porosity, Option D is Overlap.\n\n* Correct Option: A (Short-unmelted wire)"
+  },
+  {
+    "id": "aee_tig_01",
+    "topicId": "tig-welding",
+    "question": "Which are listed as ADVANTAGES of TIG welding?",
+    "options": [
+      "Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds ferrous and non-ferrous",
+      "Only welds thin metals",
+      "Requires more grinding",
+      "More distortion",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advantages: Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds both ferrous and non-ferrous. Option A.",
+    "solution": "Material under ADVANTAGES:\n\n• Stronger welds\n• Easier than still welding (stick)\n• Less spark, smoke and fumes\n• Less distortion of workpiece\n• Finished welds require less grinding\n• Welds ferrous and non-ferrous metals\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Stronger welds, easier than still welding, less spark, smoke and fumes, less distortion, less grinding, welds ferrous and non-ferrous)"
+  },
+  {
+    "id": "aee_tig_02",
+    "topicId": "tig-welding",
+    "question": "What lens number is recommended for TIG welding safety?",
+    "options": [
+      "#11 or #12 lens",
+      "#5 lens",
+      "Clear lens",
+      "No lens",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Use #11 or #12 lens for TIG. Option A.",
+    "solution": "Material under SAFETY IN TIG WELDING:\n\n• Use # 11 or # 12 lens\n• Weld in a well ventilated place\n• Wear hearing protection\n• Never touch tungsten electrode\n• Adjust the machine within limits\n\nWhy the other options are incorrect: They are not the listed lens numbers.\n\n* Correct Option: A (#11 or #12 lens)"
+  },
+  {
+    "id": "aee_tig_03",
+    "topicId": "tig-welding",
+    "question": "Which power supply types are listed for TIG equipment?",
+    "options": [
+      "AC, DC-straight polarity, DC-reverse polarity",
+      "Only AC",
+      "Only DCRP",
+      "Only DC",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "AC, DC-straight, DC-reverse polarity. Option A.",
+    "solution": "Material under TIG EQUIPMENT — Power supply:\n\n• AC\n• DC-straight polarity\n• DC-reverse polarity\n\nWhy the other options are incorrect: They list only one type.\n\n* Correct Option: A (AC, DC-straight polarity, DC-reverse polarity)"
+  },
+  {
+    "id": "aee_tig_04",
+    "topicId": "tig-welding",
+    "question": "Which components are part of a TIG torch as shown in Fig. 70?",
+    "options": [
+      "Short cap, Torch body, Gas cup, Collet body, Collet, Electrode",
+      "Nozzle, Contact tip, Cooling system",
+      "DCRP supply, Wire feeder",
+      "Argon, Helium, CO2",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Short cap, Torch body, Gas cup, Collet body, Collet, Electrode are TIG torch parts. Option A.",
+    "solution": "Fig. 70 — Components Of A TIG Torch:\n\nSHORT CAP, TORCH BODY, GAS CUP, COLLET BODY, COLLET, ELECTRODE\n\nWhy the other options are incorrect:\nOption B is MIG gun parts, Option C is MIG power supply, Option D is shielding gases.\n\n* Correct Option: A (Short cap, Torch body, Gas cup, Collet body, Collet, Electrode)"
+  },
+  {
+    "id": "aee_tig_05",
+    "topicId": "tig-welding",
+    "question": "What does a TIG welding system include as per Fig. 68?",
+    "options": [
+      "Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional)",
+      "Only power supply",
+      "Only torch",
+      "Only gas",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Regulator/Flowmeter, TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional). Option A.",
+    "solution": "Fig. 68 — TIG Welding System: REGULATOR/FLOWMETER COMBINATION, AIR-OR-WATER COOLED TIG TORCH, SHIELDING GAS, WORKPIECE, POWER SUPPLY, WATER COOLER(OPTIONAL)\n\nWhy the other options are incorrect: They list only one component.\n\n* Correct Option: A (Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional))"
   }
 ]
 }
