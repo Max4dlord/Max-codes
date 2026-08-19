@@ -143,6 +143,14 @@ export const topicMeta = {
     {
       "id": "workshop-safety",
       "name": "Workshop Safety"
+    },
+    {
+      "id": "jigs-fixtures",
+      "name": "Jigs and Fixtures"
+    },
+    {
+      "id": "jig-fixture-design",
+      "name": "Jig and Fixture Design"
     }
   ]
 }
@@ -4927,6 +4935,276 @@ export const questionBank = {
     "correct": 0,
     "short": "Use approved lighter, not matches/lighters that bring fingers close. Option A.",
     "solution": "Rule 8: \"Light the flame with an approved lighter. Using matches or lighters to light a torch brings fingers too close to the tip and may cause burns.\"\n\nWhy the other options are incorrect: Matches/lighters are explicitly to be avoided.\n\n* Correct Option: A (Approved lighter (friction lighter), not matches or lighters that bring fingers too close)"
+  },
+  {
+    "id": "aee_jf_01",
+    "topicId": "jigs-fixtures",
+    "question": "Why is interchangeability important in mass production?",
+    "options": [
+      "To facilitate easy assembly and reduction of unit cost",
+      "To make each part unique",
+      "To increase manual marking time",
+      "To require highly skilled operators for each part",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Interchangeability facilitates easy assembly and reduces unit cost. Option A.",
+    "solution": "The successful running of any mass production depends upon interchangeability to facilitate easy assembly and reduction of unit cost. Mass production methods demand a fast and easy method of positioning work for accurate operations.\n\nWhy the other options are incorrect:\nOption B says unique — opposite, Option C says increase marking time — jigs reduce it, Option D says require highly skilled — jigs allow semi-skilled.\n\n* Correct Option: A (To facilitate easy assembly and reduction of unit cost)"
+  },
+  {
+    "id": "aee_jf_02",
+    "topicId": "jigs-fixtures",
+    "question": "What are jigs and fixtures as production tools?",
+    "options": [
+      "Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities",
+      "Random hand tools",
+      "Only for single part production",
+      "Only for repair work",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Jigs and fixtures are specially designed to manufacture duplicate interchangeable parts in large quantities. Option A.",
+    "solution": "Material: \"Jigs and fixtures are production tools used to accurately manufacture duplicate and interchangeable parts. Jigs and fixtures are specially designed so that large numbers of components can be machined or assembled identically, and to ensure interchangeability of components.\"\n\nWhy the other options are incorrect: They are not for random or single part.\n\n* Correct Option: A (Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities)"
+  },
+  {
+    "id": "aee_jf_03",
+    "topicId": "jigs-fixtures",
+    "question": "What is a JIG as a work holding device?",
+    "options": [
+      "Holds, supports, locates the work piece and guides the cutting tool",
+      "Holds, supports, locates but does not guide the tool",
+      "Only guides the tool without holding",
+      "Only holds without locating",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Jig holds, supports, locates and guides the cutting tool. Option A.",
+    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece and guides the cutting tool for a specific operation. Jigs are usually fitted with hardened steel bushings for guiding cutting tools.\"\n\nWhy the other options are incorrect:\nOption B describes a Fixture (holds/supports/locates but does not guide).\nOption C and D are incomplete.\n\n* Correct Option: A (Holds, supports, locates the work piece and guides the cutting tool)"
+  },
+  {
+    "id": "aee_jf_04",
+    "topicId": "jigs-fixtures",
+    "question": "What is a FIXTURE as a work holding device?",
+    "options": [
+      "Holds, supports, locates the work piece but does not guide the cutting tool, provides reference surface",
+      "Holds, supports, locates and guides the cutting tool",
+      "Only guides the cutting tool",
+      "Does not hold the work piece",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fixture holds, supports, locates but does not guide the tool; provides reference surface. Option A.",
+    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece for a specific operation but does not guide the cutting tool. It provides only a reference surface or a device. What makes a fixture unique is that each one is built to fit a particular part or shape.\"\n\nExamples: Vises, chucks.\n\nWhy the other options are incorrect:\nOption B describes a Jig.\n\n* Correct Option: A (Holds, supports, locates the work piece but does not guide the cutting tool, provides reference surface)"
+  },
+  {
+    "id": "aee_jf_05",
+    "topicId": "jigs-fixtures",
+    "question": "Which statement correctly distinguishes Jigs from Fixtures regarding clamping to the machine table?",
+    "options": [
+      "Jigs are not clamped unless large diameters; Fixtures should be securely clamped",
+      "Both are always clamped",
+      "Both are never clamped",
+      "Jigs are always clamped, fixtures are not",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Jigs not clamped unless large; Fixtures should be securely clamped. Option A.",
+    "solution": "Table How do jigs and fixtures differ:\n\n* JIGS 2. Jigs are not clamped to the drill press table unless large diameters to be drilled and there is necessity to move the jig to bring each bush directly under the drill.\n* FIXTURES 2. Fixtures should be securely clamped to the table of the machine upon which the work is done.\n\nWhy the other options are incorrect: They contradict the table.\n\n* Correct Option: A (Jigs are not clamped unless large diameters; Fixtures should be securely clamped)"
+  },
+  {
+    "id": "aee_jf_06",
+    "topicId": "jigs-fixtures",
+    "question": "Which machines are jigs specifically used for, and which are fixtures used for?",
+    "options": [
+      "Jigs for drilling, reaming, tapping, boring; Fixtures for milling, shapers, slotting",
+      "Jigs for milling; Fixtures for drilling",
+      "Both for same machines",
+      "Jigs for grinding only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Jigs for drilling/reaming/tapping/boring; Fixtures for milling/shapers/slotting. Option A.",
+    "solution": "Table:\n\n* JIGS 3. The jigs are special tools particularly in drilling, reaming, tapping and boring operation.\n* FIXTURES 3. Fixtures are specific tools used particularly in milling machine, shapers and slotting machine.\n\nWhy the other options are incorrect: They swap or generalize.\n\n* Correct Option: A (Jigs for drilling, reaming, tapping, boring; Fixtures for milling, shapers, slotting)"
+  },
+  {
+    "id": "aee_jf_07",
+    "topicId": "jigs-fixtures",
+    "question": "Which is heavier in construction?",
+    "options": [
+      "Fixtures are heavier than jigs",
+      "Jigs are heavier than fixtures",
+      "Both are same weight",
+      "Weight does not matter",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fixtures are heavier; Jigs are lighter. Option A.",
+    "solution": "Table:\n\n* JIGS 5. Lighter in construction.\n* FIXTURES 5. Heavier in construction.\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Fixtures are heavier than jigs)"
+  },
+  {
+    "id": "aee_jf_08",
+    "topicId": "jig-fixture-design",
+    "question": "Which is a listed advantage of jigs and fixtures regarding productivity?",
+    "options": [
+      "Increases productivity by eliminating individual marking, positioning, frequent checking and reducing operation time",
+      "Decreases productivity",
+      "Only for single piece",
+      "No effect",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Increases productivity by eliminating marking/positioning/checking and reducing time. Option A.",
+    "solution": "Advantages — PRODUCTIVITY:\n\nJigs and fixtures increases the productivity by eliminating the individual marking, positioning and frequent checking. The operation time is also reduced due to increase in speed, feed and depth of cut because of high clamping rigidity.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Increases productivity by eliminating individual marking, positioning, frequent checking and reducing operation time)"
+  },
+  {
+    "id": "aee_jf_09",
+    "topicId": "jig-fixture-design",
+    "question": "Which advantage relates to using unskilled or semi-skilled operators?",
+    "options": [
+      "Skill reduction — no need for skillful setting, can employ unskilled/semi-skilled to save labour cost",
+      "Interchangeability only",
+      "Cost increase",
+      "No advantage",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Skill reduction allows unskilled/semi-skilled operators. Option A.",
+    "solution": "Advantage — SKILL REDUCTION:\n\nThere is no need for skillful setting of work on tool. Jigs and fixtures makes possible to employ unskilled or semi skilled machine operator to make savings in labour cost.\n\nWhy the other options are incorrect: They are not the skill reduction point.\n\n* Correct Option: A (Skill reduction — no need for skillful setting, can employ unskilled/semi-skilled to save labour cost)"
+  },
+  {
+    "id": "aee_jf_10",
+    "topicId": "jig-fixture-design",
+    "question": "What is a fundamental principle regarding locating points for jigs and fixtures?",
+    "options": [
+      "Good facilities for locating, workpiece must be easily inserted and quickly taken out, accurate with respect to tool guiding",
+      "No locating needed",
+      "Workpiece should be placed anywhere",
+      "No need for accuracy",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Locating points should allow easy insertion/removal and accurate positioning vs tool. Option A.",
+    "solution": "Fundamental principles — LOCATING POINTS: Good facilities should be provided for locating the work. The article to be machined must be easily inserted and quickly taken out from the jig so that no time is wasted in placing the workpiece in position. The position should be accurate with respect to tool guiding.\n\nWhy the other options are incorrect: They ignore locating.\n\n* Correct Option: A (Good facilities for locating, workpiece must be easily inserted and quickly taken out, accurate with respect to tool guiding)"
+  },
+  {
+    "id": "aee_jf_11",
+    "topicId": "jig-fixture-design",
+    "question": "What does “Fool proof” design mean for jigs and fixtures?",
+    "options": [
+      "Design would not permit workpiece or tool to be inserted in any position other than the correct one",
+      "Any position is allowed",
+      "No need for correct position",
+      "Only for tools, not workpiece",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fool proof means cannot insert workpiece/tool in wrong position. Option A.",
+    "solution": "Principle — FOOL PROOF: The design of jigs and fixtures should be such that it would not permit the workpiece or the tool to inserted in any position other than the correct one.\n\nWhy the other options are incorrect: They allow wrong positions.\n\n* Correct Option: A (Design would not permit workpiece or tool to be inserted in any position other than the correct one)"
+  },
+  {
+    "id": "aee_jf_12",
+    "topicId": "jig-fixture-design",
+    "question": "Which material is noted as cheapest and contains less than 0.3% carbon, used in most parts of jigs and fixtures?",
+    "options": [
+      "Mild steel",
+      "High speed Steel",
+      "Die steels",
+      "Nylon and Fiber",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Mild steel is cheapest, <0.3% carbon, used in most parts. Option A.",
+    "solution": "Materials: Mild steel — Used in most part of Jigs and Fixtures, Cheapest material, Contains less than 0.3% carbon.\n\nWhy the other options are incorrect:\nOption B High speed Steel is for cutting tools, Option C Die steels for press tools, Option D Nylon is for soft lining.\n\n* Correct Option: A (Mild steel)"
+  },
+  {
+    "id": "aee_jf_13",
+    "topicId": "jig-fixture-design",
+    "question": "Which material contains more than 2% carbon, has self-lubricating properties and can withstand vibrations for base?",
+    "options": [
+      "Cast Iron",
+      "Mild steel",
+      "High speed Steel",
+      "Nylon",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Cast Iron has >2% carbon, self-lubricating, vibration resistant for base. Option A.",
+    "solution": "Material: Cast Iron — Used for odd shapes, Contains more than 2% carbon, Has self lubricating properties, Can withstand vibrations and suitable for base.\n\nWhy the other options are incorrect:\nOption B Mild steel is <0.3% carbon, Option C High speed is for cutting.\n\n* Correct Option: A (Cast Iron)"
+  },
+  {
+    "id": "aee_jf_14",
+    "topicId": "jig-fixture-design",
+    "question": "Which material is used for soft lining for clamps to avoid damage due to clamping pressure?",
+    "options": [
+      "Nylon and Fiber",
+      "Cast Iron",
+      "High speed Steel",
+      "Mild steel",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Nylon and Fiber for soft lining of clamps. Option A.",
+    "solution": "Material: Nylon and Fiber — Used for soft lining for clamps to avoid damage to workpiece due to clamping pressure.\n\nWhy the other options are incorrect: They are for other purposes.\n\n* Correct Option: A (Nylon and Fiber)"
+  },
+  {
+    "id": "aee_jf_15",
+    "topicId": "jig-fixture-design",
+    "question": "What is a key rule for clamping device design?",
+    "options": [
+      "Should be as simple as possible, hold firmly without springing under cutting strain",
+      "Should be very complicated",
+      "Should allow springing",
+      "Should be heavy and complex",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Clamping should be simple, hold firmly without springing. Option A.",
+    "solution": "Essential features — CLAMPING DEVICE: It should be as simple as possible without sacrificing effectiveness. The strength of clamp should be such that not only to hold the workpiece firmly in place but also to take the strain of the cutting tool without springing.\n\nWhy the other options are incorrect: They suggest complicated or springing.\n\n* Correct Option: A (Should be as simple as possible, hold firmly without springing under cutting strain)"
+  },
+  {
+    "id": "aee_jf_16",
+    "topicId": "jig-fixture-design",
+    "question": "Where should clamping occur to avoid distortion and springing?",
+    "options": [
+      "Directly above the points supporting the workpiece",
+      "Far from support points",
+      "On the side only",
+      "Anywhere",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Clamping should occur directly above support points. Option A.",
+    "solution": "Principle: Position of clamps — Clamping should occur directly above the points supporting the workpiece to avoid distortion and springing.\n\nWhy the other options are incorrect: They would cause distortion.\n\n* Correct Option: A (Directly above the points supporting the workpiece)"
+  },
+  {
+    "id": "aee_jf_17",
+    "topicId": "jig-fixture-design",
+    "question": "Why should jigs sometimes be provided with feet?",
+    "options": [
+      "So it can be placed on the table of the machine",
+      "To make it heavier",
+      "For decoration",
+      "To prevent it from being used",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Feet allow placing on machine table. Option A.",
+    "solution": "Principle: JIGS PROVIDED WITH FEET: Jigs sometimes are provided with feet so that it can be placed on the table of the machine.\n\nWhy the other options are incorrect: They are not listed reasons.\n\n* Correct Option: A (So it can be placed on the table of the machine)"
+  },
+  {
+    "id": "aee_jf_18",
+    "topicId": "jig-fixture-design",
+    "question": "What is the purpose of ejecting devices in jigs and fixtures?",
+    "options": [
+      "To push the workpiece out after operation and speed up unloading",
+      "To hold the workpiece tighter",
+      "To guide the cutting tool",
+      "To cool the tool",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Ejecting devices push workpiece out after operation, speeding unloading. Option A.",
+    "solution": "Essential features — Ejecting devices – Proper ejecting devices should be incorporated in the body to push the workpiece out after operation. Speeds up unloading.\n\nWhy the other options are incorrect: They describe clamping, guiding, or coolant.\n\n* Correct Option: A (To push the workpiece out after operation and speed up unloading)"
   }
 ]
 }
