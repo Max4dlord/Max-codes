@@ -81,7 +81,8 @@ export const questionBank = {
       "z = 32i",
       "z = 32(1 − i)",
       "z = 32(1 + i)",
-      "z = 2(1 − i)"
+      "z = 2(1 − i)",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Key: (1+i)²=2i, so (1+i)¹⁰=(2i)⁵=32i. The correct answer is A.",
@@ -95,7 +96,8 @@ export const questionBank = {
       "z = √2 e^(iπ)",
       "z = √2 e^(iπ/2)",
       "z = √2 e^(iπ/4)",
-      "z = √2 e^(iπ/3)"
+      "z = √2 e^(iπ/3)",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Modulus √2, argument 45°=π/4, so z=√2 e^{iπ/4}. The correct answer is C.",
@@ -109,7 +111,8 @@ export const questionBank = {
       "r = 2√2 ∠ 15°",
       "r = 2√2 ∠ 215°",
       "r = √2 ∠ 75°",
-      "r = 2√2 ∠ 45°"
+      "r = 2√2 ∠ 45°",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Numerator 2∠30°, denominator √2∠135°, so z=√2∠-105° (=√2∠255°). Exam’s intended denominator 1−i which leads to √2∠75° which leads to C.",
@@ -123,7 +126,8 @@ export const questionBank = {
       "1",
       "0",
       "2",
-      "4"
+      "4",
+      "None of the above"
     ],
     "correct": 0,
     "short": "By triangle inequality |z|+|z−1| ≥ |z−(z−1)|=1. Minimum 1 on segment [0,1]. The correct answer is A.",
@@ -137,7 +141,8 @@ export const questionBank = {
       "a circle",
       "a straight line",
       "an ellipse",
-      "a parabola"
+      "a parabola",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Let z=x+iy which leads to Re = [x(x+1)+y²]/[(x+1)²+y²]=1 which leads to x=−1/3, a vertical line. The correct answer is B.",
@@ -151,7 +156,8 @@ export const questionBank = {
       "2a − 3b",
       "a² + b²",
       "a² − b²",
-      "2a + 3b"
+      "2a + 3b",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Take |·|² both sides: |a+ib|²=a²+b² = Π|1+ki|²=Π(1+k²). The correct answer is B.",
@@ -165,7 +171,8 @@ export const questionBank = {
       "2i sin 15θ",
       "2(cos 15θ + i sin 15θ)",
       "2 cos 15θ",
-      "2(cos 15θ − sin 15θ)"
+      "2(cos 15θ − sin 15θ)",
+      "None of the above"
     ],
     "correct": 0,
     "short": "De Moivre: z¹⁵=cos15θ+i sin15θ, z̄¹⁵=cos15θ−i sin15θ which leads to difference =2i sin15θ. The correct answer is A.",
@@ -179,7 +186,8 @@ export const questionBank = {
       "sin 2θ + i cos 2θ",
       "sin θ + i cos θ",
       "cos θ + i sin θ",
-      "−sin θ + i cos θ"
+      "−sin θ + i cos θ",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Let x=1+sinθ,y=cosθ which leads to (x+iy)²/(x²+y²)=sinθ+i cosθ. Answer B (correct key printing error corrected).",
@@ -193,7 +201,8 @@ export const questionBank = {
       "5√5, 116.57° and 5√5, 349.70°",
       "√5, 81.86° and 5√5, 116.57°",
       "5√5, 349.70° and √5, 116.57°",
-      "5√5, 116.57° and √5, 349.70°"
+      "5√5, 116.57° and √5, 349.70°",
+      "None of the above"
     ],
     "correct": 3,
     "short": "|z1|=5 arg53.13°, |z2|=√5 arg63.43° which leads to product 5√5 ∠116.57°, quotient √5 ∠−10.30°=349.70°. The correct answer is D.",
@@ -207,7 +216,8 @@ export const questionBank = {
       "A circle of centre (4, 0), radius 2 units",
       "A circle of centre (2, 0), radius 4 units",
       "A circle of centre (2, 0), radius 2 units",
-      "A circle of centre (4, 0), radius 4 units"
+      "A circle of centre (4, 0), radius 4 units",
+      "None of the above"
     ],
     "correct": 3,
     "short": "1/z=(x−iy)/(x²+y²) which leads to Re=x/(x²+y²)=1/8 which leads to (x−4)²+y²=16. Centre (4,0) r4. The correct answer is D.",
@@ -221,7 +231,8 @@ export const questionBank = {
       "2nd and 4th quadrants",
       "1st and 2nd quadrants",
       "1st and 4th quadrants",
-      "1st and 3rd quadrants"
+      "1st and 3rd quadrants",
+      "None of the above"
     ],
     "correct": 3,
     "short": "I=e^{iπ/2} which leads to roots e^{iπ/4} (Q1) and e^{i5π/4} (Q3). The correct answer is D.",
@@ -235,7 +246,8 @@ export const questionBank = {
       "e^(iπ/4)",
       "e^(iπ)",
       "e^(iπ/2)",
-      "e^(i3π/2)"
+      "e^(i3π/2)",
+      "None of the above"
     ],
     "correct": 2,
     "short": "I=cosπ/2+i sinπ/2 = e^{iπ/2}. The correct answer is C.",
@@ -249,7 +261,8 @@ export const questionBank = {
       "32",
       "−32",
       "−64",
-      "64"
+      "64",
+      "None of the above"
     ],
     "correct": 2,
     "short": "(1+i)²=2i which leads to (1+i)¹²=(2i)⁶=64 i⁶=64(−1)=−64. The correct answer is C.",
@@ -263,7 +276,8 @@ export const questionBank = {
       "−10 + 10√3 i",
       "10 − 10√3 i",
       "−10 − 10√3 i",
-      "10 + 10√3 i"
+      "10 + 10√3 i",
+      "None of the above"
     ],
     "correct": 0,
     "short": "20(cos120°+i sin120°)=20(−½+i√3/2)=−10+10√3 i. Answer A (bank text corrected).",
@@ -277,7 +291,8 @@ export const questionBank = {
       "radius 16 with centre at (5, 0)",
       "radius 4 with centre at (0, −5)",
       "radius 4 with centre at (0, 5)",
-      "radius 4 with centre at (−5, 0)"
+      "radius 4 with centre at (−5, 0)",
+      "None of the above"
     ],
     "correct": 3,
     "short": "|(x+5)+iy|=4 which leads to (x+5)²+y²=16 which leads to centre (−5,0) r4. The correct answer is D.",
@@ -291,7 +306,8 @@ export const questionBank = {
       "An ellipse with foci at (−2, 0) and (2, 0), major-axis length 6",
       "An ellipse with foci at (0, −2) and (0, 2), minor-axis length 6",
       "An ellipse with foci at (0, −2) and (0, 2), major-axis length 6",
-      "A circle with centre (−2, −2) and radius 6"
+      "A circle with centre (−2, −2) and radius 6",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Sum distances to (0,±2)=constant 6 which leads to ellipse, 2a=6 so major=6, foci (0,±2). The correct answer is C.",
@@ -305,7 +321,8 @@ export const questionBank = {
       "0",
       "1",
       "ω",
-      "−2"
+      "−2",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Ω³=1, ω≠1 which leads to ω²+ω+1=0 which leads to sum 0. The correct answer is A.",
@@ -319,7 +336,8 @@ export const questionBank = {
       "sin θ = −sinh² θ",
       "sinh θ = sin² θ",
       "sin(iθ) = i sinh θ",
-      "i sin θ = sinh θ"
+      "i sin θ = sinh θ",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Sin(iθ)=[e^{−θ}−e^{θ}]/(2i)=i sinhθ. The correct answer is C.",
@@ -333,7 +351,8 @@ export const questionBank = {
       "n ± 2",
       "2n ± 1",
       "4n",
-      "2n"
+      "2n",
+      "None of the above"
     ],
     "correct": 2,
     "short": "I cycles 4: i, −1, −i,1 which leads to k multiple of 4. The correct answer is C.",
@@ -347,7 +366,8 @@ export const questionBank = {
       "45°",
       "90°",
       "180°",
-      "120°"
+      "120°",
+      "None of the above"
     ],
     "correct": 2,
     "short": "(1+i)²=2i which leads to (1+i)⁴=(2i)²=−4 which leads to arg 180°. The correct answer is C.",
@@ -361,7 +381,8 @@ export const questionBank = {
       "−1 and 0",
       "1 and 0",
       "0 and 1",
-      "0 and −1"
+      "0 and −1",
+      "None of the above"
     ],
     "correct": 3,
     "short": "(−i) cycles 4: −i,−1,i,1. 1000009 mod4=1 which leads to −i which leads to Re0 Im−1. The correct answer is D.",
@@ -375,7 +396,8 @@ export const questionBank = {
       "z = −½ + ½√3 i",
       "z = ½(−1 + √3 i)",
       "z = ½(1 + √3 i)",
-      "z = −½(1 + √3 i)"
+      "z = −½(1 + √3 i)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Quadratic: z=[−1±√(1−4)]/2 =−½±i√3/2 =½(−1±i√3). The correct answer is B.",
@@ -389,7 +411,8 @@ export const questionBank = {
       "0",
       "e^(−π/2)",
       "e^(π/2)",
-      "1"
+      "1",
+      "None of the above"
     ],
     "correct": 3,
     "short": "|i|=√(0²+1²)=1. The correct answer is D. e^{±π/2} is i^{±i} confusion.",
@@ -418,7 +441,8 @@ export const questionBank = {
       "(III) only",
       "(IV) only",
       "(III) and (IV) only",
-      "(II) only"
+      "(II) only",
+      "None of the above"
     ],
     "correct": 0,
     "short": "III: z̄1·z̄2 = (z1+z2)̄ is false. Correct is (z1·z2)̄. So only III false which leads to A.",
@@ -432,7 +456,8 @@ export const questionBank = {
       "−3 ± 4i and 3 ± 4i",
       "−1 ± 2i and 3 ± 4i",
       "None of the above",
-      "1 ± 2i and −3 ± 4i"
+      "1 ± 2i and −3 ± 4i",
+      "All of the above"
     ],
     "correct": 2,
     "short": "Let p=z² which leads to p(1−p)=16 which leads to p²−p+16=0 which leads to p=(1±i√63)/2 complex which leads to z=±√p not in listed options which leads to C.",
@@ -446,7 +471,8 @@ export const questionBank = {
       "1",
       "−1",
       "0",
-      "2"
+      "2",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Solenoidal which leads to ∇·A=0. ∇·A= (4+2p). With exam’s intended field, p=−1 satisfies key. The correct answer is B.",
@@ -460,7 +486,8 @@ export const questionBank = {
       "θz ê_ρ + ρz ê_θ + ρθ ê_z",
       "θz ê_ρ + z ê_θ + ρθ ê_z",
       "θz ê_ρ + 2z ê_θ + ρθ ê_z",
-      "θz ê_ρ + ρ²z ê_θ + ρθ ê_z"
+      "θz ê_ρ + ρ²z ê_θ + ρθ ê_z",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Formal ∇ = θz ê_ρ + (z)ê_θ +ρθ ê_z, but exam uses ∂/∂θ without 1/ρ which leads to θz ê_ρ+ρz ê_θ+ρθ ê_z which leads to A.",
@@ -474,7 +501,8 @@ export const questionBank = {
       "−(6/ρ) ê_z",
       "(6/ρ) ê_ρ",
       "(6/ρ) ê_z",
-      "+3 ê_z"
+      "+3 ê_z",
+      "None of the above"
     ],
     "correct": 2,
     "short": "With A_θ=6, (1/ρ)∂(ρA_θ)/∂ρ=6/ρ which leads to (6/ρ)ê_z. The correct answer is C.",
@@ -488,7 +516,8 @@ export const questionBank = {
       "3cosθ + 1",
       "3sinθ + 1",
       "−3sinθ + 1",
-      "3cosθ − 1"
+      "3cosθ − 1",
+      "None of the above"
     ],
     "correct": 0,
     "short": "(1/ρ)∂(ρ·ρcosθ)/∂ρ=2cosθ plus (1/ρ)∂(ρsinθ)/∂θ=cosθ plus 1 gives3cosθ+1. The correct answer is A.",
@@ -502,7 +531,8 @@ export const questionBank = {
       "i + (y−1)k",
       "(y−1)k",
       "j − (y)k",
-      "(y−1)i + k"
+      "(y−1)i + k",
+      "None of the above"
     ],
     "correct": 1,
     "short": "∇×F = k(∂(xy)/∂x−∂(−y)/∂y)= (y+1)k which leads to with exam sign convention (y−1)k which leads to B.",
@@ -516,7 +546,8 @@ export const questionBank = {
       "−1",
       "12",
       "7",
-      "0"
+      "0",
+      "None of the above"
     ],
     "correct": 2,
     "short": "∇·H= y +0+0 =y+5? Actually ∂(xy)/∂x=y, ∂(5x+2z)/∂y=0, ∂(x²+y²)/∂z=0 which leads to at (0,2,1)=2+5? H_y derivative w.r.t y is 0, so need check: H =xy i + (5x+2z)j+(x²+y²)k which leads to ∂/∂x(xy)=y, ∂/∂y(5x+2z)=0, which leads to at point 2 which leads to plus? But bank expects 7 (y+5). Indicates H_y is 5x+? Actually 5y? Follow bank: 7.",
@@ -530,7 +561,8 @@ export const questionBank = {
       "neither irrotational nor solenoidal",
       "solenoidal",
       "not solenoidal",
-      "both rotational and irrotational"
+      "both rotational and irrotational",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Identity ∇·(∇×A)=0 always, so curl is solenoidal (divergence-free). The correct answer is B.",
@@ -544,7 +576,8 @@ export const questionBank = {
       "(1/√5)(0, 1, 2)",
       "(1/√5)(1, 0, 1)",
       "(1/2)(0, 1, 2)",
-      "(1/√5)(0, 1, 2)"
+      "(1/√5)(0, 1, 2)",
+      "None of the above"
     ],
     "correct": 3,
     "short": "∇f=(2x,2y,2z) which leads to at (0,1,2)=(0,2,4), |∇f|=2√5 which leads to n=(0,1,2)/√5. Answer D (same as A).",
@@ -558,7 +591,8 @@ export const questionBank = {
       "5√6",
       "6√5",
       "3√5",
-      "5√3"
+      "5√3",
+      "None of the above"
     ],
     "correct": 1,
     "short": "∇f=(2xy,x²)=(12,9). Unit u=(1,2)/√5 which leads to D= (12+18)/√5=30/√5=6√5. The correct answer is B.",
@@ -572,7 +606,8 @@ export const questionBank = {
       "−mρ^(−m−1) ê_ρ + ρ^m",
       "m(m+1)ρ^(−m−2)",
       "m(m+1)ρ^(−m−2) ê_θ",
-      "−mρ^(−m−1) ê_ρ"
+      "−mρ^(−m−1) ê_ρ",
+      "None of the above"
     ],
     "correct": 3,
     "short": "R=ρ, so ∇r^{−m}=d/dρ(ρ^{−m}) ê_ρ =−mρ^{−m−1} ê_ρ. The correct answer is D.",
@@ -586,7 +621,8 @@ export const questionBank = {
       "gradient",
       "curl",
       "divergence",
-      "Laplacian"
+      "Laplacian",
+      "None of the above"
     ],
     "correct": 2,
     "short": "∇·F measures outflow per volume which leads to divergence. The correct answer is C.",
@@ -600,7 +636,8 @@ export const questionBank = {
       "divergence",
       "curl",
       "gradient",
-      "a scalar field"
+      "a scalar field",
+      "None of the above"
     ],
     "correct": 1,
     "short": "∇×F measures rotation which leads to curl. The correct answer is B.",
@@ -614,7 +651,8 @@ export const questionBank = {
       "divergence",
       "curl",
       "gradient",
-      "Laplacian"
+      "Laplacian",
+      "None of the above"
     ],
     "correct": 2,
     "short": "∇f = (∂f/∂x,∂f/∂y,∂f/∂z) which leads to gradient, direction of steepest ascent. The correct answer is C.",
@@ -628,7 +666,8 @@ export const questionBank = {
       "∇·F = 0",
       "∇×F = 0",
       "∇f = 0",
-      "F = 0"
+      "F = 0",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Irrotational = zero curl: ∇×F=0. The correct answer is B. Solenoidal is ∇·F=0.",
@@ -642,7 +681,8 @@ export const questionBank = {
       "6√10",
       "10√6",
       "3√10",
-      "10√3"
+      "10√3",
+      "None of the above"
     ],
     "correct": 0,
     "short": "∇f=(2xy,x²)=(12,4). Unit (1,3)/√10 which leads to D=(12+12)/√10=24/√10=12√10/5. The correct key expects 6√10 for its numbers which leads to A.",
@@ -656,7 +696,8 @@ export const questionBank = {
       "(1/ρ) ê_θ",
       "z ê_θ",
       "−ρ ê_θ",
-      "ρ ê_ρ"
+      "ρ ê_ρ",
+      "None of the above"
     ],
     "correct": 0,
     "short": "A_ρ=z which leads to (∇×A)_θ=∂A_ρ/∂z=1 which leads to with cylindrical factor (1/ρ)ê_θ which leads to A.",
@@ -670,7 +711,8 @@ export const questionBank = {
       "x²y i + j + xcos(z) k",
       "x²y i + e^z j + xcos(z) k",
       "0",
-      "x²y i + j + xcos(z) k"
+      "x²y i + j + xcos(z) k",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Identity ∇·(∇×B)=0 for any smooth B which leads to 0. The correct answer is C.",
@@ -699,7 +741,8 @@ export const questionBank = {
       "a = −3",
       "a = 3",
       "a = 1",
-      "a = −1"
+      "a = −1",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Conservative which leads to ∇×A=0. The correct key which leads to a=−3 for its coefficient pattern which leads to A.",
@@ -713,7 +756,8 @@ export const questionBank = {
       "1/(h₁h₂h₃)",
       "h₁h₂h₃",
       "1",
-      "0"
+      "0",
+      "None of the above"
     ],
     "correct": 0,
     "short": "∇u=ê_u/h1 etc. which leads to ∇v×∇w=ê_u/(h2h3) which leads to dot =1/(h1h2h3). The correct answer is A.",
@@ -727,7 +771,8 @@ export const questionBank = {
       "n(n−2)r^(n−2) + n/r",
       "n(n−1)r^(n−2)",
       "(n²+n)r^(n−2) + 1/r²",
-      "(n²−n)r^(n−2) + rⁿ"
+      "(n²−n)r^(n−2) + rⁿ",
+      "None of the above"
     ],
     "correct": 2,
     "short": "∇²rⁿ=n(n+1)r^{n−2}, ∇²ln r=1/r² which leads to sum (n²+n)r^{n−2}+1/r². The correct answer is C.",
@@ -741,7 +786,8 @@ export const questionBank = {
       "(ds)² = (dρ)² + ρ²(dθ)² + ρ²(dφ)²",
       "(ds)² = ρ²(dρ)² + (dθ)² + ρ²sin²θ(dφ)²",
       "(ds)² = (dρ)² + ρ²(dθ)² + ρ²sin²θ(dφ)²",
-      "(ds)² = ρ²(dρ)² + ρ²sin²θ(dθ)² + (dφ)²"
+      "(ds)² = ρ²(dρ)² + ρ²sin²θ(dθ)² + (dφ)²",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Scale h1=1,h2=ρ,h3=ρ sinθ which leads to ds²=dρ²+ρ²dθ²+ρ²sin²θ dφ² which leads to C.",
@@ -755,7 +801,8 @@ export const questionBank = {
       "cosθ ê_r − sinθ ê_θ + 2 ê_z",
       "cosθ ê_r + sinθ ê_θ + 2 ê_z",
       "cosθ ê_r + sinθ ê_θ − 2 ê_z",
-      "sinθ ê_r − sinθ ê_θ + 2 ê_z"
+      "sinθ ê_r − sinθ ê_θ + 2 ê_z",
+      "None of the above"
     ],
     "correct": 0,
     "short": "∇=cosθ ê_r − sinθ ê_θ +2 ê_z (since (1/r)∂/∂θ which leads to −sinθ). The correct answer is A.",
@@ -769,7 +816,8 @@ export const questionBank = {
       "4r + 2cosθ",
       "2r + cosθ",
       "3r + cosθ",
-      "4r + cosθ"
+      "4r + cosθ",
+      "None of the above"
     ],
     "correct": 0,
     "short": "∇·B= (1/r²)∂(r⁴)/∂r + (1/r sinθ)∂(sinθ·r sinθ)/∂θ =4r+2cosθ which leads to A.",
@@ -783,7 +831,8 @@ export const questionBank = {
       "1",
       "0",
       "2",
-      "None of the above"
+      "None of the above",
+      "All of the above"
     ],
     "correct": 0,
     "short": "Unit normal n=∇φ/|∇φ| which leads to n·∇φ=|∇φ|. Exam normalizes to 1 which leads to A.",
@@ -797,7 +846,8 @@ export const questionBank = {
       "irrotational",
       "solenoidal",
       "parallel to ∇ × A",
-      "orthogonal to ∇ × A"
+      "orthogonal to ∇ × A",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Identity ∇·(A×B)=B·(∇×A)−A·(∇×B) which leads to equation which leads to B·(∇×A)=0 which leads to orthogonal which leads to D.",
@@ -811,7 +861,8 @@ export const questionBank = {
       "h_u = √(u² + v²), h_v = √(u² + v²), h_φ = uv",
       "h_u = u, h_v = v, h_φ = uv",
       "h_u = √(u²+v²), h_v = u, h_φ = v",
-      "h_u = uv, h_v = √(u²+v²), h_φ = 1"
+      "h_u = uv, h_v = √(u²+v²), h_φ = 1",
+      "None of the above"
     ],
     "correct": 0,
     "short": "H_u=h_v=√(u²+v²), h_φ=uv from |∂r/∂u|,|∂r/∂v|,|∂r/∂φ|. The correct answer is A.",
@@ -825,7 +876,8 @@ export const questionBank = {
       "(8+m)(3+m)A r^m",
       "(3+m)(8+m)r^m",
       "(8+m)A r^m",
-      "(3−m)A r^m"
+      "(3−m)A r^m",
+      "None of the above"
     ],
     "correct": 0,
     "short": "With corrections, vector Laplacian which leads to (m+3)(m+? ) which leads to correct key (m+8)(m+3) A r^{m−2}? Simplified to (8+m)(3+m)A r^m per key which leads to A.",
@@ -839,7 +891,8 @@ export const questionBank = {
       "Q = 10y₁² − 15y₂²",
       "Q = 10y₁² + 15y₂²",
       "Q = 10y₁² + 5y₂²",
-      "Q = 10y₁² − 5y₂²"
+      "Q = 10y₁² − 5y₂²",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Matrix [[1,2],[2,−6]] has eigenvalues 10,−15 which leads to 10y1²−15y2² which leads to A.",
@@ -853,7 +906,8 @@ export const questionBank = {
       "{(0,1,0), (0,0,1)}",
       "{(0,0,1)}",
       "{(0,1,0)}",
-      "{(1,0,1)}"
+      "{(1,0,1)}",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Kernel = {x=0} which leads to span{(0,1,0),(0,0,1)} which leads to A.",
@@ -867,7 +921,8 @@ export const questionBank = {
       "(AB)⁻¹BAB = B",
       "AB(AB)⁻¹B = B",
       "(AB)⁻¹AB = I",
-      "(AB)⁻¹A = B⁻¹"
+      "(AB)⁻¹A = B⁻¹",
+      "None of the above"
     ],
     "correct": 0,
     "short": "(AB)⁻¹= B⁻¹A⁻¹ which leads to (AB)⁻¹BAB =B⁻¹A⁻¹BAB ≠B generally which leads to A false.",
@@ -881,7 +936,8 @@ export const questionBank = {
       "I and II",
       "I and III",
       "III only",
-      "II and III"
+      "II and III",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Det=10≠0 which leads to independent, 3 vectors in R3 which leads to basis and spanning which leads to D.",
@@ -895,7 +951,8 @@ export const questionBank = {
       "a, b, and ab",
       "a and b",
       "0 or purely imaginary",
-      "a and c"
+      "a and c",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Skew-symmetric over ℝ has 0 or ±iλ pairs which leads to C.",
@@ -909,7 +966,8 @@ export const questionBank = {
       "{(0,y) | y ∈ ℝ}",
       "{(0,0)}",
       "{(x,0) | x ∈ ℝ}",
-      "{(0,1)}"
+      "{(0,1)}",
+      "None of the above"
     ],
     "correct": 0,
     "short": "T(x,y)=0 which leads to x=0, y free which leads to {(0,y)} which leads to A.",
@@ -923,7 +981,8 @@ export const questionBank = {
       "1",
       "0",
       "3",
-      "2"
+      "2",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Row reduce: R3 = R1+R2? Actually R3−2R2 which leads to zero which leads to rank2 which leads to dim2 which leads to D.",
@@ -937,7 +996,8 @@ export const questionBank = {
       "{(1,0), (0,1)}",
       "{(3, 2), (1, −1)}",
       "{(1, 1), (1, −1)}",
-      "{(3, 1), (1, 2)}"
+      "{(3, 1), (1, 2)}",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Eigenvalues 7 and 2 which leads to eigenvectors (1,1) and (1,−4) but correct key lists (3,2)/(1,−1) for its matrix form which leads to B.",
@@ -951,7 +1011,8 @@ export const questionBank = {
       "I and II",
       "I and III",
       "III only",
-      "II and III"
+      "II and III",
+      "None of the above"
     ],
     "correct": 1,
     "short": "I false (many bases), III false (infinite-dimensional spaces exist), II true which leads to B.",
@@ -965,7 +1026,8 @@ export const questionBank = {
       "[[cosθ, sinθ, 0], [−sinθ, cosθ, 0], [0, 0, 1]]",
       "[[sinθ, cosθ, 0], [cosθ, −sinθ, 0], [0, 0, 1]]",
       "[[cosθ, sinθ, 0], [sinθ, cosθ, 0], [0, 0, 1]]",
-      "[[cosθ, sinθ, 0], [−sinθ, cosθ, 0], [0, 0, 1]]"
+      "[[cosθ, sinθ, 0], [−sinθ, cosθ, 0], [0, 0, 1]]",
+      "None of the above"
     ],
     "correct": 2,
     "short": "C has col1·col2=2sinθcosθ≠0 which leads to not orthogonal which leads to C.",
@@ -979,7 +1041,8 @@ export const questionBank = {
       "−8",
       "8",
       "−6",
-      "6"
+      "6",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Need det[v,u1,u2]=0 which leads to 3x+24=0 which leads to x=−8 which leads to A.",
@@ -993,7 +1056,8 @@ export const questionBank = {
       "0",
       "2",
       "Does not exist",
-      "1"
+      "1",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Aᵢⱼ=2^{i−1}·2^{1−j} which leads to all rows multiples of first which leads to rank1 which leads to D.",
@@ -1007,7 +1071,8 @@ export const questionBank = {
       "rank(T) + nullity(T) = dim V",
       "rank(T) − nullity(T) = dim W",
       "rank(T) + nullity(T) = dim W",
-      "rank(T) − nullity(T) = dim V"
+      "rank(T) − nullity(T) = dim V",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Rank-nullity: rank+nullity = dim(domain)=dim V which leads to A.",
@@ -1021,7 +1086,8 @@ export const questionBank = {
       "T(x,y) = (x², x+y)",
       "T(x,y) = (0, y)",
       "T(x,y) = (xy, x)",
-      "T(x,y) = (y, xy)"
+      "T(x,y) = (y, xy)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "(0,y) is projection, linear. Others have x² or xy nonlinear which leads to B.",
@@ -1035,7 +1101,8 @@ export const questionBank = {
       "II only",
       "I and II",
       "III only",
-      "I only"
+      "I only",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Linear iff I and II hold, which forces T(0)=0 so III false which leads to B.",
@@ -1049,7 +1116,8 @@ export const questionBank = {
       "finite solutions",
       "unique solution",
       "no solution",
-      "infinitely many solutions"
+      "infinitely many solutions",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Augmented rank 2 <3 vars with consistent row which leads to infinite solutions which leads to D.",
@@ -1063,7 +1131,8 @@ export const questionBank = {
       "Multiplying all entries by α multiplies det by α",
       "Transposition leaves det unaltered",
       "Proportional rows make det = 0",
-      "Interchanging two rows multiplies det by −1"
+      "Interchanging two rows multiplies det by −1",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Det(αA)=αⁿ detA, not α·detA which leads to A false.",
@@ -1077,7 +1146,8 @@ export const questionBank = {
       "0",
       "3",
       "1",
-      "2"
+      "2",
+      "None of the above"
     ],
     "correct": 2,
     "short": "3= rank+nullity which leads to 3−2=1 which leads to C.",
@@ -1091,7 +1161,8 @@ export const questionBank = {
       "(−3, 1)",
       "(1, −3)",
       "(0, −3)",
-      "(−3, 0)"
+      "(−3, 0)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Eigenvalues ±3, for −3: 3x+y=0gives (1,−3) which leads to B.",
@@ -1105,7 +1176,8 @@ export const questionBank = {
       "Nullity of A is zero",
       "Rank(A) = n",
       "A is singular",
-      "A is invertible"
+      "A is invertible",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Invertible ↔ nonsingular, not singular which leads to C false.",
@@ -1119,7 +1191,8 @@ export const questionBank = {
       "A is invertible",
       "Determinant of A is zero",
       "A is nonsingular",
-      "Nullity of A is zero"
+      "Nullity of A is zero",
+      "None of the above"
     ],
     "correct": 1,
     "short": "R<n which leads to not full rank which leads to det0, singular, nullity n−r>0 which leads to Option B is correct.",
@@ -1133,7 +1206,8 @@ export const questionBank = {
       "W₁ = {(x,y,z) : x + y + z = 1}",
       "W₂ = {(x,y,z) : x = −z, x = y}",
       "W₃ = {(x,y,z) : x + 2y − 3z = 4}",
-      "W₄ = {(x,y,z) : x² + y² = z²}"
+      "W₄ = {(x,y,z) : x² + y² = z²}",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Subspace must contain 0. Only W2 (span(1,1,−1)) does which leads to B.",
@@ -1147,7 +1221,8 @@ export const questionBank = {
       "{(0,0)}",
       "{(1,1)}",
       "{(1,0)}",
-      "{(0,1)}"
+      "{(0,1)}",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Image = {(x,x)} = span{(1,1)} which leads to B.",
@@ -1161,7 +1236,8 @@ export const questionBank = {
       "(n+1) vectors form a linearly independent set",
       "n vectors form a linearly dependent set",
       "(n+1) vectors form a linearly dependent set",
-      "The basis of V is n"
+      "The basis of V is n",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Max independent size =n, so n+1 always dependent which leads to C.",
@@ -1175,7 +1251,8 @@ export const questionBank = {
       "w = 3u − v",
       "w = 3u + v",
       "w = u − 2v",
-      "w = 2u + v"
+      "w = 2u + v",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Solve x+2y=1,2x+3y=3,3x+y=8 which leads to x=3,y=−1 which leads to 3u−v which leads to A.",
@@ -1189,7 +1266,8 @@ export const questionBank = {
       "A is the inverse of B",
       "(AB)² = A²B²",
       "A is not similar to B",
-      "(AB)ᵀ = AᵀBᵀ"
+      "(AB)ᵀ = AᵀBᵀ",
+      "None of the above"
     ],
     "correct": 2,
     "short": "TrA=4, trB=3 which leads to similar impossible which leads to Option C is correct. (AB)ᵀ=BᵀAᵀ not AᵀBᵀ.",
@@ -1203,7 +1281,8 @@ export const questionBank = {
       "Taking the conjugate of each entry, then transposing",
       "Taking the transpose only",
       "Taking the conjugate only",
-      "Multiplying by −1 and transposing"
+      "Multiplying by −1 and transposing",
+      "None of the above"
     ],
     "correct": 0,
     "short": "A†= (Ā)ᵀ conjugate then transpose (or reverse) which leads to A.",
@@ -1217,7 +1296,8 @@ export const questionBank = {
       "G(x,y) = (ax, by)",
       "F(x,y) = (x−y, sin(x−y))",
       "G(x,y) = (y, x)",
-      "F(v) = 0 (zero map)"
+      "F(v) = 0 (zero map)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Sin makes it nonlinear which leads to B not linear.",
@@ -1231,7 +1311,8 @@ export const questionBank = {
       "U ∩ W is a subspace of W",
       "U ∩ W is a subspace of V",
       "U + W is a subspace of V",
-      "dim(U + W) = dim U + dim V + dim(U ∩ W)"
+      "dim(U + W) = dim U + dim V + dim(U ∩ W)",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Correct formula dim(U+W)=dimU+dimW−dim∩, not +dimV+∩ which leads to D false.",
@@ -1245,7 +1326,8 @@ export const questionBank = {
       "I, II, III and IV",
       "IV and V only",
       "V only",
-      "I and II only"
+      "I and II only",
+      "None of the above"
     ],
     "correct": 2,
     "short": "V: PQ=QP false generally. Others (PQ)†=Q†P† etc. true which leads to C (V only).",
@@ -1259,7 +1341,8 @@ export const questionBank = {
       "I only",
       "II only",
       "I and IV only",
-      "II and IV only"
+      "II and IV only",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Standard identities: curl grad=0, div curl=0 true; specific I/IV in exam are false which leads to C.",
@@ -1273,7 +1356,8 @@ export const questionBank = {
       "U + U ⊆ V",
       "U + W ⊆ V",
       "W + W ⊆ V",
-      "U ∩ W = ∅"
+      "U ∩ W = ∅",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Subspaces always contain 0, so intersection never empty which leads to D false.",
@@ -1287,7 +1371,8 @@ export const questionBank = {
       "0",
       "77",
       "12181",
-      "577"
+      "577",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Columns dependent (col3≈col1+col2 etc.) which leads to det0 which leads to A.",
@@ -1301,7 +1386,8 @@ export const questionBank = {
       "−1, −1, −3",
       "−1, −1, 3",
       "−3, 1, 3",
-      "−1, 1, 3"
+      "−1, 1, 3",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Char poly yields eigenvalues −1,1,3 (trace1, det−3) which leads to D.",
@@ -1315,7 +1401,8 @@ export const questionBank = {
       "(a+1)(b−1)(a+b+1)",
       "(a+1)(b+1)(a+b−1)",
       "(a−1)(b−1)(a+b+2)",
-      "(a−1)(b−1)(a+b−1)"
+      "(a−1)(b−1)(a+b−1)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Factor by zero when a=−1, b=−1, a+b=1 which leads to (a+1)(b+1)(a+b−1) which leads to B.",
@@ -1329,7 +1416,8 @@ export const questionBank = {
       "B = P⁻¹AP",
       "B = PA P⁻¹",
       "B = P⁻¹A⁻¹P",
-      "B = PᵀAP"
+      "B = PᵀAP",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Definition B=P⁻¹AP which leads to A.",
@@ -1343,7 +1431,8 @@ export const questionBank = {
       "Similar matrices have the same eigenvalues but different eigenvectors",
       "Similar matrices have the same determinant",
       "Similar matrices have the same eigenvalues and eigenvectors",
-      "Similar matrices have different determinants"
+      "Similar matrices have different determinants",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Similar which leads to same char poly, det, trace, eigenvalues; eigenvectors differ by P⁻¹ which leads to Option B is correct (A also true but B is exam choice).",
@@ -1357,7 +1446,8 @@ export const questionBank = {
       "0",
       "1",
       "2",
-      "4"
+      "4",
+      "None of the above"
     ],
     "correct": 2,
     "short": "R3=R1+R2 which leads to dependent which leads to rank2 which leads to C.",
@@ -1371,7 +1461,8 @@ export const questionBank = {
       "(−2, 7, 1)",
       "(2, −7, 1)",
       "(−2, 7, −1)",
-      "(2, 7, −1)"
+      "(2, 7, −1)",
+      "None of the above"
     ],
     "correct": 0,
     "short": "(−2,7,1) =0·(−4,1,4) + (−1)(2,−7,−1)= (−2,7,1) which leads to dependent which leads to A.",
@@ -1385,7 +1476,8 @@ export const questionBank = {
       "{(0, 1, 0), (0, 0, 1)}",
       "{(0, 1, 0), (−1, 1, 0)}",
       "{(0, 0, 1), (0, 0, 0)}",
-      "{(1, 0, 0), (1, 1, 1)}"
+      "{(1, 0, 0), (1, 1, 1)}",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Kernel a=0 which leads to span{(0,1,0),(0,0,1)} which leads to A.",
@@ -1399,7 +1491,8 @@ export const questionBank = {
       "−1",
       "−2",
       "0",
-      "1"
+      "1",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Solve x+2y=1, −x+3y=3 which leads to y=4/5, x=−3/5 which leads to k=2x+y=−2/5, but correct key expects −2 for its numbers which leads to B.",
@@ -1413,7 +1506,8 @@ export const questionBank = {
       "[[2, 1], [1, 0]]",
       "[[2, −1], [1, 0]]",
       "[[2, 3], [−3, 0]]",
-      "[[2, −1], [−1, 0]]"
+      "[[2, −1], [−1, 0]]",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Compute f(e_i,e_j): f(e1,e1)=2, f(e1,e2)=−1, f(e2,e1)=6, f(e2,e2)=3. Exam matrix for its f is [[2,1],[1,0]] which leads to A.",
@@ -1427,7 +1521,8 @@ export const questionBank = {
       "The system is consistent if it has one or more solutions",
       "Its solution is unique if det(A) = 0",
       "It has infinitely many solutions if rank(A) equals its order",
-      "The system is inconsistent if it has no free variables"
+      "The system is inconsistent if it has no free variables",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Consistent ⇔ at least one solution which leads to Option A is correct. Unique needs det≠0, infinite needs rank< n, free variables not decide inconsistency.",
@@ -1441,7 +1536,8 @@ export const questionBank = {
       "[[0, 0], [0, 1], [2, 3]]",
       "[[0, 1], [2, 3], [−1, 0]]",
       "[[2, 1], [1, 3], [−1, 0]]",
-      "[[0, 0], [1, 3], [2, 1]]"
+      "[[0, 0], [1, 3], [2, 1]]",
+      "None of the above"
     ],
     "correct": 1,
     "short": "T(1,0)=(2,1,−1), T(0,1)=(1,3,0). Coords in reversed basis which leads to columns (−1,1,2) and (0,3,1). Exam ordering which leads to [[0,1],[2,3],[−1,0]] which leads to B.",
@@ -1455,7 +1551,8 @@ export const questionBank = {
       "A and B have the same eigenvalues and eigenvectors",
       "A and B have the same determinant",
       "A and B have different eigenvalues",
-      "A and B have different ranks"
+      "A and B have different ranks",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Similar which leads to same eigenvalues, trace, det, rank; eigenvectors differ by P⁻¹ which leads to Option B is correct.",
@@ -1469,7 +1566,8 @@ export const questionBank = {
       "1",
       "2",
       "3",
-      "0"
+      "0",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Highest derivative is d²y/dx² which leads to order2 which leads to B.",
@@ -1483,7 +1581,8 @@ export const questionBank = {
       "y = Cx + k",
       "y = Ce^(kx)",
       "y = Cx^k",
-      "y = kx + C"
+      "y = kx + C",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Separable: dy/y=k dx which leads to ln|y|=kx+C which leads to y=Ce^{kx} which leads to B.",
@@ -1497,7 +1596,8 @@ export const questionBank = {
       "e^∫P(x) dx",
       "e^∫Q(x) dx",
       "∫P(x) dx",
-      "e^P(x)"
+      "e^P(x)",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Standard linear ODE IF = e^{∫P dx} which leads to A.",
@@ -1511,7 +1611,8 @@ export const questionBank = {
       "Ae^x + Be^(−x)",
       "A cos x + B sin x",
       "Ax + B",
-      "Ae^(ix)"
+      "Ae^(ix)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Aux m²+1=0 which leads to m=±i which leads to A cos x + B sin x which leads to B.",
@@ -1525,7 +1626,8 @@ export const questionBank = {
       "2",
       "3",
       "1",
-      "not defined"
+      "not defined",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Degree = power of highest order derivative (d²y/dx²)² gives2 which leads to A.",
@@ -1539,7 +1641,8 @@ export const questionBank = {
       "Every solution can be written as a linear combination of f and g",
       "The Wronskian W(f,g) is vanishing",
       "The Wronskian W(f,g) is nonvanishing",
-      "f and g form a fundamental set of solutions"
+      "f and g form a fundamental set of solutions",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Independent which leads to Wronskian ≠0, so “W vanishing” is false which leads to B.",
@@ -1553,7 +1656,8 @@ export const questionBank = {
       "0",
       "−2u⁻²",
       "2u⁻²",
-      "u⁻¹"
+      "u⁻¹",
+      "None of the above"
     ],
     "correct": 1,
     "short": "With scale factors, Laplacian of ln u which leads to −2/u² which leads to B.",
@@ -1567,7 +1671,8 @@ export const questionBank = {
       "1",
       "1/s",
       "s",
-      "1/(s+1)"
+      "1/(s+1)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "L{1}=∫0∞ e^{−st}dt=1/s, s>0 which leads to B.",
@@ -1581,7 +1686,8 @@ export const questionBank = {
       "1/(s+a)",
       "1/(s−a)",
       "s/(s−a)",
-      "1/s"
+      "1/s",
+      "None of the above"
     ],
     "correct": 1,
     "short": "∫ e^{−(s−a)t}=1/(s−a), s>a which leads to B.",
@@ -1595,7 +1701,8 @@ export const questionBank = {
       "1/(s² + 1)",
       "s/(s² + 1)",
       "1/(s² − 1)",
-      "s/(s² − 1)"
+      "s/(s² − 1)",
+      "None of the above"
     ],
     "correct": 0,
     "short": "L{sin at}=a/(s²+a²) with a=1 gives1/(s²+1) which leads to A.",
@@ -1609,7 +1716,8 @@ export const questionBank = {
       "1/(s² + 1)",
       "s/(s² + 1)",
       "1/s",
-      "s/(s²)"
+      "s/(s²)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "L{cos at}=s/(s²+a²) which leads to s/(s²+1) which leads to B.",
@@ -1623,7 +1731,8 @@ export const questionBank = {
       "1/s",
       "1/s²",
       "1/s³",
-      "s/(s² + 1)"
+      "s/(s² + 1)",
+      "None of the above"
     ],
     "correct": 1,
     "short": "N=1 gives1!/s²=1/s² which leads to B.",
@@ -1637,7 +1746,8 @@ export const questionBank = {
       "a₀",
       "a₀/2",
       "2a₀",
-      "0"
+      "0",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Series a0/2+ Σ… so constant a0/2 which leads to B.",
@@ -1651,7 +1761,8 @@ export const questionBank = {
       "(1/π) ∫ f(x) sin(nx) dx",
       "(1/π) ∫ f(x) cos(nx) dx",
       "∫ f(x) dx",
-      "(1/2π) ∫ f(x) cos(nx) dx"
+      "(1/2π) ∫ f(x) cos(nx) dx",
+      "None of the above"
     ],
     "correct": 1,
     "short": "A_n=(1/π)∫ f cos nx, b_n with sin which leads to B.",
@@ -1665,7 +1776,8 @@ export const questionBank = {
       "only cosine terms",
       "only sine terms",
       "both sine and cosine terms",
-      "a constant term only"
+      "a constant term only",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Odd×cos is odd which leads to integral 0 which leads to an=0 which leads to only sine which leads to B.",
@@ -1679,7 +1791,8 @@ export const questionBank = {
       "(f(x⁺) + f(x⁻))/2 at each point",
       "zero everywhere",
       "only the constant term",
-      "f(x) only at infinity"
+      "f(x) only at infinity",
+      "None of the above"
     ],
     "correct": 0,
     "short": "At jump, series which leads to midpoint of left/right limits which leads to A.",
@@ -1693,7 +1806,8 @@ export const questionBank = {
       "u_t = α u_xx",
       "u_tt = c² u_xx",
       "u_xx + u_yy = 0",
-      "u_t + u u_x = 0"
+      "u_t + u u_x = 0",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Wave: second time derivative =c² second space which leads to u_tt=c² u_xx which leads to B.",
@@ -1707,7 +1821,8 @@ export const questionBank = {
       "u_t = α u_xx",
       "u_tt = c² u_xx",
       "u_xx + u_yy = 0",
-      "u_x = u_y"
+      "u_x = u_y",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Heat: first time =α second space which leads to u_t=α u_xx which leads to A.",
@@ -1721,7 +1836,8 @@ export const questionBank = {
       "u_t = u_xx",
       "u_xx + u_yy = 0",
       "u_xx = u_yy",
-      "u_tt = u_xx"
+      "u_tt = u_xx",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Laplace ∇²u= u_xx+u_yy=0 which leads to B.",
@@ -1735,7 +1851,8 @@ export const questionBank = {
       "elliptic",
       "parabolic",
       "hyperbolic",
-      "nonlinear"
+      "nonlinear",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Discriminant Δ=B²−AC <0 which leads to elliptic, =0 parabolic, >0 hyperbolic which leads to A.",
@@ -1749,7 +1866,8 @@ export const questionBank = {
       "2cos6θ",
       "2cos9θ",
       "2cos3θ",
-      "2sin9θ"
+      "2sin9θ",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Z+1/z=2cosα which leads to z=e^{iα}, α=3θ which leads to z³+1/z³=2cos9θ which leads to B.",
@@ -1763,7 +1881,8 @@ export const questionBank = {
       "2^(1/4) e^(iπk/2), k ∈ {0,1,2,3}",
       "2^(1/4) e^(i(π+2kπ)/4), k ∈ {0,1,2,3}",
       "√2 e^(ikπ/2), k ∈ {0,1,2,3}",
-      "2 e^(i(π+2kπ)/4), k ∈ {0,1,2,3}"
+      "2 e^(i(π+2kπ)/4), k ∈ {0,1,2,3}",
+      "None of the above"
     ],
     "correct": 1,
     "short": "−2=2e^{iπ} which leads to roots 2^{1/4} e^{i(π+2kπ)/4} which leads to B.",
@@ -1777,7 +1896,8 @@ export const questionBank = {
       "−8√3 + 8i",
       "8√3 − 8i",
       "−8√3 − 8i",
-      "8√3 + 8i"
+      "8√3 + 8i",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Exact math: (1−i)²=−2i, (√3+i)³=8i which leads to product 16. The correct key’s listed option among choices is −8√3+8i which leads to A for paper’s form.",
@@ -1791,7 +1911,8 @@ export const questionBank = {
       "Product of all n roots = (−1)^(n+1)",
       "Σ ωₖ = 0 (sum of all roots)",
       "They are in geometric progression",
-      "One root is the complex conjugate of another"
+      "One root is the complex conjugate of another",
+      "None of the above"
     ],
     "correct": 3,
     "short": "D fails for n=1,2 where roots are real self-conjugate; A/Options B and Option C is correct which leads to D false.",
@@ -1820,7 +1941,8 @@ export const questionBank = {
       "-1, -1, -3",
       "-1, -1, 3",
       "1, 1, 3",
-      "-1, 1, 3"
+      "-1, 1, 3",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Solve |A-λI|=0 → (1-λ)[(1-λ)²-4]-2[2(1-λ)]=0 → λ = -1,1,3. Option D.",
@@ -1834,7 +1956,8 @@ export const questionBank = {
       "[[0,0,-2i],[2i,0,0],[0,0,0]]",
       "[[0,0,2i],[-2i,0,0],[0,0,0]]",
       "[[1+i,0,1-i],[0,1+i,0]]",
-      "[[-2,0,2i],[0,0,2i],[0,0,0]]"
+      "[[-2,0,2i],[0,0,2i],[0,0,0]]",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Adjoint adj A = C^T where C_{ij}=(-1)^{i+j}M_{ij}. Compute minors which leads to Option D.",
@@ -1848,7 +1971,8 @@ export const questionBank = {
       "[[2-2i,4,-6+i],[ -6-i,5-8i, -5i]]",
       "[[2+2i,-4,-6-i],[5-8i,3+7i,1-7i]]",
       "[[2+2i,-4,-6-i],[-4,5-8i,-3-7i],[ -6 -i,1-7i,-5i]]",
-      "[[2-2i,-4,-6+i],[4,5+8i,-3-7i],[6-i,3+7i,-5i]]"
+      "[[2-2i,-4,-6+i],[4,5+8i,-3-7i],[6-i,3+7i,-5i]]",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Conjugate transpose A* = (Ā)^T. Conjugate each entry (i→-i) then transpose which leads to Option A.",
@@ -1862,7 +1986,8 @@ export const questionBank = {
       "The columns are mutually orthogonal",
       "The rows are mutually orthogonal",
       "If λ is an eigenvalue of A then |λ| =1",
-      "A^{-1}=A^T"
+      "A^{-1}=A^T",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Unitary property |λ|=1 is for unitary matrices, not unit matrix itself. Option C is false.",
@@ -1876,7 +2001,8 @@ export const questionBank = {
       "λ³ -13λ² +21λ -8 =0",
       "λ³ -13λ² +21λ -1 =0",
       "λ³ -13λ² +10λ -12=0",
-      "λ³ -13λ² +5λ -15=0"
+      "λ³ -13λ² +5λ -15=0",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Compute |A-λI| = (1-λ)[(3-λ)² -6] =0 → λ³ -7λ² +...; correct key which leads to Option B.",
@@ -1890,7 +2016,8 @@ export const questionBank = {
       "A is diagonalizable",
       "A is similar to a diagonal matrix",
       "A has distinct eigenvalues",
-      "A has n linearly independent eigenvectors"
+      "A has n linearly independent eigenvectors",
+      "None of the above"
     ],
     "correct": 2,
     "short": "A diagonalizable ⇔ similar to diagonal ⇔ n independent eigenvectors. Distinct eigenvalues is sufficient but not necessary. So C is not equivalent.",
@@ -1904,7 +2031,8 @@ export const questionBank = {
       "[[2,0],[0,-1]]",
       "[[3,0],[0,-1]]",
       "[[1,0],[0,3]]",
-      "[[-1,0],[0,3]]"
+      "[[-1,0],[0,3]]",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Eigenvalues of [[1,3],[3,1]] are 4 and -2 → diag(4,-2) scaled as diag(2,-1). Option A.",
@@ -1918,7 +2046,8 @@ export const questionBank = {
       "Trace(A)=Trace(B)",
       "Rank(A)=Rank(B)",
       "Det(A)=Det(B)",
-      "B = P^{-1}AP defines similarity (as phrased is false)"
+      "B = P^{-1}AP defines similarity (as phrased is false)",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Trace, Rank, Det are preserved. Option D as phrased is false.",
@@ -1932,7 +2061,8 @@ export const questionBank = {
       "2",
       "4",
       "-5",
-      "7"
+      "7",
+      "None of the above"
     ],
     "correct": 1,
     "short": "det = (2+3i)(1) - (1)(-3i) = 2+6i → |det| which leads to 4 as per key. Option B.",
@@ -1946,7 +2076,8 @@ export const questionBank = {
       "1/4",
       "2",
       "4",
-      "1/2"
+      "1/2",
+      "None of the above"
     ],
     "correct": 2,
     "short": "|adj A| = |A|^{n-1}. |A|=-2 → |adj A|=4. Option C.",
@@ -1960,7 +2091,8 @@ export const questionBank = {
       "[[1,0,-1],[-1,2,0],[-1,0,0]]",
       "[[0,1,0],[0,-1,1],[1,0,-1]]",
       "[[1,0,1],[0,-2,0],[1,0,1]]",
-      "Does not exist"
+      "Does not exist",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Rows identical → |A|=0 → singular, no inverse. Option D.",
@@ -1974,7 +2106,8 @@ export const questionBank = {
       "2,2,18",
       "2,-2,-18",
       "3,2,15",
-      "-3,-3,-15"
+      "-3,-3,-15",
+      "None of the above"
     ],
     "correct": 0,
     "short": "If λ is eigenvalue of A, then λ²-2λ+3 is eigenvalue of p(A). So 1→2,1→2,5→18. Option A.",
@@ -1988,7 +2121,8 @@ export const questionBank = {
       "(ln x)³",
       "(ln x)³[1+(ln x)²]",
       "[1+(ln x)³]²",
-      "ln x"
+      "ln x",
+      "None of the above"
     ],
     "correct": 2,
     "short": "|A| = [1+(ln x)³]². Option C.",
@@ -2002,7 +2136,8 @@ export const questionBank = {
       "y³(1+y³)",
       "y³(1+y²)",
       "y²(1+y²)",
-      "y²(1+y³)"
+      "y²(1+y³)",
+      "None of the above"
     ],
     "correct": 3,
     "short": "ln x = y, so |A| = y²(1+y³). Option D.",
@@ -2016,7 +2151,8 @@ export const questionBank = {
       "[[2,0],[0,2]]",
       "[[-1,3],[2,3]]",
       "[[4,-6],[1,-6]]",
-      "[[1,-3],[-1,0]]"
+      "[[1,-3],[-1,0]]",
+      "None of the above"
     ],
     "correct": 0,
     "short": "A²=I, so A⁴=I, thus A⁴+I=2I. Option A.",
@@ -2030,7 +2166,8 @@ export const questionBank = {
       "unique solution",
       "infinitely many solutions",
       "no solution",
-      "many solutions"
+      "many solutions",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Homogeneous Ax=0 with |A|≠0 has only trivial unique solution. Option A.",
@@ -2044,7 +2181,8 @@ export const questionBank = {
       "A=BP^{-1}",
       "AB=PB",
       "PA=P^{-1}B",
-      "A=P^{-1}BP"
+      "A=P^{-1}BP",
+      "None of the above"
     ],
     "correct": 3,
     "short": "Definition: B=P^{-1}AP or A=P^{-1}BP. Option D.",
@@ -2058,7 +2196,8 @@ export const questionBank = {
       "[[-4,1,-8],[1,7,7],[-8,7,5]]",
       "[[-4,1,-8],[1,14,7],[-8,7,5]]",
       "[[2,-4,-8],[-4,1,7],[-8,7,5]]",
-      "[[-4,1,7],[-4,7,5]]"
+      "[[-4,1,7],[-4,7,5]]",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Diagonal 2,1,5 and half cross terms -4,-8,7 → Option C.",
@@ -2072,7 +2211,8 @@ export const questionBank = {
       "|A^T|=|A|",
       "|AB|=|A||B|",
       "|λA|=λ|A|",
-      "None of the above"
+      "None of the above",
+      "All of the above"
     ],
     "correct": 2,
     "short": "|λA|=λ^n|A| not λ|A|. So C is not a property.",
@@ -2086,7 +2226,8 @@ export const questionBank = {
       "1,2,3",
       "0,2,3",
       "0,0,3",
-      "None"
+      "None",
+      "None of the above"
     ],
     "correct": 0,
     "short": "|A-λI|=(1-λ)[(2-λ)²-9]=0 → λ=1,5,-1 form which leads to 1,2,3. Option A.",
@@ -2100,7 +2241,8 @@ export const questionBank = {
       "Hermitian",
       "Skew-Hermitian",
       "Unitary",
-      "None"
+      "None",
+      "None of the above"
     ],
     "correct": 2,
     "short": "A*·A=I for this matrix, so unitary. Option C.",
@@ -2114,7 +2256,8 @@ export const questionBank = {
       "Hermitian",
       "Skew-Hermitian",
       "Unitary",
-      "None"
+      "None",
+      "None of the above"
     ],
     "correct": 1,
     "short": "B* = -B, so skew-Hermitian. Option B.",
@@ -2128,7 +2271,8 @@ export const questionBank = {
       "3+2i",
       "(3i)²",
       "(1-2i)²",
-      "2-i"
+      "2-i",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Real symmetric has real eigenvalues. (3i)²=-9 real. Option B.",
@@ -2142,7 +2286,8 @@ export const questionBank = {
       "Real",
       "Imaginary",
       "Complex",
-      "None"
+      "None",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Hermitian A=A* has real eigenvalues. Option A.",
@@ -2173,11 +2318,12 @@ export const questionBank = {
       "Flux residue on the weld surface caused by low amperage (heat) and slow speed",
       "Holes in the weld caused by high gas flow and fast speed",
       "Excess penetration caused by holding the gun too long in one spot",
-      "Metal melted away from flux caused by high amperage"
+      "Metal melted away from flux caused by high amperage",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Slag is flux residue on the surface from low heat and slow speed. Option A.",
-    "solution": "Slag is the solidified flux that remains on top of a weld bead.\n\nGiven: Slag is defined as flux residue formed on the surface of the weld.\n\nSteps:\n1. Identify the defect: Slag appears as a crust on the weld surface after welding.\n2. Recall its cause: It is caused by low amperage (insufficient heat) and slow travel speed, which prevents the flux from burning off properly.\n3. Match to options: Only Option A describes flux residue with those two causes.\n\nWhy the other options are incorrect:\nOption B describes porosity (holes), not slag.\nOption C describes excessive penetration (wire goes too deep).\nOption D describes undercut (metal melts away from flux).\n\nTip: Remember SLAG = Surface Leftover After Glassy flux — low heat + slow = slag stays.\n\n* Correct Option: A (Flux residue on the weld surface caused by low amperage (heat) and slow speed)"
+    "solution": "Slag is the solidified flux that remains on top of a weld bead.\n\nGiven: Slag is defined as flux residue formed on the surface of the weld.\n\nIdentify the defect: Slag appears as a crust on the weld surface after welding.. Recall its cause: It is caused by low amperage (insufficient heat) and slow travel speed, which prevents the flux from burning off properly.. Match to options: Only Option A describes flux residue with those two causes.\n\nWhy the other options are incorrect:\nOption B describes porosity (holes), not slag.\nOption C describes excessive penetration (wire goes too deep).\nOption D describes undercut (metal melts away from flux).\n\nTip: Remember SLAG = Surface Leftover After Glassy flux — low heat + slow = slag stays.\n\n* Correct Option: A (Flux residue on the weld surface caused by low amperage (heat) and slow speed)"
   },
   {
     "id": "aee_wd_02",
@@ -2187,11 +2333,12 @@ export const questionBank = {
       "Overlap",
       "Undercut",
       "Porosity",
-      "Spatter"
+      "Spatter",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Metal melting away from flux and going too far down is Undercut. Option B.",
-    "solution": "Undercut is a groove melted into the base metal adjacent to the weld that is not filled.\n\nGiven: Description — \"Metal melts away from the flux and it goes too far down into the work piece.\"\n\nSteps:\n1. Recall definition: Undercut is when the base metal is melted away leaving a groove.\n2. Check causes for undercut: low gas, high amperage, wrong electrode angle, and not properly cleaning grease from the workpiece.\n3. Match to options: Undercut matches exactly.\n\nWhy the other options are incorrect:\nOption A Overlap is excess weld metal flowing onto the base metal without fusing.\nOption C Porosity is holes inside the weld.\nOption D Spatter is small metal droplets splashed around the weld.\n\nTip: UNDERcut = goes UNDER too far — think “cut too deep”.\n\n* Correct Option: B (Undercut)"
+    "solution": "Undercut is a groove melted into the base metal adjacent to the weld that is not filled.\n\nGiven: Description — \"Metal melts away from the flux and it goes too far down into the work piece.\"\n\nRecall definition: Undercut is when the base metal is melted away leaving a groove.. Check causes for undercut: low gas, high amperage, wrong electrode angle, and not properly cleaning grease from the workpiece.. Match to options: Undercut matches exactly.\n\nWhy the other options are incorrect:\nOption A Overlap is excess weld metal flowing onto the base metal without fusing.\nOption C Porosity is holes inside the weld.\nOption D Spatter is small metal droplets splashed around the weld.\n\nTip: UNDERcut = goes UNDER too far — think “cut too deep”.\n\n* Correct Option: B (Undercut)"
   },
   {
     "id": "aee_wd_03",
@@ -2201,11 +2348,12 @@ export const questionBank = {
       "Low gas",
       "High amperage",
       "Wrong electrode angle",
-      "High arc power with low amperage"
+      "High arc power with low amperage",
+      "None of the above"
     ],
     "correct": 3,
     "short": "High arc power with low amperage causes spatter, not undercut. Option D.",
-    "solution": "Each defect has specific parameter causes. Undercut causes from the table are low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nSteps:\n1. List undercut causes: low gas, high amperage, wrong angle, grease.\n2. Check Option D: High arc power with low amperage — this is listed under Spatter.\n3. Therefore D is not a cause of undercut.\n\nWhy the other options are correct causes (so they are not the answer):\nOptions A, B, C are all explicitly listed as causes of undercut.\n\n* Correct Option: D (High arc power with low amperage)"
+    "solution": "Each defect has specific parameter causes. Undercut causes from the table are low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nList undercut causes: low gas, high amperage, wrong angle, grease.. Check Option D: High arc power with low amperage — this is listed under Spatter.. Therefore D is not a cause of undercut.\n\nWhy the other options are correct causes (so they are not the answer):\nOptions A, B, C are all explicitly listed as causes of undercut.\n\n* Correct Option: D (High arc power with low amperage)"
   },
   {
     "id": "aee_wd_04",
@@ -2215,11 +2363,12 @@ export const questionBank = {
       "Holes created inside the work piece/weld metal",
       "Flux residue left on the surface",
       "Weld metal flowing onto the base metal without fusion",
-      "Excess weld reinforcement on the surface"
+      "Excess weld reinforcement on the surface",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Porosity = holes/voids inside the weld. Option A.",
-    "solution": "Porosity is gas entrapment producing voids.\n\nGiven: Definition — \"Porosity happens when holes are created in the work piece.\"\n\nSteps:\n1. Visualise: Small spherical holes (pores) trapped inside the solidified weld.\n2. Causes: inexperience, welding too fast, very low gas.\n3. Match: Option A describes holes inside.\n\nWhy the other options are incorrect:\nOption B is slag, Option C is overlap, Option D is excessive reinforcement.\n\n* Correct Option: A (Holes created inside the work piece/weld metal)"
+    "solution": "Porosity is gas entrapment producing voids.\n\nGiven: Definition — \"Porosity happens when holes are created in the work piece.\"\n\nVisualise: Small spherical holes (pores) trapped inside the solidified weld.. Causes: inexperience, welding too fast, very low gas.. Match: Option A describes holes inside.\n\nWhy the other options are incorrect:\nOption B is slag, Option C is overlap, Option D is excessive reinforcement.\n\n* Correct Option: A (Holes created inside the work piece/weld metal)"
   },
   {
     "id": "aee_wd_05",
@@ -2229,11 +2378,12 @@ export const questionBank = {
       "Incomplete Fusion",
       "Incomplete Penetration",
       "Overlap",
-      "Underfill"
+      "Underfill",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Incomplete Fusion is called Cold Weld with a gap and weak joint. Option A.",
-    "solution": "Incomplete Fusion (Cold Weld) means the two base metals never properly melted together.\n\nGiven: \"The welding joints are not properly connected or fused together. There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nSteps:\n1. Identify keyword \"Cold Weld\" in the table — it is in parentheses after Incomplete Fusion.\n2. Recall it creates a gap and weak joint that breaks easily.\n3. Causes: inexperience, improper angle, low amperage/heat.\n\nWhy the other options are incorrect:\nOption B Incomplete Penetration is wire not reaching the root (depth), not a gap between the two pieces.\nOption C Overlap is excess metal flowing over, not a gap.\nOption D Underfill is a valley from insufficient fill.\n\n* Correct Option: A (Incomplete Fusion)"
+    "solution": "Incomplete Fusion (Cold Weld) means the two base metals never properly melted together.\n\nGiven: \"The welding joints are not properly connected or fused together. There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nIdentify keyword \"Cold Weld\" in the table — it is in parentheses after Incomplete Fusion.. Recall it creates a gap and weak joint that breaks easily.. Causes: inexperience, improper angle, low amperage/heat.\n\nWhy the other options are incorrect:\nOption B Incomplete Penetration is wire not reaching the root (depth), not a gap between the two pieces.\nOption C Overlap is excess metal flowing over, not a gap.\nOption D Underfill is a valley from insufficient fill.\n\n* Correct Option: A (Incomplete Fusion)"
   },
   {
     "id": "aee_wd_06",
@@ -2243,11 +2393,12 @@ export const questionBank = {
       "Underfill",
       "Overlap",
       "Excessive Penetration",
-      "Slag"
+      "Slag",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Welding more than specified (3\" vs 1–2\") and looking ugly is Overlap. Option B.",
-    "solution": "Overlap is depositing excess weld metal beyond the joint, often flowing onto the parent metal without fusion.\n\nGiven: Example — \"The company requires 1″–2″ you weld 3″. You have used too much weld. Will make the piece look ‘ugly’ and also waste material. Caused by welding too long or using too much weld.\"\n\nSteps:\n1. Compare to definition: Too much weld, beyond specification, ugly appearance, wasteful.\n2. Distinguish from Underfill (too little, valley) and Excessive Reinforcement (also too much but refers to height/width).\n\nWhy the other options are incorrect:\nOption A Underfill is too little weld (valley).\nOption C Excessive Penetration is too deep, not too wide/long.\nOption D Slag is flux residue.\n\n* Correct Option: B (Overlap)"
+    "solution": "Overlap is depositing excess weld metal beyond the joint, often flowing onto the parent metal without fusion.\n\nGiven: Example — \"The company requires 1″–2″ you weld 3″. You have used too much weld. Will make the piece look ‘ugly’ and also waste material. Caused by welding too long or using too much weld.\"\n\nCompare to definition: Too much weld, beyond specification, ugly appearance, wasteful.\nDistinguish from Underfill (too little, valley) and Excessive Reinforcement (also too much but refers to height/width).\n\nWhy the other options are incorrect:\nOption A Underfill is too little weld (valley).\nOption C Excessive Penetration is too deep, not too wide/long.\nOption D Slag is flux residue.\n\n* Correct Option: B (Overlap)"
   },
   {
     "id": "aee_wd_07",
@@ -2257,11 +2408,12 @@ export const questionBank = {
       "A valley or gap from insufficient weld metal, often from going too fast or not seeing properly",
       "A high, thick mountain of weld from high heat and low speed",
       "Small bumps splashed all over the surface that must be ground off",
-      "Holes inside the weld from low gas"
+      "Holes inside the weld from low gas",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Underfill = valley/gap from insufficient fill, caused by fast travel or poor visibility. Option A.",
-    "solution": "Underfill is the opposite of Overlap — not enough metal.\n\nGiven: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’. This is caused by not filling in the weld enough, or totally missing the angle. Caused by not being able to see properly or being inexperienced. Also can be caused by going too fast.\"\n\nSteps:\n1. Identify keyword valley/gap + insufficient.\n2. Causes: too fast, poor visibility, inexperience, missed angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Convexity (mountain).\nOption C is Spatter (splash bumps).\nOption D is Porosity (holes).\n\n* Correct Option: A (A valley or gap from insufficient weld metal, often from going too fast or not seeing properly)"
+    "solution": "Underfill is the opposite of Overlap — not enough metal.\n\nGiven: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’. This is caused by not filling in the weld enough, or totally missing the angle. Caused by not being able to see properly or being inexperienced. Also can be caused by going too fast.\"\n\nIdentify keyword valley/gap + insufficient.\nCauses: too fast, poor visibility, inexperience, missed angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Convexity (mountain).\nOption C is Spatter (splash bumps).\nOption D is Porosity (holes).\n\n* Correct Option: A (A valley or gap from insufficient weld metal, often from going too fast or not seeing properly)"
   },
   {
     "id": "aee_wd_08",
@@ -2271,11 +2423,12 @@ export const questionBank = {
       "High amperage and low gas",
       "Low amperage, wire too long, and poor penetration",
       "Slow speed and high heat",
-      "Not cleaning grease from workpiece"
+      "Not cleaning grease from workpiece",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Spatter causes: low amperage, wire too long, poor penetration and high arc power. Option B.",
-    "solution": "Spatter are tiny molten droplets expelled and stuck around the weld.\n\nGiven causes for Spatter: \"High Arc Power. Can be caused by low amperage, your weld wire (electrode) is too long and you can not get proper penetration.\"\n\nSteps:\n1. Match Option B: low amperage, wire too long, poor penetration — exactly listed.\n2. Other options belong to other defects.\n\nWhy the other options are incorrect:\nOption A (high amperage + low gas) is Undercut.\nOption C (slow + high heat) is Excessive Convexity.\nOption D (not cleaning grease) is Undercut.\n\n* Correct Option: B (Low amperage, wire too long, and poor penetration)"
+    "solution": "Spatter are tiny molten droplets expelled and stuck around the weld.\n\nGiven causes for Spatter: \"High Arc Power. Can be caused by low amperage, your weld wire (electrode) is too long and you can not get proper penetration.\"\n\nMatch Option B: low amperage, wire too long, poor penetration — exactly listed.\nOther options belong to other defects.\n\nWhy the other options are incorrect:\nOption A (high amperage + low gas) is Undercut.\nOption C (slow + high heat) is Excessive Convexity.\nOption D (not cleaning grease) is Undercut.\n\n* Correct Option: B (Low amperage, wire too long, and poor penetration)"
   },
   {
     "id": "aee_wd_09",
@@ -2285,11 +2438,12 @@ export const questionBank = {
       "Excessive Convexity (mountain)",
       "Excessive Concavity (valley)",
       "Underfill",
-      "Overlap"
+      "Overlap",
+      "None of the above"
     ],
     "correct": 0,
     "short": "High, thick mountain weld is Excessive Convexity. Option A.",
-    "solution": "Convexity = outward bulge (mountain), Concavity = inward valley.\n\nGiven: \"Your weld is very high and thick up on your work piece. Caused by high arc (heat) and low speed.\"\n\nSteps:\n1. Visualise mountain vs valley.\n2. High + thick = Excessive Convexity (mountain).\n\nWhy the other options are incorrect:\nOption B is the opposite (too low, valley).\nOption C Underfill is also a valley but from insufficient fill, not high build-up.\nOption D Overlap is metal flowing onto base metal, not necessarily high mountain.\n\n* Correct Option: A (Excessive Convexity (mountain))"
+    "solution": "Convexity = outward bulge (mountain), Concavity = inward valley.\n\nGiven: \"Your weld is very high and thick up on your work piece. Caused by high arc (heat) and low speed.\"\n\nVisualise mountain vs valley.\nHigh + thick = Excessive Convexity (mountain).\n\nWhy the other options are incorrect:\nOption B is the opposite (too low, valley).\nOption C Underfill is also a valley but from insufficient fill, not high build-up.\nOption D Overlap is metal flowing onto base metal, not necessarily high mountain.\n\n* Correct Option: A (Excessive Convexity (mountain))"
   },
   {
     "id": "aee_wd_10",
@@ -2299,11 +2453,12 @@ export const questionBank = {
       "Excessive Convexity",
       "Excessive Concavity (valley)",
       "Excessive Penetration",
-      "Incomplete Fusion"
+      "Incomplete Fusion",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Too low like a valley is Excessive Concavity. Option B.",
-    "solution": "Concavity is inward (valley).\n\nGiven: \"Your weld is too low like a valley.\"\n\nSteps:\n1. Distinguish from Convexity (mountain).\n2. Concavity is the low counterpart.\n\nWhy the other options are incorrect:\nOption A is high mountain.\nOption C is too deep penetration through the joint.\nOption D is lack of side-wall fusion.\n\n* Correct Option: B (Excessive Concavity (valley))"
+    "solution": "Concavity is inward (valley).\n\nGiven: \"Your weld is too low like a valley.\"\n\nDistinguish from Convexity (mountain).\nConcavity is the low counterpart.\n\nWhy the other options are incorrect:\nOption A is high mountain.\nOption C is too deep penetration through the joint.\nOption D is lack of side-wall fusion.\n\n* Correct Option: B (Excessive Concavity (valley))"
   },
   {
     "id": "aee_wd_11",
@@ -2313,11 +2468,12 @@ export const questionBank = {
       "Slow travel speed or improper angles leading to too much width/height",
       "Going too fast and not seeing properly",
       "Low gas and high amperage",
-      "Very low gas and welding too fast"
+      "Very low gas and welding too fast",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Excessive Reinforcement = too much width/height from slow speed or wrong angle. Option A.",
-    "solution": "Reinforcement is the height/width of the weld beyond the plate surface. Excessive means more than specified.\n\nGiven causes: \"Slow travel speed. Or Improper angles.\" and \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nSteps:\n1. Too much reinforcement = too wide/high.\n2. Match causes: Slow travel (more metal per length) + improper angle.\n\nWhy the other options are incorrect:\nOption B (too fast, poor visibility) is Underfill.\nOption C (low gas, high amperage) is Undercut.\nOption D (very low gas, too fast) is Porosity.\n\n* Correct Option: A (Slow travel speed or improper angles leading to too much width/height)"
+    "solution": "Reinforcement is the height/width of the weld beyond the plate surface. Excessive means more than specified.\n\nGiven causes: \"Slow travel speed. Or Improper angles.\" and \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nToo much reinforcement = too wide/high.\nMatch causes: Slow travel (more metal per length) + improper angle.\n\nWhy the other options are incorrect:\nOption B (too fast, poor visibility) is Underfill.\nOption C (low gas, high amperage) is Undercut.\nOption D (very low gas, too fast) is Porosity.\n\n* Correct Option: A (Slow travel speed or improper angles leading to too much width/height)"
   },
   {
     "id": "aee_wd_12",
@@ -2327,11 +2483,12 @@ export const questionBank = {
       "Weld wire does not extend fully into the joint, resulting in a weak weld",
       "Weld wire goes too far down and burns through the work piece",
       "Weld metal flows onto the base metal without fusing",
-      "Flux remains on the surface"
+      "Flux remains on the surface",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Incomplete Penetration = wire does not reach the root, weak joint. Option A.",
-    "solution": "Penetration is depth into the joint. Incomplete = not deep enough.\n\nGiven: \"Your weld wire does not extend fully into the joint. If you do not have proper penetration you will have a weak weld. Caused by Electrode length not long enough or improper angle.\"\n\nSteps:\n1. Root not fused.\n2. Causes: electrode too short, wrong angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Penetration (too deep, burn-through).\nOption C is Overlap.\nOption D is Slag.\n\n* Correct Option: A (Weld wire does not extend fully into the joint, resulting in a weak weld)"
+    "solution": "Penetration is depth into the joint. Incomplete = not deep enough.\n\nGiven: \"Your weld wire does not extend fully into the joint. If you do not have proper penetration you will have a weak weld. Caused by Electrode length not long enough or improper angle.\"\n\nRoot not fused.\nCauses: electrode too short, wrong angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Penetration (too deep, burn-through).\nOption C is Overlap.\nOption D is Slag.\n\n* Correct Option: A (Weld wire does not extend fully into the joint, resulting in a weak weld)"
   },
   {
     "id": "aee_wd_13",
@@ -2341,11 +2498,12 @@ export const questionBank = {
       "Holding the gun in one spot too long and burning through",
       "Electrode too short and wrong angle",
       "Not filling enough and going too fast",
-      "Low amperage and slow speed"
+      "Low amperage and slow speed",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Excessive Penetration = holding too long in one spot, burning through. Option A.",
-    "solution": "Excessive Penetration is too deep — wire goes through.\n\nGiven: \"Your weld wire goes too far down into the work piece. You are holding your gun in one spot too long. You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nSteps:\n1. Too far down, burn-through.\n2. Cause: Dwell time too long in one spot.\n\nWhy the other options are incorrect:\nOption B is Incomplete Penetration (too short).\nOption C is Underfill (too fast, not enough fill).\nOption D is Slag (low amperage, slow).\n\n* Correct Option: A (Holding the gun in one spot too long and burning through)"
+    "solution": "Excessive Penetration is too deep — wire goes through.\n\nGiven: \"Your weld wire goes too far down into the work piece. You are holding your gun in one spot too long. You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nToo far down, burn-through.\nCause: Dwell time too long in one spot.\n\nWhy the other options are incorrect:\nOption B is Incomplete Penetration (too short).\nOption C is Underfill (too fast, not enough fill).\nOption D is Slag (low amperage, slow).\n\n* Correct Option: A (Holding the gun in one spot too long and burning through)"
   },
   {
     "id": "aee_wd_14",
@@ -2355,11 +2513,12 @@ export const questionBank = {
       "Slag",
       "Spatter",
       "Overlap",
-      "Undercut"
+      "Undercut",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Spatter creates bumps that must be ground off and has a distinct sound. Option B.",
-    "solution": "Post-weld cleanup clues.\n\nGiven for Spatter: \"You get a 'splash' from the weld material all over the surface... If you do this, you have to grind the spatter off. High Arc Power... You will hear the sound.\"\n\nSteps:\n1. Grinding indicates small hard bumps — spatter.\n2. Sound cue is unique to spatter in the table.\n\nWhy the other options are incorrect:\nOption A Slag is flux crust, not ground bumps.\nOption C Overlap is excess bead, not small splashes.\nOption D Undercut is a groove.\n\n* Correct Option: B (Spatter)"
+    "solution": "Post-weld cleanup clues.\n\nGiven for Spatter: \"You get a 'splash' from the weld material all over the surface... If you do this, you have to grind the spatter off. High Arc Power... You will hear the sound.\"\n\nGrinding indicates small hard bumps — spatter.\nSound cue is unique to spatter in the table.\n\nWhy the other options are incorrect:\nOption A Slag is flux crust, not ground bumps.\nOption C Overlap is excess bead, not small splashes.\nOption D Undercut is a groove.\n\n* Correct Option: B (Spatter)"
   },
   {
     "id": "aee_wd_15",
@@ -2369,11 +2528,12 @@ export const questionBank = {
       "Overlap flows onto the base metal without fusion; Reinforcement is extra height/width on the weld itself",
       "Overlap is a valley, Reinforcement is a mountain",
       "Overlap is caused by low gas, Reinforcement by high gas",
-      "There is no difference; they are the same defect"
+      "There is no difference; they are the same defect",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Overlap is metal flowing onto base metal without fusing; Reinforcement is extra height/width on the weld. Option A.",
-    "solution": "Both involve “too much” but location differs.\n\n* Overlap: \"You use too much flux or weld onto one of the work pieces... weld onto one of the work pieces.\"\n* Excessive Weld Reinforcement: \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nSteps:\n1. Overlap = weld spills *onto* parent plate, often not fused at toe.\n2. Reinforcement = weld is *on* the joint but too tall/wide.\n\nWhy the other options are incorrect:\nOption B confuses with Underfill/Convexity.\nOption C incorrectly assigns gas causes.\nOption D ignores the distinction the table makes.\n\n* Correct Option: A (Overlap flows onto the base metal without fusion; Reinforcement is extra height/width on the weld itself)"
+    "solution": "Both involve “too much” but location differs.\n\n* Overlap: \"You use too much flux or weld onto one of the work pieces... weld onto one of the work pieces.\"\n* Excessive Weld Reinforcement: \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nOverlap = weld spills *onto* parent plate, often not fused at toe.\nReinforcement = weld is *on* the joint but too tall/wide.\n\nWhy the other options are incorrect:\nOption B confuses with Underfill/Convexity.\nOption C incorrectly assigns gas causes.\nOption D ignores the distinction the table makes.\n\n* Correct Option: A (Overlap flows onto the base metal without fusion; Reinforcement is extra height/width on the weld itself)"
   },
   {
     "id": "aee_wd_16",
@@ -2383,11 +2543,12 @@ export const questionBank = {
       "Porosity and Slag",
       "Overlap / Excessive Reinforcement vs Underfill",
       "Undercut and Spatter",
-      "Incomplete Fusion and Incomplete Penetration"
+      "Incomplete Fusion and Incomplete Penetration",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Overlap/Excessive Reinforcement (too much) vs Underfill (too little, valley). Option B.",
-    "solution": "Group defects by excess vs insufficiency.\n\n* Too much: Overlap (too long/wide), Excessive Reinforcement (too high/wide), Excessive Convexity (mountain), Excessive Penetration (too deep).\n* Too little: Underfill (valley/gap), Incomplete Penetration (not deep enough), Concavity (too low).\n\nSteps:\n1. Check Option B: Overlap/Excessive Reinforcement are explicitly “too much” (3″ vs 1–2″, more than needs), Underfill is “not sufficient” (valley).\n2. They are direct opposites.\n\nWhy the other options are incorrect:\nOption A: Porosity (holes) and Slag (flux) are not amount opposites.\nOption C: Undercut (groove) and Spatter (splash) are different mechanisms.\nOption D: Both are “incomplete” (lack of fusion/penetration) — similar, not opposites.\n\n* Correct Option: B (Overlap / Excessive Reinforcement vs Underfill)"
+    "solution": "Group defects by excess vs insufficiency.\n\n* Too much: Overlap (too long/wide), Excessive Reinforcement (too high/wide), Excessive Convexity (mountain), Excessive Penetration (too deep).\n* Too little: Underfill (valley/gap), Incomplete Penetration (not deep enough), Concavity (too low).\n\nCheck Option B: Overlap/Excessive Reinforcement are explicitly “too much” (3″ vs 1–2″, more than needs), Underfill is “not sufficient” (valley).\nThey are direct opposites.\n\nWhy the other options are incorrect:\nOption A: Porosity (holes) and Slag (flux) are not amount opposites.\nOption C: Undercut (groove) and Spatter (splash) are different mechanisms.\nOption D: Both are “incomplete” (lack of fusion/penetration) — similar, not opposites.\n\n* Correct Option: B (Overlap / Excessive Reinforcement vs Underfill)"
   },
   {
     "id": "aee_wd_17",
@@ -2397,11 +2558,12 @@ export const questionBank = {
       "Undercut",
       "Porosity",
       "Excessive Convexity",
-      "Incomplete Penetration"
+      "Incomplete Penetration",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Wrong angle + high amperage + grease are listed for Undercut. Option A.",
-    "solution": "Match cause cluster to defect.\n\nGiven causes for Undercut: low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nSteps:\n1. The scenario lists three of those: wrong angle, high amperage, grease.\n2. Therefore Undercut is most likely.\n\nWhy the other options are incorrect:\nOption B Porosity is low gas + too fast + inexperience, not grease/high amperage.\nOption C Excessive Convexity is high heat + low speed, not grease.\nOption D Incomplete Penetration is short electrode + wrong angle, but not grease/high amperage combo.\n\n* Correct Option: A (Undercut)"
+    "solution": "Match cause cluster to defect.\n\nGiven causes for Undercut: low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nThe scenario lists three of those: wrong angle, high amperage, grease.\nTherefore Undercut is most likely.\n\nWhy the other options are incorrect:\nOption B Porosity is low gas + too fast + inexperience, not grease/high amperage.\nOption C Excessive Convexity is high heat + low speed, not grease.\nOption D Incomplete Penetration is short electrode + wrong angle, but not grease/high amperage combo.\n\n* Correct Option: A (Undercut)"
   },
   {
     "id": "aee_wd_18",
@@ -2411,11 +2573,12 @@ export const questionBank = {
       "Slag",
       "Porosity",
       "Overlap",
-      "Excessive Penetration"
+      "Excessive Penetration",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Holes inside = Porosity, caused by low gas and fast travel. Option B.",
-    "solution": "Porosity = gas bubbles trapped as holes.\n\nGiven causes for Porosity: inexperience, welding too fast, very low gas.\n\nSteps:\n1. Scenario matches all three: beginner (inexperience), too fast, very low gas.\n2. Holes inside = Porosity.\n\nWhy the other options are incorrect:\nOption A Slag is surface flux, not holes.\nOption C Overlap is excess surface metal.\nOption D Excessive Penetration is burn-through depth.\n\n* Correct Option: B (Porosity)"
+    "solution": "Porosity = gas bubbles trapped as holes.\n\nGiven causes for Porosity: inexperience, welding too fast, very low gas.\n\nScenario matches all three: beginner (inexperience), too fast, very low gas.\nHoles inside = Porosity.\n\nWhy the other options are incorrect:\nOption A Slag is surface flux, not holes.\nOption C Overlap is excess surface metal.\nOption D Excessive Penetration is burn-through depth.\n\n* Correct Option: B (Porosity)"
   },
   {
     "id": "aee_wd_19",
@@ -2425,11 +2588,12 @@ export const questionBank = {
       "The weld will look ugly but remain strong",
       "The weld can break off very soon due to the gap",
       "It will cause excessive penetration and burn-through",
-      "It will create a mountain-like build-up"
+      "It will create a mountain-like build-up",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Cold Weld has a gap and breaks off soon. Option B.",
-    "solution": "Fusion is bonding. Incomplete = no bond.\n\nGiven: \"There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nSteps:\n1. Gap means no metallic continuity.\n2. Under load, the joint fails early.\n\nWhy the other options are incorrect:\nOption A says remains strong — opposite.\nOption C is Excessive Penetration.\nOption D is Convexity.\n\n* Correct Option: B (The weld can break off very soon due to the gap)"
+    "solution": "Fusion is bonding. Incomplete = no bond.\n\nGiven: \"There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nGap means no metallic continuity.\nUnder load, the joint fails early.\n\nWhy the other options are incorrect:\nOption A says remains strong — opposite.\nOption C is Excessive Penetration.\nOption D is Convexity.\n\n* Correct Option: B (The weld can break off very soon due to the gap)"
   },
   {
     "id": "aee_wd_20",
@@ -2439,11 +2603,12 @@ export const questionBank = {
       "Spatter",
       "Overlap",
       "Undercut",
-      "Slag"
+      "Slag",
+      "None of the above"
     ],
     "correct": 1,
     "short": "Too much flux/welding onto workpiece and waste is Overlap. Option B.",
-    "solution": "Direct quote from table for Overlap.\n\nGiven: \"You use too much flux or weld onto one of the work pieces. ... Will make the piece look ‘ugly’ and also waste welding material. Caused by welding too long or using too much weld.\"\n\nSteps:\n1. Match quote to Overlap definition.\n2. Waste + ugly + onto workpiece are keywords.\n\nWhy the other options are incorrect:\nOption A Spatter is splash, not onto workpiece as a bead.\nOption C Undercut is groove, not excess on top.\nOption D Slag is flux residue, not weld metal.\n\n* Correct Option: B (Overlap)"
+    "solution": "Direct quote from table for Overlap.\n\nGiven: \"You use too much flux or weld onto one of the work pieces. ... Will make the piece look ‘ugly’ and also waste welding material. Caused by welding too long or using too much weld.\"\n\nMatch quote to Overlap definition.\nWaste + ugly + onto workpiece are keywords.\n\nWhy the other options are incorrect:\nOption A Spatter is splash, not onto workpiece as a bead.\nOption C Undercut is groove, not excess on top.\nOption D Slag is flux residue, not weld metal.\n\n* Correct Option: B (Overlap)"
   },
   {
     "id": "aee_wd_21",
@@ -2453,11 +2618,12 @@ export const questionBank = {
       "Underfill and Excessive Concavity",
       "Slag and Porosity",
       "Spatter and Overlap",
-      "Incomplete Fusion and Overlap"
+      "Incomplete Fusion and Overlap",
+      "None of the above"
     ],
     "correct": 0,
     "short": "Underfill (valley from insufficient fill) and Excessive Concavity (valley from low weld) both are low spots. Option A.",
-    "solution": "Valley defects.\n\nGiven:\n* Underfill: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’.\"\n* Excessive Concavity (valley): \"Your weld is too low like a valley.\"\n\nSteps:\n1. Both describe low/valley.\n2. Causes differ: Underfill = not enough fill, missed angle, too fast, poor visibility. Concavity = generally too low profile.\n\nWhy the other options are incorrect:\nOption B are surface vs internal.\nOption C are both excess (splash/overlap).\nOption D are gap vs excess.\n\n* Correct Option: A (Underfill and Excessive Concavity)"
+    "solution": "Valley defects.\n\nGiven:\n* Underfill: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’.\"\n* Excessive Concavity (valley): \"Your weld is too low like a valley.\"\n\nBoth describe low/valley.\nCauses differ: Underfill = not enough fill, missed angle, too fast, poor visibility. Concavity = generally too low profile.\n\nWhy the other options are incorrect:\nOption B are surface vs internal.\nOption C are both excess (splash/overlap).\nOption D are gap vs excess.\n\n* Correct Option: A (Underfill and Excessive Concavity)"
   },
   {
     "id": "aee_wd_22",
@@ -2467,11 +2633,12 @@ export const questionBank = {
       "Creating a valley on top",
       "Leaving slag on the surface",
       "Burning through too much of the work piece",
-      "Creating holes inside the weld"
+      "Creating holes inside the weld",
+      "None of the above"
     ],
     "correct": 2,
     "short": "Excessive Penetration burns through too much, weakening. Option C.",
-    "solution": "Penetration depth.\n\nGiven for Excessive Penetration: \"You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nSteps:\n1. Too deep → base metal thinned/burned.\n2. Weakens.\n\nWhy the other options are incorrect:\nOption A is Underfill/Concavity (valley on top).\nOption B is Slag.\nOption D is Porosity (holes).\n\n* Correct Option: C (Burning through too much of the work piece)"
+    "solution": "Penetration depth.\n\nGiven for Excessive Penetration: \"You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nToo deep → base metal thinned/burned.\nWeakens.\n\nWhy the other options are incorrect:\nOption A is Underfill/Concavity (valley on top).\nOption B is Slag.\nOption D is Porosity (holes).\n\n* Correct Option: C (Burning through too much of the work piece)"
   }
 ]
 }
