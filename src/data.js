@@ -107,6 +107,22 @@ export const topicMeta = {
     {
       "id": "tig-welding",
       "name": "TIG Welding"
+    },
+    {
+      "id": "production-welding",
+      "name": "Production Welding"
+    },
+    {
+      "id": "gas-welding",
+      "name": "Gas Welding"
+    },
+    {
+      "id": "arc-welding",
+      "name": "Arc Welding"
+    },
+    {
+      "id": "welding-classification",
+      "name": "Classification of Welding"
     }
   ]
 }
@@ -3811,6 +3827,381 @@ export const questionBank = {
     "correct": 0,
     "short": "Regulator/Flowmeter, TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional). Option A.",
     "solution": "Fig. 68 — TIG Welding System: REGULATOR/FLOWMETER COMBINATION, AIR-OR-WATER COOLED TIG TORCH, SHIELDING GAS, WORKPIECE, POWER SUPPLY, WATER COOLER(OPTIONAL)\n\nWhy the other options are incorrect: They list only one component.\n\n* Correct Option: A (Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional))"
+  },
+  {
+    "id": "aee_pw_01",
+    "topicId": "production-welding",
+    "question": "What is production welding as defined in the material?",
+    "options": [
+      "A process that joins materials, usually metals, by causing fusion",
+      "A process that cuts metals only",
+      "A process that paints metals",
+      "A process that polishes metals",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Production welding joins materials, usually metals, by causing fusion. Option A.",
+    "solution": "Production welding is defined as a process that joins materials, usually metals, by causing fusion.\n\nIt is usually done through MIG welding as it is the quickest method, and many factories now use robotic welding to speed up production.\n\nWhy the other options are incorrect:\nOption B cutting is a related process (oxy-acetylene cutting), not production welding itself.\nOption C painting and D polishing are not joining processes.\n\n* Correct Option: A (A process that joins materials, usually metals, by causing fusion)"
+  },
+  {
+    "id": "aee_pw_02",
+    "topicId": "production-welding",
+    "question": "Which welding method is described as the quickest for production welding?",
+    "options": [
+      "MIG (Metal Inert Gas)",
+      "Gas welding",
+      "Manual arc welding with high labor",
+      "Resistance welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "MIG is the quickest method for production welding. Option A.",
+    "solution": "The material states: “Production welding is usually done through the MIG (Metal Inert Gas) welding method as it is the quickest method of welding.”\n\nWhy the other options are incorrect:\nOption B Gas welding is noted as slow rate of heating.\nOption C Manual arc is high labor cost, not quickest.\nOption D Resistance is not mentioned as quickest for production.\n\n* Correct Option: A (MIG (Metal Inert Gas))"
+  },
+  {
+    "id": "aee_pw_03",
+    "topicId": "welding-classification",
+    "question": "Welding is used for making which type of joints?",
+    "options": [
+      "Permanent joints",
+      "Temporary joints",
+      "Semi-permanent joints",
+      "No joints",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Welding is used for making permanent joints. Option A.",
+    "solution": "Definition: “Welding is used for making permanent joints.” It is used for joining similar or dissimilar metals by heating to suitable temperature with or without pressure, filler and flux.\n\nWhy the other options are incorrect: Welding is not for temporary or semi-permanent; those are bolted/riveted.\n\n* Correct Option: A (Permanent joints)"
+  },
+  {
+    "id": "aee_pw_04",
+    "topicId": "welding-classification",
+    "question": "Which welding type is classified as Plastic Welding or Pressure Welding where pieces are heated to plastic state and forced together by external pressure?",
+    "options": [
+      "Resistance welding",
+      "Gas welding",
+      "Arc welding",
+      "Thermo-chemical welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Plastic/Pressure welding example is Resistance welding. Option A.",
+    "solution": "Classification:\n\n* Plastic Welding or Pressure Welding: The piece of metal to be joined are heated to a plastic state and forced together by external pressure (Ex) — Resistance welding\n* Fusion Welding or Non-Pressure Welding: The material at the joint is heated to a molten state and allowed to solidify (Ex) — Gas welding, Arc welding\n\nWhy the other options are incorrect: Gas and Arc are fusion, not pressure.\n\n* Correct Option: A (Resistance welding)"
+  },
+  {
+    "id": "aee_pw_05",
+    "topicId": "welding-classification",
+    "question": "Which welding type is classified as Fusion Welding or Non-Pressure Welding?",
+    "options": [
+      "Gas welding and Arc welding",
+      "Resistance welding",
+      "Friction welding",
+      "Explosive welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Fusion/Non-Pressure examples are Gas welding and Arc welding. Option A.",
+    "solution": "Fusion Welding: The material at the joint is heated to a molten state and allowed to solidify. Examples given are Gas welding and Arc welding.\n\nWhy the other options are incorrect:\nOption B Resistance is plastic/pressure, Option C Friction and D Explosive are solid-state.\n\n* Correct Option: A (Gas welding and Arc welding)"
+  },
+  {
+    "id": "aee_pw_06",
+    "topicId": "welding-classification",
+    "question": "Which of the following lists includes only welding processes as per the Classification slide?",
+    "options": [
+      "Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding",
+      "Only Gas and Arc",
+      "Only Resistance and Solid state",
+      "Only Brazing and Soldering",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gas, Arc, Resistance, Solid state, Thermo-chemical, Low Temperature are listed. Option A.",
+    "solution": "Slide CLASSIFICATION OF WELDING PROCESSES lists:\n\n✓ Gas welding (Oxy-Acetylene)\n✓ Arc welding (Metal Arc)\n✓ Resistance welding\n✓ Solid state welding\n✓ Thermo-chemical welding\n✓ Low Temperature welding\n\nWhy the other options are incorrect: They are incomplete.\n\n* Correct Option: A (Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding)"
+  },
+  {
+    "id": "aee_pw_07",
+    "topicId": "gas-welding",
+    "question": "Gas welding obtains heat for welding by:",
+    "options": [
+      "Combustion of oxygen and fuel gas (acetylene, hydrogen or propene)",
+      "Electric arc between base metal and electrode",
+      "Pressure alone",
+      "Friction",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gas welding heat is from combustion of oxygen and fuel gas. Option A.",
+    "solution": "Definition: “Gas Welding is a fusion welding process, in which the heat for welding is obtained by the combustion of oxygen and fuel the gas may be acetylene, hydrogen or propene.”\n\nWhy the other options are incorrect:\nOption B is Arc welding, Option C is pressure welding, Option D is friction (solid-state).\n\n* Correct Option: A (Combustion of oxygen and fuel gas (acetylene, hydrogen or propene))"
+  },
+  {
+    "id": "aee_pw_08",
+    "topicId": "gas-welding",
+    "question": "Which are listed as types of Gas Welding?",
+    "options": [
+      "Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel",
+      "Only Oxy-Acetylene",
+      "Only Arc and Resistance",
+      "Only Brazing and Soldering",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Types: Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel. Option A.",
+    "solution": "Slide Gas Welding Types:\n\n• Oxy-Acetylene\n• Air-Acetylene\n• Oxy-Hydrogen\n• Oxy-Fuel\n\nWhy the other options are incorrect: They list incomplete or unrelated processes.\n\n* Correct Option: A (Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel)"
+  },
+  {
+    "id": "aee_pw_09",
+    "topicId": "gas-welding",
+    "question": "In oxy-acetylene welding equipment, what is the cylinder pressure for oxygen and acetylene respectively?",
+    "options": [
+      "Oxygen 125 kg/cm², Acetylene 16 kg/cm²",
+      "Oxygen 16 kg/cm², Acetylene 125 kg/cm²",
+      "Both 125 kg/cm²",
+      "Both 16 kg/cm²",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oxygen 125 kg/cm², Acetylene 16 kg/cm². Option A.",
+    "solution": "Gas Cylinders section:\n\nPressure-\nOxygen – 125 kg/cm²\nAcetylene – 16 kg/cm²\n\nWhy the other options are incorrect: They swap or equalize the pressures.\n\n* Correct Option: A (Oxygen 125 kg/cm², Acetylene 16 kg/cm²)"
+  },
+  {
+    "id": "aee_pw_10",
+    "topicId": "gas-welding",
+    "question": "What are the working pressures for oxygen and acetylene in gas welding?",
+    "options": [
+      "Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²",
+      "Oxygen 125 kg/cm², Acetylene 16 kg/cm²",
+      "Both 1 kg/cm²",
+      "Both 0.15 kg/cm²",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Working: Oxygen 1 kg/cm², Acetylene 0.15 kg/cm². Option A.",
+    "solution": "Regulators section:\n\n• Working pressure of oxygen 1 kg/cm²\n• Working pressure of acetylene 0.15 kg/cm²\n• Working pressure varies depending on thickness\n\nWhy the other options are incorrect:\nOption B lists cylinder pressures, not working pressures.\n\n* Correct Option: A (Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²)"
+  },
+  {
+    "id": "aee_pw_11",
+    "topicId": "gas-welding",
+    "question": "Which is an advantage of gas welding?",
+    "options": [
+      "Portable and most versatile, better control over temperature, suitable for dissimilar metals, low cost",
+      "Suitable for heavy section",
+      "High working temperature",
+      "Fast rate of heating",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advantages: portable, versatile, better control, dissimilar metals, low cost. Option A.",
+    "solution": "Advantages listed:\n\n• Portable and most versatile process.\n• Better control over the temperature.\n• Suitable to weld dissimilar matter.\n• Low cost & maintenance.\n\nWhy the other options are incorrect:\nOption B, C, D are actually disadvantages: Not suitable for heavy section, Less working temperature, Slow rate of heating.\n\n* Correct Option: A (Portable and most versatile, better control over the temperature, suitable to weld dissimilar matter, low cost)"
+  },
+  {
+    "id": "aee_pw_12",
+    "topicId": "gas-welding",
+    "question": "Which is a disadvantage of gas welding?",
+    "options": [
+      "Not suitable for heavy section, less working temperature, slow rate of heating",
+      "Portable and versatile",
+      "Better control over temperature",
+      "Low cost",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Disadvantages: not for heavy section, less temp, slow heating. Option A.",
+    "solution": "Disadvantages listed:\n\n• Not suitable for heavy section.\n• Less working temperature of gas flame.\n• Slow rate of heating.\n\nWhy the other options are incorrect: They are advantages.\n\n* Correct Option: A (Not suitable for heavy section, less working temperature, slow rate of heating)"
+  },
+  {
+    "id": "aee_pw_13",
+    "topicId": "arc-welding",
+    "question": "Arc welding is a fusion welding process where heat is obtained from:",
+    "options": [
+      "Electric arc between base metal and an electrode",
+      "Combustion of oxygen and acetylene",
+      "Pressure alone",
+      "Friction",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding heat is from electric arc between base metal and electrode. Option A.",
+    "solution": "Definition: “Arc welding is a fusion welding process in which the heat required to fuse the metal is obtain from the electric arc between the base metal and an electrode.”\n\nWhy the other options are incorrect:\nOption B is gas welding, Option C is pressure/solid-state, Option D is friction welding.\n\n* Correct Option: A (Electric arc between base metal and an electrode)"
+  },
+  {
+    "id": "aee_pw_14",
+    "topicId": "arc-welding",
+    "question": "Which are listed as types of Arc Welding?",
+    "options": [
+      "Metal Arc, Submerged Arc, TIG, MIG",
+      "Only Gas Welding",
+      "Only Resistance Welding",
+      "Only Brazing",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Types: Metal Arc, Submerged Arc, TIG, MIG. Option A.",
+    "solution": "Slide Arc Welding Types:\n\n1. Metal Arc Welding\n2. Submerged Arc Welding\n3. Tungsten Inert Gas Welding (TIG)\n4. Metal Inert Gas Welding (MIG)\n\nWhy the other options are incorrect: They list other categories.\n\n* Correct Option: A (Metal Arc, Submerged Arc, TIG, MIG)"
+  },
+  {
+    "id": "aee_pw_15",
+    "topicId": "arc-welding",
+    "question": "Which equipment is listed for arc welding?",
+    "options": [
+      "Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles",
+      "Only gas cylinders",
+      "Only check valve",
+      "Only non-return valve",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding equipment includes generator/transformer, cables, holder, electrode, shield, gloves, brush, hammer, goggles. Option A.",
+    "solution": "Equipment listed:\n\nØ A welding generator (D.C.) or Transformer (A.C.)\nØ Two cables- one for work and one for electrode\nØ Electrode holder\nØ Electrode\nØ Protective shield\nØ Gloves\nØ Wire brush\nØ Chipping hammer\nØ Goggles\n\nWhy the other options are incorrect: They list gas welding equipment (cylinders, check valve).\n\n* Correct Option: A (Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles)"
+  },
+  {
+    "id": "aee_pw_16",
+    "topicId": "arc-welding",
+    "question": "Which is an advantage of arc welding?",
+    "options": [
+      "Most efficient way to join metals, lowest-cost, lighter weight, joins all commercial metals, design flexibility",
+      "Manually applied, high labor cost",
+      "Need high energy causing danger",
+      "Not convenient for disassembly",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advantages: most efficient, lowest-cost, lighter weight, joins all metals, design flexibility. Option A.",
+    "solution": "Advantages listed:\n\n• Most efficient way to join metals\n• Lowest-cost joining method\n• Affords lighter weight through better utilization of materials\n• Joins all commercial metals\n• Provides design flexibility\n\nWhy the other options are incorrect:\nOptions B, C, D are listed under Disadvantages: Manually applied high labor cost, Need high energy causing danger, Not convenient for disassembly, Defects hard to detect.\n\n* Correct Option: A (Most efficient way to join metals, lowest-cost, lighter weight, joins all commercial metals, design flexibility)"
+  },
+  {
+    "id": "aee_pw_17",
+    "topicId": "arc-welding",
+    "question": "Which is a disadvantage of arc welding?",
+    "options": [
+      "Manually applied, high labor cost, need high energy causing danger, not convenient for disassembly, defects hard to detect",
+      "Most efficient",
+      "Lowest-cost",
+      "Joins all commercial metals",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Disadvantages: manual high labor, high energy danger, not convenient for disassembly, hard to detect defects. Option A.",
+    "solution": "Disadvantages listed:\n\n• Manually applied, therefore high labor cost.\n• Need high energy causing danger\n• Not convenient for disassembly.\n• Defects are hard to detect at joints.\n\nWhy the other options are incorrect: They are advantages.\n\n* Correct Option: A (Manually applied, high labor cost, need high energy causing danger, not convenient for disassembly, defects hard to detect)"
+  },
+  {
+    "id": "aee_pw_18",
+    "topicId": "production-welding",
+    "question": "Which applications are listed for welding?",
+    "options": [
+      "Automobile bodies, Aircraft Frames, Railway Wagons, Machine Frames, Structural works, tanks, furniture, boilers, ship building",
+      "Only automobile bodies",
+      "Only aircraft frames",
+      "Only tanks",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Applications include automobile bodies, aircraft frames, railway wagons, machine frames, structural works, tanks, furniture, boilers, ship building. Option A.",
+    "solution": "Applications slide lists:\n\nØ It is used in the manufacture of automobile bodies.\nØ Aircraft Frames\nØ Railway Wagons\nØ Machine Frames\nØ Structural works, tanks, furniture, boilers, general repair work and ship building etc.\n\nWhy the other options are incorrect: They are incomplete.\n\n* Correct Option: A (Automobile bodies, Aircraft Frames, Railway Wagons, Machine Frames, Structural works, tanks, furniture, boilers, ship building)"
+  },
+  {
+    "id": "aee_pw_19",
+    "topicId": "welding-classification",
+    "question": "Which welding process is classified under Solid State Welding?",
+    "options": [
+      "Friction, Ultrasonic, Diffusion, Explosive",
+      "Oxy-acetylene",
+      "Metal arc",
+      "Resistance Butt",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Solid State: Friction, Ultrasonic, Diffusion, Explosive. Option A.",
+    "solution": "Classification Slide (Solid State Welding):\n\n• Friction\n• Ultrasonic\n• Diffusion\n• Explosive\n\nWhy the other options are incorrect:\nOption B Oxy-acetylene is Gas, Option C Metal arc is Arc, Option D Butt is Resistance.\n\n* Correct Option: A (Friction, Ultrasonic, Diffusion, Explosive)"
+  },
+  {
+    "id": "aee_pw_20",
+    "topicId": "welding-classification",
+    "question": "Which welding process is classified under Newer Welding?",
+    "options": [
+      "Electron-beam, Laser",
+      "Oxy-acetylene, Air-acetylene",
+      "Butt, Spot, Seam",
+      "Friction, Ultrasonic",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Newer Welding: Electron-beam, Laser. Option A.",
+    "solution": "Classification slide (vi) Newer Welding:\n\n• Electron-beam\n• Laser\n\nWhy the other options are incorrect:\nOption B is Gas, Option C is Resistance, Option D is Solid State.\n\n* Correct Option: A (Electron-beam, Laser)"
+  },
+  {
+    "id": "aee_pw_21",
+    "topicId": "welding-classification",
+    "question": "Which are listed as Related Processes (not welding but allied)?",
+    "options": [
+      "Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering",
+      "Friction, Ultrasonic",
+      "Butt, Spot",
+      "Electron-beam",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Related Processes: Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering. Option A.",
+    "solution": "Classification slide (vii) Related Process:\n\n• Oxy-acetylene cutting\n• Arc cutting\n• Hard facing\n• Brazing\n• Soldering\n\nWhy the other options are incorrect: They are actual welding categories.\n\n* Correct Option: A (Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering)"
+  },
+  {
+    "id": "aee_pw_22",
+    "topicId": "gas-welding",
+    "question": "Oxy-acetylene welding uses oxygen and acetylene in correct proportions to produce:",
+    "options": [
+      "An intense gas flame",
+      "An electric arc",
+      "Friction heat",
+      "Low temperature",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oxy-acetylene produces an intense gas flame. Option A.",
+    "solution": "Text: \"When a combination of Oxygen and acetylene is used in correct proportions to produce an Intense gas flame, the process is known as oxy-acetylene welding.\"\n\nWhy the other options are incorrect:\nOption B is arc welding, Option C is friction, Option D is low-temp soldering.\n\n* Correct Option: A (An intense gas flame)"
+  },
+  {
+    "id": "aee_pw_23",
+    "topicId": "welding-classification",
+    "question": "Resistance welding is an example of:",
+    "options": [
+      "Plastic/Pressure Welding",
+      "Fusion/Non-Pressure Welding",
+      "Solid State Welding",
+      "Newer Welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Resistance welding is Plastic/Pressure Welding. Option A.",
+    "solution": "Types of Welding:\n\n* Plastic Welding or Pressure Welding: heated to plastic state and forced together by external pressure (Ex) — Resistance welding\n* Fusion Welding: heated to molten state and allowed to solidify (Ex) — Gas, Arc\n\nTherefore Resistance is Plastic/Pressure.\n\n* Correct Option: A (Plastic/Pressure Welding)"
+  },
+  {
+    "id": "aee_pw_24",
+    "topicId": "welding-classification",
+    "question": "Gas welding and Arc welding are examples of:",
+    "options": [
+      "Fusion/Non-Pressure Welding",
+      "Plastic/Pressure Welding",
+      "Solid State Welding",
+      "Resistance Welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gas and Arc are Fusion/Non-Pressure Welding. Option A.",
+    "solution": "Fusion Welding: material at joint heated to molten state and allowed to solidify. Examples: Gas welding, Arc welding.\n\nWhy the other options are incorrect: They are pressure/solid-state.\n\n* Correct Option: A (Fusion/Non-Pressure Welding)"
+  },
+  {
+    "id": "aee_pw_25",
+    "topicId": "production-welding",
+    "question": "What is a key conclusion about welding as per the Conclusion slide?",
+    "options": [
+      "A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom",
+      "Welding is very costly and not portable",
+      "Welding cannot join dissimilar metals",
+      "Welding has no design freedom",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Good weld is strong, equipment not costly, portable, joins similar/dissimilar, design freedom. Option A.",
+    "solution": "Conclusion slide:\n\nØ A good weld is always strong.\nØ General welding equipment is not very costly.\nØ Portable welding equipment are available.\nØ A large number of metal and alloy both similar and dissimilar can be join by welding.\nØ Welding permits considerable freedom in design.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom)"
   }
 ]
 }
