@@ -131,6 +131,14 @@ export const topicMeta = {
     {
       "id": "advanced-manufacturing",
       "name": "Advanced Manufacturing Processes"
+    },
+    {
+      "id": "hand-tools",
+      "name": "Hand & Power Tools"
+    },
+    {
+      "id": "workshop-machines",
+      "name": "Workshop Machines"
     }
   ]
 }
@@ -4540,6 +4548,156 @@ export const questionBank = {
     "correct": 0,
     "short": "Very expensive, costly to fix, less precision, cold welds/pinholes, needs training. Option A.",
     "solution": "Disadvantages listed:\n\n- Machines are very expensive, limits companies\n- Costs a lot to have machines fixed when they break\n- Does not have the precision or accuracy that a good human welder would have\n- Sometimes welds may be off line causing a “cold weld”\n- Robots also leave pinholes which need to be fixed by a human\n- Not everyone can operate — should be trained\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Machines are very expensive, costly to fix, less precision than good human welder, may create cold welds/pinholes, requires training)"
+  },
+  {
+    "id": "aee_ht_01",
+    "topicId": "hand-tools",
+    "question": "Which of the following is listed under Workshop Hand Tools?",
+    "options": [
+      "100mm Hacksaw (WESTMORE)",
+      "BOSCH Belt Sander",
+      "DEWALT Power Tool",
+      "Pillar drilling machine",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "100mm Hacksaw is listed under hand tools. Option A.",
+    "solution": "Workshop Hand Tools slide shows 100mm (4\") HACKSAW by WESTMORE.\n\nWhy the other options are incorrect:\nOption B BOSCH Belt Sander and C DEWALT are under Power Tools, Option D Pillar drilling is a machine.\n\n* Correct Option: A (100mm HACKSAW)"
+  },
+  {
+    "id": "aee_ht_02",
+    "topicId": "hand-tools",
+    "question": "Which is listed under Workshop Power Tools?",
+    "options": [
+      "BOSCH 10\" and DEWALT Belt Sander",
+      "100mm Hacksaw",
+      "Combination Square",
+      "Peen Hammer",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "BOSCH 10\" and DEWALT Belt Sander are power tools. Option A.",
+    "solution": "Workshop Power Tools slide shows BOSCH 10\" and DEWALT Belt Sander.\n\nWhy the other options are incorrect: They are hand tools.\n\n* Correct Option: A (BOSCH 10\" and DEWALT Belt Sander)"
+  },
+  {
+    "id": "aee_ht_03",
+    "topicId": "workshop-machines",
+    "question": "Where is the Heat Engineering and Farm Machinery Engineering Workshop located according to the presentation?",
+    "options": [
+      "Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering",
+      "University of Lagos",
+      "University of Ibadan",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "OAU, Agricultural and Environment Engineering. Option A.",
+    "solution": "Slide: Workshop Machines and Laboratory Equipment - Agricultural and Environment Engineering, Obafemi Awolowo University (OAU), Nigeria - HEAT ENGINEERING AND FARM MACHINERY ENGINEERING WORKSHOP.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering)"
+  },
+  {
+    "id": "aee_ht_04",
+    "topicId": "workshop-machines",
+    "question": "Which machine is described as a Metal sheet rolling machine with TEL contact?",
+    "options": [
+      "Manual Sheet Rolling Machine",
+      "Pillar drilling machine",
+      "Pedestal grinding machine",
+      "Bandsaw machine",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Metal sheet rolling machine. Option A.",
+    "solution": "Slide shows Metal sheet rolling machine with TEL 01234567890 and Manual Sheet Rolling Machine – YouTube.\n\nWhy the other options are incorrect: They are other machines listed separately.\n\n* Correct Option: A (Manual Sheet Rolling Machine)"
+  },
+  {
+    "id": "aee_ht_05",
+    "topicId": "workshop-machines",
+    "question": "Which of the following are shown as bending machines?",
+    "options": [
+      "4 Feet bending machine and 8 Feet bending machine",
+      "Only 4 Feet",
+      "Only 8 Feet",
+      "Lathe machine only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "4 Feet and 8 Feet bending machines are shown. Option A.",
+    "solution": "Slides show 4Feet bending machine and 8 Feet bending machine.\n\nWhy the other options are incorrect: They list only one or different machine.\n\n* Correct Option: A (4 Feet bending machine and 8 Feet bending machine)"
+  },
+  {
+    "id": "aee_ht_06",
+    "topicId": "workshop-machines",
+    "question": "Which machine is listed as Electronic punching machine with 1000W?",
+    "options": [
+      "Electronic punching machine (1000W)",
+      "Table drilling machine",
+      "Press machine",
+      "Metal hand Shear",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Electronic punching machine 1000W. Option A.",
+    "solution": "Slide: Electronic punching machine 1000W.\n\nWhy the other options are incorrect: They are separate machines.\n\n* Correct Option: A (Electronic punching machine (1000W))"
+  },
+  {
+    "id": "aee_ht_07",
+    "topicId": "workshop-machines",
+    "question": "Which drilling machine is shown with variable speed control and pillar structure?",
+    "options": [
+      "Pillar drilling machine with variable speed control",
+      "Pedestal grinding machine",
+      "Bandsaw machine",
+      "Heavy duty lathe machine",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Pillar drilling machine with variable speed control. Option A.",
+    "solution": "Slide: Pillar drilling machine with variable speed control - Side view of the pillar drilling machine, Spinning speeds, Motor, Clausing.\n\nWhy the other options are incorrect: They are different machines.\n\n* Correct Option: A (Pillar drilling machine with variable speed control)"
+  },
+  {
+    "id": "aee_ht_08",
+    "topicId": "workshop-machines",
+    "question": "Which machine is listed alongside Pedestal drilling machine in the same slide?",
+    "options": [
+      "PEDESTAL GRINDING MACHINE",
+      "Heavy duty lathe machine",
+      "Press machine",
+      "Metal hand Shear",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "PEDESTAL GRINDING MACHINE is alongside pedestal drilling. Option A.",
+    "solution": "Slide shows Pedestal drilling machine and PEDESTAL GRINDING MACHINE together.\n\nWhy the other options are incorrect: They are on other slides.\n\n* Correct Option: A (PEDESTAL GRINDING MACHINE)"
+  },
+  {
+    "id": "aee_ht_09",
+    "topicId": "workshop-machines",
+    "question": "Which of the following workshop machines is listed in the presentation?",
+    "options": [
+      "Bandsaw machine",
+      "Press machine",
+      "Metal hand Shear",
+      "Lathe machine and Heavy duty lathe machine",
+      "All of the above",
+      "None of the above"
+    ],
+    "correct": 4,
+    "short": "All listed: Bandsaw, Press, Metal hand Shear, Lathe, Heavy duty lathe. Option E.",
+    "solution": "Slides list: Bandsaw machine, Press machine, Metal hand Shear, Lathe machine, Heavy duty lathe machine.\n\nWhy the other options are incomplete: Each alone is true but not exhaustive.\n\n* Correct Option: E (All of the above)"
+  },
+  {
+    "id": "aee_ht_10",
+    "topicId": "workshop-machines",
+    "question": "What is the course and session for the Hand and Power Tools presentation?",
+    "options": [
+      "AEE 202 RAIN 2019/2020 SESSION",
+      "MTH 202 2020/2021",
+      "AEE 202 HARMATTAN 2020",
+      "MEE 206 2019/2020",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "AEE 202 RAIN 2019/2020 SESSION. Option A.",
+    "solution": "Title slide: HAND AND POWER TOOLS AEE 202 RAIN 2019/2020 SESSION.\n\nWhy the other options are incorrect: They have wrong course/session.\n\n* Correct Option: A (AEE 202 RAIN 2019/2020 SESSION)"
   }
 ]
 }
