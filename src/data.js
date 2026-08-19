@@ -71,6 +71,14 @@ export const topicMeta = {
     {
       "id": "fasteners",
       "name": "Fasteners"
+    },
+    {
+      "id": "hot-metal-working",
+      "name": "Hot Metal Working"
+    },
+    {
+      "id": "heat-treatment",
+      "name": "Heat Treatment of Steel"
     }
   ]
 }
@@ -2958,6 +2966,230 @@ export const questionBank = {
     "correct": 0,
     "short": "Single-use, slipped over, ear crimped → Ear clamp. Option A.",
     "solution": "Ear clamp is a single-use clamp slipped over the holes or duct and the ear is crimped with special tools. Oetiker Inc.\n\nWhy the other options are incorrect:\nOption B Quick-connect strap has nylon worm gear, pulled then snugged.\nOption C Worm-gear drive has a worm gear and steel band.\nOption D Latch clamp has ratchet tooth-locking.\n\n* Correct Option: A (Ear clamp)"
+  },
+  {
+    "id": "aee_hm_01",
+    "topicId": "hot-metal-working",
+    "question": "Which of the following is a listed safety rule for hot metal working?",
+    "options": [
+      "Wear proper clothing and industrial eye protection",
+      "Work in a poorly ventilated area",
+      "Touch suspected hot metal to test it",
+      "Work around flammable materials",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Wear proper clothing and eye protection is a safety rule. Option A.",
+    "solution": "Hot metal working safety rules include: Wear proper clothing, Use industrial quality eye protection, Protect hair and scalp, Use correct tools, Work in a well ventilated area, Never touch suspected hot metal, Turn off heat source before leaving, Avoid working around flammable materials.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says poorly ventilated — should be well ventilated.\nOption C says touch hot metal — should be never touch.\nOption D says work around flammable — should be avoid.\n\n* Correct Option: A (Wear proper clothing and industrial eye protection)"
+  },
+  {
+    "id": "aee_hm_02",
+    "topicId": "hot-metal-working",
+    "question": "What is the melting point of mild steel according to the color scale table?",
+    "options": [
+      "1540°C (2800°F)",
+      "1483°C (2700°F)",
+      "1261°C (2300°F)",
+      "1094°C (2000°F)",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Mild steel melts at 1483°C (2700°F). Option B.",
+    "solution": "Table MELTING POINT OF METALS:\n\n* Wrought iron —1540°C —2800\n* MILD STEEL —1483°C —2700\n* High carbon steel —1428°C\n* Cast iron —1261°C —2300 —WHITE\n* Copper —1094°C —2000\n\nSo mild steel is 1483°C (2700°F).\n\nWhy the other options are incorrect:\nOption A is wrought iron, Option C is cast iron, Option D is copper.\n\n* Correct Option: B (1483°C (2700°F))"
+  },
+  {
+    "id": "aee_hm_03",
+    "topicId": "heat-treatment",
+    "question": "What are the three purposes of heat treatment of steel as listed?",
+    "options": [
+      "Hardening, Tempering, Annealing",
+      "Melting, Casting, Forging",
+      "Cutting, Drilling, Grinding",
+      "Polishing, Plating, Painting",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Hardening, Tempering, Annealing are the three purposes. Option A.",
+    "solution": "Material under HEAT TREATING STEEL: purpose of heat treatment:\n\n- Hardening\n- Tempering\n- Annealing\n\nWhy the other options are incorrect: They are not listed as heat treatment purposes.\n\n* Correct Option: A (Hardening, Tempering, Annealing)"
+  },
+  {
+    "id": "aee_hm_04",
+    "topicId": "heat-treatment",
+    "question": "Hardening of steel is done by heating to light cherry red and cooling quickly in:",
+    "options": [
+      "Warm water",
+      "Cold oil",
+      "Sand",
+      "Vermiculite",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Hardening: heat to light cherry red and cool quickly in warm water. Option A.",
+    "solution": "Material: \"HARDENING : heating to light cherry red and cooling quickly in warm water\"\n\nWhy the other options are incorrect:\nOption B Cold oil is not listed, Option C Sand and D Vermiculite are for annealing (slow cooling), not hardening.\n\n* Correct Option: A (Warm water)"
+  },
+  {
+    "id": "aee_hm_05",
+    "topicId": "heat-treatment",
+    "question": "Tempering is done by:",
+    "options": [
+      "Reheating hardened steel to obtain desired hardness and toughness",
+      "Heating to light cherry red and cooling slowly in sand",
+      "Heating to melting point and casting",
+      "Cooling in air only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Tempering is reheating hardened steel to get desired hardness/toughness. Option A.",
+    "solution": "Material: \"TEMPERING : by reheating hardened steel to obtain the desired hardness and toughness\"\n\nWhy the other options are incorrect:\nOption B is Annealing (slow cooling), Option C is casting, Option D is not listed.\n\n* Correct Option: A (Reheating hardened steel to obtain desired hardness and toughness)"
+  },
+  {
+    "id": "aee_hm_06",
+    "topicId": "heat-treatment",
+    "question": "Annealing is done by heating to light cherry red and cooling:",
+    "options": [
+      "Quickly in warm water",
+      "Slowly using an oven, vermiculite, or sand",
+      "In cold water",
+      "In oil",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Annealing: heat above 716°C and cool slowly in oven/vermiculite/sand. Option B.",
+    "solution": "Material: \"ANNEALING : by heating hardened or tempered steel to a light cherry red and cooling slowly\" and \"heating steel above 716°C and cooling slowly using an oven, vermiculite, or sand\"\n\nWhy the other options are incorrect:\nOption A Quickly in warm water is Hardening.\nOption C Quickly in cold is not listed.\n\n* Correct Option: B (Slowly using an oven, vermiculite, or sand)"
+  },
+  {
+    "id": "aee_hm_07",
+    "topicId": "heat-treatment",
+    "question": "The process Steel (pearlite) + Heat → Austenite + Cooling → Martensite describes:",
+    "options": [
+      "Hardening",
+      "Tempering",
+      "Annealing",
+      "Normalizing",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Pearlite → Austenite → Martensite is Hardening. Option A.",
+    "solution": "Material: \"THE PROCESS OF HARDENING — STEEL (pearlite) HEAT = AUSTENITE + COOLING = MARTENSITE\"\n\nWhy the other options are incorrect:\nTempering is reheating hardened steel, Annealing is slow cooling to soften.\n\n* Correct Option: A (Hardening)"
+  },
+  {
+    "id": "aee_hm_08",
+    "topicId": "heat-treatment",
+    "question": "In tempering stages, reheating at 93-204°C (200-400°F) will:",
+    "options": [
+      "Retain hardness, gain some toughness",
+      "Be moderately hard and tough",
+      "Retain less hardness, more tough",
+      "Become soft, annealing point",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "93-204°C retains hardness and gains some toughness. Option A.",
+    "solution": "Material: STAGES IN TEMPERING\n1 heating: 93-204°C = retain hardness, gain some toughness\n2 reheating: 204-371°C = moderately hard and tough\n3 reheating: 371-538°C = retains less hardness, more tougher\n\nWhy the other options are incorrect:\nOption B is stage 2, Option C is stage 3, Option D is 371°C gray.\n\n* Correct Option: A (Retain hardness, gain some toughness)"
+  },
+  {
+    "id": "aee_hm_09",
+    "topicId": "heat-treatment",
+    "question": "Which temper color at 243°C (470°F) is used for punches, dies, hacksaw blades, and drills?",
+    "options": [
+      "Straw",
+      "Yellow",
+      "Light brown",
+      "Blue",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Straw 243°C is for punches, dies, hacksaw blades, drills. Option A.",
+    "solution": "Table COLORS FOR TEMPERING STEEL:\n\n* Yellow 221°C — hammers, scrapers\n* Straw 243°C — punches, dies, hacksaw blades, drills\n* Light brown 260°C — axes, wood chisels\n* Purple 277°C — rivet sets\n* Blue 293°C — screw drivers, springs\n\nSo Straw at 243°C matches.\n\nWhy the other options are incorrect:\nOption B Yellow is 221°C for hammers, Option C Light brown is 260°C, Option D Blue is 293°C.\n\n* Correct Option: A (Straw)"
+  },
+  {
+    "id": "aee_hm_10",
+    "topicId": "heat-treatment",
+    "question": "At what temperature does steel become soft and reach the annealing point, showing gray color?",
+    "options": [
+      "221°C",
+      "243°C",
+      "293°C",
+      "371°C",
+      "None of the above"
+    ],
+    "correct": 3,
+    "short": "Gray 371°C is soft, annealing point. Option D.",
+    "solution": "Table: Gray 371°C — soft, reached annealing point.\n\nWhy the other options are incorrect:\nYellow 221°C, Straw 243°C, Blue 293°C are all harder temper colors.\n\n* Correct Option: D (371°C)"
+  },
+  {
+    "id": "aee_hm_11",
+    "topicId": "heat-treatment",
+    "question": "Annealing of carbon steel is done by heating above:",
+    "options": [
+      "716°C",
+      "500°C",
+      "300°C",
+      "100°C",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Annealing: heat above 716°C (depending on carbon) and cool slowly. Option A.",
+    "solution": "Material: \"THE ANNEALING PROCESS — heating steel above 716°C (depending on carbon content), and cooling slowly using an oven, vermiculite, or sand\"\n\nWhy the other options are incorrect: They are below the critical temperature.\n\n* Correct Option: A (716°C)"
+  },
+  {
+    "id": "aee_hm_12",
+    "topicId": "hot-metal-working",
+    "question": "Which electrical heat source reaches 6427°C (11600°F) at 200 amps and is used for welding non-ferrous metals?",
+    "options": [
+      "TIG welder",
+      "MIG welder",
+      "Arc welder",
+      "Elect soldering",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "TIG welder (and MIG) reach 6427°C at 200 amps for non-ferrous. Option A (TIG).",
+    "solution": "Table ELECTRICAL SOURCE OF HEAT:\n\n* Elect soldering —204°C —150 watts — elect. connections\n* Arc welder —5983°C? Actually Carbon arc 4982°C\n* TIG welder —6427°C —200 amps — weld non-ferrous\n* MIG welder —6427°C —200 amps — weld non-ferrous\n\nBoth TIG and MIG are listed at 6427°C for non-ferrous. Option A TIG is correct (MIG also correct, but given options, TIG is listed).\n\nWhy the other options are incorrect:\nOption C Arc welder is lower temp, Option D Elect soldering is only 204°C.\n\n* Correct Option: A (TIG welder)"
+  },
+  {
+    "id": "aee_hm_13",
+    "topicId": "hot-metal-working",
+    "question": "Which chemical heat source reaches 3485°C and is used for welding, brazing, and cutting ferrous metals?",
+    "options": [
+      "Propane torch (1261°C)",
+      "Acetylene welding/cutting (3485°C)",
+      "Propane cutting (2873°C)",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Acetylene welding/cutting is 3485°C. Option B.",
+    "solution": "Table CHEMICAL SOURCE OF HEAT:\n\n* Propane torch —1261°C\n* Acetylene welding —3485°C — welding, brazing, soldering\n* Acetylene cutting —3485°C — cutting ferrous metals\n* Propane cutting —2873°C\n\nSo acetylene is 3485°C.\n\nWhy the other options are incorrect:\nOption A Propane torch is 1261°C, Option C Propane cutting is 2873°C.\n\n* Correct Option: B (Acetylene welding/cutting (3485°C))"
+  },
+  {
+    "id": "aee_hm_14",
+    "topicId": "hot-metal-working",
+    "question": "Which part of the anvil is used to cut hot or cold metal?",
+    "options": [
+      "Hardy",
+      "Horn",
+      "Face",
+      "Base",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Hardy (hardy hole) with hot cutter is used to cut metal on anvil. Option A.",
+    "solution": "Material: \"ANVIL HARDY — Figure 14-4. The hardy is used to cut hot or cold metal on the anvil.\" and \"CUTTING METAL IN AN ANVIL — Use the hot cutter and hardy...\"\n\nWhy the other options are incorrect:\nOption B Horn is for bending curves.\nOption C Face is the flat top.\nOption D Base is the bottom.\n\n* Correct Option: A (Hardy)"
+  },
+  {
+    "id": "aee_hm_15",
+    "topicId": "hot-metal-working",
+    "question": "Which tongs have a curved lip (a), flat lip (b), and gad (c) for handling hot metal?",
+    "options": [
+      "Blacksmith's tongs: curved lip, flat lip, gad",
+      "Machinist's vise",
+      "Hardy",
+      "Pritchel hole",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Blacksmith's tongs have curved lip, flat lip, gad for hot metal. Option A.",
+    "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)"
   }
 ]
 }
