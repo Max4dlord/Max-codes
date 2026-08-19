@@ -79,6 +79,26 @@ export const topicMeta = {
     {
       "id": "heat-treatment",
       "name": "Heat Treatment of Steel"
+    },
+    {
+      "id": "cold-metal-safety",
+      "name": "Safety in Cold Metal Working"
+    },
+    {
+      "id": "metal-shapes",
+      "name": "Commercial Metal Shapes"
+    },
+    {
+      "id": "cutting-tools",
+      "name": "Cutting Tools & Hacksaws"
+    },
+    {
+      "id": "drilling",
+      "name": "Drilling & Drill Press"
+    },
+    {
+      "id": "bench-work",
+      "name": "Bench Work & Finishing"
     }
   ]
 }
@@ -3190,6 +3210,303 @@ export const questionBank = {
     "correct": 0,
     "short": "Blacksmith's tongs have curved lip, flat lip, gad for hot metal. Option A.",
     "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)"
+  },
+  {
+    "id": "aee_cm_01",
+    "topicId": "cold-metal-safety",
+    "question": "Which of the following is a listed safety rule for cold metal working?",
+    "options": [
+      "Always use eye protection and proper clothing",
+      "Work with long hair unrestrained",
+      "Use improper tools",
+      "Keep work area dirty",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Always use eye protection and proper clothing is a safety rule. Option A.",
+    "solution": "Cold metal working safety rules listed include: Always use eye protection, Wear proper clothing, Restrain long hair, Use proper tools, Keep work area and tools clean.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says unrestrained — should be restrained.\nOption C says improper tools — should be proper.\nOption D says dirty — should be clean.\n\n* Correct Option: A (Always use eye protection and proper clothing)"
+  },
+  {
+    "id": "aee_cm_02",
+    "topicId": "metal-shapes",
+    "question": "How is hexagon metal measured for purchasing according to the commercial shapes table?",
+    "options": [
+      "Distance across flats",
+      "Diameter",
+      "Thickness × width",
+      "Height × web thickness × flange width",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Hexagon is measured by distance across flats. Option A.",
+    "solution": "Table Commercial Metal Shapes & Sizes:\n\n* Hexagon — 12' to 20' — distance across flats\n* Octagon — distance across flats\n* Round — diameter\n* Plate/Sheet — thickness×width\n* I-beam — height×web×flange\n\nSo hexagon is distance across flats.\n\nWhy the other options are incorrect:\nOption B Diameter is for Round.\nOption C Thickness×width is for Plate/Band.\nOption D Height×web×flange is for I-beam/Channel.\n\n* Correct Option: A (Distance across flats)"
+  },
+  {
+    "id": "aee_cm_03",
+    "topicId": "metal-shapes",
+    "question": "How is an I-beam measured for purchasing?",
+    "options": [
+      "Distance across flats",
+      "Height × web thickness × flange width",
+      "Diameter",
+      "Thickness × width × length",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "I-beam is measured as height × web thickness × flange width. Option B.",
+    "solution": "Table: I-beam — to 60' — height×web thickness×flange width. Channel is similar (depth×web×flange).\n\nWhy the other options are incorrect:\nOption A is Hexagon/Octagon, Option C is Round, Option D is Sheet.\n\n* Correct Option: B (Height × web thickness × flange width)"
+  },
+  {
+    "id": "aee_cm_04",
+    "topicId": "metal-shapes",
+    "question": "How is round metal measured for purchasing?",
+    "options": [
+      "Diameter",
+      "Distance across flats",
+      "Thickness × width",
+      "Leg length × leg thickness",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Round is measured by diameter. Option A.",
+    "solution": "Table: Round — 12' to 20' — diameter.\n\nWhy the other options are incorrect:\nOption B is Hexagon, Option C is Plate, Option D is Angle.\n\n* Correct Option: A (Diameter)"
+  },
+  {
+    "id": "aee_cm_05",
+    "topicId": "cutting-tools",
+    "question": "According to Table 5-1, which hacksaw blade (teeth per inch) is recommended for stock 1\" and over of cast iron, machine steel, brass?",
+    "options": [
+      "14 TPI",
+      "18 TPI",
+      "24 TPI",
+      "32 TPI",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "14 TPI for 1\" and over. Option A.",
+    "solution": "Table 5-1 Hack-Saw Blades:\n\n* 14 TPI — 1\" and over — Cast iron, machine steel, brass, copper, aluminum\n* 18 TPI — 1/4\"-1\" — Annealed tool steel...\n* 24 TPI — 1/8\"-1/4\"\n* 32 TPI — 1/8\" and less\n\nSo for 1\" and over, use 14 TPI.\n\nWhy the other options are incorrect:\nOption B 18 TPI is for 1/4\"-1\", Option C 24 TPI for 1/8\"-1/4\", Option D 32 TPI for 1/8\" and less.\n\n* Correct Option: A (14 TPI)"
+  },
+  {
+    "id": "aee_cm_06",
+    "topicId": "cutting-tools",
+    "question": "Which blade is suitable for stock 1/4\" to 1\" of annealed tool steel, high-speed steel, and rails?",
+    "options": [
+      "14 TPI",
+      "18 TPI",
+      "24 TPI",
+      "32 TPI",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "18 TPI for 1/4\"-1\". Option B.",
+    "solution": "Table: 18 TPI — 1/4\"-1\" — Annealed tool steel, high-speed steel, rails, bronze, copper, aluminum.\n\nWhy the other options are incorrect:\nOption A 14 TPI is for 1\" and over, Option C 24 TPI for 1/8\"-1/4\".\n\n* Correct Option: B (18 TPI)"
+  },
+  {
+    "id": "aee_cm_07",
+    "topicId": "cutting-tools",
+    "question": "For cutting iron, steel, and drill rod of thickness 1/8\" to 1/4\", which TPI is recommended?",
+    "options": [
+      "14 TPI",
+      "18 TPI",
+      "24 TPI",
+      "32 TPI",
+      "None of the above"
+    ],
+    "correct": 2,
+    "short": "24 TPI for 1/8\"-1/4\". Option C.",
+    "solution": "Table: 24 TPI — 1/8\"-1/4\" — Iron, steel, drill rod, brass and copper tubing, wrought-Iron pipe, conduit, trim.\n\nWhy the other options are incorrect:\nOption A 14 for 1\" and over, Option B 18 for 1/4\"-1\", Option D 32 for 1/8\" and less (though table says same as 24 for same materials, but 24 is primary for that range).\n\n* Correct Option: C (24 TPI)"
+  },
+  {
+    "id": "aee_cm_08",
+    "topicId": "cutting-tools",
+    "question": "What is the “Three-Teeth Rule” for hacksaw blade selection?",
+    "options": [
+      "At least three teeth must contact the metal to avoid breaking the blade",
+      "Only one tooth should contact",
+      "Three blades must be used",
+      "Three teeth per inch is standard",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "At least three teeth must contact the metal. Option A.",
+    "solution": "Figure 11-4. Three teeth must contact the metal to avoid breaking the blade. Shown as Too coarse (few teeth contact → breaks), Too fine (many contact → inefficient), OK (three contact).\n\nWhy the other options are incorrect:\nThey misstate the rule.\n\n* Correct Option: A (At least three teeth must contact the metal to avoid breaking the blade)"
+  },
+  {
+    "id": "aee_cm_09",
+    "topicId": "cutting-tools",
+    "question": "If a hacksaw blade breaks during a cut, what does the material recommend?",
+    "options": [
+      "Turn over and start a new blade on the opposite side or complete with another old blade",
+      "Continue with the broken blade",
+      "Discard the work piece",
+      "Use a different saw",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Turn over and start new blade on opposite side or use another old blade. Option A.",
+    "solution": "Figure 11-7. If the hacksaw blade breaks, the cut must be completed with another old blade or by sawing with a new blade from the opposite edge of the metal.\n\nWhy the other options are incorrect: Continuing with broken blade will not cut properly, discarding is wasteful.\n\n* Correct Option: A (Turn over and start a new blade on the opposite side or complete with another old blade)"
+  },
+  {
+    "id": "aee_cm_10",
+    "topicId": "drilling",
+    "question": "What is the recommended RPM range for a 1/4\" high-speed drill in low carbon steel (wrought iron, low carbon steel column)?",
+    "options": [
+      "1,200-1,700",
+      "1,000-1,200",
+      "750-900",
+      "3,000-4,500",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1/4\" drill in low carbon steel: 1,200-1,700 RPM. Option A.",
+    "solution": "Table 5-2 Recommended RPM for High-Speed Drills:\n\nFor drill size 1/4\":\n* Wrought Iron, Low Carbon Steel — 1,200-1,700\n* Medium Carbon Steel — 1,000-1,200\n* High Carbon Tool Steel — 750-900\n* Aluminum and Brass — 3,000-4,500\n\nSo for low carbon steel, 1,200-1,700.\n\nWhy the other options are incorrect:\nOption B is medium carbon, Option C is high carbon tool steel, Option D is aluminum.\n\n* Correct Option: A (1,200-1,700)"
+  },
+  {
+    "id": "aee_cm_11",
+    "topicId": "drilling",
+    "question": "What is the recommended RPM for a 1/2\" drill in aluminum and brass?",
+    "options": [
+      "1,500-2,250",
+      "525-750",
+      "375-450",
+      "600-850",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1/2\" in aluminum/brass: 1,500-2,250 RPM. Option A.",
+    "solution": "Table: For 1/2\" drill, Aluminum and Brass — 1,500-2,250.\n\nWhy the other options are incorrect:\nOption B 525-750 is cast iron, Option C 375-450 is high carbon tool steel, Option D 600-850 is wrought iron.\n\n* Correct Option: A (1,500-2,250)"
+  },
+  {
+    "id": "aee_cm_12",
+    "topicId": "drilling",
+    "question": "The note says to reduce RPM by one-half for which type of drills?",
+    "options": [
+      "Carbon drills",
+      "High-speed drills",
+      "Number drills",
+      "Letter drills",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Reduce RPM one-half for carbon drills. Option A.",
+    "solution": "Footnote 1: \"Reduce RPM one-half for carbon drills.\"\n\nWhy the other options are incorrect: High-speed drills use the table values directly.\n\n* Correct Option: A (Carbon drills)"
+  },
+  {
+    "id": "aee_cm_13",
+    "topicId": "drilling",
+    "question": "What is the diameter of a 1/64\" drill in decimal inches according to the drill size table?",
+    "options": [
+      "0.0156",
+      "0.0312",
+      "0.0625",
+      "0.1250",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1/64 = 0.0156\". Option A.",
+    "solution": "Table: 1/64 — .0156, 1/32 — .0312, 1/16 — .0625, 1/8 — .1250.\n\nWhy the other options are incorrect:\nOption B is 1/32, Option C is 1/16, Option D is 1/8.\n\n* Correct Option: A (0.0156\")"
+  },
+  {
+    "id": "aee_cm_14",
+    "topicId": "drilling",
+    "question": "Which cutting fluid is recommended for aluminum as per the Metal Lubricant table?",
+    "options": [
+      "Kerosene, soluble oil",
+      "Dry or compressed oil",
+      "Sulfurized oil",
+      "Lard oil",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Aluminum: kerosene, soluble oil. Option A.",
+    "solution": "Table Metal Lubricant:\n\n* Aluminum — kerosene, soluble oil\n* Brass/Bronze — soluble/mineral oils\n* Cast iron — dry or compressed oil\n* Tool steel — sulfurized oil\n\nWhy the other options are incorrect:\nOption B is cast iron, Option C is tool steel.\n\n* Correct Option: A (Kerosene, soluble oil)"
+  },
+  {
+    "id": "aee_cm_15",
+    "topicId": "drilling",
+    "question": "Which cutting fluid is used for cast iron?",
+    "options": [
+      "Dry or compressed oil",
+      "Kerosene, soluble oil",
+      "Sulfurized oil",
+      "Soluble oil, lard oil",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Cast iron: dry or compressed oil. Option A.",
+    "solution": "Table: Cast iron — dry or compressed oil.\n\nWhy the other options are incorrect:\nOption B is aluminum, Option C is tool steel, Option D is copper.\n\n* Correct Option: A (Dry or compressed oil)"
+  },
+  {
+    "id": "aee_cm_16",
+    "topicId": "bench-work",
+    "question": "What should you do to remove a broken bolt using the screw-extractor method?",
+    "options": [
+      "Use a tap wrench and screw extractor after punching",
+      "Use a hacksaw",
+      "Use a file",
+      "Use a drill press only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Use tap wrench and screw extractor after punching. Option A.",
+    "solution": "Figure 5-25. Removing a broken bolt — screw-extractor method: Use tap wrench, screw extractor, broken bolt, with punch-and-hammer method as alternative (Fig 5-24).\n\nWhy the other options are incorrect: Hacksaw/file not for bolt extraction.\n\n* Correct Option: A (Use a tap wrench and screw extractor after punching)"
+  },
+  {
+    "id": "aee_cm_17",
+    "topicId": "cutting-tools",
+    "question": "Files are selected by which four criteria as per Figure 11-1?",
+    "options": [
+      "Length, coarseness, shape, and teeth",
+      "Color, weight, price, brand",
+      "Hardness, temper, finish, cost",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Files selected by length, coarseness, shape, and teeth. Option A.",
+    "solution": "Figure 11-1. Files are selected by length, coarseness, shape, and teeth. Details: Tang, Heel, Body, Edge, Point, Bastard, Second cut, Smooth, etc., and shapes Flat, Round, Half-round, etc.\n\nWhy the other options are incorrect: They are not listed criteria.\n\n* Correct Option: A (Length, coarseness, shape, and teeth)"
+  },
+  {
+    "id": "aee_cm_18",
+    "topicId": "cutting-tools",
+    "question": "Which are the three kinds of peen hammers shown in Fig. 5-3?",
+    "options": [
+      "Ball peen, Straight peen, Cross peen",
+      "Claw, Sledge, Mallet",
+      "Ball, Cross, Straight",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Ball peen, Straight peen, Cross peen. Option A.",
+    "solution": "Fig. 5-3. Three kinds of peens: BALL PEEN, STRAIGHT PEEN, CROSS PEEN.\n\nWhy the other options are incorrect: They list other hammer types not in figure.\n\n* Correct Option: A (Ball peen, Straight peen, Cross peen)"
+  },
+  {
+    "id": "aee_cm_19",
+    "topicId": "drilling",
+    "question": "What is the procedure for metal drilling that includes denting with a center punch?",
+    "options": [
+      "Dent with center punch, lubricate drill, hold metal in vise, use V-block for round metal",
+      "Just drill without preparation",
+      "Use only hand pressure",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Dent with center punch, lubricate, hold in vise, V-block for round metal. Option A.",
+    "solution": "Figure 11-13. Recommended procedures for drilling metal:\n\n* Dent with center punch\n* Lubricate drill\n* Hold metal in vise when hand drilling\n* Vise for drill press\n* Drill round metal with V-block\n\nWhy the other options are incorrect: They skip essential steps.\n\n* Correct Option: A (Dent with center punch, lubricate drill, hold metal in vise, use V-block for round metal)"
+  },
+  {
+    "id": "aee_cm_20",
+    "topicId": "bench-work",
+    "question": "What is the purpose of the rolling machine shown in Figure Front View?",
+    "options": [
+      "Bending rolls to shape metal, with all adjustments from operator’s position, rigid steel fabrication",
+      "Cutting metal",
+      "Drilling holes",
+      "Grinding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Rolling machine is for bending rolls, rigid, all adjustments from operator side. Option A.",
+    "solution": "Text: \"FRONT VIEW OF MACHINE All adjustments can be made easily from the operator’s normal working position. The design and steel fabrication of this Keetona Bending Roll ensure complete rigidity under all conditions and allow mobility of the machine without permanent fixing.\"\n\nWhy the other options are incorrect: Cutting, drilling, grinding are not rolling.\n\n* Correct Option: A (Bending rolls to shape metal, with all adjustments from operator’s position, rigid steel fabrication)"
   }
 ]
 }
