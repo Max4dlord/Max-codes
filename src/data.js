@@ -5419,6 +5419,111 @@ export const questionBank = {
     "correct": 0,
     "short": "Draw Filing done with both hands applied to the file. Option A.",
     "solution": "Methods include: Draw Filing done with both hands applied to the file.\n\nWhy the other options are incorrect: They misstate.\n\n* Correct Option: A (Done with both hands applied to the file for finishing)"
+  },
+  {
+    "id": "aee_adv_01",
+    "topicId": "advanced-manufacturing",
+    "question": "How is Advanced Manufacturing defined in the material?",
+    "options": [
+      "Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge",
+      "Use of old technology only",
+      "Only manual labour without technology",
+      "Only for small scale production",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advanced Manufacturing is use of innovative technology to improve products/processes. Option A.",
+    "solution": "Definition from material:\n\n• Advanced Manufacturing is the use of innovative technology to improve products or processes, with the relevant technology being described as \"advanced,\" \"innovative,\" or \"cutting edge.\"\n• Advanced Manufacturing industries increasingly integrate new innovative technologies in both products and processes.\n\nWhy the other options are incorrect: They describe old/manual/small scale, not advanced.\n\n* Correct Option: A (Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge)"
+  },
+  {
+    "id": "aee_adv_02",
+    "topicId": "advanced-manufacturing",
+    "question": "Which example is given of competing companies in the same industry for Advanced Manufacturing?",
+    "options": [
+      "Toyota & General Motors (GM)",
+      "Toyota & Apple",
+      "GM & Samsung",
+      "None of the above",
+      "All of the above"
+    ],
+    "correct": 0,
+    "short": "Toyota & General Motors (GM) example. Option A.",
+    "solution": "Slide: Example = Toyota & General Motors (GM) — different companies in same industry that compete.\n\nWhy the other options are incorrect: They are not the listed example.\n\n* Correct Option: A (Toyota & General Motors (GM))"
+  },
+  {
+    "id": "aee_adv_03",
+    "topicId": "advanced-manufacturing",
+    "question": "How does advanced manufacturing differ in its approach to building products?",
+    "options": [
+      "Builds for immediate or nearly immediate sale, rather than building orders to put into stock for later sale",
+      "Builds only for stock for later sale",
+      "Builds only one product per year",
+      "Builds without any flexibility",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Builds for immediate/nearly immediate sale, not for stock. Option A.",
+    "solution": "Material: \"Instead of building in orders to put products into stock for later sale, advanced manufacturing takes a different approach. It builds for immediate, or nearly immediate, sale.\"\n\nWhy the other options are incorrect: They describe traditional stock approach.\n\n* Correct Option: A (Builds for immediate or nearly immediate sale, rather than building orders to put into stock for later sale)"
+  },
+  {
+    "id": "aee_adv_04",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a fundamental goal of advanced manufacturing?",
+    "options": [
+      "Produce products in the least amount of time while minimizing waste",
+      "Produce products slowly with maximum waste",
+      "Only increase cost",
+      "Only reduce quality",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Produce in least time while minimizing waste. Option A.",
+    "solution": "Material: \"One of the fundamental goals of advanced manufacturing is to produce products in the least amount of time while also minimizing the amount of waste.\"\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Produce products in the least amount of time while minimizing waste)"
+  },
+  {
+    "id": "aee_adv_05",
+    "topicId": "advanced-manufacturing",
+    "question": "Which is a listed characteristic of products made using advanced manufacturing?",
+    "options": [
+      "Produced with high level of design, technologically complex and superior, cutting-edge, reliable/affordable/available",
+      "Produced with low design and inferior",
+      "Not cutting-edge",
+      "Unreliable and unavailable",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "High design, technologically complex/superior, cutting-edge, reliable/affordable/available. Option A.",
+    "solution": "Characteristics listed:\n\n• Products are produced with a high level of design.\n• Products are technologically complex and superior to their counterparts.\n• Products are cutting-edge and innovative.\n• Products are reliable, affordable, and readily available.\n• Companies produce newer, better and more exciting products.\n• Products solve a variety of common problems.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Produced with high level of design, technologically complex and superior, cutting-edge, reliable/affordable/available)"
+  },
+  {
+    "id": "aee_adv_06",
+    "topicId": "advanced-manufacturing",
+    "question": "Which technology is described as “The way of the future” under Advanced Manufacturing?",
+    "options": [
+      "Robotic Technology",
+      "Manual Technology",
+      "Old Technology",
+      "No Technology",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Robotic Technology is the way of the future. Option A.",
+    "solution": "Slide: Advanced Manufacturing — Robotic Technology “The way of the future”\n\nWhy the other options are incorrect: They are not listed as future way.\n\n* Correct Option: A (Robotic Technology)"
+  },
+  {
+    "id": "aee_adv_07",
+    "topicId": "advanced-manufacturing",
+    "question": "Which vocabulary words are listed as “Vocabulary so far” in the advanced manufacturing slides?",
+    "options": [
+      "Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach",
+      "Only Innovative",
+      "Only Flexible",
+      "Only Approach",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach. Option A.",
+    "solution": "Slide Vocabulary so far: Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach)"
   }
 ]
 }
