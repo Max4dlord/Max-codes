@@ -139,6 +139,10 @@ export const topicMeta = {
     {
       "id": "workshop-machines",
       "name": "Workshop Machines"
+    },
+    {
+      "id": "workshop-safety",
+      "name": "Workshop Safety"
     }
   ]
 }
@@ -4698,6 +4702,231 @@ export const questionBank = {
     "correct": 0,
     "short": "AEE 202 RAIN 2019/2020 SESSION. Option A.",
     "solution": "Title slide: HAND AND POWER TOOLS AEE 202 RAIN 2019/2020 SESSION.\n\nWhy the other options are incorrect: They have wrong course/session.\n\n* Correct Option: A (AEE 202 RAIN 2019/2020 SESSION)"
+  },
+  {
+    "id": "aee_ws_01",
+    "topicId": "workshop-safety",
+    "question": "What will the shop supervisor and instructor do if you engage in horseplay or pranks in the workshop?",
+    "options": [
+      "Boot you out of the building",
+      "Give you extra marks",
+      "Ignore you",
+      "Ask you to continue",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Horseplay will get you booted out. Option A.",
+    "solution": "Safety rule 1: \"Absolutely no horseplay or pranks will be tolerated inside the shop.\" The material explicitly states: \"ALWAYS REMEMBER THAT THE SHOP SUPERVISOR AND YOUR INSTRUCTOR IS OBLIGATED TO BOOT YOU OUT OF THE BUILDING FOR ANY HORSEPLAY OR PRANKS THAT ENDANGER ANYBODY IN THE SHOP.\"\n\nWhy the other options are incorrect: They contradict the stated obligation.\n\n* Correct Option: A (Boot you out of the building)"
+  },
+  {
+    "id": "aee_ws_02",
+    "topicId": "workshop-safety",
+    "question": "What type of clothing should be worn in the workshop according to safety rules?",
+    "options": [
+      "Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly",
+      "Synthetic fibre clothing",
+      "Loose clothing",
+      "Shorts and slippers",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Wool or cotton coveralls/lab coats/denim, good repair, proper fit. Option A.",
+    "solution": "Rule 2: \"Suitable wool or cotton clothing such as coveralls, lab coats, or a denim uniform should be worn. This should be in good repair and fit properly. Safety shoes are mandatory.\"\n\nWhy the other options are incorrect:\nOption B Synthetic fibres are extremely flammable and must not be worn.\nOption C Loose clothing must be restrained.\nOption D Shorts/slippers are not proper.\n\n* Correct Option: A (Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly)"
+  },
+  {
+    "id": "aee_ws_03",
+    "topicId": "workshop-safety",
+    "question": "Why must loose clothing and long hair be restrained in the workshop?",
+    "options": [
+      "They could get caught in moving machine parts and cause severe injury or death",
+      "They look unprofessional",
+      "They are required for fashion",
+      "They keep you warm",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Loose clothing/hair can get caught in moving parts and cause severe injury/death. Option A.",
+    "solution": "Rule 3: \"Loose clothing and long hair must be restrained. They could get caught in moving machine parts and cause severe injury or death.\"\n\nWhy the other options are incorrect: They are not the stated reason.\n\n* Correct Option: A (They could get caught in moving machine parts and cause severe injury or death)"
+  },
+  {
+    "id": "aee_ws_04",
+    "topicId": "workshop-safety",
+    "question": "Why should rings, wristwatches and other jewellery be removed before working in the shop?",
+    "options": [
+      "They could get caught in moving machine parts and cause severe injury or death",
+      "They are expensive",
+      "They are not allowed by school rules only",
+      "They improve safety",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Jewellery can get caught and cause severe injury/death. Option A.",
+    "solution": "Rule 4: \"Rings wristwatches and other jewellery should be removed. Such things could get caught in moving machine parts and could cause severe injury or death.\"\n\nWhy the other options are incorrect: They are not the safety reason.\n\n* Correct Option: A (They could get caught in moving machine parts and cause severe injury or death)"
+  },
+  {
+    "id": "aee_ws_05",
+    "topicId": "workshop-safety",
+    "question": "What should you do before using a machine or tool you have never handled before?",
+    "options": [
+      "Secure permission from lab assistant/demonstrator after receiving necessary instruction",
+      "Use it immediately without instruction",
+      "Ask a fellow student to operate for you",
+      "Just try it",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Get instruction and permission from lab assistant/demonstrator. Option A.",
+    "solution": "Rule 6: \"Never use a machine or tool until you have had the necessary instruction in its use. Always secure permission from your lab assistant or demonstrator before using any tool your have never handled before.\"\n\nWhy the other options are incorrect: They violate the rule.\n\n* Correct Option: A (Secure permission from lab assistant/demonstrator after receiving necessary instruction)"
+  },
+  {
+    "id": "aee_ws_06",
+    "topicId": "workshop-safety",
+    "question": "What should you do if your equipment is in bad shape?",
+    "options": [
+      "Bring the problem to the attention of lab assistant/demonstrator",
+      "Continue using it",
+      "Try to repair it yourself while it is operating",
+      "Ignore it",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Report bad equipment to lab assistant/demonstrator. Option A.",
+    "solution": "Rule 7: \"Use tools that are in good condition. If your equipment is in bad shape, bring the problem to the attention of your lab assistant or demonstrator for appropriate action.\"\n\nWhy the other options are incorrect: Continuing or repairing while operating is unsafe.\n\n* Correct Option: A (Bring the problem to the attention of lab assistant/demonstrator)"
+  },
+  {
+    "id": "aee_ws_07",
+    "topicId": "workshop-safety",
+    "question": "When should you perform cleaning, adjusting or lubrication of a tool?",
+    "options": [
+      "Only after stopping or shutting off the equipment",
+      "While it is operating",
+      "While it is still moving",
+      "Anytime",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Only after stopping/shutting off. Option A.",
+    "solution": "Rule 8: \"Never perform operations of cleaning; adjusting or lubrication of a tool while it is operating. Always stop or shut off the equipment before servicing.\"\n\nWhy the other options are incorrect: They suggest servicing while operating, which is prohibited.\n\n* Correct Option: A (Only after stopping or shutting off the equipment)"
+  },
+  {
+    "id": "aee_ws_08",
+    "topicId": "workshop-safety",
+    "question": "What should you never do regarding leaving a tool operating?",
+    "options": [
+      "Never leave any tool operating unattended",
+      "Always leave it operating",
+      "Leave it for others to watch",
+      "It is okay to leave briefly",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Never leave any tool operating unattended. Option A.",
+    "solution": "Rule 9: \"Never leave any tool operating unattended. Unsuspecting persons may come in contact with the equipment and maybe injured.\"\n\nWhy the other options are incorrect: They allow leaving unattended, which is unsafe.\n\n* Correct Option: A (Never leave any tool operating unattended)"
+  },
+  {
+    "id": "aee_ws_09",
+    "topicId": "workshop-safety",
+    "question": "What filter lens is required for arc welding according to safety in arc welding?",
+    "options": [
+      "No. 10 or 12-filter lens on welding mask, plus clear face shield or flip-up lift plate when chipping",
+      "No. 4 filter lens",
+      "Clear lens only",
+      "No lens needed",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "No. 10 or 12-filter lens, plus clear shield when chipping. Option A.",
+    "solution": "Safety in Arc Welding Rule 1: \"Always wear protective equipment when welding. Use welding mask with a No. 10 or 12-filter lens. Wear a clear face shield or flip-up lift plate on the welding mask when chipping slag or cleaning welds.\"\n\nWhy the other options are incorrect:\nOption B No. 4 is for gas welding, not arc.\nOption C Clear lens only is insufficient.\n\n* Correct Option: A (No. 10 or 12-filter lens on welding mask, plus clear face shield or flip-up lift plate when chipping)"
+  },
+  {
+    "id": "aee_ws_10",
+    "topicId": "workshop-safety",
+    "question": "What filter lens is required for gas welding?",
+    "options": [
+      "At least No. 4 filter lens on welding goggles or face shield",
+      "No. 10 or 12",
+      "Clear lens",
+      "No lens",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "At least No. 4 filter lens for gas welding. Option A.",
+    "solution": "Safety in Gas Welding Rule 1: \"Always wear protective equipment when welding. Use welding goggles or a face shield with at least a No. 4 filter lens.\"\n\nWhy the other options are incorrect:\nOption B No. 10/12 is for arc welding.\n\n* Correct Option: A (At least No. 4 filter lens on welding goggles or face shield)"
+  },
+  {
+    "id": "aee_ws_11",
+    "topicId": "workshop-safety",
+    "question": "What type of clothing is advisable for welding due to high flash point, and which is extremely flammable and must not be worn?",
+    "options": [
+      "Advisable: wool or cotton; Must not wear: synthetic fibres",
+      "Advisable: synthetic fibres; Must not wear: cotton",
+      "Both wool and synthetic are fine",
+      "No clothing requirement",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Wool/cotton advisable (high flash point), synthetic is extremely flammable and must not be worn. Option A.",
+    "solution": "Both Arc and Gas Welding safety state: \"Never wear synthetic fibre clothing. Synthetic fibres are extremely flammable. Wearing clothing made of wool or cotton is advisable because of their high flash point.\"\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Advisable: wool or cotton; Must not wear: synthetic fibres)"
+  },
+  {
+    "id": "aee_ws_12",
+    "topicId": "workshop-safety",
+    "question": "How should gas cylinder valves be opened correctly?",
+    "options": [
+      "Acetylene no more than 3/4 turn, Oxygen fully",
+      "Both fully open",
+      "Both 3/4 turn",
+      "Acetylene fully, Oxygen 3/4 turn",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Acetylene ≤3/4 turn, Oxygen fully open. Option A.",
+    "solution": "Safety in Gas Welding Rule 5: \"Open gas cylinder valves correctly. Open the valve on the acetylene cylinder no more than three-fourths of a turn so it can be closed quickly in case of an emergency. Open the valve on the oxygen tank fully.\"\n\nWhy the other options are incorrect: They reverse or equalize.\n\n* Correct Option: A (Acetylene no more than 3/4 turn, Oxygen fully)"
+  },
+  {
+    "id": "aee_ws_13",
+    "topicId": "workshop-safety",
+    "question": "What is the maximum pressure for acetylene that should never be exceeded?",
+    "options": [
+      "15 psi",
+      "50 psi",
+      "100 psi",
+      "125 psi",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Never use acetylene over 15 psi. Option A.",
+    "solution": "Rule 6: \"Set the operating pressures carefully. Never use acetylene at a pressure over 15 psi. Follow the manufacturer's recommendations...\"\n\nWhy the other options are incorrect: They exceed the safe limit.\n\n* Correct Option: A (15 psi)"
+  },
+  {
+    "id": "aee_ws_14",
+    "topicId": "workshop-safety",
+    "question": "Why should the welding tip be pointed away from your body before lighting?",
+    "options": [
+      "Oxygen and acetylene can saturate clothing and cause it to ignite",
+      "It looks better",
+      "It saves gas",
+      "It is not necessary",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gases can saturate clothing and ignite. Option A.",
+    "solution": "Rule 7: \"Keep the welding tip pointed away from your body. Oxygen and acetylene from the tip can saturate your clothing and cause it to ignite.\"\n\nWhy the other options are incorrect: They are not the safety reason.\n\n* Correct Option: A (Oxygen and acetylene can saturate clothing and cause it to ignite)"
+  },
+  {
+    "id": "aee_ws_15",
+    "topicId": "workshop-safety",
+    "question": "What should you use to light the flame?",
+    "options": [
+      "Approved lighter (friction lighter), not matches or lighters that bring fingers too close",
+      "Matches",
+      "Cigarette lighter",
+      "Any light source",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Use approved lighter, not matches/lighters that bring fingers close. Option A.",
+    "solution": "Rule 8: \"Light the flame with an approved lighter. Using matches or lighters to light a torch brings fingers too close to the tip and may cause burns.\"\n\nWhy the other options are incorrect: Matches/lighters are explicitly to be avoided.\n\n* Correct Option: A (Approved lighter (friction lighter), not matches or lighters that bring fingers too close)"
   }
 ]
 }
