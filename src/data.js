@@ -155,6 +155,18 @@ export const topicMeta = {
     {
       "id": "bench-work-fitting",
       "name": "Bench Work & Fitting"
+    },
+    {
+      "id": "workshop-hazards",
+      "name": "Workshop Hazards & Safety"
+    },
+    {
+      "id": "workshop-materials",
+      "name": "Workshop Materials & Heat Treatment"
+    },
+    {
+      "id": "joining-metals",
+      "name": "Joining of Metals"
     }
   ]
 }
@@ -5524,6 +5536,231 @@ export const questionBank = {
     "correct": 0,
     "short": "Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach. Option A.",
     "solution": "Slide Vocabulary so far: Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach)"
+  },
+  {
+    "id": "aee_wh_01",
+    "topicId": "workshop-hazards",
+    "question": "Which of the following best describes an accident in the workshop context?",
+    "options": [
+      "Unforeseen circumstances that occur unavoidably, often due to negligence",
+      "Planned event",
+      "Only intentional harm",
+      "Only due to machines, not people",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Accidents are unforeseen, often due to negligence. Option A.",
+    "solution": "The material defines: Accidents: These are unforeseen circumstances that occur unavoidably. They can occur due to a lot of reasons. Safety Rules are a must... Accidents usually occur due to negligence.\n\nWhy the other options are incorrect: They are not the definition.\n\n* Correct Option: A (Unforeseen circumstances that occur unavoidably, often due to negligence)"
+  },
+  {
+    "id": "aee_wh_02",
+    "topicId": "workshop-hazards",
+    "question": "Which category describes “The Careless Ones” among irresponsible behaviours?",
+    "options": [
+      "Those who don't observe any precaution and are always surprised, usually first to get hurt",
+      "Those who take calculated risks to prove they know it all, identified by missing fingers",
+      "Those who joke about everything at expense of safety",
+      "All of the above are categories",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Careless Ones don't observe precaution, always surprised, first hurt. Option A.",
+    "solution": "Causes of Actions - Irresponsible Product: Three categories:\na. The Careless Ones: They are the ones who don't observe any precaution and always surprised and are usually the first to get hurt.\nb. The Clever Ones: These are people who take careless risk and they prove to know it all... missing fingers.\nc. The Doctors: These are people who joke about everything, even at expense of safety.\n\nSo Careless Ones matches Option A.\n\n* Correct Option: A (Those who don't observe any precaution and are always surprised, usually first to get hurt)"
+  },
+  {
+    "id": "aee_wh_03",
+    "topicId": "workshop-hazards",
+    "question": "How can you identify “The Clever Ones”?",
+    "options": [
+      "By their missing fingers",
+      "By their neat uniform",
+      "By their good grades",
+      "By their silence",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Clever Ones identified by missing fingers. Option A.",
+    "solution": "Material: The Clever Ones: These are people who take careless risk and they prove to know it all. They feel it is careless that will isolate a machine from power before making an adjustment. You can identify them by their missing fingers.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (By their missing fingers)"
+  },
+  {
+    "id": "aee_wh_04",
+    "topicId": "workshop-hazards",
+    "question": "Which dressing rule is listed as wrong?",
+    "options": [
+      "Rolling sleeves is wrong",
+      "All buttons and zips must be securely fastened",
+      "Avoid ties, wrist watch, rings, necklace",
+      "Repair torn overall and apron",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Rolling sleeves is wrong. Option A is the wrong practice.",
+    "solution": "Dressing rules:\n* All buttons and zips must be securely fastened, especially at neck and wrist.\n* Rolling sleeves is wrong.\n* Avoid ties, wrist watch, rings, necktace...\n* Repair torn overall and apron.\n* Pack hour... Heat clangle... scarves, jibb...\n* Wear safety mask, helmet, goggles, gloves...\n\nThe question asks which is listed as wrong: Rolling sleeves is wrong.\n\nWhy the other options are listed as correct practices, not wrong.\n\n* Correct Option: A (Rolling sleeves is wrong)"
+  },
+  {
+    "id": "aee_wh_05",
+    "topicId": "workshop-hazards",
+    "question": "What type of footwear is very needful in the workshop where metal shavings and hot metal particles can penetrate light shoes?",
+    "options": [
+      "Hard sole-foot wear with good grip",
+      "Light weight shoes",
+      "Sandals",
+      "Barefoot",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Hard sole-foot wear with good grip is needful. Option A.",
+    "solution": "Material: \"Hard sole-foot wear with good grip is very needful in places where metal shavings and hot metal particles can easily penetrate light weight shoes.\"\n\nWhy the other options are incorrect: They are light or none, which can be penetrated.\n\n* Correct Option: A (Hard sole-foot wear with good grip)"
+  },
+  {
+    "id": "aee_wh_06",
+    "topicId": "workshop-hazards",
+    "question": "Which hygienic materials should a well equipped first aid box contain as listed?",
+    "options": [
+      "Toothpine, spirit, Rub, G.V, anaergelic (pain killer)",
+      "Only G.V",
+      "Only spirit",
+      "Only toothpine",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Toothpine, spirit, Rub, G.V, anaergelic. Option A.",
+    "solution": "Hygienic materials in the workshop includes first aid box, toilets, low haircut, well equipped first aid box which should contain items like: Toothpine, spirit, Rub, G.V, anaergelic (pain killer).\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Toothpine, spirit, Rub, G.V, anaergelic (pain killer))"
+  },
+  {
+    "id": "aee_wh_07",
+    "topicId": "workshop-hazards",
+    "question": "How should sharp tools be handled?",
+    "options": [
+      "Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground",
+      "Point towards your mate",
+      "Leave tools lying on the ground",
+      "Carry them carelessly",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Point away from end (reverse), not towards mate, don’t leave on ground. Option A.",
+    "solution": "Handling of Small Tools:\n* Print away Sharp tools from their end (reverse).\n* Sharp edges should not be pointed towards your mate.\n* Don’t leave tools lying on the ground of the workshop when not in use.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground)"
+  },
+  {
+    "id": "aee_wh_08",
+    "topicId": "workshop-hazards",
+    "question": "What is the correct way to lift heavy weights?",
+    "options": [
+      "Use lifting tackle such as hoists, Jacks, Crowbars, winch where available; lift without intolerable stress on back/stomach; never lift alone if it may drop on foot; look front",
+      "Lift alone with back bent",
+      "Lift with stomach stress",
+      "Look behind while going",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Use hoists/Jacks/Crowbars/winch, no back/stomach stress, never alone, look front. Option A.",
+    "solution": "Lifting Heavy Weights:\n* Always use lifting tackle such as hoists, Jacks, Crowbars, winch e.t.c. where it is available.\n* Use sense in carrying heavy loads.\n* If you must lift weights, never lift it in a way that puts intolerable stress on back and stomach muscles.\n* Never lift anything only. It may step from your grip and drop on your foot.\n* Look front wherever you go.\n\nWhy the other options are incorrect: They suggest lifting alone with stress and looking behind.\n\n* Correct Option: A (Use lifting tackle such as hoists, Jacks, Crowbars, winch where available; lift without intolerable stress on back/stomach; never lift alone if it may drop on foot; look front)"
+  },
+  {
+    "id": "aee_wh_09",
+    "topicId": "workshop-hazards",
+    "question": "Why should machine guards for belts, gears, spindles and shafts be covered?",
+    "options": [
+      "They are important elements and should be covered for safety",
+      "They should be left open",
+      "They are not important",
+      "They should be removed",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Machine guards are important and should be covered. Option A.",
+    "solution": "Material: \"Machine guards are important elements e.g. belts, gears, spindles and shafts should be covered.\"\n\nWhy the other options are incorrect: They suggest leaving open or removing.\n\n* Correct Option: A (They are important elements and should be covered for safety)"
+  },
+  {
+    "id": "aee_wh_10",
+    "topicId": "workshop-hazards",
+    "question": "What is a risk of using compressed air for cleaning?",
+    "options": [
+      "It propels dusty and metallic particles and may injure; sudden explosion can cause panic; fasten pipe joints; never joke with it; use goggles",
+      "It is completely safe",
+      "It has no risk",
+      "It should be used without goggles",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Propels particles and may injure, explosion risk, secure joints, never joke, use goggles. Option A.",
+    "solution": "Compressed Air: Common in workshop...\n* When used for cleaning, it propels divvy and metallic particles and may injure.\n* Sudden explosion can cause serious risk due to panic.\n* Fasten and secure pipe joints.\n* Never joke with compressed air.\n* Use protective goggles when using compressive air.\n\nWhy the other options are incorrect: They say no risk or without goggles.\n\n* Correct Option: A (It propels dusty and metallic particles and may injure; sudden explosion can cause panic; fasten pipe joints; never joke with it; use goggles)"
+  },
+  {
+    "id": "aee_wh_11",
+    "topicId": "workshop-hazards",
+    "question": "What should you know about emergency stops/switches and fire exits?",
+    "options": [
+      "Locate them and know how to put a machine off before you put it on",
+      "Ignore them",
+      "Only know after accident",
+      "They are not needed",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Locate emergency stops/switches and fire exits, know how to put machine off before on. Option A.",
+    "solution": "Emergency Stops/Switches: Locate them (they are like control switch) and fire exits.\n* Ensure to know how to put a machine off before you put it on. Don't be clever.\n\nWhy the other options are incorrect: They suggest ignoring.\n\n* Correct Option: A (Locate them and know how to put a machine off before you put it on)"
+  },
+  {
+    "id": "aee_wh_12",
+    "topicId": "workshop-hazards",
+    "question": "Why should water and electricity be considered together as a danger?",
+    "options": [
+      "Electricity kills and burns. Beware, water conducts electricity. Do not attempt electrical repair if not competent",
+      "Water and electricity are safe together",
+      "Water does not conduct",
+      "Electricity is not dangerous",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Water conducts electricity, electricity kills/burns, don’t attempt repair if not competent. Option A.",
+    "solution": "Care of Electrical Apparatus: Electricity kills and burns. Beware, water conducts electricity.\n\nDo not attempt elect competent to do so ical repair if you are not (electrical repair if you are not competent).\n\nWhy the other options are incorrect: They are unsafe.\n\n* Correct Option: A (Electricity kills and burns. Beware, water conducts electricity. Do not attempt electrical repair if not competent)"
+  },
+  {
+    "id": "aee_wh_13",
+    "topicId": "workshop-hazards",
+    "question": "What are the three important components of the environment as listed?",
+    "options": [
+      "Waterbody, atmosphere, and soil",
+      "Only waterbody",
+      "Only atmosphere",
+      "Only soil",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Waterbody, atmosphere, and soil are the three. Option A.",
+    "solution": "Workshop Environment: The Environment is simply anything that surrounds us; Waterbody, atmosphere, and soil are the 3 important components of the environment.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Waterbody, atmosphere, and soil)"
+  },
+  {
+    "id": "aee_wh_14",
+    "topicId": "workshop-hazards",
+    "question": "Which of the following is a listed workshop environment safety measure?",
+    "options": [
+      "Oil and oily materials should be well checked as spillage can make floor slippery and cause serious injury/death",
+      "Oil spillage is good",
+      "Smoking should be encouraged",
+      "Playing with chemicals is safe",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oil spillage makes floor slippery and can cause serious injury/death. Option A.",
+    "solution": "Workshop environment safety includes:\n* Oil and oily materials should be well checked as oil spillage can make the floor slippery and could lead to a very serious injury or death.\n* Smoking should be avoided as could ignite combustible gases.\n* Playing with chemicals/poisons or explosives should be avoided.\n* Minimisation of urge to touch moving parts.\n* Disposal by burning should be avoided.\n* Do not open mysterious objects without labels.\n\nWhy the other options are incorrect: They are opposite (oil spillage is bad, smoking should be avoided).\n\n* Correct Option: A (Oil and oily materials should be well checked as spillage can make floor slippery and could lead to a very serious injury/death)"
+  },
+  {
+    "id": "aee_wh_15",
+    "topicId": "workshop-hazards",
+    "question": "According to the course outline for AGE202 Workshop Practice, which of the following is listed?",
+    "options": [
+      "Introduction to Workshop practice, Workshop safety measures, hand tools and power tools, Workshop materials and properties, Bench-work, Metal joining processes, Grinding/drilling/latheing/shaping, Computer aided manufacturing, Gauges/Jigs and fixtures",
+      "Only Bench-work",
+      "Only Welding",
+      "Only Grinding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "All listed: Intro, safety, hand/power tools, materials, bench-work, joining, machines, CAM, gauges/jigs. Option A.",
+    "solution": "Course Outline for AGE202 Workshop Practice:\n* Introduction to Workshop practice.\n* Workshop safety measures.\n* Introduction to workshop hand tools and power tools and their safety measures.\n* Workshop materials and properties.\n* Bench-work: marking outs, scrimbing; punching; drilling; cutting.\n* Theory and practice of metal joining processes.\n* Functions and capabilities of grinding machines; drilling; latheing; shaping machines.\n* Computer aided manufacturing.\n* Gauges: Measurement; tolerance; Jigs and fixtures.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Introduction to Workshop practice, Workshop safety measures, hand tools and power tools, Workshop materials and properties, Bench-work, Metal joining processes, Grinding/drilling/latheing/shaping, Computer aided manufacturing, Gauges/Jigs and fixtures)"
   }
 ]
 }
