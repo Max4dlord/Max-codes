@@ -123,6 +123,14 @@ export const topicMeta = {
     {
       "id": "welding-classification",
       "name": "Classification of Welding"
+    },
+    {
+      "id": "machine-operations",
+      "name": "Machine Operations"
+    },
+    {
+      "id": "advanced-manufacturing",
+      "name": "Advanced Manufacturing Processes"
     }
   ]
 }
@@ -4202,6 +4210,336 @@ export const questionBank = {
     "correct": 0,
     "short": "Good weld is strong, equipment not costly, portable, joins similar/dissimilar, design freedom. Option A.",
     "solution": "Conclusion slide:\n\nØ A good weld is always strong.\nØ General welding equipment is not very costly.\nØ Portable welding equipment are available.\nØ A large number of metal and alloy both similar and dissimilar can be join by welding.\nØ Welding permits considerable freedom in design.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom)"
+  },
+  {
+    "id": "aee_am_01",
+    "topicId": "machine-operations",
+    "question": "Which of the following is NOT listed as a type of machine process under Machine Operation?",
+    "options": [
+      "Shaping",
+      "Turning",
+      "Milling",
+      "Casting",
+      "None of the above"
+    ],
+    "correct": 3,
+    "short": "Shaping, Turning, Milling, Drilling, Sawing, Robotic Welding are listed. Casting is not. Option D.",
+    "solution": "Machine Operation lists types of machine processes:\n\n* Shaping\n* Turning\n* Milling\n* Drilling\n* Sawing\n* Robotic Welding\n\nCasting is a separate manufacturing process, not listed under Machine Operation.\n\nWhy the other options are incorrect: They are all listed.\n\n* Correct Option: D (Casting)"
+  },
+  {
+    "id": "aee_am_02",
+    "topicId": "advanced-manufacturing",
+    "question": "How is shaping defined in the material?",
+    "options": [
+      "Process of cutting or removing metal so a part can fit directly into another part",
+      "Process of creating rotational parts by cutting away unwanted material",
+      "Process of removing metal using a rotating multi-point tool",
+      "Process of creating a round hole with an end cutting tool",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Shaping is cutting/removing metal so a part can fit into another part. Option A.",
+    "solution": "Definition from the material: \"Shaping is the process of cutting or removing metal so that a part can fit directly into another part.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Process of cutting or removing metal so that a part can fit directly into another part)"
+  },
+  {
+    "id": "aee_am_03",
+    "topicId": "advanced-manufacturing",
+    "question": "What is the precision capability and a listed advantage of shaping?",
+    "options": [
+      "Can shape metals down to ½ mm very precisely",
+      "Can remove metal on 360° angle",
+      "Can perform any operation with great accuracy",
+      "Very fast operation for small holes",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Shaping can shape down to ½ mm very precisely. Option A.",
+    "solution": "Advantage of Shaping listed: \"It can shape metals very precisely: It can often shape pieces down to ½ mm.\"\n\nWhy the other options are incorrect:\nOption B is advantage of Turning (360°), Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Can shape metals down to ½ mm very precisely)"
+  },
+  {
+    "id": "aee_am_04",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of shaping?",
+    "options": [
+      "When tool or machine piece breaks it takes very skilled technicians to fix",
+      "Takes a lot of training and is very expensive",
+      "Temperatures affect the operation",
+      "Dangerous with many hand accidents",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Disadvantage: When tool breaks, needs very skilled technicians to fix. Option A.",
+    "solution": "Material lists under Shaping — Disadvantages: \"When the tool or machine piece breaks it takes very skilled technicians to fix the problem.\"\n\nWhy the other options are incorrect:\nOption B is disadvantage of Milling (training and expensive), Option C is Drilling (temperatures), Option D is Sawing (dangerous).\n\n* Correct Option: A (When tool or machine piece breaks it takes very skilled technicians to fix)"
+  },
+  {
+    "id": "aee_am_05",
+    "topicId": "advanced-manufacturing",
+    "question": "Turning is defined as:",
+    "options": [
+      "A material removal process to create rotational parts by cutting away unwanted material using a lathe",
+      "A process of removing metal with a rotating multi-point tool",
+      "A process where a round hole is created with an end cutting tool",
+      "A process that completely automates welding with robots",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Turning creates rotational parts by cutting away material using a lathe. Option A.",
+    "solution": "Definition: \"Turning is a form of machining, a material removal process, which is used to create rotational parts by cutting away unwanted material. The turning process requires a turning machine or lathe, workpiece, fixture, and cutting tool.\"\n\nWhy the other options are incorrect:\nOption B is Milling, Option C is Drilling, Option D is Robotic Welding.\n\n* Correct Option: A (A material removal process to create rotational parts by cutting away unwanted material using a lathe)"
+  },
+  {
+    "id": "aee_am_06",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed advantage of turning?",
+    "options": [
+      "It can remove metal on a 360 degree angle which is very hard and complex to do",
+      "It can shape metals down to ½ mm",
+      "It can perform literally any operation",
+      "It is very fast for small holes",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Turning can remove metal on 360° angle. Option A.",
+    "solution": "Advantage of Turning: \"It can remove metal on a 360 degree angle which is very hard and complex to do.\"\n\nWhy the other options are incorrect:\nOption B is Shaping (½ mm), Option C is Milling (any operation), Option D is Drilling (fast small holes).\n\n* Correct Option: A (It can remove metal on a 360 degree angle which is very hard and complex to do)"
+  },
+  {
+    "id": "aee_am_07",
+    "topicId": "advanced-manufacturing",
+    "question": "What is the basic machine tool for turning called?",
+    "options": [
+      "Lathe (Engine lathe)",
+      "Milling machine",
+      "Drill press",
+      "Shaper",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Basic machine tool for turning is lathe (engine lathe). Option A.",
+    "solution": "Figure 21-2 caption: \"The basic machine tool for turning is called a lathe. This figure shows an engine lathe.\"\n\nWhy the other options are incorrect: They are for milling, drilling, shaping.\n\n* Correct Option: A (Lathe (Engine lathe))"
+  },
+  {
+    "id": "aee_am_08",
+    "topicId": "advanced-manufacturing",
+    "question": "How is milling defined?",
+    "options": [
+      "Removal of metal using a tool with several cutting points rotating about its axis",
+      "Creating rotational parts on a lathe",
+      "Creating a round hole with a drill",
+      "Automating welding with robots",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Milling is removal of metal using a rotating multi-point tool. Option A.",
+    "solution": "Definition: \"Milling is... the removal of metal from the work piece using a tool which has several cutting points and is rotating about its axis. Thus each cutting point removes a little bit... overall removal is quite brisk.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Drilling, Option D is Robotic Welding.\n\n* Correct Option: A (Removal of metal using a tool with several cutting points rotating about its axis)"
+  },
+  {
+    "id": "aee_am_09",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed advantage of milling?",
+    "options": [
+      "It can be used to perform literally any operation with a great degree of accuracy",
+      "It is very fast for small holes",
+      "It can shape down to ½ mm",
+      "It removes metal on 360°",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Milling can perform literally any operation with great accuracy. Option A.",
+    "solution": "Advantage of Milling: \"it can be used to perform literally any operation with a great degree of accuracy and hence it is an indispensable machine for any workshop\"\n\nWhy the other options are incorrect:\nOption B is Drilling, Option C is Shaping, Option D is Turning.\n\n* Correct Option: A (It can be used to perform literally any operation with a great degree of accuracy)"
+  },
+  {
+    "id": "aee_am_10",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of milling?",
+    "options": [
+      "Takes a lot of training/experience and is very expensive",
+      "Takes skilled technicians only when it breaks",
+      "Temperatures affect it",
+      "Dangerous with many hand accidents",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Milling takes a lot of training and is very expensive. Option A.",
+    "solution": "Disadvantage of Milling: \"It takes a lot of training and experience to operate a milling machine. It is also very expensive.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Drilling, Option D is Sawing.\n\n* Correct Option: A (Takes a lot of training/experience and is very expensive)"
+  },
+  {
+    "id": "aee_am_11",
+    "topicId": "advanced-manufacturing",
+    "question": "Drilling is defined as:",
+    "options": [
+      "Manufacturing process where a round hole is created or enlarged by rotating an end cutting tool (drill)",
+      "Process of cutting or removing metal so a part can fit into another",
+      "Process using a rotating multi-point tool",
+      "Process that automates welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Drilling creates/enlarges a round hole with a rotating drill. Option A.",
+    "solution": "Definition: \"Drilling is the manufacturing process where a round hole is created within a work piece or enlarged by rotating an end cutting tool, a drill.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Robotic Welding.\n\n* Correct Option: A (Manufacturing process where a round hole is created or enlarged by rotating an end cutting tool (drill))"
+  },
+  {
+    "id": "aee_am_12",
+    "topicId": "advanced-manufacturing",
+    "question": "What is Reaming in relation to drilling?",
+    "options": [
+      "Enlarging a hole to a very specific/accurate size using a reamer (rotating end and side cutting tool)",
+      "Creating a round hole for the first time",
+      "Cutting bars of material",
+      "Automating welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Reaming enlarges a hole to a very specific accurate size using a reamer. Option A.",
+    "solution": "Definition: \"Reaming is a similar process where a hole feature is enlarged to a very specific or accurate size by introducing a rotating end and side cutting tool called a reamer.\"\n\nWhy the other options are incorrect: They describe drilling or other processes.\n\n* Correct Option: A (Enlarging a hole to a very specific/accurate size using a reamer)"
+  },
+  {
+    "id": "aee_am_13",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed advantage of drilling?",
+    "options": [
+      "Very fast operation, can make very small and accurate holes",
+      "Can shape down to ½ mm",
+      "Can perform any operation",
+      "Removes metal on 360°",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Drilling is very fast and can make very small accurate holes. Option A.",
+    "solution": "Advantage of Drilling: \"Drilling is a very fast operation, can also make holes that are very small and accurate.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Turning.\n\n* Correct Option: A (Very fast operation, can make very small and accurate holes)"
+  },
+  {
+    "id": "aee_am_14",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of drilling?",
+    "options": [
+      "Temperatures in the factory affect drilling",
+      "Takes very skilled technicians when it breaks",
+      "Takes a lot of training and expensive",
+      "Dangerous with hand accidents",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Temperatures in the factory affect drilling. Option A.",
+    "solution": "Disadvantage of Drilling: \"Temperatures in the factory affect drilling.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Sawing.\n\n* Correct Option: A (Temperatures in the factory affect drilling)"
+  },
+  {
+    "id": "aee_am_15",
+    "topicId": "advanced-manufacturing",
+    "question": "Sawing is used for:",
+    "options": [
+      "Cutting up bars of material or cutting out shapes in plates of raw material",
+      "Creating rotational parts",
+      "Removing metal with multi-point tool",
+      "Creating a round hole",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Sawing cuts up bars or cuts out shapes in plates. Option A.",
+    "solution": "Definition: \"Sawing is used for cutting up bars of material or for cutting out shapes in plates of raw material. The cutting tools may be thin metallic disks, blades or flexible bands with teeth, or thin grinding wheels.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Cutting up bars of material or cutting out shapes in plates of raw material)"
+  },
+  {
+    "id": "aee_am_16",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed advantage of sawing?",
+    "options": [
+      "Allows us to cut very strong objects with precise accuracy",
+      "Very fast for small holes",
+      "Can shape down to ½ mm",
+      "Removes metal on 360°",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Sawing allows cutting very strong objects with precise accuracy. Option A.",
+    "solution": "Advantage of Sawing: \"Sawing allows us to cut very strong objects with precise accuracy.\"\n\nWhy the other options are incorrect:\nOption B is Drilling, Option C is Shaping, Option D is Turning.\n\n* Correct Option: A (Allows us to cut very strong objects with precise accuracy)"
+  },
+  {
+    "id": "aee_am_17",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of sawing?",
+    "options": [
+      "Very dangerous; many accidents if not trained properly (can cut hand/fingers)",
+      "Takes skilled technicians only when it breaks",
+      "Temperatures affect it",
+      "Takes a lot of training and expensive",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Sawing is very dangerous; many accidents if not trained. Option A.",
+    "solution": "Disadvantage of Sawing: \"Sawing often can be seen as very dangerous. If you are not trained properly you can cut your hand or fingers. There are many accidents associated with sawing.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Drilling, Option D is Milling.\n\n* Correct Option: A (Very dangerous; many accidents if not trained properly (can cut hand/fingers))"
+  },
+  {
+    "id": "aee_am_18",
+    "topicId": "advanced-manufacturing",
+    "question": "What is robot welding?",
+    "options": [
+      "Use of mechanized programmable tools (robots) which completely automate a welding process by both performing the weld and handling the part",
+      "Manual welding by a human",
+      "Cutting with a chisel",
+      "Drilling holes",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Robot welding uses programmable robots to completely automate welding and handling. Option A.",
+    "solution": "Definition: \"Robot welding is the use of mechanized programmable tools (robots), which completely automate a welding process by both performing the weld and handling the part.\"\n\nWhy the other options are incorrect: They describe manual or other processes.\n\n* Correct Option: A (Use of mechanized programmable tools (robots) which completely automate a welding process by both performing the weld and handling the part)"
+  },
+  {
+    "id": "aee_am_19",
+    "topicId": "advanced-manufacturing",
+    "question": "For which welding types is robot welding commonly used in high production, such as automotive industry?",
+    "options": [
+      "Resistance spot welding and arc welding",
+      "Gas welding only",
+      "Friction welding only",
+      "Explosive welding only",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Resistance spot and arc welding in high production like automotive. Option A.",
+    "solution": "Material: \"Robot welding is commonly used for resistance spot welding and arc welding in high production applications, such as the automotive industry.\"\n\nWhy the other options are incorrect: They are not listed as common high-production robotic applications.\n\n* Correct Option: A (Resistance spot welding and arc welding)"
+  },
+  {
+    "id": "aee_am_20",
+    "topicId": "advanced-manufacturing",
+    "question": "When did the use of robots in welding take off in the US automotive industry?",
+    "options": [
+      "1980s when automotive began using robots extensively for spot welding",
+      "1960s when robots were first introduced",
+      "1990s",
+      "2000s",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1980s when automotive began extensive spot welding with robots. Option A.",
+    "solution": "Material: \"The use of robots in welding did not take off until the 1980s, when the automotive industry began using robots extensively for spot welding.\"\n\nNote: Robots were first introduced in US industry during the 1960s, but welding take-off was 1980s.\n\nWhy the other options are incorrect:\nOption B is when robots were first introduced (1960s), not welding take-off.\n\n* Correct Option: A (1980s when automotive began using robots extensively for spot welding)"
+  },
+  {
+    "id": "aee_am_21",
+    "topicId": "advanced-manufacturing",
+    "question": "Which is a listed advantage of robotic welding?",
+    "options": [
+      "Speeds up production and decreases injuries as machines weld faster than humans and reduce worker exposure",
+      "Machines are very cheap",
+      "Has more precision than a good human welder",
+      "No training needed",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Speeds up production and decreases injuries. Option A.",
+    "solution": "Advantages listed:\n\n- Robotic welding allows companies to really speed up production and produce more parts as machines can weld significantly faster than humans.\n- Also decreases the injuries associated with welding, as there is less chance of a worker getting hurt operating a robot rather than welding himself.\n\nWhy the other options are incorrect:\nOption B says very cheap — actually disadvantages list very expensive.\nOption C says more precision — actually disadvantage says less precision than good human welder.\nOption D says no training — actually need training to operate/inspect.\n\n* Correct Option: A (Speeds up production and decreases injuries as machines weld faster than humans and reduce worker exposure)"
+  },
+  {
+    "id": "aee_am_22",
+    "topicId": "advanced-manufacturing",
+    "question": "Which is a listed disadvantage of robotic welding?",
+    "options": [
+      "Machines are very expensive, costly to fix, less precision than good human welder, may create cold welds/pinholes, requires training",
+      "Very cheap and easy to fix",
+      "More precise than human",
+      "No pinholes",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Very expensive, costly to fix, less precision, cold welds/pinholes, needs training. Option A.",
+    "solution": "Disadvantages listed:\n\n- Machines are very expensive, limits companies\n- Costs a lot to have machines fixed when they break\n- Does not have the precision or accuracy that a good human welder would have\n- Sometimes welds may be off line causing a “cold weld”\n- Robots also leave pinholes which need to be fixed by a human\n- Not everyone can operate — should be trained\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Machines are very expensive, costly to fix, less precision than good human welder, may create cold welds/pinholes, requires training)"
   }
 ]
 }
