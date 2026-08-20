@@ -49,3 +49,26 @@ export function loadResults() {
 export function clearResults() {
   localStorage.removeItem(RESULTS_KEY)
 }
+
+const STUDY_KEY = 'cbt_study_v1'
+
+export function saveStudySession(session) {
+  try {
+    localStorage.setItem(STUDY_KEY, JSON.stringify(session))
+  } catch (e) {
+    console.warn('Could not save study session:', e)
+  }
+}
+
+export function loadStudySession() {
+  try {
+    const raw = localStorage.getItem(STUDY_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch (e) {
+    return null
+  }
+}
+
+export function clearStudySession() {
+  localStorage.removeItem(STUDY_KEY)
+}

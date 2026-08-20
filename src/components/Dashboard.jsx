@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { courses } from '../data.js'
 import { getTopics, getQuestionCount, buildQuestionSet } from '../utils.js'
 import { loadSession, clearSession, saveSession } from '../progress.js'
+import { saveStudySession } from '../progress.js'
 
 const DURATIONS = [10, 15, 20, 25, 30, 45, 60, 90]
 const COUNTS = [10, 20, 30, 40, 50, 'all']
@@ -17,6 +18,13 @@ export default function Dashboard() {
   const [duration, setDuration] = useState(25)
   const [count, setCount] = useState(20)
   const [error, setError] = useState('')
+
+  // --- Study Mode state ---
+  const [studyCourseId, setStudyCourseId] = useState(courses.find((c) => c.available)?.id || courses[0].id)
+  const [studyMode, setStudyMode] = useState('full')
+  const [studyTopicId, setStudyTopicId] = useState(null)
+  const [studyCount, setStudyCount] = useState(20)
+  const [studyError, setStudyError] = useState('')
 
   const course = courses.find((c) => c.id === courseId)
   const topics = getTopics(courseId)
@@ -62,6 +70,44 @@ export default function Dashboard() {
     }
     saveSession(session)
     navigate('/test')
+  }
+
+  function startStudy() {
+    setStudyError('')
+    const sc = courses.find((c) => c.id === studyCourseId)
+    if (!sc.available) {
+      setStudyError('This course is coming soon. Please check back later.')
+      return
+    }
+    if (studyMode === 'topic' && !studyTopicId) {
+      setStudyError('Please pick a topic for study mode.')
+      return
+    }
+    const set = buildQuestionSet(studyCourseId, {
+      mode: studyMode,
+      topicId: studyMode === 'topic' ? studyTopicId : null,
+      count: studyCount
+    })
+    if (set.length === 0) {
+      setStudyError('No questions available for this selection.')
+      return
+    }
+    const topicsStudy = getTopics(studyCourseId)
+    const selTopic = topicsStudy.find((t) => t.id === studyTopicId)
+    const studySession = {
+      v: 1,
+      courseId: studyCourseId,
+      courseCode: sc.code,
+      courseTitle: sc.title,
+      topicId: studyMode === 'topic' ? studyTopicId : null,
+      topicName: studyMode === 'topic' ? selTopic?.name : null,
+      mode: studyMode,
+      index: 0,
+      questionSet: set,
+      startedAt: Date.now()
+    }
+    saveStudySession(studySession)
+    navigate('/study')
   }
 
   function resumeExisting() {
@@ -201,6 +247,85 @@ export default function Dashboard() {
 
           <Link to="/" className="btn btn-ghost btn-sm" style={{ marginTop: 24 }}>← Back to home</Link>
         </div>
+      </div>
+
+      {/* -------- STUDY MODE — No timer, immediate explanation, correct pre-ticked, very long explanations -------- */}
+      <div className="card" style={{ marginTop: 24, borderLeft: '4px solid var(--primary)', background: 'linear-gradient(135deg, rgba(37,99,235,0.04), rgba(14,165,233,0.02))' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12, marginBottom: 8 }}>
+          <div>
+            <h2 style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 10 }}>📖 Study Mode <span style={{ fontSize: 12, background: 'var(--primary)', color: '#fff', padding: '4px 10px', borderRadius: 999 }}>NEW</span></h2>
+            <p className="muted" style={{ fontSize: 14, marginTop: 6, maxWidth: 720 }}>
+              The same questions as Test Mode, but <strong>no timer</strong>, <strong>correct answer already ticked in green</strong>, and an immediate <strong>“See Detailed Explanation →”</strong> button. Explanations here are <strong>much longer</strong> than in Test Mode — with extra deep dives, common mistakes, and how to approach similar questions.
+            </p>
+          </div>
+        </div>
+
+        <div className="field">
+          <label>Course for Study Mode</label>
+          <div className="course-select-wrap">
+            <select value={studyCourseId} onChange={(e) => { setStudyCourseId(e.target.value); setStudyTopicId(null); setStudyMode('full') }}>
+              {courses.map((c) => (
+                <option key={c.id} value={c.id}>{c.code} — {c.title}{c.available ? '' : ' (soon)'}</option>
+              ))}
+            </select>
+            <div className="course-pill">
+              <span className="course-dot" style={{ background: courses.find(c=>c.id===studyCourseId)?.accent }} />
+              <span className="muted" style={{ fontSize: 13 }}>{courses.find(c=>c.id===studyCourseId)?.available ? 'Available' : 'Coming soon'}</span>
+            </div>
+          </div>
+          <p className="info-line">{courses.find(c=>c.id===studyCourseId)?.blurb}</p>
+        </div>
+
+        <div className="field">
+          <label>Study scope</label>
+          <div className="tabs">
+            <button className={`tab ${studyMode === 'full' ? 'active' : ''}`} onClick={() => setStudyMode('full')}>All topics (study everything)</button>
+            <button className={`tab ${studyMode === 'topic' ? 'active' : ''}`} onClick={() => setStudyMode('topic')}>One topic only</button>
+          </div>
+        </div>
+
+        {studyMode === 'topic' && (
+          <div className="field">
+            <label>Pick a topic to study</label>
+            <div className="topic-grid">
+              {getTopics(studyCourseId).map((t) => (
+                <button
+                  key={t.id}
+                  className={`topic-chip ${studyTopicId === t.id ? 'selected' : ''}`}
+                  onClick={() => setStudyTopicId(t.id)}
+                >
+                  <div className="t-name">{t.name}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="field">
+          <label>Number of questions to study</label>
+          <select value={studyCount} onChange={(e) => {
+            const v = e.target.value
+            setStudyCount(v === 'all' ? 'all' : Number(v))
+          }}>
+            {[10,20,30,40,50,'all'].map((c) => <option key={String(c)} value={c}>{c === 'all' ? 'All available' : `${c} questions`}</option>)}
+          </select>
+          <p className="info-line" style={{ marginTop: 8 }}>
+            {studyMode === 'topic' && studyTopicId
+              ? <>You’ll study <strong>{getTopics(studyCourseId).find(t=>t.id===studyTopicId)?.name}</strong>: <strong>{getQuestionCount(studyCourseId, studyTopicId)}</strong> available — shown with correct answer pre-ticked.</>
+              : <>You’ll study <strong>{getQuestionCount(studyCourseId)}</strong> questions — each shown with correct answer ticked and a detailed explanation button.</>}
+          </p>
+        </div>
+
+        {studyError && <p style={{ color: 'var(--red)', fontSize: 14, marginTop: 12 }}>{studyError}</p>}
+
+        <div style={{ marginTop: 20 }}>
+          <button className="btn btn-primary btn-lg" onClick={startStudy} style={{ width: '100%', background: 'linear-gradient(135deg, var(--primary), #0ea5e9)' }}>
+            Start Study Mode — No Timer, See Answers Instantly →
+          </button>
+        </div>
+        <p className="hint" style={{ marginTop: 12 }}>
+          💡 Study Mode is for learning, not scoring. No timer, no pressure. Tap <strong>See Detailed Explanation</strong> on any question for the very long, step-by-step breakdown — longer than what you see after submitting a Test.
+        </p>
       </div>
     </div>
   )
