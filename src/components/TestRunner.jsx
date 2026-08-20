@@ -164,6 +164,13 @@ export default function TestRunner() {
           </div>
           <div className="qtext">{q.question}</div>
 
+          {q.image && (
+            <div style={{ margin: '16px 0', padding: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 12, textAlign: 'center' }}>
+              <img src={q.image} alt="Question diagram" style={{ maxWidth: '100%', maxHeight: 320, borderRadius: 8, border: '1px solid var(--border)' }} />
+              <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 8 }}>Diagram for visual understanding — tap to zoom</div>
+            </div>
+          )}
+
           <div className="options">
             {q.options.map((opt, i) => (
               <div

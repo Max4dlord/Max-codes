@@ -2431,7 +2431,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Slag is flux residue on the surface from low heat and slow speed. Option A.",
-    "solution": "Slag is the solidified flux that remains on top of a weld bead.\n\nGiven: Slag is defined as flux residue formed on the surface of the weld.\n\nIdentify the defect: Slag appears as a crust on the weld surface after welding.. Recall its cause: It is caused by low amperage (insufficient heat) and slow travel speed, which prevents the flux from burning off properly.. Match to options: Only Option A describes flux residue with those two causes.\n\nWhy the other options are incorrect:\nOption B describes porosity (holes), not slag.\nOption C describes excessive penetration (wire goes too deep).\nOption D describes undercut (metal melts away from flux).\n\nTip: Remember SLAG = Surface Leftover After Glassy flux — low heat + slow = slag stays.\n\n* Correct Option: A (Flux residue on the weld surface caused by low amperage (heat) and slow speed)"
+    "solution": "Slag is the solidified flux that remains on top of a weld bead.\n\nGiven: Slag is defined as flux residue formed on the surface of the weld.\n\nIdentify the defect: Slag appears as a crust on the weld surface after welding.. Recall its cause: It is caused by low amperage (insufficient heat) and slow travel speed, which prevents the flux from burning off properly.. Match to options: Only Option A describes flux residue with those two causes.\n\nWhy the other options are incorrect:\nOption B describes porosity (holes), not slag.\nOption C describes excessive penetration (wire goes too deep).\nOption D describes undercut (metal melts away from flux).\n\nTip: Remember SLAG = Surface Leftover After Glassy flux — low heat + slow = slag stays.\n\n* Correct Option: A (Flux residue on the weld surface caused by low amperage (heat) and slow speed)",
+    "image": "/images/welding-defects.png"
   },
   {
     "id": "aee_wd_02",
@@ -2446,7 +2447,8 @@ export const questionBank = {
     ],
     "correct": 1,
     "short": "Metal melting away from flux and going too far down is Undercut. Option B.",
-    "solution": "Undercut is a groove melted into the base metal adjacent to the weld that is not filled.\n\nGiven: Description — \"Metal melts away from the flux and it goes too far down into the work piece.\"\n\nRecall definition: Undercut is when the base metal is melted away leaving a groove.. Check causes for undercut: low gas, high amperage, wrong electrode angle, and not properly cleaning grease from the workpiece.. Match to options: Undercut matches exactly.\n\nWhy the other options are incorrect:\nOption A Overlap is excess weld metal flowing onto the base metal without fusing.\nOption C Porosity is holes inside the weld.\nOption D Spatter is small metal droplets splashed around the weld.\n\nTip: UNDERcut = goes UNDER too far — think “cut too deep”.\n\n* Correct Option: B (Undercut)"
+    "solution": "Undercut is a groove melted into the base metal adjacent to the weld that is not filled.\n\nGiven: Description — \"Metal melts away from the flux and it goes too far down into the work piece.\"\n\nRecall definition: Undercut is when the base metal is melted away leaving a groove.. Check causes for undercut: low gas, high amperage, wrong electrode angle, and not properly cleaning grease from the workpiece.. Match to options: Undercut matches exactly.\n\nWhy the other options are incorrect:\nOption A Overlap is excess weld metal flowing onto the base metal without fusing.\nOption C Porosity is holes inside the weld.\nOption D Spatter is small metal droplets splashed around the weld.\n\nTip: UNDERcut = goes UNDER too far — think “cut too deep”.\n\n* Correct Option: B (Undercut)",
+    "image": "/images/welding-defects.png"
   },
   {
     "id": "aee_wd_03",
@@ -2476,7 +2478,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Porosity = holes/voids inside the weld. Option A.",
-    "solution": "Porosity is gas entrapment producing voids.\n\nGiven: Definition — \"Porosity happens when holes are created in the work piece.\"\n\nVisualise: Small spherical holes (pores) trapped inside the solidified weld.. Causes: inexperience, welding too fast, very low gas.. Match: Option A describes holes inside.\n\nWhy the other options are incorrect:\nOption B is slag, Option C is overlap, Option D is excessive reinforcement.\n\n* Correct Option: A (Holes created inside the work piece/weld metal)"
+    "solution": "Porosity is gas entrapment producing voids.\n\nGiven: Definition — \"Porosity happens when holes are created in the work piece.\"\n\nVisualise: Small spherical holes (pores) trapped inside the solidified weld.. Causes: inexperience, welding too fast, very low gas.. Match: Option A describes holes inside.\n\nWhy the other options are incorrect:\nOption B is slag, Option C is overlap, Option D is excessive reinforcement.\n\n* Correct Option: A (Holes created inside the work piece/weld metal)",
+    "image": "/images/welding-defects.png"
   },
   {
     "id": "aee_wd_05",
@@ -2506,7 +2509,8 @@ export const questionBank = {
     ],
     "correct": 1,
     "short": "Welding more than specified (3\" vs 1–2\") and looking ugly is Overlap. Option B.",
-    "solution": "Overlap is depositing excess weld metal beyond the joint, often flowing onto the parent metal without fusion.\n\nGiven: Example — \"The company requires 1″–2″ you weld 3″. You have used too much weld. Will make the piece look ‘ugly’ and also waste material. Caused by welding too long or using too much weld.\"\n\nCompare to definition: Too much weld, beyond specification, ugly appearance, wasteful.\nDistinguish from Underfill (too little, valley) and Excessive Reinforcement (also too much but refers to height/width).\n\nWhy the other options are incorrect:\nOption A Underfill is too little weld (valley).\nOption C Excessive Penetration is too deep, not too wide/long.\nOption D Slag is flux residue.\n\n* Correct Option: B (Overlap)"
+    "solution": "Overlap is depositing excess weld metal beyond the joint, often flowing onto the parent metal without fusion.\n\nGiven: Example — \"The company requires 1″–2″ you weld 3″. You have used too much weld. Will make the piece look ‘ugly’ and also waste material. Caused by welding too long or using too much weld.\"\n\nCompare to definition: Too much weld, beyond specification, ugly appearance, wasteful.\nDistinguish from Underfill (too little, valley) and Excessive Reinforcement (also too much but refers to height/width).\n\nWhy the other options are incorrect:\nOption A Underfill is too little weld (valley).\nOption C Excessive Penetration is too deep, not too wide/long.\nOption D Slag is flux residue.\n\n* Correct Option: B (Overlap)",
+    "image": "/images/welding-defects.png"
   },
   {
     "id": "aee_wd_07",
@@ -2626,7 +2630,8 @@ export const questionBank = {
     ],
     "correct": 1,
     "short": "Spatter creates bumps that must be ground off and has a distinct sound. Option B.",
-    "solution": "Post-weld cleanup clues.\n\nGiven for Spatter: \"You get a 'splash' from the weld material all over the surface... If you do this, you have to grind the spatter off. High Arc Power... You will hear the sound.\"\n\nGrinding indicates small hard bumps — spatter.\nSound cue is unique to spatter in the table.\n\nWhy the other options are incorrect:\nOption A Slag is flux crust, not ground bumps.\nOption C Overlap is excess bead, not small splashes.\nOption D Undercut is a groove.\n\n* Correct Option: B (Spatter)"
+    "solution": "Post-weld cleanup clues.\n\nGiven for Spatter: \"You get a 'splash' from the weld material all over the surface... If you do this, you have to grind the spatter off. High Arc Power... You will hear the sound.\"\n\nGrinding indicates small hard bumps — spatter.\nSound cue is unique to spatter in the table.\n\nWhy the other options are incorrect:\nOption A Slag is flux crust, not ground bumps.\nOption C Overlap is excess bead, not small splashes.\nOption D Undercut is a groove.\n\n* Correct Option: B (Spatter)",
+    "image": "/images/welding-defects.png"
   },
   {
     "id": "aee_wd_15",
@@ -2881,7 +2886,8 @@ export const questionBank = {
     ],
     "correct": 1,
     "short": "Greatest holding power, spotted half length, Rockwell C15 → Cone point. Option B.",
-    "solution": "Cone point is used for permanent location of parts. It develops the greatest axial and torsional holding power when bearing against material of Rockwell C 15 or greater. It is usually spotted in a hole to half its length.\n\nWhy the other options are incorrect:\nOption A Flat has lower holding, for frequent resetting.\nOption C Oval has lowest holding power.\nOption D Half Dog is for permanent location but requires drilled hole matching point diameter.\n\n* Correct Option: B (Cone point)"
+    "solution": "Cone point is used for permanent location of parts. It develops the greatest axial and torsional holding power when bearing against material of Rockwell C 15 or greater. It is usually spotted in a hole to half its length.\n\nWhy the other options are incorrect:\nOption A Flat has lower holding, for frequent resetting.\nOption C Oval has lowest holding power.\nOption D Half Dog is for permanent location but requires drilled hole matching point diameter.\n\n* Correct Option: B (Cone point)",
+    "image": "/images/taper-pin.png"
   },
   {
     "id": "aee_fast_10",
@@ -2896,7 +2902,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Sheet metal up to 18 gage, pierced holes, sharp point → Type AB. Option A.",
-    "solution": "Type AB thread-forming screws are for sheet metal up to 18 gage, resin-impregnated plywood, wood and asbestos compositions. Used in pierced or punched holes where a sharp point for starting is needed. Joint strength can be increased with pilot holes less than root diameter. Fast driving.\n\nWhy the other options are incorrect:\nOption B Type B is for heavy-gage sheetmetal where pilot hole is larger than root diameter.\nOption C Type C makes a chip-free assembly but needs high torque.\nOption D BP is for locating/piercing soft materials.\n\n* Correct Option: A (AB)"
+    "solution": "Type AB thread-forming screws are for sheet metal up to 18 gage, resin-impregnated plywood, wood and asbestos compositions. Used in pierced or punched holes where a sharp point for starting is needed. Joint strength can be increased with pilot holes less than root diameter. Fast driving.\n\nWhy the other options are incorrect:\nOption B Type B is for heavy-gage sheetmetal where pilot hole is larger than root diameter.\nOption C Type C makes a chip-free assembly but needs high torque.\nOption D BP is for locating/piercing soft materials.\n\n* Correct Option: A (AB)",
+    "image": "/images/taper-pin.png"
   },
   {
     "id": "aee_fast_11",
@@ -3270,7 +3277,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Hardy (hardy hole) with hot cutter is used to cut metal on anvil. Option A.",
-    "solution": "Material: \"ANVIL HARDY — Figure 14-4. The hardy is used to cut hot or cold metal on the anvil.\" and \"CUTTING METAL IN AN ANVIL — Use the hot cutter and hardy...\"\n\nWhy the other options are incorrect:\nOption B Horn is for bending curves.\nOption C Face is the flat top.\nOption D Base is the bottom.\n\n* Correct Option: A (Hardy)"
+    "solution": "Material: \"ANVIL HARDY — Figure 14-4. The hardy is used to cut hot or cold metal on the anvil.\" and \"CUTTING METAL IN AN ANVIL — Use the hot cutter and hardy...\"\n\nWhy the other options are incorrect:\nOption B Horn is for bending curves.\nOption C Face is the flat top.\nOption D Base is the bottom.\n\n* Correct Option: A (Hardy)",
+    "image": "/images/anvil-diagram.png"
   },
   {
     "id": "aee_hm_15",
@@ -3285,7 +3293,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Blacksmith's tongs have curved lip, flat lip, gad for hot metal. Option A.",
-    "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)"
+    "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)",
+    "image": "/images/anvil-diagram.png"
   },
   {
     "id": "aee_cm_01",
@@ -3360,7 +3369,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "14 TPI for 1\" and over. Option A.",
-    "solution": "Table 5-1 Hack-Saw Blades:\n\n* 14 TPI — 1\" and over — Cast iron, machine steel, brass, copper, aluminum\n* 18 TPI — 1/4\"-1\" — Annealed tool steel...\n* 24 TPI — 1/8\"-1/4\"\n* 32 TPI — 1/8\" and less\n\nSo for 1\" and over, use 14 TPI.\n\nWhy the other options are incorrect:\nOption B 18 TPI is for 1/4\"-1\", Option C 24 TPI for 1/8\"-1/4\", Option D 32 TPI for 1/8\" and less.\n\n* Correct Option: A (14 TPI)"
+    "solution": "Table 5-1 Hack-Saw Blades:\n\n* 14 TPI — 1\" and over — Cast iron, machine steel, brass, copper, aluminum\n* 18 TPI — 1/4\"-1\" — Annealed tool steel...\n* 24 TPI — 1/8\"-1/4\"\n* 32 TPI — 1/8\" and less\n\nSo for 1\" and over, use 14 TPI.\n\nWhy the other options are incorrect:\nOption B 18 TPI is for 1/4\"-1\", Option C 24 TPI for 1/8\"-1/4\", Option D 32 TPI for 1/8\" and less.\n\n* Correct Option: A (14 TPI)",
+    "image": "/images/hacksaw-tpi.png"
   },
   {
     "id": "aee_cm_06",
@@ -3375,7 +3385,8 @@ export const questionBank = {
     ],
     "correct": 1,
     "short": "18 TPI for 1/4\"-1\". Option B.",
-    "solution": "Table: 18 TPI — 1/4\"-1\" — Annealed tool steel, high-speed steel, rails, bronze, copper, aluminum.\n\nWhy the other options are incorrect:\nOption A 14 TPI is for 1\" and over, Option C 24 TPI for 1/8\"-1/4\".\n\n* Correct Option: B (18 TPI)"
+    "solution": "Table: 18 TPI — 1/4\"-1\" — Annealed tool steel, high-speed steel, rails, bronze, copper, aluminum.\n\nWhy the other options are incorrect:\nOption A 14 TPI is for 1\" and over, Option C 24 TPI for 1/8\"-1/4\".\n\n* Correct Option: B (18 TPI)",
+    "image": "/images/hacksaw-tpi.png"
   },
   {
     "id": "aee_cm_07",
@@ -3390,7 +3401,8 @@ export const questionBank = {
     ],
     "correct": 2,
     "short": "24 TPI for 1/8\"-1/4\". Option C.",
-    "solution": "Table: 24 TPI — 1/8\"-1/4\" — Iron, steel, drill rod, brass and copper tubing, wrought-Iron pipe, conduit, trim.\n\nWhy the other options are incorrect:\nOption A 14 for 1\" and over, Option B 18 for 1/4\"-1\", Option D 32 for 1/8\" and less (though table says same as 24 for same materials, but 24 is primary for that range).\n\n* Correct Option: C (24 TPI)"
+    "solution": "Table: 24 TPI — 1/8\"-1/4\" — Iron, steel, drill rod, brass and copper tubing, wrought-Iron pipe, conduit, trim.\n\nWhy the other options are incorrect:\nOption A 14 for 1\" and over, Option B 18 for 1/4\"-1\", Option D 32 for 1/8\" and less (though table says same as 24 for same materials, but 24 is primary for that range).\n\n* Correct Option: C (24 TPI)",
+    "image": "/images/hacksaw-tpi.png"
   },
   {
     "id": "aee_cm_08",
@@ -3405,7 +3417,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "At least three teeth must contact the metal. Option A.",
-    "solution": "Figure 11-4. Three teeth must contact the metal to avoid breaking the blade. Shown as Too coarse (few teeth contact → breaks), Too fine (many contact → inefficient), OK (three contact).\n\nWhy the other options are incorrect:\nThey misstate the rule.\n\n* Correct Option: A (At least three teeth must contact the metal to avoid breaking the blade)"
+    "solution": "Figure 11-4. Three teeth must contact the metal to avoid breaking the blade. Shown as Too coarse (few teeth contact → breaks), Too fine (many contact → inefficient), OK (three contact).\n\nWhy the other options are incorrect:\nThey misstate the rule.\n\n* Correct Option: A (At least three teeth must contact the metal to avoid breaking the blade)",
+    "image": "/images/hacksaw-tpi.png"
   },
   {
     "id": "aee_cm_09",
@@ -5003,7 +5016,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Jig holds, supports, locates and guides the cutting tool. Option A.",
-    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece and guides the cutting tool for a specific operation. Jigs are usually fitted with hardened steel bushings for guiding cutting tools.\"\n\nWhy the other options are incorrect:\nOption B describes a Fixture (holds/supports/locates but does not guide).\nOption C and D are incomplete.\n\n* Correct Option: A (Holds, supports, locates the work piece and guides the cutting tool)"
+    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece and guides the cutting tool for a specific operation. Jigs are usually fitted with hardened steel bushings for guiding cutting tools.\"\n\nWhy the other options are incorrect:\nOption B describes a Fixture (holds/supports/locates but does not guide).\nOption C and D are incomplete.\n\n* Correct Option: A (Holds, supports, locates the work piece and guides the cutting tool)",
+    "image": "/images/jig-vs-fixture.png"
   },
   {
     "id": "aee_jf_04",
@@ -5018,7 +5032,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Fixture holds, supports, locates but does not guide the tool; provides reference surface. Option A.",
-    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece for a specific operation but does not guide the cutting tool. It provides only a reference surface or a device. What makes a fixture unique is that each one is built to fit a particular part or shape.\"\n\nExamples: Vises, chucks.\n\nWhy the other options are incorrect:\nOption B describes a Jig.\n\n* Correct Option: A (Holds, supports, locates the work piece but does not guide the cutting tool, provides reference surface)"
+    "solution": "Definition: \"It is a work holding device that holds, supports and locates the workpiece for a specific operation but does not guide the cutting tool. It provides only a reference surface or a device. What makes a fixture unique is that each one is built to fit a particular part or shape.\"\n\nExamples: Vises, chucks.\n\nWhy the other options are incorrect:\nOption B describes a Jig.\n\n* Correct Option: A (Holds, supports, locates the work piece but does not guide the cutting tool, provides reference surface)",
+    "image": "/images/jig-vs-fixture.png"
   },
   {
     "id": "aee_jf_05",
@@ -5033,7 +5048,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Jigs not clamped unless large; Fixtures should be securely clamped. Option A.",
-    "solution": "Table How do jigs and fixtures differ:\n\n* JIGS 2. Jigs are not clamped to the drill press table unless large diameters to be drilled and there is necessity to move the jig to bring each bush directly under the drill.\n* FIXTURES 2. Fixtures should be securely clamped to the table of the machine upon which the work is done.\n\nWhy the other options are incorrect: They contradict the table.\n\n* Correct Option: A (Jigs are not clamped unless large diameters; Fixtures should be securely clamped)"
+    "solution": "Table How do jigs and fixtures differ:\n\n* JIGS 2. Jigs are not clamped to the drill press table unless large diameters to be drilled and there is necessity to move the jig to bring each bush directly under the drill.\n* FIXTURES 2. Fixtures should be securely clamped to the table of the machine upon which the work is done.\n\nWhy the other options are incorrect: They contradict the table.\n\n* Correct Option: A (Jigs are not clamped unless large diameters; Fixtures should be securely clamped)",
+    "image": "/images/jig-vs-fixture.png"
   },
   {
     "id": "aee_jf_06",
@@ -5048,7 +5064,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Jigs for drilling/reaming/tapping/boring; Fixtures for milling/shapers/slotting. Option A.",
-    "solution": "Table:\n\n* JIGS 3. The jigs are special tools particularly in drilling, reaming, tapping and boring operation.\n* FIXTURES 3. Fixtures are specific tools used particularly in milling machine, shapers and slotting machine.\n\nWhy the other options are incorrect: They swap or generalize.\n\n* Correct Option: A (Jigs for drilling, reaming, tapping, boring; Fixtures for milling, shapers, slotting)"
+    "solution": "Table:\n\n* JIGS 3. The jigs are special tools particularly in drilling, reaming, tapping and boring operation.\n* FIXTURES 3. Fixtures are specific tools used particularly in milling machine, shapers and slotting machine.\n\nWhy the other options are incorrect: They swap or generalize.\n\n* Correct Option: A (Jigs for drilling, reaming, tapping, boring; Fixtures for milling, shapers, slotting)",
+    "image": "/images/jig-vs-fixture.png"
   },
   {
     "id": "aee_jf_07",
@@ -5063,7 +5080,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Fixtures are heavier; Jigs are lighter. Option A.",
-    "solution": "Table:\n\n* JIGS 5. Lighter in construction.\n* FIXTURES 5. Heavier in construction.\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Fixtures are heavier than jigs)"
+    "solution": "Table:\n\n* JIGS 5. Lighter in construction.\n* FIXTURES 5. Heavier in construction.\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Fixtures are heavier than jigs)",
+    "image": "/images/jig-vs-fixture.png"
   },
   {
     "id": "aee_jf_08",
@@ -5858,7 +5876,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Blue 5700°C, White inner 3200°C, Red intermediate 2500°C, Outer 1275°C. Option A.",
-    "solution": "Diagram shows: Temp: 5700°C blue (dies prezone), White inner zone (3200°C), Red intermediate zone (2500°C), Outer (1275°C) / Blue outer zone Secondary combustion.\n\nWhy the other options are incorrect: They list single temperature.\n\n* Correct Option: A (5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer)"
+    "solution": "Diagram shows: Temp: 5700°C blue (dies prezone), White inner zone (3200°C), Red intermediate zone (2500°C), Outer (1275°C) / Blue outer zone Secondary combustion.\n\nWhy the other options are incorrect: They list single temperature.\n\n* Correct Option: A (5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer)",
+    "image": "/images/flame-zones.png"
   },
   {
     "id": "aee_mj_07",
@@ -5873,7 +5892,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "1:1 gives neutral flame (Blue outer). Option A.",
-    "solution": "Text: \"In ratio 1:1, a neutral flame is produced (Blue outer) zone Secondary combustion.\"\n\nWhy the other options are incorrect:\nOption B 70:30 is reducing/carbonizing flame.\n\n* Correct Option: A (1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone))"
+    "solution": "Text: \"In ratio 1:1, a neutral flame is produced (Blue outer) zone Secondary combustion.\"\n\nWhy the other options are incorrect:\nOption B 70:30 is reducing/carbonizing flame.\n\n* Correct Option: A (1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone))",
+    "image": "/images/flame-zones.png"
   },
   {
     "id": "aee_mj_08",
@@ -5888,7 +5908,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Carburizing/Reducing flame has excess acetylene (70:30) for Ni, Cr alloys. Option A.",
-    "solution": "Text:\n* The kind of flame which contains excess of acetylene gas than oxygen is called Combusting/Carburizing flame.\n* This kind of flame is used to weld alloys of steel like Nickel, Chromium etc.\n\nAnd: Reducing flame - Carbonizing flame produced when volume of acetylene is 70:30, produces 3 distinct zone.\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C Oxidizing has excess oxygen.\n\n* Correct Option: A (Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones))"
+    "solution": "Text:\n* The kind of flame which contains excess of acetylene gas than oxygen is called Combusting/Carburizing flame.\n* This kind of flame is used to weld alloys of steel like Nickel, Chromium etc.\n\nAnd: Reducing flame - Carbonizing flame produced when volume of acetylene is 70:30, produces 3 distinct zone.\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C Oxidizing has excess oxygen.\n\n* Correct Option: A (Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones))",
+    "image": "/images/flame-zones.png"
   },
   {
     "id": "aee_mj_09",
@@ -5903,7 +5924,8 @@ export const questionBank = {
     ],
     "correct": 0,
     "short": "Oxidizing flame has excess oxygen and is used for brazing. Option A.",
-    "solution": "Text: \"The flame which contains excess of oxygen is called Oxidising flame. This kind of flame is used for brazing.\"\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C has excess acetylene.\n\n* Correct Option: A (Oxidizing flame)"
+    "solution": "Text: \"The flame which contains excess of oxygen is called Oxidising flame. This kind of flame is used for brazing.\"\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C has excess acetylene.\n\n* Correct Option: A (Oxidizing flame)",
+    "image": "/images/flame-zones.png"
   },
   {
     "id": "aee_mj_10",
