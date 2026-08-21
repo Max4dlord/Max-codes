@@ -109,6 +109,27 @@ Everything lives in **`src/data.js`**. Each question is one object:
 
 ---
 
+## 🔐 Access gate (join → unlock)
+
+The app is normally locked behind a gate: visitors follow your WhatsApp
+channel (and any other tasks you add) and enter an **access code** that you
+post in the channel. Everything is configured in **`src/gateConfig.js`**:
+
+- `enabled` — set to `false` to open the app to everyone instantly.
+- `code` — the access code students must enter (currently `Maxprep3060`).
+- `accessVersion` — bump this number whenever you change the code; every
+  stored unlock becomes invalid and users must re-verify.
+- `tasks` — the list of steps users must complete. Adding a task is just
+  adding one object (examples are included in the file).
+
+An unlock is saved in the visitor's browser and stays valid until you bump
+`accessVersion` — no expiry by default.
+
+> For a hard lock (e.g. during maintenance or exams), enable **Vercel
+> Deployment Protection → Password Protection** in the Vercel dashboard.
+
+---
+
 ## 🛣️ Possible next steps
 
 - CSV/JSON bulk importer for past questions.

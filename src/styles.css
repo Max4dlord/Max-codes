@@ -333,3 +333,77 @@ select:focus, input:focus { outline: none; border-color: var(--primary); box-sha
 .center { text-align: center; }
 .mt-0 { margin-top: 0; } .mb-0 { margin-bottom: 0; }
 .flex { display: flex; } .gap-8 { gap: 8px; } .items-center { align-items: center; }
+
+/* ===========================================================================
+   Access Gate (join → unlock)
+   =========================================================================== */
+.gate-shell {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px 16px;
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(37,99,235,0.14), transparent 60%),
+              radial-gradient(900px 500px at 0% 0%, rgba(14,165,233,0.12), transparent 55%),
+              var(--bg);
+}
+.gate-card {
+  width: min(560px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  padding: 36px 32px;
+}
+.gate-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.gate-brand .nav-logo {
+  width: 40px; height: 40px; border-radius: 11px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
+}
+.gate-brand-name { font-size: 17px; font-weight: 700; color: var(--text); }
+.gate-brand-name em { color: var(--muted); font-style: normal; font-weight: 500; }
+.gate-card h1 { font-size: 26px; margin: 0 0 8px; }
+.gate-sub { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+
+.gate-steps { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.gate-step {
+  border: 1px solid var(--border); background: var(--card-2);
+  border-radius: 14px; padding: 16px;
+}
+.gate-step-head { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.gate-step-no {
+  flex: 0 0 26px; height: 26px; border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff; font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; margin-top: 2px;
+}
+.gate-step-label { font-weight: 700; font-size: 15px; color: var(--text); }
+.gate-step-desc { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.gate-step-actions { display: flex; flex-direction: column; gap: 10px; padding-left: 38px; }
+
+.gate-btn-wa {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff; border: none; text-align: center; font-weight: 700;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.30);
+}
+.gate-btn-wa:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(34,197,94,0.38); color: #fff; }
+
+.gate-check {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 14px; color: var(--text); cursor: pointer; user-select: none;
+}
+.gate-check input { width: 17px; height: 17px; accent-color: var(--primary); cursor: pointer; }
+.gate-check.checked span { color: var(--green); font-weight: 600; }
+
+.gate-code { margin-bottom: 14px; }
+.gate-code label { display: block; font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+.gate-input {
+  width: 100%; padding: 13px 16px; font-size: 16px;
+  border: 1.5px solid var(--border); border-radius: 12px; background: var(--card);
+  color: var(--text); letter-spacing: 0.02em;
+}
+.gate-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+
+.gate-error { color: var(--red); font-size: 14px; margin: 0 0 12px; font-weight: 600; }
+.gate-unlock { width: 100%; }
+.gate-note { font-size: 12.5px; color: var(--muted-2); text-align: center; margin: 16px 0 0; }

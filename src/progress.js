@@ -72,3 +72,38 @@ export function loadStudySession() {
 export function clearStudySession() {
   localStorage.removeItem(STUDY_KEY)
 }
+
+// ---------------------------------------------------------------------------
+// Access-gate helpers. An unlock is stored as { version, unlockedAt }.
+// It stays valid until the gateConfig.accessVersion is bumped (or the user
+// clears site data), so changing the access code + bumping the version is
+// how you force everyone to re-verify.
+// ---------------------------------------------------------------------------
+
+const GATE_KEY = 'cbt_gate_v1'
+
+export function saveUnlock(version) {
+  try {
+    localStorage.setItem(GATE_KEY, JSON.stringify({ version, unlockedAt: Date.now() }))
+  } catch (e) {
+    console.warn('Could not save gate unlock:', e)
+  }
+}
+
+export function loadUnlock() {
+  try {
+    const raw = localStorage.getItem(GATE_KEY)
+    return raw ? JSON.parse(raw) : null
+  } catch (e) {
+    return null
+  }
+}
+
+export function clearUnlock() {
+  localStorage.removeItem(GATE_KEY)
+}
+
+export function isUnlocked(version) {
+  const u = loadUnlock()
+  return !!u && u.version === version
+}
