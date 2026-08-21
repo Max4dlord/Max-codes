@@ -6,7 +6,7 @@ export const courses = [
     "id": "aee202",
     "code": "AEE 202",
     "title": "Agricultural Engineering",
-    "blurb": "Workshop practice for agricultural engineers, organised in 3 main categories: Shared Drive materials, Actual past questions, and First Shared Slide materials — covering welding, metal working, fasteners, machine operations and workshop safety.",
+    "blurb": "Workshop practice for agricultural engineers, organised in 3 main categories: Shared Drive materials, Actual past questions, and First Shared Slide materials — covering welding, metal working, fasteners, machine operations, workshop safety, plus the centre lathe, shapers & planers, drilling, milling and grinding.",
     "accent": "#0ea5e9",
     "available": true
   },
@@ -123,6 +123,32 @@ export const topicMeta = {
       "id": "workshop-safety",
       "name": "Workshop Safety & Hazards",
       "categoryId": "shared-drive"
+    }
+  ,
+    {
+      "id": "fs-centre-lathe",
+      "name": "Centre Lathe & Lathe Operations",
+      "categoryId": "first-slides"
+    },
+    {
+      "id": "fs-shapers-planers",
+      "name": "Shapers & Planers",
+      "categoryId": "first-slides"
+    },
+    {
+      "id": "fs-drilling",
+      "name": "Drilling Machines",
+      "categoryId": "first-slides"
+    },
+    {
+      "id": "fs-milling",
+      "name": "Milling Process",
+      "categoryId": "first-slides"
+    },
+    {
+      "id": "fs-grinding",
+      "name": "Grinding Process",
+      "categoryId": "first-slides"
     }
   ]
 }
@@ -3922,6 +3948,1507 @@ export const questionBank = {
     "correct": 0,
     "short": "Water conducts electricity, electricity kills/burns, don’t attempt repair if not competent. Option A.",
     "solution": "Care of Electrical Apparatus: Electricity kills and burns. Beware, water conducts electricity.\n\nDo not attempt elect competent to do so ical repair if you are not (electrical repair if you are not competent).\n\nWhy the other options are incorrect: They are unsafe.\n\n* Correct Option: A (Electricity kills and burns. Beware, water conducts electricity. Do not attempt electrical repair if not competent)"
+  }
+,
+  {
+    "id": "aee_fs_lat_01",
+    "topicId": "fs-centre-lathe",
+    "question": "A job rotates at 200 r.p.m. and the feed is 0.25 mm/rev. The feed per minute is __________.",
+    "options": [
+      "0.00125 mm",
+      "50 mm",
+      "800 mm",
+      "200.25 mm",
+      "40 mm"
+    ],
+    "correct": 1,
+    "short": "Feed per minute = N × feed/rev = 200 × 0.",
+    "solution": "Feed per minute = N × feed/rev = 200 × 0.25 = 50 mm/min, as per the slide: “feed per minute will be N × feed/revolution (mm)”.\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_02",
+    "topicId": "fs-centre-lathe",
+    "question": "A 50 mm diameter job is to be turned down to 45 mm diameter. If the depth of cut is 1.25 mm per pass, the number of passes required is __________.",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "5",
+      "10"
+    ],
+    "correct": 1,
+    "short": "Reduction in diameter = 50 − 45 = 5 mm, i.",
+    "solution": "Reduction in diameter = 50 − 45 = 5 mm, i.e. a reduction of 2.5 mm on the radius. Number of passes = 2.5 ÷ 1.25 = 2 passes (each pass removes 1.25 mm from the radius).\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_03",
+    "topicId": "fs-centre-lathe",
+    "question": "A mild steel job of 50 mm diameter is to be turned with a high speed steel tool. At about what r.p.m. should the job rotate to give the recommended cutting speed for mild steel? (Take π = 3.14)",
+    "options": [
+      "about 70 r.p.m.",
+      "about 140 r.p.m.",
+      "about 223 r.p.m.",
+      "about 446 r.p.m.",
+      "about 892 r.p.m."
+    ],
+    "correct": 2,
+    "short": "Recommended cutting speed for mild steel with HSS tools = 35 m/min.",
+    "solution": "Recommended cutting speed for mild steel with HSS tools = 35 m/min. From v = πdN: N = v/(πd) = 35/(3.14 × 0.05) = 35/0.157 ≈ 223 r.p.m.\n\n📘 From the First Shared Slide — Cutting Speed & Cutting Fluids:\nThe slide states that the optimum cutting speed depends on the tool material, the material to be cut and whether a cutting fluid is used. Recommended cutting speed for cast iron and mild steel with HSS tools is 35 m/min; with tungsten carbide tools 65–70 m/min may be used; non-ferrous materials allow much higher speeds. Cutting fluid removes heat from the cutting area and lubricates the tool face so chip–tool friction reduces, making the process more efficient and improving tool life and performance."
+  },
+  {
+    "id": "aee_fs_lat_04",
+    "topicId": "fs-centre-lathe",
+    "question": "A taper whose full cone angle is 40° is to be cut by swivelling the compound rest. The compound rest should be swivelled through __________.",
+    "options": [
+      "10°",
+      "20°",
+      "40°",
+      "60°",
+      "80°"
+    ],
+    "correct": 1,
+    "short": "In this method the compound rest is swivelled by the half cone angle (α).",
+    "solution": "In this method the compound rest is swivelled by the half cone angle (α). Half of 40° = 20°.\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_05",
+    "topicId": "fs-centre-lathe",
+    "question": "In screw cutting, if the r.p.m. of the lead screw is half the r.p.m. of the work piece and the pitch of the lead screw is 4 mm, the pitch of the thread cut will be __________.",
+    "options": [
+      "1 mm",
+      "2 mm",
+      "4 mm",
+      "8 mm",
+      "16 mm"
+    ],
+    "correct": 1,
+    "short": "Pitch of threads to be cut = (r.",
+    "solution": "Pitch of threads to be cut = (r.p.m. of lead screw ÷ r.p.m. of workpiece) × pitch of lead screw = ½ × 4 = 2 mm.\n\n📘 From the First Shared Slide — Threading (Screw Cutting):\nThreading cuts threads or helical grooves on the cylindrical surface of the job. The carriage is connected to the lead screw, and the pitch of the threads to be cut equals (r.p.m. of lead screw ÷ r.p.m. of workpiece) × pitch of lead screw — gears give the required ratio. Threads have a standard profile which the tool profile must match. Screw cutting lathes have reversible motors, and the spindle r.p.m. is kept very low for thread cutting."
+  },
+  {
+    "id": "aee_fs_lat_06",
+    "topicId": "fs-centre-lathe",
+    "question": "The main function of a centre lathe is the production of __________.",
+    "options": [
+      "flat surfaces",
+      "gears and splines",
+      "cylindrical surfaces",
+      "slots and grooves",
+      "tapered threads only"
+    ],
+    "correct": 2,
+    "short": "that the main function of the centre lathe “is the production of cylindrical surfaces”.",
+    "solution": "The slide states that the main function of the centre lathe “is the production of cylindrical surfaces”.\n\n📘 From the First Shared Slide — The Centre Lathe:\nThe slide states: “A centre lathe is also called an engine lathe.” It is one of the commonest and oldest machine tools and one of the most versatile and widely used machines; its main function is the production of cylindrical surfaces."
+  },
+  {
+    "id": "aee_fs_lat_07",
+    "topicId": "fs-centre-lathe",
+    "question": "The use of cutting fluid __________.",
+    "options": [
+      "makes the cutting process more efficient",
+      "increases friction at the tool face",
+      "reduces tool life",
+      "must be avoided on the lathe",
+      "raises the cutting temperature"
+    ],
+    "correct": 0,
+    "short": "Use of cutting fluid makes cutting process more efficient.",
+    "solution": "The slide states: “Use of cutting fluid makes cutting process more efficient. Similarly, using recommended cutting speed results in improved tool life and performance.”\n\n📘 From the First Shared Slide — Cutting Speed & Cutting Fluids:\nThe slide states that the optimum cutting speed depends on the tool material, the material to be cut and whether a cutting fluid is used. Recommended cutting speed for cast iron and mild steel with HSS tools is 35 m/min; with tungsten carbide tools 65–70 m/min may be used; non-ferrous materials allow much higher speeds. Cutting fluid removes heat from the cutting area and lubricates the tool face so chip–tool friction reduces, making the process more efficient and improving tool life and performance."
+  },
+  {
+    "id": "aee_fs_lat_08",
+    "topicId": "fs-centre-lathe",
+    "question": "For non-ferrous material, __________.",
+    "options": [
+      "much lower cutting speeds are permissible",
+      "cutting must be done dry",
+      "much higher cutting speeds are permissible",
+      "the same speed as cast iron must be used",
+      "cutting fluid must never be used"
+    ],
+    "correct": 2,
+    "short": "For non-ferrous material, much higher cutting speeds are permissible.",
+    "solution": "The slide states: “For non-ferrous material, much higher cutting speeds are permissible.”\n\n📘 From the First Shared Slide — Cutting Speed & Cutting Fluids:\nThe slide states that the optimum cutting speed depends on the tool material, the material to be cut and whether a cutting fluid is used. Recommended cutting speed for cast iron and mild steel with HSS tools is 35 m/min; with tungsten carbide tools 65–70 m/min may be used; non-ferrous materials allow much higher speeds. Cutting fluid removes heat from the cutting area and lubricates the tool face so chip–tool friction reduces, making the process more efficient and improving tool life and performance."
+  },
+  {
+    "id": "aee_fs_lat_09",
+    "topicId": "fs-centre-lathe",
+    "question": "The top of the machine bed is formed with machined guide ways on which the __________ slides along the length of the lathe.",
+    "options": [
+      "headstock",
+      "carriage",
+      "tailstock spindle",
+      "chuck",
+      "tool post"
+    ],
+    "correct": 1,
+    "short": "The top of the machine bed is formed with machined guide ways on which the carriage slides along the length of the lathe.",
+    "solution": "The slide states: “The top of the machine bed is formed with machined guide ways on which the carriage slides along the length of the lathe.”\n\n📘 From the First Shared Slide — Machine Bed:\nThe machine bed holds or supports all other parts of the lathe. The top of the bed is formed with machined guide ways on which the carriage slides along the length of the lathe."
+  },
+  {
+    "id": "aee_fs_lat_10",
+    "topicId": "fs-centre-lathe",
+    "question": "The driving shaft inside the headstock is driven by __________.",
+    "options": [
+      "a hand crank",
+      "an electric motor",
+      "the lead screw",
+      "the feed shaft",
+      "a steam engine"
+    ],
+    "correct": 1,
+    "short": "The driving shaft inside is driven by an electric motor.",
+    "solution": "The slide states: “The driving shaft inside is driven by an electric motor.”\n\n📘 From the First Shared Slide — Headstock:\nThe headstock is fixed at the extreme left hand of the bed. It contains shafts and gears immersed in lubricating oil; the driving shaft is driven by an electric motor, and the driven shaft (a hollow spindle) can be driven at various r.p.m. by changing gears. A chuck (either three jaw or four jaw) is screwed on this spindle; when the spindle rotates, the chuck and the work piece rotate about the longitudinal axis of the spindle."
+  },
+  {
+    "id": "aee_fs_lat_11",
+    "topicId": "fs-centre-lathe",
+    "question": "The tailstock of a centre lathe is provided at the __________ of the bed.",
+    "options": [
+      "left hand end",
+      "right hand end",
+      "middle",
+      "front face",
+      "top face"
+    ],
+    "correct": 1,
+    "short": "A tailstock is provided at the right hand end of the bed.",
+    "solution": "The slide states: “A tailstock is provided at the right hand end of the bed.” It can slide along the guide ways provided on the bed and can be clamped or fixed to the bed in the desired position.\n\n📘 From the First Shared Slide — Machine Bed:\nThe machine bed holds or supports all other parts of the lathe. The top of the bed is formed with machined guide ways on which the carriage slides along the length of the lathe."
+  },
+  {
+    "id": "aee_fs_lat_12",
+    "topicId": "fs-centre-lathe",
+    "question": "If the centre rotates along with the work piece, it is called a __________.",
+    "options": [
+      "dead centre",
+      "live centre",
+      "fixed centre",
+      "half centre",
+      "pipe centre"
+    ],
+    "correct": 1,
+    "short": "If the centre (being carried in its own bearings) rotates along with the work piece, it is called a live centre.",
+    "solution": "The slide states: “If the centre (being carried in its own bearings) rotates along with the work piece, it is called a live centre.”\n\n📘 From the First Shared Slide — Tailstock:\nThe tailstock is provided at the right hand end of the bed; it slides along the guide ways and can be clamped in the desired position. The axis of its spindle coincides with the axis of the headstock spindle (same height above the bed). The front portion of the tailstock spindle carries a centre (dead centre). If the centre rotates along with the work piece it is called a live centre; if it does not rotate and the work piece alone rotates, it is called a dead centre."
+  },
+  {
+    "id": "aee_fs_lat_13",
+    "topicId": "fs-centre-lathe",
+    "question": "The traversing motion of the carriage at different speeds can be given automatically by engaging into the __________.",
+    "options": [
+      "chuck",
+      "tailstock spindle",
+      "feed rod or feed shaft",
+      "compound rest hand wheel",
+      "motor coupling only"
+    ],
+    "correct": 2,
+    "short": "that the traversing motion “can also be imparted at different speeds automatically by engaging into the feed rod or feed shaft”.",
+    "solution": "The slide states that the traversing motion “can also be imparted at different speeds automatically by engaging into the feed rod or feed shaft”.\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_14",
+    "topicId": "fs-centre-lathe",
+    "question": "The angle of rotation of the compound rest can be read off on a __________.",
+    "options": [
+      "vernier caliper",
+      "micrometer",
+      "protractor",
+      "dial gauge",
+      "steel rule only"
+    ],
+    "correct": 2,
+    "short": "Its angle of rotation can be read off on a protractor.",
+    "solution": "The slide states: “Its angle of rotation can be read off on a protractor.”\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_15",
+    "topicId": "fs-centre-lathe",
+    "question": "The gears, clutches and other mechanism required for giving movement to the carriage and cross slide are hidden from view by means of an __________.",
+    "options": [
+      "saddle",
+      "apron",
+      "end cover",
+      "oil seal",
+      "housing"
+    ],
+    "correct": 1,
+    "short": "that these mechanisms are “hidden from view by means of an apron (thin steel plate) screwed upon the front face of the carriage”.",
+    "solution": "The slide states that these mechanisms are “hidden from view by means of an apron (thin steel plate) screwed upon the front face of the carriage”.\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_16",
+    "topicId": "fs-centre-lathe",
+    "question": "The lead screw is used during the __________ operation.",
+    "options": [
+      "plain turning",
+      "facing",
+      "screw cutting",
+      "knurling",
+      "drilling"
+    ],
+    "correct": 2,
+    "short": "Lead screw is also used during the screw cutting operation.",
+    "solution": "The slide states: “Lead screw is also used during the screw cutting operation. Feed shaft is used in other operations like turning.”\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_17",
+    "topicId": "fs-centre-lathe",
+    "question": "The size of a lathe is specified by the __________.",
+    "options": [
+      "length of the machine bed",
+      "diameter of the chuck",
+      "distance between headstock chuck and tailstock centre",
+      "weight of the machine",
+      "power of the motor"
+    ],
+    "correct": 2,
+    "short": "The size of a lathe is specified by the distance between headstock chuck to tailstock centre.",
+    "solution": "The slide states: “The size of a lathe is specified by the distance between headstock chuck to tailstock centre. This is the length of the longest job which can be accommodated or machined on the lathe.”\n\n📘 From the First Shared Slide — Headstock:\nThe headstock is fixed at the extreme left hand of the bed. It contains shafts and gears immersed in lubricating oil; the driving shaft is driven by an electric motor, and the driven shaft (a hollow spindle) can be driven at various r.p.m. by changing gears. A chuck (either three jaw or four jaw) is screwed on this spindle; when the spindle rotates, the chuck and the work piece rotate about the longitudinal axis of the spindle."
+  },
+  {
+    "id": "aee_fs_lat_18",
+    "topicId": "fs-centre-lathe",
+    "question": "When a component is manufactured out of a long bar, the bar passes through __________.",
+    "options": [
+      "the tailstock spindle",
+      "the hollow spindle of the headstock",
+      "the cross slide",
+      "the apron",
+      "the tool post slide"
+    ],
+    "correct": 1,
+    "short": "If a component is manufactured out of a long bar, the bar passes through the hollow spindle of the headstock, and the required length of bar is pulled out and then clampe",
+    "solution": "The slide states: “If a component is manufactured out of a long bar, the bar passes through the hollow spindle of the headstock, and the required length of bar is pulled out and then clamped in the jaws of the chuck, free end of the bar projecting towards the tailstock end.”\n\n📘 From the First Shared Slide — Headstock:\nThe headstock is fixed at the extreme left hand of the bed. It contains shafts and gears immersed in lubricating oil; the driving shaft is driven by an electric motor, and the driven shaft (a hollow spindle) can be driven at various r.p.m. by changing gears. A chuck (either three jaw or four jaw) is screwed on this spindle; when the spindle rotates, the chuck and the work piece rotate about the longitudinal axis of the spindle."
+  },
+  {
+    "id": "aee_fs_lat_19",
+    "topicId": "fs-centre-lathe",
+    "question": "Which of the following operations is NOT performed on a lathe?",
+    "options": [
+      "Turning",
+      "Facing",
+      "Taper turning",
+      "Shaping",
+      "Knurling"
+    ],
+    "correct": 3,
+    "short": "The slide lists the operations carried out on lathes as turning, facing, taper turning, profile turning or form turning, parting, boring, threading and knurling.",
+    "solution": "The slide lists the operations carried out on lathes as turning, facing, taper turning, profile turning or form turning, parting, boring, threading and knurling. Shaping is performed on a shaping machine (shaper), not on the lathe.\n\n📘 From the First Shared Slide — Facing:\nIn facing, the work piece rotates but the tool is moved across by feeding the cross slide while the carriage is locked in one position. The result is a flat circular section at one end of the cylinder; all lengths are then measured taking this surface as datum during further machining."
+  },
+  {
+    "id": "aee_fs_lat_20",
+    "topicId": "fs-centre-lathe",
+    "question": "In a 4-jaw chuck, each jaw moves __________.",
+    "options": [
+      "together with all other jaws",
+      "radially independent of other jaws",
+      "only through the lead screw",
+      "only simultaneously",
+      "only by gravity"
+    ],
+    "correct": 1,
+    "short": "In a 4-jaws chuck, each jaw moves radially independent of other jaws.",
+    "solution": "The slide states: “In a 4-jaws chuck, each jaw moves radially independent of other jaws.”\n\n📘 From the First Shared Slide — Holding & Centering the Work Piece:\nThe 3-jaw chuck is a self-centering device used for clamping round stock; the 4-jaw chuck clamps irregularly shaped jobs, and each jaw moves radially independent of the other jaws. Centering means the centre line of the work piece coincides with the centre line of the machine spindle."
+  },
+  {
+    "id": "aee_fs_lat_21",
+    "topicId": "fs-centre-lathe",
+    "question": "If d is the diameter of the work piece and N its r.p.m., the cutting speed can be calculated as __________.",
+    "options": [
+      "v = πdN",
+      "v = πd²N",
+      "v = πN/d",
+      "v = dN/π",
+      "v = πd/N"
+    ],
+    "correct": 0,
+    "short": "If d is the diameter … the cutting speed can be calculated as v = πdN.",
+    "solution": "The slide states: “If d is the diameter … the cutting speed can be calculated as v = πdN.”\n\n📘 From the First Shared Slide — Cutting Speed & Cutting Fluids:\nThe slide states that the optimum cutting speed depends on the tool material, the material to be cut and whether a cutting fluid is used. Recommended cutting speed for cast iron and mild steel with HSS tools is 35 m/min; with tungsten carbide tools 65–70 m/min may be used; non-ferrous materials allow much higher speeds. Cutting fluid removes heat from the cutting area and lubricates the tool face so chip–tool friction reduces, making the process more efficient and improving tool life and performance."
+  },
+  {
+    "id": "aee_fs_lat_22",
+    "topicId": "fs-centre-lathe",
+    "question": "In the turning operation, a depth of cut of __________ must be taken.",
+    "options": [
+      "0.1–0.2 mm",
+      "1–1.5 mm",
+      "5–10 mm",
+      "10–15 mm",
+      "25 mm"
+    ],
+    "correct": 1,
+    "short": "The depth of cut of 1–1.5 mm must be taken.",
+    "solution": "The slide states: “The depth of cut of 1–1.5 mm must be taken.”\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_23",
+    "topicId": "fs-centre-lathe",
+    "question": "If the work piece rotates at N r.p.m. and the feed is f mm/rev, the feed per minute will be __________.",
+    "options": [
+      "f/N mm",
+      "N/f mm",
+      "N × f mm",
+      "(N + f) mm",
+      "(f − N) mm"
+    ],
+    "correct": 2,
+    "short": "Since work piece r.p.m. is N, feed per minute will be N × feed/revolution (mm).",
+    "solution": "The slide states: “Since work piece r.p.m. is N, feed per minute will be N × feed/revolution (mm).”\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_24",
+    "topicId": "fs-centre-lathe",
+    "question": "During the facing operation, the carriage is __________.",
+    "options": [
+      "moved continuously",
+      "locked (fixed) in one position",
+      "removed from the bed",
+      "reversed",
+      "lifted off the bed"
+    ],
+    "correct": 1,
+    "short": "The carriage is locked (fixed) in one position.",
+    "solution": "The slide states: “The carriage is locked (fixed) in one position.”\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_25",
+    "topicId": "fs-centre-lathe",
+    "question": "Taper turning means production of a conical surface by __________ in diameter.",
+    "options": [
+      "sudden reduction",
+      "gradual reduction",
+      "sudden increase",
+      "uniform change",
+      "spiral change"
+    ],
+    "correct": 1,
+    "short": "Taper turning means production of a conical surface by gradual reduction in diameter.",
+    "solution": "The slide states: “Taper turning means production of a conical surface by gradual reduction in diameter.”\n\n📘 From the First Shared Slide — Taper Turning:\nTaper turning produces a conical surface by gradual reduction in diameter; the tool must move along a line inclined to the longitudinal axis of the work piece, and the taper is defined by the half angle (α) of the cone. Methods: (1) swivelling the compound rest through the half cone angle and feeding with the compound rest handwheel — accurate conical surface; (2) setting over the tailstock centre at right angles to the machine axis (the tailstock base guide ways have clearance allowing limited lateral shift) — the tool traverses parallel to the machine centre line while the work axis is inclined; suitable for small taper angles because the set over cannot be measured accurately; (3) a taper turning attachment fitted on the backside of the cross slide — accurate production of a wide range of tapers; (4) a form tool whose front profile cuts the taper when plunged — only very short tapers, and the tool profile must be short or the work and tool will vibrate."
+  },
+  {
+    "id": "aee_fs_lat_26",
+    "topicId": "fs-centre-lathe",
+    "question": "In taper turning by swivelling the compound rest, the tool is moved forward by the __________.",
+    "options": [
+      "carriage hand wheel",
+      "compound rest slide hand wheel",
+      "tailstock hand wheel",
+      "lead screw",
+      "feed shaft"
+    ],
+    "correct": 1,
+    "short": "Instead of using the carriage to traverse the tool, the tool is moved forward by the compound rest slide handwheel.",
+    "solution": "The slide states: “Instead of using the carriage to traverse the tool, the tool is moved forward by the compound rest slide handwheel.”\n\n📘 From the First Shared Slide — Carriage, Cross Slide & Compound Rest:\nThe carriage slides along the bed from the tailstock end to the headstock end; its traversing motion is controlled by the hand traversing wheel or automatically by engaging the feed rod/feed shaft. The cross slide moves crosswise at right angles to the bed. Mounted on it is the compound rest (tool post slide), which rotates in a horizontal plane (normal position 0°, parallel to bed); its angle is read on a protractor and it is used in taper turning to set the tool for angular cuts; it moves only manually. The apron hides the gears/clutches. Of the two long shafts, the screwed one is the lead screw (used in screw cutting) and the plain one is the feed shaft (used in other operations like turning); they are engaged one at a time."
+  },
+  {
+    "id": "aee_fs_lat_27",
+    "topicId": "fs-centre-lathe",
+    "question": "In the tailstock set-over method, the tool traverses parallel to the machine centre line but the work piece axis __________.",
+    "options": [
+      "also remains parallel to it",
+      "is inclined with respect to the longitudinal centre line",
+      "is removed from the machine",
+      "becomes vertical",
+      "coincides with the lathe bed"
+    ],
+    "correct": 1,
+    "short": "It should be appreciated that in this case tool will traverse parallel to machine centre line but the work piece axis will be inclined … with respect to the longitudinal",
+    "solution": "The slide states: “It should be appreciated that in this case tool will traverse parallel to machine centre line but the work piece axis will be inclined … with respect to the longitudinal centre line.”\n\n📘 From the First Shared Slide — Tailstock:\nThe tailstock is provided at the right hand end of the bed; it slides along the guide ways and can be clamped in the desired position. The axis of its spindle coincides with the axis of the headstock spindle (same height above the bed). The front portion of the tailstock spindle carries a centre (dead centre). If the centre rotates along with the work piece it is called a live centre; if it does not rotate and the work piece alone rotates, it is called a dead centre."
+  },
+  {
+    "id": "aee_fs_lat_28",
+    "topicId": "fs-centre-lathe",
+    "question": "The taper turning attachment is fitted on the __________ of the cross slide.",
+    "options": [
+      "front side",
+      "backside",
+      "top face",
+      "bottom face",
+      "either side equally"
+    ],
+    "correct": 1,
+    "short": "A taper turning attachment is fitted on the backside of the cross slide.",
+    "solution": "The slide states: “A taper turning attachment is fitted on the backside of the cross slide.”\n\n📘 From the First Shared Slide — Taper Turning:\nTaper turning produces a conical surface by gradual reduction in diameter; the tool must move along a line inclined to the longitudinal axis of the work piece, and the taper is defined by the half angle (α) of the cone. Methods: (1) swivelling the compound rest through the half cone angle and feeding with the compound rest handwheel — accurate conical surface; (2) setting over the tailstock centre at right angles to the machine axis (the tailstock base guide ways have clearance allowing limited lateral shift) — the tool traverses parallel to the machine centre line while the work axis is inclined; suitable for small taper angles because the set over cannot be measured accurately; (3) a taper turning attachment fitted on the backside of the cross slide — accurate production of a wide range of tapers; (4) a form tool whose front profile cuts the taper when plunged — only very short tapers, and the tool profile must be short or the work and tool will vibrate."
+  },
+  {
+    "id": "aee_fs_lat_29",
+    "topicId": "fs-centre-lathe",
+    "question": "Form tools should have a short profile, otherwise __________.",
+    "options": [
+      "the taper becomes inaccurate",
+      "the work piece and the tool tend to vibrate",
+      "the tool breaks immediately",
+      "the motor stops",
+      "the finish becomes mirror-like"
+    ],
+    "correct": 1,
+    "short": "Form tools should have a short profile, otherwise the work piece and the tool tend to vibrate.",
+    "solution": "The slide states: “Form tools should have a short profile, otherwise the work piece and the tool tend to vibrate.”\n\n📘 From the First Shared Slide — Taper Turning:\nTaper turning produces a conical surface by gradual reduction in diameter; the tool must move along a line inclined to the longitudinal axis of the work piece, and the taper is defined by the half angle (α) of the cone. Methods: (1) swivelling the compound rest through the half cone angle and feeding with the compound rest handwheel — accurate conical surface; (2) setting over the tailstock centre at right angles to the machine axis (the tailstock base guide ways have clearance allowing limited lateral shift) — the tool traverses parallel to the machine centre line while the work axis is inclined; suitable for small taper angles because the set over cannot be measured accurately; (3) a taper turning attachment fitted on the backside of the cross slide — accurate production of a wide range of tapers; (4) a form tool whose front profile cuts the taper when plunged — only very short tapers, and the tool profile must be short or the work and tool will vibrate."
+  },
+  {
+    "id": "aee_fs_lat_30",
+    "topicId": "fs-centre-lathe",
+    "question": "During parting, as the tip of the tool reaches the centre line of the job, __________.",
+    "options": [
+      "the job is parted in two pieces",
+      "the job begins to rotate faster",
+      "the tool lifts automatically",
+      "the carriage reverses",
+      "the job expands"
+    ],
+    "correct": 0,
+    "short": "Ultimately, as the tip of tool will reach the centre line of job, the job will be parted in two pieces.",
+    "solution": "The slide states: “Ultimately, as the tip of tool will reach the centre line of job, the job will be parted in two pieces.”\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_31",
+    "topicId": "fs-centre-lathe",
+    "question": "Boring means __________.",
+    "options": [
+      "drilling a fresh hole",
+      "enlarging an existing hole",
+      "cutting a slot",
+      "cutting internal threads",
+      "producing a flat face"
+    ],
+    "correct": 1,
+    "short": "Boring means enlarging an existing hole.",
+    "solution": "The slide states: “Boring means enlarging an existing hole.”\n\n📘 From the First Shared Slide — Boring & Initial Drilling:\nBoring means enlarging an existing hole. For initial drilling the tailstock centre is removed and a drill is inserted in the tailstock spindle; the drill is advanced by the tailstock handwheel and afterwards withdrawn. The boring bar fitted with the tool bit must be smaller in diameter than the hole. Boring is really an internal turning operation, and not being able to see the actual cutting makes it tricky and delicate."
+  },
+  {
+    "id": "aee_fs_lat_32",
+    "topicId": "fs-centre-lathe",
+    "question": "The boring operation is really a/an __________ operation.",
+    "options": [
+      "external turning",
+      "internal turning",
+      "facing",
+      "threading",
+      "parting"
+    ],
+    "correct": 1,
+    "short": "The operation is really an internal turning operation but not being able to see the actual cutting makes the operation tricky and delicate.",
+    "solution": "The slide states: “The operation is really an internal turning operation but not being able to see the actual cutting makes the operation tricky and delicate.”\n\n📘 From the First Shared Slide — Turning Operation:\nThe work piece rotates at a suitable r.p.m. to give the recommended cutting speed; if d is the diameter and N the r.p.m., the cutting speed v = πdN. The tool tip is set at the same height as the job centre; the tool is inserted by the cross slide at the right hand end with a depth of cut of 1–1.5 mm, then traversed right to left by sliding the carriage on the bed. Feed is measured in mm/rev of the work piece, so feed per minute = N × feed/revolution. If the reduction cannot be done in one pass, the tool is brought back and advanced again by 1–1.5 mm; the process repeats until the desired diameter is reached."
+  },
+  {
+    "id": "aee_fs_lat_33",
+    "topicId": "fs-centre-lathe",
+    "question": "In the threading (screw cutting) operation, the carriage is connected to the __________.",
+    "options": [
+      "feed shaft",
+      "lead screw",
+      "spindle",
+      "tailstock",
+      "compound rest"
+    ],
+    "correct": 1,
+    "short": "In this process, the carriage is connected to the lead screw.",
+    "solution": "The slide states: “In this process, the carriage is connected to the lead screw.”\n\n📘 From the First Shared Slide — Threading (Screw Cutting):\nThreading cuts threads or helical grooves on the cylindrical surface of the job. The carriage is connected to the lead screw, and the pitch of the threads to be cut equals (r.p.m. of lead screw ÷ r.p.m. of workpiece) × pitch of lead screw — gears give the required ratio. Threads have a standard profile which the tool profile must match. Screw cutting lathes have reversible motors, and the spindle r.p.m. is kept very low for thread cutting."
+  },
+  {
+    "id": "aee_fs_lat_34",
+    "topicId": "fs-centre-lathe",
+    "question": "For thread cutting, the r.p.m. of the spindle is kept __________.",
+    "options": [
+      "very high",
+      "very low",
+      "constant at 1000 r.p.m.",
+      "at the maximum",
+      "equal to the feed rate"
+    ],
+    "correct": 1,
+    "short": "The r.p.m. of spindle is kept very low for thread cutting.",
+    "solution": "The slide states: “The r.p.m. of spindle is kept very low for thread cutting.”\n\n📘 From the First Shared Slide — Threading (Screw Cutting):\nThreading cuts threads or helical grooves on the cylindrical surface of the job. The carriage is connected to the lead screw, and the pitch of the threads to be cut equals (r.p.m. of lead screw ÷ r.p.m. of workpiece) × pitch of lead screw — gears give the required ratio. Threads have a standard profile which the tool profile must match. Screw cutting lathes have reversible motors, and the spindle r.p.m. is kept very low for thread cutting."
+  },
+  {
+    "id": "aee_fs_lat_35",
+    "topicId": "fs-centre-lathe",
+    "question": "During knurling, as the roller and work piece surface rotate together, the pattern is __________ into the surface of the work piece.",
+    "options": [
+      "painted",
+      "etched",
+      "welded",
+      "bolted",
+      "ground"
+    ],
+    "correct": 1,
+    "short": "As the roller and work piece surface rotate together, the pattern is etched into the surface of the work piece.",
+    "solution": "The slide states: “As the roller and work piece surface rotate together, the pattern is etched into the surface of the work piece.”\n\n📘 From the First Shared Slide — Knurling:\nFor better grip, work pieces are given a shallow diamond shaped pattern on the circumference. The knurling rollers (hardened, with a similar pattern on their surface) are clamped in the tool post and pressed into the rotating work by the cross slide; as roller and work rotate together the pattern is etched into the surface. Accessories and fittings greatly improve the performance and range of work on a lathe."
+  },
+  {
+    "id": "aee_fs_shp_01",
+    "topicId": "fs-shapers-planers",
+    "question": "A job of 150 mm length is to be machined on a shaper. The ram stroke should be adjusted to about __________.",
+    "options": [
+      "150 mm",
+      "180 mm",
+      "215 mm",
+      "300 mm",
+      "450 mm"
+    ],
+    "correct": 2,
+    "short": "The ram stroke is kept about 60–70 mm longer than the job: 150 + 65 = 215 mm (i.",
+    "solution": "The ram stroke is kept about 60–70 mm longer than the job: 150 + 65 = 215 mm (i.e. between 210 and 220 mm).\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_02",
+    "topicId": "fs-shapers-planers",
+    "question": "Shapers and planers are capable of machining __________ flat surfaces.",
+    "options": [
+      "only horizontal",
+      "only vertical",
+      "horizontal, vertical or inclined",
+      "only inclined",
+      "only curved"
+    ],
+    "correct": 2,
+    "short": "They are capable of machining horizontal, vertical or inclined flat surfaces.",
+    "solution": "The slide states: “They are capable of machining horizontal, vertical or inclined flat surfaces.”\n\n📘 From the First Shared Slide — Shapers & Planers — Basics:\nShapers and planers produce flat surfaces (horizontal, vertical or inclined) using single-point cutting tools essentially the same as lathe tools. The cutting tool is subjected to intermittent cuts: it cuts in the forward direction and is idle in the return direction."
+  },
+  {
+    "id": "aee_fs_shp_03",
+    "topicId": "fs-shapers-planers",
+    "question": "The shaper consists of a hollow machine bed made of cast iron; inside the hollow portion is housed the __________.",
+    "options": [
+      "electric motor",
+      "machine drive mechanism (slotted lever quick return mechanism)",
+      "coolant pump",
+      "tool magazine",
+      "gear box only"
+    ],
+    "correct": 1,
+    "short": "Inside the hollow portion the machine drive mechanism is housed.",
+    "solution": "The slide states: “Inside the hollow portion the machine drive mechanism is housed. This mechanism is called slotted lever quick return mechanism.”\n\n📘 From the First Shared Slide — Slotted Lever Quick Return Mechanism:\nBecause useful work is done only in the forward stroke, the mechanism is designed so the return stroke takes much less time than the forward stroke. The crank AB (adjustable length R) rotates at uniform angular speed; the crank pin A is a die block that slides in the slot of the slotted lever OBC, which is pivoted at O and connected to the ram by a short link arm. When the crank rotates clockwise from AB₁ to AB₂ the ram moves forward (left to right), and from AB₂ to AB₁ it returns. The forward stroke time is proportional to angle α and the return stroke time to angle β."
+  },
+  {
+    "id": "aee_fs_shp_04",
+    "topicId": "fs-shapers-planers",
+    "question": "The tool post of the shaper carries a slide operated by a hand wheel, and the entire tool post can be __________.",
+    "options": [
+      "lowered or raised",
+      "removed only",
+      "rotated in the horizontal plane only",
+      "locked permanently",
+      "driven by the motor"
+    ],
+    "correct": 0,
+    "short": "It carries a slide which can be operated by a hand wheel and the entire tool post can be lowered or raised.",
+    "solution": "The slide states: “It carries a slide which can be operated by a hand wheel and the entire tool post can be lowered or raised.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_05",
+    "topicId": "fs-shapers-planers",
+    "question": "The shaper tool is inclined when __________ has to be machined.",
+    "options": [
+      "a flat horizontal surface",
+      "an inclined surface",
+      "a cylindrical surface",
+      "a spherical surface",
+      "a gear"
+    ],
+    "correct": 1,
+    "short": "The tool is inclined when an inclined surface has to be machined.",
+    "solution": "The slide states: “The tool is inclined when an inclined surface has to be machined.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_06",
+    "topicId": "fs-shapers-planers",
+    "question": "The tool of a shaper does useful work (cutting) only in the __________ of the ram.",
+    "options": [
+      "return stroke",
+      "forward stroke",
+      "both strokes equally",
+      "idle stroke",
+      "slow stroke"
+    ],
+    "correct": 1,
+    "short": "The tool does useful work i.e. cutting only in the forward stroke of the ram, it does not cut when it is idle during the return stroke of ram.",
+    "solution": "The slide states: “The tool does useful work i.e. cutting only in the forward stroke of the ram, it does not cut when it is idle during the return stroke of ram.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_07",
+    "topicId": "fs-shapers-planers",
+    "question": "In the slotted lever quick return mechanism, the crank AB is of __________ length.",
+    "options": [
+      "fixed",
+      "adjustable",
+      "infinite",
+      "zero",
+      "negligible"
+    ],
+    "correct": 1,
+    "short": "The crank AB (of adjustable length R) rotates with a uniform angular speed.",
+    "solution": "The slide states: “The crank AB (of adjustable length R) rotates with a uniform angular speed.”\n\n📘 From the First Shared Slide — Slotted Lever Quick Return Mechanism:\nBecause useful work is done only in the forward stroke, the mechanism is designed so the return stroke takes much less time than the forward stroke. The crank AB (adjustable length R) rotates at uniform angular speed; the crank pin A is a die block that slides in the slot of the slotted lever OBC, which is pivoted at O and connected to the ram by a short link arm. When the crank rotates clockwise from AB₁ to AB₂ the ram moves forward (left to right), and from AB₂ to AB₁ it returns. The forward stroke time is proportional to angle α and the return stroke time to angle β."
+  },
+  {
+    "id": "aee_fs_shp_08",
+    "topicId": "fs-shapers-planers",
+    "question": "When the crank AB rotates clockwise from position AB₁ to AB₂, the ram moves __________.",
+    "options": [
+      "backwards",
+      "forward (from left to right)",
+      "downwards",
+      "in a circle",
+      "only slightly"
+    ],
+    "correct": 1,
+    "short": "When the crank AB rotates clockwise from position AB₁ to AB₂ the ram moves forward (from left to right) and when it rotates from position AB₂ to AB₁ the ram returns back",
+    "solution": "The slide states: “When the crank AB rotates clockwise from position AB₁ to AB₂ the ram moves forward (from left to right) and when it rotates from position AB₂ to AB₁ the ram returns back to its original position.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_09",
+    "topicId": "fs-shapers-planers",
+    "question": "Tungsten carbide tools are not preferred for shaping work because of __________.",
+    "options": [
+      "their high cost only",
+      "intermittent cuts",
+      "their weight",
+      "their brittleness in tension",
+      "their colour"
+    ],
+    "correct": 1,
+    "short": "Due to intermittent cuts, tungsten carbide tools are not preferred for shaping work.",
+    "solution": "The slide states: “Due to intermittent cuts, tungsten carbide tools are not preferred for shaping work.”\n\n📘 From the First Shared Slide — Shaper Cutting Tools:\nShaper cutting tools are generally made of H.S.S., either solid or with brazed tips, made sturdy with generous shank and tip sizes because of intermittent cuts. Due to the intermittent cuts, tungsten carbide tools are not preferred for shaping work."
+  },
+  {
+    "id": "aee_fs_shp_10",
+    "topicId": "fs-shapers-planers",
+    "question": "The stroke of the ram can be reduced or increased by altering the length of the __________.",
+    "options": [
+      "slotted lever",
+      "crank AB",
+      "link arm",
+      "rocker arm",
+      "ram"
+    ],
+    "correct": 1,
+    "short": "The stroke can be reduced or increased by altering the length of the crank AB.",
+    "solution": "The slide states: “The stroke can be reduced or increased by altering the length of the crank AB.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_11",
+    "topicId": "fs-shapers-planers",
+    "question": "The depth of cut on a shaper is given by __________.",
+    "options": [
+      "raising the table height",
+      "rotating the hand wheel and lowering the tool slide",
+      "moving the ram",
+      "shifting the table laterally",
+      "swivelling the tool head"
+    ],
+    "correct": 1,
+    "short": "The depth of cut is given by rotating the hand wheel and lowering the tool slide.",
+    "solution": "The slide states: “The depth of cut is given by rotating the hand wheel and lowering the tool slide. Depth of cut is not given by raising the table height.”\n\n📘 From the First Shared Slide — Using the Shaper:\nThe size of a shaper is denoted by the maximum length of stroke of its ram. The stroke is kept about 60–70 mm longer than the job; by changing where the short link arm connects to the ram, the stroke starts 30–35 mm before the job and ends 30–35 mm beyond it. The stroke length is altered by changing the crank AB length. Depth of cut is given by rotating the hand wheel and lowering the tool slide (not by raising the table); table height is set only when fixing the job. Feed is given by shifting the table laterally — manually or automatically — during the return stroke of the ram. Contour cutting calls for simultaneous horizontal table feed and vertical hand feed of the tool, so only a very skilled operator can do it."
+  },
+  {
+    "id": "aee_fs_shp_12",
+    "topicId": "fs-shapers-planers",
+    "question": "On a shaper, the feed is given during the __________ of the ram.",
+    "options": [
+      "forward stroke",
+      "return stroke",
+      "middle of the stroke",
+      "entire stroke",
+      "cutting stroke only"
+    ],
+    "correct": 1,
+    "short": "The feed is given during the return stroke of ram.",
+    "solution": "The slide states: “The feed is given during the return stroke of ram.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_13",
+    "topicId": "fs-shapers-planers",
+    "question": "The fundamental difference between a planer and a shaper is that in a planer, __________.",
+    "options": [
+      "the tool reciprocates and the work is stationary",
+      "the cutting tool remains stationary and the table with the work piece moves past the cutting tool",
+      "both tool and work move",
+      "the work is rotated",
+      "no cutting fluid is used"
+    ],
+    "correct": 1,
+    "short": "The fundamental difference between a planer and shaper is that in a planer, the cutting tool remains stationary and the planer table on which the work piece has been clam",
+    "solution": "The slide states: “The fundamental difference between a planer and shaper is that in a planer, the cutting tool remains stationary and the planer table on which the work piece has been clamped moves past the cutting tool.”\n\n📘 From the First Shared Slide — The Planer:\nA planer machines flat surfaces on work pieces too large and heavy for a shaper table. The fundamental difference: in a planer the cutting tool remains stationary and the table (with the clamped work) moves past the tool; the feed is given to the cutting tool, not the table. The planer can take much heavier cuts and has more than one tool post, so a horizontal and a vertical surface can be machined simultaneously and their squareness is automatically ensured. The cast iron bed has Vee guide ways machined along its length and is grouted in the ground; the table has a long rack in the centre of its width for reciprocating motion and T-slots on top for clamping. A cross rail slides up and down on two vertical columns; usually one or two tool heads are mounted on the cross rail and one side tool head on each column (vertical heads move laterally on the cross rail, side heads move up and down the columns)."
+  },
+  {
+    "id": "aee_fs_shp_14",
+    "topicId": "fs-shapers-planers",
+    "question": "When a horizontal surface and a vertical surface are machined simultaneously on a planer, the __________ of the surfaces is automatically ensured.",
+    "options": [
+      "roughness",
+      "squareness",
+      "roundness",
+      "hardness",
+      "colour"
+    ],
+    "correct": 1,
+    "short": "Sometimes a horizontal surface and a vertical surface are machined simultaneously and the squareness of the surfaces is automatically ensured.",
+    "solution": "The slide states: “Sometimes a horizontal surface and a vertical surface are machined simultaneously and the squareness of the surfaces is automatically ensured.”\n\n📘 From the First Shared Slide — The Planer:\nA planer machines flat surfaces on work pieces too large and heavy for a shaper table. The fundamental difference: in a planer the cutting tool remains stationary and the table (with the clamped work) moves past the tool; the feed is given to the cutting tool, not the table. The planer can take much heavier cuts and has more than one tool post, so a horizontal and a vertical surface can be machined simultaneously and their squareness is automatically ensured. The cast iron bed has Vee guide ways machined along its length and is grouted in the ground; the table has a long rack in the centre of its width for reciprocating motion and T-slots on top for clamping. A cross rail slides up and down on two vertical columns; usually one or two tool heads are mounted on the cross rail and one side tool head on each column (vertical heads move laterally on the cross rail, side heads move up and down the columns)."
+  },
+  {
+    "id": "aee_fs_shp_15",
+    "topicId": "fs-shapers-planers",
+    "question": "The planer table is provided with __________ on its top surface so that the work piece may be clamped securely.",
+    "options": [
+      "T-slots",
+      "Vee ways",
+      "dowels",
+      "magnets",
+      "brackets"
+    ],
+    "correct": 0,
+    "short": "The table is provided with T-slots on its top surface, so that the work piece may be clamped securely on the table.",
+    "solution": "The slide states: “The table is provided with T-slots on its top surface, so that the work piece may be clamped securely on the table.”\n\n📘 From the First Shared Slide — The Planer:\nA planer machines flat surfaces on work pieces too large and heavy for a shaper table. The fundamental difference: in a planer the cutting tool remains stationary and the table (with the clamped work) moves past the tool; the feed is given to the cutting tool, not the table. The planer can take much heavier cuts and has more than one tool post, so a horizontal and a vertical surface can be machined simultaneously and their squareness is automatically ensured. The cast iron bed has Vee guide ways machined along its length and is grouted in the ground; the table has a long rack in the centre of its width for reciprocating motion and T-slots on top for clamping. A cross rail slides up and down on two vertical columns; usually one or two tool heads are mounted on the cross rail and one side tool head on each column (vertical heads move laterally on the cross rail, side heads move up and down the columns)."
+  },
+  {
+    "id": "aee_fs_shp_16",
+    "topicId": "fs-shapers-planers",
+    "question": "Usually __________ tool head(s) is/are mounted on the cross rail of a planer, and one side tool head is mounted on each column.",
+    "options": [
+      "no",
+      "one or two",
+      "exactly four",
+      "six",
+      "ten"
+    ],
+    "correct": 1,
+    "short": "Usually one or two tool posts (tool heads) are mounted on the cross rail and one side tool head is mounted on each column.",
+    "solution": "The slide states: “Usually one or two tool posts (tool heads) are mounted on the cross rail and one side tool head is mounted on each column.”\n\n📘 From the First Shared Slide — Shaper — Principal Parts:\nThe shaper has a hollow cast iron bed that houses the slotted lever quick return mechanism, which drives a horizontal ram reciprocating in guide ways on top of the frame. A tool post is fitted on the front face of the ram; its slide is operated by a hand wheel, the whole tool post can be raised or lowered, and the tool slide can be swivelled in a vertical plane with its inclination read on a scale in degrees (the tool is inclined for inclined surfaces). The table can be raised/lowered and moved horizontally left or right, and a vice holds the work piece. The clapper box, fitted in the tool post, lifts the tool tip during the return stroke so the machined surface is not spoiled."
+  },
+  {
+    "id": "aee_fs_shp_17",
+    "topicId": "fs-shapers-planers",
+    "question": "The length of the planer stroke can be adjusted to suit the length of the work piece by changing the position of the __________.",
+    "options": [
+      "tool heads",
+      "limit switches",
+      "columns",
+      "cross rail",
+      "table T-slots"
+    ],
+    "correct": 1,
+    "short": "The length of the stroke can be adjusted to suit the length of the work piece by changing the position of the limit switches.",
+    "solution": "The slide states: “The length of the stroke can be adjusted to suit the length of the work piece by changing the position of the limit switches.”\n\n📘 From the First Shared Slide — The Planer:\nA planer machines flat surfaces on work pieces too large and heavy for a shaper table. The fundamental difference: in a planer the cutting tool remains stationary and the table (with the clamped work) moves past the tool; the feed is given to the cutting tool, not the table. The planer can take much heavier cuts and has more than one tool post, so a horizontal and a vertical surface can be machined simultaneously and their squareness is automatically ensured. The cast iron bed has Vee guide ways machined along its length and is grouted in the ground; the table has a long rack in the centre of its width for reciprocating motion and T-slots on top for clamping. A cross rail slides up and down on two vertical columns; usually one or two tool heads are mounted on the cross rail and one side tool head on each column (vertical heads move laterally on the cross rail, side heads move up and down the columns)."
+  },
+  {
+    "id": "aee_fs_shp_18",
+    "topicId": "fs-shapers-planers",
+    "question": "In both shapers and planers, it is customary to calculate the cutting speed on the basis of the __________ during the forward (cutting) stroke.",
+    "options": [
+      "maximum speed",
+      "average speed",
+      "minimum speed",
+      "final speed",
+      "idle speed"
+    ],
+    "correct": 1,
+    "short": "It is customary to calculate cutting speed on the basis of average speed during the forward stroke.",
+    "solution": "The slide states: “It is customary to calculate cutting speed on the basis of average speed during the forward stroke.”\n\n📘 From the First Shared Slide — The Planer:\nA planer machines flat surfaces on work pieces too large and heavy for a shaper table. The fundamental difference: in a planer the cutting tool remains stationary and the table (with the clamped work) moves past the tool; the feed is given to the cutting tool, not the table. The planer can take much heavier cuts and has more than one tool post, so a horizontal and a vertical surface can be machined simultaneously and their squareness is automatically ensured. The cast iron bed has Vee guide ways machined along its length and is grouted in the ground; the table has a long rack in the centre of its width for reciprocating motion and T-slots on top for clamping. A cross rail slides up and down on two vertical columns; usually one or two tool heads are mounted on the cross rail and one side tool head on each column (vertical heads move laterally on the cross rail, side heads move up and down the columns)."
+  },
+  {
+    "id": "aee_fs_drl_01",
+    "topicId": "fs-drilling",
+    "question": "For holes up to 12.5 mm in diameter, about __________ of material is left as reaming allowance.",
+    "options": [
+      "0.04 mm",
+      "0.38–0.4 mm",
+      "1.5 mm",
+      "3 mm",
+      "5 mm"
+    ],
+    "correct": 1,
+    "short": "For holes up to 12.5 mm in diameter about 0.",
+    "solution": "The slide states: “For holes up to 12.5 mm in diameter about 0.38–0.4 mm of material is left as reaming allowance.”\n\n📘 From the First Shared Slide — Allied Operations on Drilling Machines:\nCore drilling: holes made in castings by cores are rough and are cleaned with a core drill. Step drilling: more than one diameter is ground on the drill body, saving an extra operation. Counter boring: a flat surface round a hole for a good seating of washer/bolt heads/nuts; the tool's pilot keeps the counterbore concentric with the hole. Counter sinking: a tapered entrance to the hole, cut with a special tool with a pilot. Reaming: sizing and improving the geometry and finish of a drilled hole; hand, machine and shell reamers exist — machine reamers are used with the drilling machine; for holes up to 12.5 mm diameter about 0.38–0.4 mm of material is left as reaming allowance, and a reamer follows the original hole and cannot shift its centre. Tapping: cutting internal threads with a special flexible adapter holding machine taps; a machine tap set has two taps — rough and finish — used in the same order; the spindle r.p.m. is drastically reduced and a good lubricant is used."
+  },
+  {
+    "id": "aee_fs_drl_02",
+    "topicId": "fs-drilling",
+    "question": "In the olden days a flat drill was used for drilling a hole, but these days a __________ is universally used.",
+    "options": [
+      "twist drill",
+      "core drill",
+      "centre drill",
+      "step drill",
+      "spade drill"
+    ],
+    "correct": 0,
+    "short": "In the olden days, a flat drill was used for drilling a hole, but these days a twist drill is universally used.",
+    "solution": "The slide states: “In the olden days, a flat drill was used for drilling a hole, but these days a twist drill is universally used.”\n\n📘 From the First Shared Slide — Drilling & the Twist Drill:\nDrilling means making a hole in a solid metal piece with a rotating tool called a drill. In the olden days a flat drill was used, but now a twist drill is universally used. A twist drill has two cutting edges, hence it is a multiple point cutting tool."
+  },
+  {
+    "id": "aee_fs_drl_03",
+    "topicId": "fs-drilling",
+    "question": "When the tapered sleeve of the drilling machine rotates, the twist drill rotates along with it due to __________.",
+    "options": [
+      "magnetism",
+      "the friction between the two tapered surfaces",
+      "a key and keyway",
+      "a set screw",
+      "a collet"
+    ],
+    "correct": 1,
+    "short": "When the tapered sleeve rotates, the twist drill also rotates along with it due to the friction between the two tapered surfaces.",
+    "solution": "The slide states: “When the tapered sleeve rotates, the twist drill also rotates along with it due to the friction between the two tapered surfaces.”\n\n📘 From the First Shared Slide — Drilling & the Twist Drill:\nDrilling means making a hole in a solid metal piece with a rotating tool called a drill. In the olden days a flat drill was used, but now a twist drill is universally used. A twist drill has two cutting edges, hence it is a multiple point cutting tool."
+  },
+  {
+    "id": "aee_fs_drl_04",
+    "topicId": "fs-drilling",
+    "question": "The angle between the two cutting lips of a twist drill is usually __________.",
+    "options": [
+      "60°",
+      "90°",
+      "118°",
+      "135°",
+      "180°"
+    ],
+    "correct": 2,
+    "short": "The angle between the two cutting lips is usually 118°.",
+    "solution": "The slide states: “The angle between the two cutting lips is usually 118°.”\n\n📘 From the First Shared Slide — Twist Drill Nomenclature & Fitting:\nTwist drills usually have a taper shank fitted into the machine spindle's tapered sleeve of matching taper — when the sleeve rotates, friction between the tapered surfaces rotates the drill. A parallel shank needs a special collet chuck. The drill has two lips at the cutting end; the angle between the two cutting lips is usually 118°. Chips formed at the cutting edges are guided upwards through the helical grooves called flutes, otherwise chips would interfere with cutting."
+  },
+  {
+    "id": "aee_fs_drl_05",
+    "topicId": "fs-drilling",
+    "question": "For rotating the drill and to overcome the resistance in cutting, a __________ is applied to the drill.",
+    "options": [
+      "lateral force",
+      "torque",
+      "bending moment",
+      "tensile force",
+      "shear force"
+    ],
+    "correct": 1,
+    "short": "For rotating the drill and to overcome the resistance in cutting, a torque is applied to the drill.",
+    "solution": "The slide states: “For rotating the drill and to overcome the resistance in cutting, a torque is applied to the drill.”\n\n📘 From the First Shared Slide — Drill Forces & Starting the Cut:\nA torque is applied to rotate the drill and overcome cutting resistance; an axial force (provided by the machine feed, expressed in mm per revolution of the drill) keeps pushing the drill deeper. The drill will not start cutting until the chisel edge penetrates the metal surface by about a mm or so, because the chisel edge does not allow the cutting edges to contact the metal; to facilitate cutting, a little depression is made with a punch at the centre of the hole. Twist drills are solid high speed steel, hardened and ground to shape; drills with carbide inserts are also available."
+  },
+  {
+    "id": "aee_fs_drl_06",
+    "topicId": "fs-drilling",
+    "question": "A drill will not start cutting the metal even if its bottom touches the metal surface superficially; it starts cutting only after the chisel edge penetrates the metal surface by about __________.",
+    "options": [
+      "10 mm",
+      "5 mm",
+      "1 mm or so",
+      "0.01 mm",
+      "25 mm"
+    ],
+    "correct": 2,
+    "short": "that cutting does not start “until the chisel edge penetrates the metal surface by about a mm or so”.",
+    "solution": "The slide states that cutting does not start “until the chisel edge penetrates the metal surface by about a mm or so”. This is on account of the chisel edge, which does not allow the cutting edges to come into contact with the metal.\n\n📘 From the First Shared Slide — Drill Forces & Starting the Cut:\nA torque is applied to rotate the drill and overcome cutting resistance; an axial force (provided by the machine feed, expressed in mm per revolution of the drill) keeps pushing the drill deeper. The drill will not start cutting until the chisel edge penetrates the metal surface by about a mm or so, because the chisel edge does not allow the cutting edges to contact the metal; to facilitate cutting, a little depression is made with a punch at the centre of the hole. Twist drills are solid high speed steel, hardened and ground to shape; drills with carbide inserts are also available."
+  },
+  {
+    "id": "aee_fs_drl_07",
+    "topicId": "fs-drilling",
+    "question": "Which of the following is NOT one of the types of drilling machines listed in the slides?",
+    "options": [
+      "Sensitive drilling machines",
+      "Pillar type drilling machines",
+      "Radial drilling machines",
+      "Multispindle drilling machines",
+      "Universal milling-drilling machines"
+    ],
+    "correct": 4,
+    "short": "The slide lists four types: sensitive drilling machines, pillar type drilling machines, radial drilling machines and multispindle drilling machines.",
+    "solution": "The slide lists four types: sensitive drilling machines, pillar type drilling machines, radial drilling machines and multispindle drilling machines.\n\n📘 From the First Shared Slide — Types of Drilling Machines:\nFour types: (1) Sensitive — light duty, drills up to 12 mm diameter maximum, high spindle speeds, feed by gently turning the hand wheel which lowers the spindle, and the job is aligned so the hole centre is exactly below the spindle. (2) Pillar type — similar but for heavier work; with a rectangular column the table can be swung aside and bigger jobs placed on the machine base. (3) Radial — for bigger and heavier work pieces; the drilling head is mounted on a radial arm which rotates around the round column and the head moves in or out along the arm, so (think of polar coordinates θ, r) any point of the work can be reached without shifting the heavy work piece. (4) Multispindle — more than one spindle drills holes at one time; very useful for mass production work."
+  },
+  {
+    "id": "aee_fs_drl_08",
+    "topicId": "fs-drilling",
+    "question": "On a sensitive drilling machine, if required, the job has to be moved so as to align the centre of the hole __________.",
+    "options": [
+      "above the motor",
+      "exactly below the spindle",
+      "with the column",
+      "with the base",
+      "at the table edge"
+    ],
+    "correct": 1,
+    "short": "If required, the job has to be moved so as to align the centre of the hole exactly below the spindle.",
+    "solution": "The slide states: “If required, the job has to be moved so as to align the centre of the hole exactly below the spindle.”\n\n📘 From the First Shared Slide — Types of Drilling Machines:\nFour types: (1) Sensitive — light duty, drills up to 12 mm diameter maximum, high spindle speeds, feed by gently turning the hand wheel which lowers the spindle, and the job is aligned so the hole centre is exactly below the spindle. (2) Pillar type — similar but for heavier work; with a rectangular column the table can be swung aside and bigger jobs placed on the machine base. (3) Radial — for bigger and heavier work pieces; the drilling head is mounted on a radial arm which rotates around the round column and the head moves in or out along the arm, so (think of polar coordinates θ, r) any point of the work can be reached without shifting the heavy work piece. (4) Multispindle — more than one spindle drills holes at one time; very useful for mass production work."
+  },
+  {
+    "id": "aee_fs_drl_09",
+    "topicId": "fs-drilling",
+    "question": "A radial drilling machine is meant to drill holes in __________.",
+    "options": [
+      "small delicate jobs",
+      "bigger and heavier work pieces",
+      "wooden boards",
+      "thin sheets only",
+      "gear teeth"
+    ],
+    "correct": 1,
+    "short": "This is really meant to drill holes in bigger and heavier workpieces, which cannot be manipulated so that the centre of the hole may be aligned with the drilling spindle.",
+    "solution": "The slide states: “This is really meant to drill holes in bigger and heavier workpieces, which cannot be manipulated so that the centre of the hole may be aligned with the drilling spindle.”\n\n📘 From the First Shared Slide — Types of Drilling Machines:\nFour types: (1) Sensitive — light duty, drills up to 12 mm diameter maximum, high spindle speeds, feed by gently turning the hand wheel which lowers the spindle, and the job is aligned so the hole centre is exactly below the spindle. (2) Pillar type — similar but for heavier work; with a rectangular column the table can be swung aside and bigger jobs placed on the machine base. (3) Radial — for bigger and heavier work pieces; the drilling head is mounted on a radial arm which rotates around the round column and the head moves in or out along the arm, so (think of polar coordinates θ, r) any point of the work can be reached without shifting the heavy work piece. (4) Multispindle — more than one spindle drills holes at one time; very useful for mass production work."
+  },
+  {
+    "id": "aee_fs_drl_10",
+    "topicId": "fs-drilling",
+    "question": "Multispindle drilling machines are very useful for __________.",
+    "options": [
+      "tool room work",
+      "mass production work",
+      "repair work",
+      "wood work",
+      "thread cutting"
+    ],
+    "correct": 1,
+    "short": "On these machines, more than one spindle can drill holes at one time.",
+    "solution": "The slide states: “On these machines, more than one spindle can drill holes at one time. These machines are very useful for mass production work.”\n\n📘 From the First Shared Slide — Types of Drilling Machines:\nFour types: (1) Sensitive — light duty, drills up to 12 mm diameter maximum, high spindle speeds, feed by gently turning the hand wheel which lowers the spindle, and the job is aligned so the hole centre is exactly below the spindle. (2) Pillar type — similar but for heavier work; with a rectangular column the table can be swung aside and bigger jobs placed on the machine base. (3) Radial — for bigger and heavier work pieces; the drilling head is mounted on a radial arm which rotates around the round column and the head moves in or out along the arm, so (think of polar coordinates θ, r) any point of the work can be reached without shifting the heavy work piece. (4) Multispindle — more than one spindle drills holes at one time; very useful for mass production work."
+  },
+  {
+    "id": "aee_fs_drl_11",
+    "topicId": "fs-drilling",
+    "question": "Counter boring is done to provide a flat surface round a hole so as to get a good seating area for __________.",
+    "options": [
+      "the drill point",
+      "washer, bolt heads or nuts",
+      "the reamer",
+      "the tap",
+      "the chuck"
+    ],
+    "correct": 1,
+    "short": "Often a flat surface is needed round a hole to provide a good seating area for washer, bolt heads/nuts.",
+    "solution": "The slide states: “Often a flat surface is needed round a hole to provide a good seating area for washer, bolt heads/nuts. The counter boring tool has a pilot which ensures that the counterbore is concentric with the hole.”\n\n📘 From the First Shared Slide — Allied Operations on Drilling Machines:\nCore drilling: holes made in castings by cores are rough and are cleaned with a core drill. Step drilling: more than one diameter is ground on the drill body, saving an extra operation. Counter boring: a flat surface round a hole for a good seating of washer/bolt heads/nuts; the tool's pilot keeps the counterbore concentric with the hole. Counter sinking: a tapered entrance to the hole, cut with a special tool with a pilot. Reaming: sizing and improving the geometry and finish of a drilled hole; hand, machine and shell reamers exist — machine reamers are used with the drilling machine; for holes up to 12.5 mm diameter about 0.38–0.4 mm of material is left as reaming allowance, and a reamer follows the original hole and cannot shift its centre. Tapping: cutting internal threads with a special flexible adapter holding machine taps; a machine tap set has two taps — rough and finish — used in the same order; the spindle r.p.m. is drastically reduced and a good lubricant is used."
+  },
+  {
+    "id": "aee_fs_drl_12",
+    "topicId": "fs-drilling",
+    "question": "Counter sinking provides __________ to the hole.",
+    "options": [
+      "a flat bottom",
+      "a tapered entrance",
+      "internal threads",
+      "a polished surface",
+      "a square recess"
+    ],
+    "correct": 1,
+    "short": "Counter sinking provides a tapered entrance to the hole.",
+    "solution": "The slide states: “Counter sinking provides a tapered entrance to the hole. A special counter sinking tool with a pilot is used.”\n\n📘 From the First Shared Slide — Allied Operations on Drilling Machines:\nCore drilling: holes made in castings by cores are rough and are cleaned with a core drill. Step drilling: more than one diameter is ground on the drill body, saving an extra operation. Counter boring: a flat surface round a hole for a good seating of washer/bolt heads/nuts; the tool's pilot keeps the counterbore concentric with the hole. Counter sinking: a tapered entrance to the hole, cut with a special tool with a pilot. Reaming: sizing and improving the geometry and finish of a drilled hole; hand, machine and shell reamers exist — machine reamers are used with the drilling machine; for holes up to 12.5 mm diameter about 0.38–0.4 mm of material is left as reaming allowance, and a reamer follows the original hole and cannot shift its centre. Tapping: cutting internal threads with a special flexible adapter holding machine taps; a machine tap set has two taps — rough and finish — used in the same order; the spindle r.p.m. is drastically reduced and a good lubricant is used."
+  },
+  {
+    "id": "aee_fs_drl_13",
+    "topicId": "fs-drilling",
+    "question": "A reamer __________.",
+    "options": [
+      "can shift the centre of the hole",
+      "follows the original hole and cannot shift its centre",
+      "cuts a new hole",
+      "produces internal threads",
+      "is a single point tool"
+    ],
+    "correct": 1,
+    "short": "A reamer follows the original hole and cannot shift its centre.",
+    "solution": "The slide states: “A reamer follows the original hole and cannot shift its centre.”\n\n📘 From the First Shared Slide — Allied Operations on Drilling Machines:\nCore drilling: holes made in castings by cores are rough and are cleaned with a core drill. Step drilling: more than one diameter is ground on the drill body, saving an extra operation. Counter boring: a flat surface round a hole for a good seating of washer/bolt heads/nuts; the tool's pilot keeps the counterbore concentric with the hole. Counter sinking: a tapered entrance to the hole, cut with a special tool with a pilot. Reaming: sizing and improving the geometry and finish of a drilled hole; hand, machine and shell reamers exist — machine reamers are used with the drilling machine; for holes up to 12.5 mm diameter about 0.38–0.4 mm of material is left as reaming allowance, and a reamer follows the original hole and cannot shift its centre. Tapping: cutting internal threads with a special flexible adapter holding machine taps; a machine tap set has two taps — rough and finish — used in the same order; the spindle r.p.m. is drastically reduced and a good lubricant is used."
+  },
+  {
+    "id": "aee_fs_drl_14",
+    "topicId": "fs-drilling",
+    "question": "A machine tap set consists of two taps — rough and finish. Both taps should be used __________.",
+    "options": [
+      "in any order",
+      "in the same order",
+      "simultaneously",
+      "only on cast iron",
+      "only with coolant"
+    ],
+    "correct": 1,
+    "short": "A machine tap set consists of two taps—rough and finish.",
+    "solution": "The slide states: “A machine tap set consists of two taps—rough and finish. Both taps should be used in the same order.”\n\n📘 From the First Shared Slide — Allied Operations on Drilling Machines:\nCore drilling: holes made in castings by cores are rough and are cleaned with a core drill. Step drilling: more than one diameter is ground on the drill body, saving an extra operation. Counter boring: a flat surface round a hole for a good seating of washer/bolt heads/nuts; the tool's pilot keeps the counterbore concentric with the hole. Counter sinking: a tapered entrance to the hole, cut with a special tool with a pilot. Reaming: sizing and improving the geometry and finish of a drilled hole; hand, machine and shell reamers exist — machine reamers are used with the drilling machine; for holes up to 12.5 mm diameter about 0.38–0.4 mm of material is left as reaming allowance, and a reamer follows the original hole and cannot shift its centre. Tapping: cutting internal threads with a special flexible adapter holding machine taps; a machine tap set has two taps — rough and finish — used in the same order; the spindle r.p.m. is drastically reduced and a good lubricant is used."
+  },
+  {
+    "id": "aee_fs_mil_01",
+    "topicId": "fs-milling",
+    "question": "A milling cutter has 8 teeth (Z = 8) and rotates at 120 r.p.m. If the table feed is 240 mm/minute, the feed per rev per tooth is __________.",
+    "options": [
+      "0.25 mm",
+      "0.5 mm",
+      "2 mm",
+      "4 mm",
+      "8 mm"
+    ],
+    "correct": 0,
+    "short": "Feed per rev per tooth = f/(NZ) = 240/(120 × 8) = 240/960 = 0.",
+    "solution": "Feed per rev per tooth = f/(NZ) = 240/(120 × 8) = 240/960 = 0.25 mm.\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_02",
+    "topicId": "fs-milling",
+    "question": "In milling, the minimum table traverse required is L + D, where L is the length of the job and D is the cutter diameter. For a job 200 mm long milled with an 80 mm diameter cutter, the minimum traverse is __________.",
+    "options": [
+      "200 mm",
+      "240 mm",
+      "280 mm",
+      "320 mm",
+      "160 mm"
+    ],
+    "correct": 2,
+    "short": "Minimum traverse = L + D = 200 + 80 = 280 mm (D/2 = 40 mm is the minimum overlap required on either side of the job, so that the cutter becomes clear of the job).",
+    "solution": "Minimum traverse = L + D = 200 + 80 = 280 mm (D/2 = 40 mm is the minimum overlap required on either side of the job, so that the cutter becomes clear of the job).\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_03",
+    "topicId": "fs-milling",
+    "question": "A milling cutter of 100 mm diameter rotates at 100 r.p.m. The cutting speed at the tip of the teeth is about __________. (Take π = 3.14)",
+    "options": [
+      "31.4 m/min",
+      "62.8 m/min",
+      "100 m/min",
+      "314 m/min",
+      "10 m/min"
+    ],
+    "correct": 0,
+    "short": "Cutting speed = πDN = 3.14 × 0.1 m × 100 = 31.",
+    "solution": "Cutting speed = πDN = 3.14 × 0.1 m × 100 = 31.4 m/min.\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_04",
+    "topicId": "fs-milling",
+    "question": "The milling cutter is a __________ cutting tool used in conjunction with a milling machine.",
+    "options": [
+      "single point",
+      "multiple point",
+      "abrasive",
+      "non-cutting",
+      "circular saw"
+    ],
+    "correct": 1,
+    "short": "It is a multiple point cutting tool which is used in conjunction with a milling machine.",
+    "solution": "The slide states: “It is a multiple point cutting tool which is used in conjunction with a milling machine.”\n\n📘 From the First Shared Slide — Milling — Introduction:\nMilling is a machining process performed with a rotary cutter with several cutting edges arranged on its periphery; it is a multiple point cutting tool used with a milling machine. It generates flat surfaces, curved profiles and many intricate shapes with great accuracy and very good surface finish; milling machines are essential in any modern machine shop."
+  },
+  {
+    "id": "aee_fs_mil_05",
+    "topicId": "fs-milling",
+    "question": "In up milling, the direction of rotation of the milling cutter and the direction of work feed are __________.",
+    "options": [
+      "the same",
+      "opposite to each other",
+      "perpendicular",
+      "random",
+      "alternating"
+    ],
+    "correct": 1,
+    "short": "In up milling, the direction of rotation of milling cutter and the direction of work feed are opposite to each other, whereas in down milling, they move in the same direc",
+    "solution": "The slide states: “In up milling, the direction of rotation of milling cutter and the direction of work feed are opposite to each other, whereas in down milling, they move in the same direction at the point of contact of the cutter and the workpiece.”\n\n📘 From the First Shared Slide — Up Milling vs Down Milling:\nIn up milling (conventional), the cutter rotation and work feed are opposite to each other; the chip thickness at the start is nil and is maximum when the teeth leave the work surface, and the teeth try to uproot and lift the work piece from the table. In down milling (climb), cutter and feed move in the same direction at the point of contact and it is the reverse; technically down milling is superior but it is not used unless the machine is fitted with a backlash eliminator."
+  },
+  {
+    "id": "aee_fs_mil_06",
+    "topicId": "fs-milling",
+    "question": "Technically, down milling is not used unless the milling machine is fitted with a __________.",
+    "options": [
+      "coolant pump",
+      "backlash eliminator",
+      "dividing head",
+      "vertical head",
+      "rotary table"
+    ],
+    "correct": 1,
+    "short": "Technically, down milling is not used unless the milling machine is fitted with a backlash eliminator.",
+    "solution": "The slide states: “Technically, down milling is not used unless the milling machine is fitted with a backlash eliminator.”\n\n📘 From the First Shared Slide — Up Milling vs Down Milling:\nIn up milling (conventional), the cutter rotation and work feed are opposite to each other; the chip thickness at the start is nil and is maximum when the teeth leave the work surface, and the teeth try to uproot and lift the work piece from the table. In down milling (climb), cutter and feed move in the same direction at the point of contact and it is the reverse; technically down milling is superior but it is not used unless the machine is fitted with a backlash eliminator."
+  },
+  {
+    "id": "aee_fs_mil_07",
+    "topicId": "fs-milling",
+    "question": "The correct measure of feed in milling is __________.",
+    "options": [
+      "mm per minute",
+      "mm of work piece per revolution of cutter per tooth",
+      "mm per second",
+      "revolutions per mm",
+      "mm per pass"
+    ],
+    "correct": 1,
+    "short": "The feed of the work piece is measured in terms of mm/minute.",
+    "solution": "The slide states: “The feed of the work piece is measured in terms of mm/minute. Actually, the correct measure of feed is mm of work piece per revolution of cutter per tooth.”\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_08",
+    "topicId": "fs-milling",
+    "question": "The high impact loads at entry as well as fluctuating cutting force make the milling process subject to __________.",
+    "options": [
+      "overheating only",
+      "vibration and chatter",
+      "rusting",
+      "electrolysis",
+      "no problems at all"
+    ],
+    "correct": 1,
+    "short": "The high impact loads at entry as well as fluctuating cutting force make milling process subject to vibration and chatter.",
+    "solution": "The slide states: “The high impact loads at entry as well as fluctuating cutting force make milling process subject to vibration and chatter. This aspect has great influence on design of milling cutters.”\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_09",
+    "topicId": "fs-milling",
+    "question": "The peripheral milling cutters are supported on a long arbor; the deflection of the arbor restricts the __________ of this process.",
+    "options": [
+      "speed",
+      "dimensional and form accuracy",
+      "cooling",
+      "feed rate",
+      "noise"
+    ],
+    "correct": 1,
+    "short": "The peripheral milling cutters are supported on a long arbor.",
+    "solution": "The slide states: “The peripheral milling cutters are supported on a long arbor. The deflection of the arbor restricts dimensional and form accuracy of this process.”\n\n📘 From the First Shared Slide — Peripheral vs Face Milling:\nIn peripheral milling the cutting edges are on the circumference and the milled surface is generally parallel to the cutter axis; the cutters are supported on a long arbor whose deflection restricts dimensional and form accuracy, and these operations are usually done on a horizontal milling machine. In face milling the generated surface is parallel to the cutter face and perpendicular to the cutter axis; the cutter overhang is limited, giving better dimensional control and flatness, and face cutters are used with a vertical milling machine. Face milling is a combination of up cut and down cut. The cutter may be placed symmetrically on the work, or asymmetrically offset slightly towards the entry or exit side; asymmetric milling with larger chip thickness at entry and smaller at exit is ideal and should be adopted."
+  },
+  {
+    "id": "aee_fs_mil_10",
+    "topicId": "fs-milling",
+    "question": "Milling cutters are made of solid high speed steel, or they are made with tungsten carbide blades, either brazed or with __________.",
+    "options": [
+      "welded inserts",
+      "throw away inserts",
+      "bolted inserts",
+      "pinned inserts",
+      "glued inserts"
+    ],
+    "correct": 1,
+    "short": "Milling cutters are made of solid high speed steel or have high speed steel teeth.",
+    "solution": "The slide states: “Milling cutters are made of solid high speed steel or have high speed steel teeth. The cutters are also made with tungsten carbide blades (either brazed or with throw away inserts).”\n\n📘 From the First Shared Slide — Milling Operations:\nPeripheral milling operations: (1) slab milling — flat surfaces; (2) slot milling — precision slots; (3) side and face milling — adjacent horizontal and vertical surfaces simultaneously; (4) form milling — prismatic shapes of any form, e.g. the involute form in gear cutting; (5) straddle milling — two parallel vertical faces; (6) gang milling — a number of surfaces simultaneously with a set of cutters. The hole and keyway in the centre of peripheral cutters mount them on the arbor of a horizontal milling machine. Cutters are solid HSS or have tungsten carbide blades, brazed or with throw away inserts."
+  },
+  {
+    "id": "aee_fs_mil_11",
+    "topicId": "fs-milling",
+    "question": "Straddle milling is used to machine __________.",
+    "options": [
+      "a flat surface",
+      "two parallel vertical faces",
+      "a precision slot",
+      "an involute gear",
+      "many surfaces simultaneously"
+    ],
+    "correct": 1,
+    "short": "5. Straddle milling to machine two parallel vertical faces.",
+    "solution": "The slide states: “5. Straddle milling to machine two parallel vertical faces.”\n\n📘 From the First Shared Slide — Milling Operations:\nPeripheral milling operations: (1) slab milling — flat surfaces; (2) slot milling — precision slots; (3) side and face milling — adjacent horizontal and vertical surfaces simultaneously; (4) form milling — prismatic shapes of any form, e.g. the involute form in gear cutting; (5) straddle milling — two parallel vertical faces; (6) gang milling — a number of surfaces simultaneously with a set of cutters. The hole and keyway in the centre of peripheral cutters mount them on the arbor of a horizontal milling machine. Cutters are solid HSS or have tungsten carbide blades, brazed or with throw away inserts."
+  },
+  {
+    "id": "aee_fs_mil_12",
+    "topicId": "fs-milling",
+    "question": "Face milling is widely used for milling operations involving __________.",
+    "options": [
+      "low metal removal rate",
+      "high metal removal rate",
+      "thread cutting",
+      "gear hobbing",
+      "drilling"
+    ],
+    "correct": 1,
+    "short": "Face milling is widely used for milling operations involving high metal removal rate.",
+    "solution": "The slide states: “Face milling is widely used for milling operations involving high metal removal rate.”\n\n📘 From the First Shared Slide — Milling Speeds, Feeds & Traverse:\nIf the cutter diameter is D and it rotates at N r.p.m., the cutting speed at the tooth tips is πDN metres/minute, which should conform to recommended values. The cutter is usually wider than the work piece, so one pass is all that is required. Feed of the work piece is measured in mm/minute, but the correct measure is mm of work piece per revolution of cutter per tooth — if the table feed is f mm/minute and the cutter has Z teeth, feed per rev per tooth = f/(NZ). Metal removal rate in milling is much higher than in shaping or planing. The minimum table traverse is L + D, where L is the job length and D the cutter diameter (D/2 is the minimum overlap on either side so the cutter becomes clear of the job). Unlike turning, milling involves intermittent cutting and a non-uniform chip cross-section; high impact loads at entry and fluctuating cutting forces cause vibration and chatter, which strongly influences cutter design."
+  },
+  {
+    "id": "aee_fs_mil_13",
+    "topicId": "fs-milling",
+    "question": "The cutter position in face milling that is ideal and should be adopted is __________.",
+    "options": [
+      "symmetrical milling",
+      "asymmetric milling with larger chip thickness at entry and smaller chip thickness at exit",
+      "asymmetric milling with smaller chip thickness at entry and larger chip thickness at exit",
+      "any symmetrical position",
+      "the exit-side offset always"
+    ],
+    "correct": 1,
+    "short": "Asymmetric milling with larger chip thickness at entry and smaller chip thickness at exit is ideal and should be adopted.",
+    "solution": "The slide states: “Asymmetric milling with larger chip thickness at entry and smaller chip thickness at exit is ideal and should be adopted.”\n\n📘 From the First Shared Slide — Peripheral vs Face Milling:\nIn peripheral milling the cutting edges are on the circumference and the milled surface is generally parallel to the cutter axis; the cutters are supported on a long arbor whose deflection restricts dimensional and form accuracy, and these operations are usually done on a horizontal milling machine. In face milling the generated surface is parallel to the cutter face and perpendicular to the cutter axis; the cutter overhang is limited, giving better dimensional control and flatness, and face cutters are used with a vertical milling machine. Face milling is a combination of up cut and down cut. The cutter may be placed symmetrically on the work, or asymmetrically offset slightly towards the entry or exit side; asymmetric milling with larger chip thickness at entry and smaller at exit is ideal and should be adopted."
+  },
+  {
+    "id": "aee_fs_mil_14",
+    "topicId": "fs-milling",
+    "question": "Which of the following is NOT listed among the tool materials in which end mills are available?",
+    "options": [
+      "Cobalt high speed steel (super HSS)",
+      "Coated HSS",
+      "Solid carbide",
+      "Indexable inserts of cemented carbide or coated carbide",
+      "Cast iron"
+    ],
+    "correct": 4,
+    "short": "The slide lists: (1) cobalt high speed steel (super HSS), (2) coated HSS, (3) solid carbide, (4) indexable inserts of cemented carbide or coated carbide.",
+    "solution": "The slide lists: (1) cobalt high speed steel (super HSS), (2) coated HSS, (3) solid carbide, (4) indexable inserts of cemented carbide or coated carbide. Cast iron is not among them.\n\n📘 From the First Shared Slide — End Mills:\nEnd mills perform a combination of peripheral and face milling simultaneously, having cutting edges on the bottom face and the periphery. They are used for edges, shoulders, grooves, slots and keyway pockets, and widely for die sinking and generation of sculpted surfaces. They come in cobalt HSS (super HSS), coated HSS, solid carbide, and indexable inserts of cemented/coated carbide. End mills have a taper shank fitting the taper sleeve in the spindle of a vertical milling machine."
+  },
+  {
+    "id": "aee_fs_mil_15",
+    "topicId": "fs-milling",
+    "question": "The most common type of milling machine is the horizontal knee type, named after the overhanging 'knee' which can slide up and down the front of the machine and which carries the __________.",
+    "options": [
+      "column and base",
+      "saddle and the table",
+      "spindle and arbor",
+      "motor and pulleys",
+      "overarm and brackets"
+    ],
+    "correct": 1,
+    "short": "The most common type of milling machine is the horizontal knee type.",
+    "solution": "The slide states: “The most common type of milling machine is the horizontal knee type. The name is derived from the overhanging ‘knee’ which can slide up and down the front of the machine and which carries the saddle and the table.”\n\n📘 From the First Shared Slide — Peripheral vs Face Milling:\nIn peripheral milling the cutting edges are on the circumference and the milled surface is generally parallel to the cutter axis; the cutters are supported on a long arbor whose deflection restricts dimensional and form accuracy, and these operations are usually done on a horizontal milling machine. In face milling the generated surface is parallel to the cutter face and perpendicular to the cutter axis; the cutter overhang is limited, giving better dimensional control and flatness, and face cutters are used with a vertical milling machine. Face milling is a combination of up cut and down cut. The cutter may be placed symmetrically on the work, or asymmetrically offset slightly towards the entry or exit side; asymmetric milling with larger chip thickness at entry and smaller at exit is ideal and should be adopted."
+  },
+  {
+    "id": "aee_fs_mil_16",
+    "topicId": "fs-milling",
+    "question": "The plain version of the horizontal milling machine is much more robust and more suitable for __________.",
+    "options": [
+      "tool room work",
+      "production work",
+      "helix cutting",
+      "die sinking",
+      "sculpted surfaces"
+    ],
+    "correct": 1,
+    "short": "The plain version of the horizontal machine is much more robust and more suitable for production work.",
+    "solution": "The slide states: “The plain version of the horizontal machine is much more robust and more suitable for production work.”\n\n📘 From the First Shared Slide — Milling Machines:\nMilling machines come in three basic models: horizontal, vertical and universal (a horizontal type with special features). The most common is the horizontal knee type — the knee slides up and down the front of the machine and carries the saddle and table. The universal machine's table is mounted on a turn table and can swivel in a horizontal plane, permitting the cutting of helix, and includes a dividing head for indexing; the plain version is more robust and better for production work. On the horizontal machine, the arbor fits into the spindle nose and extends a little beyond the arbor supporting bracket; when end mills/face cutters/drills are used, the arbor is removed and the taper shank fits into the hollow spindle, so vertical faces can be milled without difficulty. The table can be given hand feed or auto feed and can also be traversed at high speed. The vertical milling machine has no arbor — it has a vertical spindle for end mills, face milling cutters and drills."
+  },
+  {
+    "id": "aee_fs_mil_17",
+    "topicId": "fs-milling",
+    "question": "The table of the horizontal milling machine can be given either hand feed or auto feed, and it is also capable of being __________.",
+    "options": [
+      "lowered automatically",
+      "traversed at high speed",
+      "swivelled in a vertical plane",
+      "rotated continuously",
+      "driven by the ram"
+    ],
+    "correct": 1,
+    "short": "The table of the horizontal milling machine can be given either hand feed or auto feed.",
+    "solution": "The slide states: “The table of the horizontal milling machine can be given either hand feed or auto feed. It is also capable of being traversed at high speed.”\n\n📘 From the First Shared Slide — Milling Machines:\nMilling machines come in three basic models: horizontal, vertical and universal (a horizontal type with special features). The most common is the horizontal knee type — the knee slides up and down the front of the machine and carries the saddle and table. The universal machine's table is mounted on a turn table and can swivel in a horizontal plane, permitting the cutting of helix, and includes a dividing head for indexing; the plain version is more robust and better for production work. On the horizontal machine, the arbor fits into the spindle nose and extends a little beyond the arbor supporting bracket; when end mills/face cutters/drills are used, the arbor is removed and the taper shank fits into the hollow spindle, so vertical faces can be milled without difficulty. The table can be given hand feed or auto feed and can also be traversed at high speed. The vertical milling machine has no arbor — it has a vertical spindle for end mills, face milling cutters and drills."
+  },
+  {
+    "id": "aee_fs_grd_01",
+    "topicId": "fs-grinding",
+    "question": "In cylindrical grinding, the depth of cut per traverse is 0.015 mm. To reduce the diameter of a job from 40.000 mm to 39.970 mm, the number of traverses (passes) required is about __________.",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "10",
+      "20"
+    ],
+    "correct": 1,
+    "short": "Reduction in diameter = 40.000 − 39.",
+    "solution": "Reduction in diameter = 40.000 − 39.970 = 0.030 mm, i.e. 0.015 mm on the radius per pass. Number of passes = 0.030 ÷ 0.015 = 2 passes.\n\n📘 From the First Shared Slide — Cylindrical Grinding:\nThe cylindrical grinding machine comes in two varieties — plain and universal — with the same fundamental design, but the universal machine can also be adopted for internal grinding. The work is mounted between two centres and rotated, while the grinding wheel, mounted on a spindle, revolves at much higher r.p.m. The work and centres sit on a table that traverses at various feeds so the entire length of the work passes to and fro in front of the wheel. The depth of cut is very small, about 0.015 mm; when the entire length has passed, the wheel advances another 0.015 mm at the end of the traverse, and the cycle continues until the desired diameter is reached. The result is a long cylinder of perfectly circular profile with very fine surface finish."
+  },
+  {
+    "id": "aee_fs_grd_02",
+    "topicId": "fs-grinding",
+    "question": "Emery and corundum are naturally found abrasives and are impure forms of __________.",
+    "options": [
+      "silicon carbide",
+      "aluminium oxide (Al₂O₃)",
+      "boron nitride",
+      "tungsten carbide",
+      "zirconia"
+    ],
+    "correct": 1,
+    "short": "Emery and corundum are naturally found abrasives and are impure form of aluminium oxide Al₂O₃.",
+    "solution": "The slide states: “Emery and corundum are naturally found abrasives and are impure form of aluminium oxide Al₂O₃.”\n\n📘 From the First Shared Slide — Grinding — Introduction:\nIn grinding, an emery or corundum wheel is the cutting tool; emery and corundum are naturally found abrasives, impure forms of aluminium oxide (Al₂O₃). The wheel consists of thousands of tiny abrasive particles embedded in a matrix called the bond. An abrasive is extremely hard — second in hardness only to diamond. As the wheel rotates, each particle acts like a tiny cutting tool machining material away; under a magnifying lens the metal dust shows all the characteristics of metal chips, so grinding is truly a chip producing machining process. It produces very accurate sizes, equally accurate geometry and roundness, and extremely good surface finish, and it can machine hardened steel and even hardened HSS which other processes cannot."
+  },
+  {
+    "id": "aee_fs_grd_03",
+    "topicId": "fs-grinding",
+    "question": "When a grinding wheel rotates, each abrasive particle acts like a __________ machining away material from the surface of the work piece.",
+    "options": [
+      "tiny cutting tool",
+      "polishing pad",
+      "magnet",
+      "roller",
+      "burnishing ball"
+    ],
+    "correct": 0,
+    "short": "The edges of the abrasive particles project out of the periphery of the grinding wheel, and when grinding wheel rotates, each one of the particles acts like a tiny cuttin",
+    "solution": "The slide states: “The edges of the abrasive particles project out of the periphery of the grinding wheel, and when grinding wheel rotates, each one of the particles acts like a tiny cutting tool machining away the material from the surface of the work piece.”\n\n📘 From the First Shared Slide — Grinding — Introduction:\nIn grinding, an emery or corundum wheel is the cutting tool; emery and corundum are naturally found abrasives, impure forms of aluminium oxide (Al₂O₃). The wheel consists of thousands of tiny abrasive particles embedded in a matrix called the bond. An abrasive is extremely hard — second in hardness only to diamond. As the wheel rotates, each particle acts like a tiny cutting tool machining material away; under a magnifying lens the metal dust shows all the characteristics of metal chips, so grinding is truly a chip producing machining process. It produces very accurate sizes, equally accurate geometry and roundness, and extremely good surface finish, and it can machine hardened steel and even hardened HSS which other processes cannot."
+  },
+  {
+    "id": "aee_fs_grd_04",
+    "topicId": "fs-grinding",
+    "question": "The grinding wheel is capable of machining hardened steel and even hardened high speed steel, which __________.",
+    "options": [
+      "can easily be done by other machining processes",
+      "cannot be done by other machining processes",
+      "is never required",
+      "damages the wheel",
+      "needs no abrasive"
+    ],
+    "correct": 1,
+    "short": "The grinding wheel is capable of machining hardened steel and even hardened high speed steel, which cannot be done by other machining processes.",
+    "solution": "The slide states: “The grinding wheel is capable of machining hardened steel and even hardened high speed steel, which cannot be done by other machining processes.”\n\n📘 From the First Shared Slide — Grinding — Introduction:\nIn grinding, an emery or corundum wheel is the cutting tool; emery and corundum are naturally found abrasives, impure forms of aluminium oxide (Al₂O₃). The wheel consists of thousands of tiny abrasive particles embedded in a matrix called the bond. An abrasive is extremely hard — second in hardness only to diamond. As the wheel rotates, each particle acts like a tiny cutting tool machining material away; under a magnifying lens the metal dust shows all the characteristics of metal chips, so grinding is truly a chip producing machining process. It produces very accurate sizes, equally accurate geometry and roundness, and extremely good surface finish, and it can machine hardened steel and even hardened HSS which other processes cannot."
+  },
+  {
+    "id": "aee_fs_grd_05",
+    "topicId": "fs-grinding",
+    "question": "Emery and corundum are no longer used in modern grinding wheels; instead __________ abrasives are used due to their high purity.",
+    "options": [
+      "natural",
+      "artificial (manufactured)",
+      "metallic",
+      "ceramic only",
+      "plastic"
+    ],
+    "correct": 1,
+    "short": "Emery and corundum are no longer used in modern grinding wheels.",
+    "solution": "The slide states: “Emery and corundum are no longer used in modern grinding wheels. Instead artificial (manufactured) abrasives are used due to their high purity.”\n\n📘 From the First Shared Slide — Grinding — Introduction:\nIn grinding, an emery or corundum wheel is the cutting tool; emery and corundum are naturally found abrasives, impure forms of aluminium oxide (Al₂O₃). The wheel consists of thousands of tiny abrasive particles embedded in a matrix called the bond. An abrasive is extremely hard — second in hardness only to diamond. As the wheel rotates, each particle acts like a tiny cutting tool machining material away; under a magnifying lens the metal dust shows all the characteristics of metal chips, so grinding is truly a chip producing machining process. It produces very accurate sizes, equally accurate geometry and roundness, and extremely good surface finish, and it can machine hardened steel and even hardened HSS which other processes cannot."
+  },
+  {
+    "id": "aee_fs_grd_06",
+    "topicId": "fs-grinding",
+    "question": "Silicon carbide is harder and more brittle than alumina; for this reason it is used for grinding materials of low grinding resistance like __________.",
+    "options": [
+      "hardened steel",
+      "cast iron, brass, copper etc.",
+      "high speed steel",
+      "titanium alloys",
+      "stainless steel"
+    ],
+    "correct": 1,
+    "short": "Silicon carbide is harder and more brittle than alumina.",
+    "solution": "The slide states: “Silicon carbide is harder and more brittle than alumina. For this reason, it is used for grinding materials of low grinding resistance like cast iron, brass, copper etc.”\n\n📘 From the First Shared Slide — Choice of Abrasives:\nEmery and corundum are no longer used; artificial (manufactured) abrasives are used for their high purity: (a) silicon carbide — greenish black, harder and more brittle than alumina, used for materials of low grinding resistance like cast iron, brass and copper; (b) aluminium oxide (Al₂O₃) — brownish, used for grinding steel because of its greater toughness. The code for silicon carbide is C and for Al₂O₃ wheels it is A."
+  },
+  {
+    "id": "aee_fs_grd_07",
+    "topicId": "fs-grinding",
+    "question": "The grit of a grinding wheel indicates the size of the abrasive grain. The higher the grit number, the __________.",
+    "options": [
+      "coarser the grains",
+      "finer the grains",
+      "harder the bond",
+      "softer the bond",
+      "larger the wheel"
+    ],
+    "correct": 1,
+    "short": "Grit indicates the size of abrasive grain.",
+    "solution": "The slide states: “Grit indicates the size of abrasive grain. It is indicated by a number. Higher the number, finer the size of grains.”\n\n📘 From the First Shared Slide — Wheel Classification — Grit, Grade, Bond & Structure:\nGrit indicates the abrasive grain size; the higher the number, the finer the grains. Abrasives finer than 200 are called 'flours' (F, FF, FFF) and are used by jewellers. Finer wheels give a fine finish but limited metal cutting capacity; coarser wheels give a rough finish but higher metal removal. The bond is the matrix substance, and the degree of hardness of the bond is the grade — the strength with which the grains are held. Bonds: vitrified (V, about 80% of wheels in industry), silicate (S, silicate of soda), shellac (E), rubber (R, abrasive kneaded in rubber and moulded), resinoid (B, bakelite). Grade is indicated by alphabet letters: A = very soft, Z = very hard, M and N = medium. Structure depends on the percentage of bond material (about 10% to 30% of wheel volume): tightly packed grains with less bond = closed structure; loosely packed = open structure; structure is indicated by a number from 1 (very closed) to 15 (very open). Manufacturers must mark on every wheel, in sequence: abrasive used (A or C), grit number, grade, structure and bond type."
+  },
+  {
+    "id": "aee_fs_grd_08",
+    "topicId": "fs-grinding",
+    "question": "Bond refers to the substance of which the matrix of the grinding wheel is made. The degree of hardness possessed by the bond is called the __________ of the wheel.",
+    "options": [
+      "grit",
+      "structure",
+      "grade",
+      "shape",
+      "size"
+    ],
+    "correct": 2,
+    "short": "Bond refers to the substance of which the matrix of the grinding wheel is made.",
+    "solution": "The slide states: “Bond refers to the substance of which the matrix of the grinding wheel is made. The degree of hardness possessed by the bond is called the grade of the wheel and indicates the strength with which the abrasive grains are held in the bond.”\n\n📘 From the First Shared Slide — Wheel Classification — Grit, Grade, Bond & Structure:\nGrit indicates the abrasive grain size; the higher the number, the finer the grains. Abrasives finer than 200 are called 'flours' (F, FF, FFF) and are used by jewellers. Finer wheels give a fine finish but limited metal cutting capacity; coarser wheels give a rough finish but higher metal removal. The bond is the matrix substance, and the degree of hardness of the bond is the grade — the strength with which the grains are held. Bonds: vitrified (V, about 80% of wheels in industry), silicate (S, silicate of soda), shellac (E), rubber (R, abrasive kneaded in rubber and moulded), resinoid (B, bakelite). Grade is indicated by alphabet letters: A = very soft, Z = very hard, M and N = medium. Structure depends on the percentage of bond material (about 10% to 30% of wheel volume): tightly packed grains with less bond = closed structure; loosely packed = open structure; structure is indicated by a number from 1 (very closed) to 15 (very open). Manufacturers must mark on every wheel, in sequence: abrasive used (A or C), grit number, grade, structure and bond type."
+  },
+  {
+    "id": "aee_fs_grd_09",
+    "topicId": "fs-grinding",
+    "question": "In the rubber bond (denoted by letter R), the abrasive is __________.",
+    "options": [
+      "kneaded in rubber and the wheels are moulded",
+      "glued on paper",
+      "sintered in metal",
+      "cast in cement",
+      "pressed in bakelite"
+    ],
+    "correct": 0,
+    "short": "Rubber bond: Here the abrasive is kneaded in rubber and the wheels are moulded.",
+    "solution": "The slide states: “Rubber bond: Here the abrasive is kneaded in rubber and the wheels are moulded. Denoted by letter R.”\n\n📘 From the First Shared Slide — Wheel Classification — Grit, Grade, Bond & Structure:\nGrit indicates the abrasive grain size; the higher the number, the finer the grains. Abrasives finer than 200 are called 'flours' (F, FF, FFF) and are used by jewellers. Finer wheels give a fine finish but limited metal cutting capacity; coarser wheels give a rough finish but higher metal removal. The bond is the matrix substance, and the degree of hardness of the bond is the grade — the strength with which the grains are held. Bonds: vitrified (V, about 80% of wheels in industry), silicate (S, silicate of soda), shellac (E), rubber (R, abrasive kneaded in rubber and moulded), resinoid (B, bakelite). Grade is indicated by alphabet letters: A = very soft, Z = very hard, M and N = medium. Structure depends on the percentage of bond material (about 10% to 30% of wheel volume): tightly packed grains with less bond = closed structure; loosely packed = open structure; structure is indicated by a number from 1 (very closed) to 15 (very open). Manufacturers must mark on every wheel, in sequence: abrasive used (A or C), grit number, grade, structure and bond type."
+  },
+  {
+    "id": "aee_fs_grd_10",
+    "topicId": "fs-grinding",
+    "question": "The proportion of bond material in a grinding wheel varies from about __________ of its total volume.",
+    "options": [
+      "1% to 3%",
+      "10% to 30%",
+      "50% to 70%",
+      "80% to 90%",
+      "90% to 100%"
+    ],
+    "correct": 1,
+    "short": "The proportion of bond material in a wheel varies from about 10% to 30% of its total volume.",
+    "solution": "The slide states: “The proportion of bond material in a wheel varies from about 10% to 30% of its total volume. Structure of wheel depends upon this percentage.”\n\n📘 From the First Shared Slide — Wheel Classification — Grit, Grade, Bond & Structure:\nGrit indicates the abrasive grain size; the higher the number, the finer the grains. Abrasives finer than 200 are called 'flours' (F, FF, FFF) and are used by jewellers. Finer wheels give a fine finish but limited metal cutting capacity; coarser wheels give a rough finish but higher metal removal. The bond is the matrix substance, and the degree of hardness of the bond is the grade — the strength with which the grains are held. Bonds: vitrified (V, about 80% of wheels in industry), silicate (S, silicate of soda), shellac (E), rubber (R, abrasive kneaded in rubber and moulded), resinoid (B, bakelite). Grade is indicated by alphabet letters: A = very soft, Z = very hard, M and N = medium. Structure depends on the percentage of bond material (about 10% to 30% of wheel volume): tightly packed grains with less bond = closed structure; loosely packed = open structure; structure is indicated by a number from 1 (very closed) to 15 (very open). Manufacturers must mark on every wheel, in sequence: abrasive used (A or C), grit number, grade, structure and bond type."
+  },
+  {
+    "id": "aee_fs_grd_11",
+    "topicId": "fs-grinding",
+    "question": "Which of the following pieces of information are the wheel manufacturers obliged to give on every grinding wheel?",
+    "options": [
+      "abrasive used (A or C), grit number, grade, structure and bond type",
+      "only the price and weight",
+      "the machine make and model",
+      "the name of the operator",
+      "the wheel colour only"
+    ],
+    "correct": 0,
+    "short": "On every grinding wheel, the manufacturers are obliged to give the following information, in sequence: abrasive used (A or C), grit number (e.",
+    "solution": "The slide states: “On every grinding wheel, the manufacturers are obliged to give the following information, in sequence: abrasive used (A or C), grit number (e.g., 46), grade, structure (1 to 15) and bond type (by specified letters).”\n\n📘 From the First Shared Slide — Wheel Classification — Grit, Grade, Bond & Structure:\nGrit indicates the abrasive grain size; the higher the number, the finer the grains. Abrasives finer than 200 are called 'flours' (F, FF, FFF) and are used by jewellers. Finer wheels give a fine finish but limited metal cutting capacity; coarser wheels give a rough finish but higher metal removal. The bond is the matrix substance, and the degree of hardness of the bond is the grade — the strength with which the grains are held. Bonds: vitrified (V, about 80% of wheels in industry), silicate (S, silicate of soda), shellac (E), rubber (R, abrasive kneaded in rubber and moulded), resinoid (B, bakelite). Grade is indicated by alphabet letters: A = very soft, Z = very hard, M and N = medium. Structure depends on the percentage of bond material (about 10% to 30% of wheel volume): tightly packed grains with less bond = closed structure; loosely packed = open structure; structure is indicated by a number from 1 (very closed) to 15 (very open). Manufacturers must mark on every wheel, in sequence: abrasive used (A or C), grit number, grade, structure and bond type."
+  },
+  {
+    "id": "aee_fs_grd_12",
+    "topicId": "fs-grinding",
+    "question": "In cylindrical grinding, the work and its centres are mounted on a table which can traverse at various feeds so that __________.",
+    "options": [
+      "only one end of the work is ground",
+      "the entire length of the work passes to and fro in front of the wheel",
+      "the wheel remains stationary",
+      "the work does not rotate",
+      "the centres are removed"
+    ],
+    "correct": 1,
+    "short": "The work and its centres are mounted on a table which can traverse at various feeds so that the entire length of the work passes to and fro in front of the wheel.",
+    "solution": "The slide states: “The work and its centres are mounted on a table which can traverse at various feeds so that the entire length of the work passes to and fro in front of the wheel.”\n\n📘 From the First Shared Slide — Cylindrical Grinding:\nThe cylindrical grinding machine comes in two varieties — plain and universal — with the same fundamental design, but the universal machine can also be adopted for internal grinding. The work is mounted between two centres and rotated, while the grinding wheel, mounted on a spindle, revolves at much higher r.p.m. The work and centres sit on a table that traverses at various feeds so the entire length of the work passes to and fro in front of the wheel. The depth of cut is very small, about 0.015 mm; when the entire length has passed, the wheel advances another 0.015 mm at the end of the traverse, and the cycle continues until the desired diameter is reached. The result is a long cylinder of perfectly circular profile with very fine surface finish."
+  },
+  {
+    "id": "aee_fs_grd_13",
+    "topicId": "fs-grinding",
+    "question": "The thumb rule of wheel selection is to use a __________.",
+    "options": [
+      "hard wheel for hard material and soft wheel for soft material",
+      "hard wheel for soft material and soft wheel for hard material",
+      "soft wheel for all materials",
+      "hard wheel for all materials",
+      "new wheel for all materials"
+    ],
+    "correct": 1,
+    "short": "Thumb rule is to use a hard wheel for soft material and soft wheel for hard material.",
+    "solution": "The slide states: “Thumb rule is to use a hard wheel for soft material and soft wheel for hard material. A hard wheel retains the abrasives as they do not get dulled easily on soft material.”\n\n📘 From the First Shared Slide — Wheel Selection, Mounting & Truing:\nWheel selection depends on the abrasive and wheel characteristics and on operating conditions like wheel and work speed, relative diameters, and machine type/condition — it is best to follow the wheel manufacturer's recommendations. Thumb rule: use a hard wheel for soft material and a soft wheel for hard material (a hard wheel retains its abrasives because they do not dull easily on soft material). A grinding wheel is delicate and fragile — correct mounting and balancing are of utmost importance because wheels revolve at many thousand r.p.m. and unbalanced centrifugal forces may crack the wheel or spoil the bearings. A freshly fitted wheel must be trued (face and sides) so it becomes square to the work piece; truing/dressing is also needed later to correct non-uniform wear or to open up the face for efficient cutting. Truing/dressing is done by a diamond tool, which is harder and can cut through the abrasive grains and the bond material."
+  },
+  {
+    "id": "aee_fs_grd_14",
+    "topicId": "fs-grinding",
+    "question": "As soon as a fresh wheel has been fitted on a grinding machine spindle, it is necessary to true its face and perhaps its sides so that the wheel may become __________ to the work piece.",
+    "options": [
+      "parallel",
+      "square",
+      "tangent",
+      "inclined",
+      "concentric only"
+    ],
+    "correct": 1,
+    "short": "It will be necessary to true its face and perhaps, its sides for a short distance down so that the wheel may become square to the work piece.",
+    "solution": "The slide states: “It will be necessary to true its face and perhaps, its sides for a short distance down so that the wheel may become square to the work piece.”\n\n📘 From the First Shared Slide — Wheel Selection, Mounting & Truing:\nWheel selection depends on the abrasive and wheel characteristics and on operating conditions like wheel and work speed, relative diameters, and machine type/condition — it is best to follow the wheel manufacturer's recommendations. Thumb rule: use a hard wheel for soft material and a soft wheel for hard material (a hard wheel retains its abrasives because they do not dull easily on soft material). A grinding wheel is delicate and fragile — correct mounting and balancing are of utmost importance because wheels revolve at many thousand r.p.m. and unbalanced centrifugal forces may crack the wheel or spoil the bearings. A freshly fitted wheel must be trued (face and sides) so it becomes square to the work piece; truing/dressing is also needed later to correct non-uniform wear or to open up the face for efficient cutting. Truing/dressing is done by a diamond tool, which is harder and can cut through the abrasive grains and the bond material."
+  },
+  {
+    "id": "aee_fs_grd_15",
+    "topicId": "fs-grinding",
+    "question": "The cylindrical grinding machine is made in two varieties: the 'plain' and the 'universal' type. The fundamental design is the same in both, but the universal machine can be adopted for __________ as well.",
+    "options": [
+      "surface grinding",
+      "internal grinding",
+      "gear grinding",
+      "lapping",
+      "polishing"
+    ],
+    "correct": 1,
+    "short": "This operation is carried out on a cylindrical grinding machine which is made in two varieties, the ‘plain’ and the ‘universal’ type.",
+    "solution": "The slide states: “This operation is carried out on a cylindrical grinding machine which is made in two varieties, the ‘plain’ and the ‘universal’ type. The fundamental design is the same in both cases, but the universal machine can be adopted for internal grinding operation as well.”\n\n📘 From the First Shared Slide — Cylindrical Grinding:\nThe cylindrical grinding machine comes in two varieties — plain and universal — with the same fundamental design, but the universal machine can also be adopted for internal grinding. The work is mounted between two centres and rotated, while the grinding wheel, mounted on a spindle, revolves at much higher r.p.m. The work and centres sit on a table that traverses at various feeds so the entire length of the work passes to and fro in front of the wheel. The depth of cut is very small, about 0.015 mm; when the entire length has passed, the wheel advances another 0.015 mm at the end of the traverse, and the cycle continues until the desired diameter is reached. The result is a long cylinder of perfectly circular profile with very fine surface finish."
+  },
+  {
+    "id": "aee_fs_grd_16",
+    "topicId": "fs-grinding",
+    "question": "In cylindrical grinding, the depth of cut is very small, about __________.",
+    "options": [
+      "0.015 mm",
+      "0.15 mm",
+      "1.5 mm",
+      "15 mm",
+      "0.5 mm"
+    ],
+    "correct": 0,
+    "short": "The depth of cut is very small, about 0.",
+    "solution": "The slide states: “The depth of cut is very small, about 0.015 mm.”\n\n📘 From the First Shared Slide — Cylindrical Grinding:\nThe cylindrical grinding machine comes in two varieties — plain and universal — with the same fundamental design, but the universal machine can also be adopted for internal grinding. The work is mounted between two centres and rotated, while the grinding wheel, mounted on a spindle, revolves at much higher r.p.m. The work and centres sit on a table that traverses at various feeds so the entire length of the work passes to and fro in front of the wheel. The depth of cut is very small, about 0.015 mm; when the entire length has passed, the wheel advances another 0.015 mm at the end of the traverse, and the cycle continues until the desired diameter is reached. The result is a long cylinder of perfectly circular profile with very fine surface finish."
   }
 ]
 }

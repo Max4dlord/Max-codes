@@ -11,7 +11,7 @@ no backend needed, progress saved in the browser.
 
 | Course | Status | Questions | Structure |
 |---|---|---|---|
-| AEE 202 — Agricultural Engineering | ✅ live | 101 | 3 main categories · 12 topics · 22 diagram questions |
+| AEE 202 — Agricultural Engineering | ✅ live | 201 | 3 main categories · 17 topics · 20 diagram questions |
 | MTH 202 — Mathematical Methods | ✅ live | 149 | 8 topics |
 | MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
 
@@ -20,13 +20,16 @@ no backend needed, progress saved in the browser.
 AEE questions are organised under **3 main categories** (defined in `categoryMeta`
 in `src/data.js`), and each topic belongs to exactly one category:
 
-1. **Questions formed from materials in Shared Drive** — the current bank
-   (12 consolidated topics: welding processes & defects, fasteners, metal
+1. **Questions formed from materials in Shared Drive** — 101 questions across
+   12 consolidated topics (welding processes & defects, fasteners, metal
    working, heat treatment, cutting tools, drilling, bench work & fitting,
    machine operations, advanced manufacturing, hand tools, jigs & fixtures,
    workshop safety).
 2. **Questions from Actual past questions** — coming soon (content to be uploaded).
-3. **Questions formed from First Shared Slide** — coming soon (content to be uploaded).
+3. **Questions formed from First Shared Slide** — 100 questions across 5 topics
+   (Centre Lathe & Lathe Operations, Shapers & Planers, Drilling Machines,
+   Milling Process, Grinding Process), each with a detailed slide-grounded
+   explanation.
 
 In the dashboard you can now start a test on a **whole course**, a **single main
 category** or a **single topic**. Empty categories are shown as "Coming soon"
