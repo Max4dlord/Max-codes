@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, Navigate, Link } from 'react-router-dom'
-import { loadStudySession, saveStudySession } from '../progress.js'
+#!/usr/bin/env python3
+"""Replace TOPIC_DEEP_DIVE and TOPIC_IMAGES in StudyRunner.jsx with merged-topic versions."""
+import re
 
-const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
+SRC = "src/components/StudyRunner.jsx"
+text = open(SRC).read()
 
-// Topic-focused deep dives for AEE — each appears for any question from that topic
-const TOPIC_DEEP_DIVE = {
+NEW_DEEP_DIVE = """const TOPIC_DEEP_DIVE = {
   'welding-processes-defects': `WELDING PROCESSES & DEFECTS — Master overview (merges Welding Defects, Classification, MIG, TIG, Gas, Arc, Production & Metal Joining):
 DEFECTS (11 key ones): Slag = flux on surface (low heat + slow speed); Undercut = groove melted away (high amperage, wrong angle); Porosity = holes (low gas, too fast); Incomplete Fusion/Cold Weld = gap, breaks soon (low heat, wrong angle); Overlap = excess metal flowing onto base (too much weld); Underfill = valley, too little metal (too fast); Spatter = bumps to grind (low amperage, long wire); Excessive Convexity = mountain vs Concavity = valley; Excessive Reinforcement = too tall/wide; Incomplete Penetration = wire doesn't reach root; Excessive Penetration = burn-through (dwell too long).
 CLASSIFICATION: Arc (Carbon, Metal, MIG, TIG, Plasma, Submerged, Electro-slag); Gas (Oxy-acetylene, Air-acetylene, Oxy-hydrogen); Resistance (Butt, Spot, Seam, Projection, Percussion); Thermit; Solid State (Friction, Ultrasonic, Diffusion, Explosive); Newer (Electron-beam, Laser); Related (Brazing, Soldering, cutting).
@@ -110,10 +110,9 @@ GAS WELDING SAFETY: #4 filter, open acetylene ≤3/4 turn (quick close) and oxyg
 COLD METAL WORKING: eye protection, proper clothing, restrained hair, correct tools, clean area, guards in place.
 Exam tip: Arc = #10/12, Gas = #4; acetylene ≤15 psi and ≤3/4 turn.`,
 }
+"""
 
-
-// Image mapping for AEE topics that need diagrams — prioritised for AEE
-const TOPIC_IMAGES = {
+NEW_IMAGES = """const TOPIC_IMAGES = {
   'welding-processes-defects': '/images/welding-defects.png',
   'metal-working': '/images/anvil-diagram.png',
   'heat-treatment': '/images/anvil-diagram.png',
@@ -122,189 +121,23 @@ const TOPIC_IMAGES = {
   'fasteners': '/images/taper-pin.png',
   'jigs-fixtures': '/images/jig-vs-fixture.png',
 }
+"""
 
+# --- replace deep dive object ---
+start = text.find("const TOPIC_DEEP_DIVE = {")
+end_marker = "\n\n// Image mapping for AEE topics"
+end = text.find(end_marker)
+if start < 0 or end < 0:
+    raise SystemExit("markers not found")
+text = text[:start] + NEW_DEEP_DIVE.rstrip("\n") + "\n" + text[end:]
 
-export default function StudyRunner() {
-  const navigate = useNavigate()
-  const [session, setSession] = useState(() => loadStudySession())
-  const [index, setIndex] = useState(session?.index ?? 0)
-  const [showSolution, setShowSolution] = useState(false)
-  const [revealed, setRevealed] = useState({})
+# --- replace images object ---
+start2 = text.find("const TOPIC_IMAGES = {")
+end_marker2 = "\n\nexport default function StudyRunner()"
+end2 = text.find(end_marker2)
+if start2 < 0 or end2 < 0:
+    raise SystemExit("TOPIC_IMAGES markers not found")
+text = text[:start2] + NEW_IMAGES.rstrip("\n") + "\n" + text[end2:]
 
-  if (!session) return <Navigate to="/dashboard" replace />
-
-  const questions = session.questionSet
-  const total = questions.length
-  const q = questions[index]
-  const deepDive = TOPIC_DEEP_DIVE[q.topicId] || `This topic covers ${q.topicId.replace(/-/g, ' ')}. Review the core definitions, formulas, and typical exam traps for this topic. Focus on understanding the *why* behind each option, not just memorizing the answer.`
-
-  useEffect(() => {
-    if (!session) return
-    const next = { ...session, index }
-    saveStudySession(next)
-    setSession(next)
-    setShowSolution(false)
-  }, [index])
-
-  function go(i) {
-    if (i < 0 || i >= total) return
-    setIndex(i)
-  }
-
-  function handleSeeExplanation() {
-    setShowSolution(true)
-    setRevealed(r => ({ ...r, [q.id]: true }))
-  }
-
-  function exitToDashboard() {
-    navigate('/dashboard')
-  }
-
-  const pct = Math.round(((index + 1) / total) * 100)
-  const topicImage = TOPIC_IMAGES[q.topicId]
-
-  return (
-    <div className="test-shell">
-      <div className="test-topbar" style={{ background: 'linear-gradient(135deg, rgba(37,99,235,0.06), rgba(14,165,233,0.04))' }}>
-        <div className="test-meta">
-          <div>
-            <div className="tm-title">{session.courseCode}{session.topicName ? ` · ${session.topicName}` : ' · Study Mode'} <span style={{ fontSize: 11, background: 'var(--primary)', color: '#fff', padding: '3px 8px', borderRadius: 999, marginLeft: 8, verticalAlign: 'middle' }}>STUDY MODE</span></div>
-            <div className="tm-sub">Question {index + 1} of {total} · Correct answer already ticked · No timer</div>
-          </div>
-        </div>
-        <div className="progress-wrap" style={{ minWidth: 180 }}>
-          <div style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 600 }}>PROGRESS</div>
-          <div className="progress-bar"><div className="progress-fill" style={{ width: `${pct}%` }} /></div>
-          <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 4 }}>{index + 1} / {total} · {Object.keys(revealed).length} explanations viewed</div>
-        </div>
-        <div className="flex gap-8">
-          <button className="btn btn-ghost btn-sm" onClick={exitToDashboard}>Exit Study</button>
-          <Link to="/dashboard" className="btn btn-primary btn-sm">New Study Set →</Link>
-        </div>
-      </div>
-
-      <div className="test-body">
-        <div className="qcard" style={{ borderLeft: '4px solid var(--primary)' }}>
-          <div className="qhead">
-            <span className="qindex">Study Question {index + 1} / {total}</span>
-            <span className="qtopic">{q.topicId ? q.topicId.replace(/-/g, ' ') : 'Mixed topics'}</span>
-          </div>
-          <div className="qtext">{q.question}</div>
-
-          {q.image && (
-            <div style={{ margin: '16px 0', padding: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 12, textAlign: 'center' }}>
-              <img src={q.image} alt="Question diagram" style={{ maxWidth: '100%', maxHeight: 320, borderRadius: 8, border: '1px solid var(--border)' }} />
-              <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 8 }}>Diagram for visual understanding — tap to zoom</div>
-            </div>
-          )}
-
-          {topicImage && !q.image && (
-            <div style={{ margin: '16px 0', padding: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 12, textAlign: 'center', opacity: 0.9 }}>
-              <div style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 8, fontWeight: 600 }}>📐 Topic Diagram — {q.topicId.replace(/-/g, ' ')}</div>
-              <img src={topicImage} alt={`${q.topicId} diagram`} style={{ maxWidth: '100%', maxHeight: 260, borderRadius: 8, border: '1px solid var(--border)' }} />
-            </div>
-          )}
-
-          <div className="options">
-            {q.options.map((opt, i) => {
-              const isCorrect = i === q.correct
-              return (
-                <div
-                  key={i}
-                  className={`option ${isCorrect ? 'selected' : ''}`}
-                  style={isCorrect ? { borderColor: 'var(--green)', background: 'var(--green-soft)', cursor: 'default' } : { cursor: 'default', opacity: 0.9 }}
-                >
-                  <span className="opt-key" style={isCorrect ? { background: 'var(--green)', color: '#fff', borderColor: 'var(--green)' } : {}}>{LETTERS[i]}</span>
-                  <span style={{ flex: 1 }}>{opt}</span>
-                  {isCorrect && <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--green)', background: '#fff', padding: '3px 8px', borderRadius: 999, border: '1px solid var(--green)' }}>✓ Correct</span>}
-                </div>
-              )
-            })}
-          </div>
-
-          <div style={{ marginTop: 22, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <button className="btn btn-primary" onClick={handleSeeExplanation} style={{ flex: 1, minWidth: 200 }}>
-              {showSolution ? '✓ Explanation below — scroll down' : 'See Detailed Explanation →'}
-            </button>
-            <button className="btn btn-ghost" onClick={() => go(index + 1)} disabled={index === total - 1}>
-              Next Question →
-            </button>
-          </div>
-
-          <div className="ri-short" style={{ marginTop: 18, background: 'var(--card-2)' }}>
-            <strong>Quick tip:</strong> {q.short}
-          </div>
-
-          {showSolution && (
-            <div style={{ marginTop: 18, padding: 20, background: 'linear-gradient(135deg, rgba(37,99,235,0.06), rgba(14,165,233,0.04))', border: '1px solid var(--border)', borderRadius: 12 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>📖 Study Mode — Very Detailed Explanation</div>
-                <span className="qtopic" style={{ background: 'var(--green-soft)', color: 'var(--green)', borderColor: 'rgba(5,150,105,0.2)' }}>Correct: {LETTERS[q.correct]}. {q.options[q.correct]}</span>
-              </div>
-              <div className="panel-sol" style={{ whiteSpace: 'pre-wrap', background: '#fff' }}>
-                {q.solution}
-                <div style={{ marginTop: 18, paddingTop: 18, borderTop: '1px dashed var(--border)' }}>
-                  <div style={{ fontWeight: 700, color: 'var(--text)', marginBottom: 8 }}>📚 Deep Dive — More on {q.topicId.replace(/-/g, ' ')}:</div>
-                  <div style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', whiteSpace: 'pre-wrap' }}>
-                    {deepDive}
-                  </div>
-                </div>
-              </div>
-              {(q.image || topicImage) && (
-                <div style={{ marginTop: 16, padding: 12, background: '#fff', border: '1px solid var(--border)', borderRadius: 10, textAlign: 'center' }}>
-                  <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)', marginBottom: 8 }}>🖼️ Visual Reference — {q.topicId.replace(/-/g, ' ')}</div>
-                  <img src={q.image || topicImage} alt="Deep dive diagram" style={{ maxWidth: '100%', maxHeight: 320, borderRadius: 8 }} />
-                </div>
-              )}
-              <div style={{ marginTop: 14, display: 'flex', gap: 10 }}>
-                <button className="btn btn-ghost btn-sm" onClick={() => setShowSolution(false)}>Hide explanation</button>
-                <button className="btn btn-primary btn-sm" onClick={() => go(index + 1)} disabled={index === total - 1}>Next →</button>
-              </div>
-            </div>
-          )}
-
-          <div className="qnav" style={{ marginTop: 24, borderTop: '1px solid var(--border)', paddingTop: 16 }}>
-            <button className="btn btn-ghost" onClick={() => go(index - 1)} disabled={index === 0}>← Previous</button>
-            <span style={{ fontSize: 12, color: 'var(--muted)' }}>Study Mode · No timer · Correct already ticked</span>
-            {index < total - 1 ? (
-              <button className="btn btn-primary" onClick={() => go(index + 1)}>Next →</button>
-            ) : (
-              <button className="btn btn-ghost" onClick={exitToDashboard}>Back to Dashboard</button>
-            )}
-          </div>
-        </div>
-
-        <div className="palette">
-          <h4>Study Navigator</h4>
-          <div className="palette-grid">
-            {questions.map((qq, i) => {
-              const cls = [
-                'pcell',
-                revealed[qq.id] ? 'answered' : '',
-                i === index ? 'current' : ''
-              ].filter(Boolean).join(' ')
-              return (
-                <button key={qq.id} className={cls} onClick={() => go(i)} title={`Question ${i + 1} ${revealed[qq.id] ? '(viewed)' : ''}`}>
-                  {i + 1}
-                </button>
-              )
-            })}
-          </div>
-          <div className="palette-legend">
-            <span><span className="legend-dot" style={{ background: 'var(--green-soft)', border: '1px solid rgba(5,150,105,0.4)' }} />Viewed</span>
-            <span><span className="legend-dot" style={{ background: 'var(--primary)' }} />Current</span>
-          </div>
-          <div style={{ marginTop: 18, padding: 12, background: 'var(--primary-soft)', borderRadius: 10, border: '1px solid rgba(37,99,235,0.12)' }}>
-            <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)' }}>💡 How Study Mode works</div>
-            <div style={{ fontSize: 12, color: 'var(--muted)', marginTop: 6, lineHeight: 1.5 }}>
-              No timer. Correct answer is pre-ticked in green. Tap <strong>See Detailed Explanation</strong> for the very long, topic-focused deep dive — longer than Test Mode — with diagrams where needed.
-            </div>
-          </div>
-          <p className="muted" style={{ fontSize: 12, marginTop: 12, lineHeight: 1.5 }}>
-            Go at your own pace. No auto-save timer, no pressure.
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
+open(SRC, "w").write(text)
+print("StudyRunner updated: deep dives + topic images merged")

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { courses } from '../data.js'
-import { getTopics, getQuestionCount, buildQuestionSet } from '../utils.js'
+import { getTopics, getCategories, getQuestionCount, buildQuestionSet } from '../utils.js'
 import { loadSession, clearSession, saveSession } from '../progress.js'
 import { saveStudySession } from '../progress.js'
 
@@ -13,7 +13,8 @@ export default function Dashboard() {
   const existing = loadSession()
 
   const [courseId, setCourseId] = useState(courses.find((c) => c.available)?.id || courses[0].id)
-  const [mode, setMode] = useState('full') // 'full' | 'topic'
+  const [mode, setMode] = useState('full') // 'full' | 'category' | 'topic'
+  const [categoryId, setCategoryId] = useState(null)
   const [topicId, setTopicId] = useState(null)
   const [duration, setDuration] = useState(25)
   const [count, setCount] = useState(20)
@@ -22,14 +23,24 @@ export default function Dashboard() {
   // --- Study Mode state ---
   const [studyCourseId, setStudyCourseId] = useState(courses.find((c) => c.available)?.id || courses[0].id)
   const [studyMode, setStudyMode] = useState('full')
+  const [studyCategoryId, setStudyCategoryId] = useState(null)
   const [studyTopicId, setStudyTopicId] = useState(null)
   const [studyCount, setStudyCount] = useState(20)
   const [studyError, setStudyError] = useState('')
 
   const course = courses.find((c) => c.id === courseId)
   const topics = getTopics(courseId)
-  const poolSize = mode === 'topic' && topicId ? getQuestionCount(courseId, topicId) : getQuestionCount(courseId)
+  const categories = getCategories(courseId)
+  const hasCats = categories.length > 0
   const selectedTopic = topics.find((t) => t.id === topicId)
+  const selectedCategory = categories.find((c) => c.id === categoryId)
+
+  const poolSize =
+    mode === 'topic' && topicId
+      ? getQuestionCount(courseId, topicId)
+      : mode === 'category' && categoryId
+      ? selectedCategory?.count ?? 0
+      : getQuestionCount(courseId)
 
   function startTest() {
     setError('')
@@ -37,13 +48,22 @@ export default function Dashboard() {
       setError('This course is coming soon. Please check back later or choose an available course.')
       return
     }
+    if (mode === 'category' && !categoryId) {
+      setError('Please pick a main category to start a category-based test.')
+      return
+    }
     if (mode === 'topic' && !topicId) {
       setError('Please pick a topic to start a topic-based test.')
+      return
+    }
+    if ((mode === 'category' && !categoryId) || (mode === 'topic' && !topicId)) {
+      setError('Please pick a selection to start.')
       return
     }
     const set = buildQuestionSet(courseId, {
       mode,
       topicId: mode === 'topic' ? topicId : null,
+      categoryId: mode === 'category' ? categoryId : null,
       count
     })
     if (set.length === 0) {
@@ -57,7 +77,9 @@ export default function Dashboard() {
       courseCode: course.code,
       courseTitle: course.title,
       topicId: mode === 'topic' ? topicId : null,
-      topicName: mode === 'topic' ? selectedTopic?.name : null,
+      categoryId: mode === 'category' ? categoryId : null,
+      topicName:
+        mode === 'topic' ? selectedTopic?.name : mode === 'category' ? selectedCategory?.name : null,
       mode,
       durationSec: duration * 60,
       remainingSec: duration * 60,
@@ -79,6 +101,10 @@ export default function Dashboard() {
       setStudyError('This course is coming soon. Please check back later.')
       return
     }
+    if (studyMode === 'category' && !studyCategoryId) {
+      setStudyError('Please pick a main category for study mode.')
+      return
+    }
     if (studyMode === 'topic' && !studyTopicId) {
       setStudyError('Please pick a topic for study mode.')
       return
@@ -86,6 +112,7 @@ export default function Dashboard() {
     const set = buildQuestionSet(studyCourseId, {
       mode: studyMode,
       topicId: studyMode === 'topic' ? studyTopicId : null,
+      categoryId: studyMode === 'category' ? studyCategoryId : null,
       count: studyCount
     })
     if (set.length === 0) {
@@ -93,14 +120,18 @@ export default function Dashboard() {
       return
     }
     const topicsStudy = getTopics(studyCourseId)
+    const catsStudy = getCategories(studyCourseId)
     const selTopic = topicsStudy.find((t) => t.id === studyTopicId)
+    const selCat = catsStudy.find((c) => c.id === studyCategoryId)
     const studySession = {
       v: 1,
       courseId: studyCourseId,
       courseCode: sc.code,
       courseTitle: sc.title,
       topicId: studyMode === 'topic' ? studyTopicId : null,
-      topicName: studyMode === 'topic' ? selTopic?.name : null,
+      categoryId: studyMode === 'category' ? studyCategoryId : null,
+      topicName:
+        studyMode === 'topic' ? selTopic?.name : studyMode === 'category' ? selCat?.name : null,
       mode: studyMode,
       index: 0,
       questionSet: set,
@@ -118,11 +149,15 @@ export default function Dashboard() {
     window.location.reload()
   }
 
+  const testCats = categories
+  const studyCats = getCategories(studyCourseId)
+  const studyHasCats = studyCats.length > 0
+
   return (
     <div className="page">
       <div className="page-head">
         <h1>Test Dashboard</h1>
-        <p>Configure your CBT practice session — choose a duration, the number of questions, and whether to test a single topic or the whole course.</p>
+        <p>Configure your CBT practice session — choose a duration, the number of questions, and whether to test a whole course, one main category or a single topic.</p>
       </div>
 
       {existing && (
@@ -153,7 +188,7 @@ export default function Dashboard() {
           <div className="field">
             <label>Course</label>
             <div className="course-select-wrap">
-              <select value={courseId} onChange={(e) => { setCourseId(e.target.value); setTopicId(null); setMode('full') }}>
+              <select value={courseId} onChange={(e) => { setCourseId(e.target.value); setCategoryId(null); setTopicId(null); setMode('full') }}>
                 {courses.map((c) => (
                   <option key={c.id} value={c.id}>{c.code} — {c.title}{c.available ? '' : ' (soon)'}</option>
                 ))}
@@ -170,24 +205,70 @@ export default function Dashboard() {
             <label>Test mode</label>
             <div className="tabs">
               <button className={`tab ${mode === 'full' ? 'active' : ''}`} onClick={() => setMode('full')}>Full test (all topics)</button>
+              {hasCats && (
+                <button className={`tab ${mode === 'category' ? 'active' : ''}`} onClick={() => setMode('category')}>By main category</button>
+              )}
               <button className={`tab ${mode === 'topic' ? 'active' : ''}`} onClick={() => setMode('topic')}>Topic-based test</button>
             </div>
           </div>
 
-          {mode === 'topic' && (
+          {mode === 'category' && hasCats && (
             <div className="field">
-              <label>Pick a topic</label>
-              <div className="topic-grid">
-                {topics.map((t) => (
+              <label>Pick a main category</label>
+              <div className="cat-grid">
+                {testCats.map((c) => (
                   <button
-                    key={t.id}
-                    className={`topic-chip ${topicId === t.id ? 'selected' : ''}`}
-                    onClick={() => setTopicId(t.id)}
+                    key={c.id}
+                    className={`cat-chip ${categoryId === c.id ? 'selected' : ''} ${c.count === 0 ? 'empty' : ''}`}
+                    disabled={c.count === 0}
+                    onClick={() => setCategoryId(c.id)}
                   >
-                    <div className="t-name">{t.name}</div>
+                    <div className="cat-name">{c.name}</div>
+                    <div className="cat-count">{c.count === 0 ? 'Coming soon' : `${c.count} questions · ${c.topics.length} topics`}</div>
                   </button>
                 ))}
               </div>
+            </div>
+          )}
+
+          {mode === 'topic' && (
+            <div className="field">
+              <label>Pick a topic</label>
+              {hasCats ? (
+                <div>
+                  {categories.map((c) => (
+                    <div key={c.id} className="topic-group">
+                      {c.topics.length > 0 && (
+                        <div className="topic-group-head">{c.name}</div>
+                      )}
+                      <div className="topic-grid">
+                        {c.topics.map((t) => (
+                          <button
+                            key={t.id}
+                            className={`topic-chip ${topicId === t.id ? 'selected' : ''}`}
+                            onClick={() => setTopicId(t.id)}
+                          >
+                            <div className="t-name">{t.name}</div>
+                            <div className="t-count">{t.count}</div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="topic-grid">
+                  {topics.map((t) => (
+                    <button
+                      key={t.id}
+                      className={`topic-chip ${topicId === t.id ? 'selected' : ''}`}
+                      onClick={() => setTopicId(t.id)}
+                    >
+                      <div className="t-name">{t.name}</div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -212,6 +293,8 @@ export default function Dashboard() {
           <p className="info-line">
             {mode === 'topic' && topicId
               ? <>Pool for <strong>{selectedTopic?.name}</strong>: <strong>{poolSize}</strong> question(s) available.</>
+              : mode === 'category' && categoryId
+              ? <>Pool for <strong>{selectedCategory?.name}</strong>: <strong>{poolSize}</strong> question(s) available.</>
               : <>Full course pool: <strong>{poolSize}</strong> question(s) available.</>}
             {' '}Questions will be shuffled on start.
           </p>
@@ -220,7 +303,7 @@ export default function Dashboard() {
 
           <div style={{ marginTop: 20 }}>
             <button className="btn btn-primary btn-lg" onClick={startTest} style={{ width: '100%' }}>
-              Start {mode === 'topic' ? 'topic' : 'full'} test →
+              Start {mode === 'topic' ? 'topic' : mode === 'category' ? 'category' : 'full'} test →
             </button>
           </div>
           <p className="hint">
@@ -233,17 +316,41 @@ export default function Dashboard() {
           <h2>Overview</h2>
           <p className="muted" style={{ fontSize: 14 }}>
             {course.code} currently has <strong style={{ color: 'var(--text)' }}>{getQuestionCount(courseId)}</strong> total questions
-            across <strong style={{ color: 'var(--text)' }}>{topics.length}</strong> topic categories.
+            across <strong style={{ color: 'var(--text)' }}>{topics.length}</strong> topics{hasCats ? (
+              <> in <strong style={{ color: 'var(--text)' }}>{categories.length}</strong> main categories</>
+            ) : ''}.
           </p>
 
-          <h2 style={{ marginTop: 28, fontSize: 18 }}>Topic categories</h2>
-          <div className="topic-grid" style={{ marginTop: 8 }}>
-            {topics.map((t) => (
-              <div key={t.id} style={{ padding: 14, borderRadius: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)' }}>
-                <div style={{ fontWeight: 700, fontSize: 14 }}>{t.name}</div>
+          {hasCats ? (
+            categories.map((c) => (
+              <div key={c.id} style={{ marginTop: 16 }}>
+                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>
+                  {c.name}
+                  <span className="cat-badge">{c.count === 0 ? 'Coming soon' : `${c.count} Qs`}</span>
+                </div>
+                <div className="topic-grid" style={{ marginTop: 4 }}>
+                  {c.topics.length > 0 ? c.topics.map((t) => (
+                    <div key={t.id} style={{ padding: 10, borderRadius: 10, background: 'var(--bg-soft)', border: '1px solid var(--border)', fontSize: 13 }}>
+                      <span style={{ fontWeight: 600 }}>{t.name}</span>{' '}
+                      <span className="muted" style={{ fontSize: 12 }}>· {t.count}</span>
+                    </div>
+                  )) : (
+                    <p className="muted" style={{ fontSize: 13, margin: 0 }}>
+                      No questions yet — content will be added soon.
+                    </p>
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+            ))
+          ) : (
+            <div className="topic-grid" style={{ marginTop: 8 }}>
+              {topics.map((t) => (
+                <div key={t.id} style={{ padding: 14, borderRadius: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)' }}>
+                  <div style={{ fontWeight: 700, fontSize: 14 }}>{t.name}</div>
+                </div>
+              ))}
+            </div>
+          )}
 
           <Link to="/" className="btn btn-ghost btn-sm" style={{ marginTop: 24 }}>← Back to home</Link>
         </div>
@@ -263,7 +370,7 @@ export default function Dashboard() {
         <div className="field">
           <label>Course for Study Mode</label>
           <div className="course-select-wrap">
-            <select value={studyCourseId} onChange={(e) => { setStudyCourseId(e.target.value); setStudyTopicId(null); setStudyMode('full') }}>
+            <select value={studyCourseId} onChange={(e) => { setStudyCourseId(e.target.value); setStudyCategoryId(null); setStudyTopicId(null); setStudyMode('full') }}>
               {courses.map((c) => (
                 <option key={c.id} value={c.id}>{c.code} — {c.title}{c.available ? '' : ' (soon)'}</option>
               ))}
@@ -280,24 +387,68 @@ export default function Dashboard() {
           <label>Study scope</label>
           <div className="tabs">
             <button className={`tab ${studyMode === 'full' ? 'active' : ''}`} onClick={() => setStudyMode('full')}>All topics (study everything)</button>
+            {studyHasCats && (
+              <button className={`tab ${studyMode === 'category' ? 'active' : ''}`} onClick={() => setStudyMode('category')}>One main category</button>
+            )}
             <button className={`tab ${studyMode === 'topic' ? 'active' : ''}`} onClick={() => setStudyMode('topic')}>One topic only</button>
           </div>
         </div>
 
-        {studyMode === 'topic' && (
+        {studyMode === 'category' && studyHasCats && (
           <div className="field">
-            <label>Pick a topic to study</label>
-            <div className="topic-grid">
-              {getTopics(studyCourseId).map((t) => (
+            <label>Pick a main category to study</label>
+            <div className="cat-grid">
+              {studyCats.map((c) => (
                 <button
-                  key={t.id}
-                  className={`topic-chip ${studyTopicId === t.id ? 'selected' : ''}`}
-                  onClick={() => setStudyTopicId(t.id)}
+                  key={c.id}
+                  className={`cat-chip ${studyCategoryId === c.id ? 'selected' : ''} ${c.count === 0 ? 'empty' : ''}`}
+                  disabled={c.count === 0}
+                  onClick={() => setStudyCategoryId(c.id)}
                 >
-                  <div className="t-name">{t.name}</div>
+                  <div className="cat-name">{c.name}</div>
+                  <div className="cat-count">{c.count === 0 ? 'Coming soon' : `${c.count} questions · ${c.topics.length} topics`}</div>
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {studyMode === 'topic' && (
+          <div className="field">
+            <label>Pick a topic to study</label>
+            {studyHasCats ? (
+              <div>
+                {studyCats.map((c) => (
+                  <div key={c.id} className="topic-group">
+                    {c.topics.length > 0 && <div className="topic-group-head">{c.name}</div>}
+                    <div className="topic-grid">
+                      {c.topics.map((t) => (
+                        <button
+                          key={t.id}
+                          className={`topic-chip ${studyTopicId === t.id ? 'selected' : ''}`}
+                          onClick={() => setStudyTopicId(t.id)}
+                        >
+                          <div className="t-name">{t.name}</div>
+                          <div className="t-count">{t.count}</div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="topic-grid">
+                {getTopics(studyCourseId).map((t) => (
+                  <button
+                    key={t.id}
+                    className={`topic-chip ${studyTopicId === t.id ? 'selected' : ''}`}
+                    onClick={() => setStudyTopicId(t.id)}
+                  >
+                    <div className="t-name">{t.name}</div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -312,6 +463,8 @@ export default function Dashboard() {
           <p className="info-line" style={{ marginTop: 8 }}>
             {studyMode === 'topic' && studyTopicId
               ? <>You’ll study <strong>{getTopics(studyCourseId).find(t=>t.id===studyTopicId)?.name}</strong>: <strong>{getQuestionCount(studyCourseId, studyTopicId)}</strong> available — shown with correct answer pre-ticked.</>
+              : studyMode === 'category' && studyCategoryId
+              ? <>You’ll study <strong>{studyCats.find(c=>c.id===studyCategoryId)?.name}</strong>: <strong>{studyCats.find(c=>c.id===studyCategoryId)?.count}</strong> available — shown with correct answer pre-ticked.</>
               : <>You’ll study <strong>{getQuestionCount(studyCourseId)}</strong> questions — each shown with correct answer ticked and a detailed explanation button.</>}
           </p>
         </div>

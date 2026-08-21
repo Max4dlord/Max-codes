@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { courses } from '../data.js'
-import { getTopics } from '../utils.js'
+import { getTopics, getCategories } from '../utils.js'
 
 const FEATURES = [
   { ico: '⏱️', title: 'Timed tests, your way', text: 'Pick a duration and how many questions you want. A live countdown with Pause / Resume keeps you in control.' },
@@ -88,13 +88,38 @@ export default function Landing() {
           <h2>Topics covered in {course.code}</h2>
           <p>Comprehensive coverage across all core areas you need to master.</p>
         </div>
-        <div className="topic-grid">
-          {topics.map((t) => (
-            <Link to="/dashboard" className="topic-chip" key={t.id} style={{ textDecoration: 'none' }}>
-              <div className="t-name">{t.name}</div>
-            </Link>
-          ))}
-        </div>
+        {getCategories(course.id).length > 0 ? (
+          <div>
+            {getCategories(course.id).map((c) => (
+              <div key={c.id} className="topic-group">
+                <div className="topic-group-head">
+                  {c.name}
+                  <span className="cat-badge">{c.count === 0 ? 'Coming soon' : `${c.count} Qs`}</span>
+                </div>
+                {c.topics.length > 0 ? (
+                  <div className="topic-grid">
+                    {c.topics.map((t) => (
+                      <Link to="/dashboard" className="topic-chip" key={t.id} style={{ textDecoration: 'none' }}>
+                        <div className="t-name">{t.name}</div>
+                        <div className="t-count">{t.count}</div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="muted" style={{ fontSize: 14 }}>Content coming soon — check back later.</p>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="topic-grid">
+            {topics.map((t) => (
+              <Link to="/dashboard" className="topic-chip" key={t.id} style={{ textDecoration: 'none' }}>
+                <div className="t-name">{t.name}</div>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
 
       <div className="cta-band">

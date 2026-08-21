@@ -6,7 +6,7 @@ export const courses = [
     "id": "aee202",
     "code": "AEE 202",
     "title": "Agricultural Engineering",
-    "blurb": "Workshop practice for agricultural engineers — welding processes & defects, metal working, fasteners, heat treatment, machine operations, workshop safety and much more, backed by a large growing question bank.",
+    "blurb": "Workshop practice for agricultural engineers, organised in 3 main categories: Shared Drive materials, Actual past questions, and First Shared Slide materials — covering welding, metal working, fasteners, machine operations and workshop safety.",
     "accent": "#0ea5e9",
     "available": true
   },
@@ -65,116 +65,85 @@ export const topicMeta = {
   ],
   "aee202": [
     {
-      "id": "welding-defects",
-      "name": "Welding Defects"
+      "id": "welding-processes-defects",
+      "name": "Welding Processes & Defects",
+      "categoryId": "shared-drive"
     },
     {
       "id": "fasteners",
-      "name": "Fasteners"
+      "name": "Fasteners",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "hot-metal-working",
-      "name": "Hot Metal Working"
+      "id": "metal-working",
+      "name": "Metal Working (Hot & Cold)",
+      "categoryId": "shared-drive"
     },
     {
       "id": "heat-treatment",
-      "name": "Heat Treatment of Steel"
-    },
-    {
-      "id": "cold-metal-safety",
-      "name": "Safety in Cold Metal Working"
-    },
-    {
-      "id": "metal-shapes",
-      "name": "Commercial Metal Shapes"
+      "name": "Heat Treatment of Steel",
+      "categoryId": "shared-drive"
     },
     {
       "id": "cutting-tools",
-      "name": "Cutting Tools & Hacksaws"
+      "name": "Cutting Tools & Hacksaws",
+      "categoryId": "shared-drive"
     },
     {
       "id": "drilling",
-      "name": "Drilling & Drill Press"
-    },
-    {
-      "id": "bench-work",
-      "name": "Bench Work & Finishing"
-    },
-    {
-      "id": "mig-welding",
-      "name": "MIG Welding"
-    },
-    {
-      "id": "tig-welding",
-      "name": "TIG Welding"
-    },
-    {
-      "id": "production-welding",
-      "name": "Production Welding"
-    },
-    {
-      "id": "gas-welding",
-      "name": "Gas Welding"
-    },
-    {
-      "id": "arc-welding",
-      "name": "Arc Welding"
-    },
-    {
-      "id": "welding-classification",
-      "name": "Classification of Welding"
-    },
-    {
-      "id": "machine-operations",
-      "name": "Machine Operations"
-    },
-    {
-      "id": "advanced-manufacturing",
-      "name": "Advanced Manufacturing Processes"
-    },
-    {
-      "id": "hand-tools",
-      "name": "Hand & Power Tools"
-    },
-    {
-      "id": "workshop-machines",
-      "name": "Workshop Machines"
-    },
-    {
-      "id": "workshop-safety",
-      "name": "Workshop Safety"
-    },
-    {
-      "id": "jigs-fixtures",
-      "name": "Jigs and Fixtures"
-    },
-    {
-      "id": "jig-fixture-design",
-      "name": "Jig and Fixture Design"
+      "name": "Drilling & Drill Press",
+      "categoryId": "shared-drive"
     },
     {
       "id": "bench-work-fitting",
-      "name": "Bench Work & Fitting"
+      "name": "Bench Work & Fitting",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "workshop-hazards",
-      "name": "Workshop Hazards & Safety"
+      "id": "machine-operations",
+      "name": "Machine Operations & Workshop Machines",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "workshop-materials",
-      "name": "Workshop Materials & Heat Treatment"
+      "id": "advanced-manufacturing",
+      "name": "Advanced Manufacturing Processes",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "joining-metals",
-      "name": "Joining of Metals"
+      "id": "hand-tools",
+      "name": "Hand & Power Tools",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "metal-joining",
-      "name": "Metal Joining Processes"
+      "id": "jigs-fixtures",
+      "name": "Jigs & Fixtures",
+      "categoryId": "shared-drive"
     },
     {
-      "id": "gas-arc-welding",
-      "name": "Gas & Arc Welding"
+      "id": "workshop-safety",
+      "name": "Workshop Safety & Hazards",
+      "categoryId": "shared-drive"
+    }
+  ]
+}
+
+// ===========================================================================
+// MAIN CATEGORIES (per course) — questions are grouped under these.
+// A topic belongs to exactly one category (categoryId on the topic).
+// ===========================================================================
+export const categoryMeta = {
+  "aee202": [
+    {
+      "id": "shared-drive",
+      "name": "Questions formed from materials in Shared Drive"
+    },
+    {
+      "id": "past-questions",
+      "name": "Questions from Actual past questions"
+    },
+    {
+      "id": "first-slides",
+      "name": "Questions formed from First Shared Slide"
     }
   ]
 }
@@ -2420,7 +2389,7 @@ export const questionBank = {
   aee202: [
   {
     "id": "aee_wd_01",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "What is slag in welding and what is its primary cause?",
     "options": [
       "Flux residue on the weld surface caused by low amperage (heat) and slow speed",
@@ -2436,7 +2405,7 @@ export const questionBank = {
   },
   {
     "id": "aee_wd_02",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "Which defect is characterised by the weld metal melting away from the flux and penetrating too far down into the work piece?",
     "options": [
       "Overlap",
@@ -2451,23 +2420,8 @@ export const questionBank = {
     "image": "/images/welding-defects.png"
   },
   {
-    "id": "aee_wd_03",
-    "topicId": "welding-defects",
-    "question": "Which of the following is NOT a cause of undercut as listed in the material?",
-    "options": [
-      "Low gas",
-      "High amperage",
-      "Wrong electrode angle",
-      "High arc power with low amperage",
-      "None of the above"
-    ],
-    "correct": 3,
-    "short": "High arc power with low amperage causes spatter, not undercut. Option D.",
-    "solution": "Each defect has specific parameter causes. Undercut causes from the table are low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nList undercut causes: low gas, high amperage, wrong angle, grease.. Check Option D: High arc power with low amperage — this is listed under Spatter.. Therefore D is not a cause of undercut.\n\nWhy the other options are correct causes (so they are not the answer):\nOptions A, B, C are all explicitly listed as causes of undercut.\n\n* Correct Option: D (High arc power with low amperage)"
-  },
-  {
     "id": "aee_wd_04",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "Porosity in welding is best described as:",
     "options": [
       "Holes created inside the work piece/weld metal",
@@ -2482,23 +2436,8 @@ export const questionBank = {
     "image": "/images/welding-defects.png"
   },
   {
-    "id": "aee_wd_05",
-    "topicId": "welding-defects",
-    "question": "Which defect is also called a “Cold Weld” and shows a noticeable gap in the joint?",
-    "options": [
-      "Incomplete Fusion",
-      "Incomplete Penetration",
-      "Overlap",
-      "Underfill",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Incomplete Fusion is called Cold Weld with a gap and weak joint. Option A.",
-    "solution": "Incomplete Fusion (Cold Weld) means the two base metals never properly melted together.\n\nGiven: \"The welding joints are not properly connected or fused together. There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nIdentify keyword \"Cold Weld\" in the table — it is in parentheses after Incomplete Fusion.. Recall it creates a gap and weak joint that breaks easily.. Causes: inexperience, improper angle, low amperage/heat.\n\nWhy the other options are incorrect:\nOption B Incomplete Penetration is wire not reaching the root (depth), not a gap between the two pieces.\nOption C Overlap is excess metal flowing over, not a gap.\nOption D Underfill is a valley from insufficient fill.\n\n* Correct Option: A (Incomplete Fusion)"
-  },
-  {
     "id": "aee_wd_06",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "You weld 3 inches where the specification calls for 1–2 inches, creating an ugly, wasteful build-up. This is:",
     "options": [
       "Underfill",
@@ -2513,113 +2452,8 @@ export const questionBank = {
     "image": "/images/welding-defects.png"
   },
   {
-    "id": "aee_wd_07",
-    "topicId": "welding-defects",
-    "question": "Underfill is characterised by:",
-    "options": [
-      "A valley or gap from insufficient weld metal, often from going too fast or not seeing properly",
-      "A high, thick mountain of weld from high heat and low speed",
-      "Small bumps splashed all over the surface that must be ground off",
-      "Holes inside the weld from low gas",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Underfill = valley/gap from insufficient fill, caused by fast travel or poor visibility. Option A.",
-    "solution": "Underfill is the opposite of Overlap — not enough metal.\n\nGiven: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’. This is caused by not filling in the weld enough, or totally missing the angle. Caused by not being able to see properly or being inexperienced. Also can be caused by going too fast.\"\n\nIdentify keyword valley/gap + insufficient.\nCauses: too fast, poor visibility, inexperience, missed angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Convexity (mountain).\nOption C is Spatter (splash bumps).\nOption D is Porosity (holes).\n\n* Correct Option: A (A valley or gap from insufficient weld metal, often from going too fast or not seeing properly)"
-  },
-  {
-    "id": "aee_wd_08",
-    "topicId": "welding-defects",
-    "question": "Spatter is recognized by small bumps splashed over the work piece that must be ground off. Which is a listed cause?",
-    "options": [
-      "High amperage and low gas",
-      "Low amperage, wire too long, and poor penetration",
-      "Slow speed and high heat",
-      "Not cleaning grease from workpiece",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Spatter causes: low amperage, wire too long, poor penetration and high arc power. Option B.",
-    "solution": "Spatter are tiny molten droplets expelled and stuck around the weld.\n\nGiven causes for Spatter: \"High Arc Power. Can be caused by low amperage, your weld wire (electrode) is too long and you can not get proper penetration.\"\n\nMatch Option B: low amperage, wire too long, poor penetration — exactly listed.\nOther options belong to other defects.\n\nWhy the other options are incorrect:\nOption A (high amperage + low gas) is Undercut.\nOption C (slow + high heat) is Excessive Convexity.\nOption D (not cleaning grease) is Undercut.\n\n* Correct Option: B (Low amperage, wire too long, and poor penetration)"
-  },
-  {
-    "id": "aee_wd_09",
-    "topicId": "welding-defects",
-    "question": "A very high, thick weld sitting like a mountain on the work piece is called:",
-    "options": [
-      "Excessive Convexity (mountain)",
-      "Excessive Concavity (valley)",
-      "Underfill",
-      "Overlap",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "High, thick mountain weld is Excessive Convexity. Option A.",
-    "solution": "Convexity = outward bulge (mountain), Concavity = inward valley.\n\nGiven: \"Your weld is very high and thick up on your work piece. Caused by high arc (heat) and low speed.\"\n\nVisualise mountain vs valley.\nHigh + thick = Excessive Convexity (mountain).\n\nWhy the other options are incorrect:\nOption B is the opposite (too low, valley).\nOption C Underfill is also a valley but from insufficient fill, not high build-up.\nOption D Overlap is metal flowing onto base metal, not necessarily high mountain.\n\n* Correct Option: A (Excessive Convexity (mountain))"
-  },
-  {
-    "id": "aee_wd_10",
-    "topicId": "welding-defects",
-    "question": "A weld that is too low, forming a valley, is:",
-    "options": [
-      "Excessive Convexity",
-      "Excessive Concavity (valley)",
-      "Excessive Penetration",
-      "Incomplete Fusion",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Too low like a valley is Excessive Concavity. Option B.",
-    "solution": "Concavity is inward (valley).\n\nGiven: \"Your weld is too low like a valley.\"\n\nDistinguish from Convexity (mountain).\nConcavity is the low counterpart.\n\nWhy the other options are incorrect:\nOption A is high mountain.\nOption C is too deep penetration through the joint.\nOption D is lack of side-wall fusion.\n\n* Correct Option: B (Excessive Concavity (valley))"
-  },
-  {
-    "id": "aee_wd_11",
-    "topicId": "welding-defects",
-    "question": "Excessive Weld Reinforcement is primarily caused by:",
-    "options": [
-      "Slow travel speed or improper angles leading to too much width/height",
-      "Going too fast and not seeing properly",
-      "Low gas and high amperage",
-      "Very low gas and welding too fast",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Excessive Reinforcement = too much width/height from slow speed or wrong angle. Option A.",
-    "solution": "Reinforcement is the height/width of the weld beyond the plate surface. Excessive means more than specified.\n\nGiven causes: \"Slow travel speed. Or Improper angles.\" and \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nToo much reinforcement = too wide/high.\nMatch causes: Slow travel (more metal per length) + improper angle.\n\nWhy the other options are incorrect:\nOption B (too fast, poor visibility) is Underfill.\nOption C (low gas, high amperage) is Undercut.\nOption D (very low gas, too fast) is Porosity.\n\n* Correct Option: A (Slow travel speed or improper angles leading to too much width/height)"
-  },
-  {
-    "id": "aee_wd_12",
-    "topicId": "welding-defects",
-    "question": "Incomplete Penetration means:",
-    "options": [
-      "Weld wire does not extend fully into the joint, resulting in a weak weld",
-      "Weld wire goes too far down and burns through the work piece",
-      "Weld metal flows onto the base metal without fusing",
-      "Flux remains on the surface",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Incomplete Penetration = wire does not reach the root, weak joint. Option A.",
-    "solution": "Penetration is depth into the joint. Incomplete = not deep enough.\n\nGiven: \"Your weld wire does not extend fully into the joint. If you do not have proper penetration you will have a weak weld. Caused by Electrode length not long enough or improper angle.\"\n\nRoot not fused.\nCauses: electrode too short, wrong angle.\n\nWhy the other options are incorrect:\nOption B is Excessive Penetration (too deep, burn-through).\nOption C is Overlap.\nOption D is Slag.\n\n* Correct Option: A (Weld wire does not extend fully into the joint, resulting in a weak weld)"
-  },
-  {
-    "id": "aee_wd_13",
-    "topicId": "welding-defects",
-    "question": "Excessive Penetration is caused by:",
-    "options": [
-      "Holding the gun in one spot too long and burning through",
-      "Electrode too short and wrong angle",
-      "Not filling enough and going too fast",
-      "Low amperage and slow speed",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Excessive Penetration = holding too long in one spot, burning through. Option A.",
-    "solution": "Excessive Penetration is too deep — wire goes through.\n\nGiven: \"Your weld wire goes too far down into the work piece. You are holding your gun in one spot too long. You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nToo far down, burn-through.\nCause: Dwell time too long in one spot.\n\nWhy the other options are incorrect:\nOption B is Incomplete Penetration (too short).\nOption C is Underfill (too fast, not enough fill).\nOption D is Slag (low amperage, slow).\n\n* Correct Option: A (Holding the gun in one spot too long and burning through)"
-  },
-  {
     "id": "aee_wd_14",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "Which defect requires grinding to remove small bumps and is accompanied by a distinct sound?",
     "options": [
       "Slag",
@@ -2634,53 +2468,342 @@ export const questionBank = {
     "image": "/images/welding-defects.png"
   },
   {
-    "id": "aee_wd_15",
-    "topicId": "welding-defects",
-    "question": "What is the key visual difference between Overlap and Excessive Weld Reinforcement?",
+    "id": "aee_mj_06",
+    "topicId": "welding-processes-defects",
+    "question": "What is the temperature of the blue (inner) zone and the white inner zone in gas welding flame?",
     "options": [
-      "Overlap flows onto the base metal without fusion; Reinforcement is extra height/width on the weld itself",
-      "Overlap is a valley, Reinforcement is a mountain",
-      "Overlap is caused by low gas, Reinforcement by high gas",
-      "There is no difference; they are the same defect",
+      "5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer",
+      "All zones same temperature",
+      "Only 1275°C",
+      "Only 2500°C",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Overlap is metal flowing onto base metal without fusing; Reinforcement is extra height/width on the weld. Option A.",
-    "solution": "Both involve “too much” but location differs.\n\n* Overlap: \"You use too much flux or weld onto one of the work pieces... weld onto one of the work pieces.\"\n* Excessive Weld Reinforcement: \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nOverlap = weld spills *onto* parent plate, often not fused at toe.\nReinforcement = weld is *on* the joint but too tall/wide.\n\nWhy the other options are incorrect:\nOption B confuses with Underfill/Convexity.\nOption C incorrectly assigns gas causes.\nOption D ignores the distinction the table makes.\n\n* Correct Option: A (Overlap flows onto the base metal without fusion; Reinforcement is extra height/width on the weld itself)"
+    "short": "Blue 5700°C, White inner 3200°C, Red intermediate 2500°C, Outer 1275°C. Option A.",
+    "solution": "Diagram shows: Temp: 5700°C blue (dies prezone), White inner zone (3200°C), Red intermediate zone (2500°C), Outer (1275°C) / Blue outer zone Secondary combustion.\n\nWhy the other options are incorrect: They list single temperature.\n\n* Correct Option: A (5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer)",
+    "image": "/images/flame-zones.png"
   },
   {
-    "id": "aee_wd_16",
-    "topicId": "welding-defects",
-    "question": "Which pair of defects are opposites in terms of “too much” vs “too little” weld metal?",
+    "id": "aee_mj_07",
+    "topicId": "welding-processes-defects",
+    "question": "In what ratio does a 1:1 mixture of oxygen and acetylene produce a neutral flame?",
     "options": [
-      "Porosity and Slag",
-      "Overlap / Excessive Reinforcement vs Underfill",
-      "Undercut and Spatter",
-      "Incomplete Fusion and Incomplete Penetration",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Overlap/Excessive Reinforcement (too much) vs Underfill (too little, valley). Option B.",
-    "solution": "Group defects by excess vs insufficiency.\n\n* Too much: Overlap (too long/wide), Excessive Reinforcement (too high/wide), Excessive Convexity (mountain), Excessive Penetration (too deep).\n* Too little: Underfill (valley/gap), Incomplete Penetration (not deep enough), Concavity (too low).\n\nCheck Option B: Overlap/Excessive Reinforcement are explicitly “too much” (3″ vs 1–2″, more than needs), Underfill is “not sufficient” (valley).\nThey are direct opposites.\n\nWhy the other options are incorrect:\nOption A: Porosity (holes) and Slag (flux) are not amount opposites.\nOption C: Undercut (groove) and Spatter (splash) are different mechanisms.\nOption D: Both are “incomplete” (lack of fusion/penetration) — similar, not opposites.\n\n* Correct Option: B (Overlap / Excessive Reinforcement vs Underfill)"
-  },
-  {
-    "id": "aee_wd_17",
-    "topicId": "welding-defects",
-    "question": "A welder fails to clean grease from the work piece and uses the wrong electrode angle with high amperage. Which defect is most likely?",
-    "options": [
-      "Undercut",
-      "Porosity",
-      "Excessive Convexity",
-      "Incomplete Penetration",
+      "1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone)",
+      "70:30",
+      "100:0",
+      "0:100",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Wrong angle + high amperage + grease are listed for Undercut. Option A.",
-    "solution": "Match cause cluster to defect.\n\nGiven causes for Undercut: low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nThe scenario lists three of those: wrong angle, high amperage, grease.\nTherefore Undercut is most likely.\n\nWhy the other options are incorrect:\nOption B Porosity is low gas + too fast + inexperience, not grease/high amperage.\nOption C Excessive Convexity is high heat + low speed, not grease.\nOption D Incomplete Penetration is short electrode + wrong angle, but not grease/high amperage combo.\n\n* Correct Option: A (Undercut)"
+    "short": "1:1 gives neutral flame (Blue outer). Option A.",
+    "solution": "Text: \"In ratio 1:1, a neutral flame is produced (Blue outer) zone Secondary combustion.\"\n\nWhy the other options are incorrect:\nOption B 70:30 is reducing/carbonizing flame.\n\n* Correct Option: A (1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone))",
+    "image": "/images/flame-zones.png"
+  },
+  {
+    "id": "aee_mj_08",
+    "topicId": "welding-processes-defects",
+    "question": "Which flame contains excess acetylene than oxygen and is used to weld alloys of steel like Nickel, Chromium?",
+    "options": [
+      "Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones)",
+      "Neutral flame",
+      "Oxidizing flame",
+      "No flame",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Carburizing/Reducing flame has excess acetylene (70:30) for Ni, Cr alloys. Option A.",
+    "solution": "Text:\n* The kind of flame which contains excess of acetylene gas than oxygen is called Combusting/Carburizing flame.\n* This kind of flame is used to weld alloys of steel like Nickel, Chromium etc.\n\nAnd: Reducing flame - Carbonizing flame produced when volume of acetylene is 70:30, produces 3 distinct zone.\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C Oxidizing has excess oxygen.\n\n* Correct Option: A (Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones))",
+    "image": "/images/flame-zones.png"
+  },
+  {
+    "id": "aee_mj_09",
+    "topicId": "welding-processes-defects",
+    "question": "Which flame contains excess oxygen compared to acetylene and is used for brazing?",
+    "options": [
+      "Oxidizing flame",
+      "Neutral flame",
+      "Carburizing flame",
+      "No flame",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Oxidizing flame has excess oxygen and is used for brazing. Option A.",
+    "solution": "Text: \"The flame which contains excess of oxygen is called Oxidising flame. This kind of flame is used for brazing.\"\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C has excess acetylene.\n\n* Correct Option: A (Oxidizing flame)",
+    "image": "/images/flame-zones.png"
+  },
+  {
+    "id": "aee_wd_03",
+    "topicId": "welding-processes-defects",
+    "question": "Which of the following is NOT a cause of undercut as listed in the material?",
+    "options": [
+      "Low gas",
+      "High amperage",
+      "Wrong electrode angle",
+      "High arc power with low amperage",
+      "None of the above"
+    ],
+    "correct": 3,
+    "short": "High arc power with low amperage causes spatter, not undercut. Option D.",
+    "solution": "Each defect has specific parameter causes. Undercut causes from the table are low gas, high amperage, wrong electrode angle, not properly cleaning off the grease.\n\nList undercut causes: low gas, high amperage, wrong angle, grease.. Check Option D: High arc power with low amperage — this is listed under Spatter.. Therefore D is not a cause of undercut.\n\nWhy the other options are correct causes (so they are not the answer):\nOptions A, B, C are all explicitly listed as causes of undercut.\n\n* Correct Option: D (High arc power with low amperage)"
+  },
+  {
+    "id": "aee_pw_03",
+    "topicId": "welding-processes-defects",
+    "question": "Welding is used for making which type of joints?",
+    "options": [
+      "Permanent joints",
+      "Temporary joints",
+      "Semi-permanent joints",
+      "No joints",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Welding is used for making permanent joints. Option A.",
+    "solution": "Definition: “Welding is used for making permanent joints.” It is used for joining similar or dissimilar metals by heating to suitable temperature with or without pressure, filler and flux.\n\nWhy the other options are incorrect: Welding is not for temporary or semi-permanent; those are bolted/riveted.\n\n* Correct Option: A (Permanent joints)"
+  },
+  {
+    "id": "aee_mig_01",
+    "topicId": "welding-processes-defects",
+    "question": "Which of the following is a listed safety practice in MIG welding?",
+    "options": [
+      "Select the correct shaded lens and work in a well ventilated area",
+      "Work in a poorly ventilated area",
+      "Attempt to repair the machine yourself",
+      "Use a clear lens for all welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Select correct shaded lens and well ventilated area are MIG safety practices. Option A.",
+    "solution": "Safety practices in MIG welding listed include: Select the correct shaded lens, Work in a well ventilated area, Maintain cables as straight as possible, Turn off machine and gas supply when finished, Never attempt to repair machine.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says poorly ventilated — should be well ventilated.\nOption C says attempt to repair — should be never attempt.\nOption D says clear lens — should be shaded lens.\n\n* Correct Option: A (Select the correct shaded lens and work in a well ventilated area)"
+  },
+  {
+    "id": "aee_tig_01",
+    "topicId": "welding-processes-defects",
+    "question": "Which are listed as ADVANTAGES of TIG welding?",
+    "options": [
+      "Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds ferrous and non-ferrous",
+      "Only welds thin metals",
+      "Requires more grinding",
+      "More distortion",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advantages: Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds both ferrous and non-ferrous. Option A.",
+    "solution": "Material under ADVANTAGES:\n\n• Stronger welds\n• Easier than still welding (stick)\n• Less spark, smoke and fumes\n• Less distortion of workpiece\n• Finished welds require less grinding\n• Welds ferrous and non-ferrous metals\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Stronger welds, easier than still welding, less spark, smoke and fumes, less distortion, less grinding, welds ferrous and non-ferrous)"
+  },
+  {
+    "id": "aee_pw_07",
+    "topicId": "welding-processes-defects",
+    "question": "Gas welding obtains heat for welding by:",
+    "options": [
+      "Combustion of oxygen and fuel gas (acetylene, hydrogen or propene)",
+      "Electric arc between base metal and electrode",
+      "Pressure alone",
+      "Friction",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gas welding heat is from combustion of oxygen and fuel gas. Option A.",
+    "solution": "Definition: “Gas Welding is a fusion welding process, in which the heat for welding is obtained by the combustion of oxygen and fuel the gas may be acetylene, hydrogen or propene.”\n\nWhy the other options are incorrect:\nOption B is Arc welding, Option C is pressure welding, Option D is friction (solid-state).\n\n* Correct Option: A (Combustion of oxygen and fuel gas (acetylene, hydrogen or propene))"
+  },
+  {
+    "id": "aee_pw_13",
+    "topicId": "welding-processes-defects",
+    "question": "Arc welding is a fusion welding process where heat is obtained from:",
+    "options": [
+      "Electric arc between base metal and an electrode",
+      "Combustion of oxygen and acetylene",
+      "Pressure alone",
+      "Friction",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding heat is from electric arc between base metal and electrode. Option A.",
+    "solution": "Definition: “Arc welding is a fusion welding process in which the heat required to fuse the metal is obtain from the electric arc between the base metal and an electrode.”\n\nWhy the other options are incorrect:\nOption B is gas welding, Option C is pressure/solid-state, Option D is friction welding.\n\n* Correct Option: A (Electric arc between base metal and an electrode)"
+  },
+  {
+    "id": "aee_mj_03",
+    "topicId": "welding-processes-defects",
+    "question": "What is the major difference between arc welding and gas welding regarding power source?",
+    "options": [
+      "Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen)",
+      "Both use electricity",
+      "Both use gas",
+      "No difference",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc uses electricity, Gas uses fuel gas + oxygen. Option A.",
+    "solution": "Material: The major difference lies in the power source — Arc welding uses electricity while Gas welding uses a gas combination of fuel gas and oxygen. Acetylene & Oxygen.\n\nWhy the other options are incorrect: They state both same.\n\n* Correct Option: A (Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen))"
+  },
+  {
+    "id": "aee_pw_01",
+    "topicId": "welding-processes-defects",
+    "question": "What is production welding as defined in the material?",
+    "options": [
+      "A process that joins materials, usually metals, by causing fusion",
+      "A process that cuts metals only",
+      "A process that paints metals",
+      "A process that polishes metals",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Production welding joins materials, usually metals, by causing fusion. Option A.",
+    "solution": "Production welding is defined as a process that joins materials, usually metals, by causing fusion.\n\nIt is usually done through MIG welding as it is the quickest method, and many factories now use robotic welding to speed up production.\n\nWhy the other options are incorrect:\nOption B cutting is a related process (oxy-acetylene cutting), not production welding itself.\nOption C painting and D polishing are not joining processes.\n\n* Correct Option: A (A process that joins materials, usually metals, by causing fusion)"
+  },
+  {
+    "id": "aee_mj_01",
+    "topicId": "welding-processes-defects",
+    "question": "What are the two main categories of metal joints based on disassembly?",
+    "options": [
+      "Temporary (bolting, riveting) and Permanent (soldering, welding, brazing)",
+      "Only temporary",
+      "Only permanent",
+      "No categories",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Temporary: bolting/riveting; Permanent: soldering/welding/brazing. Option A.",
+    "solution": "Metal Joining Process — Joints can be:\n1) Temporary — allow for disassembling, no ram for repairs: bolting (bolts nuts), riveting (cylindrical pin)\n2) Permanent — allow for no disassembling, rarely done by heat: Soldering, Welding, Brazing.\n\nWhy the other options are incorrect: They list only one category.\n\n* Correct Option: A (Temporary (bolting, riveting) and Permanent (soldering, welding, brazing))"
+  },
+  {
+    "id": "aee_wd_11",
+    "topicId": "welding-processes-defects",
+    "question": "Excessive Weld Reinforcement is primarily caused by:",
+    "options": [
+      "Slow travel speed or improper angles leading to too much width/height",
+      "Going too fast and not seeing properly",
+      "Low gas and high amperage",
+      "Very low gas and welding too fast",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Excessive Reinforcement = too much width/height from slow speed or wrong angle. Option A.",
+    "solution": "Reinforcement is the height/width of the weld beyond the plate surface. Excessive means more than specified.\n\nGiven causes: \"Slow travel speed. Or Improper angles.\" and \"More welding than needs to be done you are going over the joint too much. (WIDTH)\"\n\nToo much reinforcement = too wide/high.\nMatch causes: Slow travel (more metal per length) + improper angle.\n\nWhy the other options are incorrect:\nOption B (too fast, poor visibility) is Underfill.\nOption C (low gas, high amperage) is Undercut.\nOption D (very low gas, too fast) is Porosity.\n\n* Correct Option: A (Slow travel speed or improper angles leading to too much width/height)"
+  },
+  {
+    "id": "aee_pw_06",
+    "topicId": "welding-processes-defects",
+    "question": "Which of the following lists includes only welding processes as per the Classification slide?",
+    "options": [
+      "Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding",
+      "Only Gas and Arc",
+      "Only Resistance and Solid state",
+      "Only Brazing and Soldering",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Gas, Arc, Resistance, Solid state, Thermo-chemical, Low Temperature are listed. Option A.",
+    "solution": "Slide CLASSIFICATION OF WELDING PROCESSES lists:\n\n✓ Gas welding (Oxy-Acetylene)\n✓ Arc welding (Metal Arc)\n✓ Resistance welding\n✓ Solid state welding\n✓ Thermo-chemical welding\n✓ Low Temperature welding\n\nWhy the other options are incorrect: They are incomplete.\n\n* Correct Option: A (Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding)"
+  },
+  {
+    "id": "aee_mig_06",
+    "topicId": "welding-processes-defects",
+    "question": "In AWS electrode classification ER 70 S 6, what does “70” represent?",
+    "options": [
+      "Tensile strength in 1,000 psi",
+      "Wire diameter in mm",
+      "Gas flow rate",
+      "Voltage",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "70 means tensile strength in 1,000 psi (70,000 psi). Option A.",
+    "solution": "AWS ELECTRODE CLASSIFICATION ER 70 S 6:\n\n• E : identifies it as electrode\n• R : identifies it as a rod\n• 70 : tensile strength in 1,000 psi\n• S : identifies solid bare wire\n• 6 : chemical composition variations\n\nSo 70 means 70 × 1,000 = 70,000 psi tensile strength.\n\nWhy the other options are incorrect: They are not the definition of the numeric code.\n\n* Correct Option: A (Tensile strength in 1,000 psi)"
+  },
+  {
+    "id": "aee_tig_03",
+    "topicId": "welding-processes-defects",
+    "question": "Which power supply types are listed for TIG equipment?",
+    "options": [
+      "AC, DC-straight polarity, DC-reverse polarity",
+      "Only AC",
+      "Only DCRP",
+      "Only DC",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "AC, DC-straight, DC-reverse polarity. Option A.",
+    "solution": "Material under TIG EQUIPMENT — Power supply:\n\n• AC\n• DC-straight polarity\n• DC-reverse polarity\n\nWhy the other options are incorrect: They list only one type.\n\n* Correct Option: A (AC, DC-straight polarity, DC-reverse polarity)"
+  },
+  {
+    "id": "aee_pw_12",
+    "topicId": "welding-processes-defects",
+    "question": "Which is a disadvantage of gas welding?",
+    "options": [
+      "Not suitable for heavy section, less working temperature, slow rate of heating",
+      "Portable and versatile",
+      "Better control over temperature",
+      "Low cost",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Disadvantages: not for heavy section, less temp, slow heating. Option A.",
+    "solution": "Disadvantages listed:\n\n• Not suitable for heavy section.\n• Less working temperature of gas flame.\n• Slow rate of heating.\n\nWhy the other options are incorrect: They are advantages.\n\n* Correct Option: A (Not suitable for heavy section, less working temperature, slow rate of heating)"
+  },
+  {
+    "id": "aee_pw_15",
+    "topicId": "welding-processes-defects",
+    "question": "Which equipment is listed for arc welding?",
+    "options": [
+      "Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles",
+      "Only gas cylinders",
+      "Only check valve",
+      "Only non-return valve",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding equipment includes generator/transformer, cables, holder, electrode, shield, gloves, brush, hammer, goggles. Option A.",
+    "solution": "Equipment listed:\n\nØ A welding generator (D.C.) or Transformer (A.C.)\nØ Two cables- one for work and one for electrode\nØ Electrode holder\nØ Electrode\nØ Protective shield\nØ Gloves\nØ Wire brush\nØ Chipping hammer\nØ Goggles\n\nWhy the other options are incorrect: They list gas welding equipment (cylinders, check valve).\n\n* Correct Option: A (Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles)"
+  },
+  {
+    "id": "aee_mj_12",
+    "topicId": "welding-processes-defects",
+    "question": "What are the two types of welding that both involve application of heat or generation?",
+    "options": [
+      "Arc welding and Gas welding",
+      "Only Arc welding",
+      "Only Gas welding",
+      "No welding types",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Arc welding and Gas welding both involve heat application/generation. Option A.",
+    "solution": "Process of Welding — There are 2 types of welding. Art welding; Gas welding. Both involve (application) of heat or generation.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Arc welding and Gas welding)"
+  },
+  {
+    "id": "aee_pw_25",
+    "topicId": "welding-processes-defects",
+    "question": "What is a key conclusion about welding as per the Conclusion slide?",
+    "options": [
+      "A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom",
+      "Welding is very costly and not portable",
+      "Welding cannot join dissimilar metals",
+      "Welding has no design freedom",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Good weld is strong, equipment not costly, portable, joins similar/dissimilar, design freedom. Option A.",
+    "solution": "Conclusion slide:\n\nØ A good weld is always strong.\nØ General welding equipment is not very costly.\nØ Portable welding equipment are available.\nØ A large number of metal and alloy both similar and dissimilar can be join by welding.\nØ Welding permits considerable freedom in design.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom)"
+  },
+  {
+    "id": "aee_mj_02",
+    "topicId": "welding-processes-defects",
+    "question": "What is welding as a joining process?",
+    "options": [
+      "Heat generated is used to melt and fuse materials together to produce a permanent joint",
+      "Joining without heat",
+      "Only for temporary joints",
+      "Only for wood",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Welding uses heat to melt and fuse materials for permanent joint. Option A.",
+    "solution": "Definition: \"Welding: heat generated is used to melt and fuse materials together, to produce a permanent joint.\"\n\nWhy the other options are incorrect: They are not the definition.\n\n* Correct Option: A (Heat generated is used to melt and fuse materials together to produce a permanent joint)"
   },
   {
     "id": "aee_wd_18",
-    "topicId": "welding-defects",
+    "topicId": "welding-processes-defects",
     "question": "A beginner welder moves too fast, has very low gas, and lacks experience. Which defect will most likely appear as holes inside the weld?",
     "options": [
       "Slag",
@@ -2694,184 +2817,63 @@ export const questionBank = {
     "solution": "Porosity = gas bubbles trapped as holes.\n\nGiven causes for Porosity: inexperience, welding too fast, very low gas.\n\nScenario matches all three: beginner (inexperience), too fast, very low gas.\nHoles inside = Porosity.\n\nWhy the other options are incorrect:\nOption A Slag is surface flux, not holes.\nOption C Overlap is excess surface metal.\nOption D Excessive Penetration is burn-through depth.\n\n* Correct Option: B (Porosity)"
   },
   {
-    "id": "aee_wd_19",
-    "topicId": "welding-defects",
-    "question": "What is the main risk of Incomplete Fusion (Cold Weld) if left uncorrected?",
+    "id": "aee_pw_21",
+    "topicId": "welding-processes-defects",
+    "question": "Which are listed as Related Processes (not welding but allied)?",
     "options": [
-      "The weld will look ugly but remain strong",
-      "The weld can break off very soon due to the gap",
-      "It will cause excessive penetration and burn-through",
-      "It will create a mountain-like build-up",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Cold Weld has a gap and breaks off soon. Option B.",
-    "solution": "Fusion is bonding. Incomplete = no bond.\n\nGiven: \"There is a noticeable gap in your joint. This can cause the weld to break off very soon.\"\n\nGap means no metallic continuity.\nUnder load, the joint fails early.\n\nWhy the other options are incorrect:\nOption A says remains strong — opposite.\nOption C is Excessive Penetration.\nOption D is Convexity.\n\n* Correct Option: B (The weld can break off very soon due to the gap)"
-  },
-  {
-    "id": "aee_wd_20",
-    "topicId": "welding-defects",
-    "question": "Which defect is described as “You use too much flux or weld onto one of the work pieces” and wastes material?",
-    "options": [
-      "Spatter",
-      "Overlap",
-      "Undercut",
-      "Slag",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Too much flux/welding onto workpiece and waste is Overlap. Option B.",
-    "solution": "Direct quote from table for Overlap.\n\nGiven: \"You use too much flux or weld onto one of the work pieces. ... Will make the piece look ‘ugly’ and also waste welding material. Caused by welding too long or using too much weld.\"\n\nMatch quote to Overlap definition.\nWaste + ugly + onto workpiece are keywords.\n\nWhy the other options are incorrect:\nOption A Spatter is splash, not onto workpiece as a bead.\nOption C Undercut is groove, not excess on top.\nOption D Slag is flux residue, not weld metal.\n\n* Correct Option: B (Overlap)"
-  },
-  {
-    "id": "aee_wd_21",
-    "topicId": "welding-defects",
-    "question": "Which two defects both involve a “valley” or low spot, but have different causes?",
-    "options": [
-      "Underfill and Excessive Concavity",
-      "Slag and Porosity",
-      "Spatter and Overlap",
-      "Incomplete Fusion and Overlap",
+      "Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering",
+      "Friction, Ultrasonic",
+      "Butt, Spot",
+      "Electron-beam",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Underfill (valley from insufficient fill) and Excessive Concavity (valley from low weld) both are low spots. Option A.",
-    "solution": "Valley defects.\n\nGiven:\n* Underfill: \"You do not have sufficient weld and create a ‘valley’ or a ‘gap’.\"\n* Excessive Concavity (valley): \"Your weld is too low like a valley.\"\n\nBoth describe low/valley.\nCauses differ: Underfill = not enough fill, missed angle, too fast, poor visibility. Concavity = generally too low profile.\n\nWhy the other options are incorrect:\nOption B are surface vs internal.\nOption C are both excess (splash/overlap).\nOption D are gap vs excess.\n\n* Correct Option: A (Underfill and Excessive Concavity)"
+    "short": "Related Processes: Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering. Option A.",
+    "solution": "Classification slide (vii) Related Process:\n\n• Oxy-acetylene cutting\n• Arc cutting\n• Hard facing\n• Brazing\n• Soldering\n\nWhy the other options are incorrect: They are actual welding categories.\n\n* Correct Option: A (Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering)"
   },
   {
-    "id": "aee_wd_22",
-    "topicId": "welding-defects",
-    "question": "Excessive Penetration weakens the work piece by:",
+    "id": "aee_mig_11",
+    "topicId": "welding-processes-defects",
+    "question": "According to Fig. 7-22 Effect of Gun Position, which position gives narrow bead width and deep penetration?",
     "options": [
-      "Creating a valley on top",
-      "Leaving slag on the surface",
-      "Burning through too much of the work piece",
-      "Creating holes inside the weld",
-      "None of the above"
-    ],
-    "correct": 2,
-    "short": "Excessive Penetration burns through too much, weakening. Option C.",
-    "solution": "Penetration depth.\n\nGiven for Excessive Penetration: \"You burn through too much of the work piece. (weak work piece) (burn through)\"\n\nToo deep → base metal thinned/burned.\nWeakens.\n\nWhy the other options are incorrect:\nOption A is Underfill/Concavity (valley on top).\nOption B is Slag.\nOption D is Porosity (holes).\n\n* Correct Option: C (Burning through too much of the work piece)"
-  },
-  {
-    "id": "aee_fast_01",
-    "topicId": "fasteners",
-    "question": "Which bolt is normally made with a round head for an attractive external appearance and has ribs or flats on the shank to prevent turning when tightened?",
-    "options": [
-      "Carriage bolt",
-      "Hex bolt",
-      "Lag bolt",
-      "Plow bolt",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Round head with ribs/flats to prevent turning is Carriage bolt. Option A.",
-    "solution": "Carriage bolts are made with a round head for an attractive appearance. The ribs or flats on the shank bite into the material and prevent the bolt from turning while the nut is tightened. Some versions need a prepunched square hole; others press into place.\n\nWhy the other options are incorrect:\nOption B Hex bolt has a hexagonal head for torque, not round.\nOption C Lag bolt has a square head with a conical point for wood/masonry.\nOption D Plow bolt has a square countersunk head for flush mounting.\nOption E is not correct because A is correct.\n\n* Correct Option: A (Carriage bolt)"
-  },
-  {
-    "id": "aee_fast_02",
-    "topicId": "fasteners",
-    "question": "The most commonly used standard bolt, supplied in three strength grades and diameters ¼ to 4 in., with greater strength and ease of torque than square head, is:",
-    "options": [
-      "Square bolt",
-      "Hex bolt",
-      "Track bolt",
-      "Aircraft bolt",
+      "Perpendicular — medium bead and penetration",
+      "Backhand — narrow bead and deep penetration",
+      "Forehand — wide bead and low penetration",
       "None of the above"
     ],
     "correct": 1,
-    "short": "Most common, three grades, ¼-4 in., hex head is Hex bolt. Option B.",
-    "solution": "Hex bolts are the most commonly used standard fasteners. They come in three basic strength grades and shank diameters from ¼ to 4 in. The hex head offers greater strength, ease of torque input, and area for manufacturer’s identification than the square head.\n\nWhy the other options are incorrect:\nOption A Square bolt is supplied in only two grades, ¼ to 1½ in.\nOption C Track bolt has an elliptical head to prevent rotation in railroad tracks.\nOption D Aircraft bolt is a high-strength fastener to D.O.D. standards, not the most common.\n\n* Correct Option: B (Hex bolt)"
+    "short": "Backhand gives narrow bead and deep penetration. Option B.",
+    "solution": "Fig. 7-22. (1) Perpendicular—medium bead width and penetration, (2) backhand—narrow bead width and deep penetration, and (3) forehand—wide bead width and low penetration.\n\nWhy the other options are incorrect:\nOption A is perpendicular, Option C is forehand.\n\n* Correct Option: B (Backhand — narrow bead width and deep penetration)"
   },
   {
-    "id": "aee_fast_03",
-    "topicId": "fasteners",
-    "question": "Which bolt has an elliptical head to prevent rotation and is designed specifically for railroad tracks?",
+    "id": "aee_tig_05",
+    "topicId": "welding-processes-defects",
+    "question": "What does a TIG welding system include as per Fig. 68?",
     "options": [
-      "Carriage bolt",
-      "Track bolt",
-      "Plow bolt",
-      "Elevator bolt",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Elliptical head for railroad tracks is Track bolt. Option B.",
-    "solution": "Track bolts are a family designed for railroad tracks. This version has an elliptical head that fits into the rail and prevents rotation when tightening.\n\nWhy the other options are incorrect:\nOption A Carriage has round head with ribs.\nOption C Plow has square countersunk head.\nOption D Elevator has large flat head for soft materials.\n\n* Correct Option: B (Track bolt)"
-  },
-  {
-    "id": "aee_fast_04",
-    "topicId": "fasteners",
-    "question": "A square-headed fastener with a threaded conical point, normally used in wood or masonry with an expansion anchor, is:",
-    "options": [
-      "Lag bolt",
-      "Bent bolt",
-      "Flanged bolt",
-      "Round bolt",
+      "Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional)",
+      "Only power supply",
+      "Only torch",
+      "Only gas",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Square head with conical point for wood/masonry is Lag bolt. Option A.",
-    "solution": "Lag bolts have a square head and a threaded conical point. They are normally used in wood or masonry together with an expansion anchor.\n\nWhy the other options are incorrect:\nOption B Bent bolt is a threaded rod with an eye or right-angle bend.\nOption C Flanged bolt has a large bearing area head, often eliminating a washer.\nOption D Round bolt has a smooth round head tightened by the nut.\n\n* Correct Option: A (Lag bolt)"
+    "short": "Regulator/Flowmeter, TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional). Option A.",
+    "solution": "Fig. 68 — TIG Welding System: REGULATOR/FLOWMETER COMBINATION, AIR-OR-WATER COOLED TIG TORCH, SHIELDING GAS, WORKPIECE, POWER SUPPLY, WATER COOLER(OPTIONAL)\n\nWhy the other options are incorrect: They list only one component.\n\n* Correct Option: A (Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional))"
   },
   {
-    "id": "aee_fast_05",
-    "topicId": "fasteners",
-    "question": "Which head style eliminates the need for a separate washer, increases bearing area, and protects the finish during assembly?",
+    "id": "aee_pw_10",
+    "topicId": "welding-processes-defects",
+    "question": "What are the working pressures for oxygen and acetylene in gas welding?",
     "options": [
-      "Binding head",
-      "Fillister head",
-      "Washer (flanged) head",
-      "Oval head",
-      "None of the above"
-    ],
-    "correct": 2,
-    "short": "Flanged/Washer head eliminates separate washer and protects finish. Option C.",
-    "solution": "Washer head, also called flanged head, eliminates the need for a separate assembly step when a washer is required. It increases the bearing area of the head and protects the material finish during assembly.\n\nWhy the other options are incorrect:\nOption A Binding head is for electrical connections with an undercut to prevent fraying.\nOption B Fillister has a deep slot and small head for high torque.\nOption D Oval is similar to flat but preferred for neat appearance, not washer function.\n\n* Correct Option: C (Washer (flanged) head)"
-  },
-  {
-    "id": "aee_fast_06",
-    "topicId": "fasteners",
-    "question": "A head commonly used in electrical connections because the undercut prevents fraying of stranded wire is:",
-    "options": [
-      "Truss head",
-      "Pan head",
-      "Binding head",
-      "Flat head",
-      "None of the above"
-    ],
-    "correct": 2,
-    "short": "Undercut to prevent fraying in electrical work is Binding head. Option C.",
-    "solution": "Binding heads have an undercut that prevents fraying of stranded wire, so they are commonly used in electrical connections.\n\nWhy the other options are incorrect:\nOption A Truss head covers a large area for extra holding power.\nOption B Pan head combines truss, binding and round qualities.\nOption D Flat head centers well and provides a flush surface.\n\n* Correct Option: C (Binding head)"
-  },
-  {
-    "id": "aee_fast_07",
-    "topicId": "fasteners",
-    "question": "Which standard point is most widely used where cutting-in action is not objectionable and can be used on shafts up to Rockwell C 35 if the screw is at least Rockwell C 45?",
-    "options": [
-      "Cup point",
-      "Flat point",
-      "Cone point",
-      "Oval point",
+      "Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²",
+      "Oxygen 125 kg/cm², Acetylene 16 kg/cm²",
+      "Both 1 kg/cm²",
+      "Both 0.15 kg/cm²",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Most widely used, cutting-in action, C45 on C35 shaft is Cup point. Option A.",
-    "solution": "Cup point is the most widely used where cutting-in action is not objectionable. Heat-treated screws of Rockwell C 45 or greater can be used on shafts with surface hardness up to Rockwell C 35 without deforming the point.\n\nWhy the other options are incorrect:\nOption B Flat point is for frequent resetting against hardened shafts or thin walls.\nOption C Cone point is for permanent location with greatest holding power.\nOption D Oval point has lowest holding power, for frequent adjustment.\n\n* Correct Option: A (Cup point)"
-  },
-  {
-    "id": "aee_fast_08",
-    "topicId": "fasteners",
-    "question": "Which point is preferred where walls are thin or the threaded member is a soft metal, and where frequent resetting is required?",
-    "options": [
-      "Cup point",
-      "Flat point",
-      "Cone point",
-      "Half Dog point",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Thin walls, soft metal, frequent resetting → Flat point. Option B.",
-    "solution": "Flat point is used when frequent resetting is required, particularly suited for hardened steel shafts, thin walls, or soft metals. A flat is usually ground on the shaft for better contact.\n\nWhy the other options are incorrect:\nOption A Cup is general cutting-in.\nOption C Cone is for permanent location.\nOption D Half Dog is for permanent location spotted in a shaft hole.\n\n* Correct Option: B (Flat point)"
+    "short": "Working: Oxygen 1 kg/cm², Acetylene 0.15 kg/cm². Option A.",
+    "solution": "Regulators section:\n\n• Working pressure of oxygen 1 kg/cm²\n• Working pressure of acetylene 0.15 kg/cm²\n• Working pressure varies depending on thickness\n\nWhy the other options are incorrect:\nOption B lists cylinder pressures, not working pressures.\n\n* Correct Option: A (Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²)"
   },
   {
     "id": "aee_fast_09",
@@ -2906,79 +2908,34 @@ export const questionBank = {
     "image": "/images/taper-pin.png"
   },
   {
-    "id": "aee_fast_11",
+    "id": "aee_fast_01",
     "topicId": "fasteners",
-    "question": "Which thread-cutting screw gives the highest clamping force for a given torque and is good for low-strength metals and rethreading clogged holes?",
+    "question": "Which bolt is normally made with a round head for an attractive external appearance and has ribs or flats on the shank to prevent turning when tightened?",
     "options": [
-      "Type D",
-      "Type T",
-      "Type F",
-      "Type G",
+      "Carriage bolt",
+      "Hex bolt",
+      "Lag bolt",
+      "Plow bolt",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Highest clamping force for given torque, low-strength metals → Type D. Option A.",
-    "solution": "Type D thread-cutting screws require less driving torque than Type C and have longer thread engagement. Good for low-strength metals and plastics, high-stretch brittle metals, and rethreading clogged pretapped holes. Easy starting. Gives highest clamping force for a given torque.\n\nWhy the other options are incorrect:\nOption B Type T cuts easier with more chip clearance.\nOption C Type F is for wide range, fast driving.\nOption D Type G is similar to Type C but less torque.\n\n* Correct Option: A (Type D)"
+    "short": "Round head with ribs/flats to prevent turning is Carriage bolt. Option A.",
+    "solution": "Carriage bolts are made with a round head for an attractive appearance. The ribs or flats on the shank bite into the material and prevent the bolt from turning while the nut is tightened. Some versions need a prepunched square hole; others press into place.\n\nWhy the other options are incorrect:\nOption B Hex bolt has a hexagonal head for torque, not round.\nOption C Lag bolt has a square head with a conical point for wood/masonry.\nOption D Plow bolt has a square countersunk head for flush mounting.\nOption E is not correct because A is correct.\n\n* Correct Option: A (Carriage bolt)"
   },
   {
-    "id": "aee_wd_23",
-    "topicId": "welding-defects",
-    "question": "Self-piercing screws form a pilot hole by:",
-    "options": [
-      "Using a self-contained drill bit",
-      "Deforming the metal under pressure from the assembly tool",
-      "Cutting threads with a single wide flute",
-      "Rolling threads with four-point contact",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Self-piercing forms pilot hole by deforming metal under pressure, increasing engagement. Option B.",
-    "solution": "Self-piercing screws have a pointed tip that forms a pilot hole under pressure from the assembly tool. After the point is driven in, the threaded portion forms threads. The metal deformation increases thread-engagement area.\n\nWhy the other options are incorrect:\nOption A describes self-drilling screws (with a drill bit).\nOption C describes Type BT thread-cutting.\nOption D describes Type SF thread-rolling.\n\n* Correct Option: B (Deforming the metal under pressure from the assembly tool)"
-  },
-  {
-    "id": "aee_fast_12",
+    "id": "aee_fast_07",
     "topicId": "fasteners",
-    "question": "Wing nuts are used where:",
+    "question": "Which standard point is most widely used where cutting-in action is not objectionable and can be used on shafts up to Rockwell C 35 if the screw is at least Rockwell C 45?",
     "options": [
-      "Permanent location is desired",
-      "Frequent disassembly is anticipated",
-      "High torque and 360° engagement is needed",
-      "Joining perpendicular panels",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Wing nuts for frequent disassembly. Option B.",
-    "solution": "Wing nuts are used in applications where frequent disassembly is anticipated, because they can be turned by hand without tools.\n\nWhy the other options are incorrect:\nOption A is for cone/half-dog points.\nOption C is Dome nut (high torque, 360° engagement).\nOption D is Angle nut.\n\n* Correct Option: B (Frequent disassembly is anticipated)"
-  },
-  {
-    "id": "aee_fast_13",
-    "topicId": "fasteners",
-    "question": "Which insert is described as knurled, press-fit, or expansion, requires a hole slightly larger than OD, and is easiest to install for lightly loaded applications?",
-    "options": [
-      "Pressed-in (knurled) insert",
-      "Self-tapping insert",
-      "Solid-bushing insert",
-      "Molded-in insert",
+      "Cup point",
+      "Flat point",
+      "Cone point",
+      "Oval point",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Knurled, press-fit, larger hole, easiest for light loads → Pressed-in. Option A.",
-    "solution": "Pressed-in inserts, also called knurled, press-fit, or expansion inserts, are non-threaded and require a prepared hole slightly larger than the insert OD. They are frequently the easiest to install and are used chiefly for lightly loaded applications.\n\nWhy the other options are incorrect:\nOption B Self-tapping eliminates separate tapping, for nonferrous/plastics.\nOption C Solid-bushing is for any drill-and-tap material with mechanical locks.\nOption D Molded-in is cast in place, used with ceramics/rubber.\n\n* Correct Option: A (Pressed-in (knurled) insert)"
-  },
-  {
-    "id": "aee_fast_14",
-    "topicId": "fasteners",
-    "question": "Which rivet type has hole depth greater than 1.12 times shank diameter and can punch its own holes in soft materials, but has lower shear strength than semitubular?",
-    "options": [
-      "Compression rivet",
-      "Full tubular rivet",
-      "Bifurcated (split) rivet",
-      "Semitubular rivet",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Hole depth >1.12× diameter, punches own holes, lower shear than semitubular → Full tubular. Option B.",
-    "solution": "Full tubular rivets have hole depths greater than 1.12 times shank diameter. They can punch their own holes in fabric, some plastic sheet, and other soft materials. Shear strength is less than that of semitubular rivets.\n\nWhy the other options are incorrect:\nOption A Compression rivets form interference fit and are flush.\nOption C Bifurcated have split bodies/prongs.\nOption D Semitubular has depth never exceeds 1.12× and becomes essentially solid.\n\n* Correct Option: B (Full tubular rivet)"
+    "short": "Most widely used, cutting-in action, C45 on C35 shaft is Cup point. Option A.",
+    "solution": "Cup point is the most widely used where cutting-in action is not objectionable. Heat-treated screws of Rockwell C 45 or greater can be used on shafts with surface hardness up to Rockwell C 35 without deforming the point.\n\nWhy the other options are incorrect:\nOption B Flat point is for frequent resetting against hardened shafts or thin walls.\nOption C Cone point is for permanent location with greatest holding power.\nOption D Oval point has lowest holding power, for frequent adjustment.\n\n* Correct Option: A (Cup point)"
   },
   {
     "id": "aee_fast_15",
@@ -2996,6 +2953,36 @@ export const questionBank = {
     "solution": "Semitubular is the most widely used rivet type. It has a straight or tapered hole with depth never exceeding 1.12 times shank diameter. When properly set, it becomes essentially a solid member.\n\nWhy the other options are incorrect:\nOption A Full tubular has depth >1.12×.\nOption B Bifurcated is split.\nOption C Metal-piercing has greater column strength for piercing.\n\n* Correct Option: D (Semitubular)"
   },
   {
+    "id": "aee_fast_02",
+    "topicId": "fasteners",
+    "question": "The most commonly used standard bolt, supplied in three strength grades and diameters ¼ to 4 in., with greater strength and ease of torque than square head, is:",
+    "options": [
+      "Square bolt",
+      "Hex bolt",
+      "Track bolt",
+      "Aircraft bolt",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Most common, three grades, ¼-4 in., hex head is Hex bolt. Option B.",
+    "solution": "Hex bolts are the most commonly used standard fasteners. They come in three basic strength grades and shank diameters from ¼ to 4 in. The hex head offers greater strength, ease of torque input, and area for manufacturer’s identification than the square head.\n\nWhy the other options are incorrect:\nOption A Square bolt is supplied in only two grades, ¼ to 1½ in.\nOption C Track bolt has an elliptical head to prevent rotation in railroad tracks.\nOption D Aircraft bolt is a high-strength fastener to D.O.D. standards, not the most common.\n\n* Correct Option: B (Hex bolt)"
+  },
+  {
+    "id": "aee_fast_08",
+    "topicId": "fasteners",
+    "question": "Which point is preferred where walls are thin or the threaded member is a soft metal, and where frequent resetting is required?",
+    "options": [
+      "Cup point",
+      "Flat point",
+      "Cone point",
+      "Half Dog point",
+      "None of the above"
+    ],
+    "correct": 1,
+    "short": "Thin walls, soft metal, frequent resetting → Flat point. Option B.",
+    "solution": "Flat point is used when frequent resetting is required, particularly suited for hardened steel shafts, thin walls, or soft metals. A flat is usually ground on the shaft for better contact.\n\nWhy the other options are incorrect:\nOption A Cup is general cutting-in.\nOption C Cone is for permanent location.\nOption D Half Dog is for permanent location spotted in a shaft hole.\n\n* Correct Option: B (Flat point)"
+  },
+  {
     "id": "aee_fast_16",
     "topicId": "fasteners",
     "question": "Which blind-rivet type leaves part of the mandrel in the body as a plug to increase shear strength and may have a closed blind end?",
@@ -3011,68 +2998,55 @@ export const questionBank = {
     "solution": "Pull-mandrel blind rivets have three subclassifications:\n* Pull-through: mandrel pulled completely through, leaving hollow.\n* Break type: mandrel is pulled into or against the body and then breaks off, leaving part in the body as a plug. The retained section increases shear strength. May have closed blind end.\n* Nonbreak: mandrel pulled into body but does not break, removed later.\n\nTherefore, the described is Break type.\n\nWhy the other options are incorrect:\nOption A leaves hollow.\nOption C does not break.\nOption D is drive-pin, hammered to flare.\n\n* Correct Option: B (Break type)"
   },
   {
-    "id": "aee_fast_17",
+    "id": "aee_fast_03",
     "topicId": "fasteners",
-    "question": "Taper pins have a taper of ¼ in. per ft measured on diameter. If D is large-end diameter and L is length, the small-end diameter d is:",
+    "question": "Which bolt has an elliptical head to prevent rotation and is designed specifically for railroad tracks?",
     "options": [
-      "d = D – 0.02088L",
-      "d = D + 0.02088L",
-      "d = D – 0.2088L",
-      "d = D × 0.02088L",
+      "Carriage bolt",
+      "Track bolt",
+      "Plow bolt",
+      "Elevator bolt",
       "None of the above"
     ],
-    "correct": 0,
-    "short": "Taper pins: d = D – 0.02088L. Option A.",
-    "solution": "Taper pins have a taper of ¼ in. per foot measured on diameter. Basic dimension is large-end diameter. Formula: d = D – 0.02088L where D = large-end diameter (in.), L = pin length (in.). The factor 0.02088 comes from 0.25/12 = 0.020833...\n\nWhy the other options are incorrect:\nOption B adds instead of subtracts.\nOption C has 0.2088 (10× too large).\nOption D multiplies.\n\n* Correct Option: A (d = D – 0.02088L)"
+    "correct": 1,
+    "short": "Elliptical head for railroad tracks is Track bolt. Option B.",
+    "solution": "Track bolts are a family designed for railroad tracks. This version has an elliptical head that fits into the rail and prevents rotation when tightening.\n\nWhy the other options are incorrect:\nOption A Carriage has round head with ribs.\nOption C Plow has square countersunk head.\nOption D Elevator has large flat head for soft materials.\n\n* Correct Option: B (Track bolt)"
   },
   {
-    "id": "aee_fast_18",
-    "topicId": "fasteners",
-    "question": "Cotter pins have been standardized into 18 sizes with diameters from 1/32 to ¾ in. Which materials are listed as available?",
+    "id": "aee_hm_14",
+    "topicId": "metal-working",
+    "question": "Which part of the anvil is used to cut hot or cold metal?",
     "options": [
-      "Mild steel, brass, bronze, stainless steel, aluminum",
-      "Only mild steel",
-      "Only stainless steel",
-      "Hardened steel only",
+      "Hardy",
+      "Horn",
+      "Face",
+      "Base",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Cotter pins available in mild steel, brass, bronze, stainless, aluminum. Option A.",
-    "solution": "Cotter pins are available in 18 sizes (1/32 to ¾ in.). Available materials listed include mild steel, brass, bronze, stainless steel, and aluminum, with various point styles.\n\nWhy the other options are incorrect:\nOptions B, C, D list only one material, which is incomplete.\n\n* Correct Option: A (Mild steel, brass, bronze, stainless steel, aluminum)"
+    "short": "Hardy (hardy hole) with hot cutter is used to cut metal on anvil. Option A.",
+    "solution": "Material: \"ANVIL HARDY — Figure 14-4. The hardy is used to cut hot or cold metal on the anvil.\" and \"CUTTING METAL IN AN ANVIL — Use the hot cutter and hardy...\"\n\nWhy the other options are incorrect:\nOption B Horn is for bending curves.\nOption C Face is the flat top.\nOption D Base is the bottom.\n\n* Correct Option: A (Hardy)",
+    "image": "/images/anvil-diagram.png"
   },
   {
-    "id": "aee_fast_19",
-    "topicId": "fasteners",
-    "question": "Which retaining ring remains circular after installation and provides a tight grip against the groove bottom, with a tapered section similar to basic axial types?",
+    "id": "aee_hm_15",
+    "topicId": "metal-working",
+    "question": "Which tongs have a curved lip (a), flat lip (b), and gad (c) for handling hot metal?",
     "options": [
-      "Crescent ring",
-      "E-ring",
-      "Interlocking ring",
-      "High-strength radial ring",
+      "Blacksmith's tongs: curved lip, flat lip, gad",
+      "Machinist's vise",
+      "Hardy",
+      "Pritchel hole",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Tapered section, remains circular → Crescent ring. Option A.",
-    "solution": "Radially assembled retaining rings:\n* Crescent ring has a tapered section similar to basic axial types. It remains circular after installation and provides a tight grip.\n\nWhy the other options are incorrect:\nOption B E-ring has three heavy prongs for small shafts.\nOption C Interlocking has two semicircular halves.\nOption D High-strength has large lobes.\n\n* Correct Option: A (Crescent ring)"
-  },
-  {
-    "id": "aee_fast_20",
-    "topicId": "fasteners",
-    "question": "Which hose clamp is a single-use clamp slipped over the hose and crimped with special tools on the ear?",
-    "options": [
-      "Ear clamp",
-      "Quick-connect strap",
-      "Worm-gear drive",
-      "Latch clamp",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Single-use, slipped over, ear crimped → Ear clamp. Option A.",
-    "solution": "Ear clamp is a single-use clamp slipped over the holes or duct and the ear is crimped with special tools. Oetiker Inc.\n\nWhy the other options are incorrect:\nOption B Quick-connect strap has nylon worm gear, pulled then snugged.\nOption C Worm-gear drive has a worm gear and steel band.\nOption D Latch clamp has ratchet tooth-locking.\n\n* Correct Option: A (Ear clamp)"
+    "short": "Blacksmith's tongs have curved lip, flat lip, gad for hot metal. Option A.",
+    "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)",
+    "image": "/images/anvil-diagram.png"
   },
   {
     "id": "aee_hm_01",
-    "topicId": "hot-metal-working",
+    "topicId": "metal-working",
     "question": "Which of the following is a listed safety rule for hot metal working?",
     "options": [
       "Wear proper clothing and industrial eye protection",
@@ -3086,19 +3060,19 @@ export const questionBank = {
     "solution": "Hot metal working safety rules include: Wear proper clothing, Use industrial quality eye protection, Protect hair and scalp, Use correct tools, Work in a well ventilated area, Never touch suspected hot metal, Turn off heat source before leaving, Avoid working around flammable materials.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says poorly ventilated — should be well ventilated.\nOption C says touch hot metal — should be never touch.\nOption D says work around flammable — should be avoid.\n\n* Correct Option: A (Wear proper clothing and industrial eye protection)"
   },
   {
-    "id": "aee_hm_02",
-    "topicId": "hot-metal-working",
-    "question": "What is the melting point of mild steel according to the color scale table?",
+    "id": "aee_cm_02",
+    "topicId": "metal-working",
+    "question": "How is hexagon metal measured for purchasing according to the commercial shapes table?",
     "options": [
-      "1540°C (2800°F)",
-      "1483°C (2700°F)",
-      "1261°C (2300°F)",
-      "1094°C (2000°F)",
+      "Distance across flats",
+      "Diameter",
+      "Thickness × width",
+      "Height × web thickness × flange width",
       "None of the above"
     ],
-    "correct": 1,
-    "short": "Mild steel melts at 1483°C (2700°F). Option B.",
-    "solution": "Table MELTING POINT OF METALS:\n\n* Wrought iron —1540°C —2800\n* MILD STEEL —1483°C —2700\n* High carbon steel —1428°C\n* Cast iron —1261°C —2300 —WHITE\n* Copper —1094°C —2000\n\nSo mild steel is 1483°C (2700°F).\n\nWhy the other options are incorrect:\nOption A is wrought iron, Option C is cast iron, Option D is copper.\n\n* Correct Option: B (1483°C (2700°F))"
+    "correct": 0,
+    "short": "Hexagon is measured by distance across flats. Option A.",
+    "solution": "Table Commercial Metal Shapes & Sizes:\n\n* Hexagon — 12' to 20' — distance across flats\n* Octagon — distance across flats\n* Round — diameter\n* Plate/Sheet — thickness×width\n* I-beam — height×web×flange\n\nSo hexagon is distance across flats.\n\nWhy the other options are incorrect:\nOption B Diameter is for Round.\nOption C Thickness×width is for Plate/Band.\nOption D Height×web×flange is for I-beam/Channel.\n\n* Correct Option: A (Distance across flats)"
   },
   {
     "id": "aee_hm_03",
@@ -3116,36 +3090,6 @@ export const questionBank = {
     "solution": "Material under HEAT TREATING STEEL: purpose of heat treatment:\n\n- Hardening\n- Tempering\n- Annealing\n\nWhy the other options are incorrect: They are not listed as heat treatment purposes.\n\n* Correct Option: A (Hardening, Tempering, Annealing)"
   },
   {
-    "id": "aee_hm_04",
-    "topicId": "heat-treatment",
-    "question": "Hardening of steel is done by heating to light cherry red and cooling quickly in:",
-    "options": [
-      "Warm water",
-      "Cold oil",
-      "Sand",
-      "Vermiculite",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Hardening: heat to light cherry red and cool quickly in warm water. Option A.",
-    "solution": "Material: \"HARDENING : heating to light cherry red and cooling quickly in warm water\"\n\nWhy the other options are incorrect:\nOption B Cold oil is not listed, Option C Sand and D Vermiculite are for annealing (slow cooling), not hardening.\n\n* Correct Option: A (Warm water)"
-  },
-  {
-    "id": "aee_hm_05",
-    "topicId": "heat-treatment",
-    "question": "Tempering is done by:",
-    "options": [
-      "Reheating hardened steel to obtain desired hardness and toughness",
-      "Heating to light cherry red and cooling slowly in sand",
-      "Heating to melting point and casting",
-      "Cooling in air only",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Tempering is reheating hardened steel to get desired hardness/toughness. Option A.",
-    "solution": "Material: \"TEMPERING : by reheating hardened steel to obtain the desired hardness and toughness\"\n\nWhy the other options are incorrect:\nOption B is Annealing (slow cooling), Option C is casting, Option D is not listed.\n\n* Correct Option: A (Reheating hardened steel to obtain desired hardness and toughness)"
-  },
-  {
     "id": "aee_hm_06",
     "topicId": "heat-treatment",
     "question": "Annealing is done by heating to light cherry red and cooling:",
@@ -3159,36 +3103,6 @@ export const questionBank = {
     "correct": 1,
     "short": "Annealing: heat above 716°C and cool slowly in oven/vermiculite/sand. Option B.",
     "solution": "Material: \"ANNEALING : by heating hardened or tempered steel to a light cherry red and cooling slowly\" and \"heating steel above 716°C and cooling slowly using an oven, vermiculite, or sand\"\n\nWhy the other options are incorrect:\nOption A Quickly in warm water is Hardening.\nOption C Quickly in cold is not listed.\n\n* Correct Option: B (Slowly using an oven, vermiculite, or sand)"
-  },
-  {
-    "id": "aee_hm_07",
-    "topicId": "heat-treatment",
-    "question": "The process Steel (pearlite) + Heat → Austenite + Cooling → Martensite describes:",
-    "options": [
-      "Hardening",
-      "Tempering",
-      "Annealing",
-      "Normalizing",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Pearlite → Austenite → Martensite is Hardening. Option A.",
-    "solution": "Material: \"THE PROCESS OF HARDENING — STEEL (pearlite) HEAT = AUSTENITE + COOLING = MARTENSITE\"\n\nWhy the other options are incorrect:\nTempering is reheating hardened steel, Annealing is slow cooling to soften.\n\n* Correct Option: A (Hardening)"
-  },
-  {
-    "id": "aee_hm_08",
-    "topicId": "heat-treatment",
-    "question": "In tempering stages, reheating at 93-204°C (200-400°F) will:",
-    "options": [
-      "Retain hardness, gain some toughness",
-      "Be moderately hard and tough",
-      "Retain less hardness, more tough",
-      "Become soft, annealing point",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "93-204°C retains hardness and gains some toughness. Option A.",
-    "solution": "Material: STAGES IN TEMPERING\n1 heating: 93-204°C = retain hardness, gain some toughness\n2 reheating: 204-371°C = moderately hard and tough\n3 reheating: 371-538°C = retains less hardness, more tougher\n\nWhy the other options are incorrect:\nOption B is stage 2, Option C is stage 3, Option D is 371°C gray.\n\n* Correct Option: A (Retain hardness, gain some toughness)"
   },
   {
     "id": "aee_hm_09",
@@ -3206,155 +3120,19 @@ export const questionBank = {
     "solution": "Table COLORS FOR TEMPERING STEEL:\n\n* Yellow 221°C — hammers, scrapers\n* Straw 243°C — punches, dies, hacksaw blades, drills\n* Light brown 260°C — axes, wood chisels\n* Purple 277°C — rivet sets\n* Blue 293°C — screw drivers, springs\n\nSo Straw at 243°C matches.\n\nWhy the other options are incorrect:\nOption B Yellow is 221°C for hammers, Option C Light brown is 260°C, Option D Blue is 293°C.\n\n* Correct Option: A (Straw)"
   },
   {
-    "id": "aee_hm_10",
+    "id": "aee_hm_04",
     "topicId": "heat-treatment",
-    "question": "At what temperature does steel become soft and reach the annealing point, showing gray color?",
+    "question": "Hardening of steel is done by heating to light cherry red and cooling quickly in:",
     "options": [
-      "221°C",
-      "243°C",
-      "293°C",
-      "371°C",
-      "None of the above"
-    ],
-    "correct": 3,
-    "short": "Gray 371°C is soft, annealing point. Option D.",
-    "solution": "Table: Gray 371°C — soft, reached annealing point.\n\nWhy the other options are incorrect:\nYellow 221°C, Straw 243°C, Blue 293°C are all harder temper colors.\n\n* Correct Option: D (371°C)"
-  },
-  {
-    "id": "aee_hm_11",
-    "topicId": "heat-treatment",
-    "question": "Annealing of carbon steel is done by heating above:",
-    "options": [
-      "716°C",
-      "500°C",
-      "300°C",
-      "100°C",
+      "Warm water",
+      "Cold oil",
+      "Sand",
+      "Vermiculite",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Annealing: heat above 716°C (depending on carbon) and cool slowly. Option A.",
-    "solution": "Material: \"THE ANNEALING PROCESS — heating steel above 716°C (depending on carbon content), and cooling slowly using an oven, vermiculite, or sand\"\n\nWhy the other options are incorrect: They are below the critical temperature.\n\n* Correct Option: A (716°C)"
-  },
-  {
-    "id": "aee_hm_12",
-    "topicId": "hot-metal-working",
-    "question": "Which electrical heat source reaches 6427°C (11600°F) at 200 amps and is used for welding non-ferrous metals?",
-    "options": [
-      "TIG welder",
-      "MIG welder",
-      "Arc welder",
-      "Elect soldering",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "TIG welder (and MIG) reach 6427°C at 200 amps for non-ferrous. Option A (TIG).",
-    "solution": "Table ELECTRICAL SOURCE OF HEAT:\n\n* Elect soldering —204°C —150 watts — elect. connections\n* Arc welder —5983°C? Actually Carbon arc 4982°C\n* TIG welder —6427°C —200 amps — weld non-ferrous\n* MIG welder —6427°C —200 amps — weld non-ferrous\n\nBoth TIG and MIG are listed at 6427°C for non-ferrous. Option A TIG is correct (MIG also correct, but given options, TIG is listed).\n\nWhy the other options are incorrect:\nOption C Arc welder is lower temp, Option D Elect soldering is only 204°C.\n\n* Correct Option: A (TIG welder)"
-  },
-  {
-    "id": "aee_hm_13",
-    "topicId": "hot-metal-working",
-    "question": "Which chemical heat source reaches 3485°C and is used for welding, brazing, and cutting ferrous metals?",
-    "options": [
-      "Propane torch (1261°C)",
-      "Acetylene welding/cutting (3485°C)",
-      "Propane cutting (2873°C)",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Acetylene welding/cutting is 3485°C. Option B.",
-    "solution": "Table CHEMICAL SOURCE OF HEAT:\n\n* Propane torch —1261°C\n* Acetylene welding —3485°C — welding, brazing, soldering\n* Acetylene cutting —3485°C — cutting ferrous metals\n* Propane cutting —2873°C\n\nSo acetylene is 3485°C.\n\nWhy the other options are incorrect:\nOption A Propane torch is 1261°C, Option C Propane cutting is 2873°C.\n\n* Correct Option: B (Acetylene welding/cutting (3485°C))"
-  },
-  {
-    "id": "aee_hm_14",
-    "topicId": "hot-metal-working",
-    "question": "Which part of the anvil is used to cut hot or cold metal?",
-    "options": [
-      "Hardy",
-      "Horn",
-      "Face",
-      "Base",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Hardy (hardy hole) with hot cutter is used to cut metal on anvil. Option A.",
-    "solution": "Material: \"ANVIL HARDY — Figure 14-4. The hardy is used to cut hot or cold metal on the anvil.\" and \"CUTTING METAL IN AN ANVIL — Use the hot cutter and hardy...\"\n\nWhy the other options are incorrect:\nOption B Horn is for bending curves.\nOption C Face is the flat top.\nOption D Base is the bottom.\n\n* Correct Option: A (Hardy)",
-    "image": "/images/anvil-diagram.png"
-  },
-  {
-    "id": "aee_hm_15",
-    "topicId": "hot-metal-working",
-    "question": "Which tongs have a curved lip (a), flat lip (b), and gad (c) for handling hot metal?",
-    "options": [
-      "Blacksmith's tongs: curved lip, flat lip, gad",
-      "Machinist's vise",
-      "Hardy",
-      "Pritchel hole",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Blacksmith's tongs have curved lip, flat lip, gad for hot metal. Option A.",
-    "solution": "Material: \"TONGS — Figure 14-6. The curved lip (a), flat lip (b), and gad (c) are blacksmith's tongs used for handling hot metal.\"\n\nWhy the other options are incorrect:\nOption B Machinist's vise is for holding, not tongs.\nOption C Hardy is for cutting.\nOption D Pritchel hole is for punching.\n\n* Correct Option: A (Blacksmith's tongs: curved lip, flat lip, gad)",
-    "image": "/images/anvil-diagram.png"
-  },
-  {
-    "id": "aee_cm_01",
-    "topicId": "cold-metal-safety",
-    "question": "Which of the following is a listed safety rule for cold metal working?",
-    "options": [
-      "Always use eye protection and proper clothing",
-      "Work with long hair unrestrained",
-      "Use improper tools",
-      "Keep work area dirty",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Always use eye protection and proper clothing is a safety rule. Option A.",
-    "solution": "Cold metal working safety rules listed include: Always use eye protection, Wear proper clothing, Restrain long hair, Use proper tools, Keep work area and tools clean.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says unrestrained — should be restrained.\nOption C says improper tools — should be proper.\nOption D says dirty — should be clean.\n\n* Correct Option: A (Always use eye protection and proper clothing)"
-  },
-  {
-    "id": "aee_cm_02",
-    "topicId": "metal-shapes",
-    "question": "How is hexagon metal measured for purchasing according to the commercial shapes table?",
-    "options": [
-      "Distance across flats",
-      "Diameter",
-      "Thickness × width",
-      "Height × web thickness × flange width",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Hexagon is measured by distance across flats. Option A.",
-    "solution": "Table Commercial Metal Shapes & Sizes:\n\n* Hexagon — 12' to 20' — distance across flats\n* Octagon — distance across flats\n* Round — diameter\n* Plate/Sheet — thickness×width\n* I-beam — height×web×flange\n\nSo hexagon is distance across flats.\n\nWhy the other options are incorrect:\nOption B Diameter is for Round.\nOption C Thickness×width is for Plate/Band.\nOption D Height×web×flange is for I-beam/Channel.\n\n* Correct Option: A (Distance across flats)"
-  },
-  {
-    "id": "aee_cm_03",
-    "topicId": "metal-shapes",
-    "question": "How is an I-beam measured for purchasing?",
-    "options": [
-      "Distance across flats",
-      "Height × web thickness × flange width",
-      "Diameter",
-      "Thickness × width × length",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "I-beam is measured as height × web thickness × flange width. Option B.",
-    "solution": "Table: I-beam — to 60' — height×web thickness×flange width. Channel is similar (depth×web×flange).\n\nWhy the other options are incorrect:\nOption A is Hexagon/Octagon, Option C is Round, Option D is Sheet.\n\n* Correct Option: B (Height × web thickness × flange width)"
-  },
-  {
-    "id": "aee_cm_04",
-    "topicId": "metal-shapes",
-    "question": "How is round metal measured for purchasing?",
-    "options": [
-      "Diameter",
-      "Distance across flats",
-      "Thickness × width",
-      "Leg length × leg thickness",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Round is measured by diameter. Option A.",
-    "solution": "Table: Round — 12' to 20' — diameter.\n\nWhy the other options are incorrect:\nOption B is Hexagon, Option C is Plate, Option D is Angle.\n\n* Correct Option: A (Diameter)"
+    "short": "Hardening: heat to light cherry red and cool quickly in warm water. Option A.",
+    "solution": "Material: \"HARDENING : heating to light cherry red and cooling quickly in warm water\"\n\nWhy the other options are incorrect:\nOption B Cold oil is not listed, Option C Sand and D Vermiculite are for annealing (slow cooling), not hardening.\n\n* Correct Option: A (Warm water)"
   },
   {
     "id": "aee_cm_05",
@@ -3421,21 +3199,6 @@ export const questionBank = {
     "image": "/images/hacksaw-tpi.png"
   },
   {
-    "id": "aee_cm_09",
-    "topicId": "cutting-tools",
-    "question": "If a hacksaw blade breaks during a cut, what does the material recommend?",
-    "options": [
-      "Turn over and start a new blade on the opposite side or complete with another old blade",
-      "Continue with the broken blade",
-      "Discard the work piece",
-      "Use a different saw",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Turn over and start new blade on opposite side or use another old blade. Option A.",
-    "solution": "Figure 11-7. If the hacksaw blade breaks, the cut must be completed with another old blade or by sawing with a new blade from the opposite edge of the metal.\n\nWhy the other options are incorrect: Continuing with broken blade will not cut properly, discarding is wasteful.\n\n* Correct Option: A (Turn over and start a new blade on the opposite side or complete with another old blade)"
-  },
-  {
     "id": "aee_cm_10",
     "topicId": "drilling",
     "question": "What is the recommended RPM range for a 1/4\" high-speed drill in low carbon steel (wrought iron, low carbon steel column)?",
@@ -3449,66 +3212,6 @@ export const questionBank = {
     "correct": 0,
     "short": "1/4\" drill in low carbon steel: 1,200-1,700 RPM. Option A.",
     "solution": "Table 5-2 Recommended RPM for High-Speed Drills:\n\nFor drill size 1/4\":\n* Wrought Iron, Low Carbon Steel — 1,200-1,700\n* Medium Carbon Steel — 1,000-1,200\n* High Carbon Tool Steel — 750-900\n* Aluminum and Brass — 3,000-4,500\n\nSo for low carbon steel, 1,200-1,700.\n\nWhy the other options are incorrect:\nOption B is medium carbon, Option C is high carbon tool steel, Option D is aluminum.\n\n* Correct Option: A (1,200-1,700)"
-  },
-  {
-    "id": "aee_cm_11",
-    "topicId": "drilling",
-    "question": "What is the recommended RPM for a 1/2\" drill in aluminum and brass?",
-    "options": [
-      "1,500-2,250",
-      "525-750",
-      "375-450",
-      "600-850",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "1/2\" in aluminum/brass: 1,500-2,250 RPM. Option A.",
-    "solution": "Table: For 1/2\" drill, Aluminum and Brass — 1,500-2,250.\n\nWhy the other options are incorrect:\nOption B 525-750 is cast iron, Option C 375-450 is high carbon tool steel, Option D 600-850 is wrought iron.\n\n* Correct Option: A (1,500-2,250)"
-  },
-  {
-    "id": "aee_cm_12",
-    "topicId": "drilling",
-    "question": "The note says to reduce RPM by one-half for which type of drills?",
-    "options": [
-      "Carbon drills",
-      "High-speed drills",
-      "Number drills",
-      "Letter drills",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Reduce RPM one-half for carbon drills. Option A.",
-    "solution": "Footnote 1: \"Reduce RPM one-half for carbon drills.\"\n\nWhy the other options are incorrect: High-speed drills use the table values directly.\n\n* Correct Option: A (Carbon drills)"
-  },
-  {
-    "id": "aee_cm_13",
-    "topicId": "drilling",
-    "question": "What is the diameter of a 1/64\" drill in decimal inches according to the drill size table?",
-    "options": [
-      "0.0156",
-      "0.0312",
-      "0.0625",
-      "0.1250",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "1/64 = 0.0156\". Option A.",
-    "solution": "Table: 1/64 — .0156, 1/32 — .0312, 1/16 — .0625, 1/8 — .1250.\n\nWhy the other options are incorrect:\nOption B is 1/32, Option C is 1/16, Option D is 1/8.\n\n* Correct Option: A (0.0156\")"
-  },
-  {
-    "id": "aee_cm_14",
-    "topicId": "drilling",
-    "question": "Which cutting fluid is recommended for aluminum as per the Metal Lubricant table?",
-    "options": [
-      "Kerosene, soluble oil",
-      "Dry or compressed oil",
-      "Sulfurized oil",
-      "Lard oil",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Aluminum: kerosene, soluble oil. Option A.",
-    "solution": "Table Metal Lubricant:\n\n* Aluminum — kerosene, soluble oil\n* Brass/Bronze — soluble/mineral oils\n* Cast iron — dry or compressed oil\n* Tool steel — sulfurized oil\n\nWhy the other options are incorrect:\nOption B is cast iron, Option C is tool steel.\n\n* Correct Option: A (Kerosene, soluble oil)"
   },
   {
     "id": "aee_cm_15",
@@ -3526,8 +3229,23 @@ export const questionBank = {
     "solution": "Table: Cast iron — dry or compressed oil.\n\nWhy the other options are incorrect:\nOption B is aluminum, Option C is tool steel, Option D is copper.\n\n* Correct Option: A (Dry or compressed oil)"
   },
   {
+    "id": "aee_cm_13",
+    "topicId": "drilling",
+    "question": "What is the diameter of a 1/64\" drill in decimal inches according to the drill size table?",
+    "options": [
+      "0.0156",
+      "0.0312",
+      "0.0625",
+      "0.1250",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "1/64 = 0.0156\". Option A.",
+    "solution": "Table: 1/64 — .0156, 1/32 — .0312, 1/16 — .0625, 1/8 — .1250.\n\nWhy the other options are incorrect:\nOption B is 1/32, Option C is 1/16, Option D is 1/8.\n\n* Correct Option: A (0.0156\")"
+  },
+  {
     "id": "aee_cm_16",
-    "topicId": "bench-work",
+    "topicId": "bench-work-fitting",
     "question": "What should you do to remove a broken bolt using the screw-extractor method?",
     "options": [
       "Use a tap wrench and screw extractor after punching",
@@ -3541,50 +3259,23 @@ export const questionBank = {
     "solution": "Figure 5-25. Removing a broken bolt — screw-extractor method: Use tap wrench, screw extractor, broken bolt, with punch-and-hammer method as alternative (Fig 5-24).\n\nWhy the other options are incorrect: Hacksaw/file not for bolt extraction.\n\n* Correct Option: A (Use a tap wrench and screw extractor after punching)"
   },
   {
-    "id": "aee_cm_17",
-    "topicId": "cutting-tools",
-    "question": "Files are selected by which four criteria as per Figure 11-1?",
+    "id": "aee_bw_01",
+    "topicId": "bench-work-fitting",
+    "question": "According to workshop safety rules, which of the following is listed?",
     "options": [
-      "Length, coarseness, shape, and teeth",
-      "Color, weight, price, brand",
-      "Hardness, temper, finish, cost",
+      "Safety first before work — Accidents don't occur, they are caused",
+      "Safety last",
+      "No safety needed",
+      "Accidents are unavoidable",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Files selected by length, coarseness, shape, and teeth. Option A.",
-    "solution": "Figure 11-1. Files are selected by length, coarseness, shape, and teeth. Details: Tang, Heel, Body, Edge, Point, Bastard, Second cut, Smooth, etc., and shapes Flat, Round, Half-round, etc.\n\nWhy the other options are incorrect: They are not listed criteria.\n\n* Correct Option: A (Length, coarseness, shape, and teeth)"
-  },
-  {
-    "id": "aee_cm_18",
-    "topicId": "cutting-tools",
-    "question": "Which are the three kinds of peen hammers shown in Fig. 5-3?",
-    "options": [
-      "Ball peen, Straight peen, Cross peen",
-      "Claw, Sledge, Mallet",
-      "Ball, Cross, Straight",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Ball peen, Straight peen, Cross peen. Option A.",
-    "solution": "Fig. 5-3. Three kinds of peens: BALL PEEN, STRAIGHT PEEN, CROSS PEEN.\n\nWhy the other options are incorrect: They list other hammer types not in figure.\n\n* Correct Option: A (Ball peen, Straight peen, Cross peen)"
-  },
-  {
-    "id": "aee_cm_19",
-    "topicId": "drilling",
-    "question": "What is the procedure for metal drilling that includes denting with a center punch?",
-    "options": [
-      "Dent with center punch, lubricate drill, hold metal in vise, use V-block for round metal",
-      "Just drill without preparation",
-      "Use only hand pressure",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Dent with center punch, lubricate, hold in vise, V-block for round metal. Option A.",
-    "solution": "Figure 11-13. Recommended procedures for drilling metal:\n\n* Dent with center punch\n* Lubricate drill\n* Hold metal in vise when hand drilling\n* Vise for drill press\n* Drill round metal with V-block\n\nWhy the other options are incorrect: They skip essential steps.\n\n* Correct Option: A (Dent with center punch, lubricate drill, hold metal in vise, use V-block for round metal)"
+    "short": "Safety first, accidents are caused not occur. Option A.",
+    "solution": "Workshop Safety Rules slide: \"Safety first before work - Accidents don't occur, they are caused.\"\n\nWhy the other options are incorrect: They contradict the rule.\n\n* Correct Option: A (Safety first before work — Accidents don't occur, they are caused)"
   },
   {
     "id": "aee_cm_20",
-    "topicId": "bench-work",
+    "topicId": "bench-work-fitting",
     "question": "What is the purpose of the rolling machine shown in Figure Front View?",
     "options": [
       "Bending rolls to shape metal, with all adjustments from operator’s position, rigid steel fabrication",
@@ -3598,675 +3289,64 @@ export const questionBank = {
     "solution": "Text: \"FRONT VIEW OF MACHINE All adjustments can be made easily from the operator’s normal working position. The design and steel fabrication of this Keetona Bending Roll ensure complete rigidity under all conditions and allow mobility of the machine without permanent fixing.\"\n\nWhy the other options are incorrect: Cutting, drilling, grinding are not rolling.\n\n* Correct Option: A (Bending rolls to shape metal, with all adjustments from operator’s position, rigid steel fabrication)"
   },
   {
-    "id": "aee_mig_01",
-    "topicId": "mig-welding",
-    "question": "Which of the following is a listed safety practice in MIG welding?",
+    "id": "aee_bw_12",
+    "topicId": "bench-work-fitting",
+    "question": "What is Marking Out?",
     "options": [
-      "Select the correct shaded lens and work in a well ventilated area",
-      "Work in a poorly ventilated area",
-      "Attempt to repair the machine yourself",
-      "Use a clear lens for all welding",
+      "Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting",
+      "Process of assembling",
+      "Process of polishing",
+      "Process of painting",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Select correct shaded lens and well ventilated area are MIG safety practices. Option A.",
-    "solution": "Safety practices in MIG welding listed include: Select the correct shaded lens, Work in a well ventilated area, Maintain cables as straight as possible, Turn off machine and gas supply when finished, Never attempt to repair machine.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says poorly ventilated — should be well ventilated.\nOption C says attempt to repair — should be never attempt.\nOption D says clear lens — should be shaded lens.\n\n* Correct Option: A (Select the correct shaded lens and work in a well ventilated area)"
+    "short": "Marking Out is scribing lines to provide guide for cutting etc. Option A.",
+    "solution": "Bench Fitting involves: Marking Out: is the process of scribing lines on a workpiece, to provide guide for subsequent operations like cutting.\n\nWhy the other options are incorrect: They are other operations.\n\n* Correct Option: A (Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting)"
   },
   {
-    "id": "aee_mig_02",
-    "topicId": "mig-welding",
-    "question": "Which three components are listed as parts of MIG equipment power supply?",
+    "id": "aee_bw_07",
+    "topicId": "bench-work-fitting",
+    "question": "What is a cold chisel used for and what are its angles?",
     "options": [
-      "DCRP supply, Wire feeder, Gas control system",
-      "Nozzle, Contact tip, Cooling system",
-      "Liner, Cooling Water, Electrode",
-      "Nitrogen, Oxygen, Argon",
+      "To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle",
+      "To remove thin layers",
+      "To polish",
+      "To measure",
       "None of the above"
     ],
     "correct": 0,
-    "short": "DCRP supply, Wire feeder, Gas control system are parts of MIG power supply. Option A.",
-    "solution": "Material under PARTS OF MIG EQUIPMENT: POWER SUPPLY lists:\n\n• DCRP supply\n• Wire feeder\n• Gas control system\n\nWhy the other options are incorrect:\nOption B lists parts of MIG gun, Option C lists parts of water-cooled MIG gun, Option D lists atmosphere composition.\n\n* Correct Option: A (DCRP supply, Wire feeder, Gas control system)"
+    "short": "Cold chisel removes thick layers, has clearance, Rake, Cutting angle. Option A.",
+    "solution": "Cold Chisel: to remove thick layers of metals. Its cutting edges are specially hardened and tempered. They have: * clearance angle * Rake angle * Cutting angle.\n\nWhy the other options are incorrect:\nOption B File removes thin layers, Option C is polishing, Option D is measuring.\n\n* Correct Option: A (To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle)"
   },
   {
-    "id": "aee_mig_03",
-    "topicId": "mig-welding",
-    "question": "Which three are listed as MACHINE ADJUSTMENTS for MIG welding?",
+    "id": "aee_bw_02",
+    "topicId": "bench-work-fitting",
+    "question": "Which of the following is a workshop safety rule regarding knowing your job?",
     "options": [
-      "Voltage control, Wire feed speed, Shielding gas flow rate",
-      "Nitrogen 78%, Oxygen 21%, Argon 0.94%",
-      "DCRP supply, Wire feeder, Gas control",
-      "Nozzle, Contact tip, Cooling system",
+      "Know your job and follow instructions",
+      "Be too forward and assume you know it all",
+      "Avoid knowing where exit doors are",
+      "Don't prioritize PPEs",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Voltage control, Wire feed speed, Shielding gas flow rate are machine adjustments. Option A.",
-    "solution": "Material lists under MACHINE ADJUSTMENTS:\n\n• Voltage control\n• Wire feed speed\n• Shielding gas flow rate\n\nWhy the other options are incorrect:\nOption B is atmosphere composition, Option C is power supply parts, Option D is MIG gun parts.\n\n* Correct Option: A (Voltage control, Wire feed speed, Shielding gas flow rate)"
+    "short": "Know your job and follow instructions. Option A.",
+    "solution": "Rules include: i) know your job and follow instructions. ii) Don't be too forward and don't assume you know it all.\n\nWhy the other options are incorrect:\nOption B says be too forward — should not.\nOption C says avoid knowing where exit doors — should know.\nOption D says don't prioritize PPEs — should prioritize.\n\n* Correct Option: A (Know your job and follow instructions)"
   },
   {
-    "id": "aee_mig_04",
-    "topicId": "mig-welding",
-    "question": "What is the composition of normal atmosphere as listed?",
+    "id": "aee_bw_13",
+    "topicId": "bench-work-fitting",
+    "question": "Which tools are used for marking out?",
     "options": [
-      "Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%",
-      "Nitrogen 50%, Oxygen 50%",
-      "Argon 100%",
-      "Helium 78%, Oxygen 21%",
+      "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square",
+      "Only hammer",
+      "Only chisel",
+      "Only file",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%. Option A.",
-    "solution": "Table ATMOSPHERE COMPOSITION:\n\n• Nitrogen : 78%\n• Oxygen : 21%\n• Argon :0.94%\n• Others :0.06%\n\nWhy the other options are incorrect: They do not match the listed percentages.\n\n* Correct Option: A (Nitrogen 78%, Oxygen 21%, Argon 0.94%, Others 0.06%)"
-  },
-  {
-    "id": "aee_mig_05",
-    "topicId": "mig-welding",
-    "question": "Which shielding gas is correctly matched to its application as per the SHIELDING GASES table?",
-    "options": [
-      "Argon : thin sheet metal",
-      "Helium : thin sheet metal",
-      "Carbon diox. : thick non-ferrous metals",
-      "Arg & Oxy : thick metals",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Argon is for thin sheet metal. Option A.",
-    "solution": "Table SHIELDING GASES:\n\n• Argon : thin sheet metal\n• Helium : thick metals\n• Carbon diox. : low/medium carbon steel\n• Arg & Oxy : carbon/stainless steel\n• Arg & Hel : thick non-ferrous metals\n• Arg & CO2 : carbon/low alloy steels\n• He/Ar/CO2 : stainless steel\n\nOption A matches Argon : thin sheet metal.\n\nWhy the other options are incorrect:\nOption B Helium is for thick metals, not thin sheet.\nOption C Carbon diox. is for low/medium carbon steel, not thick non-ferrous.\nOption D Arg & Oxy is for carbon/stainless steel.\n\n* Correct Option: A (Argon : thin sheet metal)"
-  },
-  {
-    "id": "aee_mig_06",
-    "topicId": "mig-welding",
-    "question": "In AWS electrode classification ER 70 S 6, what does “70” represent?",
-    "options": [
-      "Tensile strength in 1,000 psi",
-      "Wire diameter in mm",
-      "Gas flow rate",
-      "Voltage",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "70 means tensile strength in 1,000 psi (70,000 psi). Option A.",
-    "solution": "AWS ELECTRODE CLASSIFICATION ER 70 S 6:\n\n• E : identifies it as electrode\n• R : identifies it as a rod\n• 70 : tensile strength in 1,000 psi\n• S : identifies solid bare wire\n• 6 : chemical composition variations\n\nSo 70 means 70 × 1,000 = 70,000 psi tensile strength.\n\nWhy the other options are incorrect: They are not the definition of the numeric code.\n\n* Correct Option: A (Tensile strength in 1,000 psi)"
-  },
-  {
-    "id": "aee_mig_07",
-    "topicId": "mig-welding",
-    "question": "What does “S” represent in ER 70 S 6?",
-    "options": [
-      "Solid bare wire",
-      "Shielding gas",
-      "Spray transfer",
-      "Short arc",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "S identifies solid bare wire. Option A.",
-    "solution": "From the same classification: S : identifies solid bare wire.\n\nWhy the other options are incorrect: They are not the meaning of S.\n\n* Correct Option: A (Solid bare wire)"
-  },
-  {
-    "id": "aee_mig_08",
-    "topicId": "mig-welding",
-    "question": "For metal thickness 1/32 to 1/8”, which wire diameter is recommended according to WORK PIECE AND WIRE SIZE table?",
-    "options": [
-      "0.020/0.030/0.035",
-      "0.045 to 1/16”",
-      "1/8”",
-      "0.035 only",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "1/32 to 1/8” uses 0.020/0.030/0.035. Option A.",
-    "solution": "Table WORK PIECE AND WIRE SIZE:\n\n* 1/32 to 1/8” — 0.020/0.030/0.035\n* 3/16 to 3/8” — 0.045 to 1/16”\n* Over ½” — 1/8”\n\nSo for thin 1/32 to 1/8”, use 0.020/0.030/0.035.\n\nWhy the other options are incorrect:\nOption B is for 3/16 to 3/8”, Option C is for over ½”.\n\n* Correct Option: A (0.020/0.030/0.035)"
-  },
-  {
-    "id": "aee_mig_09",
-    "topicId": "mig-welding",
-    "question": "Which are the two methods for STARTING the arc in MIG welding?",
-    "options": [
-      "Fuse start and Scratch start",
-      "Tapered current and Quick stop wire feed",
-      "Globular and Spray",
-      "Short-arc and Dip",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Fuse start and Scratch start are starting methods. Option A.",
-    "solution": "Material under STARTING /STOPPING THE ARC:\n\n• STARTING — Fuse start, Scratch start\n• STOPPING — Tapered current, Quick stop wire feed\n\nWhy the other options are incorrect:\nOption B lists stopping methods, Options C and D list metal transfer patterns.\n\n* Correct Option: A (Fuse start and Scratch start)"
-  },
-  {
-    "id": "aee_mig_10",
-    "topicId": "mig-welding",
-    "question": "In welding positions, what are the work and travel angles shown in Fig. 7-21?",
-    "options": [
-      "90° work angle (top view), 15° work angle (end view), 15° travel angle (side view)",
-      "45° work, 45° travel",
-      "30° work, 60° travel",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Fig. 7-21: 90° work angle top view, 15° work angle end view, 15° travel angle side view. Option A.",
-    "solution": "Fig. 7-21. (1) Top view—90° work angle, (2) end view—15° work angle, and (3) side view—15° travel angle.\n\nWhy the other options are incorrect: They do not match the figure.\n\n* Correct Option: A (90° work angle (top view), 15° work angle (end view), 15° travel angle (side view))"
-  },
-  {
-    "id": "aee_mig_11",
-    "topicId": "mig-welding",
-    "question": "According to Fig. 7-22 Effect of Gun Position, which position gives narrow bead width and deep penetration?",
-    "options": [
-      "Perpendicular — medium bead and penetration",
-      "Backhand — narrow bead and deep penetration",
-      "Forehand — wide bead and low penetration",
-      "None of the above"
-    ],
-    "correct": 1,
-    "short": "Backhand gives narrow bead and deep penetration. Option B.",
-    "solution": "Fig. 7-22. (1) Perpendicular—medium bead width and penetration, (2) backhand—narrow bead width and deep penetration, and (3) forehand—wide bead width and low penetration.\n\nWhy the other options are incorrect:\nOption A is perpendicular, Option C is forehand.\n\n* Correct Option: B (Backhand — narrow bead width and deep penetration)"
-  },
-  {
-    "id": "aee_mig_12",
-    "topicId": "mig-welding",
-    "question": "Which metal transfer pattern is described as “used on thin metals” and shows Globule, Arc, Base Metal?",
-    "options": [
-      "Globular transfer",
-      "Short-arc (dip) transfer",
-      "Spray transfer",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Globular transfer is used on thin metals. Option A.",
-    "solution": "Fig. 7-10. Globular transfer—used on thin metals. Shows Shielding Gas, MIG Wire, Globule, Arc, Base Metal.\n\nWhy the other options are incorrect:\nOption B Short-arc (dip) is 4-step cycle with short circuit, Option C Spray is fine droplets.\n\n* Correct Option: A (Globular transfer)"
-  },
-  {
-    "id": "aee_mig_13",
-    "topicId": "mig-welding",
-    "question": "Short-arc transfer is also known as:",
-    "options": [
-      "Dip transfer",
-      "Globular transfer",
-      "Spray transfer",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Short-arc is also known as dip transfer. Option A.",
-    "solution": "Fig. 7-11. Short arc transfer—also known as dip transfer: (1) Beginning, (2) molten electrode elongates, (3) touches puddle and short circuits, (4) drop separates and arc reignites.\n\nWhy the other options are incorrect: They are different transfer modes.\n\n* Correct Option: A (Dip transfer)"
-  },
-  {
-    "id": "aee_mig_14",
-    "topicId": "mig-welding",
-    "question": "Which of the following is listed as a COMMON WELD DEFECT in MIG welding?",
-    "options": [
-      "Burn-thru : hole in base metal",
-      "Crater cracks : hole cracks on weld",
-      "Porosity : blow holes in weld",
-      "All of the above",
-      "None of the above"
-    ],
-    "correct": 3,
-    "short": "All listed: Burn-thru, Crater cracks, Porosity, plus Low penetration, Overlap, Whiskers. Option D.",
-    "solution": "List COMMON WELD DEFECTS:\n\n• Burn-thru : hole in base metal\n• Crater cracks : hole cracks on weld\n• Low penetration : weld only on surface\n• Overlap : incomplete melting\n• Porosity : blow holes in weld\n• Whiskers : short-unmelted wire\n\nOption D \"All of the above\" is correct if the three are among them.\n\nWhy the other options are incomplete: Each alone is true but not exhaustive.\n\n* Correct Option: D (All of the above)"
-  },
-  {
-    "id": "aee_mig_15",
-    "topicId": "mig-welding",
-    "question": "What are “Whiskers” in MIG welding?",
-    "options": [
-      "Short-unmelted wire",
-      "Hole in base metal",
-      "Blow holes in weld",
-      "Incomplete melting",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Whiskers are short-unmelted wire. Option A.",
-    "solution": "List: Whiskers : short-unmelted wire (shown in Fig. 7-19 MIG bead with whiskers).\n\nWhy the other options are incorrect:\nOption B is Burn-thru, Option C is Porosity, Option D is Overlap.\n\n* Correct Option: A (Short-unmelted wire)"
-  },
-  {
-    "id": "aee_tig_01",
-    "topicId": "tig-welding",
-    "question": "Which are listed as ADVANTAGES of TIG welding?",
-    "options": [
-      "Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds ferrous and non-ferrous",
-      "Only welds thin metals",
-      "Requires more grinding",
-      "More distortion",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Advantages: Stronger welds, easier than stick, less spark/smoke, less distortion, less grinding, welds both ferrous and non-ferrous. Option A.",
-    "solution": "Material under ADVANTAGES:\n\n• Stronger welds\n• Easier than still welding (stick)\n• Less spark, smoke and fumes\n• Less distortion of workpiece\n• Finished welds require less grinding\n• Welds ferrous and non-ferrous metals\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Stronger welds, easier than still welding, less spark, smoke and fumes, less distortion, less grinding, welds ferrous and non-ferrous)"
-  },
-  {
-    "id": "aee_tig_02",
-    "topicId": "tig-welding",
-    "question": "What lens number is recommended for TIG welding safety?",
-    "options": [
-      "#11 or #12 lens",
-      "#5 lens",
-      "Clear lens",
-      "No lens",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Use #11 or #12 lens for TIG. Option A.",
-    "solution": "Material under SAFETY IN TIG WELDING:\n\n• Use # 11 or # 12 lens\n• Weld in a well ventilated place\n• Wear hearing protection\n• Never touch tungsten electrode\n• Adjust the machine within limits\n\nWhy the other options are incorrect: They are not the listed lens numbers.\n\n* Correct Option: A (#11 or #12 lens)"
-  },
-  {
-    "id": "aee_tig_03",
-    "topicId": "tig-welding",
-    "question": "Which power supply types are listed for TIG equipment?",
-    "options": [
-      "AC, DC-straight polarity, DC-reverse polarity",
-      "Only AC",
-      "Only DCRP",
-      "Only DC",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "AC, DC-straight, DC-reverse polarity. Option A.",
-    "solution": "Material under TIG EQUIPMENT — Power supply:\n\n• AC\n• DC-straight polarity\n• DC-reverse polarity\n\nWhy the other options are incorrect: They list only one type.\n\n* Correct Option: A (AC, DC-straight polarity, DC-reverse polarity)"
-  },
-  {
-    "id": "aee_tig_04",
-    "topicId": "tig-welding",
-    "question": "Which components are part of a TIG torch as shown in Fig. 70?",
-    "options": [
-      "Short cap, Torch body, Gas cup, Collet body, Collet, Electrode",
-      "Nozzle, Contact tip, Cooling system",
-      "DCRP supply, Wire feeder",
-      "Argon, Helium, CO2",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Short cap, Torch body, Gas cup, Collet body, Collet, Electrode are TIG torch parts. Option A.",
-    "solution": "Fig. 70 — Components Of A TIG Torch:\n\nSHORT CAP, TORCH BODY, GAS CUP, COLLET BODY, COLLET, ELECTRODE\n\nWhy the other options are incorrect:\nOption B is MIG gun parts, Option C is MIG power supply, Option D is shielding gases.\n\n* Correct Option: A (Short cap, Torch body, Gas cup, Collet body, Collet, Electrode)"
-  },
-  {
-    "id": "aee_tig_05",
-    "topicId": "tig-welding",
-    "question": "What does a TIG welding system include as per Fig. 68?",
-    "options": [
-      "Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional)",
-      "Only power supply",
-      "Only torch",
-      "Only gas",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Regulator/Flowmeter, TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional). Option A.",
-    "solution": "Fig. 68 — TIG Welding System: REGULATOR/FLOWMETER COMBINATION, AIR-OR-WATER COOLED TIG TORCH, SHIELDING GAS, WORKPIECE, POWER SUPPLY, WATER COOLER(OPTIONAL)\n\nWhy the other options are incorrect: They list only one component.\n\n* Correct Option: A (Regulator/Flowmeter, Air-or-water cooled TIG torch, Shielding gas, Workpiece, Power supply, Water cooler (optional))"
-  },
-  {
-    "id": "aee_pw_01",
-    "topicId": "production-welding",
-    "question": "What is production welding as defined in the material?",
-    "options": [
-      "A process that joins materials, usually metals, by causing fusion",
-      "A process that cuts metals only",
-      "A process that paints metals",
-      "A process that polishes metals",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Production welding joins materials, usually metals, by causing fusion. Option A.",
-    "solution": "Production welding is defined as a process that joins materials, usually metals, by causing fusion.\n\nIt is usually done through MIG welding as it is the quickest method, and many factories now use robotic welding to speed up production.\n\nWhy the other options are incorrect:\nOption B cutting is a related process (oxy-acetylene cutting), not production welding itself.\nOption C painting and D polishing are not joining processes.\n\n* Correct Option: A (A process that joins materials, usually metals, by causing fusion)"
-  },
-  {
-    "id": "aee_pw_02",
-    "topicId": "production-welding",
-    "question": "Which welding method is described as the quickest for production welding?",
-    "options": [
-      "MIG (Metal Inert Gas)",
-      "Gas welding",
-      "Manual arc welding with high labor",
-      "Resistance welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "MIG is the quickest method for production welding. Option A.",
-    "solution": "The material states: “Production welding is usually done through the MIG (Metal Inert Gas) welding method as it is the quickest method of welding.”\n\nWhy the other options are incorrect:\nOption B Gas welding is noted as slow rate of heating.\nOption C Manual arc is high labor cost, not quickest.\nOption D Resistance is not mentioned as quickest for production.\n\n* Correct Option: A (MIG (Metal Inert Gas))"
-  },
-  {
-    "id": "aee_pw_03",
-    "topicId": "welding-classification",
-    "question": "Welding is used for making which type of joints?",
-    "options": [
-      "Permanent joints",
-      "Temporary joints",
-      "Semi-permanent joints",
-      "No joints",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Welding is used for making permanent joints. Option A.",
-    "solution": "Definition: “Welding is used for making permanent joints.” It is used for joining similar or dissimilar metals by heating to suitable temperature with or without pressure, filler and flux.\n\nWhy the other options are incorrect: Welding is not for temporary or semi-permanent; those are bolted/riveted.\n\n* Correct Option: A (Permanent joints)"
-  },
-  {
-    "id": "aee_pw_04",
-    "topicId": "welding-classification",
-    "question": "Which welding type is classified as Plastic Welding or Pressure Welding where pieces are heated to plastic state and forced together by external pressure?",
-    "options": [
-      "Resistance welding",
-      "Gas welding",
-      "Arc welding",
-      "Thermo-chemical welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Plastic/Pressure welding example is Resistance welding. Option A.",
-    "solution": "Classification:\n\n* Plastic Welding or Pressure Welding: The piece of metal to be joined are heated to a plastic state and forced together by external pressure (Ex) — Resistance welding\n* Fusion Welding or Non-Pressure Welding: The material at the joint is heated to a molten state and allowed to solidify (Ex) — Gas welding, Arc welding\n\nWhy the other options are incorrect: Gas and Arc are fusion, not pressure.\n\n* Correct Option: A (Resistance welding)"
-  },
-  {
-    "id": "aee_pw_05",
-    "topicId": "welding-classification",
-    "question": "Which welding type is classified as Fusion Welding or Non-Pressure Welding?",
-    "options": [
-      "Gas welding and Arc welding",
-      "Resistance welding",
-      "Friction welding",
-      "Explosive welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Fusion/Non-Pressure examples are Gas welding and Arc welding. Option A.",
-    "solution": "Fusion Welding: The material at the joint is heated to a molten state and allowed to solidify. Examples given are Gas welding and Arc welding.\n\nWhy the other options are incorrect:\nOption B Resistance is plastic/pressure, Option C Friction and D Explosive are solid-state.\n\n* Correct Option: A (Gas welding and Arc welding)"
-  },
-  {
-    "id": "aee_pw_06",
-    "topicId": "welding-classification",
-    "question": "Which of the following lists includes only welding processes as per the Classification slide?",
-    "options": [
-      "Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding",
-      "Only Gas and Arc",
-      "Only Resistance and Solid state",
-      "Only Brazing and Soldering",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Gas, Arc, Resistance, Solid state, Thermo-chemical, Low Temperature are listed. Option A.",
-    "solution": "Slide CLASSIFICATION OF WELDING PROCESSES lists:\n\n✓ Gas welding (Oxy-Acetylene)\n✓ Arc welding (Metal Arc)\n✓ Resistance welding\n✓ Solid state welding\n✓ Thermo-chemical welding\n✓ Low Temperature welding\n\nWhy the other options are incorrect: They are incomplete.\n\n* Correct Option: A (Gas welding, Arc welding, Resistance welding, Solid state welding, Thermo-chemical welding, Low Temperature welding)"
-  },
-  {
-    "id": "aee_pw_07",
-    "topicId": "gas-welding",
-    "question": "Gas welding obtains heat for welding by:",
-    "options": [
-      "Combustion of oxygen and fuel gas (acetylene, hydrogen or propene)",
-      "Electric arc between base metal and electrode",
-      "Pressure alone",
-      "Friction",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Gas welding heat is from combustion of oxygen and fuel gas. Option A.",
-    "solution": "Definition: “Gas Welding is a fusion welding process, in which the heat for welding is obtained by the combustion of oxygen and fuel the gas may be acetylene, hydrogen or propene.”\n\nWhy the other options are incorrect:\nOption B is Arc welding, Option C is pressure welding, Option D is friction (solid-state).\n\n* Correct Option: A (Combustion of oxygen and fuel gas (acetylene, hydrogen or propene))"
-  },
-  {
-    "id": "aee_pw_08",
-    "topicId": "gas-welding",
-    "question": "Which are listed as types of Gas Welding?",
-    "options": [
-      "Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel",
-      "Only Oxy-Acetylene",
-      "Only Arc and Resistance",
-      "Only Brazing and Soldering",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Types: Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel. Option A.",
-    "solution": "Slide Gas Welding Types:\n\n• Oxy-Acetylene\n• Air-Acetylene\n• Oxy-Hydrogen\n• Oxy-Fuel\n\nWhy the other options are incorrect: They list incomplete or unrelated processes.\n\n* Correct Option: A (Oxy-Acetylene, Air-Acetylene, Oxy-Hydrogen, Oxy-Fuel)"
-  },
-  {
-    "id": "aee_pw_09",
-    "topicId": "gas-welding",
-    "question": "In oxy-acetylene welding equipment, what is the cylinder pressure for oxygen and acetylene respectively?",
-    "options": [
-      "Oxygen 125 kg/cm², Acetylene 16 kg/cm²",
-      "Oxygen 16 kg/cm², Acetylene 125 kg/cm²",
-      "Both 125 kg/cm²",
-      "Both 16 kg/cm²",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Oxygen 125 kg/cm², Acetylene 16 kg/cm². Option A.",
-    "solution": "Gas Cylinders section:\n\nPressure-\nOxygen – 125 kg/cm²\nAcetylene – 16 kg/cm²\n\nWhy the other options are incorrect: They swap or equalize the pressures.\n\n* Correct Option: A (Oxygen 125 kg/cm², Acetylene 16 kg/cm²)"
-  },
-  {
-    "id": "aee_pw_10",
-    "topicId": "gas-welding",
-    "question": "What are the working pressures for oxygen and acetylene in gas welding?",
-    "options": [
-      "Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²",
-      "Oxygen 125 kg/cm², Acetylene 16 kg/cm²",
-      "Both 1 kg/cm²",
-      "Both 0.15 kg/cm²",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Working: Oxygen 1 kg/cm², Acetylene 0.15 kg/cm². Option A.",
-    "solution": "Regulators section:\n\n• Working pressure of oxygen 1 kg/cm²\n• Working pressure of acetylene 0.15 kg/cm²\n• Working pressure varies depending on thickness\n\nWhy the other options are incorrect:\nOption B lists cylinder pressures, not working pressures.\n\n* Correct Option: A (Oxygen 1 kg/cm², Acetylene 0.15 kg/cm²)"
-  },
-  {
-    "id": "aee_pw_11",
-    "topicId": "gas-welding",
-    "question": "Which is an advantage of gas welding?",
-    "options": [
-      "Portable and most versatile, better control over temperature, suitable for dissimilar metals, low cost",
-      "Suitable for heavy section",
-      "High working temperature",
-      "Fast rate of heating",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Advantages: portable, versatile, better control, dissimilar metals, low cost. Option A.",
-    "solution": "Advantages listed:\n\n• Portable and most versatile process.\n• Better control over the temperature.\n• Suitable to weld dissimilar matter.\n• Low cost & maintenance.\n\nWhy the other options are incorrect:\nOption B, C, D are actually disadvantages: Not suitable for heavy section, Less working temperature, Slow rate of heating.\n\n* Correct Option: A (Portable and most versatile, better control over the temperature, suitable to weld dissimilar matter, low cost)"
-  },
-  {
-    "id": "aee_pw_12",
-    "topicId": "gas-welding",
-    "question": "Which is a disadvantage of gas welding?",
-    "options": [
-      "Not suitable for heavy section, less working temperature, slow rate of heating",
-      "Portable and versatile",
-      "Better control over temperature",
-      "Low cost",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Disadvantages: not for heavy section, less temp, slow heating. Option A.",
-    "solution": "Disadvantages listed:\n\n• Not suitable for heavy section.\n• Less working temperature of gas flame.\n• Slow rate of heating.\n\nWhy the other options are incorrect: They are advantages.\n\n* Correct Option: A (Not suitable for heavy section, less working temperature, slow rate of heating)"
-  },
-  {
-    "id": "aee_pw_13",
-    "topicId": "arc-welding",
-    "question": "Arc welding is a fusion welding process where heat is obtained from:",
-    "options": [
-      "Electric arc between base metal and an electrode",
-      "Combustion of oxygen and acetylene",
-      "Pressure alone",
-      "Friction",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Arc welding heat is from electric arc between base metal and electrode. Option A.",
-    "solution": "Definition: “Arc welding is a fusion welding process in which the heat required to fuse the metal is obtain from the electric arc between the base metal and an electrode.”\n\nWhy the other options are incorrect:\nOption B is gas welding, Option C is pressure/solid-state, Option D is friction welding.\n\n* Correct Option: A (Electric arc between base metal and an electrode)"
-  },
-  {
-    "id": "aee_pw_14",
-    "topicId": "arc-welding",
-    "question": "Which are listed as types of Arc Welding?",
-    "options": [
-      "Metal Arc, Submerged Arc, TIG, MIG",
-      "Only Gas Welding",
-      "Only Resistance Welding",
-      "Only Brazing",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Types: Metal Arc, Submerged Arc, TIG, MIG. Option A.",
-    "solution": "Slide Arc Welding Types:\n\n1. Metal Arc Welding\n2. Submerged Arc Welding\n3. Tungsten Inert Gas Welding (TIG)\n4. Metal Inert Gas Welding (MIG)\n\nWhy the other options are incorrect: They list other categories.\n\n* Correct Option: A (Metal Arc, Submerged Arc, TIG, MIG)"
-  },
-  {
-    "id": "aee_pw_15",
-    "topicId": "arc-welding",
-    "question": "Which equipment is listed for arc welding?",
-    "options": [
-      "Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles",
-      "Only gas cylinders",
-      "Only check valve",
-      "Only non-return valve",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Arc welding equipment includes generator/transformer, cables, holder, electrode, shield, gloves, brush, hammer, goggles. Option A.",
-    "solution": "Equipment listed:\n\nØ A welding generator (D.C.) or Transformer (A.C.)\nØ Two cables- one for work and one for electrode\nØ Electrode holder\nØ Electrode\nØ Protective shield\nØ Gloves\nØ Wire brush\nØ Chipping hammer\nØ Goggles\n\nWhy the other options are incorrect: They list gas welding equipment (cylinders, check valve).\n\n* Correct Option: A (Welding generator (D.C.) or Transformer (A.C.), two cables, electrode holder, electrode, protective shield, gloves, wire brush, chipping hammer, goggles)"
-  },
-  {
-    "id": "aee_pw_16",
-    "topicId": "arc-welding",
-    "question": "Which is an advantage of arc welding?",
-    "options": [
-      "Most efficient way to join metals, lowest-cost, lighter weight, joins all commercial metals, design flexibility",
-      "Manually applied, high labor cost",
-      "Need high energy causing danger",
-      "Not convenient for disassembly",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Advantages: most efficient, lowest-cost, lighter weight, joins all metals, design flexibility. Option A.",
-    "solution": "Advantages listed:\n\n• Most efficient way to join metals\n• Lowest-cost joining method\n• Affords lighter weight through better utilization of materials\n• Joins all commercial metals\n• Provides design flexibility\n\nWhy the other options are incorrect:\nOptions B, C, D are listed under Disadvantages: Manually applied high labor cost, Need high energy causing danger, Not convenient for disassembly, Defects hard to detect.\n\n* Correct Option: A (Most efficient way to join metals, lowest-cost, lighter weight, joins all commercial metals, design flexibility)"
-  },
-  {
-    "id": "aee_pw_17",
-    "topicId": "arc-welding",
-    "question": "Which is a disadvantage of arc welding?",
-    "options": [
-      "Manually applied, high labor cost, need high energy causing danger, not convenient for disassembly, defects hard to detect",
-      "Most efficient",
-      "Lowest-cost",
-      "Joins all commercial metals",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Disadvantages: manual high labor, high energy danger, not convenient for disassembly, hard to detect defects. Option A.",
-    "solution": "Disadvantages listed:\n\n• Manually applied, therefore high labor cost.\n• Need high energy causing danger\n• Not convenient for disassembly.\n• Defects are hard to detect at joints.\n\nWhy the other options are incorrect: They are advantages.\n\n* Correct Option: A (Manually applied, high labor cost, need high energy causing danger, not convenient for disassembly, defects hard to detect)"
-  },
-  {
-    "id": "aee_pw_18",
-    "topicId": "production-welding",
-    "question": "Which applications are listed for welding?",
-    "options": [
-      "Automobile bodies, Aircraft Frames, Railway Wagons, Machine Frames, Structural works, tanks, furniture, boilers, ship building",
-      "Only automobile bodies",
-      "Only aircraft frames",
-      "Only tanks",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Applications include automobile bodies, aircraft frames, railway wagons, machine frames, structural works, tanks, furniture, boilers, ship building. Option A.",
-    "solution": "Applications slide lists:\n\nØ It is used in the manufacture of automobile bodies.\nØ Aircraft Frames\nØ Railway Wagons\nØ Machine Frames\nØ Structural works, tanks, furniture, boilers, general repair work and ship building etc.\n\nWhy the other options are incorrect: They are incomplete.\n\n* Correct Option: A (Automobile bodies, Aircraft Frames, Railway Wagons, Machine Frames, Structural works, tanks, furniture, boilers, ship building)"
-  },
-  {
-    "id": "aee_pw_19",
-    "topicId": "welding-classification",
-    "question": "Which welding process is classified under Solid State Welding?",
-    "options": [
-      "Friction, Ultrasonic, Diffusion, Explosive",
-      "Oxy-acetylene",
-      "Metal arc",
-      "Resistance Butt",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Solid State: Friction, Ultrasonic, Diffusion, Explosive. Option A.",
-    "solution": "Classification Slide (Solid State Welding):\n\n• Friction\n• Ultrasonic\n• Diffusion\n• Explosive\n\nWhy the other options are incorrect:\nOption B Oxy-acetylene is Gas, Option C Metal arc is Arc, Option D Butt is Resistance.\n\n* Correct Option: A (Friction, Ultrasonic, Diffusion, Explosive)"
-  },
-  {
-    "id": "aee_pw_20",
-    "topicId": "welding-classification",
-    "question": "Which welding process is classified under Newer Welding?",
-    "options": [
-      "Electron-beam, Laser",
-      "Oxy-acetylene, Air-acetylene",
-      "Butt, Spot, Seam",
-      "Friction, Ultrasonic",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Newer Welding: Electron-beam, Laser. Option A.",
-    "solution": "Classification slide (vi) Newer Welding:\n\n• Electron-beam\n• Laser\n\nWhy the other options are incorrect:\nOption B is Gas, Option C is Resistance, Option D is Solid State.\n\n* Correct Option: A (Electron-beam, Laser)"
-  },
-  {
-    "id": "aee_pw_21",
-    "topicId": "welding-classification",
-    "question": "Which are listed as Related Processes (not welding but allied)?",
-    "options": [
-      "Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering",
-      "Friction, Ultrasonic",
-      "Butt, Spot",
-      "Electron-beam",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Related Processes: Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering. Option A.",
-    "solution": "Classification slide (vii) Related Process:\n\n• Oxy-acetylene cutting\n• Arc cutting\n• Hard facing\n• Brazing\n• Soldering\n\nWhy the other options are incorrect: They are actual welding categories.\n\n* Correct Option: A (Oxy-acetylene cutting, Arc cutting, Hard facing, Brazing, Soldering)"
-  },
-  {
-    "id": "aee_pw_22",
-    "topicId": "gas-welding",
-    "question": "Oxy-acetylene welding uses oxygen and acetylene in correct proportions to produce:",
-    "options": [
-      "An intense gas flame",
-      "An electric arc",
-      "Friction heat",
-      "Low temperature",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Oxy-acetylene produces an intense gas flame. Option A.",
-    "solution": "Text: \"When a combination of Oxygen and acetylene is used in correct proportions to produce an Intense gas flame, the process is known as oxy-acetylene welding.\"\n\nWhy the other options are incorrect:\nOption B is arc welding, Option C is friction, Option D is low-temp soldering.\n\n* Correct Option: A (An intense gas flame)"
-  },
-  {
-    "id": "aee_pw_23",
-    "topicId": "welding-classification",
-    "question": "Resistance welding is an example of:",
-    "options": [
-      "Plastic/Pressure Welding",
-      "Fusion/Non-Pressure Welding",
-      "Solid State Welding",
-      "Newer Welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Resistance welding is Plastic/Pressure Welding. Option A.",
-    "solution": "Types of Welding:\n\n* Plastic Welding or Pressure Welding: heated to plastic state and forced together by external pressure (Ex) — Resistance welding\n* Fusion Welding: heated to molten state and allowed to solidify (Ex) — Gas, Arc\n\nTherefore Resistance is Plastic/Pressure.\n\n* Correct Option: A (Plastic/Pressure Welding)"
-  },
-  {
-    "id": "aee_pw_24",
-    "topicId": "welding-classification",
-    "question": "Gas welding and Arc welding are examples of:",
-    "options": [
-      "Fusion/Non-Pressure Welding",
-      "Plastic/Pressure Welding",
-      "Solid State Welding",
-      "Resistance Welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Gas and Arc are Fusion/Non-Pressure Welding. Option A.",
-    "solution": "Fusion Welding: material at joint heated to molten state and allowed to solidify. Examples: Gas welding, Arc welding.\n\nWhy the other options are incorrect: They are pressure/solid-state.\n\n* Correct Option: A (Fusion/Non-Pressure Welding)"
-  },
-  {
-    "id": "aee_pw_25",
-    "topicId": "production-welding",
-    "question": "What is a key conclusion about welding as per the Conclusion slide?",
-    "options": [
-      "A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom",
-      "Welding is very costly and not portable",
-      "Welding cannot join dissimilar metals",
-      "Welding has no design freedom",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Good weld is strong, equipment not costly, portable, joins similar/dissimilar, design freedom. Option A.",
-    "solution": "Conclusion slide:\n\nØ A good weld is always strong.\nØ General welding equipment is not very costly.\nØ Portable welding equipment are available.\nØ A large number of metal and alloy both similar and dissimilar can be join by welding.\nØ Welding permits considerable freedom in design.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (A good weld is always strong, general equipment not very costly, portable, can join similar and dissimilar metals, permits design freedom)"
+    "short": "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square. Option A.",
+    "solution": "Tools used for marking out include:\n- Marking Out Surface or Table\n- Scriber, to mark out lines\n- Punch, to locate/mark points\n- V-block, to hold cylindrical jobs\n- Angle plate, to hold jobs at right angle\n- Try-Square, to set accuracy of two lines at right angle\n\nWhy the other options are incorrect: They list single tools.\n\n* Correct Option: A (Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square)"
   },
   {
     "id": "aee_am_01",
@@ -4284,6 +3364,51 @@ export const questionBank = {
     "solution": "Machine Operation lists types of machine processes:\n\n* Shaping\n* Turning\n* Milling\n* Drilling\n* Sawing\n* Robotic Welding\n\nCasting is a separate manufacturing process, not listed under Machine Operation.\n\nWhy the other options are incorrect: They are all listed.\n\n* Correct Option: D (Casting)"
   },
   {
+    "id": "aee_ht_03",
+    "topicId": "machine-operations",
+    "question": "Where is the Heat Engineering and Farm Machinery Engineering Workshop located according to the presentation?",
+    "options": [
+      "Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering",
+      "University of Lagos",
+      "University of Ibadan",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "OAU, Agricultural and Environment Engineering. Option A.",
+    "solution": "Slide: Workshop Machines and Laboratory Equipment - Agricultural and Environment Engineering, Obafemi Awolowo University (OAU), Nigeria - HEAT ENGINEERING AND FARM MACHINERY ENGINEERING WORKSHOP.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering)"
+  },
+  {
+    "id": "aee_ht_06",
+    "topicId": "machine-operations",
+    "question": "Which machine is listed as Electronic punching machine with 1000W?",
+    "options": [
+      "Electronic punching machine (1000W)",
+      "Table drilling machine",
+      "Press machine",
+      "Metal hand Shear",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Electronic punching machine 1000W. Option A.",
+    "solution": "Slide: Electronic punching machine 1000W.\n\nWhy the other options are incorrect: They are separate machines.\n\n* Correct Option: A (Electronic punching machine (1000W))"
+  },
+  {
+    "id": "aee_ht_09",
+    "topicId": "machine-operations",
+    "question": "Which of the following workshop machines is listed in the presentation?",
+    "options": [
+      "Bandsaw machine",
+      "Press machine",
+      "Metal hand Shear",
+      "Lathe machine and Heavy duty lathe machine",
+      "All of the above",
+      "None of the above"
+    ],
+    "correct": 4,
+    "short": "All listed: Bandsaw, Press, Metal hand Shear, Lathe, Heavy duty lathe. Option E.",
+    "solution": "Slides list: Bandsaw machine, Press machine, Metal hand Shear, Lathe machine, Heavy duty lathe machine.\n\nWhy the other options are incomplete: Each alone is true but not exhaustive.\n\n* Correct Option: E (All of the above)"
+  },
+  {
     "id": "aee_am_02",
     "topicId": "advanced-manufacturing",
     "question": "How is shaping defined in the material?",
@@ -4297,276 +3422,6 @@ export const questionBank = {
     "correct": 0,
     "short": "Shaping is cutting/removing metal so a part can fit into another part. Option A.",
     "solution": "Definition from the material: \"Shaping is the process of cutting or removing metal so that a part can fit directly into another part.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Process of cutting or removing metal so that a part can fit directly into another part)"
-  },
-  {
-    "id": "aee_am_03",
-    "topicId": "advanced-manufacturing",
-    "question": "What is the precision capability and a listed advantage of shaping?",
-    "options": [
-      "Can shape metals down to ½ mm very precisely",
-      "Can remove metal on 360° angle",
-      "Can perform any operation with great accuracy",
-      "Very fast operation for small holes",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Shaping can shape down to ½ mm very precisely. Option A.",
-    "solution": "Advantage of Shaping listed: \"It can shape metals very precisely: It can often shape pieces down to ½ mm.\"\n\nWhy the other options are incorrect:\nOption B is advantage of Turning (360°), Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Can shape metals down to ½ mm very precisely)"
-  },
-  {
-    "id": "aee_am_04",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed disadvantage of shaping?",
-    "options": [
-      "When tool or machine piece breaks it takes very skilled technicians to fix",
-      "Takes a lot of training and is very expensive",
-      "Temperatures affect the operation",
-      "Dangerous with many hand accidents",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Disadvantage: When tool breaks, needs very skilled technicians to fix. Option A.",
-    "solution": "Material lists under Shaping — Disadvantages: \"When the tool or machine piece breaks it takes very skilled technicians to fix the problem.\"\n\nWhy the other options are incorrect:\nOption B is disadvantage of Milling (training and expensive), Option C is Drilling (temperatures), Option D is Sawing (dangerous).\n\n* Correct Option: A (When tool or machine piece breaks it takes very skilled technicians to fix)"
-  },
-  {
-    "id": "aee_am_05",
-    "topicId": "advanced-manufacturing",
-    "question": "Turning is defined as:",
-    "options": [
-      "A material removal process to create rotational parts by cutting away unwanted material using a lathe",
-      "A process of removing metal with a rotating multi-point tool",
-      "A process where a round hole is created with an end cutting tool",
-      "A process that completely automates welding with robots",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Turning creates rotational parts by cutting away material using a lathe. Option A.",
-    "solution": "Definition: \"Turning is a form of machining, a material removal process, which is used to create rotational parts by cutting away unwanted material. The turning process requires a turning machine or lathe, workpiece, fixture, and cutting tool.\"\n\nWhy the other options are incorrect:\nOption B is Milling, Option C is Drilling, Option D is Robotic Welding.\n\n* Correct Option: A (A material removal process to create rotational parts by cutting away unwanted material using a lathe)"
-  },
-  {
-    "id": "aee_am_06",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed advantage of turning?",
-    "options": [
-      "It can remove metal on a 360 degree angle which is very hard and complex to do",
-      "It can shape metals down to ½ mm",
-      "It can perform literally any operation",
-      "It is very fast for small holes",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Turning can remove metal on 360° angle. Option A.",
-    "solution": "Advantage of Turning: \"It can remove metal on a 360 degree angle which is very hard and complex to do.\"\n\nWhy the other options are incorrect:\nOption B is Shaping (½ mm), Option C is Milling (any operation), Option D is Drilling (fast small holes).\n\n* Correct Option: A (It can remove metal on a 360 degree angle which is very hard and complex to do)"
-  },
-  {
-    "id": "aee_am_07",
-    "topicId": "advanced-manufacturing",
-    "question": "What is the basic machine tool for turning called?",
-    "options": [
-      "Lathe (Engine lathe)",
-      "Milling machine",
-      "Drill press",
-      "Shaper",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Basic machine tool for turning is lathe (engine lathe). Option A.",
-    "solution": "Figure 21-2 caption: \"The basic machine tool for turning is called a lathe. This figure shows an engine lathe.\"\n\nWhy the other options are incorrect: They are for milling, drilling, shaping.\n\n* Correct Option: A (Lathe (Engine lathe))"
-  },
-  {
-    "id": "aee_am_08",
-    "topicId": "advanced-manufacturing",
-    "question": "How is milling defined?",
-    "options": [
-      "Removal of metal using a tool with several cutting points rotating about its axis",
-      "Creating rotational parts on a lathe",
-      "Creating a round hole with a drill",
-      "Automating welding with robots",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Milling is removal of metal using a rotating multi-point tool. Option A.",
-    "solution": "Definition: \"Milling is... the removal of metal from the work piece using a tool which has several cutting points and is rotating about its axis. Thus each cutting point removes a little bit... overall removal is quite brisk.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Drilling, Option D is Robotic Welding.\n\n* Correct Option: A (Removal of metal using a tool with several cutting points rotating about its axis)"
-  },
-  {
-    "id": "aee_am_09",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed advantage of milling?",
-    "options": [
-      "It can be used to perform literally any operation with a great degree of accuracy",
-      "It is very fast for small holes",
-      "It can shape down to ½ mm",
-      "It removes metal on 360°",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Milling can perform literally any operation with great accuracy. Option A.",
-    "solution": "Advantage of Milling: \"it can be used to perform literally any operation with a great degree of accuracy and hence it is an indispensable machine for any workshop\"\n\nWhy the other options are incorrect:\nOption B is Drilling, Option C is Shaping, Option D is Turning.\n\n* Correct Option: A (It can be used to perform literally any operation with a great degree of accuracy)"
-  },
-  {
-    "id": "aee_am_10",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed disadvantage of milling?",
-    "options": [
-      "Takes a lot of training/experience and is very expensive",
-      "Takes skilled technicians only when it breaks",
-      "Temperatures affect it",
-      "Dangerous with many hand accidents",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Milling takes a lot of training and is very expensive. Option A.",
-    "solution": "Disadvantage of Milling: \"It takes a lot of training and experience to operate a milling machine. It is also very expensive.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Drilling, Option D is Sawing.\n\n* Correct Option: A (Takes a lot of training/experience and is very expensive)"
-  },
-  {
-    "id": "aee_am_11",
-    "topicId": "advanced-manufacturing",
-    "question": "Drilling is defined as:",
-    "options": [
-      "Manufacturing process where a round hole is created or enlarged by rotating an end cutting tool (drill)",
-      "Process of cutting or removing metal so a part can fit into another",
-      "Process using a rotating multi-point tool",
-      "Process that automates welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Drilling creates/enlarges a round hole with a rotating drill. Option A.",
-    "solution": "Definition: \"Drilling is the manufacturing process where a round hole is created within a work piece or enlarged by rotating an end cutting tool, a drill.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Robotic Welding.\n\n* Correct Option: A (Manufacturing process where a round hole is created or enlarged by rotating an end cutting tool (drill))"
-  },
-  {
-    "id": "aee_am_12",
-    "topicId": "advanced-manufacturing",
-    "question": "What is Reaming in relation to drilling?",
-    "options": [
-      "Enlarging a hole to a very specific/accurate size using a reamer (rotating end and side cutting tool)",
-      "Creating a round hole for the first time",
-      "Cutting bars of material",
-      "Automating welding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Reaming enlarges a hole to a very specific accurate size using a reamer. Option A.",
-    "solution": "Definition: \"Reaming is a similar process where a hole feature is enlarged to a very specific or accurate size by introducing a rotating end and side cutting tool called a reamer.\"\n\nWhy the other options are incorrect: They describe drilling or other processes.\n\n* Correct Option: A (Enlarging a hole to a very specific/accurate size using a reamer)"
-  },
-  {
-    "id": "aee_am_13",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed advantage of drilling?",
-    "options": [
-      "Very fast operation, can make very small and accurate holes",
-      "Can shape down to ½ mm",
-      "Can perform any operation",
-      "Removes metal on 360°",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Drilling is very fast and can make very small accurate holes. Option A.",
-    "solution": "Advantage of Drilling: \"Drilling is a very fast operation, can also make holes that are very small and accurate.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Turning.\n\n* Correct Option: A (Very fast operation, can make very small and accurate holes)"
-  },
-  {
-    "id": "aee_am_14",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed disadvantage of drilling?",
-    "options": [
-      "Temperatures in the factory affect drilling",
-      "Takes very skilled technicians when it breaks",
-      "Takes a lot of training and expensive",
-      "Dangerous with hand accidents",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Temperatures in the factory affect drilling. Option A.",
-    "solution": "Disadvantage of Drilling: \"Temperatures in the factory affect drilling.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Sawing.\n\n* Correct Option: A (Temperatures in the factory affect drilling)"
-  },
-  {
-    "id": "aee_am_15",
-    "topicId": "advanced-manufacturing",
-    "question": "Sawing is used for:",
-    "options": [
-      "Cutting up bars of material or cutting out shapes in plates of raw material",
-      "Creating rotational parts",
-      "Removing metal with multi-point tool",
-      "Creating a round hole",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Sawing cuts up bars or cuts out shapes in plates. Option A.",
-    "solution": "Definition: \"Sawing is used for cutting up bars of material or for cutting out shapes in plates of raw material. The cutting tools may be thin metallic disks, blades or flexible bands with teeth, or thin grinding wheels.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Cutting up bars of material or cutting out shapes in plates of raw material)"
-  },
-  {
-    "id": "aee_am_16",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed advantage of sawing?",
-    "options": [
-      "Allows us to cut very strong objects with precise accuracy",
-      "Very fast for small holes",
-      "Can shape down to ½ mm",
-      "Removes metal on 360°",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Sawing allows cutting very strong objects with precise accuracy. Option A.",
-    "solution": "Advantage of Sawing: \"Sawing allows us to cut very strong objects with precise accuracy.\"\n\nWhy the other options are incorrect:\nOption B is Drilling, Option C is Shaping, Option D is Turning.\n\n* Correct Option: A (Allows us to cut very strong objects with precise accuracy)"
-  },
-  {
-    "id": "aee_am_17",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a listed disadvantage of sawing?",
-    "options": [
-      "Very dangerous; many accidents if not trained properly (can cut hand/fingers)",
-      "Takes skilled technicians only when it breaks",
-      "Temperatures affect it",
-      "Takes a lot of training and expensive",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Sawing is very dangerous; many accidents if not trained. Option A.",
-    "solution": "Disadvantage of Sawing: \"Sawing often can be seen as very dangerous. If you are not trained properly you can cut your hand or fingers. There are many accidents associated with sawing.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Drilling, Option D is Milling.\n\n* Correct Option: A (Very dangerous; many accidents if not trained properly (can cut hand/fingers))"
-  },
-  {
-    "id": "aee_am_18",
-    "topicId": "advanced-manufacturing",
-    "question": "What is robot welding?",
-    "options": [
-      "Use of mechanized programmable tools (robots) which completely automate a welding process by both performing the weld and handling the part",
-      "Manual welding by a human",
-      "Cutting with a chisel",
-      "Drilling holes",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Robot welding uses programmable robots to completely automate welding and handling. Option A.",
-    "solution": "Definition: \"Robot welding is the use of mechanized programmable tools (robots), which completely automate a welding process by both performing the weld and handling the part.\"\n\nWhy the other options are incorrect: They describe manual or other processes.\n\n* Correct Option: A (Use of mechanized programmable tools (robots) which completely automate a welding process by both performing the weld and handling the part)"
-  },
-  {
-    "id": "aee_am_19",
-    "topicId": "advanced-manufacturing",
-    "question": "For which welding types is robot welding commonly used in high production, such as automotive industry?",
-    "options": [
-      "Resistance spot welding and arc welding",
-      "Gas welding only",
-      "Friction welding only",
-      "Explosive welding only",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Resistance spot and arc welding in high production like automotive. Option A.",
-    "solution": "Material: \"Robot welding is commonly used for resistance spot welding and arc welding in high production applications, such as the automotive industry.\"\n\nWhy the other options are incorrect: They are not listed as common high-production robotic applications.\n\n* Correct Option: A (Resistance spot welding and arc welding)"
-  },
-  {
-    "id": "aee_am_20",
-    "topicId": "advanced-manufacturing",
-    "question": "When did the use of robots in welding take off in the US automotive industry?",
-    "options": [
-      "1980s when automotive began using robots extensively for spot welding",
-      "1960s when robots were first introduced",
-      "1990s",
-      "2000s",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "1980s when automotive began extensive spot welding with robots. Option A.",
-    "solution": "Material: \"The use of robots in welding did not take off until the 1980s, when the automotive industry began using robots extensively for spot welding.\"\n\nNote: Robots were first introduced in US industry during the 1960s, but welding take-off was 1980s.\n\nWhy the other options are incorrect:\nOption B is when robots were first introduced (1960s), not welding take-off.\n\n* Correct Option: A (1980s when automotive began using robots extensively for spot welding)"
   },
   {
     "id": "aee_am_21",
@@ -4584,6 +3439,36 @@ export const questionBank = {
     "solution": "Advantages listed:\n\n- Robotic welding allows companies to really speed up production and produce more parts as machines can weld significantly faster than humans.\n- Also decreases the injuries associated with welding, as there is less chance of a worker getting hurt operating a robot rather than welding himself.\n\nWhy the other options are incorrect:\nOption B says very cheap — actually disadvantages list very expensive.\nOption C says more precision — actually disadvantage says less precision than good human welder.\nOption D says no training — actually need training to operate/inspect.\n\n* Correct Option: A (Speeds up production and decreases injuries as machines weld faster than humans and reduce worker exposure)"
   },
   {
+    "id": "aee_am_12",
+    "topicId": "advanced-manufacturing",
+    "question": "What is Reaming in relation to drilling?",
+    "options": [
+      "Enlarging a hole to a very specific/accurate size using a reamer (rotating end and side cutting tool)",
+      "Creating a round hole for the first time",
+      "Cutting bars of material",
+      "Automating welding",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Reaming enlarges a hole to a very specific accurate size using a reamer. Option A.",
+    "solution": "Definition: \"Reaming is a similar process where a hole feature is enlarged to a very specific or accurate size by introducing a rotating end and side cutting tool called a reamer.\"\n\nWhy the other options are incorrect: They describe drilling or other processes.\n\n* Correct Option: A (Enlarging a hole to a very specific/accurate size using a reamer)"
+  },
+  {
+    "id": "aee_am_03",
+    "topicId": "advanced-manufacturing",
+    "question": "What is the precision capability and a listed advantage of shaping?",
+    "options": [
+      "Can shape metals down to ½ mm very precisely",
+      "Can remove metal on 360° angle",
+      "Can perform any operation with great accuracy",
+      "Very fast operation for small holes",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Shaping can shape down to ½ mm very precisely. Option A.",
+    "solution": "Advantage of Shaping listed: \"It can shape metals very precisely: It can often shape pieces down to ½ mm.\"\n\nWhy the other options are incorrect:\nOption B is advantage of Turning (360°), Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Can shape metals down to ½ mm very precisely)"
+  },
+  {
     "id": "aee_am_22",
     "topicId": "advanced-manufacturing",
     "question": "Which is a listed disadvantage of robotic welding?",
@@ -4599,6 +3484,111 @@ export const questionBank = {
     "solution": "Disadvantages listed:\n\n- Machines are very expensive, limits companies\n- Costs a lot to have machines fixed when they break\n- Does not have the precision or accuracy that a good human welder would have\n- Sometimes welds may be off line causing a “cold weld”\n- Robots also leave pinholes which need to be fixed by a human\n- Not everyone can operate — should be trained\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Machines are very expensive, costly to fix, less precision than good human welder, may create cold welds/pinholes, requires training)"
   },
   {
+    "id": "aee_am_13",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed advantage of drilling?",
+    "options": [
+      "Very fast operation, can make very small and accurate holes",
+      "Can shape down to ½ mm",
+      "Can perform any operation",
+      "Removes metal on 360°",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Drilling is very fast and can make very small accurate holes. Option A.",
+    "solution": "Advantage of Drilling: \"Drilling is a very fast operation, can also make holes that are very small and accurate.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Turning.\n\n* Correct Option: A (Very fast operation, can make very small and accurate holes)"
+  },
+  {
+    "id": "aee_am_04",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of shaping?",
+    "options": [
+      "When tool or machine piece breaks it takes very skilled technicians to fix",
+      "Takes a lot of training and is very expensive",
+      "Temperatures affect the operation",
+      "Dangerous with many hand accidents",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Disadvantage: When tool breaks, needs very skilled technicians to fix. Option A.",
+    "solution": "Material lists under Shaping — Disadvantages: \"When the tool or machine piece breaks it takes very skilled technicians to fix the problem.\"\n\nWhy the other options are incorrect:\nOption B is disadvantage of Milling (training and expensive), Option C is Drilling (temperatures), Option D is Sawing (dangerous).\n\n* Correct Option: A (When tool or machine piece breaks it takes very skilled technicians to fix)"
+  },
+  {
+    "id": "aee_adv_01",
+    "topicId": "advanced-manufacturing",
+    "question": "How is Advanced Manufacturing defined in the material?",
+    "options": [
+      "Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge",
+      "Use of old technology only",
+      "Only manual labour without technology",
+      "Only for small scale production",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Advanced Manufacturing is use of innovative technology to improve products/processes. Option A.",
+    "solution": "Definition from material:\n\n• Advanced Manufacturing is the use of innovative technology to improve products or processes, with the relevant technology being described as \"advanced,\" \"innovative,\" or \"cutting edge.\"\n• Advanced Manufacturing industries increasingly integrate new innovative technologies in both products and processes.\n\nWhy the other options are incorrect: They describe old/manual/small scale, not advanced.\n\n* Correct Option: A (Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge)"
+  },
+  {
+    "id": "aee_am_14",
+    "topicId": "advanced-manufacturing",
+    "question": "What is a listed disadvantage of drilling?",
+    "options": [
+      "Temperatures in the factory affect drilling",
+      "Takes very skilled technicians when it breaks",
+      "Takes a lot of training and expensive",
+      "Dangerous with hand accidents",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Temperatures in the factory affect drilling. Option A.",
+    "solution": "Disadvantage of Drilling: \"Temperatures in the factory affect drilling.\"\n\nWhy the other options are incorrect:\nOption B is Shaping, Option C is Milling, Option D is Sawing.\n\n* Correct Option: A (Temperatures in the factory affect drilling)"
+  },
+  {
+    "id": "aee_am_05",
+    "topicId": "advanced-manufacturing",
+    "question": "Turning is defined as:",
+    "options": [
+      "A material removal process to create rotational parts by cutting away unwanted material using a lathe",
+      "A process of removing metal with a rotating multi-point tool",
+      "A process where a round hole is created with an end cutting tool",
+      "A process that completely automates welding with robots",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Turning creates rotational parts by cutting away material using a lathe. Option A.",
+    "solution": "Definition: \"Turning is a form of machining, a material removal process, which is used to create rotational parts by cutting away unwanted material. The turning process requires a turning machine or lathe, workpiece, fixture, and cutting tool.\"\n\nWhy the other options are incorrect:\nOption B is Milling, Option C is Drilling, Option D is Robotic Welding.\n\n* Correct Option: A (A material removal process to create rotational parts by cutting away unwanted material using a lathe)"
+  },
+  {
+    "id": "aee_adv_02",
+    "topicId": "advanced-manufacturing",
+    "question": "Which example is given of competing companies in the same industry for Advanced Manufacturing?",
+    "options": [
+      "Toyota & General Motors (GM)",
+      "Toyota & Apple",
+      "GM & Samsung",
+      "None of the above",
+      "All of the above"
+    ],
+    "correct": 0,
+    "short": "Toyota & General Motors (GM) example. Option A.",
+    "solution": "Slide: Example = Toyota & General Motors (GM) — different companies in same industry that compete.\n\nWhy the other options are incorrect: They are not the listed example.\n\n* Correct Option: A (Toyota & General Motors (GM))"
+  },
+  {
+    "id": "aee_am_15",
+    "topicId": "advanced-manufacturing",
+    "question": "Sawing is used for:",
+    "options": [
+      "Cutting up bars of material or cutting out shapes in plates of raw material",
+      "Creating rotational parts",
+      "Removing metal with multi-point tool",
+      "Creating a round hole",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Sawing cuts up bars or cuts out shapes in plates. Option A.",
+    "solution": "Definition: \"Sawing is used for cutting up bars of material or for cutting out shapes in plates of raw material. The cutting tools may be thin metallic disks, blades or flexible bands with teeth, or thin grinding wheels.\"\n\nWhy the other options are incorrect:\nOption B is Turning, Option C is Milling, Option D is Drilling.\n\n* Correct Option: A (Cutting up bars of material or cutting out shapes in plates of raw material)"
+  },
+  {
     "id": "aee_ht_01",
     "topicId": "hand-tools",
     "question": "Which of the following is listed under Workshop Hand Tools?",
@@ -4612,396 +3602,6 @@ export const questionBank = {
     "correct": 0,
     "short": "100mm Hacksaw is listed under hand tools. Option A.",
     "solution": "Workshop Hand Tools slide shows 100mm (4\") HACKSAW by WESTMORE.\n\nWhy the other options are incorrect:\nOption B BOSCH Belt Sander and C DEWALT are under Power Tools, Option D Pillar drilling is a machine.\n\n* Correct Option: A (100mm HACKSAW)"
-  },
-  {
-    "id": "aee_ht_02",
-    "topicId": "hand-tools",
-    "question": "Which is listed under Workshop Power Tools?",
-    "options": [
-      "BOSCH 10\" and DEWALT Belt Sander",
-      "100mm Hacksaw",
-      "Combination Square",
-      "Peen Hammer",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "BOSCH 10\" and DEWALT Belt Sander are power tools. Option A.",
-    "solution": "Workshop Power Tools slide shows BOSCH 10\" and DEWALT Belt Sander.\n\nWhy the other options are incorrect: They are hand tools.\n\n* Correct Option: A (BOSCH 10\" and DEWALT Belt Sander)"
-  },
-  {
-    "id": "aee_ht_03",
-    "topicId": "workshop-machines",
-    "question": "Where is the Heat Engineering and Farm Machinery Engineering Workshop located according to the presentation?",
-    "options": [
-      "Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering",
-      "University of Lagos",
-      "University of Ibadan",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "OAU, Agricultural and Environment Engineering. Option A.",
-    "solution": "Slide: Workshop Machines and Laboratory Equipment - Agricultural and Environment Engineering, Obafemi Awolowo University (OAU), Nigeria - HEAT ENGINEERING AND FARM MACHINERY ENGINEERING WORKSHOP.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (Obafemi Awolowo University (OAU), Nigeria - Agricultural and Environment Engineering)"
-  },
-  {
-    "id": "aee_ht_04",
-    "topicId": "workshop-machines",
-    "question": "Which machine is described as a Metal sheet rolling machine with TEL contact?",
-    "options": [
-      "Manual Sheet Rolling Machine",
-      "Pillar drilling machine",
-      "Pedestal grinding machine",
-      "Bandsaw machine",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Metal sheet rolling machine. Option A.",
-    "solution": "Slide shows Metal sheet rolling machine with TEL 01234567890 and Manual Sheet Rolling Machine – YouTube.\n\nWhy the other options are incorrect: They are other machines listed separately.\n\n* Correct Option: A (Manual Sheet Rolling Machine)"
-  },
-  {
-    "id": "aee_ht_05",
-    "topicId": "workshop-machines",
-    "question": "Which of the following are shown as bending machines?",
-    "options": [
-      "4 Feet bending machine and 8 Feet bending machine",
-      "Only 4 Feet",
-      "Only 8 Feet",
-      "Lathe machine only",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "4 Feet and 8 Feet bending machines are shown. Option A.",
-    "solution": "Slides show 4Feet bending machine and 8 Feet bending machine.\n\nWhy the other options are incorrect: They list only one or different machine.\n\n* Correct Option: A (4 Feet bending machine and 8 Feet bending machine)"
-  },
-  {
-    "id": "aee_ht_06",
-    "topicId": "workshop-machines",
-    "question": "Which machine is listed as Electronic punching machine with 1000W?",
-    "options": [
-      "Electronic punching machine (1000W)",
-      "Table drilling machine",
-      "Press machine",
-      "Metal hand Shear",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Electronic punching machine 1000W. Option A.",
-    "solution": "Slide: Electronic punching machine 1000W.\n\nWhy the other options are incorrect: They are separate machines.\n\n* Correct Option: A (Electronic punching machine (1000W))"
-  },
-  {
-    "id": "aee_ht_07",
-    "topicId": "workshop-machines",
-    "question": "Which drilling machine is shown with variable speed control and pillar structure?",
-    "options": [
-      "Pillar drilling machine with variable speed control",
-      "Pedestal grinding machine",
-      "Bandsaw machine",
-      "Heavy duty lathe machine",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Pillar drilling machine with variable speed control. Option A.",
-    "solution": "Slide: Pillar drilling machine with variable speed control - Side view of the pillar drilling machine, Spinning speeds, Motor, Clausing.\n\nWhy the other options are incorrect: They are different machines.\n\n* Correct Option: A (Pillar drilling machine with variable speed control)"
-  },
-  {
-    "id": "aee_ht_08",
-    "topicId": "workshop-machines",
-    "question": "Which machine is listed alongside Pedestal drilling machine in the same slide?",
-    "options": [
-      "PEDESTAL GRINDING MACHINE",
-      "Heavy duty lathe machine",
-      "Press machine",
-      "Metal hand Shear",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "PEDESTAL GRINDING MACHINE is alongside pedestal drilling. Option A.",
-    "solution": "Slide shows Pedestal drilling machine and PEDESTAL GRINDING MACHINE together.\n\nWhy the other options are incorrect: They are on other slides.\n\n* Correct Option: A (PEDESTAL GRINDING MACHINE)"
-  },
-  {
-    "id": "aee_ht_09",
-    "topicId": "workshop-machines",
-    "question": "Which of the following workshop machines is listed in the presentation?",
-    "options": [
-      "Bandsaw machine",
-      "Press machine",
-      "Metal hand Shear",
-      "Lathe machine and Heavy duty lathe machine",
-      "All of the above",
-      "None of the above"
-    ],
-    "correct": 4,
-    "short": "All listed: Bandsaw, Press, Metal hand Shear, Lathe, Heavy duty lathe. Option E.",
-    "solution": "Slides list: Bandsaw machine, Press machine, Metal hand Shear, Lathe machine, Heavy duty lathe machine.\n\nWhy the other options are incomplete: Each alone is true but not exhaustive.\n\n* Correct Option: E (All of the above)"
-  },
-  {
-    "id": "aee_ht_10",
-    "topicId": "workshop-machines",
-    "question": "What is the course and session for the Hand and Power Tools presentation?",
-    "options": [
-      "AEE 202 RAIN 2019/2020 SESSION",
-      "MTH 202 2020/2021",
-      "AEE 202 HARMATTAN 2020",
-      "MEE 206 2019/2020",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "AEE 202 RAIN 2019/2020 SESSION. Option A.",
-    "solution": "Title slide: HAND AND POWER TOOLS AEE 202 RAIN 2019/2020 SESSION.\n\nWhy the other options are incorrect: They have wrong course/session.\n\n* Correct Option: A (AEE 202 RAIN 2019/2020 SESSION)"
-  },
-  {
-    "id": "aee_ws_01",
-    "topicId": "workshop-safety",
-    "question": "What will the shop supervisor and instructor do if you engage in horseplay or pranks in the workshop?",
-    "options": [
-      "Boot you out of the building",
-      "Give you extra marks",
-      "Ignore you",
-      "Ask you to continue",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Horseplay will get you booted out. Option A.",
-    "solution": "Safety rule 1: \"Absolutely no horseplay or pranks will be tolerated inside the shop.\" The material explicitly states: \"ALWAYS REMEMBER THAT THE SHOP SUPERVISOR AND YOUR INSTRUCTOR IS OBLIGATED TO BOOT YOU OUT OF THE BUILDING FOR ANY HORSEPLAY OR PRANKS THAT ENDANGER ANYBODY IN THE SHOP.\"\n\nWhy the other options are incorrect: They contradict the stated obligation.\n\n* Correct Option: A (Boot you out of the building)"
-  },
-  {
-    "id": "aee_ws_02",
-    "topicId": "workshop-safety",
-    "question": "What type of clothing should be worn in the workshop according to safety rules?",
-    "options": [
-      "Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly",
-      "Synthetic fibre clothing",
-      "Loose clothing",
-      "Shorts and slippers",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Wool or cotton coveralls/lab coats/denim, good repair, proper fit. Option A.",
-    "solution": "Rule 2: \"Suitable wool or cotton clothing such as coveralls, lab coats, or a denim uniform should be worn. This should be in good repair and fit properly. Safety shoes are mandatory.\"\n\nWhy the other options are incorrect:\nOption B Synthetic fibres are extremely flammable and must not be worn.\nOption C Loose clothing must be restrained.\nOption D Shorts/slippers are not proper.\n\n* Correct Option: A (Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly)"
-  },
-  {
-    "id": "aee_ws_03",
-    "topicId": "workshop-safety",
-    "question": "Why must loose clothing and long hair be restrained in the workshop?",
-    "options": [
-      "They could get caught in moving machine parts and cause severe injury or death",
-      "They look unprofessional",
-      "They are required for fashion",
-      "They keep you warm",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Loose clothing/hair can get caught in moving parts and cause severe injury/death. Option A.",
-    "solution": "Rule 3: \"Loose clothing and long hair must be restrained. They could get caught in moving machine parts and cause severe injury or death.\"\n\nWhy the other options are incorrect: They are not the stated reason.\n\n* Correct Option: A (They could get caught in moving machine parts and cause severe injury or death)"
-  },
-  {
-    "id": "aee_ws_04",
-    "topicId": "workshop-safety",
-    "question": "Why should rings, wristwatches and other jewellery be removed before working in the shop?",
-    "options": [
-      "They could get caught in moving machine parts and cause severe injury or death",
-      "They are expensive",
-      "They are not allowed by school rules only",
-      "They improve safety",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Jewellery can get caught and cause severe injury/death. Option A.",
-    "solution": "Rule 4: \"Rings wristwatches and other jewellery should be removed. Such things could get caught in moving machine parts and could cause severe injury or death.\"\n\nWhy the other options are incorrect: They are not the safety reason.\n\n* Correct Option: A (They could get caught in moving machine parts and cause severe injury or death)"
-  },
-  {
-    "id": "aee_ws_05",
-    "topicId": "workshop-safety",
-    "question": "What should you do before using a machine or tool you have never handled before?",
-    "options": [
-      "Secure permission from lab assistant/demonstrator after receiving necessary instruction",
-      "Use it immediately without instruction",
-      "Ask a fellow student to operate for you",
-      "Just try it",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Get instruction and permission from lab assistant/demonstrator. Option A.",
-    "solution": "Rule 6: \"Never use a machine or tool until you have had the necessary instruction in its use. Always secure permission from your lab assistant or demonstrator before using any tool your have never handled before.\"\n\nWhy the other options are incorrect: They violate the rule.\n\n* Correct Option: A (Secure permission from lab assistant/demonstrator after receiving necessary instruction)"
-  },
-  {
-    "id": "aee_ws_06",
-    "topicId": "workshop-safety",
-    "question": "What should you do if your equipment is in bad shape?",
-    "options": [
-      "Bring the problem to the attention of lab assistant/demonstrator",
-      "Continue using it",
-      "Try to repair it yourself while it is operating",
-      "Ignore it",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Report bad equipment to lab assistant/demonstrator. Option A.",
-    "solution": "Rule 7: \"Use tools that are in good condition. If your equipment is in bad shape, bring the problem to the attention of your lab assistant or demonstrator for appropriate action.\"\n\nWhy the other options are incorrect: Continuing or repairing while operating is unsafe.\n\n* Correct Option: A (Bring the problem to the attention of lab assistant/demonstrator)"
-  },
-  {
-    "id": "aee_ws_07",
-    "topicId": "workshop-safety",
-    "question": "When should you perform cleaning, adjusting or lubrication of a tool?",
-    "options": [
-      "Only after stopping or shutting off the equipment",
-      "While it is operating",
-      "While it is still moving",
-      "Anytime",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Only after stopping/shutting off. Option A.",
-    "solution": "Rule 8: \"Never perform operations of cleaning; adjusting or lubrication of a tool while it is operating. Always stop or shut off the equipment before servicing.\"\n\nWhy the other options are incorrect: They suggest servicing while operating, which is prohibited.\n\n* Correct Option: A (Only after stopping or shutting off the equipment)"
-  },
-  {
-    "id": "aee_ws_08",
-    "topicId": "workshop-safety",
-    "question": "What should you never do regarding leaving a tool operating?",
-    "options": [
-      "Never leave any tool operating unattended",
-      "Always leave it operating",
-      "Leave it for others to watch",
-      "It is okay to leave briefly",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Never leave any tool operating unattended. Option A.",
-    "solution": "Rule 9: \"Never leave any tool operating unattended. Unsuspecting persons may come in contact with the equipment and maybe injured.\"\n\nWhy the other options are incorrect: They allow leaving unattended, which is unsafe.\n\n* Correct Option: A (Never leave any tool operating unattended)"
-  },
-  {
-    "id": "aee_ws_09",
-    "topicId": "workshop-safety",
-    "question": "What filter lens is required for arc welding according to safety in arc welding?",
-    "options": [
-      "No. 10 or 12-filter lens on welding mask, plus clear face shield or flip-up lift plate when chipping",
-      "No. 4 filter lens",
-      "Clear lens only",
-      "No lens needed",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "No. 10 or 12-filter lens, plus clear shield when chipping. Option A.",
-    "solution": "Safety in Arc Welding Rule 1: \"Always wear protective equipment when welding. Use welding mask with a No. 10 or 12-filter lens. Wear a clear face shield or flip-up lift plate on the welding mask when chipping slag or cleaning welds.\"\n\nWhy the other options are incorrect:\nOption B No. 4 is for gas welding, not arc.\nOption C Clear lens only is insufficient.\n\n* Correct Option: A (No. 10 or 12-filter lens on welding mask, plus clear face shield or flip-up lift plate when chipping)"
-  },
-  {
-    "id": "aee_ws_10",
-    "topicId": "workshop-safety",
-    "question": "What filter lens is required for gas welding?",
-    "options": [
-      "At least No. 4 filter lens on welding goggles or face shield",
-      "No. 10 or 12",
-      "Clear lens",
-      "No lens",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "At least No. 4 filter lens for gas welding. Option A.",
-    "solution": "Safety in Gas Welding Rule 1: \"Always wear protective equipment when welding. Use welding goggles or a face shield with at least a No. 4 filter lens.\"\n\nWhy the other options are incorrect:\nOption B No. 10/12 is for arc welding.\n\n* Correct Option: A (At least No. 4 filter lens on welding goggles or face shield)"
-  },
-  {
-    "id": "aee_ws_11",
-    "topicId": "workshop-safety",
-    "question": "What type of clothing is advisable for welding due to high flash point, and which is extremely flammable and must not be worn?",
-    "options": [
-      "Advisable: wool or cotton; Must not wear: synthetic fibres",
-      "Advisable: synthetic fibres; Must not wear: cotton",
-      "Both wool and synthetic are fine",
-      "No clothing requirement",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Wool/cotton advisable (high flash point), synthetic is extremely flammable and must not be worn. Option A.",
-    "solution": "Both Arc and Gas Welding safety state: \"Never wear synthetic fibre clothing. Synthetic fibres are extremely flammable. Wearing clothing made of wool or cotton is advisable because of their high flash point.\"\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Advisable: wool or cotton; Must not wear: synthetic fibres)"
-  },
-  {
-    "id": "aee_ws_12",
-    "topicId": "workshop-safety",
-    "question": "How should gas cylinder valves be opened correctly?",
-    "options": [
-      "Acetylene no more than 3/4 turn, Oxygen fully",
-      "Both fully open",
-      "Both 3/4 turn",
-      "Acetylene fully, Oxygen 3/4 turn",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Acetylene ≤3/4 turn, Oxygen fully open. Option A.",
-    "solution": "Safety in Gas Welding Rule 5: \"Open gas cylinder valves correctly. Open the valve on the acetylene cylinder no more than three-fourths of a turn so it can be closed quickly in case of an emergency. Open the valve on the oxygen tank fully.\"\n\nWhy the other options are incorrect: They reverse or equalize.\n\n* Correct Option: A (Acetylene no more than 3/4 turn, Oxygen fully)"
-  },
-  {
-    "id": "aee_ws_13",
-    "topicId": "workshop-safety",
-    "question": "What is the maximum pressure for acetylene that should never be exceeded?",
-    "options": [
-      "15 psi",
-      "50 psi",
-      "100 psi",
-      "125 psi",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Never use acetylene over 15 psi. Option A.",
-    "solution": "Rule 6: \"Set the operating pressures carefully. Never use acetylene at a pressure over 15 psi. Follow the manufacturer's recommendations...\"\n\nWhy the other options are incorrect: They exceed the safe limit.\n\n* Correct Option: A (15 psi)"
-  },
-  {
-    "id": "aee_ws_14",
-    "topicId": "workshop-safety",
-    "question": "Why should the welding tip be pointed away from your body before lighting?",
-    "options": [
-      "Oxygen and acetylene can saturate clothing and cause it to ignite",
-      "It looks better",
-      "It saves gas",
-      "It is not necessary",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Gases can saturate clothing and ignite. Option A.",
-    "solution": "Rule 7: \"Keep the welding tip pointed away from your body. Oxygen and acetylene from the tip can saturate your clothing and cause it to ignite.\"\n\nWhy the other options are incorrect: They are not the safety reason.\n\n* Correct Option: A (Oxygen and acetylene can saturate clothing and cause it to ignite)"
-  },
-  {
-    "id": "aee_ws_15",
-    "topicId": "workshop-safety",
-    "question": "What should you use to light the flame?",
-    "options": [
-      "Approved lighter (friction lighter), not matches or lighters that bring fingers too close",
-      "Matches",
-      "Cigarette lighter",
-      "Any light source",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Use approved lighter, not matches/lighters that bring fingers close. Option A.",
-    "solution": "Rule 8: \"Light the flame with an approved lighter. Using matches or lighters to light a torch brings fingers too close to the tip and may cause burns.\"\n\nWhy the other options are incorrect: Matches/lighters are explicitly to be avoided.\n\n* Correct Option: A (Approved lighter (friction lighter), not matches or lighters that bring fingers too close)"
-  },
-  {
-    "id": "aee_jf_01",
-    "topicId": "jigs-fixtures",
-    "question": "Why is interchangeability important in mass production?",
-    "options": [
-      "To facilitate easy assembly and reduction of unit cost",
-      "To make each part unique",
-      "To increase manual marking time",
-      "To require highly skilled operators for each part",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Interchangeability facilitates easy assembly and reduces unit cost. Option A.",
-    "solution": "The successful running of any mass production depends upon interchangeability to facilitate easy assembly and reduction of unit cost. Mass production methods demand a fast and easy method of positioning work for accurate operations.\n\nWhy the other options are incorrect:\nOption B says unique — opposite, Option C says increase marking time — jigs reduce it, Option D says require highly skilled — jigs allow semi-skilled.\n\n* Correct Option: A (To facilitate easy assembly and reduction of unit cost)"
-  },
-  {
-    "id": "aee_jf_02",
-    "topicId": "jigs-fixtures",
-    "question": "What are jigs and fixtures as production tools?",
-    "options": [
-      "Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities",
-      "Random hand tools",
-      "Only for single part production",
-      "Only for repair work",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Jigs and fixtures are specially designed to manufacture duplicate interchangeable parts in large quantities. Option A.",
-    "solution": "Material: \"Jigs and fixtures are production tools used to accurately manufacture duplicate and interchangeable parts. Jigs and fixtures are specially designed so that large numbers of components can be machined or assembled identically, and to ensure interchangeability of components.\"\n\nWhy the other options are incorrect: They are not for random or single part.\n\n* Correct Option: A (Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities)"
   },
   {
     "id": "aee_jf_03",
@@ -5084,8 +3684,23 @@ export const questionBank = {
     "image": "/images/jig-vs-fixture.png"
   },
   {
+    "id": "aee_jf_01",
+    "topicId": "jigs-fixtures",
+    "question": "Why is interchangeability important in mass production?",
+    "options": [
+      "To facilitate easy assembly and reduction of unit cost",
+      "To make each part unique",
+      "To increase manual marking time",
+      "To require highly skilled operators for each part",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Interchangeability facilitates easy assembly and reduces unit cost. Option A.",
+    "solution": "The successful running of any mass production depends upon interchangeability to facilitate easy assembly and reduction of unit cost. Mass production methods demand a fast and easy method of positioning work for accurate operations.\n\nWhy the other options are incorrect:\nOption B says unique — opposite, Option C says increase marking time — jigs reduce it, Option D says require highly skilled — jigs allow semi-skilled.\n\n* Correct Option: A (To facilitate easy assembly and reduction of unit cost)"
+  },
+  {
     "id": "aee_jf_08",
-    "topicId": "jig-fixture-design",
+    "topicId": "jigs-fixtures",
     "question": "Which is a listed advantage of jigs and fixtures regarding productivity?",
     "options": [
       "Increases productivity by eliminating individual marking, positioning, frequent checking and reducing operation time",
@@ -5099,473 +3714,38 @@ export const questionBank = {
     "solution": "Advantages — PRODUCTIVITY:\n\nJigs and fixtures increases the productivity by eliminating the individual marking, positioning and frequent checking. The operation time is also reduced due to increase in speed, feed and depth of cut because of high clamping rigidity.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Increases productivity by eliminating individual marking, positioning, frequent checking and reducing operation time)"
   },
   {
-    "id": "aee_jf_09",
-    "topicId": "jig-fixture-design",
-    "question": "Which advantage relates to using unskilled or semi-skilled operators?",
+    "id": "aee_jf_02",
+    "topicId": "jigs-fixtures",
+    "question": "What are jigs and fixtures as production tools?",
     "options": [
-      "Skill reduction — no need for skillful setting, can employ unskilled/semi-skilled to save labour cost",
-      "Interchangeability only",
-      "Cost increase",
-      "No advantage",
+      "Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities",
+      "Random hand tools",
+      "Only for single part production",
+      "Only for repair work",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Skill reduction allows unskilled/semi-skilled operators. Option A.",
-    "solution": "Advantage — SKILL REDUCTION:\n\nThere is no need for skillful setting of work on tool. Jigs and fixtures makes possible to employ unskilled or semi skilled machine operator to make savings in labour cost.\n\nWhy the other options are incorrect: They are not the skill reduction point.\n\n* Correct Option: A (Skill reduction — no need for skillful setting, can employ unskilled/semi-skilled to save labour cost)"
+    "short": "Jigs and fixtures are specially designed to manufacture duplicate interchangeable parts in large quantities. Option A.",
+    "solution": "Material: \"Jigs and fixtures are production tools used to accurately manufacture duplicate and interchangeable parts. Jigs and fixtures are specially designed so that large numbers of components can be machined or assembled identically, and to ensure interchangeability of components.\"\n\nWhy the other options are incorrect: They are not for random or single part.\n\n* Correct Option: A (Specially designed tools to accurately manufacture duplicate and interchangeable parts in large quantities)"
   },
   {
-    "id": "aee_jf_10",
-    "topicId": "jig-fixture-design",
-    "question": "What is a fundamental principle regarding locating points for jigs and fixtures?",
+    "id": "aee_ws_01",
+    "topicId": "workshop-safety",
+    "question": "What will the shop supervisor and instructor do if you engage in horseplay or pranks in the workshop?",
     "options": [
-      "Good facilities for locating, workpiece must be easily inserted and quickly taken out, accurate with respect to tool guiding",
-      "No locating needed",
-      "Workpiece should be placed anywhere",
-      "No need for accuracy",
+      "Boot you out of the building",
+      "Give you extra marks",
+      "Ignore you",
+      "Ask you to continue",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Locating points should allow easy insertion/removal and accurate positioning vs tool. Option A.",
-    "solution": "Fundamental principles — LOCATING POINTS: Good facilities should be provided for locating the work. The article to be machined must be easily inserted and quickly taken out from the jig so that no time is wasted in placing the workpiece in position. The position should be accurate with respect to tool guiding.\n\nWhy the other options are incorrect: They ignore locating.\n\n* Correct Option: A (Good facilities for locating, workpiece must be easily inserted and quickly taken out, accurate with respect to tool guiding)"
-  },
-  {
-    "id": "aee_jf_11",
-    "topicId": "jig-fixture-design",
-    "question": "What does “Fool proof” design mean for jigs and fixtures?",
-    "options": [
-      "Design would not permit workpiece or tool to be inserted in any position other than the correct one",
-      "Any position is allowed",
-      "No need for correct position",
-      "Only for tools, not workpiece",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Fool proof means cannot insert workpiece/tool in wrong position. Option A.",
-    "solution": "Principle — FOOL PROOF: The design of jigs and fixtures should be such that it would not permit the workpiece or the tool to inserted in any position other than the correct one.\n\nWhy the other options are incorrect: They allow wrong positions.\n\n* Correct Option: A (Design would not permit workpiece or tool to be inserted in any position other than the correct one)"
-  },
-  {
-    "id": "aee_jf_12",
-    "topicId": "jig-fixture-design",
-    "question": "Which material is noted as cheapest and contains less than 0.3% carbon, used in most parts of jigs and fixtures?",
-    "options": [
-      "Mild steel",
-      "High speed Steel",
-      "Die steels",
-      "Nylon and Fiber",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Mild steel is cheapest, <0.3% carbon, used in most parts. Option A.",
-    "solution": "Materials: Mild steel — Used in most part of Jigs and Fixtures, Cheapest material, Contains less than 0.3% carbon.\n\nWhy the other options are incorrect:\nOption B High speed Steel is for cutting tools, Option C Die steels for press tools, Option D Nylon is for soft lining.\n\n* Correct Option: A (Mild steel)"
-  },
-  {
-    "id": "aee_jf_13",
-    "topicId": "jig-fixture-design",
-    "question": "Which material contains more than 2% carbon, has self-lubricating properties and can withstand vibrations for base?",
-    "options": [
-      "Cast Iron",
-      "Mild steel",
-      "High speed Steel",
-      "Nylon",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Cast Iron has >2% carbon, self-lubricating, vibration resistant for base. Option A.",
-    "solution": "Material: Cast Iron — Used for odd shapes, Contains more than 2% carbon, Has self lubricating properties, Can withstand vibrations and suitable for base.\n\nWhy the other options are incorrect:\nOption B Mild steel is <0.3% carbon, Option C High speed is for cutting.\n\n* Correct Option: A (Cast Iron)"
-  },
-  {
-    "id": "aee_jf_14",
-    "topicId": "jig-fixture-design",
-    "question": "Which material is used for soft lining for clamps to avoid damage due to clamping pressure?",
-    "options": [
-      "Nylon and Fiber",
-      "Cast Iron",
-      "High speed Steel",
-      "Mild steel",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Nylon and Fiber for soft lining of clamps. Option A.",
-    "solution": "Material: Nylon and Fiber — Used for soft lining for clamps to avoid damage to workpiece due to clamping pressure.\n\nWhy the other options are incorrect: They are for other purposes.\n\n* Correct Option: A (Nylon and Fiber)"
-  },
-  {
-    "id": "aee_jf_15",
-    "topicId": "jig-fixture-design",
-    "question": "What is a key rule for clamping device design?",
-    "options": [
-      "Should be as simple as possible, hold firmly without springing under cutting strain",
-      "Should be very complicated",
-      "Should allow springing",
-      "Should be heavy and complex",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Clamping should be simple, hold firmly without springing. Option A.",
-    "solution": "Essential features — CLAMPING DEVICE: It should be as simple as possible without sacrificing effectiveness. The strength of clamp should be such that not only to hold the workpiece firmly in place but also to take the strain of the cutting tool without springing.\n\nWhy the other options are incorrect: They suggest complicated or springing.\n\n* Correct Option: A (Should be as simple as possible, hold firmly without springing under cutting strain)"
-  },
-  {
-    "id": "aee_jf_16",
-    "topicId": "jig-fixture-design",
-    "question": "Where should clamping occur to avoid distortion and springing?",
-    "options": [
-      "Directly above the points supporting the workpiece",
-      "Far from support points",
-      "On the side only",
-      "Anywhere",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Clamping should occur directly above support points. Option A.",
-    "solution": "Principle: Position of clamps — Clamping should occur directly above the points supporting the workpiece to avoid distortion and springing.\n\nWhy the other options are incorrect: They would cause distortion.\n\n* Correct Option: A (Directly above the points supporting the workpiece)"
-  },
-  {
-    "id": "aee_jf_17",
-    "topicId": "jig-fixture-design",
-    "question": "Why should jigs sometimes be provided with feet?",
-    "options": [
-      "So it can be placed on the table of the machine",
-      "To make it heavier",
-      "For decoration",
-      "To prevent it from being used",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Feet allow placing on machine table. Option A.",
-    "solution": "Principle: JIGS PROVIDED WITH FEET: Jigs sometimes are provided with feet so that it can be placed on the table of the machine.\n\nWhy the other options are incorrect: They are not listed reasons.\n\n* Correct Option: A (So it can be placed on the table of the machine)"
-  },
-  {
-    "id": "aee_jf_18",
-    "topicId": "jig-fixture-design",
-    "question": "What is the purpose of ejecting devices in jigs and fixtures?",
-    "options": [
-      "To push the workpiece out after operation and speed up unloading",
-      "To hold the workpiece tighter",
-      "To guide the cutting tool",
-      "To cool the tool",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Ejecting devices push workpiece out after operation, speeding unloading. Option A.",
-    "solution": "Essential features — Ejecting devices – Proper ejecting devices should be incorporated in the body to push the workpiece out after operation. Speeds up unloading.\n\nWhy the other options are incorrect: They describe clamping, guiding, or coolant.\n\n* Correct Option: A (To push the workpiece out after operation and speed up unloading)"
-  },
-  {
-    "id": "aee_bw_01",
-    "topicId": "bench-work-fitting",
-    "question": "According to workshop safety rules, which of the following is listed?",
-    "options": [
-      "Safety first before work — Accidents don't occur, they are caused",
-      "Safety last",
-      "No safety needed",
-      "Accidents are unavoidable",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Safety first, accidents are caused not occur. Option A.",
-    "solution": "Workshop Safety Rules slide: \"Safety first before work - Accidents don't occur, they are caused.\"\n\nWhy the other options are incorrect: They contradict the rule.\n\n* Correct Option: A (Safety first before work — Accidents don't occur, they are caused)"
-  },
-  {
-    "id": "aee_bw_02",
-    "topicId": "bench-work-fitting",
-    "question": "Which of the following is a workshop safety rule regarding knowing your job?",
-    "options": [
-      "Know your job and follow instructions",
-      "Be too forward and assume you know it all",
-      "Avoid knowing where exit doors are",
-      "Don't prioritize PPEs",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Know your job and follow instructions. Option A.",
-    "solution": "Rules include: i) know your job and follow instructions. ii) Don't be too forward and don't assume you know it all.\n\nWhy the other options are incorrect:\nOption B says be too forward — should not.\nOption C says avoid knowing where exit doors — should know.\nOption D says don't prioritize PPEs — should prioritize.\n\n* Correct Option: A (Know your job and follow instructions)"
-  },
-  {
-    "id": "aee_bw_03",
-    "topicId": "bench-work-fitting",
-    "question": "Which PPE prioritization is listed?",
-    "options": [
-      "Prioritize the use of PPEs (eyeglasses, overall, etc)",
-      "Don't use PPEs",
-      "Only use PPEs sometimes",
-      "PPEs are not needed",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Prioritize PPEs eyeglasses, overall etc. Option A.",
-    "solution": "Rule: v) Prioritize the use of PPEs (Personal Protective Equipments) eyeglasses, overall, etc. Also know where important sections and tools are located e.g exit doors, safety/emergency room, fire extinguishers.\n\nWhy the other options are incorrect: They contradict.\n\n* Correct Option: A (Prioritize the use of PPEs (eyeglasses, overall, etc))"
-  },
-  {
-    "id": "aee_bw_04",
-    "topicId": "bench-work-fitting",
-    "question": "How is Bench Work defined?",
-    "options": [
-      "Creation of articles by means of hands on the bench",
-      "Assembling different components to form a whole",
-      "Both A and B",
-      "None of the above",
-      "All of the above"
-    ],
-    "correct": 0,
-    "short": "Bench Work is creation of articles by means of hands on the bench. Option A.",
-    "solution": "Definitions:\n\n* Bench Work involves the creation of articles by means of hands on the bench.\n* Fitting is the assembling of different components of a system to form a whole.\n\nSo Bench Work is creation, Fitting is assembling.\n\nWhy the other options are incorrect:\nOption B is Fitting, Option C mixes both.\n\n* Correct Option: A (Creation of articles by means of hands on the bench)"
-  },
-  {
-    "id": "aee_bw_05",
-    "topicId": "bench-work-fitting",
-    "question": "How is Fitting defined?",
-    "options": [
-      "Assembling different components of a system to form a whole",
-      "Creation of articles by means of hands on the bench",
-      "Both",
-      "None of the above",
-      "All of the above"
-    ],
-    "correct": 0,
-    "short": "Fitting is assembling different components to form a whole. Option A.",
-    "solution": "Fitting is the assembling of different components of a system to form a whole.\n\nWhy the other options are incorrect: Option B is Bench Work.\n\n* Correct Option: A (Assembling different components of a system to form a whole)"
-  },
-  {
-    "id": "aee_bw_06",
-    "topicId": "bench-work-fitting",
-    "question": "How are hack saw teeth arranged?",
-    "options": [
-      "Alternately towards the right and left and very third or fourth left straight",
-      "All to one side",
-      "Randomly",
-      "No arrangement",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Teeth alternately right and left and very third or fourth left straight. Option A.",
-    "solution": "Tools used include: Hack Saw: teeth are arranged alternately towards the right and left and very third or fourth left straight.\n\nWhy the other options are incorrect: They are not the listed arrangement.\n\n* Correct Option: A (Alternately towards the right and left and very third or fourth left straight)"
-  },
-  {
-    "id": "aee_bw_07",
-    "topicId": "bench-work-fitting",
-    "question": "What is a cold chisel used for and what are its angles?",
-    "options": [
-      "To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle",
-      "To remove thin layers",
-      "To polish",
-      "To measure",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Cold chisel removes thick layers, has clearance, Rake, Cutting angle. Option A.",
-    "solution": "Cold Chisel: to remove thick layers of metals. Its cutting edges are specially hardened and tempered. They have: * clearance angle * Rake angle * Cutting angle.\n\nWhy the other options are incorrect:\nOption B File removes thin layers, Option C is polishing, Option D is measuring.\n\n* Correct Option: A (To remove thick layers of metals, has clearance angle, Rake angle, Cutting angle)"
-  },
-  {
-    "id": "aee_bw_08",
-    "topicId": "bench-work-fitting",
-    "question": "What is a file used for?",
-    "options": [
-      "To remove thin layers of metals, hardened piece with slanting cut of teeth",
-      "To remove thick layers",
-      "To mark lines",
-      "To hold cylindrical jobs",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "File removes thin layers, hardened with slanting cut teeth. Option A.",
-    "solution": "File: to remove thin layers of metals. It is a hardened piece of steel which has slanting cut of teeth.\n\nWhy the other options are incorrect:\nOption B is cold chisel, Option C is scriber, Option D is V-block.\n\n* Correct Option: A (To remove thin layers of metals, hardened piece with slanting cut of teeth)"
-  },
-  {
-    "id": "aee_bw_09",
-    "topicId": "bench-work-fitting",
-    "question": "How is a file classified by size/length?",
-    "options": [
-      "The (100-200mm) one for fine work, The (200-400mm) one for heavy work",
-      "Only one size",
-      "By color",
-      "By weight",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "100-200mm for fine work, 200-400mm for heavy work. Option A.",
-    "solution": "File classified by: i) Size or length: The (100-200mm) one for fine work, The (200-400mm) one for heavy work.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (The (100-200mm) one for fine work, The (200-400mm) one for heavy work)"
-  },
-  {
-    "id": "aee_bw_10",
-    "topicId": "bench-work-fitting",
-    "question": "What are the two types of cut of teeth for files?",
-    "options": [
-      "Single cut (60° with centre line) and Double cut (60° and 80° crossing)",
-      "Only single cut",
-      "Only double cut",
-      "No cut",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Single cut 60°, Double cut 60° and 80° crossing. Option A.",
-    "solution": "Cut of teeth: of two types: Single cut (makes 60° with the centre line) and Double cut (has two lines, one at 60°, the other at 80°; both cross each other).\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Single cut (60° with centre line) and Double cut (60° and 80° crossing))"
-  },
-  {
-    "id": "aee_bw_11",
-    "topicId": "bench-work-fitting",
-    "question": "What are the methods of filing?",
-    "options": [
-      "Cross filing (across workpiece) and Straight filing",
-      "Only cross filing",
-      "Only straight filing",
-      "No method",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Cross filing across and Straight filing. Option A.",
-    "solution": "Methods of Filing: i) Cross filing: done across the workpiece - file - workpiece, ii) Straight filing: - file - workpiece.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Cross filing (across workpiece) and Straight filing)"
-  },
-  {
-    "id": "aee_bw_12",
-    "topicId": "bench-work-fitting",
-    "question": "What is Marking Out?",
-    "options": [
-      "Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting",
-      "Process of assembling",
-      "Process of polishing",
-      "Process of painting",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Marking Out is scribing lines to provide guide for cutting etc. Option A.",
-    "solution": "Bench Fitting involves: Marking Out: is the process of scribing lines on a workpiece, to provide guide for subsequent operations like cutting.\n\nWhy the other options are incorrect: They are other operations.\n\n* Correct Option: A (Process of scribing lines on a workpiece to provide guide for subsequent operations like cutting)"
-  },
-  {
-    "id": "aee_bw_13",
-    "topicId": "bench-work-fitting",
-    "question": "Which tools are used for marking out?",
-    "options": [
-      "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square",
-      "Only hammer",
-      "Only chisel",
-      "Only file",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square. Option A.",
-    "solution": "Tools used for marking out include:\n- Marking Out Surface or Table\n- Scriber, to mark out lines\n- Punch, to locate/mark points\n- V-block, to hold cylindrical jobs\n- Angle plate, to hold jobs at right angle\n- Try-Square, to set accuracy of two lines at right angle\n\nWhy the other options are incorrect: They list single tools.\n\n* Correct Option: A (Marking Out Surface/Table, Scriber, Punch, V-block, Angle plate, Try-Square)"
-  },
-  {
-    "id": "aee_bw_14",
-    "topicId": "bench-work-fitting",
-    "question": "What is the purpose of Draw Filing?",
-    "options": [
-      "Done with both hands applied to the file for finishing",
-      "Done with one hand",
-      "Not a filing method",
-      "For rough work only",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Draw Filing done with both hands applied to the file. Option A.",
-    "solution": "Methods include: Draw Filing done with both hands applied to the file.\n\nWhy the other options are incorrect: They misstate.\n\n* Correct Option: A (Done with both hands applied to the file for finishing)"
-  },
-  {
-    "id": "aee_adv_01",
-    "topicId": "advanced-manufacturing",
-    "question": "How is Advanced Manufacturing defined in the material?",
-    "options": [
-      "Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge",
-      "Use of old technology only",
-      "Only manual labour without technology",
-      "Only for small scale production",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Advanced Manufacturing is use of innovative technology to improve products/processes. Option A.",
-    "solution": "Definition from material:\n\n• Advanced Manufacturing is the use of innovative technology to improve products or processes, with the relevant technology being described as \"advanced,\" \"innovative,\" or \"cutting edge.\"\n• Advanced Manufacturing industries increasingly integrate new innovative technologies in both products and processes.\n\nWhy the other options are incorrect: They describe old/manual/small scale, not advanced.\n\n* Correct Option: A (Use of innovative technology to improve products or processes, described as advanced/innovative/cutting edge)"
-  },
-  {
-    "id": "aee_adv_02",
-    "topicId": "advanced-manufacturing",
-    "question": "Which example is given of competing companies in the same industry for Advanced Manufacturing?",
-    "options": [
-      "Toyota & General Motors (GM)",
-      "Toyota & Apple",
-      "GM & Samsung",
-      "None of the above",
-      "All of the above"
-    ],
-    "correct": 0,
-    "short": "Toyota & General Motors (GM) example. Option A.",
-    "solution": "Slide: Example = Toyota & General Motors (GM) — different companies in same industry that compete.\n\nWhy the other options are incorrect: They are not the listed example.\n\n* Correct Option: A (Toyota & General Motors (GM))"
-  },
-  {
-    "id": "aee_adv_03",
-    "topicId": "advanced-manufacturing",
-    "question": "How does advanced manufacturing differ in its approach to building products?",
-    "options": [
-      "Builds for immediate or nearly immediate sale, rather than building orders to put into stock for later sale",
-      "Builds only for stock for later sale",
-      "Builds only one product per year",
-      "Builds without any flexibility",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Builds for immediate/nearly immediate sale, not for stock. Option A.",
-    "solution": "Material: \"Instead of building in orders to put products into stock for later sale, advanced manufacturing takes a different approach. It builds for immediate, or nearly immediate, sale.\"\n\nWhy the other options are incorrect: They describe traditional stock approach.\n\n* Correct Option: A (Builds for immediate or nearly immediate sale, rather than building orders to put into stock for later sale)"
-  },
-  {
-    "id": "aee_adv_04",
-    "topicId": "advanced-manufacturing",
-    "question": "What is a fundamental goal of advanced manufacturing?",
-    "options": [
-      "Produce products in the least amount of time while minimizing waste",
-      "Produce products slowly with maximum waste",
-      "Only increase cost",
-      "Only reduce quality",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Produce in least time while minimizing waste. Option A.",
-    "solution": "Material: \"One of the fundamental goals of advanced manufacturing is to produce products in the least amount of time while also minimizing the amount of waste.\"\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Produce products in the least amount of time while minimizing waste)"
-  },
-  {
-    "id": "aee_adv_05",
-    "topicId": "advanced-manufacturing",
-    "question": "Which is a listed characteristic of products made using advanced manufacturing?",
-    "options": [
-      "Produced with high level of design, technologically complex and superior, cutting-edge, reliable/affordable/available",
-      "Produced with low design and inferior",
-      "Not cutting-edge",
-      "Unreliable and unavailable",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "High design, technologically complex/superior, cutting-edge, reliable/affordable/available. Option A.",
-    "solution": "Characteristics listed:\n\n• Products are produced with a high level of design.\n• Products are technologically complex and superior to their counterparts.\n• Products are cutting-edge and innovative.\n• Products are reliable, affordable, and readily available.\n• Companies produce newer, better and more exciting products.\n• Products solve a variety of common problems.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Produced with high level of design, technologically complex and superior, cutting-edge, reliable/affordable/available)"
-  },
-  {
-    "id": "aee_adv_06",
-    "topicId": "advanced-manufacturing",
-    "question": "Which technology is described as “The way of the future” under Advanced Manufacturing?",
-    "options": [
-      "Robotic Technology",
-      "Manual Technology",
-      "Old Technology",
-      "No Technology",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Robotic Technology is the way of the future. Option A.",
-    "solution": "Slide: Advanced Manufacturing — Robotic Technology “The way of the future”\n\nWhy the other options are incorrect: They are not listed as future way.\n\n* Correct Option: A (Robotic Technology)"
-  },
-  {
-    "id": "aee_adv_07",
-    "topicId": "advanced-manufacturing",
-    "question": "Which vocabulary words are listed as “Vocabulary so far” in the advanced manufacturing slides?",
-    "options": [
-      "Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach",
-      "Only Innovative",
-      "Only Flexible",
-      "Only Approach",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach. Option A.",
-    "solution": "Slide Vocabulary so far: Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Innovative, Relevant, Cutting Edge, Flexible, Specifically, Approach)"
+    "short": "Horseplay will get you booted out. Option A.",
+    "solution": "Safety rule 1: \"Absolutely no horseplay or pranks will be tolerated inside the shop.\" The material explicitly states: \"ALWAYS REMEMBER THAT THE SHOP SUPERVISOR AND YOUR INSTRUCTOR IS OBLIGATED TO BOOT YOU OUT OF THE BUILDING FOR ANY HORSEPLAY OR PRANKS THAT ENDANGER ANYBODY IN THE SHOP.\"\n\nWhy the other options are incorrect: They contradict the stated obligation.\n\n* Correct Option: A (Boot you out of the building)"
   },
   {
     "id": "aee_wh_01",
-    "topicId": "workshop-hazards",
+    "topicId": "workshop-safety",
     "question": "Which of the following best describes an accident in the workshop context?",
     "options": [
       "Unforeseen circumstances that occur unavoidably, often due to negligence",
@@ -5579,68 +3759,38 @@ export const questionBank = {
     "solution": "The material defines: Accidents: These are unforeseen circumstances that occur unavoidably. They can occur due to a lot of reasons. Safety Rules are a must... Accidents usually occur due to negligence.\n\nWhy the other options are incorrect: They are not the definition.\n\n* Correct Option: A (Unforeseen circumstances that occur unavoidably, often due to negligence)"
   },
   {
-    "id": "aee_wh_02",
-    "topicId": "workshop-hazards",
-    "question": "Which category describes “The Careless Ones” among irresponsible behaviours?",
+    "id": "aee_cm_01",
+    "topicId": "workshop-safety",
+    "question": "Which of the following is a listed safety rule for cold metal working?",
     "options": [
-      "Those who don't observe any precaution and are always surprised, usually first to get hurt",
-      "Those who take calculated risks to prove they know it all, identified by missing fingers",
-      "Those who joke about everything at expense of safety",
-      "All of the above are categories",
+      "Always use eye protection and proper clothing",
+      "Work with long hair unrestrained",
+      "Use improper tools",
+      "Keep work area dirty",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Careless Ones don't observe precaution, always surprised, first hurt. Option A.",
-    "solution": "Causes of Actions - Irresponsible Product: Three categories:\na. The Careless Ones: They are the ones who don't observe any precaution and always surprised and are usually the first to get hurt.\nb. The Clever Ones: These are people who take careless risk and they prove to know it all... missing fingers.\nc. The Doctors: These are people who joke about everything, even at expense of safety.\n\nSo Careless Ones matches Option A.\n\n* Correct Option: A (Those who don't observe any precaution and are always surprised, usually first to get hurt)"
+    "short": "Always use eye protection and proper clothing is a safety rule. Option A.",
+    "solution": "Cold metal working safety rules listed include: Always use eye protection, Wear proper clothing, Restrain long hair, Use proper tools, Keep work area and tools clean.\n\nOption A matches the first two.\n\nWhy the other options are incorrect:\nOption B says unrestrained — should be restrained.\nOption C says improper tools — should be proper.\nOption D says dirty — should be clean.\n\n* Correct Option: A (Always use eye protection and proper clothing)"
   },
   {
-    "id": "aee_wh_03",
-    "topicId": "workshop-hazards",
-    "question": "How can you identify “The Clever Ones”?",
+    "id": "aee_ws_06",
+    "topicId": "workshop-safety",
+    "question": "What should you do if your equipment is in bad shape?",
     "options": [
-      "By their missing fingers",
-      "By their neat uniform",
-      "By their good grades",
-      "By their silence",
+      "Bring the problem to the attention of lab assistant/demonstrator",
+      "Continue using it",
+      "Try to repair it yourself while it is operating",
+      "Ignore it",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Clever Ones identified by missing fingers. Option A.",
-    "solution": "Material: The Clever Ones: These are people who take careless risk and they prove to know it all. They feel it is careless that will isolate a machine from power before making an adjustment. You can identify them by their missing fingers.\n\nWhy the other options are incorrect: They are not listed.\n\n* Correct Option: A (By their missing fingers)"
-  },
-  {
-    "id": "aee_wh_04",
-    "topicId": "workshop-hazards",
-    "question": "Which dressing rule is listed as wrong?",
-    "options": [
-      "Rolling sleeves is wrong",
-      "All buttons and zips must be securely fastened",
-      "Avoid ties, wrist watch, rings, necklace",
-      "Repair torn overall and apron",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Rolling sleeves is wrong. Option A is the wrong practice.",
-    "solution": "Dressing rules:\n* All buttons and zips must be securely fastened, especially at neck and wrist.\n* Rolling sleeves is wrong.\n* Avoid ties, wrist watch, rings, necktace...\n* Repair torn overall and apron.\n* Pack hour... Heat clangle... scarves, jibb...\n* Wear safety mask, helmet, goggles, gloves...\n\nThe question asks which is listed as wrong: Rolling sleeves is wrong.\n\nWhy the other options are listed as correct practices, not wrong.\n\n* Correct Option: A (Rolling sleeves is wrong)"
-  },
-  {
-    "id": "aee_wh_05",
-    "topicId": "workshop-hazards",
-    "question": "What type of footwear is very needful in the workshop where metal shavings and hot metal particles can penetrate light shoes?",
-    "options": [
-      "Hard sole-foot wear with good grip",
-      "Light weight shoes",
-      "Sandals",
-      "Barefoot",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Hard sole-foot wear with good grip is needful. Option A.",
-    "solution": "Material: \"Hard sole-foot wear with good grip is very needful in places where metal shavings and hot metal particles can easily penetrate light weight shoes.\"\n\nWhy the other options are incorrect: They are light or none, which can be penetrated.\n\n* Correct Option: A (Hard sole-foot wear with good grip)"
+    "short": "Report bad equipment to lab assistant/demonstrator. Option A.",
+    "solution": "Rule 7: \"Use tools that are in good condition. If your equipment is in bad shape, bring the problem to the attention of your lab assistant or demonstrator for appropriate action.\"\n\nWhy the other options are incorrect: Continuing or repairing while operating is unsafe.\n\n* Correct Option: A (Bring the problem to the attention of lab assistant/demonstrator)"
   },
   {
     "id": "aee_wh_06",
-    "topicId": "workshop-hazards",
+    "topicId": "workshop-safety",
     "question": "Which hygienic materials should a well equipped first aid box contain as listed?",
     "options": [
       "Toothpine, spirit, Rub, G.V, anaergelic (pain killer)",
@@ -5654,68 +3804,23 @@ export const questionBank = {
     "solution": "Hygienic materials in the workshop includes first aid box, toilets, low haircut, well equipped first aid box which should contain items like: Toothpine, spirit, Rub, G.V, anaergelic (pain killer).\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Toothpine, spirit, Rub, G.V, anaergelic (pain killer))"
   },
   {
-    "id": "aee_wh_07",
-    "topicId": "workshop-hazards",
-    "question": "How should sharp tools be handled?",
+    "id": "aee_ws_11",
+    "topicId": "workshop-safety",
+    "question": "What type of clothing is advisable for welding due to high flash point, and which is extremely flammable and must not be worn?",
     "options": [
-      "Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground",
-      "Point towards your mate",
-      "Leave tools lying on the ground",
-      "Carry them carelessly",
+      "Advisable: wool or cotton; Must not wear: synthetic fibres",
+      "Advisable: synthetic fibres; Must not wear: cotton",
+      "Both wool and synthetic are fine",
+      "No clothing requirement",
       "None of the above"
     ],
     "correct": 0,
-    "short": "Point away from end (reverse), not towards mate, don’t leave on ground. Option A.",
-    "solution": "Handling of Small Tools:\n* Print away Sharp tools from their end (reverse).\n* Sharp edges should not be pointed towards your mate.\n* Don’t leave tools lying on the ground of the workshop when not in use.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground)"
-  },
-  {
-    "id": "aee_wh_08",
-    "topicId": "workshop-hazards",
-    "question": "What is the correct way to lift heavy weights?",
-    "options": [
-      "Use lifting tackle such as hoists, Jacks, Crowbars, winch where available; lift without intolerable stress on back/stomach; never lift alone if it may drop on foot; look front",
-      "Lift alone with back bent",
-      "Lift with stomach stress",
-      "Look behind while going",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Use hoists/Jacks/Crowbars/winch, no back/stomach stress, never alone, look front. Option A.",
-    "solution": "Lifting Heavy Weights:\n* Always use lifting tackle such as hoists, Jacks, Crowbars, winch e.t.c. where it is available.\n* Use sense in carrying heavy loads.\n* If you must lift weights, never lift it in a way that puts intolerable stress on back and stomach muscles.\n* Never lift anything only. It may step from your grip and drop on your foot.\n* Look front wherever you go.\n\nWhy the other options are incorrect: They suggest lifting alone with stress and looking behind.\n\n* Correct Option: A (Use lifting tackle such as hoists, Jacks, Crowbars, winch where available; lift without intolerable stress on back/stomach; never lift alone if it may drop on foot; look front)"
-  },
-  {
-    "id": "aee_wh_09",
-    "topicId": "workshop-hazards",
-    "question": "Why should machine guards for belts, gears, spindles and shafts be covered?",
-    "options": [
-      "They are important elements and should be covered for safety",
-      "They should be left open",
-      "They are not important",
-      "They should be removed",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Machine guards are important and should be covered. Option A.",
-    "solution": "Material: \"Machine guards are important elements e.g. belts, gears, spindles and shafts should be covered.\"\n\nWhy the other options are incorrect: They suggest leaving open or removing.\n\n* Correct Option: A (They are important elements and should be covered for safety)"
-  },
-  {
-    "id": "aee_wh_10",
-    "topicId": "workshop-hazards",
-    "question": "What is a risk of using compressed air for cleaning?",
-    "options": [
-      "It propels dusty and metallic particles and may injure; sudden explosion can cause panic; fasten pipe joints; never joke with it; use goggles",
-      "It is completely safe",
-      "It has no risk",
-      "It should be used without goggles",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Propels particles and may injure, explosion risk, secure joints, never joke, use goggles. Option A.",
-    "solution": "Compressed Air: Common in workshop...\n* When used for cleaning, it propels divvy and metallic particles and may injure.\n* Sudden explosion can cause serious risk due to panic.\n* Fasten and secure pipe joints.\n* Never joke with compressed air.\n* Use protective goggles when using compressive air.\n\nWhy the other options are incorrect: They say no risk or without goggles.\n\n* Correct Option: A (It propels dusty and metallic particles and may injure; sudden explosion can cause panic; fasten pipe joints; never joke with it; use goggles)"
+    "short": "Wool/cotton advisable (high flash point), synthetic is extremely flammable and must not be worn. Option A.",
+    "solution": "Both Arc and Gas Welding safety state: \"Never wear synthetic fibre clothing. Synthetic fibres are extremely flammable. Wearing clothing made of wool or cotton is advisable because of their high flash point.\"\n\nWhy the other options are incorrect: They reverse it.\n\n* Correct Option: A (Advisable: wool or cotton; Must not wear: synthetic fibres)"
   },
   {
     "id": "aee_wh_11",
-    "topicId": "workshop-hazards",
+    "topicId": "workshop-safety",
     "question": "What should you know about emergency stops/switches and fire exits?",
     "options": [
       "Locate them and know how to put a machine off before you put it on",
@@ -5729,8 +3834,83 @@ export const questionBank = {
     "solution": "Emergency Stops/Switches: Locate them (they are like control switch) and fire exits.\n* Ensure to know how to put a machine off before you put it on. Don't be clever.\n\nWhy the other options are incorrect: They suggest ignoring.\n\n* Correct Option: A (Locate them and know how to put a machine off before you put it on)"
   },
   {
+    "id": "aee_ws_02",
+    "topicId": "workshop-safety",
+    "question": "What type of clothing should be worn in the workshop according to safety rules?",
+    "options": [
+      "Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly",
+      "Synthetic fibre clothing",
+      "Loose clothing",
+      "Shorts and slippers",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Wool or cotton coveralls/lab coats/denim, good repair, proper fit. Option A.",
+    "solution": "Rule 2: \"Suitable wool or cotton clothing such as coveralls, lab coats, or a denim uniform should be worn. This should be in good repair and fit properly. Safety shoes are mandatory.\"\n\nWhy the other options are incorrect:\nOption B Synthetic fibres are extremely flammable and must not be worn.\nOption C Loose clothing must be restrained.\nOption D Shorts/slippers are not proper.\n\n* Correct Option: A (Suitable wool or cotton clothing such as coveralls, lab coats, or denim uniform in good repair and fit properly)"
+  },
+  {
+    "id": "aee_wh_02",
+    "topicId": "workshop-safety",
+    "question": "Which category describes “The Careless Ones” among irresponsible behaviours?",
+    "options": [
+      "Those who don't observe any precaution and are always surprised, usually first to get hurt",
+      "Those who take calculated risks to prove they know it all, identified by missing fingers",
+      "Those who joke about everything at expense of safety",
+      "All of the above are categories",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Careless Ones don't observe precaution, always surprised, first hurt. Option A.",
+    "solution": "Causes of Actions - Irresponsible Product: Three categories:\na. The Careless Ones: They are the ones who don't observe any precaution and always surprised and are usually the first to get hurt.\nb. The Clever Ones: These are people who take careless risk and they prove to know it all... missing fingers.\nc. The Doctors: These are people who joke about everything, even at expense of safety.\n\nSo Careless Ones matches Option A.\n\n* Correct Option: A (Those who don't observe any precaution and are always surprised, usually first to get hurt)"
+  },
+  {
+    "id": "aee_ws_07",
+    "topicId": "workshop-safety",
+    "question": "When should you perform cleaning, adjusting or lubrication of a tool?",
+    "options": [
+      "Only after stopping or shutting off the equipment",
+      "While it is operating",
+      "While it is still moving",
+      "Anytime",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Only after stopping/shutting off. Option A.",
+    "solution": "Rule 8: \"Never perform operations of cleaning; adjusting or lubrication of a tool while it is operating. Always stop or shut off the equipment before servicing.\"\n\nWhy the other options are incorrect: They suggest servicing while operating, which is prohibited.\n\n* Correct Option: A (Only after stopping or shutting off the equipment)"
+  },
+  {
+    "id": "aee_wh_07",
+    "topicId": "workshop-safety",
+    "question": "How should sharp tools be handled?",
+    "options": [
+      "Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground",
+      "Point towards your mate",
+      "Leave tools lying on the ground",
+      "Carry them carelessly",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Point away from end (reverse), not towards mate, don’t leave on ground. Option A.",
+    "solution": "Handling of Small Tools:\n* Print away Sharp tools from their end (reverse).\n* Sharp edges should not be pointed towards your mate.\n* Don’t leave tools lying on the ground of the workshop when not in use.\n\nWhy the other options are incorrect: They are opposite.\n\n* Correct Option: A (Point away sharp tools from their end (reverse) and not towards your mate; don’t leave tools lying on the ground)"
+  },
+  {
+    "id": "aee_ws_12",
+    "topicId": "workshop-safety",
+    "question": "How should gas cylinder valves be opened correctly?",
+    "options": [
+      "Acetylene no more than 3/4 turn, Oxygen fully",
+      "Both fully open",
+      "Both 3/4 turn",
+      "Acetylene fully, Oxygen 3/4 turn",
+      "None of the above"
+    ],
+    "correct": 0,
+    "short": "Acetylene ≤3/4 turn, Oxygen fully open. Option A.",
+    "solution": "Safety in Gas Welding Rule 5: \"Open gas cylinder valves correctly. Open the valve on the acetylene cylinder no more than three-fourths of a turn so it can be closed quickly in case of an emergency. Open the valve on the oxygen tank fully.\"\n\nWhy the other options are incorrect: They reverse or equalize.\n\n* Correct Option: A (Acetylene no more than 3/4 turn, Oxygen fully)"
+  },
+  {
     "id": "aee_wh_12",
-    "topicId": "workshop-hazards",
+    "topicId": "workshop-safety",
     "question": "Why should water and electricity be considered together as a danger?",
     "options": [
       "Electricity kills and burns. Beware, water conducts electricity. Do not attempt electrical repair if not competent",
@@ -5742,236 +3922,6 @@ export const questionBank = {
     "correct": 0,
     "short": "Water conducts electricity, electricity kills/burns, don’t attempt repair if not competent. Option A.",
     "solution": "Care of Electrical Apparatus: Electricity kills and burns. Beware, water conducts electricity.\n\nDo not attempt elect competent to do so ical repair if you are not (electrical repair if you are not competent).\n\nWhy the other options are incorrect: They are unsafe.\n\n* Correct Option: A (Electricity kills and burns. Beware, water conducts electricity. Do not attempt electrical repair if not competent)"
-  },
-  {
-    "id": "aee_wh_13",
-    "topicId": "workshop-hazards",
-    "question": "What are the three important components of the environment as listed?",
-    "options": [
-      "Waterbody, atmosphere, and soil",
-      "Only waterbody",
-      "Only atmosphere",
-      "Only soil",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Waterbody, atmosphere, and soil are the three. Option A.",
-    "solution": "Workshop Environment: The Environment is simply anything that surrounds us; Waterbody, atmosphere, and soil are the 3 important components of the environment.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Waterbody, atmosphere, and soil)"
-  },
-  {
-    "id": "aee_wh_14",
-    "topicId": "workshop-hazards",
-    "question": "Which of the following is a listed workshop environment safety measure?",
-    "options": [
-      "Oil and oily materials should be well checked as spillage can make floor slippery and cause serious injury/death",
-      "Oil spillage is good",
-      "Smoking should be encouraged",
-      "Playing with chemicals is safe",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Oil spillage makes floor slippery and can cause serious injury/death. Option A.",
-    "solution": "Workshop environment safety includes:\n* Oil and oily materials should be well checked as oil spillage can make the floor slippery and could lead to a very serious injury or death.\n* Smoking should be avoided as could ignite combustible gases.\n* Playing with chemicals/poisons or explosives should be avoided.\n* Minimisation of urge to touch moving parts.\n* Disposal by burning should be avoided.\n* Do not open mysterious objects without labels.\n\nWhy the other options are incorrect: They are opposite (oil spillage is bad, smoking should be avoided).\n\n* Correct Option: A (Oil and oily materials should be well checked as spillage can make floor slippery and could lead to a very serious injury/death)"
-  },
-  {
-    "id": "aee_wh_15",
-    "topicId": "workshop-hazards",
-    "question": "According to the course outline for AGE202 Workshop Practice, which of the following is listed?",
-    "options": [
-      "Introduction to Workshop practice, Workshop safety measures, hand tools and power tools, Workshop materials and properties, Bench-work, Metal joining processes, Grinding/drilling/latheing/shaping, Computer aided manufacturing, Gauges/Jigs and fixtures",
-      "Only Bench-work",
-      "Only Welding",
-      "Only Grinding",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "All listed: Intro, safety, hand/power tools, materials, bench-work, joining, machines, CAM, gauges/jigs. Option A.",
-    "solution": "Course Outline for AGE202 Workshop Practice:\n* Introduction to Workshop practice.\n* Workshop safety measures.\n* Introduction to workshop hand tools and power tools and their safety measures.\n* Workshop materials and properties.\n* Bench-work: marking outs, scrimbing; punching; drilling; cutting.\n* Theory and practice of metal joining processes.\n* Functions and capabilities of grinding machines; drilling; latheing; shaping machines.\n* Computer aided manufacturing.\n* Gauges: Measurement; tolerance; Jigs and fixtures.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Introduction to Workshop practice, Workshop safety measures, hand tools and power tools, Workshop materials and properties, Bench-work, Metal joining processes, Grinding/drilling/latheing/shaping, Computer aided manufacturing, Gauges/Jigs and fixtures)"
-  },
-  {
-    "id": "aee_mj_01",
-    "topicId": "metal-joining",
-    "question": "What are the two main categories of metal joints based on disassembly?",
-    "options": [
-      "Temporary (bolting, riveting) and Permanent (soldering, welding, brazing)",
-      "Only temporary",
-      "Only permanent",
-      "No categories",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Temporary: bolting/riveting; Permanent: soldering/welding/brazing. Option A.",
-    "solution": "Metal Joining Process — Joints can be:\n1) Temporary — allow for disassembling, no ram for repairs: bolting (bolts nuts), riveting (cylindrical pin)\n2) Permanent — allow for no disassembling, rarely done by heat: Soldering, Welding, Brazing.\n\nWhy the other options are incorrect: They list only one category.\n\n* Correct Option: A (Temporary (bolting, riveting) and Permanent (soldering, welding, brazing))"
-  },
-  {
-    "id": "aee_mj_02",
-    "topicId": "metal-joining",
-    "question": "What is welding as a joining process?",
-    "options": [
-      "Heat generated is used to melt and fuse materials together to produce a permanent joint",
-      "Joining without heat",
-      "Only for temporary joints",
-      "Only for wood",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Welding uses heat to melt and fuse materials for permanent joint. Option A.",
-    "solution": "Definition: \"Welding: heat generated is used to melt and fuse materials together, to produce a permanent joint.\"\n\nWhy the other options are incorrect: They are not the definition.\n\n* Correct Option: A (Heat generated is used to melt and fuse materials together to produce a permanent joint)"
-  },
-  {
-    "id": "aee_mj_03",
-    "topicId": "gas-arc-welding",
-    "question": "What is the major difference between arc welding and gas welding regarding power source?",
-    "options": [
-      "Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen)",
-      "Both use electricity",
-      "Both use gas",
-      "No difference",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Arc uses electricity, Gas uses fuel gas + oxygen. Option A.",
-    "solution": "Material: The major difference lies in the power source — Arc welding uses electricity while Gas welding uses a gas combination of fuel gas and oxygen. Acetylene & Oxygen.\n\nWhy the other options are incorrect: They state both same.\n\n* Correct Option: A (Arc welding uses electricity, Gas welding uses gas combination of fuel gas and oxygen (acetylene & oxygen))"
-  },
-  {
-    "id": "aee_mj_04",
-    "topicId": "gas-arc-welding",
-    "question": "Which gases are usually used as the two gases in gas welding to provide heat to melt filler-metal and workpiece?",
-    "options": [
-      "Oxygen and acetylene gas",
-      "Only oxygen",
-      "Only acetylene",
-      "Nitrogen and hydrogen",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Oxygen and acetylene. Option A.",
-    "solution": "Gas welding process is a welding process that involves the use of a mixture of two distinct gases as fuel to provide heat: The two gases are usually Oxygen and acetylene gas.\n\nWhy the other options are incorrect: They list only one or wrong gases.\n\n* Correct Option: A (Oxygen and acetylene gas)"
-  },
-  {
-    "id": "aee_mj_05",
-    "topicId": "gas-arc-welding",
-    "question": "How is acetylene gas produced as per the chemical equation shown?",
-    "options": [
-      "CaC2 + 2H2O → Ca(OH)2 + C2H2",
-      "2H2O + CaCO3 → Ca(OH)2",
-      "CaH2 alone",
-      "No reaction",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "CaC2 + 2H2O → Ca(OH)2 + C2H2 (acetylene). Option A.",
-    "solution": "Slide shows (Production of acetylene) with equation: CaC2 + 2H2O → Ca(OH)2 + C2H2 (acetylene). The text shows \"2H2O + CaCO3 → Ca(OH)2\" and \"CaH2\" but the correct is calcium carbide + water.\n\nWhy the other options are incorrect: They are incomplete or wrong.\n\n* Correct Option: A (CaC2 + 2H2O → Ca(OH)2 + C2H2)"
-  },
-  {
-    "id": "aee_mj_06",
-    "topicId": "gas-arc-welding",
-    "question": "What is the temperature of the blue (inner) zone and the white inner zone in gas welding flame?",
-    "options": [
-      "5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer",
-      "All zones same temperature",
-      "Only 1275°C",
-      "Only 2500°C",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Blue 5700°C, White inner 3200°C, Red intermediate 2500°C, Outer 1275°C. Option A.",
-    "solution": "Diagram shows: Temp: 5700°C blue (dies prezone), White inner zone (3200°C), Red intermediate zone (2500°C), Outer (1275°C) / Blue outer zone Secondary combustion.\n\nWhy the other options are incorrect: They list single temperature.\n\n* Correct Option: A (5700°C blue, 3200°C white inner, 2500°C red intermediate, 1275°C outer)",
-    "image": "/images/flame-zones.png"
-  },
-  {
-    "id": "aee_mj_07",
-    "topicId": "gas-arc-welding",
-    "question": "In what ratio does a 1:1 mixture of oxygen and acetylene produce a neutral flame?",
-    "options": [
-      "1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone)",
-      "70:30",
-      "100:0",
-      "0:100",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "1:1 gives neutral flame (Blue outer). Option A.",
-    "solution": "Text: \"In ratio 1:1, a neutral flame is produced (Blue outer) zone Secondary combustion.\"\n\nWhy the other options are incorrect:\nOption B 70:30 is reducing/carbonizing flame.\n\n* Correct Option: A (1:1 (50% oxygen, 50% acetylene) → neutral flame (Blue outer zone))",
-    "image": "/images/flame-zones.png"
-  },
-  {
-    "id": "aee_mj_08",
-    "topicId": "gas-arc-welding",
-    "question": "Which flame contains excess acetylene than oxygen and is used to weld alloys of steel like Nickel, Chromium?",
-    "options": [
-      "Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones)",
-      "Neutral flame",
-      "Oxidizing flame",
-      "No flame",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Carburizing/Reducing flame has excess acetylene (70:30) for Ni, Cr alloys. Option A.",
-    "solution": "Text:\n* The kind of flame which contains excess of acetylene gas than oxygen is called Combusting/Carburizing flame.\n* This kind of flame is used to weld alloys of steel like Nickel, Chromium etc.\n\nAnd: Reducing flame - Carbonizing flame produced when volume of acetylene is 70:30, produces 3 distinct zone.\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C Oxidizing has excess oxygen.\n\n* Correct Option: A (Carburizing/Reducing flame (excess acetylene, e.g., 70:30 with 3 distinct zones))",
-    "image": "/images/flame-zones.png"
-  },
-  {
-    "id": "aee_mj_09",
-    "topicId": "gas-arc-welding",
-    "question": "Which flame contains excess oxygen compared to acetylene and is used for brazing?",
-    "options": [
-      "Oxidizing flame",
-      "Neutral flame",
-      "Carburizing flame",
-      "No flame",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Oxidizing flame has excess oxygen and is used for brazing. Option A.",
-    "solution": "Text: \"The flame which contains excess of oxygen is called Oxidising flame. This kind of flame is used for brazing.\"\n\nWhy the other options are incorrect:\nOption B Neutral is 1:1, Option C has excess acetylene.\n\n* Correct Option: A (Oxidizing flame)",
-    "image": "/images/flame-zones.png"
-  },
-  {
-    "id": "aee_mj_10",
-    "topicId": "bench-work-fitting",
-    "question": "What is the function of a Vice as a holding device?",
-    "options": [
-      "To hold jobs, has two jaws, one fixed, the other adjustable",
-      "To cut metal",
-      "To measure",
-      "To join metals",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Vice holds jobs with two jaws (fixed and adjustable). Option A.",
-    "solution": "Holding Device — Vice: To hold jobs, has two jaws, one fixed, the other, adjustable.\n\nWhy the other options are incorrect: They describe cutting/measuring/joining.\n\n* Correct Option: A (To hold jobs, has two jaws, one fixed, the other adjustable)"
-  },
-  {
-    "id": "aee_mj_11",
-    "topicId": "bench-work-fitting",
-    "question": "Hammers are classified based on shape of their peen. Which is NOT a listed category?",
-    "options": [
-      "Ball and pen hammer",
-      "Setting hammer",
-      "Razing hammer",
-      "Claw hammer",
-      "Screw driver",
-      "None of the above"
-    ],
-    "correct": 4,
-    "short": "Categories are Ball/pen, Setting, Razing, Claw. Screw driver is not a hammer. Option E.",
-    "solution": "Categories of hammer are : Ball and pen hammer; Setting hammer; razing hammer; Claw hammer.\n\nWhy the other options are incorrect: Options A-D are all listed hammer categories, Option E says screw driver which is not a hammer — so \"None of the above\" would be wrong, but E is screw driver — actually the question asks which is NOT listed: Screw driver is not a hammer category, so answer is Screw driver, which is Option E? Wait options list includes Screw driver as Option E? Actually we have 5 options, E is \"None of the above\" — need to adjust. The NOT listed is Screw driver, but our options include Screw driver as D, so D would be not listed? Let's see: Options A-D are all hammer categories, so all are listed, so which is NOT listed is none — but Screw driver is not a hammer, but it's not in A-D. Hmm.\n\nOur options: A Ball/pen, B Setting, C Razing, D Claw. All are listed, so which is NOT listed is none — so answer is E (None of the above). Let's set correct as E (4).\n\nWhy the other options are incorrect: They are all listed hammer categories.\n\n* Correct Option: E (None of the above — all A-D are listed hammer categories, screw driver is not a hammer but not in options A-D, so none is not listed)"
-  },
-  {
-    "id": "aee_mj_12",
-    "topicId": "gas-arc-welding",
-    "question": "What are the two types of welding that both involve application of heat or generation?",
-    "options": [
-      "Arc welding and Gas welding",
-      "Only Arc welding",
-      "Only Gas welding",
-      "No welding types",
-      "None of the above"
-    ],
-    "correct": 0,
-    "short": "Arc welding and Gas welding both involve heat application/generation. Option A.",
-    "solution": "Process of Welding — There are 2 types of welding. Art welding; Gas welding. Both involve (application) of heat or generation.\n\nWhy the other options are incorrect: They list only one.\n\n* Correct Option: A (Arc welding and Gas welding)"
   }
 ]
 }

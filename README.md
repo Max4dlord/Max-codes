@@ -9,11 +9,28 @@ no backend needed, progress saved in the browser.
 
 ## 📚 Courses & content
 
-| Course | Status | Questions | Topics |
+| Course | Status | Questions | Structure |
 |---|---|---|---|
-| AEE 202 — Agricultural Engineering | ✅ live | 236 | 28 (welding, metal working, fasteners, machine ops, safety…) |
-| MTH 202 — Mathematical Methods | ✅ live | 149 | 8 (complex numbers, linear algebra, ODEs, transforms…) |
+| AEE 202 — Agricultural Engineering | ✅ live | 101 | 3 main categories · 12 topics · 22 diagram questions |
+| MTH 202 — Mathematical Methods | ✅ live | 149 | 8 topics |
 | MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
+
+### AEE 202 main categories
+
+AEE questions are organised under **3 main categories** (defined in `categoryMeta`
+in `src/data.js`), and each topic belongs to exactly one category:
+
+1. **Questions formed from materials in Shared Drive** — the current bank
+   (12 consolidated topics: welding processes & defects, fasteners, metal
+   working, heat treatment, cutting tools, drilling, bench work & fitting,
+   machine operations, advanced manufacturing, hand tools, jigs & fixtures,
+   workshop safety).
+2. **Questions from Actual past questions** — coming soon (content to be uploaded).
+3. **Questions formed from First Shared Slide** — coming soon (content to be uploaded).
+
+In the dashboard you can now start a test on a **whole course**, a **single main
+category** or a **single topic**. Empty categories are shown as "Coming soon"
+until their content is uploaded.
 
 The question bank lives in **`src/data.js`** and includes diagram-based
 questions (images in `public/images/`).
@@ -52,17 +69,19 @@ Everything lives in **`src/data.js`**. Each question is one object:
 
 ```js
 {
-  id: 'aee_wd_01',                 // unique
-  topicId: 'welding-defects',      // must exist in topicMeta.aee202
+  id: 'aee_wd_01',                          // unique
+  topicId: 'welding-processes-defects',     // must exist in topicMeta.aee202
   question: 'What is slag in welding and what is its primary cause?',
-  options: ['A', 'B', 'C', 'D'],   // 2–6 options
-  correct: 0,                      // index of the right option (0-based)
+  options: ['A', 'B', 'C', 'D'],            // 2–6 options
+  correct: 0,                               // index of the right option (0-based)
   short: 'One-line why it is right/wrong.',
   solution: 'Full step-by-step worked solution shown in the side panel.',
-  image: '/images/optional-diagram.png'   // optional
+  image: '/images/optional-diagram.png'     // optional
 }
 ```
 
+**To add a topic:** add `{ id, name, categoryId }` to `topicMeta[<id>]` (use
+`categoryId: 'shared-drive'`, `'past-questions'` or `'first-slides'` for AEE).
 **To add a course:** add it to `courses`, plus `topicMeta[<id>]` and
 `questionBank[<id>]` arrays.
 

@@ -5,7 +5,7 @@
 // are ever reordered.
 
 import { existsSync } from 'fs'
-import { courses, topicMeta, questionBank } from '../src/data.js'
+import { courses, topicMeta, questionBank, categoryMeta } from '../src/data.js'
 
 const errors = []
 const warnings = []
@@ -15,6 +15,8 @@ let total = 0
 for (const course of courses) {
   const bank = questionBank[course.id] || []
   const topicIds = new Set((topicMeta[course.id] || []).map((t) => t.id))
+  const cats = categoryMeta[course.id] || []
+  const catIds = new Set(cats.map((c) => c.id))
   const seen = new Set()
   let ok = 0
 
@@ -61,7 +63,24 @@ for (const course of courses) {
     if (!optsOK) errors.push(`${tag}: empty option string`)
     ok++
   }
-  console.log(`${course.code} (${course.id}): ${ok} questions — ${course.available ? 'live' : 'draft'}`)
+
+  // ---- category structure checks ----
+  if (cats.length > 0) {
+    for (const t of topicMeta[course.id] || []) {
+      if (!t.categoryId || !catIds.has(t.categoryId))
+        errors.push(`${course.id}: topic '${t.id}' has unknown categoryId '${t.categoryId}'`)
+    }
+    const perCat = cats
+      .map((c) => {
+        const ids = (topicMeta[course.id] || []).filter((t) => t.categoryId === c.id).map((t) => t.id)
+        const n = bank.filter((q) => ids.includes(q.topicId)).length
+        return `${c.id}:${n}qs`
+      })
+      .join(', ')
+    console.log(`${course.code} (${course.id}): ${ok} questions — ${course.available ? 'live' : 'draft'} | ${cats.length} categories [${perCat}]`)
+  } else {
+    console.log(`${course.code} (${course.id}): ${ok} questions — ${course.available ? 'live' : 'draft'}`)
+  }
 }
 
 console.log(`\nTotal questions checked: ${total}`)

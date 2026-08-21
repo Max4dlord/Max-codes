@@ -1,4 +1,4 @@
-import { courses, topicMeta, questionBank } from './data.js'
+import { courses, topicMeta, questionBank, categoryMeta } from './data.js'
 
 // Fisher-Yates shuffle (returns a new array).
 export function shuffle(arr) {
@@ -34,18 +34,45 @@ export function getTopics(courseId) {
   }))
 }
 
+// Main categories for a course, each carrying its nested topics (with live
+// counts). Returns [] for courses that have no category structure.
+export function getCategories(courseId) {
+  const cats = categoryMeta[courseId] || []
+  if (!cats.length) return []
+  const qs = questionBank[courseId] || []
+  const topics = topicMeta[courseId] || []
+  return cats.map((c) => {
+    const subs = topics
+      .filter((t) => t.categoryId === c.id)
+      .map((t) => ({ ...t, count: qs.filter((q) => q.topicId === t.id).length }))
+    return {
+      ...c,
+      topics: subs,
+      count: subs.reduce((a, t) => a + t.count, 0)
+    }
+  })
+}
+
 export function getQuestionCount(courseId, topicId = null) {
   const qs = questionBank[courseId] || []
   return topicId ? qs.filter((q) => q.topicId === topicId).length : qs.length
 }
 
 // Build the actual ordered question set for a test.
-// mode: 'full' (all topics, shuffled) | 'topic' (single topic, shuffled)
+// mode: 'full' (all topics) | 'category' (one main category) | 'topic' (single topic)
 // count: number, or 'all'
-export function buildQuestionSet(courseId, { mode, topicId, count }) {
+export function buildQuestionSet(courseId, { mode, topicId, categoryId, count }) {
   let pool = questionBank[courseId] || []
   if (mode === 'topic' && topicId) {
     pool = pool.filter((q) => q.topicId === topicId)
+  }
+  if (mode === 'category' && categoryId) {
+    const ids = new Set(
+      (topicMeta[courseId] || [])
+        .filter((t) => t.categoryId === categoryId)
+        .map((t) => t.id)
+    )
+    pool = pool.filter((q) => ids.has(q.topicId))
   }
   const shuffled = shuffle(pool)
   const n = !count || count === 'all' ? shuffled.length : Math.min(Number(count), shuffled.length)
