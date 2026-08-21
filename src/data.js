@@ -6,7 +6,7 @@ export const courses = [
     "id": "aee202",
     "code": "AEE 202",
     "title": "Agricultural Engineering",
-    "blurb": "Workshop practice for agricultural engineers, organised in 3 main categories: Shared Drive materials, Actual past questions, and First Shared Slide materials — covering welding, metal working, fasteners, machine operations, workshop safety, plus the centre lathe, shapers & planers, drilling, milling and grinding.",
+    "blurb": "Workshop practice for agricultural engineers, organised in 3 main categories: Shared Drive materials (101 Qs), Actual past questions (107 Qs) and First Shared Slide materials (100 Qs) — 308 questions covering welding, metal working, fasteners, measurement, benchwork, machine operations, workshop safety, the centre lathe, shapers & planers, drilling, milling and grinding.",
     "accent": "#0ea5e9",
     "available": true
   },
@@ -149,6 +149,37 @@ export const topicMeta = {
       "id": "fs-grinding",
       "name": "Grinding Process",
       "categoryId": "first-slides"
+    }
+  ,
+    {
+      "id": "pq-measurement",
+      "name": "Measurement, Precision & Tolerance",
+      "categoryId": "past-questions"
+    },
+    {
+      "id": "pq-benchwork",
+      "name": "Marking Out & Benchwork",
+      "categoryId": "past-questions"
+    },
+    {
+      "id": "pq-hand-tools",
+      "name": "Hammers, Chisels, Files & Hacksaw",
+      "categoryId": "past-questions"
+    },
+    {
+      "id": "pq-drilling-lathe",
+      "name": "Drilling & Lathe Operations",
+      "categoryId": "past-questions"
+    },
+    {
+      "id": "pq-materials",
+      "name": "Materials & Engineering Products",
+      "categoryId": "past-questions"
+    },
+    {
+      "id": "pq-joining-safety",
+      "name": "Joining, Welding & Workshop Safety",
+      "categoryId": "past-questions"
     }
   ]
 }
@@ -5449,6 +5480,1517 @@ export const questionBank = {
     "correct": 0,
     "short": "The depth of cut is very small, about 0.",
     "solution": "The slide states: “The depth of cut is very small, about 0.015 mm.”\n\n📘 From the First Shared Slide — Cylindrical Grinding:\nThe cylindrical grinding machine comes in two varieties — plain and universal — with the same fundamental design, but the universal machine can also be adopted for internal grinding. The work is mounted between two centres and rotated, while the grinding wheel, mounted on a spindle, revolves at much higher r.p.m. The work and centres sit on a table that traverses at various feeds so the entire length of the work passes to and fro in front of the wheel. The depth of cut is very small, about 0.015 mm; when the entire length has passed, the wheel advances another 0.015 mm at the end of the traverse, and the cycle continues until the desired diameter is reached. The result is a long cylinder of perfectly circular profile with very fine surface finish."
+  }
+,
+  {
+    "id": "aee_pq_pq-materials_01",
+    "topicId": "pq-materials",
+    "question": "Selection of a proper material for engineering purposes should be based on the following but one:",
+    "options": [
+      "Availability of the material",
+      "Cost of the material",
+      "Suitability of the material",
+      "Size of the material"
+    ],
+    "correct": 3,
+    "short": "The past question lists availability, cost and suitability as the bases for material selection — size is the odd one out (the same material can be produced in many sizes).",
+    "solution": "The past question lists availability, cost and suitability as the bases for material selection — size is the odd one out (the same material can be produced in many sizes). Answer: size of the material.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_01",
+    "topicId": "pq-measurement",
+    "question": "A vernier caliper is a measuring instrument with higher precision than the ruler. The sliding scale is the:",
+    "options": [
+      "main scale",
+      "mini scale",
+      "vernier scale",
+      "larger scale"
+    ],
+    "correct": 2,
+    "short": "The vernier caliper has a fixed main scale and a movable sliding scale — the sliding scale is called the vernier scale; it allows readings to 0.",
+    "solution": "The vernier caliper has a fixed main scale and a movable sliding scale — the sliding scale is called the vernier scale; it allows readings to 0.02 mm or better.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_02",
+    "topicId": "pq-measurement",
+    "question": "A micrometer is a measuring device resembling:",
+    "options": [
+      "a V-clamp",
+      "a C-clamp",
+      "a Y-clamp",
+      "a T-clamp"
+    ],
+    "correct": 1,
+    "short": "The micrometer screw gauge has a rigid C-shaped frame, so it resembles a C-clamp (in fact one nickname for the frame is the 'C-frame').",
+    "solution": "The micrometer screw gauge has a rigid C-shaped frame, so it resembles a C-clamp (in fact one nickname for the frame is the 'C-frame').\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_01",
+    "topicId": "pq-benchwork",
+    "question": "Marking out is based on the following principles except:",
+    "options": [
+      "Defining the shape of the work piece",
+      "Making marks on the work piece to guide the machinist",
+      "Indicating the exact position of the work piece",
+      "Helping to remove excess cutting from the work piece"
+    ],
+    "correct": 3,
+    "short": "Marking out means scribing guide lines: it defines the shape, guides the machinist and shows exact positions.",
+    "solution": "Marking out means scribing guide lines: it defines the shape, guides the machinist and shows exact positions. Removing excess material is the job of cutting (sawing, filing, chipping) — not of marking out.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_01",
+    "topicId": "pq-drilling-lathe",
+    "question": "The common types of drills are but one:",
+    "options": [
+      "flat drill",
+      "straight fluted drill",
+      "twist drill",
+      "pillar drill"
+    ],
+    "correct": 3,
+    "short": "Flat drill, straight fluted drill and twist drill are all types of drills.",
+    "solution": "Flat drill, straight fluted drill and twist drill are all types of drills. A pillar drill is a drilling MACHINE (a machine tool), not a type of drill — that is the odd one out.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_02",
+    "topicId": "pq-materials",
+    "question": "One of the following is a physical property of metals:",
+    "options": [
+      "ductility",
+      "malleability",
+      "elasticity",
+      "density"
+    ],
+    "correct": 3,
+    "short": "Ductility, malleability and elasticity are mechanical properties.",
+    "solution": "Ductility, malleability and elasticity are mechanical properties. Density (mass per unit volume) is a physical property of a metal.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_02",
+    "topicId": "pq-drilling-lathe",
+    "question": "The size of a drilling machine is determined by one of the following factors:",
+    "options": [
+      "Range of spindle speeds",
+      "Net weight of the drill bit",
+      "Length of the base",
+      "Maximum drilling impact"
+    ],
+    "correct": 0,
+    "short": "Per the past-question key, the size of a drilling machine is indicated by the range of spindle speeds (together with the largest drill diameter it can drive).",
+    "solution": "Per the past-question key, the size of a drilling machine is indicated by the range of spindle speeds (together with the largest drill diameter it can drive).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_03",
+    "topicId": "pq-drilling-lathe",
+    "question": "In drilling a circular metal piece in the workshop, the spindle speed is based on one of the following:",
+    "options": [
+      "cutting speed chosen for the metal piece",
+      "diameter of the metal piece",
+      "material of the metal piece",
+      "thickness of the metal piece"
+    ],
+    "correct": 1,
+    "short": "The past-question key gives the diameter of the metal piece as the basis of spindle speed — in practice the r.",
+    "solution": "The past-question key gives the diameter of the metal piece as the basis of spindle speed — in practice the r.p.m. is set from the recommended cutting speed AND the diameter (N = v/πd), and the key selects diameter as the listed factor.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_04",
+    "topicId": "pq-drilling-lathe",
+    "question": "A lathe machine can be used to cut machine components into various shapes and sizes. The work piece can be held between:",
+    "options": [
+      "base stock and head stock",
+      "head stock and bottom stock",
+      "tail stock and high stock",
+      "head stock and tail stock"
+    ],
+    "correct": 3,
+    "short": "A long work piece on the lathe is held between the headstock (driving end) and the tailstock (supporting end) — typically between centres or in the chuck with tailstock support.",
+    "solution": "A long work piece on the lathe is held between the headstock (driving end) and the tailstock (supporting end) — typically between centres or in the chuck with tailstock support.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_03",
+    "topicId": "pq-materials",
+    "question": "Any engineering product is a product of ingenuity which depends on the following factors except one:",
+    "options": [
+      "ability to conceptualize an idea",
+      "translating a good idea into design",
+      "transforming the design into a product in the workshop",
+      "fabrication of an idea into design"
+    ],
+    "correct": 3,
+    "short": "Ingenuity involves conceptualising an idea, translating it into a design and transforming the design into a product.",
+    "solution": "Ingenuity involves conceptualising an idea, translating it into a design and transforming the design into a product. 'Fabrication of an idea into design' is a confused restatement — that is the odd one out.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_03",
+    "topicId": "pq-measurement",
+    "question": "A hole and a shaft have basic diameters of 45 mm and 44.50 mm respectively, but were machined to actual sizes of 44.95 mm and 44.53 mm. If the shaft is permitted a bilateral tolerance of +0.05 mm and −0.01 mm, the maximum permissible variation in its diameter is:",
+    "options": [
+      "0.04 mm",
+      "0.06 mm",
+      "0.05 mm",
+      "1.06 mm"
+    ],
+    "correct": 1,
+    "short": "Maximum variation = upper limit − lower limit = (+0.",
+    "solution": "Maximum variation = upper limit − lower limit = (+0.05) − (−0.01) = 0.06 mm. (Tolerance = upper deviation − lower deviation.)\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_04",
+    "topicId": "pq-measurement",
+    "question": "For the same shaft (basic diameter 44.50 mm, tolerance +0.05/−0.01 mm), the minimum diameter to which the shaft can be cut is:",
+    "options": [
+      "44.49 mm",
+      "44.55 mm",
+      "44.59 mm",
+      "44.50 mm"
+    ],
+    "correct": 0,
+    "short": "Minimum shaft diameter = basic diameter + lower deviation = 44.",
+    "solution": "Minimum shaft diameter = basic diameter + lower deviation = 44.50 + (−0.01) = 44.49 mm.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_05",
+    "topicId": "pq-measurement",
+    "question": "For the same mating parts (hole 44.95 mm actual on a 45 mm basic; shaft 44.53 mm actual on a 44.50 mm basic), the allowance and clearance respectively are about:",
+    "options": [
+      "0.42 mm and 0.50 mm",
+      "0.45 mm and 0.50 mm",
+      "0.50 mm and 0.52 mm",
+      "0.50 mm and 0.50 mm"
+    ],
+    "correct": 0,
+    "short": "Allowance = minimum hole − maximum shaft = 44.",
+    "solution": "Allowance = minimum hole − maximum shaft = 44.95 − 44.53 = 0.42 mm. Clearance = maximum hole − minimum shaft = 45.00 − 44.49 = 0.51 mm (≈ 0.50 mm, which is why the key gives 0.42 mm and 0.50 mm). Answer: 0.42 mm and 0.50 mm.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_01",
+    "topicId": "pq-hand-tools",
+    "question": "All of these are types of hammer except:",
+    "options": [
+      "ball peen",
+      "rectangular pein",
+      "straight pein",
+      "cross pein"
+    ],
+    "correct": 1,
+    "short": "Ball peen, straight pein and cross pein are standard peen-hammer types (named after the shape of the peen).",
+    "solution": "Ball peen, straight pein and cross pein are standard peen-hammer types (named after the shape of the peen). There is no 'rectangular pein' hammer — that is the odd one out.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_01",
+    "topicId": "pq-joining-safety",
+    "question": "One of the safety precautions required in drilling is:",
+    "options": [
+      "knowing the speed of the drill",
+      "not holding revolving drill",
+      "knowing the cutting feed",
+      "all of the above"
+    ],
+    "correct": 3,
+    "short": "Safe drilling requires knowing the correct drill speed and feed, and never holding/touching a revolving drill or workpiece — hence all of the above.",
+    "solution": "Safe drilling requires knowing the correct drill speed and feed, and never holding/touching a revolving drill or workpiece — hence all of the above.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_02",
+    "topicId": "pq-joining-safety",
+    "question": "Adequate footwear is necessary in the workshop because of the following injuries:",
+    "options": [
+      "cutting of the leg",
+      "slipping on the floor",
+      "sharp edges piercing the feet",
+      "heavy object falling on the feet"
+    ],
+    "correct": 3,
+    "short": "The past-question key gives heavy objects falling on the feet as the main reason safety shoes (with toe protection) are compulsory in the workshop.",
+    "solution": "The past-question key gives heavy objects falling on the feet as the main reason safety shoes (with toe protection) are compulsory in the workshop.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_06",
+    "topicId": "pq-measurement",
+    "question": "The engineer's steel rule is a measuring device used to measure:",
+    "options": [
+      "straight dimensions",
+      "circular dimensions",
+      "linear dimensions",
+      "datum dimensions"
+    ],
+    "correct": 2,
+    "short": "The steel rule measures linear dimensions (lengths along a line).",
+    "solution": "The steel rule measures linear dimensions (lengths along a line). Circular dimensions are measured with callipers/micrometers, and 'datum dimensions' is not a measurement type.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_07",
+    "topicId": "pq-measurement",
+    "question": "The datum used in engineering workshops is the:",
+    "options": [
+      "base plate",
+      "lap base",
+      "surface plate",
+      "saddle base"
+    ],
+    "correct": 2,
+    "short": "The surface plate is the workshop datum (reference plane) from which heights and dimensions are marked out and measured, e.",
+    "solution": "The surface plate is the workshop datum (reference plane) from which heights and dimensions are marked out and measured, e.g. with a scribing block.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_08",
+    "topicId": "pq-measurement",
+    "question": "With a good rule, measurement can be made with an accuracy of:",
+    "options": [
+      "0.22 cm",
+      "0.20 mm",
+      "0.02 mm",
+      "0.20 cm"
+    ],
+    "correct": 1,
+    "short": "A good steel rule reads accurately to about 0.",
+    "solution": "A good steel rule reads accurately to about 0.20 mm (0.2 mm) — finer accuracy requires the vernier caliper or micrometer.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_09",
+    "topicId": "pq-measurement",
+    "question": "A calliper is a measuring device for determining:",
+    "options": [
+      "linear measurement",
+      "hollow measurement",
+      "vertical measurement",
+      "simple measurement"
+    ],
+    "correct": 0,
+    "short": "Inside and outside callipers transfer linear measurements (internal/external sizes) to a rule for reading.",
+    "solution": "Inside and outside callipers transfer linear measurements (internal/external sizes) to a rule for reading.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_10",
+    "topicId": "pq-measurement",
+    "question": "For both inside and outside callipers the measurement determined is interpreted on:",
+    "options": [
+      "rule",
+      "meter",
+      "ruling",
+      "metric"
+    ],
+    "correct": 0,
+    "short": "Callipers have no scale of their own — the size they grip is transferred to and read off a rule.",
+    "solution": "Callipers have no scale of their own — the size they grip is transferred to and read off a rule.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_03",
+    "topicId": "pq-joining-safety",
+    "question": "On a television circuit board, joining of terminals is achievable by:",
+    "options": [
+      "welding",
+      "pinning",
+      "melting",
+      "soldering",
+      "riveting"
+    ],
+    "correct": 3,
+    "short": "Electronic terminals on circuit boards are joined by soldering — a low-temperature joining process using a lead-tin alloy filler, which is gentle enough for electronics.",
+    "solution": "Electronic terminals on circuit boards are joined by soldering — a low-temperature joining process using a lead-tin alloy filler, which is gentle enough for electronics.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_02",
+    "topicId": "pq-benchwork",
+    "question": "The removal of sharp and rough edges on a work piece can be done by:",
+    "options": [
+      "milling",
+      "grinding",
+      "scrapping",
+      "turning"
+    ],
+    "correct": 2,
+    "short": "The past-question key gives scrapping (scraping).",
+    "solution": "The past-question key gives scrapping (scraping). Hand scraping with a scraper is a fitting-shop method for removing sharp/rough edges (deburring); grinding would also smooth edges but the key credits scraping as the listed method.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_02",
+    "topicId": "pq-hand-tools",
+    "question": "A hacksaw is a:",
+    "options": [
+      "welding tool",
+      "milling tool",
+      "varnishing tool",
+      "cutting tool"
+    ],
+    "correct": 3,
+    "short": "The hacksaw is a hand cutting tool — it cuts metal bars into parts and removes layers of metal.",
+    "solution": "The hacksaw is a hand cutting tool — it cuts metal bars into parts and removes layers of metal.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_04",
+    "topicId": "pq-joining-safety",
+    "question": "Characteristics of a good workshop floor are but one:",
+    "options": [
+      "it must be resistant to wear and cheap to maintain",
+      "it must be able to support the weight of the worker",
+      "it must be able to resist the effect of process chemicals",
+      "it must be non-slip under normal working condition"
+    ],
+    "correct": 2,
+    "short": "A good workshop floor must resist wear, carry loads (workers AND machines), and be non-slip.",
+    "solution": "A good workshop floor must resist wear, carry loads (workers AND machines), and be non-slip. Resisting process chemicals is not a stated requirement in the key — that is the odd one out.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_05",
+    "topicId": "pq-joining-safety",
+    "question": "Ultra violet rays and flying splinters are most dangerous to the:",
+    "options": [
+      "nose",
+      "head",
+      "eye",
+      "leg"
+    ],
+    "correct": 2,
+    "short": "UV rays from welding arcs and flying splinters/chips primarily endanger the eyes — hence goggles/face shields (with proper shade for welding) are compulsory.",
+    "solution": "UV rays from welding arcs and flying splinters/chips primarily endanger the eyes — hence goggles/face shields (with proper shade for welding) are compulsory.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_03",
+    "topicId": "pq-hand-tools",
+    "question": "The efficient stroke for hacksaw is:",
+    "options": [
+      "side stroke",
+      "backward stroke",
+      "forward stroke",
+      "upward stroke"
+    ],
+    "correct": 2,
+    "short": "The hacksaw cuts on the forward stroke — the most active stroke, removing the maximum metal in one stroke.",
+    "solution": "The hacksaw cuts on the forward stroke — the most active stroke, removing the maximum metal in one stroke. The return stroke is idle (no cutting pressure).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_06",
+    "topicId": "pq-joining-safety",
+    "question": "Gloves are important in the workshop for preventing injury to the hand. Such injury may be due to:",
+    "options": [
+      "electric shock",
+      "corrosive fluid",
+      "hot material",
+      "horse play",
+      "all of the above"
+    ],
+    "correct": 4,
+    "short": "Gloves protect the hands from electric shock, corrosive fluids, hot materials and careless horseplay injuries — all of the above.",
+    "solution": "Gloves protect the hands from electric shock, corrosive fluids, hot materials and careless horseplay injuries — all of the above.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_04",
+    "topicId": "pq-hand-tools",
+    "question": "Chisel is a:",
+    "options": [
+      "marking tool",
+      "cutting tool",
+      "riveting tool",
+      "milling tool",
+      "none of the above"
+    ],
+    "correct": 1,
+    "short": "The cold chisel is a hand cutting tool — used to remove thick layers/edges of metal, usually together with a hammer.",
+    "solution": "The cold chisel is a hand cutting tool — used to remove thick layers/edges of metal, usually together with a hammer.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_04",
+    "topicId": "pq-materials",
+    "question": "You are required to produce a 'T' shaped object from a straight metal rod of 20 cm in length. Which of the following activities will you not do in carrying out the assignment?",
+    "options": [
+      "Cutting",
+      "welding",
+      "grinding",
+      "milling"
+    ],
+    "correct": 1,
+    "short": "Making a T-shape from a single rod involves cutting to length and shaping by grinding/milling.",
+    "solution": "Making a T-shape from a single rod involves cutting to length and shaping by grinding/milling. You would NOT weld — the key notes there is nothing to join (the T is formed from one piece).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_05",
+    "topicId": "pq-hand-tools",
+    "question": "Which of these is not part of a hammer:",
+    "options": [
+      "trunk",
+      "handle",
+      "pein",
+      "eye",
+      "head"
+    ],
+    "correct": 0,
+    "short": "A hammer consists of the head (with face and pein), the eye (the hole in the head for the handle) and the handle.",
+    "solution": "A hammer consists of the head (with face and pein), the eye (the hole in the head for the handle) and the handle. 'Trunk' is not a hammer part.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_05",
+    "topicId": "pq-materials",
+    "question": "Stiffness is the ability of a metal to:",
+    "options": [
+      "resist deformation under stress",
+      "resist externally applied forces",
+      "regain its original shape after deformation",
+      "retain deformation under load"
+    ],
+    "correct": 0,
+    "short": "Stiffness is a mechanical property: the ability of a metal to resist deformation (deflection) under stress.",
+    "solution": "Stiffness is a mechanical property: the ability of a metal to resist deformation (deflection) under stress. Regaining original shape is elasticity; retaining deformation is plasticity.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_06",
+    "topicId": "pq-hand-tools",
+    "question": "One of these is a file type based on coarseness:",
+    "options": [
+      "single cut",
+      "bastard cut",
+      "second cut",
+      "intermediate fine",
+      "none of the above"
+    ],
+    "correct": 1,
+    "short": "Files are classified by coarseness (grade) as rough, bastard, second cut, smooth and dead smooth.",
+    "solution": "Files are classified by coarseness (grade) as rough, bastard, second cut, smooth and dead smooth. 'Bastard cut' is therefore the coarseness grade; 'single cut' describes the cut pattern, not coarseness.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_11",
+    "topicId": "pq-measurement",
+    "question": "Parts of a micrometer include the following except:",
+    "options": [
+      "anvil",
+      "spindle",
+      "beam",
+      "ratchet"
+    ],
+    "correct": 2,
+    "short": "A micrometer has a frame, anvil, spindle, thimble, barrel/sleeve and ratchet (thimble stop).",
+    "solution": "A micrometer has a frame, anvil, spindle, thimble, barrel/sleeve and ratchet (thimble stop). 'Beam' belongs to a vernier caliper, not a micrometer — it is the odd one out.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_12",
+    "topicId": "pq-measurement",
+    "question": "To measure both internal and external diameters of a hollow pipe, the most appropriate tool is:",
+    "options": [
+      "inside caliper",
+      "outside caliper",
+      "linear caliper",
+      "vernier caliper"
+    ],
+    "correct": 3,
+    "short": "A vernier caliper can take both inside and outside measurements (with its internal and external jaws) — so it is the most appropriate single tool for a hollow pipe.",
+    "solution": "A vernier caliper can take both inside and outside measurements (with its internal and external jaws) — so it is the most appropriate single tool for a hollow pipe.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_13",
+    "topicId": "pq-measurement",
+    "question": "One of the following is a type of measurement in workshop practice:",
+    "options": [
+      "surface measurement",
+      "angular measurement",
+      "ground measurement",
+      "non-angular measurement"
+    ],
+    "correct": 1,
+    "short": "Workshop measurement is classified into linear measurement and angular measurement (angles, e.",
+    "solution": "Workshop measurement is classified into linear measurement and angular measurement (angles, e.g. with protractors/bevel gauges).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_03",
+    "topicId": "pq-benchwork",
+    "question": "Operations generally carried out on the workbench include:",
+    "options": [
+      "hammering",
+      "welding",
+      "screwing",
+      "chipping"
+    ],
+    "correct": 0,
+    "short": "The past-question key lists hammering as a typical workbench operation.",
+    "solution": "The past-question key lists hammering as a typical workbench operation. (Welding is done in the welding bay, not on the bench.)\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_14",
+    "topicId": "pq-measurement",
+    "question": "Example of a non-linear measurement is the dimension of a:",
+    "options": [
+      "cuboid",
+      "parallelogram",
+      "parabola",
+      "rectangle"
+    ],
+    "correct": 2,
+    "short": "A parabola is a curve — its dimension is a non-linear measurement; the others are straight-edged shapes measured linearly.",
+    "solution": "A parabola is a curve — its dimension is a non-linear measurement; the others are straight-edged shapes measured linearly.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_04",
+    "topicId": "pq-benchwork",
+    "question": "A V-block is a tool for:",
+    "options": [
+      "marking out",
+      "cutting",
+      "punching",
+      "blocking"
+    ],
+    "correct": 0,
+    "short": "The V-block is a marking-out tool: it supports round bars and helps locate their centres during marking out (often with a scribing block).",
+    "solution": "The V-block is a marking-out tool: it supports round bars and helps locate their centres during marking out (often with a scribing block).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_07",
+    "topicId": "pq-hand-tools",
+    "question": "The hammer is made from:",
+    "options": [
+      "mild steel",
+      "alloy steel",
+      "forged steel",
+      "carbon steel"
+    ],
+    "correct": 2,
+    "short": "Per the past-question key, hammers are made from forged steel — forging aligns the grain and makes the head tough enough to withstand repeated blows.",
+    "solution": "Per the past-question key, hammers are made from forged steel — forging aligns the grain and makes the head tough enough to withstand repeated blows.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_08",
+    "topicId": "pq-hand-tools",
+    "question": "A single cut file has separation of teeth in one direction of:",
+    "options": [
+      "90 degrees",
+      "30 degrees",
+      "60 degrees",
+      "45 degrees"
+    ],
+    "correct": 3,
+    "short": "The past-question key gives 45 degrees for the single-cut tooth angle (some textbooks quote 60–80° depending on the convention; follow the key for this paper).",
+    "solution": "The past-question key gives 45 degrees for the single-cut tooth angle (some textbooks quote 60–80° depending on the convention; follow the key for this paper).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_06",
+    "topicId": "pq-materials",
+    "question": "Cast iron is obtained from melting pig iron with:",
+    "options": [
+      "coke and aluminium",
+      "limestone and aluminium",
+      "aluminium and carbon",
+      "limestone and coke"
+    ],
+    "correct": 3,
+    "short": "Cast iron is produced by remelting pig iron in a cupola with coke (fuel) and limestone (flux) — limestone and coke.",
+    "solution": "Cast iron is produced by remelting pig iron in a cupola with coke (fuel) and limestone (flux) — limestone and coke.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_05",
+    "topicId": "pq-drilling-lathe",
+    "question": "A pillar drilling machine consists of a ___ on which the drill spindle is attached:",
+    "options": [
+      "beam",
+      "block",
+      "base",
+      "column"
+    ],
+    "correct": 3,
+    "short": "The pillar drilling machine is built on a vertical column (pillar); the drilling head with the spindle is attached to and slides on this column.",
+    "solution": "The pillar drilling machine is built on a vertical column (pillar); the drilling head with the spindle is attached to and slides on this column.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_06",
+    "topicId": "pq-drilling-lathe",
+    "question": "The lathe bed provides sitting position for ___ and sliding guide ways:",
+    "options": [
+      "tailstock",
+      "block",
+      "base",
+      "column"
+    ],
+    "correct": 0,
+    "short": "The lathe bed carries the sliding guide ways on which the tailstock (and carriage) sit and slide along the machine.",
+    "solution": "The lathe bed carries the sliding guide ways on which the tailstock (and carriage) sit and slide along the machine.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-drilling-lathe_07",
+    "topicId": "pq-drilling-lathe",
+    "question": "The first step in drawing a 15 mm diameter hole on a metal plate in the workshop is:",
+    "options": [
+      "punching the center point",
+      "drawing the circle",
+      "placing the workpiece on the drilling machine",
+      "marking the metal plate"
+    ],
+    "correct": 0,
+    "short": "Per the key, you first punch the centre point (centre-punch the hole position) before drawing the circle — the punched centre guides the scribing/drilling.",
+    "solution": "Per the key, you first punch the centre point (centre-punch the hole position) before drawing the circle — the punched centre guides the scribing/drilling.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_15",
+    "topicId": "pq-measurement",
+    "question": "An engineer designed a component to a length of 500 mm, but only a variation between 499.5 mm and 500.01 mm can be tolerated. This type of tolerance is called:",
+    "options": [
+      "bilateral",
+      "multilateral",
+      "collateral",
+      "unilateral"
+    ],
+    "correct": 0,
+    "short": "The permitted variation lies on BOTH sides of the basic size (499.",
+    "solution": "The permitted variation lies on BOTH sides of the basic size (499.5 is below 500, 500.01 is above) — that is a bilateral tolerance. (The handwritten key's '(d) Bilateral' is a slip; option (d) is unilateral, so the answer is (a) bilateral.)\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-materials_07",
+    "topicId": "pq-materials",
+    "question": "Bringing new materials to life is termed:",
+    "options": [
+      "manufacturing",
+      "designing",
+      "fabricating",
+      "production"
+    ],
+    "correct": 0,
+    "short": "The lecture notes define manufacturing as 'bringing new materials to life' — transforming raw materials into finished products.",
+    "solution": "The lecture notes define manufacturing as 'bringing new materials to life' — transforming raw materials into finished products.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_07",
+    "topicId": "pq-joining-safety",
+    "question": "The popular safety slang in the workshop is:",
+    "options": [
+      "Work first, safety next",
+      "Safety first, work next",
+      "No safety, more speed",
+      "Safety is optional"
+    ],
+    "correct": 1,
+    "short": "The lecture notes state the popular workshop safety slang is 'Safety first, work next' — safety always comes before the job.",
+    "solution": "The lecture notes state the popular workshop safety slang is 'Safety first, work next' — safety always comes before the job.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_08",
+    "topicId": "pq-joining-safety",
+    "question": "What does PPE mean in the workshop?",
+    "options": [
+      "Personal protective equipments",
+      "Personal practice equipment",
+      "Protected personnel equipment",
+      "Personal protective engineering"
+    ],
+    "correct": 0,
+    "short": "PPE = Personal Protective Equipment(s) — items worn to protect the worker, e.",
+    "solution": "PPE = Personal Protective Equipment(s) — items worn to protect the worker, e.g. goggles, gloves, safety shoes and overalls.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_09",
+    "topicId": "pq-hand-tools",
+    "question": "The major difference between hand tools and power tools is:",
+    "options": [
+      "their cost",
+      "the way power is supplied into them",
+      "their size",
+      "their material"
+    ],
+    "correct": 1,
+    "short": "The lecture notes state the major difference is the power supply — hand tools are driven by human effort, while power tools have an external power source (electricity, compressed air, etc.",
+    "solution": "The lecture notes state the major difference is the power supply — hand tools are driven by human effort, while power tools have an external power source (electricity, compressed air, etc.).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_10",
+    "topicId": "pq-hand-tools",
+    "question": "A file is a hand or power tool, and what is its function?",
+    "options": [
+      "Hand tool used to remove metal",
+      "Power tool used to cut wood",
+      "Hand tool used to measure",
+      "Power tool used to mark out"
+    ],
+    "correct": 0,
+    "short": "A file is a hand cutting tool — it removes metal in thin layers (with its slanting teeth) to clean and finish surfaces.",
+    "solution": "A file is a hand cutting tool — it removes metal in thin layers (with its slanting teeth) to clean and finish surfaces.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_11",
+    "topicId": "pq-hand-tools",
+    "question": "An example of power tools, per the lecture notes, includes:",
+    "options": [
+      "hacksaw",
+      "file",
+      "drilling machine",
+      "chisel"
+    ],
+    "correct": 2,
+    "short": "The lecture notes list the drilling machine as an example of a power tool (power-driven equipment).",
+    "solution": "The lecture notes list the drilling machine as an example of a power tool (power-driven equipment). Hacksaw, file and chisel are hand tools.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_05",
+    "topicId": "pq-benchwork",
+    "question": "The benchwork and fitting process consists of a rigid construction made of:",
+    "options": [
+      "hard solid wood or steel",
+      "plastic and glass",
+      "aluminium sheet",
+      "soft wood only"
+    ],
+    "correct": 0,
+    "short": "The bench is a rigid construction made of hard solid wood or steel — it must be strong enough to absorb hammering and filing loads.",
+    "solution": "The bench is a rigid construction made of hard solid wood or steel — it must be strong enough to absorb hammering and filing loads.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_06",
+    "topicId": "pq-benchwork",
+    "question": "What can you say about the terms 'fitting' and 'assembling'?",
+    "options": [
+      "They are opposite operations",
+      "They are used interchangeably and are interdependent",
+      "Fitting is done only by machines",
+      "Assembling does not involve the bench"
+    ],
+    "correct": 1,
+    "short": "The notes state the two terms are used interchangeably, though they are interdependent — both operations are carried out on the bench.",
+    "solution": "The notes state the two terms are used interchangeably, though they are interdependent — both operations are carried out on the bench.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_07",
+    "topicId": "pq-benchwork",
+    "question": "What type of tool is a vice, and which are its types?",
+    "options": [
+      "Cutting tool — bench, pipe, hand, pin",
+      "Work holding tool — bench, pipe, hand, pin",
+      "Marking tool — bench, pipe, hand, pin",
+      "Measuring tool — bench, pipe, hand, pin"
+    ],
+    "correct": 1,
+    "short": "A vice is a work-holding tool.",
+    "solution": "A vice is a work-holding tool. The four types (BPHP): bench vice (fixed on the bench), pipe vice (holds round objects like pipes/shafts), hand vice (holds workpieces steady) and pin vice (holds tiny objects).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_08",
+    "topicId": "pq-benchwork",
+    "question": "Bench vices have a fixed and a movable jaw because:",
+    "options": [
+      "the movable jaw can be adjusted to fit the size of the job",
+      "the fixed jaw is decorative",
+      "both jaws move together",
+      "only the fixed jaw grips"
+    ],
+    "correct": 0,
+    "short": "The movable jaw slides so the opening can be adjusted to grip the size of the job being held.",
+    "solution": "The movable jaw slides so the opening can be adjusted to grip the size of the job being held.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_09",
+    "topicId": "pq-benchwork",
+    "question": "How do you indicate the size of a vice?",
+    "options": [
+      "By its weight",
+      "By the width of the jaw and the maximum opening between the two jaws",
+      "By the height of the bench",
+      "By the length of the handle"
+    ],
+    "correct": 1,
+    "short": "Vice size is indicated by the width of its jaws and the maximum opening between the two jaws.",
+    "solution": "Vice size is indicated by the width of its jaws and the maximum opening between the two jaws.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_10",
+    "topicId": "pq-benchwork",
+    "question": "The material we work with when working on a work bench is the:",
+    "options": [
+      "workpiece held in the jaws",
+      "bench top only",
+      "vice handle",
+      "floor"
+    ],
+    "correct": 0,
+    "short": "The workpiece (the material being worked) is gripped in the jaws of the bench vice during benchwork.",
+    "solution": "The workpiece (the material being worked) is gripped in the jaws of the bench vice during benchwork.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_12",
+    "topicId": "pq-hand-tools",
+    "question": "What hammer mass is used for light jobs?",
+    "options": [
+      "0.45 kg and above",
+      "0.33 kg to 0.45 kg",
+      "0.11 kg to 0.33 kg",
+      "0.05 kg to 0.10 kg"
+    ],
+    "correct": 2,
+    "short": "Per the notes: light jobs use hammers of 0.",
+    "solution": "Per the notes: light jobs use hammers of 0.11–0.33 kg; moderate jobs 0.33–0.45 kg; heavy jobs 0.45 kg and above.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_13",
+    "topicId": "pq-hand-tools",
+    "question": "What hammer mass is used for moderate jobs?",
+    "options": [
+      "0.11 kg to 0.33 kg",
+      "0.33 kg to 0.45 kg",
+      "0.45 kg and above",
+      "below 0.11 kg"
+    ],
+    "correct": 1,
+    "short": "Moderate jobs use hammers of 0.",
+    "solution": "Moderate jobs use hammers of 0.33–0.45 kg (light: 0.11–0.33 kg; heavy: 0.45 kg and above).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_14",
+    "topicId": "pq-hand-tools",
+    "question": "What hammer mass is used for heavy jobs?",
+    "options": [
+      "0.11 kg to 0.33 kg",
+      "0.33 kg to 0.45 kg",
+      "0.45 kg and above",
+      "below 0.11 kg"
+    ],
+    "correct": 2,
+    "short": "Heavy jobs require hammers of 0.",
+    "solution": "Heavy jobs require hammers of 0.45 kg and above.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_15",
+    "topicId": "pq-hand-tools",
+    "question": "The processes involved in cutting operations are:",
+    "options": [
+      "sawing, filing and chipping",
+      "drilling, reaming and tapping",
+      "marking, punching and scribing",
+      "bending, rolling and forging"
+    ],
+    "correct": 0,
+    "short": "The lecture notes list the cutting operations as sawing, filing and chipping.",
+    "solution": "The lecture notes list the cutting operations as sawing, filing and chipping.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_16",
+    "topicId": "pq-hand-tools",
+    "question": "The two main functions of sawing are:",
+    "options": [
+      "cutting into parts and removing layers",
+      "drilling holes and reaming",
+      "marking and punching",
+      "clamping and holding"
+    ],
+    "correct": 0,
+    "short": "Sawing is used (1) to cut material into parts and (2) to remove layers of metal.",
+    "solution": "Sawing is used (1) to cut material into parts and (2) to remove layers of metal.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_17",
+    "topicId": "pq-hand-tools",
+    "question": "Which saw is used to cut material into parts?",
+    "options": [
+      "hacksaw",
+      "coping saw",
+      "band saw",
+      "keyhole saw"
+    ],
+    "correct": 0,
+    "short": "The hacksaw is the hand saw used to cut metal into parts (the notes: 'saw used to cut into parts is the hacksaw').",
+    "solution": "The hacksaw is the hand saw used to cut metal into parts (the notes: 'saw used to cut into parts is the hacksaw').\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_18",
+    "topicId": "pq-hand-tools",
+    "question": "How are the teeth of a hacksaw arranged?",
+    "options": [
+      "all teeth in a straight row",
+      "alternately to left and right, leaving the 3rd or 4th tooth straight",
+      "all teeth bent to the right",
+      "all teeth bent to the left"
+    ],
+    "correct": 1,
+    "short": "Hacksaw teeth are set alternately left and right with every 3rd or 4th tooth left straight — the set widens the cut so the blade does not jam.",
+    "solution": "Hacksaw teeth are set alternately left and right with every 3rd or 4th tooth left straight — the set widens the cut so the blade does not jam.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_11",
+    "topicId": "pq-benchwork",
+    "question": "The linear distance covered from one end to the other on a jaw is called:",
+    "options": [
+      "a stroke",
+      "a pass",
+      "a traverse",
+      "a pitch"
+    ],
+    "correct": 0,
+    "short": "The notes define stroke as the linear distance the cutting tool moves back and forth during hacksaw cutting.",
+    "solution": "The notes define stroke as the linear distance the cutting tool moves back and forth during hacksaw cutting.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_19",
+    "topicId": "pq-hand-tools",
+    "question": "The most active stroke in hacksaw cutting is called:",
+    "options": [
+      "the return stroke",
+      "the forward stroke",
+      "the side stroke",
+      "the idle stroke"
+    ],
+    "correct": 1,
+    "short": "The forward stroke is the most active — it removes the maximum amount of metal in one stroke (cutting is done on the push).",
+    "solution": "The forward stroke is the most active — it removes the maximum amount of metal in one stroke (cutting is done on the push).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_20",
+    "topicId": "pq-hand-tools",
+    "question": "What is the forward stroke?",
+    "options": [
+      "The stroke that removes the maximum amount of metal in one stroke",
+      "The stroke that returns the blade",
+      "The stroke used for marking",
+      "The stroke that cools the blade"
+    ],
+    "correct": 0,
+    "short": "The forward stroke removes the maximum metal in one stroke — it is the cutting stroke; the return stroke is idle.",
+    "solution": "The forward stroke removes the maximum metal in one stroke — it is the cutting stroke; the return stroke is idle.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_21",
+    "topicId": "pq-hand-tools",
+    "question": "What is the use of a chisel?",
+    "options": [
+      "To remove the edge of metals in thick layers (more than about 0.6 mm)",
+      "To measure metal thickness",
+      "To hold the work piece",
+      "To finish wood surfaces"
+    ],
+    "correct": 0,
+    "short": "The cold chisel removes metal in relatively thick layers — the notes say it removes the edge of metals more than about 0.",
+    "solution": "The cold chisel removes metal in relatively thick layers — the notes say it removes the edge of metals more than about 0.6 mm thick (a file is used for thin layers).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_22",
+    "topicId": "pq-hand-tools",
+    "question": "The slanting rows on the surface of a file are called:",
+    "options": [
+      "the cut of teeth",
+      "the grain",
+      "the flutes",
+      "the lands"
+    ],
+    "correct": 0,
+    "short": "The slanting rows of teeth on a file's surface are called the cut of the teeth (single or double cut).",
+    "solution": "The slanting rows of teeth on a file's surface are called the cut of the teeth (single or double cut).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_23",
+    "topicId": "pq-hand-tools",
+    "question": "A file is used after sawing to:",
+    "options": [
+      "clean the surface",
+      "cut the metal into parts",
+      "mark the surface",
+      "hold the work"
+    ],
+    "correct": 0,
+    "short": "After sawing, the file cleans (finishes) the cut surface, removing saw marks and roughness.",
+    "solution": "After sawing, the file cleans (finishes) the cut surface, removing saw marks and roughness.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_24",
+    "topicId": "pq-hand-tools",
+    "question": "Example sizes of files (per the notes) are:",
+    "options": [
+      "100 mm to 250 mm and 250 mm to 450 mm",
+      "10 mm to 50 mm only",
+      "500 mm to 1000 mm",
+      "1 m and above"
+    ],
+    "correct": 0,
+    "short": "The notes give file sizes of 100–250 mm (small/fine range) and 250–450 mm (heavier range).",
+    "solution": "The notes give file sizes of 100–250 mm (small/fine range) and 250–450 mm (heavier range).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_12",
+    "topicId": "pq-benchwork",
+    "question": "What is 'Marking out'?",
+    "options": [
+      "The process of scribing lines on the worksheet as an appropriate cutting guide",
+      "The process of cutting the metal to size",
+      "The process of painting the work piece",
+      "The process of clamping the work"
+    ],
+    "correct": 0,
+    "short": "Marking out is scribing lines on the work as a cutting guide — it defines the shape and shows the machinist exactly where to cut.",
+    "solution": "Marking out is scribing lines on the work as a cutting guide — it defines the shape and shows the machinist exactly where to cut.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_16",
+    "topicId": "pq-measurement",
+    "question": "Define Accuracy:",
+    "options": [
+      "How close repeated measurements are to each other",
+      "The quality of a value being close to the real/true value",
+      "How large the measurement is",
+      "The number of decimal places"
+    ],
+    "correct": 1,
+    "short": "Accuracy is the closeness of a measured value to the real (true) value; precision is how close repeated measurements are to each other.",
+    "solution": "Accuracy is the closeness of a measured value to the real (true) value; precision is how close repeated measurements are to each other.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_17",
+    "topicId": "pq-measurement",
+    "question": "Define Precision:",
+    "options": [
+      "How close repeated measurements are to each other",
+      "The closeness of a value to the true value",
+      "The size of the instrument",
+      "The skill of the operator"
+    ],
+    "correct": 0,
+    "short": "Precision is the closeness (repeatability) of repeated measurements to each other — a precise instrument gives consistent readings.",
+    "solution": "Precision is the closeness (repeatability) of repeated measurements to each other — a precise instrument gives consistent readings.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_25",
+    "topicId": "pq-hand-tools",
+    "question": "The methods of filing are:",
+    "options": [
+      "straight, cross and draw",
+      "hot, warm and cold",
+      "rough, smooth and fine",
+      "push, pull and lift"
+    ],
+    "correct": 0,
+    "short": "The three filing methods are straight filing, cross filing and draw filing.",
+    "solution": "The three filing methods are straight filing, cross filing and draw filing.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_09",
+    "topicId": "pq-joining-safety",
+    "question": "The process of cutting external threads is called:",
+    "options": [
+      "dyeing (dieing)",
+      "tapping",
+      "reaming",
+      "broaching"
+    ],
+    "correct": 0,
+    "short": "External threads are cut with a die — the process is called dyeing/dieing (die threading); internal threads are cut by tapping.",
+    "solution": "External threads are cut with a die — the process is called dyeing/dieing (die threading); internal threads are cut by tapping.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_10",
+    "topicId": "pq-joining-safety",
+    "question": "The process of cutting internal threads in an existing hole is called:",
+    "options": [
+      "tapping",
+      "dyeing",
+      "drilling",
+      "reaming"
+    ],
+    "correct": 0,
+    "short": "Cutting internal threads in a hole is tapping (with a tap); cutting external threads is dyeing (with a die).",
+    "solution": "Cutting internal threads in a hole is tapping (with a tap); cutting external threads is dyeing (with a die).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_11",
+    "topicId": "pq-joining-safety",
+    "question": "An example of temporary metal joining is:",
+    "options": [
+      "bolting",
+      "soldering",
+      "riveting",
+      "welding"
+    ],
+    "correct": 0,
+    "short": "Bolting is a temporary joint (can be disassembled without damage).",
+    "solution": "Bolting is a temporary joint (can be disassembled without damage). Soldering, riveting and welding are permanent joints.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_12",
+    "topicId": "pq-joining-safety",
+    "question": "Examples of permanent metal joining include:",
+    "options": [
+      "soldering, riveting and welding",
+      "bolting and nutting",
+      "clamping",
+      "keying"
+    ],
+    "correct": 0,
+    "short": "The notes list soldering, riveting and welding as permanent joining methods (bolting is temporary).",
+    "solution": "The notes list soldering, riveting and welding as permanent joining methods (bolting is temporary).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_13",
+    "topicId": "pq-joining-safety",
+    "question": "The two types of welding are:",
+    "options": [
+      "arc welding and gas welding",
+      "spot and seam welding",
+      "cold and hot welding",
+      "manual and automatic welding"
+    ],
+    "correct": 0,
+    "short": "The two basic types of welding are arc welding (heat from an electric arc) and gas welding (heat from burning a fuel gas, e.",
+    "solution": "The two basic types of welding are arc welding (heat from an electric arc) and gas welding (heat from burning a fuel gas, e.g. oxy-acetylene).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_14",
+    "topicId": "pq-joining-safety",
+    "question": "The heat sources of the two welding types are:",
+    "options": [
+      "arc → electricity; gas → oxy-acetylene",
+      "arc → gas; gas → electricity",
+      "both → electricity",
+      "both → gas"
+    ],
+    "correct": 0,
+    "short": "Arc welding uses an electric arc as its heat source, while gas welding burns oxygen + acetylene (combustion).",
+    "solution": "Arc welding uses an electric arc as its heat source, while gas welding burns oxygen + acetylene (combustion).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_15",
+    "topicId": "pq-joining-safety",
+    "question": "The chemical equation for the combustion of carbon is:",
+    "options": [
+      "C + O₂ = CO₂",
+      "C + O₂ = CO",
+      "C + H₂O = CH₄",
+      "C + N₂ = CN"
+    ],
+    "correct": 0,
+    "short": "The notes give C + O₂ → CO₂ — carbon burns in oxygen to form carbon dioxide (this underlies the heat release in the flame).",
+    "solution": "The notes give C + O₂ → CO₂ — carbon burns in oxygen to form carbon dioxide (this underlies the heat release in the flame).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_16",
+    "topicId": "pq-joining-safety",
+    "question": "How do we distinguish the oxygen cylinder from the acetylene cylinder?",
+    "options": [
+      "Oxygen — black; acetylene — brownish",
+      "Oxygen — brownish; acetylene — black",
+      "Both are painted green",
+      "Oxygen — red; acetylene — blue"
+    ],
+    "correct": 0,
+    "short": "Per the notes, the oxygen cylinder is black and the acetylene cylinder is brownish (maroon) — colour coding prevents dangerous mix-ups.",
+    "solution": "Per the notes, the oxygen cylinder is black and the acetylene cylinder is brownish (maroon) — colour coding prevents dangerous mix-ups.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_17",
+    "topicId": "pq-joining-safety",
+    "question": "How is acetylene compressed into its cylinder?",
+    "options": [
+      "Acetone absorbs the acetylene and compresses it in the cylinder",
+      "It is frozen into a solid",
+      "It is mixed with water",
+      "It is stored at low pressure only"
+    ],
+    "correct": 0,
+    "short": "Acetylene is dissolved in acetone held in the porous mass inside the cylinder — the acetone absorbs and safely compresses the acetylene.",
+    "solution": "Acetylene is dissolved in acetone held in the porous mass inside the cylinder — the acetone absorbs and safely compresses the acetylene.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_18",
+    "topicId": "pq-joining-safety",
+    "question": "The different kinds of flames produced in the oxy-acetylene reaction are:",
+    "options": [
+      "neutral, reducing (carburizing) and oxidizing flames",
+      "blue, red and yellow flames",
+      "hot, warm and cold flames",
+      "soft, medium and hard flames"
+    ],
+    "correct": 0,
+    "short": "The three oxy-acetylene flames are: neutral (equal O₂/acetylene), reducing or carburizing (excess acetylene) and oxidizing (excess oxygen).",
+    "solution": "The three oxy-acetylene flames are: neutral (equal O₂/acetylene), reducing or carburizing (excess acetylene) and oxidizing (excess oxygen).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_19",
+    "topicId": "pq-joining-safety",
+    "question": "What type of flame is produced if there is more oxygen than acetylene in the reaction?",
+    "options": [
+      "oxidizing flame",
+      "neutral flame",
+      "carburizing flame",
+      "reducing flame"
+    ],
+    "correct": 0,
+    "short": "Excess oxygen gives an oxidizing flame (used for brazing); excess acetylene gives a carburizing/reducing flame.",
+    "solution": "Excess oxygen gives an oxidizing flame (used for brazing); excess acetylene gives a carburizing/reducing flame.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_20",
+    "topicId": "pq-joining-safety",
+    "question": "What type of flame is produced if there is more acetylene than oxygen in the reaction?",
+    "options": [
+      "carburizing or reducing flame",
+      "oxidizing flame",
+      "neutral flame",
+      "blue flame"
+    ],
+    "correct": 0,
+    "short": "Excess acetylene produces the carburizing (reducing) flame — it has three visible zones and is used for welding nickel/chromium alloys.",
+    "solution": "Excess acetylene produces the carburizing (reducing) flame — it has three visible zones and is used for welding nickel/chromium alloys.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_21",
+    "topicId": "pq-joining-safety",
+    "question": "In the course of C₂H₂ + O₂ burning, which combustion zone is the hottest?",
+    "options": [
+      "primary combustion zone (about 3300°C)",
+      "secondary combustion zone",
+      "outer envelope",
+      "the tip of the flame"
+    ],
+    "correct": 0,
+    "short": "The notes give the primary combustion zone as the hottest part of the flame, with a temperature of about 3300°C.",
+    "solution": "The notes give the primary combustion zone as the hottest part of the flame, with a temperature of about 3300°C.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-joining-safety_22",
+    "topicId": "pq-joining-safety",
+    "question": "How many types of joints are there, and which are they?",
+    "options": [
+      "5 — tee, butt, corner, lap and edge joints",
+      "3 — tee, butt and lap",
+      "4 — butt, lap, edge and corner",
+      "6 — tee, butt, corner, lap, edge and seam"
+    ],
+    "correct": 0,
+    "short": "There are five basic weld joints: tee joint, butt joint, corner joint, lap joint and edge joint.",
+    "solution": "There are five basic weld joints: tee joint, butt joint, corner joint, lap joint and edge joint.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_26",
+    "topicId": "pq-hand-tools",
+    "question": "What is a stroke?",
+    "options": [
+      "The linear distance the cutting tool moves back and forth during hacksaw cutting",
+      "The width of the saw blade",
+      "The number of teeth per inch",
+      "The angle of the blade"
+    ],
+    "correct": 0,
+    "short": "A stroke is the linear distance the cutting tool travels back and forth in a cutting operation (e.",
+    "solution": "A stroke is the linear distance the cutting tool travels back and forth in a cutting operation (e.g. hacksaw cutting).\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-measurement_18",
+    "topicId": "pq-measurement",
+    "question": "A product has an acceptable width of 18 ± 2 mm. Calculate respectively the minimum and maximum acceptable sizes of the product:",
+    "options": [
+      "16 mm and 20 mm",
+      "18 mm and 20 mm",
+      "16 mm and 18 mm",
+      "14 mm and 22 mm"
+    ],
+    "correct": 0,
+    "short": "18 ± 2 mm means the basic size is 18 mm with a tolerance of 2 mm on either side: minimum = 18 − 2 = 16 mm; maximum = 18 + 2 = 20 mm.",
+    "solution": "18 ± 2 mm means the basic size is 18 mm with a tolerance of 2 mm on either side: minimum = 18 − 2 = 16 mm; maximum = 18 + 2 = 20 mm.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_27",
+    "topicId": "pq-hand-tools",
+    "question": "The cold chisels are made by:",
+    "options": [
+      "drawing",
+      "rolling",
+      "piercing",
+      "forging"
+    ],
+    "correct": 3,
+    "short": "Cold chisels are produced by forging — hot forging shapes the tough tool-steel body and head, giving it the strength to withstand hammer blows (the scanned key for this row was not clearly legible, so the answer follows standard workshop-technology practice).",
+    "solution": "Cold chisels are produced by forging — hot forging shapes the tough tool-steel body and head, giving it the strength to withstand hammer blows (the scanned key for this row was not clearly legible, so the answer follows standard workshop-technology practice).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_28",
+    "topicId": "pq-hand-tools",
+    "question": "The cold chisels are made from:",
+    "options": [
+      "cast iron",
+      "mild steel",
+      "cast tool steel",
+      "high speed steel",
+      "stainless steel"
+    ],
+    "correct": 2,
+    "short": "Cold chisels are made from cast tool steel (high-carbon tool steel) — hard enough to cut metal yet tough enough not to shatter under impact; the scanned key also reads (c).",
+    "solution": "Cold chisels are made from cast tool steel (high-carbon tool steel) — hard enough to cut metal yet tough enough not to shatter under impact; the scanned key also reads (c).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_29",
+    "topicId": "pq-hand-tools",
+    "question": "The cross-section of a chisel is usually:",
+    "options": [
+      "rectangular",
+      "square",
+      "hexagonal",
+      "octagonal",
+      "circular",
+      "triangular"
+    ],
+    "correct": 3,
+    "short": "A cold chisel usually has an octagonal cross-section — the flats give a good grip and prevent rolling; the key reads (d) octagonal.",
+    "solution": "A cold chisel usually has an octagonal cross-section — the flats give a good grip and prevent rolling; the key reads (d) octagonal.\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_30",
+    "topicId": "pq-hand-tools",
+    "question": "A diamond pointed chisel is used for cutting:",
+    "options": [
+      "flat surfaces",
+      "grooves",
+      "keyways",
+      "V-shaped grooves",
+      "all of the above"
+    ],
+    "correct": 3,
+    "short": "The diamond-point chisel is used for cutting V-shaped grooves (and squaring corners of grooves); the key reads (d).",
+    "solution": "The diamond-point chisel is used for cutting V-shaped grooves (and squaring corners of grooves); the key reads (d).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_31",
+    "topicId": "pq-hand-tools",
+    "question": "A file with 20 teeth in 25 mm is called:",
+    "options": [
+      "rough file",
+      "bastard file",
+      "second cut file",
+      "smooth file",
+      "dead smooth file"
+    ],
+    "correct": 0,
+    "short": "Files are graded by the number of teeth per 25 mm: about 20 teeth per 25 mm is a rough file (bastard ≈ 30, second cut ≈ 40, smooth ≈ 50–60, dead smooth ≥ 100); the key reads (a).",
+    "solution": "Files are graded by the number of teeth per 25 mm: about 20 teeth per 25 mm is a rough file (bastard ≈ 30, second cut ≈ 40, smooth ≈ 50–60, dead smooth ≥ 100); the key reads (a).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_32",
+    "topicId": "pq-hand-tools",
+    "question": "When the file is moved to and fro over the work, it is known as:",
+    "options": [
+      "cross filing",
+      "draw filing",
+      "pull and push filing",
+      "none of these"
+    ],
+    "correct": 1,
+    "short": "Moving the file to and fro along the length of the work is draw filing (both hands on the file, light pressure) — it produces a fine finish; the key reads (b).",
+    "solution": "Moving the file to and fro along the length of the work is draw filing (both hands on the file, light pressure) — it produces a fine finish; the key reads (b).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_33",
+    "topicId": "pq-hand-tools",
+    "question": "When filing soft metals, the file teeth get clogged with minute particles of metal. The file should be cleaned by:",
+    "options": [
+      "washing it with water",
+      "rubbing on wood",
+      "washing it with dilute acid",
+      "using a file card"
+    ],
+    "correct": 3,
+    "short": "A clogged (pinned) file is cleaned with a file card — a wire brush used along the teeth (water/acid would rust the file); this is the standard workshop answer.",
+    "solution": "A clogged (pinned) file is cleaned with a file card — a wire brush used along the teeth (water/acid would rust the file); this is the standard workshop answer.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_34",
+    "topicId": "pq-hand-tools",
+    "question": "A file removes the metal during:",
+    "options": [
+      "forward stroke",
+      "return stroke",
+      "both forward and return strokes",
+      "none of the above"
+    ],
+    "correct": 0,
+    "short": "A file cuts only on the forward (push) stroke; pressure is released on the return stroke to preserve the teeth; the key reads (a).",
+    "solution": "A file cuts only on the forward (push) stroke; pressure is released on the return stroke to preserve the teeth; the key reads (a).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_35",
+    "topicId": "pq-hand-tools",
+    "question": "A hacksaw blade cuts on the:",
+    "options": [
+      "forward stroke",
+      "return stroke",
+      "both forward and return strokes",
+      "cutting depends upon the direction of force"
+    ],
+    "correct": 0,
+    "short": "A hacksaw blade cuts on the forward stroke — the teeth point forward, so cutting happens on the push; the return stroke is idle.",
+    "solution": "A hacksaw blade cuts on the forward stroke — the teeth point forward, so cutting happens on the push; the return stroke is idle.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_36",
+    "topicId": "pq-hand-tools",
+    "question": "The teeth of a hacksaw blade are bent:",
+    "options": [
+      "towards right",
+      "towards left",
+      "alternately to right and left and every third or fourth left straight",
+      "may be bent in any direction"
+    ],
+    "correct": 2,
+    "short": "Hacksaw teeth are set alternately right and left, with every third or fourth tooth left straight — the set widens the kerf so the blade does not jam; the key reads (c).",
+    "solution": "Hacksaw teeth are set alternately right and left, with every third or fourth tooth left straight — the set widens the kerf so the blade does not jam; the key reads (c).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_37",
+    "topicId": "pq-hand-tools",
+    "question": "A hacksaw blade is specified by its:",
+    "options": [
+      "length",
+      "material",
+      "width",
+      "number of teeth",
+      "none of the above"
+    ],
+    "correct": 0,
+    "short": "A hacksaw blade is specified by its length — the centre-to-centre distance between the pin holes (e.",
+    "solution": "A hacksaw blade is specified by its length — the centre-to-centre distance between the pin holes (e.g. 250 mm or 300 mm); the key reads (a).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_38",
+    "topicId": "pq-hand-tools",
+    "question": "To prevent the body of the blade from jamming in the saw cut, the teeth of the blade are:",
+    "options": [
+      "strengthened",
+      "sharpened",
+      "set",
+      "all of the above",
+      "none of the above"
+    ],
+    "correct": 2,
+    "short": "The teeth are 'set' (bent alternately left and right) so the cut is wider than the blade body — preventing jamming; the key reads (c).",
+    "solution": "The teeth are 'set' (bent alternately left and right) so the cut is wider than the blade body — preventing jamming; the key reads (c).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-hand-tools_39",
+    "topicId": "pq-hand-tools",
+    "question": "The type of file used for wood work is:",
+    "options": [
+      "single-cut file",
+      "double-cut file",
+      "rasp-cut file",
+      "any one of these"
+    ],
+    "correct": 2,
+    "short": "Wood is filed with a rasp-cut file — its coarse, individually raised teeth remove soft wood quickly without clogging; the key reads (c).",
+    "solution": "Wood is filed with a rasp-cut file — its coarse, individually raised teeth remove soft wood quickly without clogging; the key reads (c).\n\n📘 From the Actual Past Questions material (AGE 201 Workshop Practice past question): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_13",
+    "topicId": "pq-benchwork",
+    "question": "V-block is used to:",
+    "options": [
+      "check the trueness of a flat surface",
+      "locate centres of round rods",
+      "check the surface roughness",
+      "none of the above"
+    ],
+    "correct": 1,
+    "short": "A V-block supports round rods/bars and, with a scribing block, is used to locate (mark) their centres — standard workshop practice.",
+    "solution": "A V-block supports round rods/bars and, with a scribing block, is used to locate (mark) their centres — standard workshop practice.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
+  },
+  {
+    "id": "aee_pq_pq-benchwork_14",
+    "topicId": "pq-benchwork",
+    "question": "Scribing block is used to:",
+    "options": [
+      "hold the round bars during marking",
+      "check the trueness of flat surfaces",
+      "locate the centres of round bars",
+      "check the surface roughness"
+    ],
+    "correct": 2,
+    "short": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.",
+    "solution": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
   }
 ]
 }

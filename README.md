@@ -11,7 +11,7 @@ no backend needed, progress saved in the browser.
 
 | Course | Status | Questions | Structure |
 |---|---|---|---|
-| AEE 202 — Agricultural Engineering | ✅ live | 201 | 3 main categories · 17 topics · 20 diagram questions |
+| AEE 202 — Agricultural Engineering | ✅ live | 308 | 3 main categories · 23 topics · 20 diagram questions |
 | MTH 202 — Mathematical Methods | ✅ live | 149 | 8 topics |
 | MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
 
@@ -25,7 +25,12 @@ in `src/data.js`), and each topic belongs to exactly one category:
    working, heat treatment, cutting tools, drilling, bench work & fitting,
    machine operations, advanced manufacturing, hand tools, jigs & fixtures,
    workshop safety).
-2. **Questions from Actual past questions** — coming soon (content to be uploaded).
+2. **Questions from Actual past questions** — 107 questions across 6 topics
+   (Measurement, Precision & Tolerance; Marking Out & Benchwork; Hammers,
+   Chisels, Files & Hacksaw; Drilling & Lathe Operations; Materials &
+   Engineering Products; Joining, Welding & Workshop Safety). Sourced from the
+   AGE 201 Workshop Practice past paper, lecture notes and the compulsory
+   objective questions, with AI-authenticated answers and explanations.
 3. **Questions formed from First Shared Slide** — 100 questions across 5 topics
    (Centre Lathe & Lathe Operations, Shapers & Planers, Drilling Machines,
    Milling Process, Grinding Process), each with a detailed slide-grounded
