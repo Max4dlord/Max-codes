@@ -4,8 +4,8 @@ import { getTopics } from '../utils.js'
 
 const FEATURES = [
   { ico: '⏱️', title: 'Timed tests, your way', text: 'Pick a duration and how many questions you want. A live countdown with Pause / Resume keeps you in control.' },
-  { ico: '🎯', title: 'Topic-based practice', text: 'Drill a single topic — say, Complex Numbers for 25 minutes, 40 questions — or mix the whole syllabus.' },
-  { ico: '🔀', title: 'Shuffled question bank', text: 'Every test re-shuffles order and options from the bank, so no two practice runs feel the same.' },
+  { ico: '🎯', title: 'Topic-based practice', text: 'Drill a single topic — say, Welding Defects for 25 minutes — or mix the whole syllabus.' },
+  { ico: '🔀', title: 'Shuffled question bank', text: 'Every test re-shuffles question order and options from the bank, so no two practice runs feel the same.' },
   { ico: '💾', title: 'Progress auto-saved', text: 'Reload, switch tabs, come back tomorrow — your test resumes exactly where you stopped, timer and all.' },
   { ico: '✅', title: 'Instant verdicts', text: 'After submitting, each question shows right/wrong with a one-line explanation, then a tap for the full solution.' },
   { ico: '📖', title: 'Full worked solutions', text: '“Show full explanation” opens a side panel with complete, step-by-step working — without leaving your results.' }
@@ -19,7 +19,8 @@ const STEPS = [
 ]
 
 export default function Landing() {
-  const course = courses[0]
+  const availableCourses = courses.filter((c) => c.available)
+  const course = availableCourses[0] || courses[0]
   const topics = getTopics(course.id)
   function scrollToFeatures() {
     document.getElementById('features')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -30,7 +31,7 @@ export default function Landing() {
       <section className="hero">
         <span className="badge"><span className="dot" /> CBT Practice Platform · Live</span>
         <h1>
-          Master your exams with <span className="grad">MaxPrep CBT Lab</span>
+          Master your exams with <span className="grad">Max-codes CBT Lab</span>
         </h1>
         <p className="lead">
           A clean, exam-realistic testing environment for past questions. Configure your test,
@@ -44,7 +45,7 @@ export default function Landing() {
         <p className="hero-note">No sign-up needed · works offline · your progress is saved on this device</p>
 
         <div className="hero-card">
-          <div className="stat"><div className="num grad">{courses.length}</div><div className="lbl">Courses ready to scale</div></div>
+          <div className="stat"><div className="num grad">{availableCourses.length}</div><div className="lbl">Courses live now</div></div>
           <div className="stat"><div className="num">{getTopics(course.id).length}</div><div className="lbl">Topic categories</div></div>
           <div className="stat"><div className="num grad">100%</div><div className="lbl">Free to practice</div></div>
           <div className="stat"><div className="num">∞</div><div className="lbl">Reshuffles per test</div></div>
@@ -84,7 +85,7 @@ export default function Landing() {
 
       <section className="section">
         <div className="section-head">
-          <h2>Topics covered in MTH 202</h2>
+          <h2>Topics covered in {course.code}</h2>
           <p>Comprehensive coverage across all core areas you need to master.</p>
         </div>
         <div className="topic-grid">
@@ -103,7 +104,7 @@ export default function Landing() {
       </div>
 
       <footer>
-        © 2026 MaxPrep CBT Lab — Built for focused, exam-realistic practice.
+        © 2026 Max-codes CBT Lab — Built for focused, exam-realistic practice.
       </footer>
     </>
   )

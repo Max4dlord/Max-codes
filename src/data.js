@@ -1,21 +1,21 @@
 // ===========================================================================
-// QUESTION BANK  —  MaxPrep CBT Lab
+// QUESTION BANK  —  Max-codes CBT Lab
 // ===========================================================================
 export const courses = [
+  {
+    "id": "aee202",
+    "code": "AEE 202",
+    "title": "Agricultural Engineering",
+    "blurb": "Workshop practice for agricultural engineers — welding processes & defects, metal working, fasteners, heat treatment, machine operations, workshop safety and much more, backed by a large growing question bank.",
+    "accent": "#0ea5e9",
+    "available": true
+  },
   {
     "id": "mth202",
     "code": "MTH 202",
     "title": "Mathematical Methods",
     "blurb": "Core techniques for scientists & engineers: complex numbers, vector analysis, linear algebra, ordinary differential equations, Laplace & Fourier transforms, and partial differential equations.",
     "accent": "#2563eb",
-    "available": true
-  },
-  {
-    "id": "aee202",
-    "code": "AEE 202",
-    "title": "Agricultural Engineering",
-    "blurb": "Covers welding defects, causes and prevention — now with 22 practice questions.",
-    "accent": "#0ea5e9",
     "available": true
   },
   {

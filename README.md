@@ -1,117 +1,117 @@
-# MTH 202 — Mathematical Methods · CBT Lab
+# Max-codes — CBT Lab
 
-A clean, exam-realistic Computer-Based Testing platform. Built with **React + Vite**.
-Run it, practice timed/topic-based tests, pause the timer, and review every question
-with full worked solutions — all offline, progress auto-saved in the browser.
+A clean, exam-realistic, **multi-course Computer-Based Testing platform**.
+Built with **React + Vite**. Timed tests, study mode, shuffled banks,
+pause/resume, auto-saved progress and full worked solutions — 100% static,
+no backend needed, progress saved in the browser.
+
+---
+
+## 📚 Courses & content
+
+| Course | Status | Questions | Topics |
+|---|---|---|---|
+| AEE 202 — Agricultural Engineering | ✅ live | 236 | 28 (welding, metal working, fasteners, machine ops, safety…) |
+| MTH 202 — Mathematical Methods | ✅ live | 149 | 8 (complex numbers, linear algebra, ODEs, transforms…) |
+| MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
+
+The question bank lives in **`src/data.js`** and includes diagram-based
+questions (images in `public/images/`).
 
 ---
 
 ## ▶️ Run it
 
 ```bash
-cd cbt-platform
 npm install      # first time only
 npm run dev      # http://localhost:5173
 ```
 
-Build for production: `npm run build` → deploy the `dist/` folder anywhere.
+Build for production: `npm run build` → deploys the `dist/` folder anywhere.
 
 ---
 
-## ✨ Features (what's already working)
+## ✨ Features
 
-- **Landing page** for MTH 202 — Mathematical Methods.
+- **Landing page** with live course/topic overview.
 - **Dashboard** to configure each test:
   - Choose **duration** (10–90 min) and **number of questions** (10–50 or all).
-  - **Full test** (all topics, shuffled) **or topic-based test** (e.g. *Complex Numbers, 25 min, 40 Q*).
+  - **Full test** (all topics, shuffled) **or topic-based test**.
   - Topics are **auto-classified from the question bank** — tag a question with a `topicId` and it appears here.
-  - **Course selector** — built to scale to many courses.
-- **Test engine**:
-  - Live countdown with **Pause / Resume**.
-  - **Shuffled** question order on every start; **question palette** to jump/flag.
-  - **Auto-saved progress** — reload, close the tab, come back tomorrow and **resume exactly where you stopped** (answers, timer, current question all preserved).
-  - Auto-submit when time hits zero.
-- **Results & review**:
-  - Score ring + breakdown (correct / wrong / skipped / time used).
-  - Per question: right/wrong verdict + a **one-line explanation**.
-  - **“Show full explanation”** opens a **side panel** with the complete, step-by-step worked solution — **no redirect, no progress lost**.
-  - “Expand all explanations” to read everything inline.
+- **Test engine**: live countdown with **Pause / Resume**, shuffled order, question palette, flagging, **auto-saved progress** (reload/close/resume exactly where you stopped), auto-submit on time-out.
+- **Study Mode**: same bank, no timer — the correct answer is pre-ticked and a "See Detailed Explanation" button shows a long, step-by-step breakdown. Topic deep-dives included.
+- **Results & review**: score ring, breakdown (correct / wrong / skipped / time used), per-question verdict + one-line explanation, and a **side panel with full worked solutions** — no redirect, no progress lost.
+- **Diagram support**: questions can carry an `image` (welding defects, flame zones, anvil, hacksaw TPI, jig vs fixture, taper pin…).
 - **Multi-course ready** — add courses/topics/questions in one file.
 
 ---
 
-## 🗂️ Add YOUR real past questions & solutions
+## 🗂️ Add questions
 
 Everything lives in **`src/data.js`**. Each question is one object:
 
 ```js
 {
-  id: 'mth202_c_6',                 // unique
-  topicId: 'complex-numbers',       // must exist in topicMeta[mth202]
-  question: 'Your question text?',
-  options: ['A', 'B', 'C', 'D'],    // 2–6 options
-  correct: 2,                       // index of the right option (0-based)
+  id: 'aee_wd_01',                 // unique
+  topicId: 'welding-defects',      // must exist in topicMeta.aee202
+  question: 'What is slag in welding and what is its primary cause?',
+  options: ['A', 'B', 'C', 'D'],   // 2–6 options
+  correct: 0,                      // index of the right option (0-based)
   short: 'One-line why it is right/wrong.',
-  solution: 'Full step-by-step worked solution shown in the side panel.'
+  solution: 'Full step-by-step worked solution shown in the side panel.',
+  image: '/images/optional-diagram.png'   // optional
 }
 ```
 
-**To add questions:** push objects into `questionBank['mth202']` and tag each with a `topicId`.
-**To add a topic:** add `{ id, name }` to `topicMeta['mth202']` — it shows on the dashboard automatically.
-**To add a course:** add to `courses`, plus `topicMeta[<id>]` and `questionBank[<id>]` arrays.
+**To add a course:** add it to `courses`, plus `topicMeta[<id>]` and
+`questionBank[<id>]` arrays.
 
-> The sample bank has ~27 questions across 6 topics (Complex Numbers, Differential
-> Equations, Laplace Transforms, Fourier Series, Vector Analysis, PDEs). Replace them
-> with your real past questions and the few solutions you already have.
-
----
-
-## 💬 Optional Telegram integration
-
-The recommended approach (in-app side panel) is already implemented, so **progress is
-never disrupted**. If you also want a Telegram community/bot for live discussion:
-
-1. Create a Telegram group/bot, copy its invite link (e.g. `https://t.me/+YourGroup`).
-2. Paste it into `TELEGRAM_URL` in **`src/utils.js`**.
-3. A **“Discuss in Telegram →”** button then appears inside the solution panel.
-   It opens in a **new tab**, so the test/results are never disturbed, and progress
-   stays saved — the user returns to the exact same spot.
-
-> The side panel already keeps users in-app, so Telegram is purely a bonus channel.
-> If you later want an **on-demand AI solution bot** (for questions you haven't typed
-> solutions for), that can be wired into the same panel — replace the `solution` lookup
-> with a fetch to your bot/API.
+> 💡 Tip: run the data validator before pushing —
+> see `npm run validate` below.
 
 ---
 
 ## 🧱 Project structure
 
 ```
-cbt-platform/
   index.html
   vite.config.js
+  vercel.json            Vercel build config (framework: vite)
   src/
-    main.jsx            app entry
-    App.jsx             routes (HashRouter): / /dashboard /test /results
-    styles.css          full design system
-    data.js             ← YOUR question bank, courses, topics
-    utils.js            shuffle, time format, question-set builder, TELEGRAM_URL
-    progress.js         localStorage save/resume + results
+    main.jsx             app entry
+    App.jsx              routes (HashRouter): / /dashboard /test /study /results
+    styles.css           full design system
+    data.js              ← courses, topics & question bank (single source of truth)
+    utils.js             shuffle, time format, question-set builder
+    progress.js          localStorage save/resume + results
     components/
-      Navbar.jsx        brand + links + "Resume test" indicator
-      Landing.jsx       hero, features, how-it-works, topics
-      Dashboard.jsx     configure + start/resume tests, bank overview
-      Timer.jsx         countdown display + pause/resume control
-      TestRunner.jsx    test engine: timer, palette, save, submit
-      Results.jsx       score + review + show-full-explanation
-      SolutionPanel.jsx side panel with full worked solutions
+      Navbar.jsx         brand + links + "Resume test" indicator
+      Landing.jsx        hero, features, how-it-works, live topics
+      Dashboard.jsx      configure + start/resume tests & study mode
+      Timer.jsx          countdown + pause/resume
+      TestRunner.jsx     test engine: timer, palette, save, submit
+      StudyRunner.jsx    study mode: answers pre-ticked + deep explanations
+      Results.jsx        score + review + show-full-explanation
+      SolutionPanel.jsx  side panel with full worked solutions
 ```
+
+---
+
+## 🚀 Deploy on Vercel (auto-deploy from GitHub)
+
+1. Push this repo to GitHub.
+2. On [vercel.com](https://vercel.com) → **Add New Project → Import** the repo.
+3. Vercel auto-detects Vite (`vercel.json` is already in the repo) → **Deploy**.
+4. Every `git push` to `main` rebuilds and updates the live site automatically (~30 s).
+
+> Full walkthrough, plus Netlify/GitHub Pages alternatives and
+> maintenance & security tips: see **DEPLOYMENT-AND-MAINTENANCE-GUIDE.md**.
 
 ---
 
 ## 🛣️ Possible next steps
 
+- CSV/JSON bulk importer for past questions.
 - Backend + accounts for cross-device progress sync (swap `progress.js` for an API).
-- CSV/JSON importer so you can bulk-paste past questions instead of editing JS.
-- AI solution-on-demand for questions without a stored solution.
+- Access gate (join-group → unlock) in front of the app.
 - Analytics (weak topics, average time per question).
