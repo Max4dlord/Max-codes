@@ -12,6 +12,18 @@ const warnings = []
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
 let total = 0
 
+// ---------------------------------------------------------------------------
+// Image allow-list per topic. Every question `image` must belong to its
+// topic's list, otherwise a diagram could show up on unrelated questions.
+// ---------------------------------------------------------------------------
+const IMAGE_ALLOW = {
+  'welding-processes-defects': ['welding-defects.png', 'flame-zones.png'],
+  'fasteners': ['taper-pin.png'],
+  'metal-working': ['anvil-diagram.png'],
+  'cutting-tools': ['hacksaw-tpi.png'],
+  'jigs-fixtures': ['jig-vs-fixture.png'],
+}
+
 for (const course of courses) {
   const bank = questionBank[course.id] || []
   const topicIds = new Set((topicMeta[course.id] || []).map((t) => t.id))
@@ -36,6 +48,15 @@ for (const course of courses) {
     if (q.image) {
       const path = './public' + q.image
       if (!existsSync(path)) errors.push(`${tag}: missing image file ${q.image}`)
+      // image must be appropriate for the question's topic
+      const allowed = IMAGE_ALLOW[q.topicId]
+      if (!allowed) {
+        errors.push(`${tag}: topic '${q.topicId}' has no approved images, but question carries ${q.image}`)
+      } else {
+        const base = q.image.replace(/^\/images\//, '')
+        if (!allowed.includes(base))
+          errors.push(`${tag}: image '${base}' is not approved for topic '${q.topicId}' (allowed: ${allowed.join(', ')})`)
+      }
     }
     // ---- answer-marker heuristic (warnings only) ----
     const text = `${q.short}\n${q.solution}`
@@ -80,6 +101,23 @@ for (const course of courses) {
     console.log(`${course.code} (${course.id}): ${ok} questions — ${course.available ? 'live' : 'draft'} | ${cats.length} categories [${perCat}]`)
   } else {
     console.log(`${course.code} (${course.id}): ${ok} questions — ${course.available ? 'live' : 'draft'}`)
+  }
+}
+
+// ---- image audit table (diagram usage per topic) ----
+const imgByTopic = {}
+for (const course of courses) {
+  for (const q of questionBank[course.id] || []) {
+    if (!q.image) continue
+    imgByTopic[`${course.id}/${q.topicId}`] = imgByTopic[`${course.id}/${q.topicId}`] || {}
+    imgByTopic[`${course.id}/${q.topicId}`][q.image.replace('/images/', '')] =
+      (imgByTopic[`${course.id}/${q.topicId}`][q.image.replace('/images/', '')] || 0) + 1
+  }
+}
+if (Object.keys(imgByTopic).length) {
+  console.log('\nImage audit (question-attached diagrams per topic):')
+  for (const [key, imgs] of Object.entries(imgByTopic)) {
+    console.log(`  ${key}: ${Object.entries(imgs).map(([i, n]) => `${i} ×${n}`).join(', ')}`)
   }
 }
 

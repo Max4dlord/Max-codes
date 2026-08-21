@@ -2889,7 +2889,7 @@ export const questionBank = {
     "correct": 1,
     "short": "Greatest holding power, spotted half length, Rockwell C15 → Cone point. Option B.",
     "solution": "Cone point is used for permanent location of parts. It develops the greatest axial and torsional holding power when bearing against material of Rockwell C 15 or greater. It is usually spotted in a hole to half its length.\n\nWhy the other options are incorrect:\nOption A Flat has lower holding, for frequent resetting.\nOption C Oval has lowest holding power.\nOption D Half Dog is for permanent location but requires drilled hole matching point diameter.\n\n* Correct Option: B (Cone point)",
-    "image": "/images/taper-pin.png"
+
   },
   {
     "id": "aee_fast_10",
@@ -2905,7 +2905,7 @@ export const questionBank = {
     "correct": 0,
     "short": "Sheet metal up to 18 gage, pierced holes, sharp point → Type AB. Option A.",
     "solution": "Type AB thread-forming screws are for sheet metal up to 18 gage, resin-impregnated plywood, wood and asbestos compositions. Used in pierced or punched holes where a sharp point for starting is needed. Joint strength can be increased with pilot holes less than root diameter. Fast driving.\n\nWhy the other options are incorrect:\nOption B Type B is for heavy-gage sheetmetal where pilot hole is larger than root diameter.\nOption C Type C makes a chip-free assembly but needs high torque.\nOption D BP is for locating/piercing soft materials.\n\n* Correct Option: A (AB)",
-    "image": "/images/taper-pin.png"
+
   },
   {
     "id": "aee_fast_01",

@@ -116,10 +116,7 @@ Exam tip: Arc = #10/12, Gas = #4; acetylene ≤15 psi and ≤3/4 turn.`,
 const TOPIC_IMAGES = {
   'welding-processes-defects': '/images/welding-defects.png',
   'metal-working': '/images/anvil-diagram.png',
-  'heat-treatment': '/images/anvil-diagram.png',
   'cutting-tools': '/images/hacksaw-tpi.png',
-  'drilling': '/images/taper-pin.png',
-  'fasteners': '/images/taper-pin.png',
   'jigs-fixtures': '/images/jig-vs-fixture.png',
 }
 

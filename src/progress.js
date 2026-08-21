@@ -5,7 +5,7 @@
 // needs no backend. Swap this out for an API later if you want cross-device sync.
 // ---------------------------------------------------------------------------
 
-const SESSION_KEY = 'cbt_session_v1'
+const SESSION_KEY = 'cbt_session_v2'
 const RESULTS_KEY = 'cbt_results_v1'
 
 export function saveSession(session) {
@@ -50,7 +50,7 @@ export function clearResults() {
   localStorage.removeItem(RESULTS_KEY)
 }
 
-const STUDY_KEY = 'cbt_study_v1'
+const STUDY_KEY = 'cbt_study_v2'
 
 export function saveStudySession(session) {
   try {
