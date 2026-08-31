@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, Navigate, Link } from 'react-router-dom'
 import { loadStudySession, saveStudySession } from '../progress.js'
+import { topicMeta } from '../data.js'
+import RichText from './RichText.jsx'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
 
@@ -227,7 +229,8 @@ export default function StudyRunner() {
   const questions = session.questionSet
   const total = questions.length
   const q = questions[index]
-  const deepDive = TOPIC_DEEP_DIVE[q.topicId] || `This topic covers ${q.topicId.replace(/-/g, ' ')}. Review the core definitions, formulas, and typical exam traps for this topic. Focus on understanding the *why* behind each option, not just memorizing the answer.`
+  const topicNote = ((topicMeta[session.courseId] || []).find((t) => t.id === q.topicId) || {}).summaryNotes
+  const deepDive = topicNote || TOPIC_DEEP_DIVE[q.topicId] || `This topic covers ${q.topicId.replace(/-/g, ' ')}. Review the core definitions, formulas, and typical exam traps for this topic. Focus on understanding the *why* behind each option, not just memorizing the answer.`
 
   useEffect(() => {
     if (!session) return
@@ -332,13 +335,15 @@ export default function StudyRunner() {
                 <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>📖 Study Mode — Very Detailed Explanation</div>
                 <span className="qtopic" style={{ background: 'var(--green-soft)', color: 'var(--green)', borderColor: 'rgba(5,150,105,0.2)' }}>Correct: {LETTERS[q.correct]}. {q.options[q.correct]}</span>
               </div>
-              <div className="panel-sol" style={{ whiteSpace: 'pre-wrap', background: '#fff' }}>
-                {q.solution}
+              <div className="panel-sol" style={{ background: '#fff' }}>
+                <RichText text={q.solution} className="rt-block" />
                 <div style={{ marginTop: 18, paddingTop: 18, borderTop: '1px dashed var(--border)' }}>
-                  <div style={{ fontWeight: 700, color: 'var(--text)', marginBottom: 8 }}>📚 Deep Dive — More on {q.topicId.replace(/-/g, ' ')}:</div>
-                  <div style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', whiteSpace: 'pre-wrap' }}>
-                    {deepDive}
+                  <div style={{ fontWeight: 700, color: 'var(--text)', marginBottom: 8 }}>
+                    {topicNote
+                      ? '📐 Topic Notes — Key Formulas, Abstractions & Exam Traps:'
+                      : `📚 Deep Dive — More on ${q.topicId.replace(/-/g, ' ')}:`}
                   </div>
+                  <RichText text={deepDive} className="rt-block" />
                 </div>
               </div>
               {(q.image || topicImage) && (

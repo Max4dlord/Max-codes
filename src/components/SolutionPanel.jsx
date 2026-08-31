@@ -1,4 +1,5 @@
 import { TELEGRAM_URL } from '../utils.js'
+import RichText from './RichText.jsx'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
 
@@ -23,7 +24,7 @@ export default function SolutionPanel({ item, topicName, onClose }) {
         </div>
 
         <div className="panel-label">Step-by-step working</div>
-        <div className="panel-sol">{item.solution}</div>
+        <RichText text={item.solution} />
 
         <div className="panel-foot">
           <button className="btn btn-primary" onClick={onClose}>Back to review</button>

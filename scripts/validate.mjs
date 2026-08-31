@@ -44,6 +44,7 @@ for (const course of courses) {
       errors.push(`${tag}: 'correct' index out of range (${q.correct})`)
     if (!q.short || String(q.short).trim().length < 3) errors.push(`${tag}: missing 'short'`)
     if (!q.solution || String(q.solution).trim().length < 5) errors.push(`${tag}: missing 'solution'`)
+    if (q.kind && !['calc', 'theory'].includes(q.kind)) errors.push(`${tag}: unknown kind '${q.kind}'`)
     if (!q.topicId || !topicIds.has(q.topicId)) errors.push(`${tag}: unknown topicId '${q.topicId}'`)
     if (q.image) {
       const path = './public' + q.image
@@ -62,18 +63,23 @@ for (const course of courses) {
     const text = `${q.short}\n${q.solution}`
     const sentences = text.split(/(?<=[.!?])\s+/)
     const asserted = new Set()
-    for (const L of LETTERS) {
-      // explicit assertions anywhere in the text
-      if (new RegExp(`(?:correct\\s+answer\\s+is|correct\\s+option|answer)\\s*[:–—-]?\\s*${L}\\b`, 'i').test(text))
-        asserted.add(L)
-      for (const s of sentences) {
-        // sentence mentions this option letter AND claims correctness
-        if (!/\bcorrect\b|\bis\s+true\b/i.test(s)) continue
-        if (!new RegExp(`\\b(?:option|answer)\\s*${L}\\b|\\b${L}\\b[^.!?]*\\bis\\s+correct`, 'i').test(s)) continue
-        // but skip if the sentence actually says it is NOT correct
-        if (/\b(?:in|not)\s*correct\b|incorrect\b|is\s+wrong\b/i.test(s)) continue
-        asserted.add(L)
-      }
+    // Explicit assertions — the letter must be a CAPITAL option letter so that
+    // prose like "the answer — e.g. by using" is not misread as an answer claim.
+    const explicit = new RegExp(
+      '(?:correct\\s+answer\\s+is|correct\\s+option)\\s*[:–—-]?\\s*([A-F])\\b(?!\\.)', 'i')
+    for (const m of text.matchAll(new RegExp(explicit.source, 'gi'))) {
+      asserted.add(m[1].toUpperCase())
+    }
+    for (const s of sentences) {
+      // sentence must genuinely CLAIM correctness for a specific option letter
+      if (!/\bcorrect\b|\bis\s+true\b/i.test(s)) continue
+      const tied =
+        /\b(?:option|answer)\s*[A-F]\s*\(correct\)/i.test(s) ||
+        /\b[A-F]\s*\)?\s*is\s+correct/i.test(s)
+      if (!tied) continue
+      if (/\b(?:in|not)\s*correct\b|incorrect\b|is\s+wrong\b|wrong\s+option\b/i.test(s)) continue
+      const m = s.match(/\b([A-F])\s*\)?\s*(?:\(correct\)|is\s+correct)/i)
+      if (m) asserted.add(m[1].toUpperCase())
     }
     if (asserted.size === 1 && !asserted.has(LETTERS[q.correct]))
       warnings.push(`${tag}: answer text claims "${[...asserted]}" is correct but correct=${q.correct} (${LETTERS[q.correct]})`)

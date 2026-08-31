@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom'
 import { loadResults, clearResults } from '../progress.js'
 import { formatTime } from '../utils.js'
 import SolutionPanel from './SolutionPanel.jsx'
+import RichText from './RichText.jsx'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
 
@@ -109,7 +110,7 @@ export default function Results() {
               </div>
 
               {showFull && (
-                <div className="panel-sol" style={{ marginTop: 0, marginBottom: 14 }}>{item.solution}</div>
+                <RichText text={item.solution} className="panel-sol" style={{ marginTop: 0, marginBottom: 14 }} />
               )}
 
               <div className="ri-actions">

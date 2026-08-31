@@ -18,7 +18,15 @@ export const courses = [
     "accent": "#2563eb",
     "available": true
   },
-  {
+    {
+    "id": "eee202",
+    "code": "EEE 202",
+    "title": "Applied Electricity II",
+    "blurb": "Magnetism, AC waveforms & phasors, resonance, AC network theorems, magnetic circuits & transformers, motors & generators, instrumentation and nonlinear circuits. Built for a WRITTEN exam: 67 fully worked calculation questions (Given → Formula → Substitute → Answer, exactly as you must write them) plus high-yield theory questions with one-line answers you can memorise tonight.",
+    "accent": "#7c3aed",
+    "available": true
+  },
+{
     "id": "mee206",
     "code": "MEE 206",
     "title": "Mechanical Engineering Fundamentals",
@@ -181,7 +189,55 @@ export const topicMeta = {
       "name": "Joining, Welding & Workshop Safety",
       "categoryId": "past-questions"
     }
+  ],
+  "eee202": [
+    {
+      "id": "eee-magnetism",
+      "name": "Magnetism & Moving Charges",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Magnetism is the force produced by moving charges; it attracts or repels other magnets and moving charges. Like poles repel; unlike poles attract.\n- A magnetic field is the region around a magnet (or current-carrying conductor) where magnetic force is observable. Field lines never cross, form closed loops, and repel one another when parallel.\n- The B-field is the field defined by the force it exerts on a moving charged particle (unit tesla, T; $1\\ T = 10^4$ gauss). The H-field is the field within a material (unit ampere/metre, A/m).\n- Ferromagnetic materials (e.g. magnetite, $Fe_3O_4$ — the first known magnet) have electron magnets that do not cancel.\n- An electromagnet is a temporary magnet: a coil wound on a soft-iron core (solenoid) energised by a current.\n\n### Core Mathematical Relations\n- $F = qvB\\sin\\theta$ : force on a charge $q$ moving at velocity $v$ across field $B$ at angle $\\theta$ between $v$ and $B$. Parallel motion ($\\theta = 0$) gives $F = 0$.\n- $F = BIl\\sin\\theta$ : force on a straight conductor of length $l$ carrying current $I$ in field $B$.\n- $B = \\mu_0 n I$ : field at the centre of a solenoid, where $n = N/L$ is the turns per metre and $\\mu_0 = 4\\pi\\times10^{-7}$ T·m/A.\n- $E = Blv$ : motional e.m.f. of a conductor of length $l$ cutting flux at speed $v$ at right angles to $B$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Taking $\\theta$ as the angle of travel instead of the angle BETWEEN $v$ and $B$.\n- Trap 2: Forgetting that $\\sin 0^\\circ = 0$ and $\\sin 90^\\circ = 1$ — the \"charge moving parallel to the field\" case is a favourite.\n- Trap 3: In solenoids, using the total turns $N$ instead of $n = N/L$ — this overstates $B$ by the factor $L$.\nr"
+    },
+    {
+      "id": "eee-induction",
+      "name": "Electromagnetic Induction & Faraday's Laws",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Electromotive force (e.m.f.) is that which tends to produce an electric current in a circuit; symbol E, unit volt (V).\n- Principal sources of e.m.f.: electrodes in an electrolyte (cells), relative motion of a conductor and magnetic flux (generators), and temperature difference at thermo-junctions.\n- Faraday's 1st Law: an e.m.f. is induced in a conductor whenever it is placed in a changing magnetic field; a current flows if the circuit is closed.\n- Faraday's 2nd Law: the magnitude of the induced e.m.f. equals the rate of change of flux linkage.\n- Lenz's Law: the induced effect opposes the change producing it (this is the minus sign).\n- Eddy (Foucault) currents: loops induced in bulk conductors by changing fields; they oppose the change and are exploited/fought in transformers and machines.\n\n### Core Mathematical Relations\n- $E = N\\frac{d\\Phi}{dt}$ : induced e.m.f. in an N-turn coil (instantaneous form).\n- $E = N\\frac{\\Delta\\Phi}{\\Delta t}$ : uniform-change form — use for \"flux changes from $\\Phi_1$ to $\\Phi_2$ in $t$ seconds\" problems.\n- $\\Phi = BA$ : magnetic flux through area $A$ in field $B$.\n- $I = \\frac{E}{R}$ : induced current, from the coil resistance (Ohm's law).\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Dropping $N$ — e.m.f. scales with the number of turns; single-loop problems use $N = 1$.\n- Trap 2: Writing $\\Delta\\Phi$ backwards — always initial flux minus final flux.\n- Trap 3: Reporting the Lenz minus sign as a numerical answer — it only gives direction; magnitudes are positive.\nr"
+    },
+    {
+      "id": "eee-ac-phasors",
+      "name": "AC Waveforms & Phasors",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Direct current (DC) is uni-directional and constant in time. Alternating current (AC) varies in both magnitude and direction — the sinusoid $A(t) = A_m\\sin(2\\pi ft)$.\n- Period $T$ = time for one full cycle (s). Frequency $f$ = cycles per second (Hz), and $f = 1/T$. Angular frequency $\\omega = 2\\pi f$ (rad/s).\n- Peak, r.m.s. and average: $V_{rms} = V_m/\\sqrt{2} = 0.707V_m$; half-cycle average $= 0.637V_m$; $V_m = 1.414V_{rms}$.\n- A phasor is a rotating vector (magnitude + phase) representing a sinusoid; Charles Steinmetz (General Electric, 1893) formalised the symbolic method. Phasors add like vectors.\n- AC cannot be stored in batteries or cells; it is generated by alternators/waveform generators.\n\n### Core Mathematical Relations\n- $X_L = 2\\pi f L$ : inductive reactance (Ω) — rises with frequency.\n- $X_C = \\frac{1}{2\\pi f C}$ : capacitive reactance (Ω) — falls with frequency.\n- $Z = R + jX_L$ (inductive) or $Z = R - jX_C$ (capacitive); magnitude $|Z| = \\sqrt{R^2 + X^2}$.\n- $T = \\frac{1}{f}$, $f = \\frac{1}{T}$, $\\omega = 2\\pi f$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Mixing r.m.s. and peak — always state which one you are reporting.\n- Trap 2: Writing $|Z| = R + X$ — reactances combine with resistance in quadrature (square root of the sum of squares).\n- Trap 3: Unit slip — frequency in Hz, period in seconds (20 ms = 0.02 s), C in farads ($10\\ \\mu F = 10^{-5}\\ F$).\nr"
+    },
+    {
+      "id": "eee-resonance",
+      "name": "Resonance in AC Circuits",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Series resonance: the condition $X_L = X_C$; the impedance is then a MINIMUM ($Z = R$) and the current a MAXIMUM; the power factor is unity because the circuit is purely resistive.\n- Parallel resonance (anti-resonance): the parallel L-C combination presents a MAXIMUM impedance; the supply (line) current is a minimum.\n- The quality factor Q measures the sharpness/selectivity of resonance — high Q gives a narrow bandwidth.\n\n### Core Mathematical Relations\n- $f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$ : resonant frequency (from $2\\pi f L = 1/(2\\pi f C)$).\n- $Q = \\frac{X_L}{R} = \\frac{X_C}{R}$ : Q factor at resonance.\n- Bandwidth $= \\frac{f_0}{Q}$.\n- At resonance, $X_L = X_C = 2\\pi f_0 L$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Forgetting the square root of $LC$ before taking the reciprocal.\n- Trap 2: Unit mix-ups — L in henrys, C in farads ($1\\ \\mu F = 10^{-6}\\ F$).\n- Trap 3: Reversing the series/parallel duality — minimum impedance in series resonance, maximum in parallel.\nr"
+    },
+    {
+      "id": "eee-network-theorems",
+      "name": "Network Theorems Applied to AC",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Thévenin's theorem: any linear two-terminal network is equivalent to one voltage source (the open-circuit voltage $V_{th}$) in SERIES with the equivalent impedance $Z_{th}$.\n- Norton's theorem: the dual form — a current source (the short-circuit current $I_N$) in PARALLEL with $Z_N = Z_{th}$.\n- Superposition: the response in any branch is the algebraic sum of the responses produced by each source acting alone (voltage sources replaced by shorts, current sources by opens).\n- For AC networks the impedances are complex ($R \\pm jX$); the j-terms must be carried through every line so phase is preserved.\n- Linearity is judged by the i-v graph: a straight line is linear; $y = x^2$ and $y = |x|$ (piecewise linear) are nonlinear. The negative-resistance converter is a key nonlinear op-amp circuit that enables oscillators.\n\n### Core Mathematical Relations\n- Series: $Z_{eq} = Z_1 + Z_2$; Parallel: $Z_{eq} = \\frac{Z_1 Z_2}{Z_1 + Z_2}$ (two equal impedances give $Z/2$).\n- $|Z| = \\sqrt{R^2 + X^2}$.\n- Load current: $I = \\frac{V_{th}}{Z_{th} + Z_{load}}$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Using only magnitudes (dropping j) — phase information is lost.\n- Trap 2: Forgetting that equal parallel impedances halve, and misapplying the product/sum formula.\n- Trap 3: Killing sources wrongly in superposition — voltage sources become short circuits, current sources become open circuits.\nr"
+    },
+    {
+      "id": "eee-magcircuits-transformer",
+      "name": "Magnetic Circuits & Transformers",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- The magnetic circuit is the flux analogue of the electric circuit: magnetomotive force (m.m.f.) drives flux through reluctance, exactly as e.m.f. drives current through resistance.\n- Analogy table: electric flux $\\leftrightarrow$ magnetic flux; $D \\leftrightarrow B$; $E \\leftrightarrow H$; e.m.f. $\\leftrightarrow$ m.m.f.; permittivity $\\leftrightarrow$ permeability.\n- Ideal transformer: $V_1/V_2 = N_1/N_2 = I_2/I_1$ (power in = power out). Step-up: $N_2 > N_1$; step-down: $N_2 < N_1$.\n- Transformers operate only on AC: induction requires a CHANGING flux ($E = N d\\Phi/dt$); steady DC produces zero secondary e.m.f.\n- Practical losses: copper ($I^2R$) and iron (eddy current + hysteresis).\n\n### Core Mathematical Relations\n- $F = NI$ (ampere-turns); $H = \\frac{F}{l} = \\frac{NI}{l}$ (A/m); $B = \\mu H$ (T); $\\Phi = BA$ (Wb).\n- Reluctance $S = \\frac{l}{\\mu A}$ (A/Wb); magnetic Ohm's law $\\Phi = \\frac{F}{S}$.\n- $\\mu_0 = 4\\pi\\times10^{-7}$ H/m; $\\mu_r = \\frac{\\mu}{\\mu_0}$; $\\mu = \\mu_0\\mu_r$.\n- $V_2 = V_1\\frac{N_2}{N_1}$; $I_1 = I_2\\frac{N_2}{N_1}$; $E = Blv$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Using $\\mu_0$ for a material instead of $\\mu = \\mu_0\\mu_r$ ($\\mu_r$ can be thousands).\n- Trap 2: Inverting the transformer ratio — the smaller turn count always gets the smaller voltage.\n- Trap 3: In $S = l/(\\mu A)$, the $\\mu A$ means permeability × area (not micro-amperes).\nr"
+    },
+    {
+      "id": "eee-motors-generators",
+      "name": "Electrical Motors & Generators",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- A motor converts electrical energy into mechanical energy; a generator converts mechanical energy into electrical energy. Both are coupled through the magnetic field.\n- Faraday (1831): a conductor moved in a magnetic field generates a current, and a current in a field develops force — the two directions of electromechanics.\n- DC machine parts: armature (rotating windings where e.m.f. is generated), field system (produces flux), commutator (rectifies the armature AC into DC output), brushes.\n- Fleming's LEFT-hand rule gives the motor force on a current-carrying conductor; the RIGHT-hand rule gives the generator's induced e.m.f.\n- An AC generator is called an alternator; a battery is a stored-chemical-energy source while a generator produces e.m.f. from motion in a field.\n\n### Core Mathematical Relations\n- $E = Blv$ : motional e.m.f. (conductor moving perpendicular to $B$).\n- $F = BIl$ : force on the armature conductor.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Swapping the left/right hand rules — LEFT = Motor (FBI), RIGHT = Generator.\n- Trap 2: Applying $E = Blv$ without the perpendicularity condition ($v \\perp B$).\n- Trap 3: Reversing the energy-conversion directions in motor vs generator descriptions.\nr"
+    },
+    {
+      "id": "eee-instruments",
+      "name": "Instruments & Instrumentation",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Instrumentation = using devices (instruments) to detect, observe, measure, control, compute, communicate and display physical quantities. Instruments extend human senses: accurate, rapid measurement over great ranges.\n- Ammeter: connected in SERIES and must have a very LOW resistance (it must not disturb the current being measured).\n- Voltmeter: connected in PARALLEL and must have a very HIGH resistance (it must draw negligible current).\n- PMMC (permanent-magnet moving coil): DC only, uniform scale, polarity matters. Moving iron: reads AC and DC (r.m.s.), robust, non-uniform scale.\n- Indicating instruments are analog (pointer + scale) or digital (numeric display). Errors arise from movement friction and pointer parallax.\n\n### Core Mathematical Relations\n- Voltmeter conversion: total resistance $R_t = \\frac{V}{I_{fsd}}$; series multiplier $= R_t - R_m$.\n- Ammeter conversion: $I_m R_m = (I - I_m) R_{sh}$, so shunt $R_{sh} = \\frac{I_m R_m}{I - I_m}$.\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Putting the ammeter's shunt in series, or the voltmeter's multiplier in parallel — both ruin the instrument.\n- Trap 2: Forgetting to subtract the movement resistance $R_m$ when computing the multiplier.\n- Trap 3: Using the wrong branch current (movement current vs diverted current) in the shunt formula.\nr"
+    },
+    {
+      "id": "eee-nonlinear",
+      "name": "Nonlinear Circuits (Introduction)",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Linear ⇔ the i-v graph is a straight line ($v = Ri$). Nonlinear ⇔ any other i-v shape — a diode, $y = x^2$, even the piecewise-linear $y = |x|$ (it cannot be written as $y = ax + b$).\n- Amplifiers, computers and most practical devices are built from nonlinear components — nonlinear analysis is \"the real engineering\".\n- There are no hard-and-fast rules for most nonlinear circuits, but systematic methods exist for op-amp nonlinear circuits.\n- The negative resistance converter is a key op-amp nonlinear circuit: its i-v slope is negative over a region, so it delivers power — which is exactly what an OSCILLATOR needs to sustain oscillations.\n\n### Core Mathematical Relations\n- Linear form: $y = ax + b$.\n- Nonlinear examples: $y = x^2$ (parabola), $y = |x|$ (piecewise linear but not of the form $ax + b$).\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Calling $|x|$ linear because its pieces are straight lines.\n- Trap 2: Classifying a circuit by its components instead of by the shape of its i-v graph.\n- Trap 3: Believing nonlinear circuits have no analysis methods at all (op-amp nonlinear circuits do).\nr"
+    }
   ]
+
 }
 
 // ===========================================================================
@@ -6992,5 +7048,2018 @@ export const questionBank = {
     "short": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.",
     "solution": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
   }
+],
+  eee202: [
+  {
+    "id": "eee_magnetism_01",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charged particle with q = 40 C travels at 5 m/s in a magnetic field of 2 T, and the field direction is the SAME as the particle's path. The magnetic force on the particle is:",
+    "options": [
+      "0 N",
+      "400 N",
+      "200 N",
+      "800 N"
+    ],
+    "correct": 0,
+    "short": "F = qvB sin θ, and since the motion is parallel to the field, θ = 0° so sin 0° = 0 and F = 0.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: charge $q = 40\\ C$, velocity $v = 5\\ m/s$, magnetic field $B = 2\\ T$, and the field lies along the particle's path, so the angle between $v$ and $B$ is $\\theta = 0^\\circ$.\nGoverning law — the magnetic force on a moving charge:\n$$F = qvB\\sin\\theta$$\n\n### Step 2: Full Mathematical Workings\nSubstitute every value:\n$$F = 40 \\times 5 \\times 2 \\times \\sin 0^\\circ$$\n$$40 \\times 5 = 200$$\n$$200 \\times 2 = 400$$\n$$F = 400 \\times \\sin 0^\\circ$$\n$$\\sin 0^\\circ = 0$$\n$$F = 400 \\times 0$$\n$$F = 0\\ N$$\n\n### Step 3: Verification & Physical Interpretation\nA charge moving PARALLEL to the magnetic field experiences no magnetic force — the force depends on the component of velocity cutting across the field. Zero crossing component means zero force. The result is physically consistent: field lines exert no side-ways push on a charge sliding along them.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (400 N)**: the student forgets the sine term entirely, effectively taking θ = 90° where sin 90° = 1.\n- **Option C trap (200 N)**: the student substitutes θ = 30° (half of a right angle) and computes 400 × 0.5.\n- **Option D trap (800 N)**: the student doubles the product, e.g. by multiplying by 2 again after computing 400.\nr"
+  },
+  {
+    "id": "eee_magnetism_02",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charged particle with q = 4 C travels at v = 20 m/s in a magnetic field B = 10 T, with an angle of 30° between v and B. The magnetic force on the particle is:",
+    "options": [
+      "400 N",
+      "800 N",
+      "346 N",
+      "200 N"
+    ],
+    "correct": 0,
+    "short": "F = qvB sin θ = 4 × 20 × 10 × sin 30° = 800 × 0.5 = 400 N.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $q = 4\\ C$, $v = 20\\ m/s$, $B = 10\\ T$, angle $\\theta = 30^\\circ$.\nGoverning law:\n$$F = qvB\\sin\\theta$$\n\n### Step 2: Full Mathematical Workings\n$$F = 4 \\times 20 \\times 10 \\times \\sin 30^\\circ$$\n$$4 \\times 20 = 80$$\n$$80 \\times 10 = 800$$\n$$F = 800 \\times \\sin 30^\\circ$$\n$$\\sin 30^\\circ = \\frac{1}{2} = 0.5$$\n$$F = 800 \\times 0.5$$\n$$F = 400\\ N$$\n\n### Step 3: Verification & Physical Interpretation\nOnly the velocity component perpendicular to the field contributes to the force. At 30°, exactly half the full perpendicular force is developed, giving 400 N. The result matches the worked example in the lecture notes.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (800 N)**: the student uses sin 90° = 1 instead of sin 30°, ignoring the angle.\n- **Option C trap (346 N)**: the student uses the cosine instead of the sine — cos 30° = 0.866 gives 800 × 0.866 ≈ 692.8 N; taking half of that value (346 N) is the classic \"sine–cosine confusion\" error.\n- **Option D trap (200 N)**: the student divides by 4 (800/4) instead of by 2, i.e. treats sin 30° as 0.25.\nr"
+  },
+  {
+    "id": "eee_magnetism_03",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A straight conductor of length 2 m carries a current of 3 A perpendicular to a magnetic field of 1.5 T. The force on the conductor is:",
+    "options": [
+      "9 N",
+      "4.5 N",
+      "18 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "F = BIl sin θ = 1.5 × 3 × 2 × sin 90° = 9 N.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: length $l = 2\\ m$, current $I = 3\\ A$, field $B = 1.5\\ T$, and the conductor is PERPENDICULAR to the field, so $\\theta = 90^\\circ$.\nGoverning law — force on a current-carrying conductor:\n$$F = BIl\\sin\\theta$$\n\n### Step 2: Full Mathematical Workings\n$$F = 1.5 \\times 3 \\times 2 \\times \\sin 90^\\circ$$\n$$1.5 \\times 3 = 4.5$$\n$$4.5 \\times 2 = 9$$\n$$\\sin 90^\\circ = 1$$\n$$F = 9 \\times 1$$\n$$F = 9\\ N$$\n\n### Step 3: Verification & Physical Interpretation\nWith the conductor cutting the field at right angles the full force develops. The direction follows Fleming's left-hand rule. Nine newtons is consistent with the moderate current, field and length given.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (4.5 N)**: the student stops after computing $B \\times I$ and forgets to multiply by the length $l$.\n- **Option C trap (18 N)**: the student doubles the answer, e.g. by taking the length as 4 m (double-sided conductor) or multiplying by 2 twice.\n- **Option D trap (0 N)**: the student thinks a perpendicular conductor feels no force — the true zero-force case is a PARALLEL conductor.\nr"
+  },
+  {
+    "id": "eee_magnetism_04",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A conductor of length 0.5 m carrying an unknown current i lies in a magnetic field B = 3 T at θ = 30° and experiences a force of 12 N. The current i is:",
+    "options": [
+      "16 A",
+      "8 A",
+      "4 A",
+      "24 A"
+    ],
+    "correct": 0,
+    "short": "i = F/(Bl sin θ) = 12/(3 × 0.5 × 0.5) = 12/0.75 = 16 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: force $F = 12\\ N$, length $l = 0.5\\ m$, field $B = 3\\ T$, angle $\\theta = 30^\\circ$.\nGoverning law, rearranged for the current:\n$$F = BIl\\sin\\theta \\quad\\Rightarrow\\quad I = \\frac{F}{Bl\\sin\\theta}$$\n\n### Step 2: Full Mathematical Workings\n$$I = \\frac{12}{3 \\times 0.5 \\times \\sin 30^\\circ}$$\n$$3 \\times 0.5 = 1.5$$\n$$\\sin 30^\\circ = 0.5$$\n$$1.5 \\times 0.5 = 0.75$$\n$$I = \\frac{12}{0.75}$$\n$$I = 16\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nThe current of 16 A reproduces the given force: checking forward, $F = 3 \\times 16 \\times 0.5 \\times 0.5 = 12\\ N$, which confirms the rearrangement. Sixteen amperes is a realistic workshop-scale current.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (8 A)**: the student omits sin 30°, dividing by $Bl = 1.5$ instead of 0.75.\n- **Option C trap (4 A)**: the student divides by 3 — treating the field value as the denominator instead of the product $Bl\\sin\\theta$.\n- **Option D trap (24 A)**: the student multiplies by 2 after the division, i.e. computes 12/0.75 × 1.5.\nr"
+  },
+  {
+    "id": "eee_magnetism_05",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 2 m long solenoid has 2000 loops and carries 1600 A. The magnetic field strength at its centre is: (take μ₀ = 4π × 10⁻⁷ T·m/A)",
+    "options": [
+      "2.01 T",
+      "4.02 T",
+      "0.50 T",
+      "0.31 T"
+    ],
+    "correct": 0,
+    "short": "B = μ₀ n I with n = N/L = 1000 turns/m, so B = (4π × 10⁻⁷)(1000)(1600) ≈ 2.01 T.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: solenoid length $L = 2\\ m$, turns $N = 2000$, current $I = 1600\\ A$, $\\mu_0 = 4\\pi\\times10^{-7}\\ T\\cdot m/A$.\nGoverning law — field at the centre of a solenoid:\n$$B = \\mu_0 n I \\quad\\text{where}\\quad n = \\frac{N}{L}$$\n\n### Step 2: Full Mathematical Workings\nCompute the turns per metre first:\n$$n = \\frac{2000}{2}$$\n$$n = 1000\\ \\text{turns per metre}$$\nSubstitute into the field law:\n$$B = (4\\pi \\times 10^{-7}) \\times 1000 \\times 1600$$\n$$4\\pi \\times 10^{-7} = 1.25664 \\times 10^{-6}$$\n$$1.25664 \\times 10^{-6} \\times 1000 = 1.25664 \\times 10^{-3}$$\n$$1.25664 \\times 10^{-3} \\times 1600 = 2.0106$$\n$$B = 2.01\\ T$$\n\n### Step 3: Verification & Physical Interpretation\nTwo tesla is an extremely strong field, consistent with the huge current of 1600 A. The result matches the first solved example in the lecture notes exactly.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (4.02 T)**: the student uses the total turns $N = 2000$ instead of $n = N/L = 1000$ — forgetting to divide by the solenoid length exactly doubles the answer.\n- **Option C trap (0.50 T)**: the student drops the factor 4 from $\\mu_0 = 4\\pi\\times10^{-7}$, using $\\pi\\times10^{-7}$ instead.\n- **Option D trap (0.31 T)**: the student copies the printed answer of the NEXT worked example (the 5 m solenoid) — a memorisation slip rather than a calculation error.\nr"
+  },
+  {
+    "id": "eee_magnetism_06",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 5 m long solenoid has 800 loops and carries 1700 A. The magnetic field strength at its centre is about:",
+    "options": [
+      "0.34 T",
+      "0.31 T",
+      "1.71 T",
+      "0.68 T"
+    ],
+    "correct": 0,
+    "short": "n = 800/5 = 160 turns/m, so B = (4π × 10⁻⁷)(160)(1700) = 0.342 T ≈ 0.34 T (the notes' printed value 0.314 T is a rounding slip).",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 5\\ m$, $N = 800$, $I = 1700\\ A$, $\\mu_0 = 4\\pi\\times10^{-7}\\ T\\cdot m/A$.\nGoverning law:\n$$B = \\mu_0 n I \\quad\\text{with}\\quad n = \\frac{N}{L}$$\n\n### Step 2: Full Mathematical Workings\n$$n = \\frac{800}{5}$$\n$$n = 160\\ \\text{turns per metre}$$\n$$B = (4\\pi \\times 10^{-7}) \\times 160 \\times 1700$$\n$$4\\pi \\times 10^{-7} = 1.25664 \\times 10^{-6}$$\n$$160 \\times 1700 = 272\\,000$$\n$$B = 1.25664 \\times 10^{-6} \\times 272\\,000$$\n$$B = 0.3418\\ T$$\n$$B \\approx 0.34\\ T$$\n\n### Step 3: Verification & Physical Interpretation\nThe computed value 0.342 T rounds to 0.34 T. The lecture notes print 0.314 T for this example — a transcription rounding slip — but the exact product of the stated numbers is 0.342 T, so 0.34 T is the mathematically correct option.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.31 T)**: the student copies the printed (slightly wrong) notes value without recomputing — always verify worked examples yourself.\n- **Option C trap (1.71 T)**: the student uses $N = 800$ instead of $n = 160$, forgetting the division by the length $L = 5$.\n- **Option D trap (0.68 T)**: the student halves the length (n = 320) or doubles the turns, doubling the field.\nr"
+  },
+  {
+    "id": "eee_magnetism_07",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 12 m long solenoid of 700 loops carries 800 A. The magnetic field strength at its centre is about:",
+    "options": [
+      "0.0586 T",
+      "0.0293 T",
+      "0.117 T",
+      "0.703 T"
+    ],
+    "correct": 0,
+    "short": "n = 700/12 = 58.33 turns/m, so B = (4π × 10⁻⁷)(58.33)(800) = 0.0586 T.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 12\\ m$, $N = 700$, $I = 800\\ A$, $\\mu_0 = 4\\pi\\times10^{-7}\\ T\\cdot m/A$.\nGoverning law:\n$$B = \\mu_0 n I \\quad\\text{with}\\quad n = \\frac{N}{L}$$\n\n### Step 2: Full Mathematical Workings\n$$n = \\frac{700}{12}$$\n$$n = 58.33\\ \\text{turns per metre}$$\n$$B = (4\\pi \\times 10^{-7}) \\times 58.33 \\times 800$$\n$$4\\pi \\times 10^{-7} = 1.25664 \\times 10^{-6}$$\n$$58.33 \\times 800 = 46\\,664$$\n$$B = 1.25664 \\times 10^{-6} \\times 46\\,664$$\n$$B = 0.05864\\ T$$\n$$B \\approx 0.0586\\ T$$\n\n### Step 3: Verification & Physical Interpretation\nThe long 12 m solenoid spreads its 700 turns thinly (only 58 turns per metre), so the field is small — about 0.059 T — matching the third solved example in the notes.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.0293 T)**: the student halves the turns-per-metre (or the current), halving the field.\n- **Option C trap (0.117 T)**: the student doubles n or I, doubling the field.\n- **Option D trap (0.703 T)**: the student uses total turns N = 700 instead of n = 58.33 — the missing ÷12 overstates the field by the factor L.\nr"
+  },
+  {
+    "id": "eee_magnetism_08",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 1 m long solenoid of 500 turns carries 4 A. The magnetic field at its centre is about:",
+    "options": [
+      "2.51 mT",
+      "5.03 mT",
+      "0.63 mT",
+      "1.26 mT"
+    ],
+    "correct": 0,
+    "short": "n = 500 turns/m, so B = (4π × 10⁻⁷)(500)(4) = 2.51 × 10⁻³ T = 2.51 mT.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 1\\ m$, $N = 500$, $I = 4\\ A$, $\\mu_0 = 4\\pi\\times10^{-7}\\ T\\cdot m/A$.\nGoverning law:\n$$B = \\mu_0 n I \\quad\\text{with}\\quad n = \\frac{N}{L}$$\n\n### Step 2: Full Mathematical Workings\n$$n = \\frac{500}{1} = 500\\ \\text{turns per metre}$$\n$$B = (4\\pi \\times 10^{-7}) \\times 500 \\times 4$$\n$$4\\pi \\times 10^{-7} = 1.25664 \\times 10^{-6}$$\n$$500 \\times 4 = 2000$$\n$$B = 1.25664 \\times 10^{-6} \\times 2000$$\n$$B = 2.513 \\times 10^{-3}\\ T$$\n$$B = 2.51\\ mT$$\n\n### Step 3: Verification & Physical Interpretation\nA compact 500-turn coil at 4 A produces about 2.5 millitesla — a typical small-solenoid value. Note the unit conversion: $2.51\\times10^{-3}\\ T = 2.51\\ mT$.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (5.03 mT)**: the student doubles the turns or the current before substituting.\n- **Option C trap (0.63 mT)**: the student drops the factor 4 in $\\mu_0$ (using $\\pi\\times10^{-7}$), quartering the answer.\n- **Option D trap (1.26 mT)**: the student halves the product — for example, by dividing by 2 after the multiplication.\nr"
+  },
+  {
+    "id": "eee_magnetism_09",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charge of 2 C moves at 10 m/s PERPENDICULAR to a magnetic field of 0.5 T. The magnetic force is:",
+    "options": [
+      "10 N",
+      "5 N",
+      "20 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "F = qvB sin θ = 2 × 10 × 0.5 × sin 90° = 10 N.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $q = 2\\ C$, $v = 10\\ m/s$, $B = 0.5\\ T$, and the motion is perpendicular to the field so $\\theta = 90^\\circ$.\nGoverning law:\n$$F = qvB\\sin\\theta$$\n\n### Step 2: Full Mathematical Workings\n$$F = 2 \\times 10 \\times 0.5 \\times \\sin 90^\\circ$$\n$$2 \\times 10 = 20$$\n$$20 \\times 0.5 = 10$$\n$$\\sin 90^\\circ = 1$$\n$$F = 10 \\times 1$$\n$$F = 10\\ N$$\n\n### Step 3: Verification & Physical Interpretation\nPerpendicular motion develops the maximum force for the given charge, speed and field. Ten newtons is the ceiling value — any other angle would give less.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (5 N)**: the student halves the product (e.g. treats the field as 0.25 T or the charge as 1 C).\n- **Option C trap (20 N)**: the student stops after computing $qv = 20$ and forgets the field factor 0.5.\n- **Option D trap (0 N)**: the student applies the parallel-motion rule (θ = 0°) to a perpendicular case.\nr"
+  },
+  {
+    "id": "eee_magnetism_10",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charge of 5 C moves at 4 m/s at 90° to a field of 0.3 T. The magnetic force is:",
+    "options": [
+      "6 N",
+      "12 N",
+      "3 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "F = qvB sin θ = 5 × 4 × 0.3 × 1 = 6 N.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $q = 5\\ C$, $v = 4\\ m/s$, $B = 0.3\\ T$, $\\theta = 90^\\circ$.\nGoverning law:\n$$F = qvB\\sin\\theta$$\n\n### Step 2: Full Mathematical Workings\n$$F = 5 \\times 4 \\times 0.3 \\times \\sin 90^\\circ$$\n$$5 \\times 4 = 20$$\n$$20 \\times 0.3 = 6$$\n$$\\sin 90^\\circ = 1$$\n$$F = 6\\ N$$\n\n### Step 3: Verification & Physical Interpretation\nAt right angles the full force develops; six newtons follows directly from the product of the three given quantities. This is the same pattern as the perpendicular conductor case, applied to a free charge.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (12 N)**: the student doubles the product (e.g. uses B = 0.6 T).\n- **Option C trap (3 N)**: the student halves the product (e.g. uses θ = 30°).\n- **Option D trap (0 N)**: the student uses sin 0° — the parallel-motion trap.\nr"
+  },
+  {
+    "id": "eee_magnetism_11",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Magnetism is best defined as:",
+    "options": [
+      "the force produced by moving charges that attracts or repels other magnets and moving charges",
+      "the force between two stationary electric charges",
+      "the ability of a material to conduct electricity",
+      "the resistance of a material to being magnetised"
+    ],
+    "correct": 0,
+    "short": "Magnetism is the phenomenon associated with magnetic fields, which are produced by moving electric charges.",
+    "solution": "### Step 1: Core Principle\nThe lecture notes define magnetism as the force produced by moving charge which attracts or repels other magnets and moving charges. Magnetic fields are produced by moving electric charges, so magnetism is a property of moving charged particles.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: matches the notes' definition word for word — moving charges produce the force.\n- **Option B (wrong)**: that is the electrostatic (Coulomb) force between STATIC charges — the opposite situation.\n- **Option C (wrong)**: conductivity is a material property (how easily current flows), not magnetism.\n- **Option D (wrong)**: resistance to magnetisation describes coercivity/diamagnetism, not magnetism itself.\n\n### Step 3: Exam Trap Summary\nThe trap is confusing magnetism (moving charges) with electrostatics (static charges). In the exam, look for the phrase \"moving charges\" — it is the defining feature.\nr\n\n**Key relation:** the force law behind magnetism is $F = qvB\\sin\\theta$."
+  },
+  {
+    "id": "eee_magnetism_12",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "For any two magnetic poles:",
+    "options": [
+      "like poles repel each other and opposite poles attract each other",
+      "like poles attract each other and opposite poles repel each other",
+      "all poles attract each other regardless of type",
+      "poles neither attract nor repel"
+    ],
+    "correct": 0,
+    "short": "Like poles repel; opposite (unlike) poles attract.",
+    "solution": "### Step 1: Core Principle\nThe fundamental law of magnet poles: like (same-type) poles repel one another, and unlike (opposite) poles attract one another.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the standard statement of pole interaction.\n- **Option B (wrong)**: it reverses both rules — the classic memory inversion.\n- **Option C (wrong)**: only unlike poles attract; like poles repel.\n- **Option D (wrong)**: poles always interact — there is no neutral case.\n\n### Step 3: Exam Trap Summary\nStudents commonly invert the rule under pressure. Fix it by remembering the parallel with electric charges: same sign repel, opposite sign attract — magnets behave the same way for poles.\nr\n\n**Key recall:** the pole law is qualitative; the related quantitative law is $F = BIl\\sin\\theta$."
+  },
+  {
+    "id": "eee_magnetism_13",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The property of magnetism was first observed in a naturally occurring material called:",
+    "options": [
+      "Magnetite (Fe₃O₄)",
+      "Hematite (Fe₂O₃)",
+      "Bauxite (Al₂O₃)",
+      "Calcite (CaCO₃)"
+    ],
+    "correct": 0,
+    "short": "Magnetism was first observed in magnetite, Fe₃O₄ — hence the name 'magnets'.",
+    "solution": "### Step 1: Core Principle\nThe notes state that the property of magnetism was first observed in a material called magnetite, $Fe_3O_4$ — hence the name \"magnets\". Magnetite is scattered around the Earth's crust and was first noticed by a shepherd in Greece.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: magnetite, $Fe_3O_4$, is the historical first magnet.\n- **Option B (wrong)**: hematite, $Fe_2O_3$, is an iron ore but not the first known magnetic material.\n- **Option C (wrong)**: bauxite is aluminium ore — irrelevant to magnetism.\n- **Option D (wrong)**: calcite is calcium carbonate — non-magnetic.\n\n### Step 3: Exam Trap Summary\nThe trap is matching \"magnetite\" to the wrong formula. Anchor the pair: magnetite = Fe₃O₄ (three oxygens, the magnetic one).\nr"
+  },
+  {
+    "id": "eee_magnetism_14",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Materials in which the electrons are arranged so their magnetic effects do NOT cancel out are called:",
+    "options": [
+      "ferromagnetic materials",
+      "diamagnetic materials",
+      "insulators",
+      "semiconductors"
+    ],
+    "correct": 0,
+    "short": "Ferromagnetic materials have uncancelled electron magnets and act as permanent magnets.",
+    "solution": "### Step 1: Core Principle\nIn most materials the individual electron magnets cancel each other out, so the material shows no net magnetism. In ferromagnetic materials the electrons are arranged so their magnetic effects do NOT cancel — they behave as permanent magnets and attract other metallic materials naturally.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: ferromagnetic — the uncancelled arrangement.\n- **Option B (wrong)**: diamagnetic materials weakly OPPOSE an applied field rather than showing uncancelled internal magnetism.\n- **Option C (wrong)**: insulators are classified by electrical conduction, not magnetism.\n- **Option D (wrong)**: semiconductors are likewise a conduction classification.\n\n### Step 3: Exam Trap Summary\nThe trap is mixing material classifications: magnetic classes (ferro/para/dia) versus electrical classes (conductor/insulator/semiconductor). The question is about magnetism, so the answer must be a magnetic class.\nr\n\n**Key relation:** ferromagnetic materials have relative permeability $\\mu_r \\gg 1$ (hundreds to thousands)."
+  },
+  {
+    "id": "eee_magnetism_15",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Electromotive force (e.m.f.) is:",
+    "options": [
+      "that which tends to produce an electric current in a circuit, with unit the volt (V)",
+      "the opposition to current flow, with unit the ohm (Ω)",
+      "the stored charge of a capacitor, with unit the coulomb (C)",
+      "the power dissipated in a resistor, with unit the watt (W)"
+    ],
+    "correct": 0,
+    "short": "e.m.f. is that which tends to produce an electric current in a circuit; symbol E, unit volt.",
+    "solution": "### Step 1: Core Principle\nThe notes define: an electromotive force is that which tends to produce an electric current in a circuit, and the unit of e.m.f. is the volt. Symbol E, unit V.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the exact definition and unit from the notes.\n- **Option B (wrong)**: opposition to current is resistance (ohm).\n- **Option C (wrong)**: stored charge is the coulomb — a quantity, not a driving force.\n- **Option D (wrong)**: power dissipation is the watt — an effect, not a cause of current.\n\n### Step 3: Exam Trap Summary\nThe trap is confusing the four electrical quantities (e.m.f., resistance, charge, power). Anchor: e.m.f. is the \"pressure\" that DRIVES current, measured in volts.\nr\n\n**Key relation:** the e.m.f. drives current through the circuit per Ohm's law $I = E/R$."
+  },
+  {
+    "id": "eee_magnetism_16",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which of the following is NOT listed as a principal source of e.m.f.?",
+    "options": [
+      "Friction between two insulators",
+      "Electrodes of dissimilar materials immersed in an electrolyte (cells)",
+      "Relative movement of a conductor and a magnetic flux (generators)",
+      "Difference of temperature between junctions of dissimilar metals (thermo-junctions)"
+    ],
+    "correct": 0,
+    "short": "The notes list cells, generators and thermo-junctions as e.m.f. sources — friction between insulators is not one of them.",
+    "solution": "### Step 1: Core Principle\nThe notes list three principal sources of e.m.f.:\n1. Electrodes of dissimilar materials in an electrolyte — primary and secondary cells (batteries).\n2. Relative movement of a conductor and a magnetic flux — electric generators (equivalently, variation of flux linked with a coil).\n3. Difference of temperature between junctions of dissimilar metals — thermo-junctions.\n\n### Step 2: Testing the Options\n- **Option A (correct as \"not listed\")**: friction between insulators produces static charge build-up, not a circuit-driving e.m.f., and is absent from the list.\n- **Option B (wrong choice)**: cells are source 1.\n- **Option C (wrong choice)**: generators are source 2.\n- **Option D (wrong choice)**: thermo-junctions are source 3.\n\n### Step 3: Exam Trap Summary\nThis is a \"but one/except\" question — read the negative carefully. The trap is rushing and picking a genuine source instead of the intruder.\nr\n\n**Key recall:** the generator source obeys the motional law $E = Blv$."
+  },
+  {
+    "id": "eee_magnetism_17",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The B-field and the H-field are distinguished as follows:",
+    "options": [
+      "The B-field is defined by the force it exerts on a moving charged particle (tesla), while the H-field is the magnetic field within a material (A/m)",
+      "The B-field is measured in A/m and the H-field in tesla",
+      "The H-field is defined by force on a moving charge and the B-field is within a material",
+      "They are identical quantities with different names"
+    ],
+    "correct": 0,
+    "short": "B-field = force-based definition, measured in tesla; H-field = field within a material, measured in A/m.",
+    "solution": "### Step 1: Core Principle\nThe notes define:\n- B-field: the magnetic field defined by the FORCE it exerts on a moving charged particle; measured in tesla (T); in CGS it is the gauss ($1\\ T = 10^4\\ G$).\n- H-field: the magnetic field WITHIN a material rather than in a vacuum; measured in ampere/metre (A/m); in CGS the oersted ($1\\ Oe = 1000/4\\pi\\ A/m \\approx 79.577\\ A/m$).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: matches both definitions and both units.\n- **Option B (wrong)**: swaps the units of the two fields.\n- **Option C (wrong)**: swaps the definitions of the two fields.\n- **Option D (wrong)**: they are distinct quantities linked by $B = \\mu H$.\n\n### Step 3: Exam Trap Summary\nThe trap is unit/definition swapping. Anchor: B for \"body force\" (tesla, what you feel), H for \"hidden inside\" (A/m, inside the material).\nr"
+  },
+  {
+    "id": "eee_magnetism_18",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which statement about magnetic field lines is FALSE?",
+    "options": [
+      "Inside the magnet they run from the north pole to the south pole",
+      "They never cross each other",
+      "They form closed loops",
+      "When parallel they repel one another"
+    ],
+    "correct": 0,
+    "short": "Inside the magnet the field runs south→north (to close the loop); all other statements are true.",
+    "solution": "### Step 1: Core Principle\nField-line rules: field lines form closed loops, never cross, and when parallel they repel one another. OUTSIDE a magnet the lines run north to south; INSIDE the magnet they run south to north, closing the loop.\n\n### Step 2: Testing the Options\n- **Option A (correct as FALSE)**: inside the magnet the lines run SOUTH to NORTH — stating north to south is the false statement.\n- **Option B (true)**: lines never cross; crossing would imply two field directions at one point.\n- **Option C (true)**: magnetic lines are closed loops (no isolated magnetic charges).\n- **Option D (true)**: parallel lines repel, as in the Hughes summary of important formulae.\n\n### Step 3: Exam Trap Summary\nThe trap is remembering only the outside-the-magnet convention (N→S) and applying it inside the magnet, where the direction reverses. Read \"inside/outside\" qualifiers with extreme care.\nr\n\n**Key recall:** for a solenoid, field strength follows $B = \\mu_0 n I$ with $n = N/L$."
+  },
+  {
+    "id": "eee_magnetism_19",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The force on a moving charge in a magnetic field is given by:",
+    "options": [
+      "F = qvB sin θ",
+      "F = qvB cos θ",
+      "F = qE",
+      "F = mB sin θ"
+    ],
+    "correct": 0,
+    "short": "F = qvB sin θ, where θ is the angle between the velocity and the field.",
+    "solution": "### Step 1: Core Principle\nThe lecture notes give the magnetic force on a moving charge as:\n$$F = qvB\\sin\\theta$$\nwhere $q$ is the charge, $v$ its velocity, $B$ the magnetic field, and $\\theta$ the angle between the field and the velocity of the charge.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the sine form from the notes.\n- **Option B (wrong)**: cosine would give maximum force for PARALLEL motion — physically backwards.\n- **Option C (wrong)**: $F = qE$ is the ELECTRIC force, not the magnetic force.\n- **Option D (wrong)**: mass $m$ appears in gravitational/Newtonian force expressions, not the magnetic force.\n\n### Step 3: Exam Trap Summary\nTwo traps: using cosine (wrong angle convention) and confusing the electric force $qE$ with the magnetic force $qvB\\sin\\theta$. The magnetic force acts only on MOVING charges and only across the field.\nr"
+  },
+  {
+    "id": "eee_magnetism_20",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Match each quantity to its SI unit: (a) magnetic flux (b) magnetic flux density (c) magnetic field strength (d) magnetomotive force.",
+    "options": [
+      "weber, tesla, ampere per metre, ampere-turn",
+      "tesla, weber, ampere per metre, volt",
+      "weber, gauss, ampere per metre, ampere-turn",
+      "tesla, weber, ampere-turn, ampere per metre"
+    ],
+    "correct": 0,
+    "short": "Flux is measured in webers, flux density in teslas, field strength in A/m, and m.m.f. in ampere-turns.",
+    "solution": "### Step 1: Core Principle\nThe four quantities and their SI units:\n(a) magnetic flux $\\Phi$ — weber (Wb)\n(b) magnetic flux density $B = \\Phi/A$ — tesla (T)\n(c) magnetic field strength $H = NI/l$ — ampere per metre (A/m)\n(d) magnetomotive force $F = NI$ — ampere-turn (At)\n\n### Step 2: Testing the Options\n- **Option A (correct)**: all four pairings are exact.\n- **Option B (wrong)**: swaps flux and flux density in parts (a) and (b), and gives m.m.f. the unit volt (volt is the e.m.f. unit).\n- **Option C (wrong)**: part (b) uses gauss — a CGS unit, not the SI unit.\n- **Option D (wrong)**: parts (b) and (c) are swapped, and (c)/(d) are interchanged.\n\n### Step 3: Exam Trap Summary\nThe traps are unit swaps between flux/ф density and between m.m.f./e.m.f. Anchor the chain: flux (Wb) → flux density (T = Wb/m²) → field strength (A/m) → m.m.f. (At), in decreasing \"materiality\".\nr"
+  },
+  {
+    "id": "eee_induction_01",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A coil of 50 turns is placed in a magnetic field whose flux density changes at a rate of 0.10 T/s. The e.m.f. induced in the coil is:",
+    "options": [
+      "5 V",
+      "0.5 V",
+      "50 V",
+      "0.002 V"
+    ],
+    "correct": 0,
+    "short": "E = N × (dΦ/dt) = 50 × 0.10 = 5 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: turns $N = 50$, rate of change of flux $\\frac{d\\Phi}{dt} = 0.10\\ T\\cdot m^2/s$.\nGoverning law — Faraday's second law:\n$$E = N\\frac{d\\Phi}{dt}$$\n\n### Step 2: Full Mathematical Workings\n$$E = 50 \\times 0.10$$\n$$E = 5.0\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThe induced e.m.f. is proportional to both the number of turns and the rate of flux change. Five volts is the magnitude; the minus sign of Lenz's law only indicates direction (opposing the change), so the reported magnitude is positive. This reproduces Solved Question 1 of the lecture notes.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.5 V)**: the student misplaces the decimal — reading the rate as 0.010 instead of 0.10.\n- **Option C trap (50 V)**: the student multiplies by 100 turns instead of 50, or treats the rate as 1.0 T/s.\n- **Option D trap (0.002 V)**: the student divides instead of multiplying ($50/0.10$ inverted to $0.10/50$).\nr"
+  },
+  {
+    "id": "eee_induction_02",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A single loop of wire sits in a field whose flux increases at 0.02 T·m²/s. The loop's resistance is 5 Ω. The induced current is:",
+    "options": [
+      "4 mA",
+      "0.4 mA",
+      "40 mA",
+      "0.1 A"
+    ],
+    "correct": 0,
+    "short": "E = N × (dΦ/dt) = 1 × 0.02 = 0.02 V; then I = E/R = 0.02/5 = 0.004 A = 4 mA.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: turns $N = 1$ (a single loop), $\\frac{d\\Phi}{dt} = 0.02\\ T\\cdot m^2/s$, resistance $R = 5\\ \\Omega$.\nGoverning laws — Faraday's second law and Ohm's law:\n$$E = N\\frac{d\\Phi}{dt} \\qquad I = \\frac{E}{R}$$\n\n### Step 2: Full Mathematical Workings\nStep A — induced e.m.f.:\n$$E = 1 \\times 0.02$$\n$$E = 0.02\\ V$$\nStep B — induced current:\n$$I = \\frac{0.02}{5}$$\n$$I = 0.004\\ A$$\nConvert to milliamperes:\n$$0.004\\ A = 4\\ mA$$\n\n### Step 3: Verification & Physical Interpretation\nThe single loop develops only 0.02 V, and the 5 Ω loop limits the current to 4 milliamperes — small because there is only one turn. This matches Solved Question 2 of the notes.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.4 mA)**: the student computes E as 0.002 V (one decimal place too low) before dividing.\n- **Option C trap (40 mA)**: the student computes E as 0.2 V (rate read as 0.2) before dividing.\n- **Option D trap (0.1 A)**: the student computes I = 0.02 × 5 = 0.1 A — multiplying by R instead of dividing.\nr"
+  },
+  {
+    "id": "eee_induction_03",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A coil of 100 turns has the flux through each turn decrease uniformly from 0.5 Wb to 0 Wb in 0.2 s. The induced e.m.f. is:",
+    "options": [
+      "250 V",
+      "25 V",
+      "100 V",
+      "500 V"
+    ],
+    "correct": 0,
+    "short": "E = N × (ΔΦ/Δt) = 100 × (0.5/0.2) = 100 × 2.5 = 250 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 100$ turns, initial flux $\\Phi_i = 0.5\\ Wb$, final flux $\\Phi_f = 0\\ Wb$, time $\\Delta t = 0.2\\ s$.\nGoverning law (uniform-change form of Faraday's second law):\n$$E = N\\frac{\\Delta\\Phi}{\\Delta t}$$\n\n### Step 2: Full Mathematical Workings\nCompute the flux change:\n$$\\Delta\\Phi = \\Phi_i - \\Phi_f$$\n$$\\Delta\\Phi = 0.5 - 0$$\n$$\\Delta\\Phi = 0.5\\ Wb$$\nCompute the rate of change:\n$$\\frac{\\Delta\\Phi}{\\Delta t} = \\frac{0.5}{0.2}$$\n$$\\frac{\\Delta\\Phi}{\\Delta t} = 2.5\\ Wb/s$$\nMultiply by the turns:\n$$E = 100 \\times 2.5$$\n$$E = 250\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nLosing half a weber in only 0.2 s across 100 turns develops a strong 250 V. This is Solved Question 3 of the notes, reproduced exactly.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (25 V)**: the student forgets to multiply by N (computes only ΔΦ/Δt) or divides by 10.\n- **Option C trap (100 V)**: the student multiplies N by the flux change only (100 × 0.5 × 2), mixing ΔΦ with Δt incorrectly.\n- **Option D trap (500 V)**: the student uses Δt = 0.1 s (doubling the rate).\nr"
+  },
+  {
+    "id": "eee_induction_04",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A rectangular coil of 20 turns, each of area 0.1 m², sits in a field B = 0.5 T. The coil is rotated so that the flux changes from its full value to zero in 0.05 s. The average e.m.f. induced is:",
+    "options": [
+      "20 V",
+      "10 V",
+      "2 V",
+      "40 V"
+    ],
+    "correct": 0,
+    "short": "Φ = BA = 0.5 × 0.1 = 0.05 Wb; E = N × (ΔΦ/Δt) = 20 × (0.05/0.05) = 20 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 20$ turns, area per turn $A = 0.1\\ m^2$, field $B = 0.5\\ T$, time $\\Delta t = 0.05\\ s$.\nGoverning laws — flux through an area, then Faraday's second law:\n$$\\Phi = BA \\qquad E = N\\frac{\\Delta\\Phi}{\\Delta t}$$\n\n### Step 2: Full Mathematical Workings\nStep A — initial flux (coil plane perpendicular to the field):\n$$\\Phi_i = BA$$\n$$\\Phi_i = 0.5 \\times 0.1$$\n$$\\Phi_i = 0.05\\ Wb$$\nThe coil is rotated until the flux is zero:\n$$\\Phi_f = 0\\ Wb$$\n$$\\Delta\\Phi = 0.05 - 0 = 0.05\\ Wb$$\nStep B — induced e.m.f.:\n$$E = 20 \\times \\frac{0.05}{0.05}$$\n$$\\frac{0.05}{0.05} = 1$$\n$$E = 20 \\times 1$$\n$$E = 20\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThe average induced e.m.f. of 20 V arises because the 0.05 Wb is removed in 0.05 s — a rate of 1 Wb/s across 20 turns. This matches Solved Question 4 of the notes.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (10 V)**: the student halves the rate — e.g. by using Δt = 0.1 s.\n- **Option C trap (2 V)**: the student omits the turns N (0.05/0.05 = 1 V, then doubles it in a second slip).\n- **Option D trap (40 V)**: the student doubles the turns or halves the time.\nr"
+  },
+  {
+    "id": "eee_induction_05",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A coil of 80 turns has the flux through each turn decrease uniformly from 0.6 Wb to 0 Wb in 0.3 s. The induced e.m.f. is:",
+    "options": [
+      "160 V",
+      "16 V",
+      "60 V",
+      "320 V"
+    ],
+    "correct": 0,
+    "short": "E = N × (ΔΦ/Δt) = 80 × (0.6/0.3) = 80 × 2 = 160 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 80$, $\\Phi_i = 0.6\\ Wb$, $\\Phi_f = 0\\ Wb$, $\\Delta t = 0.3\\ s$.\nGoverning law:\n$$E = N\\frac{\\Delta\\Phi}{\\Delta t}$$\n\n### Step 2: Full Mathematical Workings\n$$\\Delta\\Phi = 0.6 - 0 = 0.6\\ Wb$$\n$$\\frac{\\Delta\\Phi}{\\Delta t} = \\frac{0.6}{0.3}$$\n$$\\frac{0.6}{0.3} = 2\\ Wb/s$$\n$$E = 80 \\times 2$$\n$$E = 160\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThis is Unsolved Question 1 of the lecture notes, now solved: the flux vanishes at 2 Wb/s across 80 turns, giving 160 V.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (16 V)**: the student drops a factor of ten in the rate (0.2 Wb/s).\n- **Option C trap (60 V)**: the student multiplies N by ΔΦ only (80 × 0.75 ≈ 60), confusing flux with rate.\n- **Option D trap (320 V)**: the student halves the time to 0.15 s.\nr"
+  },
+  {
+    "id": "eee_induction_06",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A single-turn circular loop of radius 0.1 m sits perpendicular to a field of 0.8 T which is then reduced to zero in 0.2 s. The induced e.m.f. is about: (take π = 3.14)",
+    "options": [
+      "0.126 V",
+      "0.063 V",
+      "0.251 V",
+      "1.26 V"
+    ],
+    "correct": 0,
+    "short": "A = πr² = 3.14 × 0.01 = 0.0314 m²; Φ = BA = 0.8 × 0.0314 = 0.02513 Wb; E = ΔΦ/Δt = 0.02513/0.2 = 0.126 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 1$, radius $r = 0.1\\ m$, field $B = 0.8\\ T$, time $\\Delta t = 0.2\\ s$, $\\pi = 3.14$.\nGoverning laws:\n$$A = \\pi r^2 \\qquad \\Phi = BA \\qquad E = N\\frac{\\Delta\\Phi}{\\Delta t}$$\n\n### Step 2: Full Mathematical Workings\nStep A — loop area:\n$$A = \\pi r^2$$\n$$A = 3.14 \\times (0.1)^2$$\n$$(0.1)^2 = 0.01$$\n$$A = 3.14 \\times 0.01$$\n$$A = 0.0314\\ m^2$$\nStep B — initial flux (field perpendicular to the loop):\n$$\\Phi_i = BA$$\n$$\\Phi_i = 0.8 \\times 0.0314$$\n$$\\Phi_i = 0.02512\\ Wb$$\nStep C — induced e.m.f. (flux falls to zero):\n$$\\Delta\\Phi = 0.02512 - 0 = 0.02512\\ Wb$$\n$$E = 1 \\times \\frac{0.02512}{0.2}$$\n$$E = \\frac{0.02512}{0.2} = 0.1256\\ V$$\n$$E \\approx 0.126\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThis is Unsolved Question 2 of the notes, now solved. The tiny loop area keeps the flux small, so the e.m.f. is a modest 126 mV despite the field vanishing in a fifth of a second.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.063 V)**: the student uses the diameter (0.2 m) as the radius, quartering... — in fact halving: using $A = \\pi r$ instead of $\\pi r^2$.\n- **Option C trap (0.251 V)**: the student uses $\\Delta t = 0.1$ s, doubling the answer.\n- **Option D trap (1.26 V)**: the student misplaces the decimal — e.g. treating the radius as 1 m.\nr"
+  },
+  {
+    "id": "eee_induction_07",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A coil of 50 turns sits in a field that changes at 0.15 T/s. The coil resistance is 10 Ω. The induced current is:",
+    "options": [
+      "0.75 A",
+      "7.5 A",
+      "0.075 A",
+      "1.5 A"
+    ],
+    "correct": 0,
+    "short": "E = N × (dΦ/dt) = 50 × 0.15 = 7.5 V; I = E/R = 7.5/10 = 0.75 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 50$, $\\frac{d\\Phi}{dt} = 0.15\\ T\\cdot m^2/s$, $R = 10\\ \\Omega$.\nGoverning laws:\n$$E = N\\frac{d\\Phi}{dt} \\qquad I = \\frac{E}{R}$$\n\n### Step 2: Full Mathematical Workings\nStep A — induced e.m.f.:\n$$E = 50 \\times 0.15$$\n$$E = 7.5\\ V$$\nStep B — induced current:\n$$I = \\frac{7.5}{10}$$\n$$I = 0.75\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nThis is Unsolved Question 4 of the notes, now solved: 7.5 V across 10 Ω drives 0.75 A. The two-step pattern (Faraday then Ohm) is the standard exam pathway.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (7.5 A)**: the student stops at the e.m.f. and forgets to divide by R.\n- **Option C trap (0.075 A)**: the student misplaces a decimal in E (0.75 V) before dividing.\n- **Option D trap (1.5 A)**: the student doubles the current (e.g. by using R = 5 Ω).\nr"
+  },
+  {
+    "id": "eee_induction_08",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A bar magnet moved towards a 40-turn coil increases the linked flux from 0 to 0.2 Wb in 0.05 s. With a coil resistance of 8 Ω, the induced e.m.f. and current are:",
+    "options": [
+      "160 V and 20 A",
+      "16 V and 2 A",
+      "8 V and 1 A",
+      "320 V and 40 A"
+    ],
+    "correct": 0,
+    "short": "E = N × (ΔΦ/Δt) = 40 × (0.2/0.05) = 160 V; I = E/R = 160/8 = 20 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 40$, $\\Phi_i = 0$, $\\Phi_f = 0.2\\ Wb$, $\\Delta t = 0.05\\ s$, $R = 8\\ \\Omega$.\nGoverning laws:\n$$E = N\\frac{\\Delta\\Phi}{\\Delta t} \\qquad I = \\frac{E}{R}$$\n\n### Step 2: Full Mathematical Workings\nStep A — flux change:\n$$\\Delta\\Phi = 0.2 - 0 = 0.2\\ Wb$$\nStep B — induced e.m.f.:\n$$E = 40 \\times \\frac{0.2}{0.05}$$\n$$\\frac{0.2}{0.05} = 4\\ Wb/s$$\n$$E = 40 \\times 4$$\n$$E = 160\\ V$$\nStep C — induced current:\n$$I = \\frac{160}{8}$$\n$$I = 20\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nThis is Unsolved Question 5 of the notes, now solved. The fast magnet motion (0.05 s) across 40 turns gives 160 V, and the low coil resistance allows a strong 20 A induced current.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (16 V and 2 A)**: the student divides both answers by 10 — a decimal slip in the rate (0.4 Wb/s).\n- **Option C trap (8 V and 1 A)**: the student omits N entirely and then divides by R.\n- **Option D trap (320 V and 40 A)**: the student halves the time or doubles the turns, doubling both results.\nr"
+  },
+  {
+    "id": "eee_induction_09",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A coil of 200 turns sits in a field changing at 0.05 T/s. The induced e.m.f. is:",
+    "options": [
+      "10 V",
+      "1 V",
+      "100 V",
+      "0.1 V"
+    ],
+    "correct": 0,
+    "short": "E = N × (dΦ/dt) = 200 × 0.05 = 10 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 200$, $\\frac{d\\Phi}{dt} = 0.05\\ T\\cdot m^2/s$.\nGoverning law:\n$$E = N\\frac{d\\Phi}{dt}$$\n\n### Step 2: Full Mathematical Workings\n$$E = 200 \\times 0.05$$\n$$200 \\times 0.05 = 200 \\times \\frac{5}{100}$$\n$$200 \\times \\frac{5}{100} = \\frac{1000}{100}$$\n$$E = 10\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nTwo hundred turns times five hundredths of a tesla per second gives exactly 10 V — a clean one-step application of Faraday's second law.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (1 V)**: the student misplaces the decimal (rate read as 0.005).\n- **Option C trap (100 V)**: the student reads the rate as 0.5 T/s.\n- **Option D trap (0.1 V)**: the student divides 0.05 by 200 instead of multiplying.\nr"
+  },
+  {
+    "id": "eee_induction_10",
+    "topicId": "eee-induction",
+    "kind": "calc",
+    "question": "A rectangular coil of 30 turns, each of area 0.05 m², sits in a field of 0.4 T. The coil is rotated from a position parallel to the field to perpendicular in 0.1 s. The average induced e.m.f. is:",
+    "options": [
+      "6 V",
+      "0.6 V",
+      "60 V",
+      "3 V"
+    ],
+    "correct": 0,
+    "short": "Flux goes from 0 (parallel) to BA = 0.4 × 0.05 = 0.02 Wb (perpendicular); E = 30 × (0.02/0.1) = 6 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 30$, $A = 0.05\\ m^2$, $B = 0.4\\ T$, $\\Delta t = 0.1\\ s$. Starting parallel to the field means $\\Phi_i = 0$; ending perpendicular means $\\Phi_f = BA$.\nGoverning laws:\n$$\\Phi = BA \\qquad E = N\\frac{\\Delta\\Phi}{\\Delta t}$$\n\n### Step 2: Full Mathematical Workings\nStep A — final flux (perpendicular position):\n$$\\Phi_f = BA$$\n$$\\Phi_f = 0.4 \\times 0.05$$\n$$\\Phi_f = 0.02\\ Wb$$\nStep B — flux change:\n$$\\Delta\\Phi = 0.02 - 0 = 0.02\\ Wb$$\nStep C — induced e.m.f.:\n$$E = 30 \\times \\frac{0.02}{0.1}$$\n$$\\frac{0.02}{0.1} = 0.2\\ Wb/s$$\n$$E = 30 \\times 0.2$$\n$$E = 6\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThis is Unsolved Question 3 of the notes, now solved. Rotating from parallel (no linkage) to perpendicular (full linkage $BA$) changes the flux by 0.02 Wb per turn; across 30 turns in 0.1 s this averages 6 V.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.6 V)**: the student drops a factor of ten in the rate (0.02 Wb/s).\n- **Option C trap (60 V)**: the student uses Δt = 0.01 s, multiplying by ten.\n- **Option D trap (3 V)**: the student halves the turns (uses N = 15).\nr"
+  },
+  {
+    "id": "eee_induction_11",
+    "topicId": "eee-induction",
+    "kind": "theory",
+    "question": "Faraday's FIRST law of electromagnetic induction states that:",
+    "options": [
+      "an e.m.f. is induced in a conductor whenever it is placed in a changing magnetic field, and a current flows if the circuit is closed",
+      "the induced e.m.f. equals the rate of change of flux linkage",
+      "the induced effect always opposes the change producing it",
+      "a current-carrying conductor experiences a force in a magnetic field"
+    ],
+    "correct": 0,
+    "short": "First law: changing field → induced e.m.f.; closed circuit → induced current.",
+    "solution": "### Step 1: Core Principle\nFaraday's first law: whenever a conductor is placed in a changing magnetic field, an electromotive force is induced in the conductor. If the conductor forms a closed circuit, an induced current will also flow through it.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the exact statement of the first law.\n- **Option B (wrong)**: that is Faraday's SECOND law (the quantitative rate-of-change statement).\n- **Option C (wrong)**: that is Lenz's law (the direction rule).\n- **Option D (wrong)**: that is the motor effect (force on a current-carrying conductor), a different phenomenon.\n\n### Step 3: Exam Trap Summary\nThe trap is interchanging the three induction laws. Anchor: 1st law = WHEN induction happens (changing field, closed circuit), 2nd law = HOW MUCH (E = N dΦ/dt), Lenz = WHICH WAY (opposes).\nr\n\n**Key relation (the quantitative second law):** $E = N\\,d\\Phi/dt$."
+  },
+  {
+    "id": "eee_induction_12",
+    "topicId": "eee-induction",
+    "kind": "theory",
+    "question": "Faraday's SECOND law states that the magnitude of the induced e.m.f. is:",
+    "options": [
+      "equal to the rate of change of magnetic flux linked with the conductor",
+      "equal to the magnetic flux itself",
+      "inversely proportional to the number of turns",
+      "independent of the rate of flux change"
+    ],
+    "correct": 0,
+    "short": "Second law: E = N × (dΦ/dt) — e.m.f. equals the rate of change of flux linkage.",
+    "solution": "### Step 1: Core Principle\nFaraday's second law: the magnitude of the induced e.m.f. in a conductor is equal to the rate of change of magnetic flux linked with the conductor. With N turns, $E = N\\frac{d\\Phi}{dt}$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the rate-of-change statement.\n- **Option B (wrong)**: a steady flux induces nothing — induction needs CHANGE.\n- **Option C (wrong)**: e.m.f. is DIRECTLY proportional to N (more turns, more voltage).\n- **Option D (wrong)**: the rate of change is the very quantity the e.m.f. equals.\n\n### Step 3: Exam Trap Summary\nThe trap is thinking \"flux present = e.m.f. present\". Only a CHANGING flux induces. Remember: static flux, zero e.m.f.; fast-changing flux, large e.m.f.\nr"
+  },
+  {
+    "id": "eee_induction_13",
+    "topicId": "eee-induction",
+    "kind": "theory",
+    "question": "Eddy currents (also called Foucault currents) are:",
+    "options": [
+      "loops of current induced in a conductor by a changing magnetic field, which create a field opposing the change (Lenz's law)",
+      "the main working currents of a transformer's windings",
+      "currents that flow only in superconductors",
+      "currents produced directly by batteries"
+    ],
+    "correct": 0,
+    "short": "Eddy currents are induced loops in bulk conductors; they oppose the changing field per Lenz's law.",
+    "solution": "### Step 1: Core Principle\nEddy currents are loops of electric current induced in a conductor when it is placed in a changing magnetic field. They create a magnetic field that opposes the change in the original field, in accordance with Lenz's law. They are also called Foucault currents, and they appear in transformers, AC generators and magnetic flow meters.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the full definition, including the Lenz-law opposition.\n- **Option B (wrong)**: the working currents are the designed winding currents, not the parasitic eddy loops.\n- **Option C (wrong)**: eddy currents arise in ordinary conductors; they are not a superconductor phenomenon.\n- **Option D (wrong)**: batteries are a chemical e.m.f. source, unrelated to induced loops.\n\n### Step 3: Exam Trap Summary\nThe trap is conflating eddy currents with the useful winding currents. Eddy currents are the PARASITIC loops in the bulk metal — they waste power as heat unless laminated cores suppress them.\nr\n\n**Key relation:** the e.m.f. that drives the eddy loops is $E = N\\,d\\Phi/dt$."
+  },
+  {
+    "id": "eee_ac-phasors_01",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "Direct current (DC) is described as:",
+    "options": [
+      "a uni-directional supply whose value does not change with time",
+      "a bi-directional supply that varies in magnitude and direction",
+      "a supply that reverses polarity every half cycle",
+      "a time-varying sinusoidal supply"
+    ],
+    "correct": 0,
+    "short": "DC flows in one direction only with a fixed magnitude — it does not change with time.",
+    "solution": "### Step 1: Core Principle\nDC is a form of electrical current or voltage that flows around a circuit in one direction only — a \"uni-directional\" supply. It has a fixed magnitude (amplitude) and a definite direction (e.g. +12 V). DC power supplies do not change their value with respect to time; a constant uni-directional supply never changes or becomes negative unless its connections are physically reversed. Sources: power supplies, batteries, dynamos, solar cells.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the notes' exact description.\n- **Option B (wrong)**: that is the description of AC.\n- **Option C (wrong)**: polarity reversal every half cycle is AC behaviour.\n- **Option D (wrong)**: a sinusoid is AC, not DC.\n\n### Step 3: Exam Trap Summary\nThe trap is swapping the DC and AC definitions. Anchor: DC = constant + one direction; AC = time-varying + two directions.\nr\n\n**Key contrast:** DC is constant, while AC follows $A(t) = A_m\\sin(2\\pi ft)$."
+  },
+  {
+    "id": "eee_ac-phasors_02",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "An alternating (AC) waveform is defined as one that:",
+    "options": [
+      "varies in both magnitude and direction in an even manner with respect to time",
+      "flows in one direction only",
+      "never changes polarity",
+      "has a fixed magnitude at all times"
+    ],
+    "correct": 0,
+    "short": "AC varies in both magnitude and direction with time — a 'bi-directional' waveform.",
+    "solution": "### Step 1: Core Principle\nAn alternating function or AC waveform varies in both magnitude and direction in more or less an even manner with respect to time, making it a \"bi-directional\" waveform. The most common AC form is the sinusoidal waveform (sine wave), the domestic mains being the standard example.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: magnitude AND direction vary — the defining feature of AC.\n- **Option B (wrong)**: one-direction flow is DC.\n- **Option C (wrong)**: AC reverses polarity every half cycle.\n- **Option D (wrong)**: a fixed magnitude is DC behaviour.\n\n### Step 3: Exam Trap Summary\nSame trap, reversed — watch for \"magnitude and direction\" in the AC definition and \"one direction only\" for DC.\nr\n\n**Key form:** the sinusoid is $A(t) = A_m\\sin(2\\pi ft)$."
+  },
+  {
+    "id": "eee_ac-phasors_03",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The general expression of a sinusoidal AC quantity is:",
+    "options": [
+      "A(t) = Aₘ sin(2πft)",
+      "A(t) = Aₘ e⁻ᵗ",
+      "A(t) = Aₘ/t",
+      "A(t) = Aₘ sin(t)/(2πf)"
+    ],
+    "correct": 0,
+    "short": "A sinusoid is A(t) = Aₘ sin(2πft), where Aₘ is the amplitude and f the frequency.",
+    "solution": "### Step 1: Core Principle\nAn AC function generally follows the mathematical sinusoid defined as:\n$$A(t) = A_m\\sin(2\\pi ft)$$\nwhere $A_m$ is the amplitude and $f$ the frequency.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the standard sinusoid.\n- **Option B (wrong)**: an exponential decay — a transient, not a periodic waveform.\n- **Option C (wrong)**: a hyperbolic decay — not periodic.\n- **Option D (wrong)**: dividing by $2\\pi f$ inside the argument is dimensionally wrong and not the sinusoid.\n\n### Step 3: Exam Trap Summary\nThe trap is scrambling the argument $2\\pi ft$. Anchor: the argument must be dimensionless — $2\\pi$ times frequency times time.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_04",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The Period (T) of an AC waveform is:",
+    "options": [
+      "the time in seconds the waveform takes to repeat itself from start to finish",
+      "the number of times the waveform repeats in one second",
+      "the peak amplitude of the waveform",
+      "half the frequency"
+    ],
+    "correct": 0,
+    "short": "Period T is the time for one complete cycle (seconds); frequency f = 1/T.",
+    "solution": "### Step 1: Core Principle\nThe period T is the length of time in seconds that the waveform takes to repeat itself from start to finish — also called the periodic time for sine waves or the pulse width for square waves.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: time per cycle.\n- **Option B (wrong)**: cycles per second is the FREQUENCY, the reciprocal quantity.\n- **Option C (wrong)**: the peak value is the amplitude, unrelated to timing.\n- **Option D (wrong)**: T is the reciprocal of f, not half of it.\n\n### Step 3: Exam Trap Summary\nThe classic trap: period vs frequency inversion. Anchor: period is in SECONDS, frequency in HERTZ — and they are reciprocals ($f = 1/T$).\nr"
+  },
+  {
+    "id": "eee_ac-phasors_05",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The frequency (f) of a waveform is:",
+    "options": [
+      "the number of times the waveform repeats itself within one second, and is the reciprocal of the period (f = 1/T)",
+      "the time taken for one full cycle",
+      "the amplitude divided by the period",
+      "the peak-to-peak voltage"
+    ],
+    "correct": 0,
+    "short": "Frequency = cycles per second, f = 1/T, unit hertz (Hz).",
+    "solution": "### Step 1: Core Principle\nFrequency f is the number of times the waveform repeats itself within a one-second time period. Frequency is the reciprocal of the time period, $f = 1/T$, with the unit hertz (Hz).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the exact definition with the reciprocal relation.\n- **Option B (wrong)**: time per cycle is the period T.\n- **Option C (wrong)**: amplitude/period is a meaningless ratio, not frequency.\n- **Option D (wrong)**: peak-to-peak is a voltage measurement.\n\n### Step 3: Exam Trap Summary\nPeriod/frequency inversion again — in \"one second, how many cycles?\" think of 50 Hz mains = 50 cycles per second, so each cycle lasts 1/50 s = 20 ms.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_06",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The Amplitude (A) of an AC waveform is:",
+    "options": [
+      "the magnitude or intensity of the signal, measured in volts or amps",
+      "the time taken for one complete cycle",
+      "the number of cycles per second",
+      "the zero line of the waveform"
+    ],
+    "correct": 0,
+    "short": "Amplitude is the magnitude/intensity of the waveform (its peak value).",
+    "solution": "### Step 1: Core Principle\nThe amplitude A is the magnitude or intensity of the signal waveform, measured in volts or amps — the peak value measured from the zero line. Parts of the waveform above the zero axis represent flow in one direction; parts below represent flow in the opposite direction.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: magnitude/intensity in volts or amps.\n- **Option B (wrong)**: that is the period T.\n- **Option C (wrong)**: that is the frequency f.\n- **Option D (wrong)**: the zero line is the reference axis, not the amplitude.\n\n### Step 3: Exam Trap Summary\nThe trap is mixing the three waveform characteristics (period, frequency, amplitude). Anchor: amplitude = \"how big\" (V or A), period = \"how long\" (s), frequency = \"how often\" (Hz).\nr\n\n**Key relation:** amplitude ties to the other values via $V_{rms} = 0.707 V_m$ and $V_{avg} = 0.637 V_m$."
+  },
+  {
+    "id": "eee_ac-phasors_07",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The phasor method of analysing AC networks was made famous by:",
+    "options": [
+      "Charles P. Steinmetz (General Electric, 1893)",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "James Clerk Maxwell"
+    ],
+    "correct": 0,
+    "short": "Steinmetz — acquired by GE in 1893 — formalised the symbolic (phasor) method.",
+    "solution": "### Step 1: Core Principle\nWhen General Electric acquired a small firm in 1893, it gained the services of Charles P. Steinmetz. Steinmetz had completed his doctoral dissertation in mathematics at the University of Breslau and became famous for his symbolic method of analysing AC networks — the phasor transform.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: Steinmetz, GE, 1893.\n- **Option B (wrong)**: Edison championed the DC system, not the phasor method.\n- **Option C (wrong)**: Tesla contributed to AC systems broadly, but the phasor formalisation is credited to Steinmetz.\n- **Option D (wrong)**: Maxwell formulated electromagnetism, predating AC network phasors.\n\n### Step 3: Exam Trap Summary\nThe trap is attributing AC mathematics to the famous names (Edison/Tesla/Maxwell). Anchor the fact: Steinmetz = phasor method, GE 1893.\nr\n\n**Key recall:** a phasor rotates at the angular frequency $\\omega = 2\\pi f$."
+  },
+  {
+    "id": "eee_ac-phasors_08",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "A phasor is best described as:",
+    "options": [
+      "a rotating vector that represents the magnitude and phase of a sinusoidal quantity",
+      "a scalar that represents only the amplitude",
+      "a constant equal to the r.m.s. value",
+      "a unit vector fixed along the x-axis"
+    ],
+    "correct": 0,
+    "short": "A phasor is a rotating vector: its length gives magnitude, its angle gives phase.",
+    "solution": "### Step 1: Core Principle\nA phasor is a rotating vector representation of a sinusoidal quantity: the LENGTH of the vector represents the magnitude, and the ANGLE represents the phase. Because sinusoids of the same frequency add like vectors, phasors allow AC quantities to be combined without trigonometry.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: magnitude + phase in one rotating vector.\n- **Option B (wrong)**: amplitude alone loses the phase information — a phasor carries both.\n- **Option C (wrong)**: a phasor is not a constant; it rotates at the angular frequency ω.\n- **Option D (wrong)**: a fixed unit vector carries neither magnitude nor phase.\n\n### Step 3: Exam Trap Summary\nThe trap is treating the phasor as a plain number. Remember: magnitude = length, phase = angle, rotation = frequency.\nr\n\n**Key relation:** the phasor angle advances at $\\omega = 2\\pi f$ each second."
+  },
+  {
+    "id": "eee_ac-phasors_09",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "Which statement about alternating quantities is correct?",
+    "options": [
+      "They cannot be stored in batteries or cells like DC; they are generated by alternators or waveform generators when needed",
+      "They are stored in batteries just like DC",
+      "They are cheaper to store than to generate",
+      "They always have zero frequency"
+    ],
+    "correct": 0,
+    "short": "AC cannot be stored in cells; it is generated on demand by alternators.",
+    "solution": "### Step 1: Core Principle\nAlternating voltages and currents cannot be stored in batteries or cells like direct current can. It is much easier and cheaper to generate these quantities using alternators or waveform generators when they are needed.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the notes' exact statement.\n- **Option B (wrong)**: batteries store DC only.\n- **Option C (wrong)**: storage is impossible for AC, so \"cheaper to store\" is meaningless.\n- **Option D (wrong)**: AC has a definite frequency (e.g. 50 Hz).\n\n### Step 3: Exam Trap Summary\nThe trap is assuming batteries work for AC. Anchor: batteries = DC storage; AC = generate-on-demand.\nr\n\n**Key recall:** generation replaces storage; the angular frequency is $\\omega = 2\\pi f$."
+  },
+  {
+    "id": "eee_ac-phasors_10",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "In an AC circuit, the r.m.s. (effective) value of a current is:",
+    "options": [
+      "the value of DC that would produce the same heating effect in the same resistance",
+      "the peak value divided by π",
+      "the average value over a full cycle",
+      "always larger than the peak value"
+    ],
+    "correct": 0,
+    "short": "r.m.s. = the DC equivalent that produces the same heating effect; for a sine wave V_rms = 0.707 Vₘ.",
+    "solution": "### Step 1: Core Principle\nThe r.m.s. (root-mean-square) value of an alternating current is the value of direct current that would produce the same heating effect in the same resistance. For a sinusoid, $V_{rms} = \\frac{V_m}{\\sqrt{2}} = 0.707V_m$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the heating-equivalence definition.\n- **Option B (wrong)**: the half-cycle average uses 0.637; the peak/π is not a standard value.\n- **Option C (wrong)**: the average over a FULL cycle of a sinusoid is ZERO.\n- **Option D (wrong)**: r.m.s. is always SMALLER than the peak (0.707 of it).\n\n### Step 3: Exam Trap Summary\nTwo traps: average vs r.m.s. (0.637 vs 0.707) and peak vs r.m.s. ordering. Anchor: r.m.s. < peak always; full-cycle average = 0.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_11",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sinusoidal voltage has a period of 20 ms. Its frequency is:",
+    "options": [
+      "50 Hz",
+      "20 Hz",
+      "500 Hz",
+      "0.05 Hz"
+    ],
+    "correct": 0,
+    "short": "f = 1/T = 1/(20 × 10⁻³) = 50 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: period $T = 20\\ ms = 20 \\times 10^{-3}\\ s = 0.02\\ s$.\nGoverning law:\n$$f = \\frac{1}{T}$$\n\n### Step 2: Full Mathematical Workings\n$$f = \\frac{1}{0.02}$$\n$$f = \\frac{1}{2 \\times 10^{-2}}$$\n$$f = \\frac{1}{2} \\times 10^{2}$$\n$$f = 0.5 \\times 100$$\n$$f = 50\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nFifty hertz is the standard domestic mains frequency — a 20 ms period is exactly the mains cycle time, confirming the computation.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (20 Hz)**: the student reads the 20 ms as 20 Hz, ignoring the reciprocal.\n- **Option C trap (500 Hz)**: the student treats 20 ms as 2 ms (10× slip).\n- **Option D trap (0.05 Hz)**: the student inverts the conversion the wrong way, effectively computing T/1000.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_12",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sine wave has a frequency of 1 kHz. Its period is:",
+    "options": [
+      "1 ms",
+      "1 s",
+      "0.1 ms",
+      "10 ms"
+    ],
+    "correct": 0,
+    "short": "T = 1/f = 1/1000 = 0.001 s = 1 ms.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $f = 1\\ kHz = 1000\\ Hz$.\nGoverning law:\n$$T = \\frac{1}{f}$$\n\n### Step 2: Full Mathematical Workings\n$$T = \\frac{1}{1000}$$\n$$T = 0.001\\ s$$\nConvert to milliseconds:\n$$0.001\\ s = 1\\ ms$$\n\n### Step 3: Verification & Physical Interpretation\nA kilohertz waveform completes one cycle each millisecond — the reciprocal relationship holds exactly.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (1 s)**: the student drops the milli- prefix (treats f as 1 Hz).\n- **Option C trap (0.1 ms)**: the student multiplies by 1000 the wrong way.\n- **Option D trap (10 ms)**: the student treats f as 100 Hz instead of 1000 Hz.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_13",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A waveform has a period of 2 ms. Its frequency is:",
+    "options": [
+      "500 Hz",
+      "200 Hz",
+      "50 Hz",
+      "2 kHz"
+    ],
+    "correct": 0,
+    "short": "f = 1/T = 1/(2 × 10⁻³) = 500 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $T = 2\\ ms = 2 \\times 10^{-3}\\ s$.\nGoverning law:\n$$f = \\frac{1}{T}$$\n\n### Step 2: Full Mathematical Workings\n$$f = \\frac{1}{2 \\times 10^{-3}}$$\n$$f = \\frac{1}{2} \\times 10^{3}$$\n$$f = 0.5 \\times 1000$$\n$$f = 500\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nTwo milliseconds per cycle means five hundred cycles per second. The reciprocal relation is exact.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (200 Hz)**: the student uses $f = T \\times 100$, a units scramble.\n- **Option C trap (50 Hz)**: the student confuses 2 ms with the mains 20 ms period.\n- **Option D trap (2 kHz)**: the student multiplies 2 by 1000 instead of dividing.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_14",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A 50 Hz supply has an angular frequency ω of: (take π = 3.14)",
+    "options": [
+      "314 rad/s",
+      "157 rad/s",
+      "628 rad/s",
+      "31.4 rad/s"
+    ],
+    "correct": 0,
+    "short": "ω = 2πf = 2 × 3.14 × 50 = 314 rad/s.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $f = 50\\ Hz$, $\\pi = 3.14$.\nGoverning law:\n$$\\omega = 2\\pi f$$\n\n### Step 2: Full Mathematical Workings\n$$\\omega = 2 \\times 3.14 \\times 50$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$\\omega = 314\\ rad/s$$\n\n### Step 3: Verification & Physical Interpretation\n314 rad/s is the standard mains angular frequency — every second the phasor sweeps through $2\\pi \\times 50$ radians.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (157 rad/s)**: the student uses $\\omega = \\pi f$ (forgets the factor 2).\n- **Option C trap (628 rad/s)**: the student uses $\\omega = 4\\pi f$.\n- **Option D trap (31.4 rad/s)**: the student divides by 10 — a decimal slip.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_15",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A mains voltage has a peak value Vₘ = 311 V. Its r.m.s. value is about:",
+    "options": [
+      "220 V",
+      "311 V",
+      "440 V",
+      "156 V"
+    ],
+    "correct": 0,
+    "short": "V_rms = Vₘ/√2 = 0.707 × 311 = 220 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: peak $V_m = 311\\ V$.\nGoverning law:\n$$V_{rms} = \\frac{V_m}{\\sqrt{2}} = 0.707 V_m$$\n\n### Step 2: Full Mathematical Workings\n$$V_{rms} = 0.707 \\times 311$$\n$$V_{rms} = 219.9\\ V$$\n$$V_{rms} \\approx 220\\ V$$\n\n### Step 3: Verification & Physical Interpretation\n311 V peak corresponds to the familiar 220 V (≈230 V) mains — the r.m.s. value is what voltmeters read and what \"mains voltage\" means in practice.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (311 V)**: the student reports the peak value without converting.\n- **Option C trap (440 V)**: the student uses $\\sqrt{2} \\times V_m$ instead of dividing.\n- **Option D trap (156 V)**: the student halves the peak (uses 0.5 instead of 0.707).\nr"
+  },
+  {
+    "id": "eee_ac-phasors_16",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A supply is specified as 230 V r.m.s. Its peak value is about:",
+    "options": [
+      "325 V",
+      "163 V",
+      "230 V",
+      "460 V"
+    ],
+    "correct": 0,
+    "short": "Vₘ = √2 × V_rms = 1.414 × 230 = 325 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $V_{rms} = 230\\ V$.\nGoverning law (rearranged):\n$$V_m = \\sqrt{2}\\ V_{rms} = 1.414 \\times V_{rms}$$\n\n### Step 2: Full Mathematical Workings\n$$V_m = 1.414 \\times 230$$\n$$1.414 \\times 230 = 325.2$$\n$$V_m = 325\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThe 230 V r.m.s. supply peaks at about 325 V twice per cycle — matching the earlier example (311 V peak for 220 V r.m.s.).\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (163 V)**: the student divides by √2 instead of multiplying.\n- **Option C trap (230 V)**: the student assumes r.m.s. equals peak.\n- **Option D trap (460 V)**: the student doubles the r.m.s. value.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_17",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sine wave has a peak value of 100 V. Its average value over a half cycle is about:",
+    "options": [
+      "63.7 V",
+      "70.7 V",
+      "100 V",
+      "50 V"
+    ],
+    "correct": 0,
+    "short": "V_avg = 0.637 × Vₘ = 0.637 × 100 = 63.7 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: peak $V_m = 100\\ V$.\nGoverning law — half-cycle average of a sinusoid:\n$$V_{avg} = 0.637 \\times V_m$$\n\n### Step 2: Full Mathematical Workings\n$$V_{avg} = 0.637 \\times 100$$\n$$V_{avg} = 63.7\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nOver half a cycle the sine wave averages 63.7% of its peak. (The average over a FULL cycle is zero, which is why the half-cycle average is the quoted figure.)\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (70.7 V)**: the student uses the r.m.s. factor 0.707 — the classic average/r.m.s. confusion.\n- **Option C trap (100 V)**: the student reports the peak unchanged.\n- **Option D trap (50 V)**: the student guesses half the peak.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_18",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A mains sine wave has Vₘ = 311 V. Its average value over a half cycle is about:",
+    "options": [
+      "198 V",
+      "220 V",
+      "311 V",
+      "440 V"
+    ],
+    "correct": 0,
+    "short": "V_avg = 0.637 × 311 = 198 V (while V_rms = 0.707 × 311 = 220 V).",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $V_m = 311\\ V$.\nGoverning law:\n$$V_{avg} = 0.637 \\times V_m$$\n\n### Step 2: Full Mathematical Workings\n$$V_{avg} = 0.637 \\times 311$$\n$$V_{avg} = 198.1\\ V$$\n$$V_{avg} \\approx 198\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThe same 311 V mains peaks average to 198 V over a half cycle, while its r.m.s. is 220 V — the two factors (0.637 and 0.707) must never be swapped.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (220 V)**: the student computes the r.m.s. value instead — the most common slip.\n- **Option C trap (311 V)**: the student reports the peak.\n- **Option D trap (440 V)**: the student doubles the r.m.s. value.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_19",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "An inductor L = 0.1 H is connected across a 50 Hz supply. Its inductive reactance is: (take π = 3.14)",
+    "options": [
+      "31.4 Ω",
+      "3.14 Ω",
+      "62.8 Ω",
+      "314 Ω"
+    ],
+    "correct": 0,
+    "short": "X_L = 2πfL = 2 × 3.14 × 50 × 0.1 = 31.4 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 0.1\\ H$, $f = 50\\ Hz$, $\\pi = 3.14$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n### Step 2: Full Mathematical Workings\n$$X_L = 2 \\times 3.14 \\times 50 \\times 0.1$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 0.1 = 31.4$$\n$$X_L = 31.4\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nA 0.1 H coil at 50 Hz opposes AC with 31.4 Ω of reactance. Note the intermediate step: without the inductance factor the product is 314 — keeping L in the multiplication is essential.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (3.14 Ω)**: the student drops the factor 2 and the frequency (π × L only).\n- **Option C trap (62.8 Ω)**: the student doubles L (0.2 H) — or the frequency.\n- **Option D trap (314 Ω)**: the student forgets to multiply by L = 0.1, stopping at $2\\pi f$.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_20",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "An inductor L = 0.2 H is connected across a 50 Hz supply. Its inductive reactance is:",
+    "options": [
+      "62.8 Ω",
+      "31.4 Ω",
+      "6.28 Ω",
+      "125.6 Ω"
+    ],
+    "correct": 0,
+    "short": "X_L = 2πfL = 2 × 3.14 × 50 × 0.2 = 62.8 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 0.2\\ H$, $f = 50\\ Hz$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n### Step 2: Full Mathematical Workings\n$$X_L = 2 \\times 3.14 \\times 50 \\times 0.2$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 0.2 = 62.8$$\n$$X_L = 62.8\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nDoubling the inductance from 0.1 H to 0.2 H doubles the reactance from 31.4 Ω to 62.8 Ω — reactance scales linearly with L (and with f).\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (31.4 Ω)**: the student reuses the 0.1 H answer — reactance must be recomputed for the new inductance.\n- **Option C trap (6.28 Ω)**: the student drops the frequency factor.\n- **Option D trap (125.6 Ω)**: the student doubles the frequency as well as the inductance.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_21",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A capacitor C = 100 µF is connected across a 50 Hz supply. Its capacitive reactance is about:",
+    "options": [
+      "31.8 Ω",
+      "318 Ω",
+      "3.18 Ω",
+      "15.9 Ω"
+    ],
+    "correct": 0,
+    "short": "X_C = 1/(2πfC) = 1/(2 × 3.14 × 50 × 100 × 10⁻⁶) = 31.8 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $C = 100\\ \\mu F = 100 \\times 10^{-6}\\ F$, $f = 50\\ Hz$.\nGoverning law:\n$$X_C = \\frac{1}{2\\pi f C}$$\n\n### Step 2: Full Mathematical Workings\nCompute the denominator:\n$$2\\pi f C = 2 \\times 3.14 \\times 50 \\times 100 \\times 10^{-6}$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 100 \\times 10^{-6} = 0.0314$$\n$$X_C = \\frac{1}{0.0314}$$\n$$X_C = 31.85\\ \\Omega$$\n$$X_C \\approx 31.8\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nAt 50 Hz a 100 µF capacitor offers about 32 Ω of opposition. Note that capacitive reactance DECREASES as C or f increases — the inverse of inductive behaviour.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (318 Ω)**: the student treats C as 10 µF — one order of magnitude off.\n- **Option C trap (3.18 Ω)**: the student treats C as 1 mF (1000 µF).\n- **Option D trap (15.9 Ω)**: the student doubles the denominator, e.g. by using f = 100 Hz.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_22",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A capacitor C = 10 µF is connected across a 50 Hz supply. Its capacitive reactance is about:",
+    "options": [
+      "318 Ω",
+      "31.8 Ω",
+      "3180 Ω",
+      "159 Ω"
+    ],
+    "correct": 0,
+    "short": "X_C = 1/(2πfC) = 1/(2 × 3.14 × 50 × 10 × 10⁻⁶) = 318 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $C = 10\\ \\mu F = 10 \\times 10^{-6}\\ F$, $f = 50\\ Hz$.\nGoverning law:\n$$X_C = \\frac{1}{2\\pi f C}$$\n\n### Step 2: Full Mathematical Workings\n$$2\\pi f C = 2 \\times 3.14 \\times 50 \\times 10 \\times 10^{-6}$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 10 \\times 10^{-6} = 0.00314$$\n$$X_C = \\frac{1}{0.00314}$$\n$$X_C = 318.5\\ \\Omega$$\n$$X_C \\approx 318\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nReducing the capacitance tenfold (100 µF → 10 µF) increases the reactance tenfold (31.8 Ω → 318 Ω) — the inverse relationship at work.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (31.8 Ω)**: the student reuses the 100 µF answer.\n- **Option C trap (3180 Ω)**: the student treats C as 1 µF.\n- **Option D trap (159 Ω)**: the student halves the answer (e.g. f = 100 Hz).\nr"
+  },
+  {
+    "id": "eee_ac-phasors_23",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A series circuit has R = 3 Ω and inductive reactance X_L = 4 Ω. The magnitude of its impedance is:",
+    "options": [
+      "5 Ω",
+      "7 Ω",
+      "1 Ω",
+      "12 Ω"
+    ],
+    "correct": 0,
+    "short": "|Z| = √(R² + X²) = √(3² + 4²) = √25 = 5 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 3\\ \\Omega$, $X_L = 4\\ \\Omega$.\nGoverning law — impedance magnitude of an R-L series circuit:\n$$Z = R + jX_L \\qquad |Z| = \\sqrt{R^2 + X_L^2}$$\n\n### Step 2: Full Mathematical Workings\n$$|Z| = \\sqrt{3^2 + 4^2}$$\n$$3^2 = 9$$\n$$4^2 = 16$$\n$$|Z| = \\sqrt{9 + 16}$$\n$$|Z| = \\sqrt{25}$$\n$$|Z| = 5\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe 3–4–5 triangle: resistance and reactance combine in quadrature (at right angles in the impedance triangle), so the impedance is 5 Ω — never 7 Ω.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (7 Ω)**: the student adds R + X directly — the most common impedance error.\n- **Option C trap (1 Ω)**: the student subtracts X from R.\n- **Option D trap (12 Ω)**: the student multiplies R × X.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_24",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A series circuit has R = 30 Ω and capacitive reactance X_C = 40 Ω. Its impedance magnitude is:",
+    "options": [
+      "50 Ω",
+      "70 Ω",
+      "10 Ω",
+      "35 Ω"
+    ],
+    "correct": 0,
+    "short": "|Z| = √(R² + X_C²) = √(30² + 40²) = √2500 = 50 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 30\\ \\Omega$, $X_C = 40\\ \\Omega$.\nGoverning law — impedance magnitude of an R-C series circuit:\n$$Z = R - jX_C \\qquad |Z| = \\sqrt{R^2 + X_C^2}$$\n\n### Step 2: Full Mathematical Workings\n$$|Z| = \\sqrt{30^2 + 40^2}$$\n$$30^2 = 900$$\n$$40^2 = 1600$$\n$$|Z| = \\sqrt{900 + 1600}$$\n$$|Z| = \\sqrt{2500}$$\n$$|Z| = 50\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe 30–40–50 triangle again: the magnitude is always the square root of the sum of squares, regardless of whether the reactance is inductive or capacitive (the sign of j only affects the phase angle).\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (70 Ω)**: direct addition of R and X.\n- **Option C trap (10 Ω)**: subtraction of X from R.\n- **Option D trap (35 Ω)**: taking the simple average of R and X.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_25",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A series circuit has R = 8 Ω and X_C = 6 Ω. The magnitude of its impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "|Z| = √(8² + 6²) = √(64 + 36) = √100 = 10 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 8\\ \\Omega$, $X_C = 6\\ \\Omega$.\nGoverning law:\n$$|Z| = \\sqrt{R^2 + X_C^2}$$\n\n### Step 2: Full Mathematical Workings\n$$|Z| = \\sqrt{8^2 + 6^2}$$\n$$8^2 = 64$$\n$$6^2 = 36$$\n$$|Z| = \\sqrt{64 + 36}$$\n$$|Z| = \\sqrt{100}$$\n$$|Z| = 10\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe 6–8–10 triangle completes the set of Pythagorean impedances. Quadrature addition always gives less than the straight sum.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (14 Ω)**: direct addition.\n- **Option C trap (2 Ω)**: subtraction.\n- **Option D trap (48 Ω)**: multiplication of R and X.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_26",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A circuit has R = 6 Ω in series with X_L = 8 Ω. The magnitude of the equivalent impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "|Z| = √(6² + 8²) = √(36 + 64) = 10 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 6\\ \\Omega$, $X_L = 8\\ \\Omega$.\nGoverning law:\n$$|Z| = \\sqrt{R^2 + X_L^2}$$\n\n### Step 2: Full Mathematical Workings\n$$|Z| = \\sqrt{6^2 + 8^2}$$\n$$6^2 = 36$$\n$$8^2 = 64$$\n$$|Z| = \\sqrt{36 + 64}$$\n$$|Z| = \\sqrt{100}$$\n$$|Z| = 10\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nSame 6–8–10 pattern as the previous question — practice both orders; the magnitude is identical for inductive and capacitive cases.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (14 Ω)**: direct addition.\n- **Option C trap (2 Ω)**: subtraction.\n- **Option D trap (48 Ω)**: multiplication.\nr"
+  },
+  {
+    "id": "eee_ac-phasors_27",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "For a 220 V, 50 Hz AC mains supply, which set gives the correct (a) peak voltage, (b) angular frequency and (c) period?",
+    "options": [
+      "311 V, 314 rad/s, 20 ms",
+      "311 V, 157 rad/s, 20 ms",
+      "220 V, 314 rad/s, 50 ms",
+      "156 V, 314 rad/s, 20 ms"
+    ],
+    "correct": 0,
+    "short": "Vₘ = 1.414 × 220 = 311 V; ω = 2π × 50 = 314 rad/s; T = 1/50 = 20 ms.",
+    "solution": "### Step 1: Core Principle\nThe three conversions:\n(a) peak voltage $V_m = \\sqrt{2}\\ V_{rms} = 1.414 \\times 220 = 311\\ V$\n(b) angular frequency $\\omega = 2\\pi f = 2 \\times 3.14 \\times 50 = 314\\ rad/s$\n(c) period $T = \\frac{1}{f} = \\frac{1}{50} = 0.02\\ s = 20\\ ms$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: all three values match.\n- **Option B (wrong)**: part (b) uses $\\omega = \\pi f$ (157 rad/s) — the factor 2 is missing.\n- **Option C (wrong)**: part (a) reports the r.m.s. value as the peak, and part (c) uses T = 1/f incorrectly (50 ms instead of 20 ms).\n- **Option D (wrong)**: part (a) divides the peak by 2 (156 V) instead of multiplying the r.m.s. by √2.\n\n### Step 3: Exam Trap Summary\nThe traps are the factor-2 slip in ω, the r.m.s./peak confusion, and the period computation. In the written exam, show all three conversions as separate lines so each part earns its own mark.\nr"
+  },
+  {
+    "id": "eee_resonance_01",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "Series resonance occurs in an R-L-C series circuit when:",
+    "options": [
+      "X_L = X_C",
+      "R = X_L",
+      "R = X_C",
+      "the supply voltage is zero"
+    ],
+    "correct": 0,
+    "short": "At series resonance the inductive and capacitive reactances cancel: X_L = X_C.",
+    "solution": "### Step 1: Core Principle\nSeries resonance occurs when the inductive reactance equals the capacitive reactance: $X_L = X_C$. The two equal-and-opposite reactances cancel, leaving $Z = R$ — minimum impedance and maximum current.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the resonance condition.\n- **Option B (wrong)**: R = X_L is a specific operating point, not the resonance condition.\n- **Option C (wrong)**: R = X_C likewise has nothing to do with resonance.\n- **Option D (wrong)**: resonance depends on the circuit's L and C, not on removing the supply.\n\n### Step 3: Exam Trap Summary\nThe trap is inventing resistance-based \"resonance conditions\". Resonance is purely a reactance-balance phenomenon: $2\\pi f L = 1/(2\\pi f C)$.\nr"
+  },
+  {
+    "id": "eee_resonance_02",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "At series resonance, the impedance of the R-L-C circuit is:",
+    "options": [
+      "minimum and equal to R",
+      "maximum and equal to X_L",
+      "equal to X_C",
+      "infinite"
+    ],
+    "correct": 0,
+    "short": "X_L = X_C cancels, so Z = R — a minimum (purely resistive).",
+    "solution": "### Step 1: Core Principle\nThe series impedance is $Z = R + j(X_L - X_C)$. At resonance $X_L = X_C$, so:\n$$Z = R + j(0) = R$$\nThe impedance is a MINIMUM (equal to just the resistance), so the current is a maximum for a given supply voltage.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: minimum impedance, equal to R.\n- **Option B (wrong)**: maximum impedance describes PARALLEL resonance.\n- **Option C (wrong)**: X_C is cancelled by X_L at resonance.\n- **Option D (wrong)**: infinite impedance is the parallel-resonance idealisation.\n\n### Step 3: Exam Trap Summary\nThe series/parallel duality is the favourite trap: series = minimum Z (maximum I); parallel = maximum Z (minimum I).\nr"
+  },
+  {
+    "id": "eee_resonance_03",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "The resonant frequency of a series R-L-C circuit is given by:",
+    "options": [
+      "f₀ = 1/(2π√(LC))",
+      "f₀ = 2π√(LC)",
+      "f₀ = 1/(2πLC)",
+      "f₀ = √(LC)/(2π)"
+    ],
+    "correct": 0,
+    "short": "Setting X_L = X_C and solving for f gives f₀ = 1/(2π√(LC)).",
+    "solution": "### Step 1: Core Principle\nAt resonance $X_L = X_C$, that is:\n$$2\\pi f L = \\frac{1}{2\\pi f C}$$\nMultiplying both sides by f and dividing by $2\\pi L$:\n$$f^2 = \\frac{1}{(2\\pi)^2 LC}$$\nTaking the positive square root:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the derived expression.\n- **Option B (wrong)**: the reciprocal — physically it grows with L and C, which is backwards.\n- **Option C (wrong)**: the square root over LC is missing.\n- **Option D (wrong)**: the numerator and denominator are inverted.\n\n### Step 3: Exam Trap Summary\nThe traps are missing the square root and inverting the formula. In the written exam, ALWAYS show the derivation line $2\\pi f L = 1/(2\\pi f C)$ before quoting the result — it guards against inversion errors and earns method marks.\nr"
+  },
+  {
+    "id": "eee_resonance_04",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "The quality factor (Q) of a resonant circuit measures:",
+    "options": [
+      "the selectivity (sharpness) of the resonance",
+      "the power dissipated in the resistor",
+      "the number of components in the circuit",
+      "the temperature rise of the coil"
+    ],
+    "correct": 0,
+    "short": "Q measures how sharply the circuit resonates — high Q means a narrow bandwidth.",
+    "solution": "### Step 1: Core Principle\nThe quality factor Q is a measure of the selectivity/sharpness of the resonance. A high Q means a sharp, selective resonance with a narrow bandwidth; a low Q means a broad, flat response.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: sharpness/selectivity.\n- **Option B (wrong)**: power dissipation is measured in watts, not by Q.\n- **Option C (wrong)**: Q is a dimensionless ratio, not a component count.\n- **Option D (wrong)**: temperature is an operating condition, unrelated to Q.\n\n### Step 3: Exam Trap Summary\nThe trap is vague \"quality\" guesses. Anchor the operational meaning: high Q = sharp peak = narrow bandwidth = selective (like a radio tuner).\nr\n\n**Key relations:** $Q = X_L/R$ at resonance and bandwidth $= f_0/Q$."
+  },
+  {
+    "id": "eee_resonance_05",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 100 mH and C = 10 µF. Its resonant frequency is about: (take π = 3.14)",
+    "options": [
+      "159 Hz",
+      "15.9 Hz",
+      "1590 Hz",
+      "50 Hz"
+    ],
+    "correct": 0,
+    "short": "LC = 0.1 × 10⁻⁵ = 10⁻⁶; √(LC) = 10⁻³; f₀ = 1/(2π × 10⁻³) = 159 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 100\\ mH = 0.1\\ H$, $C = 10\\ \\mu F = 10 \\times 10^{-6}\\ F$, $\\pi = 3.14$.\nGoverning law:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n### Step 2: Full Mathematical Workings\nStep A — compute the LC product:\n$$LC = 0.1 \\times 10 \\times 10^{-6}$$\n$$LC = 1 \\times 10^{-6}$$\nStep B — take the square root:\n$$\\sqrt{LC} = \\sqrt{1 \\times 10^{-6}}$$\n$$\\sqrt{LC} = 1 \\times 10^{-3}$$\nStep C — take the reciprocal with the 2π factor:\n$$f_0 = \\frac{1}{2 \\times 3.14 \\times 1 \\times 10^{-3}}$$\n$$f_0 = \\frac{1}{6.28 \\times 10^{-3}}$$\n$$f_0 = \\frac{1000}{6.28}$$\n$$f_0 = 159.2\\ Hz$$\n$$f_0 \\approx 159\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nA 100 mH coil resonating with a 10 µF capacitor at 159 Hz — in the audio range, as expected for these component sizes. The three-line pattern (LC → √(LC) → reciprocal) earns full marks in the written exam.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (15.9 Hz)**: the student drops a factor of ten (uses L = 10 mH or C = 100 µF).\n- **Option C trap (1590 Hz)**: the student gains a factor of ten (uses C = 1 µF).\n- **Option D trap (50 Hz)**: the student confuses resonant frequency with the mains frequency.\nr"
+  },
+  {
+    "id": "eee_resonance_06",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 20 mH and C = 20 µF. Its resonant frequency is about:",
+    "options": [
+      "252 Hz",
+      "25.2 Hz",
+      "2520 Hz",
+      "126 Hz"
+    ],
+    "correct": 0,
+    "short": "LC = 0.02 × 20 × 10⁻⁶ = 4 × 10⁻⁷; √(LC) = 6.32 × 10⁻⁴; f₀ = 1/(2π × 6.32 × 10⁻⁴) = 252 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 20\\ mH = 0.02\\ H$, $C = 20\\ \\mu F = 20 \\times 10^{-6}\\ F$.\nGoverning law:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n### Step 2: Full Mathematical Workings\nStep A — LC product:\n$$LC = 0.02 \\times 20 \\times 10^{-6}$$\n$$LC = 4 \\times 10^{-7}$$\nStep B — square root:\n$$\\sqrt{LC} = \\sqrt{4 \\times 10^{-7}}$$\n$$\\sqrt{LC} = 2 \\times 10^{-3.5} = 6.32 \\times 10^{-4}$$\nStep C — reciprocal:\n$$f_0 = \\frac{1}{2 \\times 3.14 \\times 6.32 \\times 10^{-4}}$$\n$$f_0 = \\frac{1}{3.97 \\times 10^{-3}}$$\n$$f_0 = 251.9\\ Hz$$\n$$f_0 \\approx 252\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nRoughly 252 Hz — resonant frequency rises as LC shrinks, consistent with the previous example.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (25.2 Hz)**: a decimal slip in the LC product (one power of ten).\n- **Option C trap (2520 Hz)**: the opposite decimal slip.\n- **Option D trap (126 Hz)**: the student halves the answer — e.g. by using 4π instead of 2π in the denominator.\nr"
+  },
+  {
+    "id": "eee_resonance_07",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 40 mH and C = 10 µF. Its resonant frequency is about:",
+    "options": [
+      "252 Hz",
+      "25.2 Hz",
+      "2520 Hz",
+      "159 Hz"
+    ],
+    "correct": 0,
+    "short": "LC = 0.04 × 10⁻⁵ = 4 × 10⁻⁷; f₀ = 1/(2π × 6.32 × 10⁻⁴) = 252 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 40\\ mH = 0.04\\ H$, $C = 10\\ \\mu F = 10 \\times 10^{-6}\\ F$.\nGoverning law:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n### Step 2: Full Mathematical Workings\n$$LC = 0.04 \\times 10 \\times 10^{-6}$$\n$$LC = 4 \\times 10^{-7}$$\n$$\\sqrt{LC} = 6.32 \\times 10^{-4}$$\n$$f_0 = \\frac{1}{2 \\times 3.14 \\times 6.32 \\times 10^{-4}}$$\n$$f_0 = \\frac{1}{3.97 \\times 10^{-3}}$$\n$$f_0 = 251.9\\ Hz \\approx 252\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nQuadrupling L while keeping C the same as the first example halves the resonant frequency from about 252 Hz... (check: L=100mH,C=10µF gave 159 Hz; here L=40mH gives 252 Hz — frequency is inversely proportional to √L, consistent: 159×√(100/40)=159×1.58=251 Hz).\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (25.2 Hz)**: power-of-ten slip in LC.\n- **Option C trap (2520 Hz)**: power-of-ten slip the other way.\n- **Option D trap (159 Hz)**: the student reuses the first example's answer without recomputing.\nr"
+  },
+  {
+    "id": "eee_resonance_08",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 10 mH and C = 100 µF. Its resonant frequency is about:",
+    "options": [
+      "159 Hz",
+      "15.9 Hz",
+      "1590 Hz",
+      "31.8 Hz"
+    ],
+    "correct": 0,
+    "short": "LC = 0.01 × 10⁻⁴ = 10⁻⁶; f₀ = 1/(2π × 10⁻³) = 159 Hz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $L = 10\\ mH = 0.01\\ H$, $C = 100\\ \\mu F = 100 \\times 10^{-6}\\ F$.\nGoverning law:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n### Step 2: Full Mathematical Workings\n$$LC = 0.01 \\times 100 \\times 10^{-6}$$\n$$LC = 1 \\times 10^{-6}$$\n$$\\sqrt{LC} = 1 \\times 10^{-3}$$\n$$f_0 = \\frac{1}{2 \\times 3.14 \\times 1 \\times 10^{-3}}$$\n$$f_0 = \\frac{1000}{6.28}$$\n$$f_0 = 159.2\\ Hz \\approx 159\\ Hz$$\n\n### Step 3: Verification & Physical Interpretation\nThe same LC product as the first example (10⁻⁶), so the same 159 Hz — a useful check that f₀ depends only on the product LC, not on the individual values.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (15.9 Hz)**: power-of-ten slip.\n- **Option C trap (1590 Hz)**: power-of-ten slip the other way.\n- **Option D trap (31.8 Hz)**: the student divides by 4π instead of 2π.\nr"
+  },
+  {
+    "id": "eee_resonance_09",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "In a series resonant circuit with R = 10 Ω and X_L = X_C = 100 Ω at resonance, the Q factor is:",
+    "options": [
+      "10",
+      "100",
+      "1",
+      "0.1"
+    ],
+    "correct": 0,
+    "short": "Q = X_L/R = 100/10 = 10.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 10\\ \\Omega$, $X_L = X_C = 100\\ \\Omega$ at resonance.\nGoverning law — Q factor at resonance:\n$$Q = \\frac{X_L}{R} = \\frac{X_C}{R}$$\n\n### Step 2: Full Mathematical Workings\n$$Q = \\frac{100}{10}$$\n$$Q = 10$$\n\n### Step 3: Verification & Physical Interpretation\nThe reactance is ten times the resistance, so the circuit stores ten times more energy per cycle than it dissipates — Q = 10, a moderately selective resonance.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (100)**: the student quotes the reactance itself as Q.\n- **Option C trap (1)**: the student divides R by X (inverted ratio).\n- **Option D trap (0.1)**: the student computes R/X twice-inverted, i.e. 10/100.\nr"
+  },
+  {
+    "id": "eee_resonance_10",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series resonant circuit has f₀ = 100 kHz and Q = 50. Its bandwidth is:",
+    "options": [
+      "2 kHz",
+      "5 kHz",
+      "20 kHz",
+      "0.5 kHz"
+    ],
+    "correct": 0,
+    "short": "Bandwidth = f₀/Q = 100 kHz/50 = 2 kHz.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $f_0 = 100\\ kHz$, $Q = 50$.\nGoverning law:\n$$\\text{Bandwidth} = \\frac{f_0}{Q}$$\n\n### Step 2: Full Mathematical Workings\n$$\\text{Bandwidth} = \\frac{100\\ kHz}{50}$$\n$$\\text{Bandwidth} = 2\\ kHz$$\n\n### Step 3: Verification & Physical Interpretation\nA Q of 50 concentrates the resonance into a 2 kHz band around 100 kHz — high Q, narrow bandwidth, high selectivity.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (5 kHz)**: the student uses Q = 20.\n- **Option C trap (20 kHz)**: the student uses Q = 5.\n- **Option D trap (0.5 kHz)**: the student multiplies instead of dividing (100 × 50 kHz inverted).\nr"
+  },
+  {
+    "id": "eee_resonance_11",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "At resonance, a circuit has f₀ = 159 Hz and L = 100 mH. The inductive reactance X_L at resonance is about:",
+    "options": [
+      "100 Ω",
+      "1000 Ω",
+      "10 Ω",
+      "159 Ω"
+    ],
+    "correct": 0,
+    "short": "X_L = 2πf₀L = 2 × 3.14 × 159 × 0.1 = 99.9 Ω ≈ 100 Ω (and X_C has the same value).",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $f_0 = 159\\ Hz$, $L = 0.1\\ H$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n### Step 2: Full Mathematical Workings\n$$X_L = 2 \\times 3.14 \\times 159 \\times 0.1$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 159 = 998.5$$\n$$998.5 \\times 0.1 = 99.85$$\n$$X_L \\approx 100\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nAt the resonant frequency the inductive and capacitive reactances are equal — so X_C ≈ 100 Ω as well. This is a handy cross-check of any f₀ calculation.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (1000 Ω)**: the student forgets the 0.1 H factor.\n- **Option C trap (10 Ω)**: the student uses L = 10 mH.\n- **Option D trap (159 Ω)**: the student quotes the frequency itself instead of computing the reactance.\nr"
+  },
+  {
+    "id": "eee_network-theorems_01",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "Thévenin's theorem states that any linear two-terminal network can be replaced by:",
+    "options": [
+      "a single voltage source (the open-circuit voltage) in series with the equivalent impedance",
+      "a single current source in parallel with an impedance",
+      "a single resistor only",
+      "a capacitor and an inductor in series"
+    ],
+    "correct": 0,
+    "short": "Thévenin: one voltage source (V_th) in SERIES with Z_th.",
+    "solution": "### Step 1: Core Principle\nThévenin's theorem: any linear two-terminal network is equivalent to a single voltage source (the open-circuit voltage $V_{th}$ at the terminals) in SERIES with the equivalent impedance $Z_{th}$ (the impedance seen at the terminals with all independent sources killed). For AC networks $Z_{th}$ is complex ($R \\pm jX$).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: voltage source + series impedance.\n- **Option B (wrong)**: that is NORTON's theorem — the dual form.\n- **Option C (wrong)**: a resistor alone cannot represent the source.\n- **Option D (wrong)**: specific components, not an equivalent network.\n\n### Step 3: Exam Trap Summary\nThe trap is Thévenin/Norton swapping. Anchor: Thévenin = Voltage in Series; Norton = Current in Parallel — the two forms are interchangeable through $V_{th} = I_N Z_{th}$.\nr"
+  },
+  {
+    "id": "eee_network-theorems_02",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "Norton's theorem states that any linear two-terminal network can be replaced by:",
+    "options": [
+      "a single current source (the short-circuit current) in parallel with the same equivalent impedance",
+      "a voltage source in series with an impedance",
+      "an ideal transformer",
+      "a resistor and an inductor in series"
+    ],
+    "correct": 0,
+    "short": "Norton: one current source (I_N) in PARALLEL with Z_N = Z_th.",
+    "solution": "### Step 1: Core Principle\nNorton's theorem is the dual of Thévenin's: any linear two-terminal network is equivalent to a single current source (the short-circuit current $I_N$) in PARALLEL with $Z_N$, where $Z_N = Z_{th}$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: current source + parallel impedance.\n- **Option B (wrong)**: that is Thévenin's form.\n- **Option C (wrong)**: a transformer is a real device, not an equivalent network.\n- **Option D (wrong)**: two components cannot represent the whole source behaviour.\n\n### Step 3: Exam Trap Summary\nThévenin/Norton duality again — in the exam, map \"voltage→series\" and \"current→parallel\" before answering.\nr"
+  },
+  {
+    "id": "eee_network-theorems_03",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "The superposition theorem states that in a linear network with several sources, the response in any branch is:",
+    "options": [
+      "the algebraic sum of the responses produced by each source acting alone, with the other sources replaced by their internal impedances",
+      "the product of the responses of all the sources",
+      "the response of the largest source only",
+      "the average of the responses of all the sources"
+    ],
+    "correct": 0,
+    "short": "Superposition: one source at a time (others killed), then add the responses algebraically.",
+    "solution": "### Step 1: Core Principle\nSuperposition: in a linear network, consider ONE source at a time — voltage sources replaced by short circuits, current sources replaced by open circuits — and the response in any branch is the ALGEBRAIC SUM of the individual responses. For AC networks the summation is done with phasors.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: one-at-a-time plus algebraic summation.\n- **Option B (wrong)**: responses are added, never multiplied.\n- **Option C (wrong)**: all sources contribute; the largest is not special.\n- **Option D (wrong)**: averaging loses the physics — contributions add.\n\n### Step 3: Exam Trap Summary\nTwo traps: (1) using multiplication instead of addition; (2) killing sources wrongly — remember voltage sources become SHORTS and current sources become OPENS (their internal impedances remain).\nr\n\n**Key pattern:** responses add; series impedances combine as $Z_{eq} = Z_1 + Z_2$."
+  },
+  {
+    "id": "eee_network-theorems_04",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "When applying Thévenin/Norton theorems to AC networks, the impedances must be treated as:",
+    "options": [
+      "complex quantities (R ± jX) so that both magnitude and phase are preserved",
+      "real resistances only",
+      "imaginary numbers only",
+      "scalar magnitudes without phase"
+    ],
+    "correct": 0,
+    "short": "AC impedances are complex; keep the j-terms through every line.",
+    "solution": "### Step 1: Core Principle\nIn AC networks the impedances are complex quantities of the form $Z = R \\pm jX$. The theorems work exactly as in DC, but the arithmetic is complex, and carrying the j-terms preserves BOTH magnitude and phase of the equivalent.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: complex treatment preserves magnitude + phase.\n- **Option B (wrong)**: ignoring reactance gives wrong answers whenever L or C is present.\n- **Option C (wrong)**: the real part (resistance) matters equally.\n- **Option D (wrong)**: magnitude-only analysis loses the phase information entirely.\n\n### Step 3: Exam Trap Summary\nThe trap is \"magnitude-only\" shortcuts. In the written exam, write Z in full complex form and combine j-terms explicitly — dropping j is the single most common error in AC theorem questions.\nr"
+  },
+  {
+    "id": "eee_network-theorems_05",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "A circuit is classified as nonlinear when:",
+    "options": [
+      "its i-v graph is not a straight line",
+      "it contains only resistors",
+      "its i-v graph is a straight line through the origin",
+      "it contains no sources"
+    ],
+    "correct": 0,
+    "short": "Linear ⇔ straight-line i-v graph; anything else is nonlinear.",
+    "solution": "### Step 1: Core Principle\nA circuit is classified by examining its i-v graph: a straight line means linear ($v = Ri$); ANY other shape means nonlinear. Examples: $i = v^2$ is nonlinear; even the piecewise-linear absolute value $|v|$ is nonlinear because it cannot be written as $y = ax + b$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the graph-shape criterion.\n- **Option B (wrong)**: resistors are precisely what MAKE a circuit linear.\n- **Option C (wrong)**: a straight line through the origin is the linear case.\n- **Option D (wrong)**: having no sources does not determine linearity.\n\n### Step 3: Exam Trap Summary\nThe trap is classifying by component list instead of by graph shape. Always draw or imagine the i-v curve first.\nr"
+  },
+  {
+    "id": "eee_network-theorems_06",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "The negative resistance converter is:",
+    "options": [
+      "a useful nonlinear op-amp circuit whose i-v slope is negative over a region, used to build oscillators",
+      "a resistor that obeys Ohm's law",
+      "a transformer winding arrangement",
+      "a rectifier circuit"
+    ],
+    "correct": 0,
+    "short": "Negative-resistance converter: negative i-v slope; it delivers power — the core of oscillators.",
+    "solution": "### Step 1: Core Principle\nThe negative resistance converter is an op-amp nonlinear circuit whose i-v characteristic has a NEGATIVE slope over some region: as voltage rises, current falls. Over that region it DELIVERS power instead of absorbing it — exactly what an oscillator needs to sustain its own oscillations.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the converter and its oscillator application.\n- **Option B (wrong)**: an Ohmic resistor has a positive slope — the opposite.\n- **Option C (wrong)**: it is built with an op-amp, not transformer windings.\n- **Option D (wrong)**: a rectifier converts AC to DC; unrelated.\n\n### Step 3: Exam Trap Summary\nThe trap is confusing \"negative resistance\" with \"low resistance\". Negative resistance means the v-i slope is negative (power source behaviour), not that R is a small positive number.\nr\n\n**Key recall:** over its active region the converter has a negative slope, $dV/dI < 0$."
+  },
+  {
+    "id": "eee_network-theorems_07",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "Two impedances Z₁ = (100 + j100) Ω and Z₂ = (100 − j100) Ω are connected in series. The equivalent impedance is:",
+    "options": [
+      "200 Ω (purely resistive)",
+      "0 Ω",
+      "j200 Ω",
+      "100 Ω"
+    ],
+    "correct": 0,
+    "short": "Z = Z₁ + Z₂ = (100 + j100) + (100 − j100) = 200 + j0 = 200 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $Z_1 = 100 + j100\\ \\Omega$, $Z_2 = 100 - j100\\ \\Omega$.\nGoverning law — series impedances add:\n$$Z_{eq} = Z_1 + Z_2$$\n\n### Step 2: Full Mathematical Workings\n$$Z_{eq} = (100 + j100) + (100 - j100)$$\nAdd the real parts:\n$$100 + 100 = 200$$\nAdd the imaginary parts:\n$$j100 - j100 = j0$$\n$$Z_{eq} = 200 + j0$$\n$$Z_{eq} = 200\\ \\Omega\\ \\text{(purely resistive)}$$\n\n### Step 3: Verification & Physical Interpretation\nThe inductive and capacitive reactances cancel exactly, leaving a pure 200 Ω resistance — the same physics as series resonance.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0 Ω)**: the student cancels the real parts too, forgetting they add.\n- **Option C trap (j200 Ω)**: the student adds the imaginary parts without cancelling (treating both as +j).\n- **Option D trap (100 Ω)**: the student averages the two impedances instead of adding.\nr"
+  },
+  {
+    "id": "eee_network-theorems_08",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "Two equal impedances of (50 + j50) Ω each are connected in PARALLEL. The equivalent impedance is:",
+    "options": [
+      "(25 + j25) Ω",
+      "(100 + j100) Ω",
+      "(50 − j50) Ω",
+      "50 Ω"
+    ],
+    "correct": 0,
+    "short": "Two equal impedances in parallel halve: Z = (50 + j50)/2 = (25 + j25) Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $Z_1 = Z_2 = 50 + j50\\ \\Omega$, connected in parallel.\nGoverning law — parallel impedances:\n$$Z_{eq} = \\frac{Z_1 Z_2}{Z_1 + Z_2}$$\n\n### Step 2: Full Mathematical Workings\nBecause the two impedances are EQUAL, $Z_1 = Z_2 = Z$, the formula specialises:\n$$Z_{eq} = \\frac{Z \\times Z}{Z + Z}$$\n$$Z_{eq} = \\frac{Z^2}{2Z}$$\nCancel one factor of Z:\n$$Z_{eq} = \\frac{Z}{2}$$\n$$Z_{eq} = \\frac{50 + j50}{2}$$\n$$Z_{eq} = 25 + j25\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nEqual parallel impedances halve — both the real and imaginary parts divide by two. This shortcut is faster and safer than expanding the product/sum formula.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (100 + j100)**: the student ADDS the impedances (series rule) instead of halving.\n- **Option C trap (50 − j50)**: the student conjugates the sign instead of halving.\n- **Option D trap (50 Ω)**: the student halves only the real part and drops j.\nr"
+  },
+  {
+    "id": "eee_network-theorems_09",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "A circuit has R = 8 Ω in series with X_L = 6 Ω. The magnitude of the equivalent impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "|Z| = √(8² + 6²) = √(64 + 36) = √100 = 10 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $R = 8\\ \\Omega$, $X_L = 6\\ \\Omega$.\nGoverning law:\n$$|Z| = \\sqrt{R^2 + X_L^2}$$\n\n### Step 2: Full Mathematical Workings\n$$|Z| = \\sqrt{8^2 + 6^2}$$\n$$8^2 = 64$$\n$$6^2 = 36$$\n$$|Z| = \\sqrt{64 + 36}$$\n$$|Z| = \\sqrt{100}$$\n$$|Z| = 10\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe 6–8–10 impedance triangle. The theorem-work equivalent impedance is found the same way as any series R-X combination.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (14 Ω)**: direct addition of R and X.\n- **Option C trap (2 Ω)**: subtraction.\n- **Option D trap (48 Ω)**: multiplication.\nr"
+  },
+  {
+    "id": "eee_network-theorems_10",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "The Thévenin equivalent of a network gives V_th = 20∠0° V and Z_th = (10 + j0) Ω. A load of (10 + j0) Ω is connected. The load current is:",
+    "options": [
+      "1 A",
+      "2 A",
+      "0.5 A",
+      "20 A"
+    ],
+    "correct": 0,
+    "short": "I = V_th/(Z_th + Z_load) = 20/(10 + 10) = 20/20 = 1 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $V_{th} = 20\\angle 0^\\circ\\ V$, $Z_{th} = 10\\ \\Omega$, $Z_{load} = 10\\ \\Omega$.\nGoverning law — current in the Thévenin model:\n$$I = \\frac{V_{th}}{Z_{th} + Z_{load}}$$\n\n### Step 2: Full Mathematical Workings\n$$Z_{th} + Z_{load} = 10 + 10 = 20\\ \\Omega$$\n$$I = \\frac{20}{20}$$\n$$I = 1\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nThe two 10 Ω impedances split the 20 V equally — 1 A flows to the load. With zero phase angle the current is in phase with the voltage.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (2 A)**: the student divides by Z_th only, forgetting the load impedance.\n- **Option C trap (0.5 A)**: the student divides by 40 Ω (doubling the total).\n- **Option D trap (20 A)**: the student multiplies V by Z (20 × 1).\nr"
+  },
+  {
+    "id": "eee_network-theorems_11",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "Match each theorem to its equivalent-circuit form: (a) Thévenin (b) Norton (c) Superposition.",
+    "options": [
+      "voltage source in series with Z; current source in parallel with Z; algebraic sum of single-source responses",
+      "current source in series with Z; voltage source in parallel with Z; product of single-source responses",
+      "voltage source in parallel with Z; current source in series with Z; sum of single-source responses",
+      "current source in parallel with Z; voltage source in series with Z; average of single-source responses"
+    ],
+    "correct": 0,
+    "short": "Thévenin = voltage in series; Norton = current in parallel; Superposition = algebraic sum.",
+    "solution": "### Step 1: Core Principle\nThe three theorem forms:\n(a) Thévenin — a voltage source (open-circuit voltage) in SERIES with the equivalent impedance.\n(b) Norton — a current source (short-circuit current) in PARALLEL with the equivalent impedance.\n(c) Superposition — the response is the ALGEBRAIC SUM of the responses from each source acting alone.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: all three pairings exact.\n- **Option B (wrong)**: the series/parallel placements are swapped, and superposition responses are summed, never multiplied.\n- **Option C (wrong)**: Thévenin's source must be in SERIES (parallel is wrong), and Norton's in parallel.\n- **Option D (wrong)**: superposition uses a sum, not an average; and the average would lose the physics.\n\n### Step 3: Exam Trap Summary\nThe trap is the series/parallel swap between the two dual theorems. Anchor: \"Thévenin = the series one; Norton = the parallel one\", and superposition = SUM (never product or average).\nr\n\n**Key relation linking the dual forms:** $V_{th} = I_N Z_{th}$."
+  },
+  {
+    "id": "eee_magcircuits-transformer_01",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The magnetomotive force (m.m.f.) of a coil of N turns carrying current I is:",
+    "options": [
+      "F = NI, in amperes or ampere-turns",
+      "F = N/I",
+      "F = I/N",
+      "F = NI²"
+    ],
+    "correct": 0,
+    "short": "m.m.f. F = NI (ampere-turns) — the magnetic analogue of e.m.f.",
+    "solution": "### Step 1: Core Principle\nMagnetomotive force is the magnetic analogue of electromotive force — it is what drives flux around a magnetic circuit. For a coil of N turns carrying current I:\n$$F = NI \\quad \\text{(amperes or ampere-turns)}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: F = NI.\n- **Option B (wrong)**: N/I is dimensionally wrong — more turns must give more m.m.f.\n- **Option C (wrong)**: I/N likewise falls as turns increase.\n- **Option D (wrong)**: the current appears squared, which is not the definition.\n\n### Step 3: Exam Trap Summary\nThe trap is rearranging the turns/current relation. Anchor: m.m.f. grows with BOTH turns and current — it is their product.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_02",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The magnetic field strength (magnetising force) in a magnetic circuit is:",
+    "options": [
+      "H = F/L = NI/L, in amperes per metre",
+      "H = F × L",
+      "H = F/L²",
+      "H = NI × L"
+    ],
+    "correct": 0,
+    "short": "H is the m.m.f. gradient: H = NI/L (A/m).",
+    "solution": "### Step 1: Core Principle\nMagnetic field strength H is the m.m.f. gradient — the m.m.f. per unit length of the magnetic path:\n$$H = \\frac{F}{l} = \\frac{NI}{l} \\quad \\text{(amperes per metre)}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: m.m.f. divided by path length.\n- **Option B (wrong)**: multiplying by length would grow H with distance — backwards.\n- **Option C (wrong)**: dividing by length² is not the definition.\n- **Option D (wrong)**: NI × l confuses the field with the m.m.f. itself.\n\n### Step 3: Exam Trap Summary\nThe trap is H vs F confusion: F = NI (ampere-turns, total drive) while H = NI/l (A/m, drive per metre). The unit A/m is the giveaway for H.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_03",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Flux density B and magnetic field strength H are related by:",
+    "options": [
+      "B = μH, where μ is the permeability of the material",
+      "B = H/μ",
+      "B = μH²",
+      "B = H + μ"
+    ],
+    "correct": 0,
+    "short": "B = μH (teslas) — permeability links field strength to flux density.",
+    "solution": "### Step 1: Core Principle\nThe flux density and field strength at any point of a field are related by the permeability of the material:\n$$B = \\mu H \\quad \\text{(teslas)}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: B = μH.\n- **Option B (wrong)**: dividing by μ would make denser materials produce LESS flux density.\n- **Option C (wrong)**: H does not appear squared.\n- **Option D (wrong)**: adding μ to H is dimensionally impossible.\n\n### Step 3: Exam Trap Summary\nThe trap is inverting the relation. Anchor: higher permeability (better magnetic material) gives MORE flux density for the same H — so μ multiplies H.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_04",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The permeability of free space μ₀ equals:",
+    "options": [
+      "4π × 10⁻⁷ H/m",
+      "8.85 × 10⁻¹² F/m",
+      "4π × 10⁻⁹ H/m",
+      "1.26 H/m"
+    ],
+    "correct": 0,
+    "short": "μ₀ = 4π × 10⁻⁷ henrys per metre.",
+    "solution": "### Step 1: Core Principle\nThe permeability of free space is the reference permeability of a vacuum:\n$$\\mu_0 = 4\\pi \\times 10^{-7}\\ H/m$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the standard value.\n- **Option B (wrong)**: $8.85\\times10^{-12}\\ F/m$ is the PERMITTIVITY of free space (ε₀) — the electrostatic twin.\n- **Option C (wrong)**: the exponent is wrong (10⁻⁹).\n- **Option D (wrong)**: 1.26 is the numerical value 4π but without the power of ten.\n\n### Step 3: Exam Trap Summary\nThe trap is the μ₀/ε₀ pairing — both are 4π or 8.85 constants of \"free space\". Anchor: permeability μ₀ = 4π × 10⁻⁷ H/m; permittivity ε₀ = 8.85 × 10⁻¹² F/m.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_05",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Magnetic flux Φ, flux density B and area A are related by:",
+    "options": [
+      "Φ = BA, with B = Φ/A",
+      "Φ = B/A",
+      "Φ = A/B",
+      "Φ = B + A"
+    ],
+    "correct": 0,
+    "short": "Φ = BA (webers); flux density B = Φ/A (teslas).",
+    "solution": "### Step 1: Core Principle\nMagnetic flux is the flux density multiplied by the area it threads:\n$$\\Phi = BA \\quad \\text{(webers)}$$\nand therefore flux density is flux per unit area:\n$$B = \\frac{\\Phi}{A} \\quad \\text{(teslas)}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: Φ = BA.\n- **Option B (wrong)**: dividing B by A shrinks the flux as area grows — backwards.\n- **Option C (wrong)**: A/B is dimensionally wrong.\n- **Option D (wrong)**: adding B and A is impossible dimensionally.\n\n### Step 3: Exam Trap Summary\nThe trap is flux vs flux density. Anchor: flux (Wb) is the TOTAL; flux density (T) is the flux PER SQUARE METRE — density = total/area.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_06",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The reluctance S of a magnetic circuit is:",
+    "options": [
+      "S = l/(μA) — the magnetic analogue of resistance",
+      "S = μA/l",
+      "S = l μ A",
+      "S = A/(μl)"
+    ],
+    "correct": 0,
+    "short": "Reluctance S = l/(μA) — the magnetic analogue of electrical resistance.",
+    "solution": "### Step 1: Core Principle\nReluctance opposes flux exactly as resistance opposes current:\n$$S = \\frac{l}{\\mu A}$$\nwhere l is the length of the magnetic path, A its cross-sectional area, and μ the permeability. It is measured in A/Wb (ampere-turns per weber).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: length over (permeability × area) — the analogue of $R = l/(\\sigma A)$.\n- **Option B (wrong)**: that is the conductance-like form (the reciprocal).\n- **Option C (wrong)**: multiplying l, μ and A has the wrong dimensions.\n- **Option D (wrong)**: area over (μl) is inverted.\n\n### Step 3: Exam Trap Summary\nThe trap is inverting the reluctance formula. Anchor the electrical analogy: resistance = length/(conductivity × area), so reluctance = length/(permeability × area).\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_07",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The relative permeability μᵣ of a material is:",
+    "options": [
+      "the ratio of its permeability to that of free space",
+      "the permeability of free space itself",
+      "the ratio of its resistance to its reluctance",
+      "the product μ₀ × A"
+    ],
+    "correct": 0,
+    "short": "μᵣ = μ/μ₀ — the dimensionless ratio to free space.",
+    "solution": "### Step 1: Core Principle\nRelative permeability is the ratio of the material's permeability to the permeability of free space:\n$$\\mu_r = \\frac{\\mu}{\\mu_0}$$\nIt is dimensionless, and the absolute permeability is $\\mu = \\mu_0\\mu_r$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: μ/μ₀.\n- **Option B (wrong)**: μ₀ is the free-space value, not a ratio.\n- **Option C (wrong)**: resistance/reluctance is a meaningless ratio.\n- **Option D (wrong)**: μ₀ × A is not a permeability.\n\n### Step 3: Exam Trap Summary\nThe trap is quoting μ₀ when the material matters. Always multiply by μᵣ for real materials — for iron μᵣ can be hundreds or thousands.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_08",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Which pairing in the electrostatics ↔ electromagnetism analogy is CORRECT?",
+    "options": [
+      "Electric field strength E ↔ Magnetic field strength H",
+      "Electric flux density D ↔ Magnetomotive force F",
+      "Permittivity ε ↔ Reluctance S",
+      "Electric flux ↔ Magnetic flux density"
+    ],
+    "correct": 0,
+    "short": "E ↔ H (field strengths); D ↔ B (flux densities); e.m.f. ↔ m.m.f.; ε ↔ μ.",
+    "solution": "### Step 1: Core Principle\nThe analogy table pairs:\n- electric flux ↔ magnetic flux (Φ)\n- electric flux density D ↔ magnetic flux density B\n- electric field strength E ↔ magnetic field strength H\n- electromotive force ↔ magnetomotive force F\n- electric p.d. ↔ magnetic p.d.\n- permittivity ε ↔ permeability μ\n- ε₀ ↔ μ₀; εᵣ ↔ μᵣ\n\n### Step 2: Testing the Options\n- **Option A (correct)**: both are FIELD STRENGTHS.\n- **Option B (wrong)**: D is a flux DENSITY, so it pairs with B, not with the driving force F.\n- **Option C (wrong)**: ε pairs with μ (both material properties); reluctance has no electrostatic twin in this table.\n- **Option D (wrong)**: electric flux pairs with magnetic FLUX, not with flux density.\n\n### Step 3: Exam Trap Summary\nThe trap is cross-pairing \"flux\" with \"density\" and \"strength\" terms. Build the table column by column: flux/flux-density/field-strength/driving-force/material-constant.\nr\n\n**Key recall:** the twin relations are $B = \\mu H$ and $D = \\varepsilon E$."
+  },
+  {
+    "id": "eee_magcircuits-transformer_09",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "In an IDEAL transformer, the voltage and turns ratios are related by:",
+    "options": [
+      "V₁/V₂ = N₁/N₂ = I₂/I₁",
+      "V₁/V₂ = N₂/N₁",
+      "V₁/V₂ = I₁/I₂",
+      "V₁ V₂ = N₁ N₂"
+    ],
+    "correct": 0,
+    "short": "Ideal transformer: V₁/V₂ = N₁/N₂ = I₂/I₁ (current steps inversely).",
+    "solution": "### Step 1: Core Principle\nFor an ideal transformer, the voltage ratio equals the turns ratio, and the current ratio is the inverse (so power is conserved, $V_1 I_1 = V_2 I_2$):\n$$\\frac{V_1}{V_2} = \\frac{N_1}{N_2} = \\frac{I_2}{I_1}$$\n\n### Step 2: Testing the Options\n- **Option A (correct)**: both ratios in the standard order.\n- **Option B (wrong)**: the turns ratio is inverted — this would predict voltage stepping UP with FEWER secondary turns.\n- **Option C (wrong)**: I₁/I₂ is the inverse of the voltage ratio, so equating them is wrong.\n- **Option D (wrong)**: products instead of ratios.\n\n### Step 3: Exam Trap Summary\nTwo traps: inverting the turns ratio and inverting the current ratio. Anchor: more secondary turns → more secondary voltage → LESS secondary current (power conserved).\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_10",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "A transformer that increases voltage (more secondary turns than primary) is called:",
+    "options": [
+      "a step-up transformer",
+      "a step-down transformer",
+      "an isolation transformer",
+      "an autotransformer"
+    ],
+    "correct": 0,
+    "short": "Step-up: N₂ > N₁ so V₂ > V₁.",
+    "solution": "### Step 1: Core Principle\nA step-up transformer has more turns on the secondary than the primary ($N_2 > N_1$), so the secondary voltage is higher: $V_2 = V_1\\frac{N_2}{N_1}$. A step-down transformer has $N_2 < N_1$.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: more secondary turns → higher voltage.\n- **Option B (wrong)**: step-down LOWERS the voltage.\n- **Option C (wrong)**: an isolation transformer has equal turns (1:1) — same voltage, galvanic separation.\n- **Option D (wrong)**: an autotransformer shares one winding; it can step up or down depending on tapping.\n\n### Step 3: Exam Trap Summary\nThe trap is naming the direction backwards. Anchor the word: \"step-UP\" = voltage goes UP = MORE secondary turns.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_11",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Why does a transformer operate only on AC (and not on steady DC)?",
+    "options": [
+      "Transformer action relies on a changing flux to induce the secondary e.m.f. per Faraday's law",
+      "DC would melt the iron core",
+      "DC cannot flow through copper wire",
+      "the primary resistance blocks DC"
+    ],
+    "correct": 0,
+    "short": "Induction needs a changing flux (E = N dΦ/dt); steady DC gives constant flux → zero secondary e.m.f.",
+    "solution": "### Step 1: Core Principle\nThe secondary voltage is induced by electromagnetic induction, which requires a CHANGING flux: $E = N\\frac{d\\Phi}{dt}$. A steady DC primary current produces a constant flux, so $d\\Phi/dt = 0$ and no e.m.f. is induced in the secondary. AC, by definition changing, drives the transformer.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the changing-flux requirement.\n- **Option B (wrong)**: DC would not melt the core — that is a heating argument unrelated to induction.\n- **Option C (wrong)**: copper conducts DC perfectly well.\n- **Option D (wrong)**: the primary resistance limits current but is not the reason induction fails.\n\n### Step 3: Exam Trap Summary\nThe trap is answering with general \"damage\" arguments. The correct answer is always the physics: NO flux change → NO induction.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_12",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The main losses in a practical transformer are:",
+    "options": [
+      "copper (I²R) losses and iron losses (eddy current + hysteresis)",
+      "friction and windage losses only",
+      "capacitive losses only",
+      "radiation losses only"
+    ],
+    "correct": 0,
+    "short": "Copper (I²R) losses plus iron losses — eddy current and hysteresis.",
+    "solution": "### Step 1: Core Principle\nA practical transformer dissipates power in two places: the WINDINGS (copper losses, $I^2R$, from winding resistance) and the CORE (iron losses — eddy-current heating in the laminations and hysteresis from the cyclic magnetisation).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: copper + iron (eddy + hysteresis).\n- **Option B (wrong)**: friction and windage are MACHINE losses (motors/generators), not transformer losses — a transformer has no moving parts.\n- **Option C (wrong)**: capacitive losses are negligible in power transformers.\n- **Option D (wrong)**: radiation is negligible at line frequencies.\n\n### Step 3: Exam Trap Summary\nThe trap is importing rotating-machine losses (friction/windage) into a static device. Transformers only lose via I²R and core effects.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_13",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Magnetic flux lines:",
+    "options": [
+      "form closed loops, never cross, and when parallel repel one another",
+      "cross each other at right angles",
+      "start and end in free space",
+      "are straight lines only"
+    ],
+    "correct": 0,
+    "short": "Flux lines: closed loops, no crossing, parallel lines repel.",
+    "solution": "### Step 1: Core Principle\nFrom the summary of important formulae (Hughes): a magnetic field can be described using lines of flux. Such lines form closed loops, do not cross, and when parallel they repel one another. Magnetic fields have north and south poles; like poles repel, unlike poles attract.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the three flux-line properties.\n- **Option B (wrong)**: crossing would imply two field directions at one point — impossible.\n- **Option C (wrong)**: flux lines always close on themselves (no isolated poles).\n- **Option D (wrong)**: field lines curve (e.g. concentric circles around a wire).\n\n### Step 3: Exam Trap Summary\nThe trap is importing electric-field-line behaviour (starting/ending on charges). Magnetic lines are always closed loops.\nr\n\n**Key recall:** flux lines represent the flux $\\Phi = BA$; density is $B = \\Phi/A$."
+  },
+  {
+    "id": "eee_magcircuits-transformer_14",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A coil of 500 turns carries 2 A. Its magnetomotive force is:",
+    "options": [
+      "1000 ampere-turns",
+      "250 ampere-turns",
+      "500 ampere-turns",
+      "1000 volts"
+    ],
+    "correct": 0,
+    "short": "F = NI = 500 × 2 = 1000 ampere-turns.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 500$ turns, $I = 2\\ A$.\nGoverning law:\n$$F = NI$$\n\n### Step 2: Full Mathematical Workings\n$$F = 500 \\times 2$$\n$$F = 1000\\ \\text{ampere-turns}$$\n\n### Step 3: Verification & Physical Interpretation\nOne thousand ampere-turns of magnetic drive — the total \"pressure\" pushing flux around the circuit. The unit is the ampere-turn (At), the magnetic analogue of the volt.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (250 At)**: the student divides by 2 instead of multiplying.\n- **Option C trap (500 At)**: the student quotes the turns alone, forgetting the current.\n- **Option D trap (1000 volts)**: the student attaches the WRONG unit — volts measure e.m.f., ampere-turns measure m.m.f.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_15",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A 1000-turn coil is wound on a magnetic path 0.5 m long and carries 2 A. The magnetic field strength H is:",
+    "options": [
+      "4000 A/m",
+      "2000 A/m",
+      "1000 A/m",
+      "500 A/m"
+    ],
+    "correct": 0,
+    "short": "H = NI/l = (1000 × 2)/0.5 = 4000 A/m.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N = 1000$, $I = 2\\ A$, path length $l = 0.5\\ m$.\nGoverning law:\n$$H = \\frac{NI}{l}$$\n\n### Step 2: Full Mathematical Workings\n$$H = \\frac{1000 \\times 2}{0.5}$$\n$$1000 \\times 2 = 2000$$\n$$H = \\frac{2000}{0.5}$$\n$$H = 4000\\ A/m$$\n\n### Step 3: Verification & Physical Interpretation\nDividing by a half-metre path doubles the m.m.f. per metre — 2000 ampere-turns spread over 0.5 m gives 4000 A/m of field strength.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (2000 A/m)**: the student stops at NI and forgets to divide by l.\n- **Option C trap (1000 A/m)**: the student divides NI by 2 twice.\n- **Option D trap (500 A/m)**: the student divides the turns by 2 and drops the current.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_16",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A flux density of 0.5 T passes through an area of 0.02 m². The flux is:",
+    "options": [
+      "0.01 Wb",
+      "0.1 Wb",
+      "10 Wb",
+      "0.001 Wb"
+    ],
+    "correct": 0,
+    "short": "Φ = BA = 0.5 × 0.02 = 0.01 Wb.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $B = 0.5\\ T$, $A = 0.02\\ m^2$.\nGoverning law:\n$$\\Phi = BA$$\n\n### Step 2: Full Mathematical Workings\n$$\\Phi = 0.5 \\times 0.02$$\n$$\\Phi = 0.01\\ Wb$$\n\n### Step 3: Verification & Physical Interpretation\nHalf a tesla threading two hundredths of a square metre carries one hundredth of a weber. Flux is the \"amount of magnetic field\" passing through the area.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.1 Wb)**: the student misplaces the decimal (area read as 0.2 m²).\n- **Option C trap (10 Wb)**: the student multiplies by 20 instead of 0.02.\n- **Option D trap (0.001 Wb)**: the student treats the field as 0.05 T.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_17",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A flux density of 1.2 T passes through an area of 0.05 m². The flux is:",
+    "options": [
+      "0.06 Wb",
+      "0.6 Wb",
+      "6 Wb",
+      "0.006 Wb"
+    ],
+    "correct": 0,
+    "short": "Φ = BA = 1.2 × 0.05 = 0.06 Wb.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $B = 1.2\\ T$, $A = 0.05\\ m^2$.\nGoverning law:\n$$\\Phi = BA$$\n\n### Step 2: Full Mathematical Workings\n$$\\Phi = 1.2 \\times 0.05$$\n$$\\Phi = 0.06\\ Wb$$\n\n### Step 3: Verification & Physical Interpretation\nA strong 1.2 T field through 0.05 m² yields 0.06 Wb. Note the pattern: area × density, always the total flux.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.6 Wb)**: decimal slip (area read as 0.5 m²).\n- **Option C trap (6 Wb)**: the student multiplies by 5 instead of 0.05.\n- **Option D trap (0.006 Wb)**: decimal slip the other way.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_18",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A magnetic circuit has l = 0.5 m, A = 0.001 m² and relative permeability μᵣ = 1000. Its reluctance is about: (μ₀ = 4π × 10⁻⁷ H/m)",
+    "options": [
+      "3.98 × 10⁵ A/Wb",
+      "3.98 × 10⁶ A/Wb",
+      "1.26 × 10⁵ A/Wb",
+      "7.96 × 10⁵ A/Wb"
+    ],
+    "correct": 0,
+    "short": "μ = μ₀μᵣ = 4π × 10⁻⁴; S = l/(μA) = 0.5/(4π × 10⁻⁴ × 0.001) = 3.98 × 10⁵ A/Wb.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $l = 0.5\\ m$, $A = 0.001\\ m^2$, $\\mu_r = 1000$, $\\mu_0 = 4\\pi\\times10^{-7}\\ H/m$.\nGoverning laws:\n$$\\mu = \\mu_0\\mu_r \\qquad S = \\frac{l}{\\mu A}$$\n\n### Step 2: Full Mathematical Workings\nStep A — absolute permeability:\n$$\\mu = \\mu_0 \\times \\mu_r$$\n$$\\mu = 4\\pi \\times 10^{-7} \\times 1000$$\n$$\\mu = 4\\pi \\times 10^{-4}$$\n$$\\mu = 1.2566 \\times 10^{-3}\\ H/m$$\nStep B — reluctance:\n$$S = \\frac{l}{\\mu A}$$\n$$S = \\frac{0.5}{1.2566 \\times 10^{-3} \\times 0.001}$$\n$$1.2566 \\times 10^{-3} \\times 0.001 = 1.2566 \\times 10^{-6}$$\n$$S = \\frac{0.5}{1.2566 \\times 10^{-6}}$$\n$$S = 3.98 \\times 10^{5}\\ A/Wb$$\n\n### Step 3: Verification & Physical Interpretation\nThe reluctance of about 400,000 A/Wb is typical of a small magnetic core: the high relative permeability of iron keeps the reluctance low.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (3.98 × 10⁶)**: the student uses μᵣ = 100 (one order down) or A = 0.0001 m².\n- **Option C trap (1.26 × 10⁵)**: the student forgets μᵣ and uses μ₀ alone — the classic error.\n- **Option D trap (7.96 × 10⁵)**: the student doubles the length or halves the area.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_19",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A magnetic circuit has an m.m.f. of 500 At and a reluctance of 2 × 10⁶ A/Wb. The flux produced is:",
+    "options": [
+      "0.25 mWb",
+      "2.5 mWb",
+      "1 mWb",
+      "0.025 mWb"
+    ],
+    "correct": 0,
+    "short": "Magnetic Ohm's law: Φ = F/S = 500/(2 × 10⁶) = 2.5 × 10⁻⁴ Wb = 0.25 mWb.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: m.m.f. $F = 500\\ At$, reluctance $S = 2 \\times 10^{6}\\ A/Wb$.\nGoverning law — magnetic Ohm's law (the analogue of $I = V/R$):\n$$\\Phi = \\frac{F}{S}$$\n\n### Step 2: Full Mathematical Workings\n$$\\Phi = \\frac{500}{2 \\times 10^{6}}$$\n$$\\Phi = 250 \\times 10^{-6}$$\n$$\\Phi = 2.5 \\times 10^{-4}\\ Wb$$\nConvert to milliwebers:\n$$2.5 \\times 10^{-4}\\ Wb = 0.25\\ mWb$$\n\n### Step 3: Verification & Physical Interpretation\nFlux = driving m.m.f. ÷ opposing reluctance — the exact magnetic twin of Ohm's law. 500 ampere-turns against two million A/Wb of reluctance pushes through only a quarter of a milliweber.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (2.5 mWb)**: the student misplaces the power of ten (reads 10⁵).\n- **Option C trap (1 mWb)**: the student uses S = 5 × 10⁵ instead of 2 × 10⁶.\n- **Option D trap (0.025 mWb)**: the student divides by 10 again after the correct division.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_20",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer has N₁ = 500 primary turns and N₂ = 100 secondary turns. With a primary voltage of 220 V, the secondary voltage is:",
+    "options": [
+      "44 V",
+      "110 V",
+      "1100 V",
+      "22 V"
+    ],
+    "correct": 0,
+    "short": "V₂ = V₁ × (N₂/N₁) = 220 × (100/500) = 220 × 0.2 = 44 V (step-down).",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N_1 = 500$, $N_2 = 100$, $V_1 = 220\\ V$.\nGoverning law — ideal transformer voltage ratio:\n$$\\frac{V_2}{V_1} = \\frac{N_2}{N_1}$$\n\n### Step 2: Full Mathematical Workings\nRearrange for the secondary voltage:\n$$V_2 = V_1 \\times \\frac{N_2}{N_1}$$\n$$V_2 = 220 \\times \\frac{100}{500}$$\n$$\\frac{100}{500} = \\frac{1}{5} = 0.2$$\n$$V_2 = 220 \\times 0.2$$\n$$V_2 = 44\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nFewer secondary turns than primary means a step-DOWN transformer: 220 V reduced fivefold to 44 V, exactly the turns ratio 1:5.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (110 V)**: the student halves instead of dividing by five (ratio 0.5).\n- **Option C trap (1100 V)**: the student INVERTS the ratio — using N₁/N₂ = 5 and multiplying (500/100 × 220).\n- **Option D trap (22 V)**: the student divides by 10 (decimal slip in the ratio).\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_21",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A step-up transformer has N₁ = 200 turns and N₂ = 1000 turns. With V₁ = 50 V, the secondary voltage is:",
+    "options": [
+      "250 V",
+      "10 V",
+      "100 V",
+      "500 V"
+    ],
+    "correct": 0,
+    "short": "V₂ = V₁ × (N₂/N₁) = 50 × (1000/200) = 50 × 5 = 250 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N_1 = 200$, $N_2 = 1000$, $V_1 = 50\\ V$.\nGoverning law:\n$$V_2 = V_1 \\times \\frac{N_2}{N_1}$$\n\n### Step 2: Full Mathematical Workings\n$$V_2 = 50 \\times \\frac{1000}{200}$$\n$$\\frac{1000}{200} = 5$$\n$$V_2 = 50 \\times 5$$\n$$V_2 = 250\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nFive times more secondary turns gives five times the voltage — a 1:5 step-UP transformer lifting 50 V to 250 V.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (10 V)**: the student inverts the ratio (200/1000 = 0.2 → 10 V).\n- **Option C trap (100 V)**: the student uses a ratio of 2.\n- **Option D trap (500 V)**: the student uses a ratio of 10.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_22",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer has N₁ = 400 primary turns and N₂ = 50 secondary turns. With V₁ = 240 V, the secondary voltage is:",
+    "options": [
+      "30 V",
+      "48 V",
+      "120 V",
+      "1920 V"
+    ],
+    "correct": 0,
+    "short": "V₂ = 240 × (50/400) = 240 × 0.125 = 30 V (step-down).",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N_1 = 400$, $N_2 = 50$, $V_1 = 240\\ V$.\nGoverning law:\n$$V_2 = V_1 \\times \\frac{N_2}{N_1}$$\n\n### Step 2: Full Mathematical Workings\n$$V_2 = 240 \\times \\frac{50}{400}$$\n$$\\frac{50}{400} = \\frac{1}{8} = 0.125$$\n$$V_2 = 240 \\times 0.125$$\n$$V_2 = 30\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nAn 8:1 step-down ratio drops 240 V to 30 V — the typical mains-to-low-voltage supply transformer.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (48 V)**: the student uses a ratio of 0.2 (50/250).\n- **Option C trap (120 V)**: the student halves the voltage (ratio 0.5).\n- **Option D trap (1920 V)**: the student inverts the ratio (400/50 = 8 → 240 × 8).\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_23",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A 600-turn primary must step 240 V down to 12 V. The number of secondary turns required is:",
+    "options": [
+      "30 turns",
+      "120 turns",
+      "12000 turns",
+      "50 turns"
+    ],
+    "correct": 0,
+    "short": "N₂ = N₁ × (V₂/V₁) = 600 × (12/240) = 600 × 0.05 = 30 turns.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $N_1 = 600$, $V_1 = 240\\ V$, $V_2 = 12\\ V$.\nGoverning law, rearranged for the secondary turns:\n$$N_2 = N_1 \\times \\frac{V_2}{V_1}$$\n\n### Step 2: Full Mathematical Workings\n$$N_2 = 600 \\times \\frac{12}{240}$$\n$$\\frac{12}{240} = \\frac{1}{20} = 0.05$$\n$$N_2 = 600 \\times 0.05$$\n$$N_2 = 30\\ \\text{turns}$$\n\n### Step 3: Verification & Physical Interpretation\nThe required 20:1 voltage reduction needs 20 times fewer secondary turns: 600/20 = 30 turns. Checking forward, $V_2 = 240 \\times 30/600 = 12\\ V$ — exact.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (120 turns)**: the student uses a 1:5 ratio instead of 1:20.\n- **Option C trap (12000 turns)**: the student INVERTS the ratio (600 × 20).\n- **Option D trap (50 turns)**: the student uses a 1:12 ratio.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_24",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "An ideal transformer supplies a load at V₂ = 24 V, I₂ = 2 A from a primary at V₁ = 240 V. The primary current is:",
+    "options": [
+      "0.2 A",
+      "2 A",
+      "20 A",
+      "0.02 A"
+    ],
+    "correct": 0,
+    "short": "I₁ = V₂I₂/V₁ = (24 × 2)/240 = 48/240 = 0.2 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $V_2 = 24\\ V$, $I_2 = 2\\ A$, $V_1 = 240\\ V$.\nGoverning law — power conservation in an ideal transformer:\n$$V_1 I_1 = V_2 I_2$$\n\n### Step 2: Full Mathematical Workings\nRearrange for the primary current:\n$$I_1 = \\frac{V_2 I_2}{V_1}$$\n$$I_1 = \\frac{24 \\times 2}{240}$$\n$$24 \\times 2 = 48$$\n$$I_1 = \\frac{48}{240}$$\n$$I_1 = 0.2\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nThe 10:1 voltage step-down must be accompanied by a 1:10 current step-up — but here we solve from the secondary side: 48 W of load power drawn at 240 V needs only 0.2 A on the primary.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (2 A)**: the student assumes primary current equals secondary current (forgetting the transformation).\n- **Option C trap (20 A)**: the student multiplies by 10 instead of dividing.\n- **Option D trap (0.02 A)**: the student divides by 100 (double ratio application).\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_25",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer with turns ratio N₁/N₂ = 10 supplies a secondary current of 3 A. The primary current is about:",
+    "options": [
+      "0.3 A",
+      "3 A",
+      "30 A",
+      "0.03 A"
+    ],
+    "correct": 0,
+    "short": "I₁ = I₂ × (N₂/N₁) = 3 × (1/10) = 0.3 A.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $\\frac{N_1}{N_2} = 10$, $I_2 = 3\\ A$.\nGoverning law — ideal transformer current ratio:\n$$\\frac{I_1}{I_2} = \\frac{N_2}{N_1}$$\n\n### Step 2: Full Mathematical Workings\n$$I_1 = I_2 \\times \\frac{N_2}{N_1}$$\n$$\\frac{N_2}{N_1} = \\frac{1}{10}$$\n$$I_1 = 3 \\times \\frac{1}{10}$$\n$$I_1 = 0.3\\ A$$\n\n### Step 3: Verification & Physical Interpretation\nTen times more primary turns means one-tenth of the secondary current flows in the primary — the inverse of the voltage ratio, preserving power.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (3 A)**: the student ignores the transformation ratio.\n- **Option C trap (30 A)**: the student multiplies by the ratio instead of dividing.\n- **Option D trap (0.03 A)**: the student divides by 100.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_26",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A conductor of length 0.3 m moves at 10 m/s at right angles to a field of 0.5 T. The e.m.f. induced in it is:",
+    "options": [
+      "1.5 V",
+      "15 V",
+      "0.15 V",
+      "3 V"
+    ],
+    "correct": 0,
+    "short": "E = Blv = 0.5 × 0.3 × 10 = 1.5 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $l = 0.3\\ m$, $v = 10\\ m/s$, $B = 0.5\\ T$, motion perpendicular to the field.\nGoverning law — motional e.m.f.:\n$$E = Blv$$\n\n### Step 2: Full Mathematical Workings\n$$E = 0.5 \\times 0.3 \\times 10$$\n$$0.5 \\times 0.3 = 0.15$$\n$$0.15 \\times 10 = 1.5$$\n$$E = 1.5\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nA 0.3 m conductor sweeping 0.5 T at 10 m/s cuts 1.5 V of e.m.f. — the generator principle in one line.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (15 V)**: the student misplaces a decimal (length read as 3 m).\n- **Option C trap (0.15 V)**: the student forgets the speed factor of 10.\n- **Option D trap (3 V)**: the student doubles the field or the speed.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_27",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A conductor of length 0.25 m moves at 8 m/s at right angles to a field of 0.4 T. The induced e.m.f. is:",
+    "options": [
+      "0.8 V",
+      "8 V",
+      "0.08 V",
+      "1.25 V"
+    ],
+    "correct": 0,
+    "short": "E = Blv = 0.4 × 0.25 × 8 = 0.8 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $l = 0.25\\ m$, $v = 8\\ m/s$, $B = 0.4\\ T$.\nGoverning law:\n$$E = Blv$$\n\n### Step 2: Full Mathematical Workings\n$$E = 0.4 \\times 0.25 \\times 8$$\n$$0.4 \\times 0.25 = 0.1$$\n$$0.1 \\times 8 = 0.8$$\n$$E = 0.8\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nThe product of the three quantities gives 0.8 V — a modest e.m.f. from a modest conductor speed.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (8 V)**: the student drops the field factor (uses B = 4 T).\n- **Option C trap (0.08 V)**: decimal slip (length 0.025 m).\n- **Option D trap (1.25 V)**: the student uses a field of 0.5 T and length 0.25 m with speed 10 — a recompute from a neighbouring problem.\nr"
+  },
+  {
+    "id": "eee_magcircuits-transformer_28",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Match each electrostatic quantity to its electromagnetic analogue: (a) electric field strength E (b) electric flux density D (c) permittivity ε (d) electromotive force.",
+    "options": [
+      "magnetic field strength H; magnetic flux density B; permeability μ; magnetomotive force F",
+      "magnetic flux Φ; H; reluctance S; magnetic p.d.",
+      "B; H; μ₀; volt",
+      "H; Φ; μ; ampere"
+    ],
+    "correct": 0,
+    "short": "E ↔ H, D ↔ B, ε ↔ μ, e.m.f. ↔ m.m.f.",
+    "solution": "### Step 1: Core Principle\nThe complete analogy:\n(a) electric field strength E ↔ magnetic field strength H\n(b) electric flux density D ↔ magnetic flux density B\n(c) permittivity ε ↔ permeability μ\n(d) electromotive force ↔ magnetomotive force F\n\n### Step 2: Testing the Options\n- **Option A (correct)**: all four pairings exact.\n- **Option B (wrong)**: pairs E with flux (not field strength) and ε with reluctance — both broken.\n- **Option C (wrong)**: part (a) swaps strength with density, and part (d) gives the volt (an e.m.f. unit, not the analogue quantity).\n- **Option D (wrong)**: part (b) pairs D with flux instead of flux density.\n\n### Step 3: Exam Trap Summary\nThe trap is mixing the four levels (flux / density / strength / driving force). Anchor the ladder: flux ↔ flux, density ↔ density, strength ↔ strength, e.m.f. ↔ m.m.f., ε ↔ μ.\nr\n\n**Key recall:** $B = \\mu H$ and $D = \\varepsilon E$ are the twin constitutive relations."
+  },
+  {
+    "id": "eee_motors-generators_01",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "The key electromechanics demonstration of 1831 was by:",
+    "options": [
+      "Michael Faraday — a conductor moved in a magnetic field generates current, and a current in a field develops motion",
+      "Thomas Edison",
+      "Hans Christian Oersted",
+      "Charles Steinmetz"
+    ],
+    "correct": 0,
+    "short": "Faraday (1831) demonstrated both directions: motion→e.m.f. (generator) and current→force (motor).",
+    "solution": "### Step 1: Core Principle\nAt some point in 1831 Faraday demonstrated that a conductor moved in a magnetic field could generate a current, and that a current flowing in a conductor immersed in a magnetic field could develop motion. Over the next 30 years these two effects were developed into practical machines.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: Faraday, 1831, both conversion directions.\n- **Option B (wrong)**: Edison built the DC power system (1880s), not the 1831 discovery.\n- **Option C (wrong)**: Oersted (1820) discovered that current deflects a compass — earlier, and one-directional only.\n- **Option D (wrong)**: Steinmetz formalised AC analysis (1893).\n\n### Step 3: Exam Trap Summary\nThe trap is mixing the names and dates of electromagnetism milestones. Anchor: Oersted 1820 (current→field), Faraday 1831 (induction), Steinmetz 1893 (phasors).\nr\n\n**Key relation:** the motional e.m.f. Faraday exploited is $E = Blv$."
+  },
+  {
+    "id": "eee_motors-generators_02",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "An electric motor converts:",
+    "options": [
+      "electrical energy into mechanical energy",
+      "mechanical energy into electrical energy",
+      "heat energy into electricity",
+      "chemical energy into light"
+    ],
+    "correct": 0,
+    "short": "Motor: electrical → mechanical (rotation).",
+    "solution": "### Step 1: Core Principle\nA motor takes electrical energy in and delivers mechanical energy out (rotation/torque) — the current-in-a-field force effect of Faraday's demonstration.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: electrical → mechanical.\n- **Option B (wrong)**: mechanical → electrical is the GENERATOR direction.\n- **Option C (wrong)**: heat-to-electricity is thermoelectric generation, not a motor.\n- **Option D (wrong)**: chemical-to-light describes some cells/lamps, not a motor.\n\n### Step 3: Exam Trap Summary\nThe trap is reversing the two conversion directions. Anchor: MOTOR = electricity IN, motion OUT; GENERATOR = motion IN, electricity OUT.\nr\n\n**Key relation:** the motor force on a conductor is $F = BIl$."
+  },
+  {
+    "id": "eee_motors-generators_03",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "A generator converts:",
+    "options": [
+      "mechanical energy into electrical energy",
+      "electrical energy into mechanical energy",
+      "AC into DC",
+      "voltage into current"
+    ],
+    "correct": 0,
+    "short": "Generator: mechanical → electrical via electromagnetic induction.",
+    "solution": "### Step 1: Core Principle\nA generator converts mechanical energy (shaft rotation) into electrical energy — the relative motion of a conductor and magnetic flux induces the e.m.f.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: mechanical → electrical.\n- **Option B (wrong)**: that is the MOTOR direction.\n- **Option C (wrong)**: AC→DC conversion is rectification, done by a commutator or rectifier — not the generator's energy role.\n- **Option D (wrong)**: voltage and current are both electrical quantities, not an energy conversion.\n\n### Step 3: Exam Trap Summary\nSame duality, opposite direction. Also avoid answering \"AC to DC\" — the commutator does that INSIDE a DC generator, but the generator's overall job is mechanical→electrical.\nr\n\n**Key relation:** the generated e.m.f. per conductor is $E = Blv$."
+  },
+  {
+    "id": "eee_motors-generators_04",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "A battery and a generator differ in that:",
+    "options": [
+      "a battery converts stored chemical energy while a generator produces e.m.f. from motion in a magnetic field",
+      "both produce e.m.f. by electromagnetic induction",
+      "a generator stores energy chemically",
+      "a battery produces AC only"
+    ],
+    "correct": 0,
+    "short": "Battery = chemical storage; generator = induction from conductor-flux motion.",
+    "solution": "### Step 1: Core Principle\nA battery is a source of stored chemical energy (electrodes in an electrolyte), while a generator produces e.m.f. by the relative movement of a conductor and a magnetic flux (electromagnetic induction).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: chemical storage vs induction.\n- **Option B (wrong)**: batteries do NOT work by induction — only generators do.\n- **Option C (wrong)**: generators do not store chemical energy.\n- **Option D (wrong)**: batteries produce DC; AC comes from alternators.\n\n### Step 3: Exam Trap Summary\nThe trap is assuming all e.m.f. sources work the same way. The notes' three sources — cells, generators, thermo-junctions — each use a different physical mechanism.\nr\n\n**Key contrast:** battery = chemical storage; generator obeys $E = Blv$ induction."
+  },
+  {
+    "id": "eee_motors-generators_05",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "In a DC machine, the function of the commutator is to:",
+    "options": [
+      "convert the alternating e.m.f. induced in the armature into a unidirectional (DC) output",
+      "generate the magnetic field",
+      "cool the machine",
+      "increase the speed of rotation"
+    ],
+    "correct": 0,
+    "short": "The commutator rectifies the armature's AC into DC at the brushes.",
+    "solution": "### Step 1: Core Principle\nThe e.m.f. induced in the rotating armature conductors alternates as they pass under successive poles. The commutator — a segmented ring with brushes — reverses the connections each half-cycle so the EXTERNAL circuit always sees the same polarity: a unidirectional (DC) output.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: AC-to-DC rectification by the commutator.\n- **Option B (wrong)**: the FIELD system (poles/field windings) produces the flux.\n- **Option C (wrong)**: cooling is done by fans/ventilation, not the commutator.\n- **Option D (wrong)**: the commutator does not control speed.\n\n### Step 3: Exam Trap Summary\nThe trap is assigning field-generating or speed roles to the commutator. Anchor: commutator = mechanical rectifier; field system = flux source.\nr\n\n**Key recall:** the armature e.m.f. alternates as $E = Blv$ before rectification."
+  },
+  {
+    "id": "eee_motors-generators_06",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "Fleming's LEFT-hand rule is used for:",
+    "options": [
+      "motors — finding the direction of force on a current-carrying conductor in a field",
+      "generators — finding the direction of the induced e.m.f.",
+      "finding the polarity of a battery",
+      "calculating transformer ratios"
+    ],
+    "correct": 0,
+    "short": "Left-hand rule (FBI) = motor force; right-hand rule = generator e.m.f.",
+    "solution": "### Step 1: Core Principle\nFleming's left-hand rule (FBI: thuMb = Force/Motion, First finger = Field, seCond finger = Current) gives the direction of the FORCE on a current-carrying conductor — the MOTOR effect. The right-hand rule gives the direction of the INDUCED e.m.f. in a conductor moving in a field — the GENERATOR effect.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: left hand = motor force.\n- **Option B (wrong)**: the generator e.m.f. direction uses the RIGHT-hand rule.\n- **Option C (wrong)**: battery polarity is chemistry, not a hand rule.\n- **Option D (wrong)**: transformer ratios are arithmetic, not hand rules.\n\n### Step 3: Exam Trap Summary\nThe trap is swapping the hands. Anchor: LEFT = Motor (think \"motorists drive on the left\" in Nigeria); RIGHT = geneRATOR.\nr\n\n**Key relation:** the force magnitude is $F = BIl\\sin\\theta$."
+  },
+  {
+    "id": "eee_motors-generators_07",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "An AC generator is also called:",
+    "options": [
+      "an alternator",
+      "a dynamo",
+      "a transformer",
+      "a rectifier"
+    ],
+    "correct": 0,
+    "short": "AC generator = alternator.",
+    "solution": "### Step 1: Core Principle\nA generator producing alternating e.m.f. is called an alternator — the armature's rotation in the field produces the sinusoid directly, with slip rings (not a commutator) delivering the AC.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: alternator = AC generator.\n- **Option B (wrong)**: dynamo is an older name associated with DC generators.\n- **Option C (wrong)**: a transformer changes voltage levels; it does not generate.\n- **Option D (wrong)**: a rectifier converts AC to DC.\n\n### Step 3: Exam Trap Summary\nThe trap is the alternator/dynamo naming. Anchor: alternator = AC; dynamo = DC (historically).\nr\n\n**Key recall:** each alternator conductor develops $E = Blv$."
+  },
+  {
+    "id": "eee_motors-generators_08",
+    "topicId": "eee-motors-generators",
+    "kind": "calc",
+    "question": "A conductor of length 0.5 m moves at 20 m/s perpendicular to a field of 1 T. The induced e.m.f. is:",
+    "options": [
+      "10 V",
+      "0.1 V",
+      "40 V",
+      "2.5 V"
+    ],
+    "correct": 0,
+    "short": "E = Blv = 1 × 0.5 × 20 = 10 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $l = 0.5\\ m$, $v = 20\\ m/s$, $B = 1\\ T$, motion perpendicular to the field.\nGoverning law:\n$$E = Blv$$\n\n### Step 2: Full Mathematical Workings\n$$E = 1 \\times 0.5 \\times 20$$\n$$1 \\times 0.5 = 0.5$$\n$$0.5 \\times 20 = 10$$\n$$E = 10\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nA half-metre conductor sweeping a one-tesla field at 20 m/s develops 10 V — the generator equation in its cleanest form.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (0.1 V)**: decimal slip (speed read as 0.2 m/s).\n- **Option C trap (40 V)**: the student doubles the speed or the length.\n- **Option D trap (2.5 V)**: the student divides by 4 (e.g. uses 0.25 m length).\nr"
+  },
+  {
+    "id": "eee_motors-generators_09",
+    "topicId": "eee-motors-generators",
+    "kind": "calc",
+    "question": "A conductor of length 0.4 m moves at 5 m/s perpendicular to a field of 0.2 T. The induced e.m.f. is:",
+    "options": [
+      "0.4 V",
+      "4 V",
+      "0.04 V",
+      "2 V"
+    ],
+    "correct": 0,
+    "short": "E = Blv = 0.2 × 0.4 × 5 = 0.4 V.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $l = 0.4\\ m$, $v = 5\\ m/s$, $B = 0.2\\ T$.\nGoverning law:\n$$E = Blv$$\n\n### Step 2: Full Mathematical Workings\n$$E = 0.2 \\times 0.4 \\times 5$$\n$$0.2 \\times 0.4 = 0.08$$\n$$0.08 \\times 5 = 0.4$$\n$$E = 0.4\\ V$$\n\n### Step 3: Verification & Physical Interpretation\nSmall field, modest speed — 0.4 V results. The motional e.m.f. scales linearly with each of the three factors.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (4 V)**: decimal slip (field read as 2 T).\n- **Option C trap (0.04 V)**: decimal slip (speed read as 0.5 m/s).\n- **Option D trap (2 V)**: the student multiplies by 5 twice.\nr"
+  },
+  {
+    "id": "eee_motors-generators_10",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "Which rule applies to which machine? (a) direction of force in a motor (b) direction of induced e.m.f. in a generator.",
+    "options": [
+      "left-hand rule; right-hand rule",
+      "right-hand rule; left-hand rule",
+      "left-hand rule; left-hand rule",
+      "right-hand rule; right-hand rule"
+    ],
+    "correct": 0,
+    "short": "LEFT hand = motor force; RIGHT hand = generator e.m.f.",
+    "solution": "### Step 1: Core Principle\n(a) Motor force on a current-carrying conductor → Fleming's LEFT-hand rule (thuMb = Motion, First finger = Field, seCond finger = Current).\n(b) Induced e.m.f. in a conductor moving in a field → Fleming's RIGHT-hand rule.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: motor = left, generator = right.\n- **Option B (wrong)**: both hands swapped — the classic inversion.\n- **Option C (wrong)**: the generator needs the right hand.\n- **Option D (wrong)**: the motor needs the left hand.\n\n### Step 3: Exam Trap Summary\nThe swap is the single most common error in this topic. Anchor: \"LEFT = Motor\" (in Nigeria, motorists drive on the left) and the generator takes the other hand.\nr\n\n**Key relation:** motor force $F = BIl\\sin\\theta$; generator e.m.f. $E = Blv$."
+  },
+  {
+    "id": "eee_instruments_01",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Instrumentation is best defined as:",
+    "options": [
+      "the use of devices (instruments) to detect, observe, measure, control, compute, communicate and display physical quantities",
+      "the repair of electrical machines",
+      "the generation of electrical power",
+      "the design of transformers"
+    ],
+    "correct": 0,
+    "short": "Instrumentation: detecting, observing, measuring, controlling, computing, communicating, displaying physical quantities.",
+    "solution": "### Step 1: Core Principle\nPer the reference material, instrumentation refers to the use of devices (instruments) to detect, observe, measure, control, compute, communicate and display physical quantities. All branches of experimental engineering depend on instrumentation systems.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the complete seven-verb definition.\n- **Option B (wrong)**: repair is maintenance, not instrumentation.\n- **Option C (wrong)**: generation is power engineering.\n- **Option D (wrong)**: transformer design is a component activity.\n\n### Step 3: Exam Trap Summary\nThe trap is narrowing instrumentation to \"measuring only\". The definition is deliberately broad — measurement is just one of seven functions.\nr\n\n**Key recall:** the displayed electrical quantities obey Ohm's law $V = IR$."
+  },
+  {
+    "id": "eee_instruments_02",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Instruments are said to extend human senses because they:",
+    "options": [
+      "measure accurately and rapidly over a great range of distances and physical quantities",
+      "replace human judgement entirely",
+      "only amplify sounds",
+      "are never used in engineering"
+    ],
+    "correct": 0,
+    "short": "Instruments let humans measure accurately and quickly over a great range of quantities.",
+    "solution": "### Step 1: Core Principle\nThe notes state that instruments let humans measure accurately and rapidly over a great range of distances and physical quantities — beyond what the senses can do directly (e.g. currents, voltages, tiny displacements).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: accuracy, speed and range.\n- **Option B (wrong)**: instruments AID judgement — they do not replace it.\n- **Option C (wrong)**: sound amplification is one narrow function.\n- **Option D (wrong)**: instruments are central to engineering, not absent from it.\n\n### Step 3: Exam Trap Summary\nThe trap is overstating (\"replace judgement\") or understating the role. The definition is about EXTENDING the senses — accuracy + speed + range.\nr\n\n**Key recall:** instruments scale electrical readings through $V = IR$."
+  },
+  {
+    "id": "eee_instruments_03",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "An ammeter must be connected:",
+    "options": [
+      "in series with the circuit, and must have a very LOW resistance",
+      "in parallel with the circuit, with a very high resistance",
+      "in series with a very high resistance",
+      "in parallel with a very low resistance"
+    ],
+    "correct": 0,
+    "short": "Ammeter: in series, very low resistance (must not disturb the current).",
+    "solution": "### Step 1: Core Principle\nThe ammeter measures the current flowing through a circuit, so it is placed in SERIES with the branch being measured. Its own resistance must be very LOW so that inserting it does not change the current it is measuring.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: series + low resistance.\n- **Option B (wrong)**: that is the VOLTMETER arrangement.\n- **Option C (wrong)**: a series high resistance would choke the very current being measured.\n- **Option D (wrong)**: a parallel low resistance would divert current away from the load.\n\n### Step 3: Exam Trap Summary\nThe trap is the ammeter/voltmeter swap. Anchor: Ammeter = series = Almost-zero resistance; Voltmeter = parallel = Very large resistance.\nr\n\n**Key relation:** the shunt design equation is $I_m R_m = (I - I_m) R_{sh}$."
+  },
+  {
+    "id": "eee_instruments_04",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "A voltmeter must be connected:",
+    "options": [
+      "in parallel with the component, and must have a very HIGH resistance",
+      "in series with the circuit, with a very low resistance",
+      "in parallel with a very low resistance",
+      "in series with a very high resistance"
+    ],
+    "correct": 0,
+    "short": "Voltmeter: in parallel, very high resistance (draws negligible current).",
+    "solution": "### Step 1: Core Principle\nThe voltmeter measures the potential difference ACROSS a component, so it is placed in PARALLEL with that component. Its resistance must be very HIGH so that it draws a negligible current and does not alter the voltage it is measuring.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: parallel + high resistance.\n- **Option B (wrong)**: that is the AMMETER arrangement.\n- **Option C (wrong)**: a parallel low resistance would load the circuit and collapse the voltage.\n- **Option D (wrong)**: a series voltmeter would block the circuit.\n\n### Step 3: Exam Trap Summary\nThe ammeter/voltmeter swap again. Anchor: Voltmeter = parallel = Very high resistance (the two V's).\nr\n\n**Key relation:** the multiplier design is $R_t = V/I_{fsd}$, multiplier $= R_t - R_m$."
+  },
+  {
+    "id": "eee_instruments_05",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "The permanent-magnet moving-coil (PMMC) instrument:",
+    "options": [
+      "works on DC only (deflection reverses with polarity) and has a uniform scale",
+      "works on AC and DC equally",
+      "measures only AC power",
+      "needs no magnet"
+    ],
+    "correct": 0,
+    "short": "PMMC: DC only, uniform scale, polarity-sensitive.",
+    "solution": "### Step 1: Core Principle\nThe PMMC (permanent-magnet moving coil) instrument uses a permanent magnet and a coil free to rotate in it. The deflection is proportional to the DC current through the coil, reverses if the polarity reverses (so it cannot read AC directly), and the scale is UNIFORM (linear).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: DC-only + uniform scale.\n- **Option B (wrong)**: on AC the pointer would merely vibrate around zero.\n- **Option C (wrong)**: PMMC measures current/voltage, not power directly.\n- **Option D (wrong)**: the permanent magnet is essential to its operation.\n\n### Step 3: Exam Trap Summary\nThe trap is assuming all meters read both AC and DC. Anchor: PMMC = DC-only (permanent magnet gives fixed field direction); moving-iron = AC and DC.\nr\n\n**Key recall:** PMMC deflection is proportional to the DC current, $\\text{deflection} \\propto I$ (linear scale)."
+  },
+  {
+    "id": "eee_instruments_06",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "The moving-iron instrument:",
+    "options": [
+      "works on both AC and DC (reads r.m.s.) and is robust, but has a non-uniform scale",
+      "works on DC only",
+      "has a perfectly uniform scale",
+      "is used only for frequency measurement"
+    ],
+    "correct": 0,
+    "short": "Moving iron: AC + DC (r.m.s.), robust, non-uniform scale.",
+    "solution": "### Step 1: Core Principle\nThe moving-iron instrument deflects by the repulsion/attraction between fixed and moving iron pieces in the coil's field. The effect depends on the square of the current, so it responds to both AC and DC (indicating r.m.s. on AC). It is cheap and robust, but its scale is non-uniform (cramped at low readings).\n\n### Step 2: Testing the Options\n- **Option A (correct)**: AC + DC, robust, non-uniform scale.\n- **Option B (wrong)**: it is the PMMC that is DC-only.\n- **Option C (wrong)**: the scale is non-uniform — the opposite.\n- **Option D (wrong)**: it measures current/voltage, not frequency.\n\n### Step 3: Exam Trap Summary\nThe trap is transferring PMMC properties to the moving-iron type. Anchor the contrast: PMMC = DC only, uniform scale; moving iron = AC+DC, non-uniform scale.\nr\n\n**Key recall:** moving-iron deflection depends on the square of the current ($I^2$)."
+  },
+  {
+    "id": "eee_instruments_07",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A moving-coil movement has full-scale deflection at 100 µA and internal resistance Rₘ = 1 kΩ. To use it as a 10 V voltmeter, the series multiplier required is:",
+    "options": [
+      "99 kΩ",
+      "100 kΩ",
+      "10 kΩ",
+      "1 kΩ"
+    ],
+    "correct": 0,
+    "short": "Rₜ = V/I = 10/10⁻⁴ = 100 kΩ; multiplier = Rₜ − Rₘ = 100 − 1 = 99 kΩ.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: full-scale deflection current $I = 100\\ \\mu A = 1 \\times 10^{-4}\\ A$, movement resistance $R_m = 1\\ k\\Omega = 1000\\ \\Omega$, desired range $V = 10\\ V$.\nGoverning laws:\n$$R_t = \\frac{V}{I} \\qquad \\text{multiplier} = R_t - R_m$$\n\n### Step 2: Full Mathematical Workings\nStep A — total resistance needed to drop 10 V at 100 µA:\n$$R_t = \\frac{10}{1 \\times 10^{-4}}$$\n$$R_t = 10 \\times 10^{4}$$\n$$R_t = 100\\,000\\ \\Omega = 100\\ k\\Omega$$\nStep B — subtract the movement's own resistance:\n$$\\text{multiplier} = 100\\,000 - 1000$$\n$$\\text{multiplier} = 99\\,000\\ \\Omega$$\n$$\\text{multiplier} = 99\\ k\\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe series multiplier absorbs 99 V of the 10 V range while the movement takes its own 0.1 V (100 µA × 1 kΩ). Checking: total 100 kΩ × 100 µA = 10 V — exact full scale.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (100 kΩ)**: the student forgets to SUBTRACT the movement resistance Rₘ.\n- **Option C trap (10 kΩ)**: the student uses 1 mA instead of 100 µA for the movement current.\n- **Option D trap (1 kΩ)**: the student quotes Rₘ itself, confusing it with the multiplier.\nr"
+  },
+  {
+    "id": "eee_instruments_08",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A moving-coil movement deflects fully at 50 µA and has Rₘ = 2 kΩ. To use it as a 5 V voltmeter, the series multiplier needed is:",
+    "options": [
+      "98 kΩ",
+      "100 kΩ",
+      "50 kΩ",
+      "10 kΩ"
+    ],
+    "correct": 0,
+    "short": "Rₜ = 5/(5 × 10⁻⁵) = 100 kΩ; multiplier = 100 − 2 = 98 kΩ.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: $I = 50\\ \\mu A = 5 \\times 10^{-5}\\ A$, $R_m = 2\\ k\\Omega = 2000\\ \\Omega$, $V = 5\\ V$.\nGoverning laws:\n$$R_t = \\frac{V}{I} \\qquad \\text{multiplier} = R_t - R_m$$\n\n### Step 2: Full Mathematical Workings\nStep A:\n$$R_t = \\frac{5}{5 \\times 10^{-5}}$$\n$$R_t = 1 \\times 10^{5}\\ \\Omega = 100\\ k\\Omega$$\nStep B:\n$$\\text{multiplier} = 100\\,000 - 2000$$\n$$\\text{multiplier} = 98\\,000\\ \\Omega = 98\\ k\\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nAt full scale the movement drops 50 µA × 2 kΩ = 0.1 V, and the multiplier drops the remaining 4.9 V — together exactly 5 V.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (100 kΩ)**: forgetting to subtract Rₘ.\n- **Option C trap (50 kΩ)**: using 100 µA as the movement current.\n- **Option D trap (10 kΩ)**: using 0.5 mA as the movement current.\nr"
+  },
+  {
+    "id": "eee_instruments_09",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A 1 mA movement with Rₘ = 100 Ω is to be used as a 1 A ammeter. The shunt resistance required is about:",
+    "options": [
+      "0.1 Ω",
+      "1 Ω",
+      "10 Ω",
+      "100 Ω"
+    ],
+    "correct": 0,
+    "short": "Iₘ Rₘ = (I − Iₘ) R_sh → R_sh = (0.001 × 100)/0.999 ≈ 0.1 Ω.",
+    "solution": "### Step 1: Identification of Given Parameters and Governing Laws\nGiven: movement current $I_m = 1\\ mA = 0.001\\ A$, movement resistance $R_m = 100\\ \\Omega$, desired full-scale current $I = 1\\ A$.\nGoverning law — the shunt carries the excess current while the voltage across it equals the voltage across the movement:\n$$I_m R_m = (I - I_m) R_{sh}$$\n\n### Step 2: Full Mathematical Workings\nStep A — current diverted through the shunt:\n$$I - I_m = 1 - 0.001$$\n$$I - I_m = 0.999\\ A$$\nStep B — rearrange for the shunt:\n$$R_{sh} = \\frac{I_m R_m}{I - I_m}$$\n$$R_{sh} = \\frac{0.001 \\times 100}{0.999}$$\n$$0.001 \\times 100 = 0.1$$\n$$R_{sh} = \\frac{0.1}{0.999}$$\n$$R_{sh} = 0.1001\\ \\Omega$$\n$$R_{sh} \\approx 0.1\\ \\Omega$$\n\n### Step 3: Verification & Physical Interpretation\nThe shunt takes 999 mA while the movement takes its 1 mA; both see the same voltage (0.1 V). The tiny 0.1 Ω shunt keeps the ammeter's insertion resistance negligible, exactly as required.\n\n### Step 4: Breakdown of Wrong Options / Common Student Mistakes\n- **Option B trap (1 Ω)**: the student uses I = 0.1 A instead of 1 A.\n- **Option C trap (10 Ω)**: the student divides by 0.01 — treating the movement current as 10 mA.\n- **Option D trap (100 Ω)**: the student quotes Rₘ itself — the shunt must be far SMALLER than the movement.\nr"
+  },
+  {
+    "id": "eee_nonlinear_01",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "In the i-v world of circuits, a circuit is classified as linear if:",
+    "options": [
+      "its i-v graph is a straight line",
+      "it contains a diode",
+      "its i-v graph is curved",
+      "it contains an op-amp"
+    ],
+    "correct": 0,
+    "short": "Linear ⇔ straight-line i-v graph (v = Ri).",
+    "solution": "### Step 1: Core Principle\nClassification is done by examining the circuit's i-v graph: if the graph is a straight line the circuit is linear ($v = Ri$); any other shape — curved, piecewise, or otherwise — is nonlinear.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the straight-line criterion.\n- **Option B (wrong)**: a diode is the archetypal NONLINEAR component (exponential i-v).\n- **Option C (wrong)**: a curved graph is the nonlinear case.\n- **Option D (wrong)**: op-amps are components — linearity is judged by the i-v graph, not the part list.\n\n### Step 3: Exam Trap Summary\nThe trap is judging by components. Always reduce the question to the graph: straight line = linear, anything else = nonlinear.\nr"
+  },
+  {
+    "id": "eee_nonlinear_02",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The function y = x² is:",
+    "options": [
+      "nonlinear — its graph is a parabola, not a straight line",
+      "linear — its graph is a straight line",
+      "piecewise linear",
+      "a constant"
+    ],
+    "correct": 0,
+    "short": "y = x² plots as a parabola → nonlinear.",
+    "solution": "### Step 1: Core Principle\n$y = x^2$ plots as a parabola — a curve, not a straight line. Since it cannot be written in the form $y = ax + b$, it is nonlinear.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: parabola → nonlinear.\n- **Option B (wrong)**: the graph is visibly curved.\n- **Option C (wrong)**: piecewise linear describes functions like |x|, made of straight SEGMENTS — x² is a smooth curve.\n- **Option D (wrong)**: x² varies with x; it is not constant.\n\n### Step 3: Exam Trap Summary\nThe trap is assuming \"simple function = linear\". Linearity is a SHAPE property: only straight lines qualify.\nr"
+  },
+  {
+    "id": "eee_nonlinear_03",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The absolute value function y = |x| is classified as:",
+    "options": [
+      "nonlinear (piecewise linear), because it cannot be written in the form y = ax + b",
+      "linear",
+      "a parabola",
+      "an exponential"
+    ],
+    "correct": 0,
+    "short": "|x| is made of two straight pieces but cannot be written as ax + b — so it is nonlinear.",
+    "solution": "### Step 1: Core Principle\nThe function $y = |x|$ consists of two straight segments (slope +1 for x > 0, slope −1 for x < 0) meeting at a corner. It is still classified as NONLINEAR because no single expression of the form $y = ax + b$ describes the whole function.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: piecewise linear, yet nonlinear.\n- **Option B (wrong)**: two different slopes mean no single ax + b form exists.\n- **Option C (wrong)**: a parabola curves smoothly; |x| has a corner.\n- **Option D (wrong)**: an exponential is a different shape entirely.\n\n### Step 3: Exam Trap Summary\nThis is the classic trap question: \"its pieces are straight, so it must be linear\". The classification depends on the WHOLE function being one straight line.\nr"
+  },
+  {
+    "id": "eee_nonlinear_04",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "Why are nonlinear circuits important in engineering?",
+    "options": [
+      "electrical devices like amplifiers and computers are built from nonlinear components",
+      "they are easier to analyse than linear circuits",
+      "they have no practical applications",
+      "all practical circuits are linear"
+    ],
+    "correct": 0,
+    "short": "Amplifiers, computers and most devices are built from nonlinear components.",
+    "solution": "### Step 1: Core Principle\nElectrical devices — amplifiers, computers, and most practical electronics — are built from nonlinear components. Understanding nonlinear circuits is therefore necessary to understand the design of these devices; this is where \"real engineering\" begins.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: nonlinear components underlie real devices.\n- **Option B (wrong)**: nonlinear circuits are HARDER to analyse — there are no hard-and-fast rules for most of them.\n- **Option C (wrong)**: the applications are everywhere (oscillators, rectifiers, logic gates).\n- **Option D (wrong)**: real circuits are overwhelmingly nonlinear.\n\n### Step 3: Exam Trap Summary\nThe trap is assuming \"easier = more important\". The notes stress the opposite: nonlinearity is harder precisely because it is where real design happens.\nr\n\n**Key recall:** linear means the form $y = ax + b$; real devices depart from this straight line."
+  },
+  {
+    "id": "eee_nonlinear_05",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The negative resistance converter is:",
+    "options": [
+      "a useful nonlinear op-amp circuit whose i-v slope is negative over a region, used to build oscillators",
+      "a resistor that obeys Ohm's law",
+      "a transformer winding arrangement",
+      "a rectifier circuit"
+    ],
+    "correct": 0,
+    "short": "Negative-resistance converter: negative i-v slope → delivers power → oscillator core.",
+    "solution": "### Step 1: Core Principle\nThe negative resistance converter is an op-amp nonlinear circuit whose i-v characteristic has a negative slope over some region: increasing voltage produces decreasing current. Over that region it DELIVERS power instead of absorbing it — the exact property an oscillator needs to sustain its own oscillations.\n\n### Step 2: Testing the Options\n- **Option A (correct)**: the converter and its oscillator application.\n- **Option B (wrong)**: an Ohmic resistor has a positive slope.\n- **Option C (wrong)**: it is built around an op-amp, not transformer windings.\n- **Option D (wrong)**: a rectifier converts AC to DC — unrelated to negative slope.\n\n### Step 3: Exam Trap Summary\nThe trap is reading \"negative resistance\" as \"small resistance\". It means a NEGATIVE SLOPE on the i-v curve — power-source behaviour, not a tiny resistor.\nr\n\n**Key recall:** the negative-slope region has $dV/dI < 0$ — power-source behaviour."
+  }
 ]
+
 }
