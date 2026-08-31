@@ -82,7 +82,7 @@ export default function Results() {
           return (
             <div className={`review-item ${item.status === 'ok' ? 'ok' : item.status === 'bad' ? 'bad' : 'skip'}`} key={item.id}>
               <div className="ri-head">
-                <div className="ri-q"><span className="muted">Q{i + 1}.</span> {item.question}</div>
+                <div className="ri-q"><span className="muted">Q{i + 1}.</span> <RichText text={item.question} className="rt-inline" /></div>
                 <span className={`ri-status ${item.status}`}>{statusLabel}</span>
               </div>
 
@@ -93,7 +93,7 @@ export default function Results() {
                   const cls = isCorrect ? 'is-correct' : isUserWrong ? 'is-wrong' : ''
                   return (
                     <div className={`ri-opt ${cls}`} key={oi}>
-                      <strong>{LETTERS[oi]}.</strong> {opt}
+                      <strong>{LETTERS[oi]}.</strong> <RichText text={opt} className="rt-inline" />
                       {isCorrect && <span style={{ marginLeft: 'auto' }}>✓ correct</span>}
                       {isUserWrong && <span style={{ marginLeft: 'auto' }}>your answer</span>}
                     </div>
@@ -105,8 +105,8 @@ export default function Results() {
               </div>
 
               <div className="ri-short">
-                <strong>{item.status === 'ok' ? "Why it's right: " : "Why it's wrong: "}</strong>
-                {item.short}
+                <strong>{item.status === 'ok' ? "Why it's right: " : "Why it's wrong: "}</strong>{' '}
+                <RichText text={item.short} className="rt-inline" />
               </div>
 
               {showFull && (

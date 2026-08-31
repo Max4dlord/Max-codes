@@ -17,7 +17,7 @@ export default function SolutionPanel({ item, topicName, onClose }) {
           {topicName || 'Mixed topics'}
         </div>
 
-        <div className="panel-q">{item.question}</div>
+        <RichText text={item.question} className="panel-q" />
 
         <div className="panel-ans">
           Correct answer: <strong>{LETTERS[item.correct]}. {item.options[item.correct]}</strong>

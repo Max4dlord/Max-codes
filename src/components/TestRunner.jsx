@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, Navigate, Link } from 'react-router-dom'
 import Timer from './Timer.jsx'
+import RichText from './RichText.jsx'
 import { loadSession, saveSession, clearSession, saveResults } from '../progress.js'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
@@ -162,7 +163,7 @@ export default function TestRunner() {
             <span className="qindex">Question {index + 1} / {total}</span>
             <span className="qtopic">{session.topicName || 'Mixed topics'}</span>
           </div>
-          <div className="qtext">{q.question}</div>
+          <RichText text={q.question} className="qtext" />
 
           {q.image && (
             <div style={{ margin: '16px 0', padding: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 12, textAlign: 'center' }}>
@@ -179,7 +180,7 @@ export default function TestRunner() {
                 onClick={() => selectOption(i)}
               >
                 <span className="opt-key">{LETTERS[i]}</span>
-                <span>{opt}</span>
+                <RichText text={opt} className="rt-opt" />
               </div>
             ))}
           </div>

@@ -7692,7 +7692,7 @@ export const questionBank = {
       "always larger than the peak value"
     ],
     "correct": 0,
-    "short": "r.m.s. = the DC equivalent that produces the same heating effect; for a sine wave V_rms = 0.707 Vₘ.",
+    "short": "r.m.s. = the DC equivalent that produces the same heating effect; for a sine wave $V_{rms}$ = 0.707 Vₘ.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe r.m.s. (root-mean-square) value of an alternating current is the value of direct current that would produce the same heating effect in the same resistance. For a sinusoid, $V_{rms} = \\frac{V_m}{\\sqrt{2}} = 0.707V_m$.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the heating-equivalence definition.\n- **Option B (wrong)**: the half-cycle average uses 0.637; the peak/π is not a standard value.\n- **Option C (wrong)**: the average over a FULL cycle of a sinusoid is ZERO.\n- **Option D (wrong)**: r.m.s. is always SMALLER than the peak (0.707 of it).\n\n**Step 3: Exam Trap Summary**\n\nTwo traps: average vs r.m.s. (0.637 vs 0.707) and peak vs r.m.s. ordering. Anchor: r.m.s. < peak always; full-cycle average = 0.\nr"
   },
   {
@@ -7767,7 +7767,7 @@ export const questionBank = {
       "156 V"
     ],
     "correct": 0,
-    "short": "V_rms = Vₘ/√2 = 0.707 × 311 = 220 V.",
+    "short": "$V_{rms}$ = Vₘ/√2 = 0.707 × 311 = 220 V.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: peak $V_m = 311\\ V$.\nGoverning law:\n$$V_{rms} = \\frac{V_m}{\\sqrt{2}} = 0.707 V_m$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{rms} = 0.707 \\times 311$$\n$$V_{rms} = 219.9\\ V$$\n$$V_{rms} \\approx 220\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\n311 V peak corresponds to the familiar 220 V (≈230 V) mains — the r.m.s. value is what voltmeters read and what \"mains voltage\" means in practice.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (311 V)**: the student reports the peak value without converting.\n- **Option C trap (440 V)**: the student uses $\\sqrt{2} \\times V_m$ instead of dividing.\n- **Option D trap (156 V)**: the student halves the peak (uses 0.5 instead of 0.707).\nr"
   },
   {
@@ -7782,7 +7782,7 @@ export const questionBank = {
       "460 V"
     ],
     "correct": 0,
-    "short": "Vₘ = √2 × V_rms = 1.414 × 230 = 325 V.",
+    "short": "Vₘ = √2 × $V_{rms}$ = 1.414 × 230 = 325 V.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{rms} = 230\\ V$.\nGoverning law (rearranged):\n$$V_m = \\sqrt{2}\\ V_{rms} = 1.414 \\times V_{rms}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_m = 1.414 \\times 230$$\n$$1.414 \\times 230 = 325.2$$\n$$V_m = 325\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe 230 V r.m.s. supply peaks at about 325 V twice per cycle — matching the earlier example (311 V peak for 220 V r.m.s.).\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (163 V)**: the student divides by √2 instead of multiplying.\n- **Option C trap (230 V)**: the student assumes r.m.s. equals peak.\n- **Option D trap (460 V)**: the student doubles the r.m.s. value.\nr"
   },
   {
@@ -7797,7 +7797,7 @@ export const questionBank = {
       "50 V"
     ],
     "correct": 0,
-    "short": "V_avg = 0.637 × Vₘ = 0.637 × 100 = 63.7 V.",
+    "short": "$V_{avg}$ = 0.637 × Vₘ = 0.637 × 100 = 63.7 V.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: peak $V_m = 100\\ V$.\nGoverning law — half-cycle average of a sinusoid:\n$$V_{avg} = 0.637 \\times V_m$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{avg} = 0.637 \\times 100$$\n$$V_{avg} = 63.7\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nOver half a cycle the sine wave averages 63.7% of its peak. (The average over a FULL cycle is zero, which is why the half-cycle average is the quoted figure.)\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (70.7 V)**: the student uses the r.m.s. factor 0.707 — the classic average/r.m.s. confusion.\n- **Option C trap (100 V)**: the student reports the peak unchanged.\n- **Option D trap (50 V)**: the student guesses half the peak.\nr"
   },
   {
@@ -7812,7 +7812,7 @@ export const questionBank = {
       "440 V"
     ],
     "correct": 0,
-    "short": "V_avg = 0.637 × 311 = 198 V (while V_rms = 0.707 × 311 = 220 V).",
+    "short": "$V_{avg}$ = 0.637 × 311 = 198 V (while $V_{rms}$ = 0.707 × 311 = 220 V).",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_m = 311\\ V$.\nGoverning law:\n$$V_{avg} = 0.637 \\times V_m$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{avg} = 0.637 \\times 311$$\n$$V_{avg} = 198.1\\ V$$\n$$V_{avg} \\approx 198\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe same 311 V mains peaks average to 198 V over a half cycle, while its r.m.s. is 220 V — the two factors (0.637 and 0.707) must never be swapped.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (220 V)**: the student computes the r.m.s. value instead — the most common slip.\n- **Option C trap (311 V)**: the student reports the peak.\n- **Option D trap (440 V)**: the student doubles the r.m.s. value.\nr"
   },
   {
@@ -7827,7 +7827,7 @@ export const questionBank = {
       "314 Ω"
     ],
     "correct": 0,
-    "short": "X_L = 2πfL = 2 × 3.14 × 50 × 0.1 = 31.4 Ω.",
+    "short": "$X_L$ = 2πfL = 2 × 3.14 × 50 × 0.1 = 31.4 Ω.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $L = 0.1\\ H$, $f = 50\\ Hz$, $\\pi = 3.14$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n**Step 2: Full Mathematical Workings**\n\n$$X_L = 2 \\times 3.14 \\times 50 \\times 0.1$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 0.1 = 31.4$$\n$$X_L = 31.4\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nA 0.1 H coil at 50 Hz opposes AC with 31.4 Ω of reactance. Note the intermediate step: without the inductance factor the product is 314 — keeping L in the multiplication is essential.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (3.14 Ω)**: the student drops the factor 2 and the frequency (π × L only).\n- **Option C trap (62.8 Ω)**: the student doubles L (0.2 H) — or the frequency.\n- **Option D trap (314 Ω)**: the student forgets to multiply by L = 0.1, stopping at $2\\pi f$.\nr"
   },
   {
@@ -7842,7 +7842,7 @@ export const questionBank = {
       "125.6 Ω"
     ],
     "correct": 0,
-    "short": "X_L = 2πfL = 2 × 3.14 × 50 × 0.2 = 62.8 Ω.",
+    "short": "$X_L$ = 2πfL = 2 × 3.14 × 50 × 0.2 = 62.8 Ω.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $L = 0.2\\ H$, $f = 50\\ Hz$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n**Step 2: Full Mathematical Workings**\n\n$$X_L = 2 \\times 3.14 \\times 50 \\times 0.2$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 0.2 = 62.8$$\n$$X_L = 62.8\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nDoubling the inductance from 0.1 H to 0.2 H doubles the reactance from 31.4 Ω to 62.8 Ω — reactance scales linearly with L (and with f).\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (31.4 Ω)**: the student reuses the 0.1 H answer — reactance must be recomputed for the new inductance.\n- **Option C trap (6.28 Ω)**: the student drops the frequency factor.\n- **Option D trap (125.6 Ω)**: the student doubles the frequency as well as the inductance.\nr"
   },
   {
@@ -7857,7 +7857,7 @@ export const questionBank = {
       "15.9 Ω"
     ],
     "correct": 0,
-    "short": "X_C = 1/(2πfC) = 1/(2 × 3.14 × 50 × 100 × 10⁻⁶) = 31.8 Ω.",
+    "short": "$X_C$ = 1/(2πfC) = 1/(2 × 3.14 × 50 × 100 × 10⁻⁶) = 31.8 Ω.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $C = 100\\ \\mu F = 100 \\times 10^{-6}\\ F$, $f = 50\\ Hz$.\nGoverning law:\n$$X_C = \\frac{1}{2\\pi f C}$$\n\n**Step 2: Full Mathematical Workings**\n\nCompute the denominator:\n$$2\\pi f C = 2 \\times 3.14 \\times 50 \\times 100 \\times 10^{-6}$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 100 \\times 10^{-6} = 0.0314$$\n$$X_C = \\frac{1}{0.0314}$$\n$$X_C = 31.85\\ \\Omega$$\n$$X_C \\approx 31.8\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAt 50 Hz a 100 µF capacitor offers about 32 Ω of opposition. Note that capacitive reactance DECREASES as C or f increases — the inverse of inductive behaviour.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (318 Ω)**: the student treats C as 10 µF — one order of magnitude off.\n- **Option C trap (3.18 Ω)**: the student treats C as 1 mF (1000 µF).\n- **Option D trap (15.9 Ω)**: the student doubles the denominator, e.g. by using f = 100 Hz.\nr"
   },
   {
@@ -7872,14 +7872,14 @@ export const questionBank = {
       "159 Ω"
     ],
     "correct": 0,
-    "short": "X_C = 1/(2πfC) = 1/(2 × 3.14 × 50 × 10 × 10⁻⁶) = 318 Ω.",
+    "short": "$X_C$ = 1/(2πfC) = 1/(2 × 3.14 × 50 × 10 × 10⁻⁶) = 318 Ω.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $C = 10\\ \\mu F = 10 \\times 10^{-6}\\ F$, $f = 50\\ Hz$.\nGoverning law:\n$$X_C = \\frac{1}{2\\pi f C}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$2\\pi f C = 2 \\times 3.14 \\times 50 \\times 10 \\times 10^{-6}$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 50 = 314$$\n$$314 \\times 10 \\times 10^{-6} = 0.00314$$\n$$X_C = \\frac{1}{0.00314}$$\n$$X_C = 318.5\\ \\Omega$$\n$$X_C \\approx 318\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nReducing the capacitance tenfold (100 µF → 10 µF) increases the reactance tenfold (31.8 Ω → 318 Ω) — the inverse relationship at work.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (31.8 Ω)**: the student reuses the 100 µF answer.\n- **Option C trap (3180 Ω)**: the student treats C as 1 µF.\n- **Option D trap (159 Ω)**: the student halves the answer (e.g. f = 100 Hz).\nr"
   },
   {
     "id": "eee_ac-phasors_23",
     "topicId": "eee-ac-phasors",
     "kind": "calc",
-    "question": "A series circuit has R = 3 Ω and inductive reactance X_L = 4 Ω. The magnitude of its impedance is:",
+    "question": "A series circuit has R = 3 Ω and inductive reactance $X_L$ = 4 Ω. The magnitude of its impedance is:",
     "options": [
       "5 Ω",
       "7 Ω",
@@ -7894,7 +7894,7 @@ export const questionBank = {
     "id": "eee_ac-phasors_24",
     "topicId": "eee-ac-phasors",
     "kind": "calc",
-    "question": "A series circuit has R = 30 Ω and capacitive reactance X_C = 40 Ω. Its impedance magnitude is:",
+    "question": "A series circuit has R = 30 Ω and capacitive reactance $X_C$ = 40 Ω. Its impedance magnitude is:",
     "options": [
       "50 Ω",
       "70 Ω",
@@ -7909,7 +7909,7 @@ export const questionBank = {
     "id": "eee_ac-phasors_25",
     "topicId": "eee-ac-phasors",
     "kind": "calc",
-    "question": "A series circuit has R = 8 Ω and X_C = 6 Ω. The magnitude of its impedance is:",
+    "question": "A series circuit has R = 8 Ω and $X_C$ = 6 Ω. The magnitude of its impedance is:",
     "options": [
       "10 Ω",
       "14 Ω",
@@ -7924,7 +7924,7 @@ export const questionBank = {
     "id": "eee_ac-phasors_26",
     "topicId": "eee-ac-phasors",
     "kind": "calc",
-    "question": "A circuit has R = 6 Ω in series with X_L = 8 Ω. The magnitude of the equivalent impedance is:",
+    "question": "A circuit has R = 6 Ω in series with $X_L$ = 8 Ω. The magnitude of the equivalent impedance is:",
     "options": [
       "10 Ω",
       "14 Ω",
@@ -7956,14 +7956,14 @@ export const questionBank = {
     "kind": "theory",
     "question": "Series resonance occurs in an R-L-C series circuit when:",
     "options": [
-      "X_L = X_C",
-      "R = X_L",
-      "R = X_C",
+      "$X_L$ = $X_C$",
+      "R = $X_L$",
+      "R = $X_C$",
       "the supply voltage is zero"
     ],
     "correct": 0,
-    "short": "At series resonance the inductive and capacitive reactances cancel: X_L = X_C.",
-    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nSeries resonance occurs when the inductive reactance equals the capacitive reactance: $X_L = X_C$. The two equal-and-opposite reactances cancel, leaving $Z = R$ — minimum impedance and maximum current.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the resonance condition.\n- **Option B (wrong)**: R = X_L is a specific operating point, not the resonance condition.\n- **Option C (wrong)**: R = X_C likewise has nothing to do with resonance.\n- **Option D (wrong)**: resonance depends on the circuit's L and C, not on removing the supply.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is inventing resistance-based \"resonance conditions\". Resonance is purely a reactance-balance phenomenon: $2\\pi f L = 1/(2\\pi f C)$.\nr"
+    "short": "At series resonance the inductive and capacitive reactances cancel: $X_L$ = $X_C$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nSeries resonance occurs when the inductive reactance equals the capacitive reactance: $X_L = X_C$. The two equal-and-opposite reactances cancel, leaving $Z = R$ — minimum impedance and maximum current.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the resonance condition.\n- **Option B (wrong)**: R = $X_L$ is a specific operating point, not the resonance condition.\n- **Option C (wrong)**: R = $X_C$ likewise has nothing to do with resonance.\n- **Option D (wrong)**: resonance depends on the circuit's L and C, not on removing the supply.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is inventing resistance-based \"resonance conditions\". Resonance is purely a reactance-balance phenomenon: $2\\pi f L = 1/(2\\pi f C)$.\nr"
   },
   {
     "id": "eee_resonance_02",
@@ -7972,13 +7972,13 @@ export const questionBank = {
     "question": "At series resonance, the impedance of the R-L-C circuit is:",
     "options": [
       "minimum and equal to R",
-      "maximum and equal to X_L",
-      "equal to X_C",
+      "maximum and equal to $X_L$",
+      "equal to $X_C$",
       "infinite"
     ],
     "correct": 0,
-    "short": "X_L = X_C cancels, so Z = R — a minimum (purely resistive).",
-    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe series impedance is $Z = R + j(X_L - X_C)$. At resonance $X_L = X_C$, so:\n$$Z = R + j(0) = R$$\nThe impedance is a MINIMUM (equal to just the resistance), so the current is a maximum for a given supply voltage.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: minimum impedance, equal to R.\n- **Option B (wrong)**: maximum impedance describes PARALLEL resonance.\n- **Option C (wrong)**: X_C is cancelled by X_L at resonance.\n- **Option D (wrong)**: infinite impedance is the parallel-resonance idealisation.\n\n**Step 3: Exam Trap Summary**\n\nThe series/parallel duality is the favourite trap: series = minimum Z (maximum I); parallel = maximum Z (minimum I).\nr"
+    "short": "$X_L$ = $X_C$ cancels, so Z = R — a minimum (purely resistive).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe series impedance is $Z = R + j(X_L - X_C)$. At resonance $X_L = X_C$, so:\n$$Z = R + j(0) = R$$\nThe impedance is a MINIMUM (equal to just the resistance), so the current is a maximum for a given supply voltage.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: minimum impedance, equal to R.\n- **Option B (wrong)**: maximum impedance describes PARALLEL resonance.\n- **Option C (wrong)**: $X_C$ is cancelled by $X_L$ at resonance.\n- **Option D (wrong)**: infinite impedance is the parallel-resonance idealisation.\n\n**Step 3: Exam Trap Summary**\n\nThe series/parallel duality is the favourite trap: series = minimum Z (maximum I); parallel = maximum Z (minimum I).\nr"
   },
   {
     "id": "eee_resonance_03",
@@ -7992,7 +7992,7 @@ export const questionBank = {
       "f₀ = √(LC)/(2π)"
     ],
     "correct": 0,
-    "short": "Setting X_L = X_C and solving for f gives f₀ = 1/(2π√(LC)).",
+    "short": "Setting $X_L$ = $X_C$ and solving for f gives f₀ = 1/(2π√(LC)).",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nAt resonance $X_L = X_C$, that is:\n$$2\\pi f L = \\frac{1}{2\\pi f C}$$\nMultiplying both sides by f and dividing by $2\\pi L$:\n$$f^2 = \\frac{1}{(2\\pi)^2 LC}$$\nTaking the positive square root:\n$$f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$$\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the derived expression.\n- **Option B (wrong)**: the reciprocal — physically it grows with L and C, which is backwards.\n- **Option C (wrong)**: the square root over LC is missing.\n- **Option D (wrong)**: the numerator and denominator are inverted.\n\n**Step 3: Exam Trap Summary**\n\nThe traps are missing the square root and inverting the formula. In the written exam, ALWAYS show the derivation line $2\\pi f L = 1/(2\\pi f C)$ before quoting the result — it guards against inversion errors and earns method marks.\nr"
   },
   {
@@ -8074,7 +8074,7 @@ export const questionBank = {
     "id": "eee_resonance_09",
     "topicId": "eee-resonance",
     "kind": "calc",
-    "question": "In a series resonant circuit with R = 10 Ω and X_L = X_C = 100 Ω at resonance, the Q factor is:",
+    "question": "In a series resonant circuit with R = 10 Ω and $X_L$ = $X_C$ = 100 Ω at resonance, the Q factor is:",
     "options": [
       "10",
       "100",
@@ -8082,7 +8082,7 @@ export const questionBank = {
       "0.1"
     ],
     "correct": 0,
-    "short": "Q = X_L/R = 100/10 = 10.",
+    "short": "Q = $X_L$/R = 100/10 = 10.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R = 10\\ \\Omega$, $X_L = X_C = 100\\ \\Omega$ at resonance.\nGoverning law — Q factor at resonance:\n$$Q = \\frac{X_L}{R} = \\frac{X_C}{R}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$Q = \\frac{100}{10}$$\n$$Q = 10$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe reactance is ten times the resistance, so the circuit stores ten times more energy per cycle than it dissipates — Q = 10, a moderately selective resonance.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (100)**: the student quotes the reactance itself as Q.\n- **Option C trap (1)**: the student divides R by X (inverted ratio).\n- **Option D trap (0.1)**: the student computes R/X twice-inverted, i.e. 10/100.\nr"
   },
   {
@@ -8104,7 +8104,7 @@ export const questionBank = {
     "id": "eee_resonance_11",
     "topicId": "eee-resonance",
     "kind": "calc",
-    "question": "At resonance, a circuit has f₀ = 159 Hz and L = 100 mH. The inductive reactance X_L at resonance is about:",
+    "question": "At resonance, a circuit has f₀ = 159 Hz and L = 100 mH. The inductive reactance $X_L$ at resonance is about:",
     "options": [
       "100 Ω",
       "1000 Ω",
@@ -8112,8 +8112,8 @@ export const questionBank = {
       "159 Ω"
     ],
     "correct": 0,
-    "short": "X_L = 2πf₀L = 2 × 3.14 × 159 × 0.1 = 99.9 Ω ≈ 100 Ω (and X_C has the same value).",
-    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $f_0 = 159\\ Hz$, $L = 0.1\\ H$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n**Step 2: Full Mathematical Workings**\n\n$$X_L = 2 \\times 3.14 \\times 159 \\times 0.1$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 159 = 998.5$$\n$$998.5 \\times 0.1 = 99.85$$\n$$X_L \\approx 100\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAt the resonant frequency the inductive and capacitive reactances are equal — so X_C ≈ 100 Ω as well. This is a handy cross-check of any f₀ calculation.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1000 Ω)**: the student forgets the 0.1 H factor.\n- **Option C trap (10 Ω)**: the student uses L = 10 mH.\n- **Option D trap (159 Ω)**: the student quotes the frequency itself instead of computing the reactance.\nr"
+    "short": "$X_L$ = 2πf₀L = 2 × 3.14 × 159 × 0.1 = 99.9 Ω ≈ 100 Ω (and $X_C$ has the same value).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $f_0 = 159\\ Hz$, $L = 0.1\\ H$.\nGoverning law:\n$$X_L = 2\\pi f L$$\n\n**Step 2: Full Mathematical Workings**\n\n$$X_L = 2 \\times 3.14 \\times 159 \\times 0.1$$\n$$2 \\times 3.14 = 6.28$$\n$$6.28 \\times 159 = 998.5$$\n$$998.5 \\times 0.1 = 99.85$$\n$$X_L \\approx 100\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAt the resonant frequency the inductive and capacitive reactances are equal — so $X_C$ ≈ 100 Ω as well. This is a handy cross-check of any f₀ calculation.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1000 Ω)**: the student forgets the 0.1 H factor.\n- **Option C trap (10 Ω)**: the student uses L = 10 mH.\n- **Option D trap (159 Ω)**: the student quotes the frequency itself instead of computing the reactance.\nr"
   },
   {
     "id": "eee_network-theorems_01",
@@ -8127,7 +8127,7 @@ export const questionBank = {
       "a capacitor and an inductor in series"
     ],
     "correct": 0,
-    "short": "Thévenin: one voltage source (V_th) in SERIES with Z_th.",
+    "short": "Thévenin: one voltage source ($V_{th}$) in SERIES with $Z_{th}$.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThévenin's theorem: any linear two-terminal network is equivalent to a single voltage source (the open-circuit voltage $V_{th}$ at the terminals) in SERIES with the equivalent impedance $Z_{th}$ (the impedance seen at the terminals with all independent sources killed). For AC networks $Z_{th}$ is complex ($R \\pm jX$).\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: voltage source + series impedance.\n- **Option B (wrong)**: that is NORTON's theorem — the dual form.\n- **Option C (wrong)**: a resistor alone cannot represent the source.\n- **Option D (wrong)**: specific components, not an equivalent network.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is Thévenin/Norton swapping. Anchor: Thévenin = Voltage in Series; Norton = Current in Parallel — the two forms are interchangeable through $V_{th} = I_N Z_{th}$.\nr"
   },
   {
@@ -8142,7 +8142,7 @@ export const questionBank = {
       "a resistor and an inductor in series"
     ],
     "correct": 0,
-    "short": "Norton: one current source (I_N) in PARALLEL with Z_N = Z_th.",
+    "short": "Norton: one current source ($I_N$) in PARALLEL with $Z_N$ = $Z_{th}$.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nNorton's theorem is the dual of Thévenin's: any linear two-terminal network is equivalent to a single current source (the short-circuit current $I_N$) in PARALLEL with $Z_N$, where $Z_N = Z_{th}$.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: current source + parallel impedance.\n- **Option B (wrong)**: that is Thévenin's form.\n- **Option C (wrong)**: a transformer is a real device, not an equivalent network.\n- **Option D (wrong)**: two components cannot represent the whole source behaviour.\n\n**Step 3: Exam Trap Summary**\n\nThévenin/Norton duality again — in the exam, map \"voltage→series\" and \"current→parallel\" before answering.\nr"
   },
   {
@@ -8239,7 +8239,7 @@ export const questionBank = {
     "id": "eee_network-theorems_09",
     "topicId": "eee-network-theorems",
     "kind": "calc",
-    "question": "A circuit has R = 8 Ω in series with X_L = 6 Ω. The magnitude of the equivalent impedance is:",
+    "question": "A circuit has R = 8 Ω in series with $X_L$ = 6 Ω. The magnitude of the equivalent impedance is:",
     "options": [
       "10 Ω",
       "14 Ω",
@@ -8254,7 +8254,7 @@ export const questionBank = {
     "id": "eee_network-theorems_10",
     "topicId": "eee-network-theorems",
     "kind": "calc",
-    "question": "The Thévenin equivalent of a network gives V_th = 20∠0° V and Z_th = (10 + j0) Ω. A load of (10 + j0) Ω is connected. The load current is:",
+    "question": "The Thévenin equivalent of a network gives $V_{th}$ = 20∠0° V and $Z_{th}$ = (10 + j0) Ω. A load of (10 + j0) Ω is connected. The load current is:",
     "options": [
       "1 A",
       "2 A",
@@ -8262,8 +8262,8 @@ export const questionBank = {
       "20 A"
     ],
     "correct": 0,
-    "short": "I = V_th/(Z_th + Z_load) = 20/(10 + 10) = 20/20 = 1 A.",
-    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{th} = 20\\angle 0^\\circ\\ V$, $Z_{th} = 10\\ \\Omega$, $Z_{load} = 10\\ \\Omega$.\nGoverning law — current in the Thévenin model:\n$$I = \\frac{V_{th}}{Z_{th} + Z_{load}}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$Z_{th} + Z_{load} = 10 + 10 = 20\\ \\Omega$$\n$$I = \\frac{20}{20}$$\n$$I = 1\\ A$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe two 10 Ω impedances split the 20 V equally — 1 A flows to the load. With zero phase angle the current is in phase with the voltage.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2 A)**: the student divides by Z_th only, forgetting the load impedance.\n- **Option C trap (0.5 A)**: the student divides by 40 Ω (doubling the total).\n- **Option D trap (20 A)**: the student multiplies V by Z (20 × 1).\nr"
+    "short": "I = $V_{th}$/($Z_{th}$ + $Z_{load}$) = 20/(10 + 10) = 20/20 = 1 A.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{th} = 20\\angle 0^\\circ\\ V$, $Z_{th} = 10\\ \\Omega$, $Z_{load} = 10\\ \\Omega$.\nGoverning law — current in the Thévenin model:\n$$I = \\frac{V_{th}}{Z_{th} + Z_{load}}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$Z_{th} + Z_{load} = 10 + 10 = 20\\ \\Omega$$\n$$I = \\frac{20}{20}$$\n$$I = 1\\ A$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe two 10 Ω impedances split the 20 V equally — 1 A flows to the load. With zero phase angle the current is in phase with the voltage.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2 A)**: the student divides by $Z_{th}$ only, forgetting the load impedance.\n- **Option C trap (0.5 A)**: the student divides by 40 Ω (doubling the total).\n- **Option D trap (20 A)**: the student multiplies V by Z (20 × 1).\nr"
   },
   {
     "id": "eee_network-theorems_11",
@@ -8982,7 +8982,7 @@ export const questionBank = {
       "100 Ω"
     ],
     "correct": 0,
-    "short": "Iₘ Rₘ = (I − Iₘ) R_sh → R_sh = (0.001 × 100)/0.999 ≈ 0.1 Ω.",
+    "short": "Iₘ Rₘ = (I − Iₘ) $R_{sh}$ → $R_{sh}$ = (0.001 × 100)/0.999 ≈ 0.1 Ω.",
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: movement current $I_m = 1\\ mA = 0.001\\ A$, movement resistance $R_m = 100\\ \\Omega$, desired full-scale current $I = 1\\ A$.\nGoverning law — the shunt carries the excess current while the voltage across it equals the voltage across the movement:\n$$I_m R_m = (I - I_m) R_{sh}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — current diverted through the shunt:\n$$I - I_m = 1 - 0.001$$\n$$I - I_m = 0.999\\ A$$\nStep B — rearrange for the shunt:\n$$R_{sh} = \\frac{I_m R_m}{I - I_m}$$\n$$R_{sh} = \\frac{0.001 \\times 100}{0.999}$$\n$$0.001 \\times 100 = 0.1$$\n$$R_{sh} = \\frac{0.1}{0.999}$$\n$$R_{sh} = 0.1001\\ \\Omega$$\n$$R_{sh} \\approx 0.1\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe shunt takes 999 mA while the movement takes its 1 mA; both see the same voltage (0.1 V). The tiny 0.1 Ω shunt keeps the ammeter's insertion resistance negligible, exactly as required.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1 Ω)**: the student uses I = 0.1 A instead of 1 A.\n- **Option C trap (10 Ω)**: the student divides by 0.01 — treating the movement current as 10 mA.\n- **Option D trap (100 Ω)**: the student quotes Rₘ itself — the shunt must be far SMALLER than the movement.\nr"
   },
   {

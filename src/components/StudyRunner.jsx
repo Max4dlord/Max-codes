@@ -283,7 +283,7 @@ export default function StudyRunner() {
             <span className="qindex">Study Question {index + 1} / {total}</span>
             <span className="qtopic">{q.topicId ? q.topicId.replace(/-/g, ' ') : 'Mixed topics'}</span>
           </div>
-          <div className="qtext">{q.question}</div>
+          <RichText text={q.question} className="qtext" />
 
           {q.image && (
             <div style={{ margin: '16px 0', padding: 12, background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 12, textAlign: 'center' }}>
@@ -309,7 +309,7 @@ export default function StudyRunner() {
                   style={isCorrect ? { borderColor: 'var(--green)', background: 'var(--green-soft)', cursor: 'default' } : { cursor: 'default', opacity: 0.9 }}
                 >
                   <span className="opt-key" style={isCorrect ? { background: 'var(--green)', color: '#fff', borderColor: 'var(--green)' } : {}}>{LETTERS[i]}</span>
-                  <span style={{ flex: 1 }}>{opt}</span>
+                  <RichText text={opt} className="rt-opt" />
                   {isCorrect && <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--green)', background: '#fff', padding: '3px 8px', borderRadius: 999, border: '1px solid var(--green)' }}>✓ Correct</span>}
                 </div>
               )
@@ -326,7 +326,7 @@ export default function StudyRunner() {
           </div>
 
           <div className="ri-short" style={{ marginTop: 18, background: 'var(--card-2)' }}>
-            <strong>Quick tip:</strong> {q.short}
+            <RichText text={'**Quick tip:** ' + q.short} className="rt-inline" />
           </div>
 
           {showSolution && (
