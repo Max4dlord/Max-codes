@@ -13,7 +13,18 @@ no backend needed, progress saved in the browser.
 |---|---|---|---|
 | AEE 202 — Agricultural Engineering | ✅ live | 308 | 3 main categories · 23 topics · 20 diagram questions |
 | MTH 202 — Mathematical Methods | ✅ live | 149 | 8 topics |
+| EEE 202 — Applied Electricity II | ✅ live | 146 | 8 topics · 67 worked calculations + 79 theory |
 | MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
+
+### EEE 202 — built for a WRITTEN, calculation-heavy exam
+
+EEE 202 is optimised differently from the other courses. Because the paper is
+written (not CBT), every 🧮 **Calculation** question carries a full
+**worked solution in exam writing style** — Given → Formula → Substitute →
+Answer with units — so you can reproduce it on paper. Every 📖 **Theory**
+question has a one/two-line answer you can memorise. Each topic's Study Mode
+deep dive is a **written-exam formula sheet** with the exact equations and an
+"exam writing style" tip.
 
 ### AEE 202 main categories
 

@@ -18,7 +18,15 @@ export const courses = [
     "accent": "#2563eb",
     "available": true
   },
-  {
+    {
+    "id": "eee202",
+    "code": "EEE 202",
+    "title": "Applied Electricity II",
+    "blurb": "Magnetism, AC waveforms & phasors, resonance, AC network theorems, magnetic circuits & transformers, motors & generators, instrumentation and nonlinear circuits. Built for a WRITTEN exam: 67 fully worked calculation questions (Given → Formula → Substitute → Answer, exactly as you must write them) plus high-yield theory questions with one-line answers you can memorise tonight.",
+    "accent": "#7c3aed",
+    "available": true
+  },
+{
     "id": "mee206",
     "code": "MEE 206",
     "title": "Mechanical Engineering Fundamentals",
@@ -181,7 +189,42 @@ export const topicMeta = {
       "name": "Joining, Welding & Workshop Safety",
       "categoryId": "past-questions"
     }
+  ],
+  "eee202": [
+    {
+      "id": "eee-magnetism",
+      "name": "Magnetism & Moving Charges"
+    },
+    {
+      "id": "eee-ac-phasors",
+      "name": "AC Waveforms & Phasors"
+    },
+    {
+      "id": "eee-resonance",
+      "name": "Resonance in AC Circuits"
+    },
+    {
+      "id": "eee-network-theorems",
+      "name": "Network Theorems for AC"
+    },
+    {
+      "id": "eee-magcircuits-transformer",
+      "name": "Magnetic Circuits & Transformers"
+    },
+    {
+      "id": "eee-motors-generators",
+      "name": "Electrical Motors & Generators"
+    },
+    {
+      "id": "eee-instruments",
+      "name": "Instruments & Instrumentation"
+    },
+    {
+      "id": "eee-nonlinear",
+      "name": "Nonlinear Circuits (Intro)"
+    }
   ]
+
 }
 
 // ===========================================================================
@@ -6992,5 +7035,2198 @@ export const questionBank = {
     "short": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.",
     "solution": "The scribing block, working from the surface plate, scribes lines on work and locates the centres of round bars held in a V-block.\n\n📘 From the Actual Past Questions material (lecture notes): this question is drawn from the past-question bank/lecture notes uploaded to the Drive. The answer follows the material's own key, with standard workshop-practice reasoning applied where the key is unclear."
   }
-]
+],
+  eee202: [
+  {
+    "id": "eee_magnetism_01",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Magnetism is best defined as:",
+    "options": [
+      "the force produced by moving charges that attracts or repels other magnets and moving charges",
+      "the force between two stationary charges",
+      "the ability of a material to conduct electricity",
+      "the resistance of a material to being magnetised"
+    ],
+    "correct": 0,
+    "short": "The notes define magnetism as the force produced by a moving charge which attracts or repels other magnets and moving charges; it is the phenomenon associated with magnetic fields, which are themselves produced by moving electric charges.",
+    "solution": "The notes define magnetism as the force produced by a moving charge which attracts or repels other magnets and moving charges; it is the phenomenon associated with magnetic fields, which are themselves produced by moving electric charges.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_02",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "For any two magnetic poles:",
+    "options": [
+      "like poles repel each other and opposite poles attract each other",
+      "like poles attract each other and opposite poles repel each other",
+      "all poles attract each other",
+      "poles neither attract nor repel"
+    ],
+    "correct": 0,
+    "short": "The notes state: like poles repel each other; opposite poles attract each other.",
+    "solution": "The notes state: like poles repel each other; opposite poles attract each other.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_03",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The phenomenon of magnetism was first observed in a naturally occurring material called:",
+    "options": [
+      "Hematite (Fe2O3)",
+      "Magnetite (Fe3O4)",
+      "Bauxite (Al2O3)",
+      "Calcite (CaCO3)"
+    ],
+    "correct": 1,
+    "short": "The notes state that the property of magnetism was first observed in a material called magnetite (Fe₃O₄) — hence the name 'magnets' — scattered around the Earth's crust.",
+    "solution": "The notes state that the property of magnetism was first observed in a material called magnetite (Fe₃O₄) — hence the name 'magnets' — scattered around the Earth's crust.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_04",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Materials in which the electrons are arranged so that their magnetic effects do NOT cancel out are called:",
+    "options": [
+      "diamagnetic materials",
+      "ferromagnetic materials",
+      "insulators",
+      "semiconductors"
+    ],
+    "correct": 1,
+    "short": "In ferromagnetic materials the electron magnets do not cancel; they act as permanent magnets and attract other metallic materials naturally.",
+    "solution": "In ferromagnetic materials the electron magnets do not cancel; they act as permanent magnets and attract other metallic materials naturally.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_05",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Electromotive force (e.m.f.) is that which:",
+    "options": [
+      "tends to produce an electric current in a circuit",
+      "opposes the flow of current",
+      "measures the resistance of a circuit",
+      "stores charge in a capacitor"
+    ],
+    "correct": 0,
+    "short": "Per the notes: an electromotive force is that which tends to produce an electric current in a circuit; symbol E, unit volt (V).",
+    "solution": "Per the notes: an electromotive force is that which tends to produce an electric current in a circuit; symbol E, unit volt (V).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_06",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which of the following is NOT listed as a principal source of e.m.f.?",
+    "options": [
+      "Electrodes of dissimilar materials immersed in an electrolyte (cells)",
+      "Relative movement of a conductor and a magnetic flux (generators)",
+      "Difference of temperature between junctions of dissimilar metals (thermo-junctions)",
+      "Friction between two insulators"
+    ],
+    "correct": 3,
+    "short": "The notes list three principal sources of e.",
+    "solution": "The notes list three principal sources of e.m.f.: (1) electrodes in an electrolyte (cells/batteries), (2) relative movement of a conductor and magnetic flux (generators), and (3) temperature difference at thermo-junctions. Friction between insulators is not among them.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_07",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The force on a moving charge in a magnetic field is given by:",
+    "options": [
+      "F = q × v × B × sin θ",
+      "F = q × v × B × cos θ",
+      "F = qE",
+      "F = m × B × sin θ"
+    ],
+    "correct": 0,
+    "short": "The notes give the magnetic force on a moving charge as F = q × v × B × sin θ, where q is the charge, v its velocity, B the magnetic field and θ the angle between the field and the velocity.",
+    "solution": "The notes give the magnetic force on a moving charge as F = q × v × B × sin θ, where q is the charge, v its velocity, B the magnetic field and θ the angle between the field and the velocity.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_08",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which rule is used to determine the direction of the force on a moving charge in a magnetic field?",
+    "options": [
+      "Left-hand motor rule only",
+      "Right-hand rule",
+      "Ohm's rule",
+      "Kirchhoff's rule"
+    ],
+    "correct": 1,
+    "short": "The notes use the right-hand rule: point the index finger along the charge's motion, rotate the middle finger (direction of B) away from it, and the thumb (perpendicular to the plane they make) gives the direction of F for a positive charge.",
+    "solution": "The notes use the right-hand rule: point the index finger along the charge's motion, rotate the middle finger (direction of B) away from it, and the thumb (perpendicular to the plane they make) gives the direction of F for a positive charge.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_09",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which of the following is NOT listed among the uses of magnets?",
+    "options": [
+      "Magnetic compass for direction",
+      "Speakers and electric motors/dynamos",
+      "Maglev trains and electromagnets",
+      "Storing electric charge in cells"
+    ],
+    "correct": 3,
+    "short": "The notes list compasses, speakers, electric motors and dynamos, maglev trains, construction industry and magnetic separation of objects.",
+    "solution": "The notes list compasses, speakers, electric motors and dynamos, maglev trains, construction industry and magnetic separation of objects. Magnets do not store charge in cells.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_10",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "The B-field and the H-field are distinguished as follows:",
+    "options": [
+      "B-field is defined by the force it exerts on a moving charged particle; H-field is the magnetic field within a material",
+      "B-field is measured in A/m and H-field in tesla",
+      "H-field is defined by force on a moving charge and B-field within a material",
+      "They are the same quantity with different names"
+    ],
+    "correct": 0,
+    "short": "Per the notes: the B-field is the magnetic field defined by the force it exerts on a moving charged particle (measured in tesla, T), while the H-field is the magnetic field within a material rather than a vacuum (measured in ampere/metre, A/m).",
+    "solution": "Per the notes: the B-field is the magnetic field defined by the force it exerts on a moving charged particle (measured in tesla, T), while the H-field is the magnetic field within a material rather than a vacuum (measured in ampere/metre, A/m).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_11",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "In the CGS system, 1 tesla equals:",
+    "options": [
+      "10,000 gauss",
+      "1,000 gauss",
+      "100 gauss",
+      "10 gauss"
+    ],
+    "correct": 0,
+    "short": "The notes give 1 T = 10,000 G; and 1 oersted ≈ 79.",
+    "solution": "The notes give 1 T = 10,000 G; and 1 oersted ≈ 79.577 A/m (1000/4π A/m).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_12",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Which statement about magnetic field lines is FALSE?",
+    "options": [
+      "They never cross each other",
+      "They form closed loops",
+      "When parallel they repel one another",
+      "They originate from the south pole and end at the north pole inside the magnet"
+    ],
+    "correct": 3,
+    "short": "Magnetic field lines never cross, form closed loops, repel when parallel, and OUTSIDE the magnet run north to south (inside the magnet they run south to north to close the loop).",
+    "solution": "Magnetic field lines never cross, form closed loops, repel when parallel, and OUTSIDE the magnet run north to south (inside the magnet they run south to north to close the loop). The false statement is that inside the magnet they originate at the south pole and end at the north pole — inside the magnet the lines run south→north, which closes the loop.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_13",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Around a straight current-carrying conductor, the magnetic field lines are:",
+    "options": [
+      "concentric circles centred on the conductor",
+      "straight lines parallel to the conductor",
+      "radial lines pointing outward",
+      "elliptical loops crossing each other"
+    ],
+    "correct": 0,
+    "short": "The notes state that for a straight current-carrying conductor the field lines are concentric circles; the direction follows the right-hand (thumb) rule and reverses when the current direction reverses.",
+    "solution": "The notes state that for a straight current-carrying conductor the field lines are concentric circles; the direction follows the right-hand (thumb) rule and reverses when the current direction reverses.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_14",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "An electromagnet is:",
+    "options": [
+      "a permanent magnet made of magnetite",
+      "a temporary magnet, typically a coil wrapped over a soft iron core (e.g. a solenoid)",
+      "a magnet that needs no current",
+      "a magnet made of copper wire only"
+    ],
+    "correct": 1,
+    "short": "Per the notes, an electromagnet is a temporary magnet formed by current passing through a coil wrapped over a soft iron core (for example, a solenoid).",
+    "solution": "Per the notes, an electromagnet is a temporary magnet formed by current passing through a coil wrapped over a soft iron core (for example, a solenoid).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_15",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Magnetic field intensity (H) is defined as:",
+    "options": [
+      "the magnetomotive force (MMF) needed to create a flux density B inside a material per unit length of that material",
+      "the force on a unit charge at rest",
+      "the flux passing through a unit area",
+      "the current flowing per unit area of the conductor"
+    ],
+    "correct": 0,
+    "short": "H denotes the strength of the magnetic field; it is the MMF needed to create a flux density B inside a material per unit length, with unit ampere/metre (A/m).",
+    "solution": "H denotes the strength of the magnetic field; it is the MMF needed to create a flux density B inside a material per unit length, with unit ampere/metre (A/m).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_16",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charged particle with q = 40 C travels at 5 m/s in a magnetic field of 2 T, with the field direction the SAME as the particle's path. The magnetic force on the particle is:",
+    "options": [
+      "0 N",
+      "400 N",
+      "200 N",
+      "80 N"
+    ],
+    "correct": 0,
+    "short": "Given: q = 40 C, v = 5 m/s, B = 2 T, and the field is along the particle's path, so θ = 0°.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: q = 40 C, v = 5 m/s, B = 2 T, and the field is along the particle's path, so θ = 0°.\nFormula: F = q × v × B × sin θ.\nSubstitute: F = 40 × 5 × 2 × sin 0° = 400 × 0 = 0 N.\nAnswer: 0 N (a charge moving PARALLEL to the field feels no magnetic force).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_17",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charged particle with q = 4 C travels at v = 20 m/s in a magnetic field B = 10 T at an angle of 30° between v and B. The magnetic force is:",
+    "options": [
+      "400 N",
+      "800 N",
+      "692.8 N",
+      "200 N"
+    ],
+    "correct": 0,
+    "short": "Given: q = 4 C, v = 20 m/s, B = 10 T, θ = 30°.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: q = 4 C, v = 20 m/s, B = 10 T, θ = 30°.\nFormula: F = q × v × B × sin θ.\nSubstitute: F = 4 × 20 × 10 × sin 30° = 800 × 0.5 = 400 N.\nAnswer: 400 N.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_18",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A conductor of length 0.5 m carrying current i lies in a magnetic field B = 3 T at θ = 30° and experiences a force of 12 N. The current is:",
+    "options": [
+      "16 A",
+      "8 A",
+      "4 A",
+      "24 A"
+    ],
+    "correct": 0,
+    "short": "Given: F = 12 N, l = 0.5 m, B = 3 T, θ = 30°.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: F = 12 N, l = 0.5 m, B = 3 T, θ = 30°.\nFormula: F = B I l sin θ.\nSubstitute: 12 = I × 3 × 0.5 × sin 30° = I × 0.75 → I = 12 / 0.75 = 16 A.\nAnswer: 16 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_19",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A straight conductor of length 2 m carries 3 A perpendicular to a magnetic field of 1.5 T. The force on the conductor is:",
+    "options": [
+      "9 N",
+      "4.5 N",
+      "6 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "Given: l = 2 m, I = 3 A, B = 1.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: l = 2 m, I = 3 A, B = 1.5 T, θ = 90°.\nFormula: F = B I l sin θ.\nSubstitute: F = 1.5 × 3 × 2 × sin 90° = 9 N.\nAnswer: 9 N.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_20",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 2 m long solenoid has 2000 loops and carries 1600 A. The magnetic field strength at its centre is: (μ₀ = 4π × 10⁻⁷ T·m/A)",
+    "options": [
+      "2.01 T",
+      "0.31 T",
+      "1.00 T",
+      "4.02 T"
+    ],
+    "correct": 0,
+    "short": "Given: L = 2 m, N = 2000, I = 1600 A.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: L = 2 m, N = 2000, I = 1600 A.\nFormula: B = μ₀ × n × I, with n = N/L = 2000/2 = 1000 turns/m.\nSubstitute: B = (4π × 10⁻⁷) × 1000 × 1600 = 2.0106 T ≈ 2.01 T.\nAnswer: 2.01 T.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_21",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 5 m long solenoid of 800 loops carries 1700 A. The magnetic field strength at its centre is about:",
+    "options": [
+      "0.34 T",
+      "0.31 T",
+      "0.59 T",
+      "0.68 T"
+    ],
+    "correct": 0,
+    "short": "Given: N = 800, L = 5 m, I = 1700 A.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 800, L = 5 m, I = 1700 A.\nFormula: B = μ₀ × n × I, n = 800/5 = 160 turns/m.\nSubstitute: B = (4π × 10⁻⁷) × 160 × 1700 = 12.566 × 10⁻⁷ × 272 000 = 0.3418 T ≈ 0.34 T.\n(Note: the notes print 0.314 T; the exact product is 0.342 T.)\nAnswer: about 0.34 T.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_22",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 12 m long solenoid of 700 loops carries 800 A. The magnetic field strength at its centre is about:",
+    "options": [
+      "0.0586 T",
+      "0.586 T",
+      "0.0293 T",
+      "0.117 T"
+    ],
+    "correct": 0,
+    "short": "Given: N = 700, L = 12 m, I = 800 A.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 700, L = 12 m, I = 800 A.\nFormula: B = μ₀ × n × I, n = 700/12 = 58.33 turns/m.\nSubstitute: B = (4π × 10⁻⁷) × 58.33 × 800 = 0.05864 T.\nAnswer: 0.05864 T ≈ 0.0586 T.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_23",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A coil of 50 turns is in a field whose flux density changes at 0.10 T/s. The induced e.m.f. is:",
+    "options": [
+      "5 V",
+      "0.5 V",
+      "50 V",
+      "0.002 V"
+    ],
+    "correct": 0,
+    "short": "Given: N = 50 turns, dΦ/dt = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 50 turns, dΦ/dt = 0.10 T·m²/s.\nFormula (Faraday's 2nd law): E = N × (dΦ/dt).\nSubstitute: E = 50 × 0.10 = 5 V.\nAnswer: 5 V (the minus sign in E = −N dΦ/dt only indicates direction — Lenz's law).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_24",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A single loop of wire is in a field whose flux increases at 0.02 T·m²/s. The loop's resistance is 5 Ω. The induced current is:",
+    "options": [
+      "4 mA",
+      "0.4 mA",
+      "40 mA",
+      "0.1 A"
+    ],
+    "correct": 0,
+    "short": "Given: N = 1, dΦ/dt = 0.02 T·m²/s, R = 5 Ω.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 1, dΦ/dt = 0.02 T·m²/s, R = 5 Ω.\nStep 1: E = N × (dΦ/dt) = 1 × 0.02 = 0.02 V.\nStep 2 (Ohm's law): I = E/R = 0.02 / 5 = 0.004 A.\nAnswer: 0.004 A = 4 mA.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_25",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A coil of 100 turns has its flux per turn decrease uniformly from 0.5 Wb to 0 Wb in 0.2 s. The induced e.m.f. is:",
+    "options": [
+      "250 V",
+      "25 V",
+      "100 V",
+      "2.5 V"
+    ],
+    "correct": 0,
+    "short": "Given: N = 100, ΔΦ = 0.5 − 0 = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 100, ΔΦ = 0.5 − 0 = 0.5 Wb, Δt = 0.2 s.\nFormula: E = N × (ΔΦ/Δt).\nSubstitute: E = 100 × (0.5/0.2) = 100 × 2.5 = 250 V.\nAnswer: 250 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_26",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A rectangular coil of 20 turns, each of area 0.1 m², sits in a field B = 0.5 T. It is rotated so the flux changes from BA to zero in 0.05 s. The average induced e.m.f. is:",
+    "options": [
+      "20 V",
+      "10 V",
+      "2 V",
+      "40 V"
+    ],
+    "correct": 0,
+    "short": "Given: N = 20, A = 0.1 m², B = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 20, A = 0.1 m², B = 0.5 T, Δt = 0.05 s.\nStep 1: initial flux Φ = B A = 0.5 × 0.1 = 0.05 Wb; final flux = 0.\nStep 2: E = N × (ΔΦ/Δt) = 20 × (0.05/0.05) = 20 V.\nAnswer: 20 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_27",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A coil of 80 turns has its flux decrease uniformly from 0.6 Wb to 0 Wb in 0.3 s. The induced e.m.f. is:",
+    "options": [
+      "160 V",
+      "16 V",
+      "60 V",
+      "26.7 V"
+    ],
+    "correct": 0,
+    "short": "Given: N = 80, ΔΦ = 0.6 Wb, Δt = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 80, ΔΦ = 0.6 Wb, Δt = 0.3 s.\nFormula: E = N × (ΔΦ/Δt).\nSubstitute: E = 80 × (0.6/0.3) = 80 × 2 = 160 V.\nAnswer: 160 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_28",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A single-turn circular loop of radius 0.1 m sits perpendicular to a field of 0.8 T which is reduced to zero in 0.2 s. The induced e.m.f. is about: (π = 3.14)",
+    "options": [
+      "0.126 V",
+      "1.26 V",
+      "0.063 V",
+      "0.25 V"
+    ],
+    "correct": 0,
+    "short": "Given: N = 1, r = 0.1 m, B = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 1, r = 0.1 m, B = 0.8 T, Δt = 0.2 s.\nStep 1: area A = πr² = 3.14 × 0.01 = 0.0314 m²; flux Φ = B A = 0.8 × 0.0314 = 0.02513 Wb.\nStep 2: E = N × (ΔΦ/Δt) = 1 × 0.02513/0.2 = 0.1257 V.\nAnswer: ≈ 0.126 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_29",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A coil of 50 turns is in a field changing at 0.15 T/s and its resistance is 10 Ω. The induced current is:",
+    "options": [
+      "0.75 A",
+      "7.5 A",
+      "0.075 A",
+      "1.5 A"
+    ],
+    "correct": 0,
+    "short": "Given: N = 50, dΦ/dt = 0.15 T/s, R = 10 Ω.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 50, dΦ/dt = 0.15 T/s, R = 10 Ω.\nStep 1: E = N × (dΦ/dt) = 50 × 0.15 = 7.5 V.\nStep 2: I = E/R = 7.5/10 = 0.75 A.\nAnswer: 0.75 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_30",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A coil of 200 turns is in a field changing at 0.05 T/s. The induced e.m.f. is:",
+    "options": [
+      "10 V",
+      "1 V",
+      "100 V",
+      "0.1 V"
+    ],
+    "correct": 0,
+    "short": "Formula: E = N × (dΦ/dt).\nSubstitute: E = 200 × 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: E = N × (dΦ/dt).\nSubstitute: E = 200 × 0.05 = 10 V.\nAnswer: 10 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_31",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A flux density of 1.2 T passes through an area of 0.05 m². The flux is:",
+    "options": [
+      "0.06 Wb",
+      "0.6 Wb",
+      "6 Wb",
+      "0.006 Wb"
+    ],
+    "correct": 0,
+    "short": "Formula: Φ = B A.\nSubstitute: Φ = 1.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Φ = B A.\nSubstitute: Φ = 1.2 × 0.05 = 0.06 Wb.\nAnswer: 0.06 Wb.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_32",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A 500-turn solenoid 1 m long carries 4 A. The field at its centre is about: (μ₀ = 4π × 10⁻⁷)",
+    "options": [
+      "2.51 mT",
+      "25.1 mT",
+      "0.25 mT",
+      "5.03 mT"
+    ],
+    "correct": 0,
+    "short": "Formula: B = μ₀ × n × I, n = N/L = 500 turns/m.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: B = μ₀ × n × I, n = N/L = 500 turns/m.\nSubstitute: B = (4π × 10⁻⁷) × 500 × 4 = 12.566 × 10⁻⁷ × 2000 = 2.51 × 10⁻³ T.\nAnswer: 2.51 mT.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_33",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charge of 5 C moves at 4 m/s at 90° to a field of 0.3 T. The magnetic force is:",
+    "options": [
+      "6 N",
+      "0.6 N",
+      "60 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "Formula: F = q × v × B × sin θ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: F = q × v × B × sin θ.\nSubstitute: F = 5 × 4 × 0.3 × sin 90° = 6 N.\nAnswer: 6 N.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_34",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A bar magnet moved towards a 40-turn coil increases the linked flux from 0 to 0.2 Wb in 0.05 s. With a coil resistance of 8 Ω, the induced e.m.f. and current are:",
+    "options": [
+      "160 V and 20 A",
+      "16 V and 2 A",
+      "8 V and 1 A",
+      "320 V and 40 A"
+    ],
+    "correct": 0,
+    "short": "Given: N = 40, ΔΦ = 0.2 Wb, Δt = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: N = 40, ΔΦ = 0.2 Wb, Δt = 0.05 s, R = 8 Ω.\nStep 1: E = N × (ΔΦ/Δt) = 40 × (0.2/0.05) = 40 × 4 = 160 V.\nStep 2: I = E/R = 160/8 = 20 A.\nAnswer: 160 V and 20 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_35",
+    "topicId": "eee-magnetism",
+    "kind": "calc",
+    "question": "A charge of 2 C moves at 10 m/s PERPENDICULAR to a magnetic field of 0.5 T. The magnetic force is:",
+    "options": [
+      "10 N",
+      "5 N",
+      "20 N",
+      "0 N"
+    ],
+    "correct": 0,
+    "short": "Given: q = 2 C, v = 10 m/s, B = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: q = 2 C, v = 10 m/s, B = 0.5 T, θ = 90°.\nFormula: F = q × v × B × sin θ.\nSubstitute: F = 2 × 10 × 0.5 × sin 90° = 10 N.\nAnswer: 10 N.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magnetism_36",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Eddy currents (Foucault currents) are:",
+    "options": [
+      "loops of current induced in a conductor by a changing magnetic field, opposing the change per Lenz's law",
+      "the main working current of a transformer",
+      "currents that only flow in superconductors",
+      "currents produced by batteries"
+    ],
+    "correct": 0,
+    "short": "Eddy currents are loops of electric current induced in a conductor placed in a changing magnetic field; they create a field opposing the change (Lenz's law).",
+    "solution": "Eddy currents are loops of electric current induced in a conductor placed in a changing magnetic field; they create a field opposing the change (Lenz's law). Applications listed include AC generators, transformers and magnetic flow meters.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_37",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Faraday's First Law of electromagnetic induction states that:",
+    "options": [
+      "an e.m.f. is induced in a conductor whenever it is placed in a changing magnetic field, and a current flows if the circuit is closed",
+      "the induced e.m.f. equals the rate of change of flux linkage",
+      "the induced current opposes its cause",
+      "a current-carrying conductor experiences a force in a magnetic field"
+    ],
+    "correct": 0,
+    "short": "First law: whenever a conductor is placed in a changing magnetic field, an e.",
+    "solution": "First law: whenever a conductor is placed in a changing magnetic field, an e.m.f. is induced; if the conductor forms a closed circuit, an induced current flows. (The second law quantifies it: E = N dΦ/dt; Lenz's law gives the direction.)\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_38",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Faraday's Second Law states that the magnitude of the induced e.m.f. is:",
+    "options": [
+      "equal to the rate of change of magnetic flux linked with the conductor",
+      "equal to the magnetic flux itself",
+      "inversely proportional to the number of turns",
+      "independent of the flux change"
+    ],
+    "correct": 0,
+    "short": "Second law: the induced e.m.",
+    "solution": "Second law: the induced e.m.f. equals the rate of change of flux linkage, E = N × (dΦ/dt). More turns or faster flux change → larger voltage.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magnetism_39",
+    "topicId": "eee-magnetism",
+    "kind": "theory",
+    "question": "Comparing a magnetic field and an electric field, which statement is correct?",
+    "options": [
+      "A magnetic field is produced by moving charges or changing electric fields; an electric field is produced by static charges or changing magnetic fields",
+      "Both fields do work on static charges",
+      "A magnetic field interacts with static charges",
+      "An electric field cannot do work on charges"
+    ],
+    "correct": 0,
+    "short": "Per the comparison table: magnetic fields are produced by moving charges/changing E-fields and do NOT interact with static charges or do work on them; electric fields are produced by static charges/changing magnetic fields and do work on charges.",
+    "solution": "Per the comparison table: magnetic fields are produced by moving charges/changing E-fields and do NOT interact with static charges or do work on them; electric fields are produced by static charges/changing magnetic fields and do work on charges.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_01",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "Direct current (D.C.) is described as:",
+    "options": [
+      "a uni-directional supply whose value does not change with time",
+      "a bi-directional supply varying in magnitude and direction",
+      "a supply that reverses every half cycle",
+      "a time-varying sinusoidal supply"
+    ],
+    "correct": 0,
+    "short": "D.C. flows in one direction only — a fixed magnitude and definite direction (e.",
+    "solution": "D.C. flows in one direction only — a fixed magnitude and definite direction (e.g. +12 V), produced by batteries, dynamos, solar cells; it stays constant unless the connections are physically reversed.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_02",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "An alternating (AC) waveform is defined as one that:",
+    "options": [
+      "varies in both magnitude and direction in an even manner with respect to time",
+      "flows in one direction only",
+      "never changes polarity",
+      "has a fixed magnitude at all times"
+    ],
+    "correct": 0,
+    "short": "AC varies in both magnitude and direction with time — a 'bi-directional' waveform; the most common form is the sinusoidal waveform (sine wave).",
+    "solution": "AC varies in both magnitude and direction with time — a 'bi-directional' waveform; the most common form is the sinusoidal waveform (sine wave).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_03",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The general expression of a sinusoidal AC quantity is:",
+    "options": [
+      "A(t) = Aₘ sin(2πft)",
+      "A(t) = Aₘ × e⁻ᵗ",
+      "A(t) = Aₘ/t",
+      "A(t) = Aₘ sin(t)/(2πf)"
+    ],
+    "correct": 0,
+    "short": "A sinusoid is defined as A(t) = Aₘ sin(2πft), where Aₘ is the amplitude and f the frequency.",
+    "solution": "A sinusoid is defined as A(t) = Aₘ sin(2πft), where Aₘ is the amplitude and f the frequency.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_04",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The Period (T) of an AC waveform is:",
+    "options": [
+      "the time in seconds the waveform takes to repeat itself from start to finish",
+      "the number of times the waveform repeats in one second",
+      "the peak amplitude of the waveform",
+      "half the frequency"
+    ],
+    "correct": 0,
+    "short": "Period T = the time for one complete cycle (also called the periodic time for sine waves, or pulse width for square waves).",
+    "solution": "Period T = the time for one complete cycle (also called the periodic time for sine waves, or pulse width for square waves). Frequency f = 1/T.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_05",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The frequency (f) of a waveform is:",
+    "options": [
+      "the number of times the waveform repeats itself within one second, and is the reciprocal of the period (f = 1/T)",
+      "the time taken for one full cycle",
+      "the amplitude divided by the period",
+      "the peak-to-peak voltage"
+    ],
+    "correct": 0,
+    "short": "Frequency is the number of cycles per second: f = 1/T, with unit hertz (Hz).",
+    "solution": "Frequency is the number of cycles per second: f = 1/T, with unit hertz (Hz).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_06",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The Amplitude (A) of an AC waveform is:",
+    "options": [
+      "the magnitude or intensity of the signal measured in volts or amps",
+      "the time for one cycle",
+      "the number of cycles per second",
+      "the zero line of the waveform"
+    ],
+    "correct": 0,
+    "short": "Amplitude is the magnitude/intensity of the waveform (its peak value), measured in volts or amps.",
+    "solution": "Amplitude is the magnitude/intensity of the waveform (its peak value), measured in volts or amps. Any part above the zero axis is flow in one direction, below it in the opposite direction.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_07",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "The phasor method of analysing AC networks was made famous by:",
+    "options": [
+      "Charles P. Steinmetz (General Electric, 1893)",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "James Maxwell"
+    ],
+    "correct": 0,
+    "short": "When General Electric acquired a small firm in 1893 it gained the services of Charles P.",
+    "solution": "When General Electric acquired a small firm in 1893 it gained the services of Charles P. Steinmetz, whose mathematical dissertation work on the symbolic (phasor) method made him famous and revolutionised AC analysis.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_08",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "A phasor is best described as:",
+    "options": [
+      "a rotating vector that represents the magnitude and phase of a sinusoidal quantity",
+      "a scalar representing only the amplitude",
+      "a constant equal to the r.m.s. value",
+      "a unit vector along the x-axis"
+    ],
+    "correct": 0,
+    "short": "A phasor is a rotating vector whose length gives the magnitude and whose angle gives the phase of the sinusoid — allowing AC quantities to be added/subtracted as vectors instead of by trigonometry.",
+    "solution": "A phasor is a rotating vector whose length gives the magnitude and whose angle gives the phase of the sinusoid — allowing AC quantities to be added/subtracted as vectors instead of by trigonometry.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_09",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "Which statement about AC versus DC power systems (from the reference material) is correct?",
+    "options": [
+      "By 1884 the DC system of Edison was established, but AC later became the world standard because its voltage can be stepped up/down with transformers",
+      "DC was adopted as the world standard because it could be transformed easily",
+      "AC cannot be transmitted over long distances",
+      "Batteries back up AC generators better than DC"
+    ],
+    "correct": 0,
+    "short": "Edison's DC system dominated by 1884, but after the 1891 Frankfurt exhibition the AC system — with its transformer-based voltage transformation for efficient long-distance transmission — became the world standard.",
+    "solution": "Edison's DC system dominated by 1884, but after the 1891 Frankfurt exhibition the AC system — with its transformer-based voltage transformation for efficient long-distance transmission — became the world standard.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_10",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "Which statement about alternating quantities is correct?",
+    "options": [
+      "They cannot be stored in batteries or cells like DC; they are generated by alternators or waveform generators when needed",
+      "They are stored in batteries",
+      "They are cheaper to store than to generate",
+      "They always have zero frequency"
+    ],
+    "correct": 0,
+    "short": "Alternating voltages/currents cannot be stored in batteries or cells; it is easier and cheaper to generate them with alternators or waveform generators when needed.",
+    "solution": "Alternating voltages/currents cannot be stored in batteries or cells; it is easier and cheaper to generate them with alternators or waveform generators when needed.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_11",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sinusoidal voltage has a period of 20 ms. Its frequency is:",
+    "options": [
+      "50 Hz",
+      "20 Hz",
+      "500 Hz",
+      "0.05 Hz"
+    ],
+    "correct": 0,
+    "short": "Given: T = 20 ms = 0.02 s.\nFormula: f = 1/T.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: T = 20 ms = 0.02 s.\nFormula: f = 1/T.\nSubstitute: f = 1/0.02 = 50 Hz.\nAnswer: 50 Hz (the domestic mains frequency).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_12",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sine wave has a frequency of 1 kHz. Its period is:",
+    "options": [
+      "1 ms",
+      "1 s",
+      "0.1 ms",
+      "10 ms"
+    ],
+    "correct": 0,
+    "short": "Given: f = 1000 Hz.\nFormula: T = 1/f.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nGiven: f = 1000 Hz.\nFormula: T = 1/f.\nSubstitute: T = 1/1000 = 0.001 s = 1 ms.\nAnswer: 1 ms.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_13",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A mains voltage has a peak value Vₘ = 311 V. Its r.m.s. value is about:",
+    "options": [
+      "220 V",
+      "311 V",
+      "440 V",
+      "156 V"
+    ],
+    "correct": 0,
+    "short": "Formula: Vᵣₘₛ = Vₘ/√2 = 0.707 × Vₘ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Vᵣₘₛ = Vₘ/√2 = 0.707 × Vₘ.\nSubstitute: Vᵣₘₛ = 311 × 0.707 = 219.9 V ≈ 220 V.\nAnswer: 220 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_14",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A supply is specified as 230 V r.m.s. Its peak value is about:",
+    "options": [
+      "325 V",
+      "163 V",
+      "230 V",
+      "460 V"
+    ],
+    "correct": 0,
+    "short": "Formula: Vₘ = Vᵣₘₛ × √2 = 1.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Vₘ = Vᵣₘₛ × √2 = 1.414 × Vᵣₘₛ.\nSubstitute: Vₘ = 230 × 1.414 = 325.2 V.\nAnswer: ≈ 325 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_15",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "An inductor L = 0.1 H is connected across a 50 Hz supply. Its inductive reactance is: (π = 3.14)",
+    "options": [
+      "31.4 Ω",
+      "3.14 Ω",
+      "62.8 Ω",
+      "314 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Xₗ = 2πfL.\nSubstitute: Xₗ = 2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Xₗ = 2πfL.\nSubstitute: Xₗ = 2 × 3.14 × 50 × 0.1 = 31.4 Ω.\nAnswer: 31.4 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_16",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A capacitor C = 100 µF is connected across a 50 Hz supply. Its capacitive reactance is about: (π = 3.14)",
+    "options": [
+      "31.8 Ω",
+      "318 Ω",
+      "3.18 Ω",
+      "15.9 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: XC = 1/(2πfC).\nSubstitute: XC = 1/(2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: XC = 1/(2πfC).\nSubstitute: XC = 1/(2 × 3.14 × 50 × 100 × 10⁻⁶) = 1/0.0314 = 31.85 Ω.\nAnswer: ≈ 31.8 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_17",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A coil of resistance R = 3 Ω and inductive reactance Xₗ = 4 Ω is connected in series across an AC supply. The magnitude of its impedance is:",
+    "options": [
+      "5 Ω",
+      "7 Ω",
+      "1 Ω",
+      "12 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Z = R + jXₗ, with magnitude |Z| = √(R² + Xₗ²).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Z = R + jXₗ, with magnitude |Z| = √(R² + Xₗ²).\nSubstitute: |Z| = √(3² + 4²) = √(9 + 16) = √25 = 5 Ω.\nAnswer: 5 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_18",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A series circuit has R = 30 Ω and XC = 40 Ω. Its impedance magnitude is:",
+    "options": [
+      "50 Ω",
+      "70 Ω",
+      "10 Ω",
+      "35 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Z = R − jXC, |Z| = √(R² + XC²).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Z = R − jXC, |Z| = √(R² + XC²).\nSubstitute: |Z| = √(30² + 40²) = √(900 + 1600) = √2500 = 50 Ω.\nAnswer: 50 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_19",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A sine wave has a peak value of 100 V. Its average (mean) value over a half cycle is about:",
+    "options": [
+      "63.7 V",
+      "70.7 V",
+      "100 V",
+      "50 V"
+    ],
+    "correct": 0,
+    "short": "Formula: Vₐᵥₑ = 0.637 × Vₘ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Vₐᵥₑ = 0.637 × Vₘ.\nSubstitute: Vₐᵥₑ = 0.637 × 100 = 63.7 V.\nAnswer: 63.7 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_20",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A 50 Hz supply has an angular frequency ω of: (π = 3.14)",
+    "options": [
+      "314 rad/s",
+      "157 rad/s",
+      "628 rad/s",
+      "31.4 rad/s"
+    ],
+    "correct": 0,
+    "short": "Formula: ω = 2πf.\nSubstitute: ω = 2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: ω = 2πf.\nSubstitute: ω = 2 × 3.14 × 50 = 314 rad/s.\nAnswer: 314 rad/s.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_21",
+    "topicId": "eee-ac-phasors",
+    "kind": "theory",
+    "question": "In an AC circuit, the r.m.s. (effective) value of a current is:",
+    "options": [
+      "the value of DC that would produce the same heating effect in the same resistance",
+      "the peak value divided by π",
+      "the average value over a full cycle",
+      "always larger than the peak value"
+    ],
+    "correct": 0,
+    "short": "The r.m.s. value is the equivalent DC value that produces the same heating effect; for a sine wave Vᵣₘₛ = Vₘ/√2 = 0.",
+    "solution": "The r.m.s. value is the equivalent DC value that produces the same heating effect; for a sine wave Vᵣₘₛ = Vₘ/√2 = 0.707 × Vₘ (the average over a FULL cycle is zero, over a half cycle 0.637 × Vₘ).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_ac-phasors_22",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "An inductor L = 0.2 H is connected across a 50 Hz supply. Its inductive reactance is: (π = 3.14)",
+    "options": [
+      "62.8 Ω",
+      "31.4 Ω",
+      "6.28 Ω",
+      "125.6 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Xₗ = 2πfL.\nSubstitute: Xₗ = 2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Xₗ = 2πfL.\nSubstitute: Xₗ = 2 × 3.14 × 50 × 0.2 = 62.8 Ω.\nAnswer: 62.8 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_23",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A capacitor C = 10 µF is connected across a 50 Hz supply. Its capacitive reactance is about:",
+    "options": [
+      "318 Ω",
+      "31.8 Ω",
+      "3180 Ω",
+      "159 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: XC = 1/(2πfC).\nSubstitute: XC = 1/(2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: XC = 1/(2πfC).\nSubstitute: XC = 1/(2 × 3.14 × 50 × 10 × 10⁻⁶) = 1/0.00314 = 318.5 Ω.\nAnswer: ≈ 318 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_24",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A series circuit has R = 8 Ω and XC = 6 Ω. The magnitude of its impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: |Z| = √(R² + XC²).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: |Z| = √(R² + XC²).\nSubstitute: |Z| = √(8² + 6²) = √(64 + 36) = √100 = 10 Ω.\nAnswer: 10 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_25",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A US-style supply has Vᵣₘₛ = 110 V. Its peak value is about:",
+    "options": [
+      "155.6 V",
+      "77.8 V",
+      "110 V",
+      "220 V"
+    ],
+    "correct": 0,
+    "short": "Formula: Vₘ = √2 × Vᵣₘₛ = 1.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Vₘ = √2 × Vᵣₘₛ = 1.414 × Vᵣₘₛ.\nSubstitute: Vₘ = 1.414 × 110 = 155.5 V.\nAnswer: ≈ 155.6 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_26",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A waveform has a period of 2 ms. Its frequency is:",
+    "options": [
+      "500 Hz",
+      "200 Hz",
+      "50 Hz",
+      "2 kHz"
+    ],
+    "correct": 0,
+    "short": "Formula: f = 1/T.\nSubstitute: f = 1/(2 × 10⁻³) = 500 Hz.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: f = 1/T.\nSubstitute: f = 1/(2 × 10⁻³) = 500 Hz.\nAnswer: 500 Hz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_ac-phasors_27",
+    "topicId": "eee-ac-phasors",
+    "kind": "calc",
+    "question": "A mains sine wave has Vₘ = 311 V. Its average value over a half cycle is about:",
+    "options": [
+      "198 V",
+      "220 V",
+      "311 V",
+      "440 V"
+    ],
+    "correct": 0,
+    "short": "Formula: Vₐᵥₑ = 0.637 × Vₘ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Vₐᵥₑ = 0.637 × Vₘ.\nSubstitute: Vₐᵥₑ = 0.637 × 311 = 198.1 V.\nAnswer: ≈ 198 V (while Vᵣₘₛ = 0.707 × 311 ≈ 220 V).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_01",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "Series resonance occurs in an R-L-C series circuit when:",
+    "options": [
+      "Xₗ = XC",
+      "R = Xₗ",
+      "R = XC",
+      "the supply voltage is zero"
+    ],
+    "correct": 0,
+    "short": "At series resonance the inductive and capacitive reactances cancel: Xₗ = XC, leaving Z = R (minimum impedance) and maximum current.",
+    "solution": "At series resonance the inductive and capacitive reactances cancel: Xₗ = XC, leaving Z = R (minimum impedance) and maximum current.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_02",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "At series resonance, the impedance of the R-L-C circuit is:",
+    "options": [
+      "minimum and equal to R",
+      "maximum and equal to Xₗ",
+      "equal to XC",
+      "infinite"
+    ],
+    "correct": 0,
+    "short": "Since Xₗ = XC, Z = R + j(Xₗ − XC) = R — the impedance is a minimum, so the current is a maximum for a given supply voltage.",
+    "solution": "Since Xₗ = XC, Z = R + j(Xₗ − XC) = R — the impedance is a minimum, so the current is a maximum for a given supply voltage.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_03",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "The resonant frequency of a series R-L-C circuit is given by:",
+    "options": [
+      "f₀ = 1/(2π√(LC))",
+      "f₀ = 2π√(LC)",
+      "f₀ = 1/(2πLC)",
+      "f₀ = √(LC)/(2π)"
+    ],
+    "correct": 0,
+    "short": "Setting Xₗ = XC (2πfL = 1/(2πfC)) and solving for f gives the resonant frequency f₀ = 1/(2π√(LC)).",
+    "solution": "Setting Xₗ = XC (2πfL = 1/(2πfC)) and solving for f gives the resonant frequency f₀ = 1/(2π√(LC)).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_04",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "The quality factor (Q) of a resonant circuit is a measure of:",
+    "options": [
+      "the selectivity/sharpness of the resonance",
+      "the power dissipated in the resistor",
+      "the number of components",
+      "the temperature of the coil"
+    ],
+    "correct": 0,
+    "short": "The Q factor measures how sharply the circuit resonates — high Q means a sharp, selective resonance with a narrow bandwidth.",
+    "solution": "The Q factor measures how sharply the circuit resonates — high Q means a sharp, selective resonance with a narrow bandwidth.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_05",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "In a PARALLEL resonant (anti-resonant) circuit, at resonance the impedance is:",
+    "options": [
+      "maximum",
+      "minimum",
+      "zero",
+      "equal to the resistance only"
+    ],
+    "correct": 0,
+    "short": "Parallel resonance is the dual of series resonance: at anti-resonance the impedance of the parallel L-C combination is a MAXIMUM (so line current is a minimum).",
+    "solution": "Parallel resonance is the dual of series resonance: at anti-resonance the impedance of the parallel L-C combination is a MAXIMUM (so line current is a minimum).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_06",
+    "topicId": "eee-resonance",
+    "kind": "theory",
+    "question": "At series resonance, the power factor of the circuit is:",
+    "options": [
+      "unity (1)",
+      "zero",
+      "0.5 leading",
+      "0.707 lagging"
+    ],
+    "correct": 0,
+    "short": "At resonance the circuit is purely resistive (Xₗ = XC), so voltage and current are in phase and the power factor is unity.",
+    "solution": "At resonance the circuit is purely resistive (Xₗ = XC), so voltage and current are in phase and the power factor is unity.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_resonance_07",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 100 mH and C = 10 µF. Its resonant frequency is about: (π = 3.14)",
+    "options": [
+      "159 Hz",
+      "15.9 Hz",
+      "1590 Hz",
+      "50 Hz"
+    ],
+    "correct": 0,
+    "short": "Formula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.1 × 10 × 10⁻⁶ = 1 × 10⁻⁶.\nStep 2: √(LC) = 1 × 10⁻³.\nStep 3: f₀ = 1/(2 × 3.14 × 10⁻³) = 1/0.00628 = 159.2 Hz.\nAnswer: ≈ 159 Hz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_08",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 20 mH and C = 20 µF. Its resonant frequency is about:",
+    "options": [
+      "252 Hz",
+      "25.2 Hz",
+      "2520 Hz",
+      "126 Hz"
+    ],
+    "correct": 0,
+    "short": "Formula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.02 × 20 × 10⁻⁶ = 4 × 10⁻⁷.\nStep 2: √(LC) = 6.325 × 10⁻⁴.\nStep 3: f₀ = 1/(2 × 3.14 × 6.325 × 10⁻⁴) = 1/3.973 × 10⁻³ = 251.7 Hz.\nAnswer: ≈ 252 Hz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_09",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "At resonance, a circuit has f₀ = 159 Hz and L = 100 mH. The inductive reactance Xₗ at resonance is about:",
+    "options": [
+      "100 Ω",
+      "1000 Ω",
+      "10 Ω",
+      "159 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Xₗ = 2πf₀L.\nSubstitute: Xₗ = 2 × 3.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Xₗ = 2πf₀L.\nSubstitute: Xₗ = 2 × 3.14 × 159 × 0.1 = 99.9 Ω ≈ 100 Ω (and XC has the same value at resonance).\nAnswer: ≈ 100 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_10",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "In a series resonant circuit with R = 10 Ω and Xₗ = XC = 100 Ω at resonance, the Q factor is:",
+    "options": [
+      "10",
+      "100",
+      "1",
+      "0.1"
+    ],
+    "correct": 0,
+    "short": "Formula: Q = Xₗ/R = XC/R (at resonance).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Q = Xₗ/R = XC/R (at resonance).\nSubstitute: Q = 100/10 = 10.\nAnswer: Q = 10.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_11",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 40 mH and C = 10 µF. Its resonant frequency is about: (π = 3.14)",
+    "options": [
+      "252 Hz",
+      "25.2 Hz",
+      "2520 Hz",
+      "159 Hz"
+    ],
+    "correct": 0,
+    "short": "Formula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.04 × 10 × 10⁻⁶ = 4 × 10⁻⁷.\nStep 2: √(LC) = 6.32 × 10⁻⁴.\nStep 3: f₀ = 1/(2 × 3.14 × 6.32 × 10⁻⁴) = 1/3.97 × 10⁻³ = 251.9 Hz.\nAnswer: ≈ 252 Hz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_12",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series resonant circuit has f₀ = 100 kHz and Q = 50. Its bandwidth is:",
+    "options": [
+      "2 kHz",
+      "5 kHz",
+      "20 kHz",
+      "0.5 kHz"
+    ],
+    "correct": 0,
+    "short": "Formula: bandwidth = f₀/Q.\nSubstitute: BW = 100 kHz / 50 = 2 kHz.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: bandwidth = f₀/Q.\nSubstitute: BW = 100 kHz / 50 = 2 kHz.\nAnswer: 2 kHz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_13",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A coil of reactance Xₗ = 100 Ω and a capacitor of reactance XC = 100 Ω are connected in PARALLEL at the resonant frequency. The impedance of the combination is:",
+    "options": [
+      "infinite (very large) — parallel anti-resonance",
+      "100 Ω",
+      "50 Ω",
+      "zero"
+    ],
+    "correct": 0,
+    "short": "At parallel resonance Xₗ = XC, so the L-C combination draws equal and opposite reactive currents that cancel: the combination behaves as an open circuit (infinite impedance, anti-resonance), unlike the series case which gives minimum impedance.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nAt parallel resonance Xₗ = XC, so the L-C combination draws equal and opposite reactive currents that cancel: the combination behaves as an open circuit (infinite impedance, anti-resonance), unlike the series case which gives minimum impedance.\nAnswer: infinite (very large).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_resonance_14",
+    "topicId": "eee-resonance",
+    "kind": "calc",
+    "question": "A series circuit has L = 10 mH and C = 100 µF. Its resonant frequency is about:",
+    "options": [
+      "159 Hz",
+      "15.9 Hz",
+      "1590 Hz",
+      "31.8 Hz"
+    ],
+    "correct": 0,
+    "short": "Formula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: f₀ = 1/(2π√(LC)).\nStep 1: LC = 0.01 × 100 × 10⁻⁶ = 1 × 10⁻⁶.\nStep 2: √(LC) = 1 × 10⁻³.\nStep 3: f₀ = 1/(2 × 3.14 × 10⁻³) = 159.2 Hz.\nAnswer: ≈ 159 Hz.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_network-theorems_01",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "Thévenin's theorem states that any linear two-terminal network can be replaced by:",
+    "options": [
+      "a single voltage source Vₜₕ in series with an impedance Zₜₕ",
+      "a single current source in parallel with an impedance",
+      "a single resistor only",
+      "a capacitor and an inductor in series"
+    ],
+    "correct": 0,
+    "short": "Thévenin: any linear two-terminal network is equivalent to one voltage source (the open-circuit voltage Vₜₕ) in series with the equivalent impedance Zₜₕ seen at the terminals (with sources killed).",
+    "solution": "Thévenin: any linear two-terminal network is equivalent to one voltage source (the open-circuit voltage Vₜₕ) in series with the equivalent impedance Zₜₕ seen at the terminals (with sources killed). For AC networks, Zₜₕ is complex (R ± jX).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_02",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "Norton's theorem states that any linear two-terminal network can be replaced by:",
+    "options": [
+      "a single current source Iₙ in parallel with the same impedance Zₙ",
+      "a voltage source in series with an impedance",
+      "an ideal transformer",
+      "a resistor and an inductor in series"
+    ],
+    "correct": 0,
+    "short": "Norton is the dual of Thévenin: a current source Iₙ (the short-circuit current) in parallel with Zₙ = Zₜₕ.",
+    "solution": "Norton is the dual of Thévenin: a current source Iₙ (the short-circuit current) in parallel with Zₙ = Zₜₕ.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_03",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "The superposition theorem states that in a linear network with several sources, the response in any branch is:",
+    "options": [
+      "the algebraic sum of the responses produced by each source acting alone (with the others replaced by their internal impedances)",
+      "the product of the responses of all sources",
+      "the response of the largest source only",
+      "the average of the responses of all sources"
+    ],
+    "correct": 0,
+    "short": "Superposition: consider ONE source at a time (voltage sources shorted, current sources opened) and add the individual responses algebraically.",
+    "solution": "Superposition: consider ONE source at a time (voltage sources shorted, current sources opened) and add the individual responses algebraically. It applies to linear AC networks too, using phasors.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_04",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "When applying Thévenin/Norton theorems to AC networks, the impedances must be treated as:",
+    "options": [
+      "complex quantities (R ± jX) so both magnitude and phase are preserved",
+      "real resistances only",
+      "imaginary numbers only",
+      "scalar magnitudes without phase"
+    ],
+    "correct": 0,
+    "short": "In AC networks the impedances are complex (e.",
+    "solution": "In AC networks the impedances are complex (e.g. 100 + j100 Ω); the theorems work exactly as in DC but with complex arithmetic, preserving magnitude AND phase.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_05",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "A circuit is classified as nonlinear when:",
+    "options": [
+      "its i-v graph is not a straight line",
+      "it contains only resistors",
+      "its i-v graph is a straight line through the origin",
+      "it contains no sources"
+    ],
+    "correct": 0,
+    "short": "We classify a circuit as linear or nonlinear by examining its i-v graph: a straight line → linear; any other shape → nonlinear (e.",
+    "solution": "We classify a circuit as linear or nonlinear by examining its i-v graph: a straight line → linear; any other shape → nonlinear (e.g. i = v²). Even a piecewise-linear function like |v| is nonlinear because it cannot be written as y = ax + b.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_06",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "A useful nonlinear circuit built with op-amps is the:",
+    "options": [
+      "negative resistance converter, whose application is the oscillator",
+      "positive resistance converter",
+      "linear amplifier only",
+      "full-wave rectifier only"
+    ],
+    "correct": 0,
+    "short": "The notes introduce the negative resistance converter as a very useful nonlinear circuit, and its key application is the oscillator (a circuit that sustains its own oscillations).",
+    "solution": "The notes introduce the negative resistance converter as a very useful nonlinear circuit, and its key application is the oscillator (a circuit that sustains its own oscillations).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_07",
+    "topicId": "eee-network-theorems",
+    "kind": "theory",
+    "question": "About nonlinear circuit analysis, the notes say:",
+    "options": [
+      "there are no hard and fast rules to analyse most nonlinear circuits — you have to use your brain (with systematic methods for op-amp nonlinear circuits)",
+      "every nonlinear circuit can be solved with Ohm's law alone",
+      "nonlinear circuits are always analysed like linear ones",
+      "nonlinear circuits have no applications"
+    ],
+    "correct": 0,
+    "short": "The notes: most nonlinear circuits have no fixed analysis rules ('real engineering'); but systematic methods exist for analysing op-amp nonlinear circuits such as the negative resistance converter.",
+    "solution": "The notes: most nonlinear circuits have no fixed analysis rules ('real engineering'); but systematic methods exist for analysing op-amp nonlinear circuits such as the negative resistance converter.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_network-theorems_08",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "Two impedances Z₁ = (100 + j100) Ω and Z₂ = (100 − j100) Ω are connected in series. The equivalent impedance is:",
+    "options": [
+      "200 Ω (purely resistive)",
+      "0 Ω",
+      "j200 Ω",
+      "100 Ω"
+    ],
+    "correct": 0,
+    "short": "Series impedances add: Z = Z₁ + Z₂.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nSeries impedances add: Z = Z₁ + Z₂.\nZ = (100 + j100) + (100 − j100) = 200 + j0 = 200 Ω.\nThe reactances cancel — the combination behaves as a pure 200 Ω resistor.\nAnswer: 200 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_network-theorems_09",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "A circuit has R = 6 Ω in series with Xₗ = 8 Ω. The magnitude of the equivalent impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Z = R + jXₗ, |Z| = √(R² + Xₗ²).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Z = R + jXₗ, |Z| = √(R² + Xₗ²).\nSubstitute: |Z| = √(6² + 8²) = √(36 + 64) = √100 = 10 Ω.\nAnswer: 10 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_network-theorems_10",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "Two equal impedances of (50 + j50) Ω each are connected in PARALLEL. The equivalent impedance is:",
+    "options": [
+      "(25 + j25) Ω",
+      "(100 + j100) Ω",
+      "(50 − j50) Ω",
+      "50 Ω"
+    ],
+    "correct": 0,
+    "short": "For two equal impedances in parallel, the equivalent is half of one: Z = (50 + j50)/2 = (25 + j25) Ω.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFor two equal impedances in parallel, the equivalent is half of one: Z = (50 + j50)/2 = (25 + j25) Ω.\n(In general Zₑ = Z₁ × Z₂ / (Z₁ + Z₂); with Z₁ = Z₂ this reduces to Z/2.)\nAnswer: (25 + j25) Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_network-theorems_11",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "A circuit has R = 8 Ω in series with Xₗ = 6 Ω. The magnitude of the equivalent impedance is:",
+    "options": [
+      "10 Ω",
+      "14 Ω",
+      "2 Ω",
+      "48 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: |Z| = √(R² + Xₗ²).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: |Z| = √(R² + Xₗ²).\nSubstitute: |Z| = √(8² + 6²) = √(64 + 36) = √100 = 10 Ω.\nAnswer: 10 Ω.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_network-theorems_12",
+    "topicId": "eee-network-theorems",
+    "kind": "calc",
+    "question": "Thévenin equivalent of a network gives Vₜₕ = 20∠0° V and Zₜₕ = (10 + j0) Ω. A load of (10 + j0) Ω is connected. The load current is:",
+    "options": [
+      "1 A",
+      "2 A",
+      "0.5 A",
+      "20 A"
+    ],
+    "correct": 0,
+    "short": "Formula: I = Vₜₕ / (Zₜₕ + Zₗ).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: I = Vₜₕ / (Zₜₕ + Zₗ).\nSubstitute: I = 20 / (10 + 10) = 20 / 20 = 1 A.\nAnswer: 1 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_01",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The magnetomotive force (m.m.f.) of a coil of N turns carrying current I is:",
+    "options": [
+      "F = NI, in amperes or ampere-turns",
+      "F = N/I",
+      "F = I/N",
+      "F = NI²"
+    ],
+    "correct": 0,
+    "short": "Magnetomotive force F = NI (ampere-turns) — the magnetic analogue of e.",
+    "solution": "Magnetomotive force F = NI (ampere-turns) — the magnetic analogue of e.m.f. It is what drives flux around a magnetic circuit.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_02",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The magnetic field strength (magnetising force) in a magnetic circuit is:",
+    "options": [
+      "H = F/L = NI/L, in amperes per metre",
+      "H = FL",
+      "H = F/L²",
+      "H = NI L"
+    ],
+    "correct": 0,
+    "short": "H is the m.m.f. gradient: H = F/L = NI/L (A/m) — the m.",
+    "solution": "H is the m.m.f. gradient: H = F/L = NI/L (A/m) — the m.m.f. per unit length of the magnetic path.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_03",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Flux density B and magnetic field strength H are related by:",
+    "options": [
+      "B = μH, where μ is the permeability of the material",
+      "B = H/μ",
+      "B = μH²",
+      "B = H + μ"
+    ],
+    "correct": 0,
+    "short": "B = μH (teslas) — the permeability μ of the material links the field strength to the resulting flux density.",
+    "solution": "B = μH (teslas) — the permeability μ of the material links the field strength to the resulting flux density.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_04",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The permeability of free space μ₀ equals:",
+    "options": [
+      "4π × 10⁻⁷ H/m",
+      "8.85 × 10⁻¹² F/m",
+      "4π × 10⁻⁹ H/m",
+      "1.26 H/m"
+    ],
+    "correct": 0,
+    "short": "μ₀ = 4π × 10⁻⁷ henrys per metre — the reference permeability of a vacuum (free space).",
+    "solution": "μ₀ = 4π × 10⁻⁷ henrys per metre — the reference permeability of a vacuum (free space).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_05",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Magnetic flux Φ, flux density B and area A are related by:",
+    "options": [
+      "Φ = B × A, with B = Φ/A",
+      "Φ = B/A",
+      "Φ = A/B",
+      "Φ = B + A"
+    ],
+    "correct": 0,
+    "short": "Flux Φ = B × A (webers); flux density B = Φ/A (teslas) — flux per unit area.",
+    "solution": "Flux Φ = B × A (webers); flux density B = Φ/A (teslas) — flux per unit area.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_06",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The reluctance S of a magnetic circuit is:",
+    "options": [
+      "S = l/(μA) — the magnetic analogue of resistance",
+      "S = μA/l",
+      "S = l μ A",
+      "S = A/(μl)"
+    ],
+    "correct": 0,
+    "short": "Reluctance S = l/(μA), where l is the length of the magnetic path and A its cross-section — the magnetic analogue of electrical resistance (it opposes flux).",
+    "solution": "Reluctance S = l/(μA), where l is the length of the magnetic path and A its cross-section — the magnetic analogue of electrical resistance (it opposes flux).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_07",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The relative permeability μᵣ of a material is:",
+    "options": [
+      "the ratio of its permeability to that of free space",
+      "the permeability of free space",
+      "the ratio of its resistance to its reluctance",
+      "the product μ₀ × A"
+    ],
+    "correct": 0,
+    "short": "μᵣ = μ/μ₀ — the ratio of the material's permeability to that of free space (dimensionless); absolute permeability μ = μ₀μᵣ.",
+    "solution": "μᵣ = μ/μ₀ — the ratio of the material's permeability to that of free space (dimensionless); absolute permeability μ = μ₀μᵣ.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_08",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Which pairing in the electrostatics ↔ electromagnetism analogy is CORRECT?",
+    "options": [
+      "Electric field strength E ↔ Magnetic field strength H",
+      "Electric flux density D ↔ Magnetomotive force F",
+      "Permittivity ε ↔ Reluctance S",
+      "Electric flux ↔ Magnetic flux density"
+    ],
+    "correct": 0,
+    "short": "From the analogy table: electric flux ↔ magnetic flux; D ↔ B (flux densities); E ↔ H (field strengths); e.",
+    "solution": "From the analogy table: electric flux ↔ magnetic flux; D ↔ B (flux densities); E ↔ H (field strengths); e.m.f. ↔ m.m.f.; potential difference ↔ magnetic potential difference; permittivity ↔ permeability; ε₀ ↔ μ₀.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_09",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "In an IDEAL transformer, the voltage and turns ratios are related by:",
+    "options": [
+      "V₁/V₂ = N₁/N₂ = I₂/I₁",
+      "V₁/V₂ = N₂/N₁",
+      "V₁/V₂ = I₁/I₂ = N₁/N₂",
+      "V₁ V₂ = N₁ N₂"
+    ],
+    "correct": 0,
+    "short": "For an ideal transformer: V₁/V₂ = N₁/N₂ = I₂/I₁ — voltage steps with the turns ratio while current steps inversely (power in ≈ power out).",
+    "solution": "For an ideal transformer: V₁/V₂ = N₁/N₂ = I₂/I₁ — voltage steps with the turns ratio while current steps inversely (power in ≈ power out).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_10",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "A transformer that increases voltage (more secondary turns) is called:",
+    "options": [
+      "a step-up transformer",
+      "a step-down transformer",
+      "an isolation transformer",
+      "an autotransformer only"
+    ],
+    "correct": 0,
+    "short": "Step-up: N₂ > N₁ so V₂ > V₁; step-down: N₂ < N₁ so V₂ < V₁.",
+    "solution": "Step-up: N₂ > N₁ so V₂ > V₁; step-down: N₂ < N₁ so V₂ < V₁.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_11",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Why does a transformer operate only on AC (not steady DC)?",
+    "options": [
+      "Transformer action relies on a changing flux to induce the secondary e.m.f. per Faraday's law",
+      "DC would melt the iron core",
+      "DC cannot flow in copper",
+      "the primary resistance blocks DC"
+    ],
+    "correct": 0,
+    "short": "Induction requires a changing flux (E = N dΦ/dt); a steady DC produces a constant flux, so no e.",
+    "solution": "Induction requires a changing flux (E = N dΦ/dt); a steady DC produces a constant flux, so no e.m.f. is induced in the secondary. Hence transformers are AC devices.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_12",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "The main losses in a practical transformer are:",
+    "options": [
+      "copper (I²R) losses and iron losses (eddy current + hysteresis)",
+      "friction and windage only",
+      "capacitive losses only",
+      "radiation losses only"
+    ],
+    "correct": 0,
+    "short": "Practical transformers have copper losses (I²R in the windings) and iron/core losses (eddy currents and hysteresis in the laminated core).",
+    "solution": "Practical transformers have copper losses (I²R in the windings) and iron/core losses (eddy currents and hysteresis in the laminated core).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_13",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "theory",
+    "question": "Magnetic flux lines:",
+    "options": [
+      "form closed loops, never cross, and when parallel repel one another",
+      "cross each other at right angles",
+      "start and end in free space",
+      "are straight lines only"
+    ],
+    "correct": 0,
+    "short": "From the Hughes summary: flux lines form closed loops, do not cross, and parallel lines repel one another.",
+    "solution": "From the Hughes summary: flux lines form closed loops, do not cross, and parallel lines repel one another. Magnetic fields have N and S poles; like poles repel, unlike attract.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_magcircuits-transformer_14",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A coil of 500 turns carries 2 A. Its magnetomotive force is:",
+    "options": [
+      "1000 ampere-turns",
+      "250 ampere-turns",
+      "500 ampere-turns",
+      "1000 volts"
+    ],
+    "correct": 0,
+    "short": "Formula: F = NI.\nSubstitute: F = 500 × 2 = 1000 ampere-turns (At).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: F = NI.\nSubstitute: F = 500 × 2 = 1000 ampere-turns (At).\nAnswer: 1000 At.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_15",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A 1000-turn coil wound on a magnetic path 0.5 m long carries 2 A. The magnetic field strength H is:",
+    "options": [
+      "4000 A/m",
+      "2000 A/m",
+      "1000 A/m",
+      "500 A/m"
+    ],
+    "correct": 0,
+    "short": "Formula: H = NI/L.\nSubstitute: H = (1000 × 2)/0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: H = NI/L.\nSubstitute: H = (1000 × 2)/0.5 = 4000 A/m.\nAnswer: 4000 A/m.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_16",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A flux density of 0.5 T passes through an area of 0.02 m². The flux is:",
+    "options": [
+      "0.01 Wb",
+      "0.1 Wb",
+      "10 Wb",
+      "0.001 Wb"
+    ],
+    "correct": 0,
+    "short": "Formula: Φ = B A.\nSubstitute: Φ = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Φ = B A.\nSubstitute: Φ = 0.5 × 0.02 = 0.01 Wb.\nAnswer: 0.01 Wb.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_17",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A magnetic circuit has l = 0.5 m, A = 0.001 m² and relative permeability μᵣ = 1000. Its reluctance is about: (μ₀ = 4π × 10⁻⁷)",
+    "options": [
+      "3.98 × 10⁵ A/Wb",
+      "3.98 × 10⁶ A/Wb",
+      "1.26 × 10⁵ A/Wb",
+      "7.96 × 10⁵ A/Wb"
+    ],
+    "correct": 0,
+    "short": "Formula: S = l/(μA) with μ = μ₀μᵣ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: S = l/(μA) with μ = μ₀μᵣ.\nStep 1: μ = 4π × 10⁻⁷ × 1000 = 4π × 10⁻⁴.\nStep 2: S = 0.5/(4π × 10⁻⁴ × 0.001) = 0.5/(1.2566 × 10⁻⁶) = 3.98 × 10⁵ A/Wb.\nAnswer: ≈ 3.98 × 10⁵ A/Wb.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_18",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer has N₁ = 500 primary turns and N₂ = 100 secondary turns. With a primary voltage of 220 V, the secondary voltage is:",
+    "options": [
+      "44 V",
+      "110 V",
+      "1100 V",
+      "22 V"
+    ],
+    "correct": 0,
+    "short": "Formula: V₂/V₁ = N₂/N₁.\nSubstitute: V₂ = 220 × (100/500) = 220 × 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: V₂/V₁ = N₂/N₁.\nSubstitute: V₂ = 220 × (100/500) = 220 × 0.2 = 44 V.\nAnswer: 44 V (a step-down transformer).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_19",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A step-up transformer has N₁ = 200 turns and N₂ = 1000 turns. With V₁ = 50 V, the secondary voltage is:",
+    "options": [
+      "250 V",
+      "10 V",
+      "100 V",
+      "500 V"
+    ],
+    "correct": 0,
+    "short": "Formula: V₂ = V₁ × (N₂/N₁).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: V₂ = V₁ × (N₂/N₁).\nSubstitute: V₂ = 50 × (1000/200) = 50 × 5 = 250 V.\nAnswer: 250 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_20",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "An ideal transformer supplies a load at V₂ = 24 V, I₂ = 2 A from a primary at V₁ = 240 V. The primary current is:",
+    "options": [
+      "0.2 A",
+      "2 A",
+      "20 A",
+      "0.02 A"
+    ],
+    "correct": 0,
+    "short": "Formula (ideal): V₁ × I₁ = V₂ × I₂ → I₁ = V₂I₂/V₁.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula (ideal): V₁ × I₁ = V₂ × I₂ → I₁ = V₂I₂/V₁.\nSubstitute: I₁ = (24 × 2)/240 = 48/240 = 0.2 A.\nAnswer: 0.2 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_21",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A conductor of length 0.3 m moves at 10 m/s at right angles to a field of 0.5 T. The e.m.f. induced in it is:",
+    "options": [
+      "1.5 V",
+      "15 V",
+      "0.15 V",
+      "3 V"
+    ],
+    "correct": 0,
+    "short": "Formula: E = B × l × v (motional e.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: E = B × l × v (motional e.m.f., motion perpendicular to both B and l).\nSubstitute: E = 0.5 × 0.3 × 10 = 1.5 V.\nAnswer: 1.5 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_22",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer has N₁ = 400 primary turns and N₂ = 50 secondary turns. With V₁ = 240 V, the secondary voltage is:",
+    "options": [
+      "30 V",
+      "48 V",
+      "120 V",
+      "1920 V"
+    ],
+    "correct": 0,
+    "short": "Formula: V₂ = V₁ × (N₂/N₁).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: V₂ = V₁ × (N₂/N₁).\nSubstitute: V₂ = 240 × (50/400) = 240 × 0.125 = 30 V.\nAnswer: 30 V (step-down).\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_23",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A transformer with turns ratio N₁/N₂ = 10 supplies a secondary current of 3 A. The primary current is about:",
+    "options": [
+      "0.3 A",
+      "3 A",
+      "30 A",
+      "0.03 A"
+    ],
+    "correct": 0,
+    "short": "Formula (ideal): I₁/I₂ = N₂/N₁ → I₁ = I₂ × (N₂/N₁).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula (ideal): I₁/I₂ = N₂/N₁ → I₁ = I₂ × (N₂/N₁).\nSubstitute: I₁ = 3 × (1/10) = 0.3 A.\nAnswer: 0.3 A.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_24",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A 600-turn primary must step 240 V down to 12 V. The number of secondary turns required is:",
+    "options": [
+      "30 turns",
+      "120 turns",
+      "12000 turns",
+      "50 turns"
+    ],
+    "correct": 0,
+    "short": "Formula: N₂ = N₁ × (V₂/V₁).",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: N₂ = N₁ × (V₂/V₁).\nSubstitute: N₂ = 600 × (12/240) = 600 × 0.05 = 30 turns.\nAnswer: 30 turns.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_magcircuits-transformer_25",
+    "topicId": "eee-magcircuits-transformer",
+    "kind": "calc",
+    "question": "A magnetic circuit has an m.m.f. of 500 At and a reluctance of 2 × 10⁶ A/Wb. The flux produced is:",
+    "options": [
+      "0.25 mWb",
+      "2.5 mWb",
+      "1 mWb",
+      "0.025 mWb"
+    ],
+    "correct": 0,
+    "short": "Formula (magnetic Ohm's law): Φ = F/S.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula (magnetic Ohm's law): Φ = F/S.\nSubstitute: Φ = 500/(2 × 10⁶) = 2.5 × 10⁻⁴ Wb = 0.25 mWb.\nAnswer: 0.25 mWb.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_motors-generators_01",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "The key demonstration of electromechanics in 1831 was by:",
+    "options": [
+      "Michael Faraday — a conductor moved in a magnetic field generates current, and current in a field develops motion",
+      "Thomas Edison",
+      "Hans Christian Oersted",
+      "Charles Steinmetz"
+    ],
+    "correct": 0,
+    "short": "In 1831 Faraday demonstrated both directions of electromechanical conversion: motion in a magnetic field generates current (generator), and current in a magnetic field produces motion (motor).",
+    "solution": "In 1831 Faraday demonstrated both directions of electromechanical conversion: motion in a magnetic field generates current (generator), and current in a magnetic field produces motion (motor).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_02",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "An electric motor converts:",
+    "options": [
+      "electrical energy into mechanical energy",
+      "mechanical energy into electrical energy",
+      "heat into electricity",
+      "chemical energy into light"
+    ],
+    "correct": 0,
+    "short": "A motor converts electrical energy to mechanical (rotation); a generator does the reverse — mechanical energy to electrical energy, coupled through the magnetic field.",
+    "solution": "A motor converts electrical energy to mechanical (rotation); a generator does the reverse — mechanical energy to electrical energy, coupled through the magnetic field.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_03",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "A generator converts:",
+    "options": [
+      "mechanical energy into electrical energy",
+      "electrical energy into mechanical energy",
+      "AC into DC",
+      "voltage into current"
+    ],
+    "correct": 0,
+    "short": "A generator converts mechanical input into electrical output by electromagnetic induction (relative motion of a conductor and a magnetic flux).",
+    "solution": "A generator converts mechanical input into electrical output by electromagnetic induction (relative motion of a conductor and a magnetic flux).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_04",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "A battery and a generator differ in that:",
+    "options": [
+      "a battery is a source of stored chemical energy while a generator produces e.m.f. from motion in a magnetic field",
+      "both produce e.m.f. by induction",
+      "a generator stores energy chemically",
+      "a battery produces AC only"
+    ],
+    "correct": 0,
+    "short": "A battery converts stored chemical energy to e.",
+    "solution": "A battery converts stored chemical energy to e.m.f.; a generator produces e.m.f. by electromagnetic induction (relative motion of conductor and flux).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_05",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "The rotating part of a DC machine carrying the armature windings is called the:",
+    "options": [
+      "armature",
+      "field winding",
+      "commutator brush",
+      "stator core"
+    ],
+    "correct": 0,
+    "short": "The armature is the rotating part whose windings carry the generated e.",
+    "solution": "The armature is the rotating part whose windings carry the generated e.m.f. (generator) or the driving current (motor); the e.m.f. appears across the armature conductors as they cut flux.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_06",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "In a DC machine, the function of the commutator is to:",
+    "options": [
+      "convert the alternating e.m.f. induced in the armature into a unidirectional (DC) output",
+      "generate the magnetic field",
+      "cool the machine",
+      "increase the speed of rotation"
+    ],
+    "correct": 0,
+    "short": "The commutator rectifies the AC induced in the rotating armature conductors so that the external circuit receives direct current (and it keeps the torque unidirectional in motors).",
+    "solution": "The commutator rectifies the AC induced in the rotating armature conductors so that the external circuit receives direct current (and it keeps the torque unidirectional in motors).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_07",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "Fleming's LEFT-hand rule is used for:",
+    "options": [
+      "motors — finding the direction of force on a current-carrying conductor in a field",
+      "generators — finding the direction of induced e.m.f.",
+      "finding the polarity of a battery",
+      "calculating transformer ratios"
+    ],
+    "correct": 0,
+    "short": "Left-hand rule (FBI: thumb = Force/Motion, first finger = Field, second finger = Current) is the MOTOR rule; the right-hand rule is the GENERATOR (induced e.",
+    "solution": "Left-hand rule (FBI: thumb = Force/Motion, first finger = Field, second finger = Current) is the MOTOR rule; the right-hand rule is the GENERATOR (induced e.m.f.) rule.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_08",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "An AC generator is also called:",
+    "options": [
+      "an alternator",
+      "a dynamo",
+      "a transformer",
+      "a rectifier"
+    ],
+    "correct": 0,
+    "short": "An AC generator (alternator) produces an alternating e.",
+    "solution": "An AC generator (alternator) produces an alternating e.m.f. as the armature rotates in the field — the same principle that makes the AC waveform a product of the rotating generator.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_09",
+    "topicId": "eee-motors-generators",
+    "kind": "theory",
+    "question": "Which statement about motors vs generators is correct?",
+    "options": [
+      "The same machine principle works both ways: motion + field → e.m.f. (generator); current + field → force (motor)",
+      "Motors and generators use unrelated physical laws",
+      "Only generators need a magnetic field",
+      "Only motors rotate"
+    ],
+    "correct": 0,
+    "short": "Electromechanical energy conversion is bidirectional — the coupling through the magnetic field is the same; the direction of energy flow decides motor vs generator operation.",
+    "solution": "Electromechanical energy conversion is bidirectional — the coupling through the magnetic field is the same; the direction of energy flow decides motor vs generator operation.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_motors-generators_10",
+    "topicId": "eee-motors-generators",
+    "kind": "calc",
+    "question": "A conductor of length 0.5 m moves at 20 m/s perpendicular to a field of 1 T. The induced e.m.f. is:",
+    "options": [
+      "10 V",
+      "0.1 V",
+      "40 V",
+      "2.5 V"
+    ],
+    "correct": 0,
+    "short": "Formula: E = B × l × v.\nSubstitute: E = 1 × 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: E = B × l × v.\nSubstitute: E = 1 × 0.5 × 20 = 10 V.\nAnswer: 10 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_motors-generators_11",
+    "topicId": "eee-motors-generators",
+    "kind": "calc",
+    "question": "A conductor of length 0.25 m moves at 8 m/s at right angles to a field of 0.4 T. The induced e.m.f. is:",
+    "options": [
+      "0.8 V",
+      "8 V",
+      "0.08 V",
+      "1.25 V"
+    ],
+    "correct": 0,
+    "short": "Formula: E = B × l × v.\nSubstitute: E = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: E = B × l × v.\nSubstitute: E = 0.4 × 0.25 × 8 = 0.8 V.\nAnswer: 0.8 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_motors-generators_12",
+    "topicId": "eee-motors-generators",
+    "kind": "calc",
+    "question": "A conductor of length 0.4 m moves at 5 m/s perpendicular to a field of 0.2 T. The induced e.m.f. is:",
+    "options": [
+      "0.4 V",
+      "4 V",
+      "0.04 V",
+      "2 V"
+    ],
+    "correct": 0,
+    "short": "Formula: E = B × l × v.\nSubstitute: E = 0.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: E = B × l × v.\nSubstitute: E = 0.2 × 0.4 × 5 = 0.4 V.\nAnswer: 0.4 V.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_instruments_01",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Instrumentation is best defined as:",
+    "options": [
+      "the use of devices (instruments) to detect, observe, measure, control, compute, communicate and display physical quantities",
+      "the repair of electrical machines",
+      "the generation of electrical power",
+      "the design of transformers"
+    ],
+    "correct": 0,
+    "short": "Per the reference material, instrumentation refers to using instruments to detect, observe, measure, control, compute, communicate and display physical quantities; all branches of experimental engineering depend on it.",
+    "solution": "Per the reference material, instrumentation refers to using instruments to detect, observe, measure, control, compute, communicate and display physical quantities; all branches of experimental engineering depend on it.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_02",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Instruments are said to 'extend human senses' because they:",
+    "options": [
+      "measure accurately and rapidly over a great range of distances and physical quantities",
+      "replace human judgement entirely",
+      "only amplify sounds",
+      "are never used in engineering"
+    ],
+    "correct": 0,
+    "short": "The notes: instruments let humans measure accurately and quickly over a great range of quantities and distances, far beyond direct senses.",
+    "solution": "The notes: instruments let humans measure accurately and quickly over a great range of quantities and distances, far beyond direct senses.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_03",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Indicating instruments are used to measure:",
+    "options": [
+      "the amount of current or voltage across a circuit — e.g. ammeters and voltmeters",
+      "only temperature",
+      "only frequency",
+      "only resistance"
+    ],
+    "correct": 0,
+    "short": "Indicating instruments (ammeters, voltmeters, etc.",
+    "solution": "Indicating instruments (ammeters, voltmeters, etc.) measure quantities like current and voltage across a circuit, displaying them on a scale/pointer or digital readout.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_04",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "An ammeter must be connected:",
+    "options": [
+      "in series with the circuit and have a very LOW resistance",
+      "in parallel with the circuit with a very high resistance",
+      "in series with a very high resistance",
+      "in parallel with a very low resistance"
+    ],
+    "correct": 0,
+    "short": "The ammeter measures current, so it is placed in series; its resistance must be very low so it does not disturb the circuit (ideally an ammeter reads with zero resistance).",
+    "solution": "The ammeter measures current, so it is placed in series; its resistance must be very low so it does not disturb the circuit (ideally an ammeter reads with zero resistance).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_05",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "A voltmeter must be connected:",
+    "options": [
+      "in parallel with the circuit and have a very HIGH resistance",
+      "in series with the circuit with a low resistance",
+      "in parallel with a low resistance",
+      "in series with a high resistance"
+    ],
+    "correct": 0,
+    "short": "The voltmeter measures p.d.",
+    "solution": "The voltmeter measures p.d., so it is placed in parallel across the component; it must have a very high resistance so it draws negligible current.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_06",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "The permanent-magnet moving-coil (PMMC) instrument:",
+    "options": [
+      "works on DC only (polarity must be observed) and has a uniform scale",
+      "works on AC and DC equally",
+      "measures only AC power",
+      "needs no magnet"
+    ],
+    "correct": 0,
+    "short": "The PMMC (moving-coil) instrument uses a permanent magnet and a moving coil — it deflects proportionally to DC current (deflection reverses with polarity) and gives a uniform scale.",
+    "solution": "The PMMC (moving-coil) instrument uses a permanent magnet and a moving coil — it deflects proportionally to DC current (deflection reverses with polarity) and gives a uniform scale.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_07",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "The moving-iron instrument:",
+    "options": [
+      "works on both AC and DC and is robust, but has a non-uniform (cramped) scale",
+      "works on DC only",
+      "has a perfectly uniform scale",
+      "is used only for frequency measurement"
+    ],
+    "correct": 0,
+    "short": "Moving-iron instruments deflect by repulsion/attraction of iron pieces — they respond to both AC and DC (r.",
+    "solution": "Moving-iron instruments deflect by repulsion/attraction of iron pieces — they respond to both AC and DC (r.m.s.) and are cheap and robust, though their scale is non-uniform.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_08",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Instruments may be broadly classified as:",
+    "options": [
+      "analog (pointer and scale) and digital (numeric display)",
+      "analog only",
+      "digital only",
+      "mechanical only"
+    ],
+    "correct": 0,
+    "short": "Indicating instruments are classified as analog (continuous pointer deflection on a scale) or digital (numeric display); digital instruments give readings with no parallax error.",
+    "solution": "Indicating instruments are classified as analog (continuous pointer deflection on a scale) or digital (numeric display); digital instruments give readings with no parallax error.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_09",
+    "topicId": "eee-instruments",
+    "kind": "theory",
+    "question": "Which of the following is a source of error/limitation in indicating instruments?",
+    "options": [
+      "friction in the movement and parallax in reading the pointer",
+      "the colour of the casing",
+      "the length of the leads",
+      "the room temperature of the observer"
+    ],
+    "correct": 0,
+    "short": "Typical instrument errors include friction in the movement (which requires a controlling/damping torque) and parallax when reading the pointer against the scale — mitigated by knife-edge pointers and mirror scales.",
+    "solution": "Typical instrument errors include friction in the movement (which requires a controlling/damping torque) and parallax when reading the pointer against the scale — mitigated by knife-edge pointers and mirror scales.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_instruments_10",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A moving-coil meter movement has full-scale deflection at 100 µA and internal resistance Rₘ = 1 kΩ. To use it as a 10 V voltmeter, the series multiplier required is:",
+    "options": [
+      "99 kΩ",
+      "100 kΩ",
+      "10 kΩ",
+      "1 kΩ"
+    ],
+    "correct": 0,
+    "short": "Formula: total resistance Rₜ = V / I, where I is the full-scale deflection current; multiplier = Rₜ − Rₘ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: total resistance Rₜ = V / I, where I is the full-scale deflection current; multiplier = Rₜ − Rₘ.\nStep 1: Rₜ = 10 / (1 × 10⁻⁴) = 100 kΩ.\nStep 2: multiplier = 100 kΩ − 1 kΩ = 99 kΩ.\nAnswer: 99 kΩ in series.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_instruments_11",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A 1 mA movement with Rₘ = 100 Ω is to measure 1 A full scale. The shunt resistance required is about:",
+    "options": [
+      "0.1 Ω",
+      "1 Ω",
+      "10 Ω",
+      "100 Ω"
+    ],
+    "correct": 0,
+    "short": "Formula: Iₘ × Rₘ = (I − Iₘ) × Rₛₕ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: Iₘ × Rₘ = (I − Iₘ) × Rₛₕ.\nStep 1: current through shunt = 1 − 0.001 = 0.999 A.\nStep 2: Rₛₕ = (0.001 × 100) / 0.999 = 0.1 / 0.999 ≈ 0.1 Ω.\nAnswer: ≈ 0.1 Ω in parallel.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_instruments_12",
+    "topicId": "eee-instruments",
+    "kind": "calc",
+    "question": "A moving-coil movement deflects fully at 50 µA and has Rₘ = 2 kΩ. To use it as a 5 V voltmeter, the series multiplier needed is:",
+    "options": [
+      "98 kΩ",
+      "100 kΩ",
+      "50 kΩ",
+      "10 kΩ"
+    ],
+    "correct": 0,
+    "short": "Formula: total resistance Rₜ = V / I, where I is the full-scale deflection current; multiplier = Rₜ − Rₘ.",
+    "solution": "WORKED SOLUTION (write this out in the exam):\nFormula: total resistance Rₜ = V / I, where I is the full-scale deflection current; multiplier = Rₜ − Rₘ.\nStep 1: Rₜ = 5 / (5 × 10⁻⁵) = 100 kΩ.\nStep 2: multiplier = 100 kΩ − 2 kΩ = 98 kΩ.\nAnswer: 98 kΩ.\n\n📘 From the EEE 202 lecture notes — this mirrors the solved exercises in the magnetism/revision notes; in the written exam, show the formula first, then the substitution, then the answer with its unit."
+  },
+  {
+    "id": "eee_nonlinear_01",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "In the i-v world of circuits, a circuit is classified as linear if:",
+    "options": [
+      "its i-v graph is a straight line",
+      "it contains a diode",
+      "its i-v graph is curved",
+      "it contains an op-amp"
+    ],
+    "correct": 0,
+    "short": "Classification is by the i-v graph: straight line → linear (v = Ri); curved → nonlinear (e.",
+    "solution": "Classification is by the i-v graph: straight line → linear (v = Ri); curved → nonlinear (e.g. a diode's exponential i-v).\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_nonlinear_02",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The function y = x² is:",
+    "options": [
+      "nonlinear — its graph is a parabola, not a straight line",
+      "linear — its graph is a straight line",
+      "piecewise linear",
+      "a constant"
+    ],
+    "correct": 0,
+    "short": "y = x² plots as a parabola → nonlinear.",
+    "solution": "y = x² plots as a parabola → nonlinear. y = 2x plots as a straight line → linear.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_nonlinear_03",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The absolute value function y = |x| is classified as:",
+    "options": [
+      "nonlinear (piecewise linear), because it cannot be written as y = ax + b",
+      "linear",
+      "a parabola",
+      "an exponential"
+    ],
+    "correct": 0,
+    "short": "Although |x| is made of two straight pieces, it is still classified as nonlinear because it cannot be written in the single form y = ax + b.",
+    "solution": "Although |x| is made of two straight pieces, it is still classified as nonlinear because it cannot be written in the single form y = ax + b.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_nonlinear_04",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "Why are nonlinear circuits important in engineering?",
+    "options": [
+      "electrical devices like amplifiers and computers are built from nonlinear components",
+      "they are easier to analyse than linear circuits",
+      "they have no applications",
+      "all circuits are linear in practice"
+    ],
+    "correct": 0,
+    "short": "Amplifiers, computers and most practical devices are built from nonlinear components, so understanding nonlinear circuits is essential to designing these devices.",
+    "solution": "Amplifiers, computers and most practical devices are built from nonlinear components, so understanding nonlinear circuits is essential to designing these devices.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  },
+  {
+    "id": "eee_nonlinear_05",
+    "topicId": "eee-nonlinear",
+    "kind": "theory",
+    "question": "The negative resistance converter is:",
+    "options": [
+      "a useful nonlinear op-amp circuit whose i-v slope is negative over a region, used to build oscillators",
+      "a resistor that obeys Ohm's law",
+      "a transformer winding",
+      "a rectifier"
+    ],
+    "correct": 0,
+    "short": "The negative resistance converter presents a negative slope in its i-v characteristic over some region — it delivers power instead of absorbing it, which is exactly what an oscillator needs to sustain oscillations.",
+    "solution": "The negative resistance converter presents a negative slope in its i-v characteristic over some region — it delivers power instead of absorbing it, which is exactly what an oscillator needs to sustain oscillations.\n\n📘 From the EEE 202 notes — examiners set short theory questions like this to test definitions, laws and comparisons. Learn the key phrase so you can state it in one or two sentences."
+  }
+  ]
+
 }

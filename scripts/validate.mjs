@@ -44,6 +44,7 @@ for (const course of courses) {
       errors.push(`${tag}: 'correct' index out of range (${q.correct})`)
     if (!q.short || String(q.short).trim().length < 3) errors.push(`${tag}: missing 'short'`)
     if (!q.solution || String(q.solution).trim().length < 5) errors.push(`${tag}: missing 'solution'`)
+    if (q.kind && !['calc', 'theory'].includes(q.kind)) errors.push(`${tag}: unknown kind '${q.kind}'`)
     if (!q.topicId || !topicIds.has(q.topicId)) errors.push(`${tag}: unknown topicId '${q.topicId}'`)
     if (q.image) {
       const path = './public' + q.image

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { courses } from '../data.js'
+import { courses, questionBank } from '../data.js'
 import { getTopics, getCategories, getQuestionCount, buildQuestionSet } from '../utils.js'
 import { loadSession, clearSession, saveSession } from '../progress.js'
 import { saveStudySession } from '../progress.js'
@@ -319,6 +319,19 @@ export default function Dashboard() {
             across <strong style={{ color: 'var(--text)' }}>{topics.length}</strong> topics{hasCats ? (
               <> in <strong style={{ color: 'var(--text)' }}>{categories.length}</strong> main categories</>
             ) : ''}.
+            {(() => {
+              const bankQs = questionBank[courseId] || []
+              const calcN = bankQs.filter((q) => q.kind === 'calc').length
+              const theoN = bankQs.filter((q) => q.kind === 'theory').length
+              if (!calcN && !theoN) return null
+              return (
+                <span style={{ display: 'block', marginTop: 8 }}>
+                  {calcN > 0 && <>🧮 <strong>{calcN}</strong> calculation questions (with full worked solutions)</>}
+                  {calcN > 0 && theoN > 0 && <> · </>}
+                  {theoN > 0 && <>📖 <strong>{theoN}</strong> theory questions</>}
+                </span>
+              )
+            })()}
           </p>
 
           {hasCats ? (

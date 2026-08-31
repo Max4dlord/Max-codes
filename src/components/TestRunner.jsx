@@ -161,6 +161,12 @@ export default function TestRunner() {
           <div className="qhead">
             <span className="qindex">Question {index + 1} / {total}</span>
             <span className="qtopic">{session.topicName || 'Mixed topics'}</span>
+            {q && q.kind === 'calc' && (
+              <span style={{ fontSize: 11, fontWeight: 700, background: '#fff7ed', color: '#c2410c', border: '1px solid rgba(234,88,12,0.25)', padding: '3px 8px', borderRadius: 999, marginLeft: 6 }}>🧮 Calculation</span>
+            )}
+            {q && q.kind === 'theory' && (
+              <span style={{ fontSize: 11, fontWeight: 700, background: 'var(--primary-soft)', color: 'var(--primary)', border: '1px solid rgba(37,99,235,0.18)', padding: '3px 8px', borderRadius: 999, marginLeft: 6 }}>📖 Theory</span>
+            )}
           </div>
           <div className="qtext">{q.question}</div>
 
