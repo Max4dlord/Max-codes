@@ -14,6 +14,7 @@ no backend needed, progress saved in the browser.
 | AEE 202 — Agricultural Engineering | ✅ live | 308 | 3 main categories · 23 topics · 20 diagram questions |
 | MTH 202 — Mathematical Methods | ✅ live | 149 | 8 topics |
 | EEE 202 — Applied Electricity II | ✅ live | 134 | 9 topics · 66 worked calculations + 68 theory · LaTeX-rendered step-by-step solutions with distractor analysis |
+| EEE 252 — Analog Electronics & Circuit Analysis | ✅ live | 75 | 6 topics · 58 solved calculations + 17 theory, all past questions solved step-by-step in LaTeX |
 | MEE 206 — Mechanical Eng. Fundamentals | ⏳ soon | — | — |
 
 ### EEE 202 — built for a WRITTEN, calculation-heavy exam

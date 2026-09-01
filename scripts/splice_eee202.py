@@ -47,7 +47,7 @@ def fmt_questions(qs):
                 continue
             val = q[key]
             if key == "options":
-                entries.append(f'    "{key}": [\n' + ",\n".join(f'      "{o}"' for o in val) + "\n    ]")
+                entries.append(f'    "{key}": [\n' + ",\n".join(json.dumps(o, ensure_ascii=False) for o in val) + "\n    ]")
             elif key == "correct":
                 entries.append(f'    "{key}": {val}')
             else:

@@ -26,6 +26,14 @@ export const courses = [
     "accent": "#7c3aed",
     "available": true
   },
+  {
+    "id": "eee252",
+    "code": "EEE 252",
+    "title": "Analog Electronics & Circuit Analysis",
+    "blurb": "Diode circuits & I-V characteristics, rectification & power supplies, MOSFETs, BJTs, small-signal models and op-amps. Built to the senior-examiner standard: every past question solved step-by-step with zero skipping, full LaTeX mathematics, and per-option distractor analysis.",
+    "accent": "#dc2626",
+    "available": true
+  },
 {
     "id": "mee206",
     "code": "MEE 206",
@@ -235,6 +243,39 @@ export const topicMeta = {
       "id": "eee-nonlinear",
       "name": "Nonlinear Circuits (Introduction)",
       "summaryNotes": "\n### Key Abstractions & Principles\n- Linear ⇔ the i-v graph is a straight line ($v = Ri$). Nonlinear ⇔ any other i-v shape — a diode, $y = x^2$, even the piecewise-linear $y = |x|$ (it cannot be written as $y = ax + b$).\n- Amplifiers, computers and most practical devices are built from nonlinear components — nonlinear analysis is \"the real engineering\".\n- There are no hard-and-fast rules for most nonlinear circuits, but systematic methods exist for op-amp nonlinear circuits.\n- The negative resistance converter is a key op-amp nonlinear circuit: its i-v slope is negative over a region, so it delivers power — which is exactly what an OSCILLATOR needs to sustain oscillations.\n\n### Core Mathematical Relations\n- Linear form: $y = ax + b$.\n- Nonlinear examples: $y = x^2$ (parabola), $y = |x|$ (piecewise linear but not of the form $ax + b$).\n\n### Common Pitfalls & Exam Traps\n- Trap 1: Calling $|x|$ linear because its pieces are straight lines.\n- Trap 2: Classifying a circuit by its components instead of by the shape of its i-v graph.\n- Trap 3: Believing nonlinear circuits have no analysis methods at all (op-amp nonlinear circuits do).\nr"
+    }
+  ]
+,
+  "eee252": [
+    {
+      "id": "eee252-diodes",
+      "name": "Diode Circuits & Diode I-V Characteristics",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- A diode is a two-terminal nonlinear element: it conducts easily in the forward direction and blocks reverse current up to breakdown. The pn junction is formed by joining p-type and n-type semiconductors; current is carried by diffusion of majority carriers across the junction.\n- The exponential (Shockley) model is the physical law of the diode. The piecewise-linear model (0.7 V battery + small resistance) is its practical approximation, and the ideal model (short when conducting, open when blocking) is used for first-pass circuit decisions.\n- The Zener diode is designed to operate in REVERSE breakdown at a precise voltage $V_Z$; it is the heart of simple voltage regulators. Breakdown mechanisms: Zener (tunnelling, $V_Z < 5$ V) and avalanche (impact ionisation, $V_Z > 7$ V).\n- Dynamic (small-signal) resistance $r_d$ describes the diode's response to small AC perturbations about a DC bias point — the basis of incremental analysis.\n\n### Core Mathematical Relations\n- $i_D = I_S(e^{v_D/V_T} - 1)$ : Shockley equation; $I_S$ = saturation current ($10^{-14}$–$10^{-15}$ A), $V_T = kT/q \\approx 25$ mV at room temperature.\n- $r_d = \\frac{V_T}{I_D}$ : dynamic resistance at DC bias current $I_D$ (e.g. 25 Ω at 1 mA).\n- $v_{D2} - v_{D1} = V_T \\ln\\frac{i_{D2}}{i_{D1}}$ : voltage change per decade/ratio of current — the tool for diode-string problems.\n- Piecewise-linear model: conducting diode $=$ battery $V_{D0} = 0.7$ V in series with $r_D$; blocking diode $=$ open circuit.\n- Zener regulator: $V_Z = V_{Z0} + r_z I_Z$; design uses $I_{Z(min)} \\ge I_{ZK}$ and $I_{Z(max)} = I_{S(max)} - I_{L(min)}$.\n\n### Key Approximations & Assumptions\n- $v_D = 0.7$ V assumed whenever the diode conducts (silicon); drop the exponential detail.\n- $V_T = 25$ mV at room temperature; use $V_T \\ln(10) \\approx 57.5$ mV per decade of current.\n- Reverse-biased diode: $i_D = 0$ (ideal) until $v_D = -V_Z$ (zener).\n- A diode conducts only if the circuit would otherwise push its anode above its cathode by $\\ge 0.7$ V — always START by assuming a state, solve, then VERIFY the assumption.\n\n### High-Yield Recall Tips & Mnemonics\n- \"Anode Above Cathode — Allow Current\": the arrow of the symbol points in the direction of forward current.\n- \"1 mA → 25 Ω\": remember the room-temperature dynamic resistance instantly ($r_d = 25$ mV/1 mA).\n- \"0.7 for silicon, 0.3 for germanium\" — silicon dominates exam circuits.\n- For \"which diode is ON\" problems: the diode with the LARGEST forward voltage difference wins first.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Forgetting the $-1$ in the Shockley equation — only matters for $v_D$ near 0; for $v_D \\gg V_T$ use $i_D \\approx I_S e^{v_D/V_T}$.\n- Trap 2: Using $r_d = V_T/I_D$ with the WRONG current — always the DC bias current, not the signal current.\n- Trap 3: Assuming both diodes in a multi-diode circuit conduct — usually one steals all the current; verify each assumption.\n- Trap 4: Sign errors in clampers/strings: track the polarity the capacitor charges to, and re-derive, never guess.\n"
+    },
+    {
+      "id": "eee252-rectifiers",
+      "name": "Rectification & Power Supply Design",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Rectification converts AC into pulsating DC. Half-wave uses one diode (conducts on alternate half-cycles); full-wave uses two diodes with a centre-tapped transformer, and the bridge uses four diodes with no centre tap.\n- The ripple factor measures the AC content remaining in the output: $\\gamma = V_{r(rms)}/V_{DC}$. Lower is better; a capacitor filter across the load smooths the output by storing charge on peaks and releasing it between peaks.\n- PIV (peak inverse voltage) is the maximum reverse voltage a diode must block — the key design spec for choosing diodes.\n- A DC power supply chain: transformer → rectifier → capacitor filter → (optional) zener/IC regulator → load.\n\n### Core Mathematical Relations\n- Half-wave: $V_{DC} = \\frac{V_m}{\\pi} = 0.318V_m$; ripple factor $\\gamma = 1.21$ (121%); efficiency $\\eta = 40.6\\%$; PIV $= V_m$.\n- Full-wave (centre-tap AND bridge): $V_{DC} = \\frac{2V_m}{\\pi} = 0.636V_m$; $\\gamma = 0.48$ (48%); $\\eta = 81.2\\%$; PIV $= 2V_m$ (centre-tap) or $V_m$ (bridge).\n- Ripple voltage with capacitor filter: $V_r \\approx \\frac{I_L}{2fC}$ (full-wave) and $V_r \\approx \\frac{I_L}{fC}$ (half-wave), where $f$ = line frequency.\n- $V_m = \\sqrt{2}\\,V_{rms}$; output frequency $= f$ (half-wave) or $2f$ (full-wave).\n- Regulator design: $R_S = \\frac{V_{S(min)} - V_Z}{I_{Z(min)} + I_{L(max)}}$.\n\n### Key Approximations & Assumptions\n- Ideal diodes (zero drop) unless the question specifies 0.7 V.\n- $V_r \\ll V_m$ so the output is nearly DC; the diode conducts only for a short \"conduction angle\" near the peak.\n- Transformer losses, diode resistance and load regulation of the capacitor are neglected unless stated.\n\n### High-Yield Recall Tips & Mnemonics\n- \"Bridge = 4 diodes = 1 PIV; Centre-tap = 2 diodes = 2 PIV.\" The bridge is kinder to diodes; the centre-tap is kinder to diode count.\n- \"Full-wave halves the ripple\": 121% → 48%.\n- \"0.318 and 0.636\" — the two DC averages; full-wave is exactly double.\n- Ripple frequency doubles in full-wave: 50 Hz in, 100 Hz out.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Quoting PIV = $2V_m$ for a BRIDGE — it is $V_m$ for the bridge and $2V_m$ only for the centre-tapped circuit.\n- Trap 2: Confusing $V_{DC}$ with $V_{rms}$ — DC value uses $V_m/\\pi$ (or $2V_m/\\pi$), not 0.707.\n- Trap 3: Using the wrong ripple frequency in the capacitor formula ($f$ vs $2f$).\n- Trap 4: Forgetting the factor $\\sqrt{2}$ when a transformer secondary is given in r.m.s. volts.\n"
+    },
+    {
+      "id": "eee252-mosfet",
+      "name": "MOSFETs & NMOS Technology",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- The MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor) is a voltage-controlled device: the gate voltage controls the conducting channel between drain and source. NMOS uses an n-channel (electrons), PMOS a p-channel (holes).\n- Regions of operation: CUTOFF (no channel, $i_D = 0$), TRIODE (channel exists, $V_{DS}$ small — behaves like a voltage-controlled resistor), and SATURATION (channel pinched off at the drain — behaves like a voltage-controlled current source).\n- Process parameters: oxide capacitance per unit area $C_{ox} = \\varepsilon_{ox}/t_{ox}$ and the transconductance parameter $k'_n = \\mu_n C_{ox}$. Device parameter $k_n = k'_n (W/L)$.\n- Channel-length modulation ($\\lambda$) makes $i_D$ rise slightly with $V_{DS}$ in saturation — it is the MOSFET analogue of the BJT's Early effect. The body effect raises $V_t$ when the source is above the body.\n\n### Core Mathematical Relations\n- Cutoff: $V_{GS} < V_t \\Rightarrow i_D = 0$.\n- Triode: $i_D = k_n\\left[(V_{GS}-V_t)V_{DS} - \\frac{V_{DS}^2}{2}\\right]$ for $V_{DS} \\le V_{GS} - V_t$.\n- Saturation: $i_D = \\frac{1}{2}k_n(V_{GS}-V_t)^2\\,(1+\\lambda V_{DS})$ for $V_{DS} \\ge V_{OV} = V_{GS}-V_t$.\n- Overdrive voltage $V_{OV} = V_{GS} - V_t$; minimum $V_{DS}$ for saturation is $V_{DS} = V_{OV}$.\n- $C_{ox} = \\frac{\\varepsilon_{ox}}{t_{ox}}$; $k'_n = \\mu_n C_{ox}$; $k_n = k'_n\\frac{W}{L}$.\n- Triode small-$V_{DS}$ resistance: $r_{DS} \\approx \\frac{1}{k_n V_{OV}}$.\n\n### Key Approximations & Assumptions\n- $V_{GS} > V_t$ AND $V_{DS} \\ge V_{GS} - V_t$ ⇔ saturation. These two inequalities are the whole game — always test both.\n- $\\lambda = 0$ (ignore channel-length modulation) unless the question gives a value.\n- For hand analysis take $V_t$ constant (neglect body effect) unless explicitly asked.\n- $V_{OV}$ is the \"excess\" gate voltage; a MOSFET at the edge of saturation has $V_{DS} = V_{OV}$.\n\n### High-Yield Recall Tips & Mnemonics\n- \"Cut–Tri–Sat\" in order of increasing $V_{DS}$.\n- \"Square law in saturation\": $i_D \\propto (V_{GS}-V_t)^2$ — doubling $V_{OV}$ quadruples $i_D$.\n- \"$V_{OV}$ is the king\": $g_m = 2I_D/V_{OV}$, maximum gain $= 2V_{DD}/V_{OV}$ class results all route through it.\n- NMOS \"arrow points iN\"; PMOS \"arrow Points out\" — remember which is which.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Testing only $V_{GS} > V_t$ and forgetting the second saturation test $V_{DS} \\ge V_{OV}$.\n- Trap 2: Unit confusion: $k'_n$ in $\\mu A/V^2$ vs $k_n = k'_n(W/L)$; $C_{ox}$ in fF/µm² needs $t_{ox}$ in the SAME length unit.\n- Trap 3: Using triode equations in saturation (or vice-versa) after misjudging the region.\n- Trap 4: Forgetting $(1+\\lambda V_{DS})$ when $\\lambda$ is given, or including it when $\\lambda = 0$.\n"
+    },
+    {
+      "id": "eee252-bjt",
+      "name": "Bipolar Junction Transistors (BJTs)",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- The BJT is a current-controlled device: a small base current controls a large collector current. Three terminals: emitter, base, collector; two junctions: emitter–base (EBJ) and collector–base (CBJ).\n- Modes of operation are set by junction biases: ACTIVE (EBJ forward, CBJ reverse — amplifier), SATURATION (both forward — switch ON), CUTOFF (both reverse — switch OFF), and reverse-active (rare).\n- The Early effect: $i_C$ rises slightly with $v_{CE}$ in the active mode, described by the Early voltage $V_A$ — all $i_C$–$v_{CE}$ lines extrapolate to $-V_A$ on the voltage axis.\n- DC biasing sets the quiescent point Q; the assume–solve–verify cycle is mandatory: assume active, compute, then check $V_{CE} > V_{CE(sat)}$ and $i_B > 0$.\n\n### Core Mathematical Relations\n- Active mode: $i_C = I_S e^{v_{BE}/V_T}$, $i_C = \\beta i_B$, $i_E = (\\beta+1)i_B = i_C + i_B$.\n- $\\alpha = \\frac{\\beta}{\\beta+1}$, $\\beta = \\frac{\\alpha}{1-\\alpha}$; typically $\\alpha \\approx 0.99$, $\\beta \\approx 100$.\n- $i_C = I_S e^{v_{BE}/V_T}(1 + \\frac{v_{CE}}{V_A})$ : Early-effect form; $r_o = \\frac{V_A}{I_C}$.\n- Fixed bias: $I_B = \\frac{V_{CC} - V_{BE}}{R_B}$, $I_C = \\beta I_B$, $V_{CE} = V_{CC} - I_C R_C$.\n- Saturation: $V_{CE(sat)} \\approx 0.2$ V; forced $\\beta_{forced} = \\frac{I_C}{I_B} < \\beta$.\n- Saturation-mode current: $i_C = I_S e^{v_{BE}/V_T} - \\frac{I_S}{\\alpha_R}e^{v_{BC}/V_T}$ (second term when CBJ conducts).\n\n### Key Approximations & Assumptions\n- $V_{BE} = 0.7$ V whenever the EBJ conducts; $V_T = 25$ mV.\n- Active mode requires $V_{BE} = 0.7$ V AND $V_{CE} \\ge 0.2$–$0.3$ V; check both after solving.\n- \"Very high β\" ⇒ $i_B \\approx 0$, $i_E \\approx i_C$ — solve the base circuit by inspection of voltages.\n- Neglect Early effect unless $V_A$ is given.\n\n### High-Yield Recall Tips & Mnemonics\n- \"EBJ forward + CBJ reverse = ACTIVE\" — the amplifier state.\n- \"$V_{CE} \\approx 0.2$ V means saturated; $V_{BE} < 0.7$ V means cutoff.\"\n- \"$\\alpha$ is close to 1, $\\beta$ is the gain\" — $\\alpha = \\beta/(\\beta+1)$.\n- \"Fixed bias is β-UNSTABLE\": $I_C$ scales directly with $\\beta$ — the exam's favourite criticism question.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Solving with active-mode equations and never verifying the mode — the #1 error in bias questions.\n- Trap 2: Forgetting $V_{CE} = V_{CC} - I_C(R_C + R_E)$ when an emitter resistor is present.\n- Trap 3: Using $\\beta$ for an emitter-follower current ($i_E = (\\beta+1)i_B$, not $\\beta i_B$).\n- Trap 4: In saturation, treating $i_C = \\beta i_B$ — it is no longer valid; use $V_{CE(sat)}$ and circuit constraints.\n"
+    },
+    {
+      "id": "eee252-small-signal",
+      "name": "Small-Signal Models & Equivalent Circuits",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- Small-signal analysis separates a circuit into its DC bias (quiescent point) and a small AC perturbation about it. Replace each transistor with its small-signal model, kill DC sources (voltage → short, current → open), and analyse the linear circuit.\n- The hybrid-π model (BJT): input resistance $r_\\pi$ between base and emitter, a voltage-controlled current source $g_m v_\\pi$ at the output, and $r_o$ accounting for the Early effect. The T model is its exact dual, with $r_e$ in the emitter leg — use whichever makes the node analysis cleaner.\n- The MOSFET model is the same hybrid-π without the base current: infinite input resistance, $g_m v_{gs}$ current source, $r_o = 1/(\\lambda I_D)$.\n- Key parameter formulas must be computed at the BIAS point (using $I_C$ or $I_D$).\n\n### Core Mathematical Relations\n- BJT: $g_m = \\frac{I_C}{V_T}$; $r_\\pi = \\frac{\\beta}{g_m} = \\frac{V_T}{I_B}$; $r_e = \\frac{\\alpha}{g_m} = \\frac{V_T}{I_E} \\approx \\frac{25\\,\\text{mV}}{I_E}$; $r_o = \\frac{V_A}{I_C}$.\n- MOSFET: $g_m = \\frac{2I_D}{V_{OV}} = k_n V_{OV} = \\sqrt{2k_n I_D}$; $r_o = \\frac{1}{\\lambda I_D}$.\n- Common-source / common-emitter gain: $A_v = -g_m(R_D \\parallel R_L \\parallel r_o)$ / $-g_m(R_C \\parallel R_L)$.\n- $R_{in} = R_G \\parallel R_{in,gate}$ (MOS, $\\infty$) or $R_B \\parallel r_\\pi$ (BJT); $R_{out} = R_D \\parallel r_o$.\n- Overall gain with source resistance: $G_v = \\frac{R_{in}}{R_{in}+R_{sig}} A_v$.\n\n### Key Approximations & Assumptions\n- Signals are small enough that the transistor stays linear about Q ($v_{be} \\le 10$ mV for BJT; $v_{gs} \\ll 2V_{OV}$ for MOS).\n- $r_o$ is ignored (open circuit) unless $\\lambda$/$V_A$ is given.\n- Coupling and bypass capacitors are AC short circuits at signal frequency.\n- $g_m$ in mA/V when $I_C$/$I_D$ in mA and $V_T$ in mV: $g_m = I_C/25$.\n\n### High-Yield Recall Tips & Mnemonics\n- \"40 mA/V per mA\": $g_m = I_C/V_T$ ⇒ 1 mA of collector current gives 40 mA/V transconductance.\n- \"T for Trouble-free emitter equations\" — use the T model whenever the emitter node is shared.\n- \"Voltage in, current out = transconductance\": $g_m$ is the heart of every gain formula.\n- \"The 25 mV rule\": $r_e = 25/I_E$(mA) and $r_d = 25/I_D$(mA) — the same physics, two devices.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Computing $g_m$ with signal current instead of BIAS current.\n- Trap 2: Omitting $r_\\pi$ (or $r_e$) loading in multi-stage or source-loaded calculations.\n- Trap 3: Wrong sign conventions — CS/CE invert ($-g_mR$); followers don't.\n- Trap 4: Forgetting $R_{sig}$ when the question asks for OVERALL gain $G_v$, not $A_v$.\n"
+    },
+    {
+      "id": "eee252-opamp",
+      "name": "Operational Amplifiers (Op-Amps)",
+      "summaryNotes": "\n### Key Abstractions & Principles\n- The op-amp is a very high-gain differential amplifier used with negative feedback to build precision linear circuits. Ideal assumptions: infinite open-loop gain $A$, infinite input impedance, zero output impedance, infinite bandwidth.\n- The VIRTUAL SHORT: with negative feedback and an ideal op-amp, $v_+ = v_-$ and zero current flows into either input. This single idea solves nearly every op-amp exam circuit.\n- Real (non-ideal) op-amps: finite gain $A$ (typically $10^5$–$10^6$), finite bandwidth (gain–bandwidth product), input offset voltage/current, finite CMRR.\n- CMRR quantifies the rejection of common-mode signals: $CMRR = |A_d/A_{cm}|$; in dB, $CMRR_{dB} = 20\\log_{10}CMRR$.\n\n### Core Mathematical Relations\n- Inverting amplifier: $\\frac{v_o}{v_i} = -\\frac{R_2}{R_1}$; input resistance $= R_1$.\n- Non-inverting amplifier: $\\frac{v_o}{v_i} = 1 + \\frac{R_2}{R_1}$; input resistance $\\approx \\infty$.\n- Summing amplifier: $v_o = -R_f\\left(\\frac{v_1}{R_1} + \\frac{v_2}{R_2} + \\cdots\\right)$.\n- Difference amplifier: $v_o = \\frac{R_2}{R_1}(v_2 - v_1)$ (with matched pairs).\n- Integrator: $v_o(t) = -\\frac{1}{RC}\\int_0^t v_i(\\tau)\\,d\\tau + v_o(0)$; transfer $T(s) = -\\frac{1}{sRC}$.\n- Differentiator: $v_o(t) = -RC\\frac{dv_i}{dt}$; $T(s) = -sRC$.\n- First-order low-pass (inverting): $T(s) = -\\frac{R_2/R_1}{1 + sR_2C}$; DC gain $= -R_2/R_1$; cutoff $\\omega_0 = 1/(R_2C)$.\n- General 2nd-order active filter: $T(s) = \\frac{K}{s^2/\\omega_0^2 + s/(Q\\omega_0) + 1}$ — read off $K$, $Q$, $\\omega_0$.\n\n### Key Approximations & Assumptions\n- Ideal op-amp: $A \\to \\infty$ ⇒ $v_+ = v_-$ and $i_+ = i_- = 0$ (with negative feedback).\n- Output never saturates: $|v_o| < V_{supply}$ — check in clipping questions.\n- Capacitors: impedance $1/sC$; for steady-state AC use $s = j\\omega$.\n- Filter type is read from the limiting behaviour: $T(0)$ and $T(\\infty)$.\n\n### High-Yield Recall Tips & Mnemonics\n- \"Inverting = minus R2 over R1; non-inverting = one plus R2 over R1.\"\n- \"Summing at the inverting node gives a weighted negative sum.\"\n- \"Integrator = 1/s; differentiator = s\" — poles and zeros in plain sight.\n- \"Low-pass passes DC ($s \\to 0$); high-pass passes $\\infty$ ($s \\to \\infty$)\": test $T(0)$ and $T(\\infty)$ to identify the filter.\n\n### Common Examiner Pitfalls & Exam Traps\n- Trap 1: Applying the virtual short when the feedback is POSITIVE (or absent) — it requires negative feedback.\n- Trap 2: Writing the inverting gain without the minus sign.\n- Trap 3: Mixing up $Q$ and $\\omega_0$ in second-order filters — read them from the standard form's coefficients.\n- Trap 4: Forgetting the initial condition / constant of integration in integrator problems.\n"
     }
   ]
 
@@ -9061,5 +9102,1133 @@ export const questionBank = {
     "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe negative resistance converter is an op-amp nonlinear circuit whose i-v characteristic has a negative slope over some region: increasing voltage produces decreasing current. Over that region it DELIVERS power instead of absorbing it — the exact property an oscillator needs to sustain its own oscillations.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the converter and its oscillator application.\n- **Option B (wrong)**: an Ohmic resistor has a positive slope.\n- **Option C (wrong)**: it is built around an op-amp, not transformer windings.\n- **Option D (wrong)**: a rectifier converts AC to DC — unrelated to negative slope.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is reading \"negative resistance\" as \"small resistance\". It means a NEGATIVE SLOPE on the i-v curve — power-source behaviour, not a tiny resistor.\nr\n\n**Key recall:** the negative-slope region has $dV/dI < 0$ — power-source behaviour."
   }
 ]
+,
+  eee252: [
+  {
+    "id": "eee252_diodes_01",
+    "topicId": "eee252-diodes",
+    "kind": "theory",
+    "question": "What is a nonlinear circuit element?",
+    "options": [
+"An element whose current–voltage relationship is not a straight line (its i-v graph is not of the form $i = av + b$)",
+"An element that obeys Ohm's law at all voltages",
+"An element whose i-v graph is a straight line through the origin",
+"An element with no resistance"
+    ],
+    "correct": 0,
+    "short": "A nonlinear element has an i-v relation that is NOT a straight line — e.g. a diode's exponential law $i_D = I_S(e^{v_D/V_T}-1)$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nA circuit element is classified by its i-v characteristic. If the i-v graph is a straight line, the element is linear and can be written in the form $i = av + b$. Any element whose i-v graph is NOT a straight line is a nonlinear circuit element. The diode is the classic example: $i_D = I_S(e^{v_D/V_T} - 1)$ plots as an exponential curve.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the straight-line test, with the diode's exponential law as the canonical example.\n- **Option B (wrong)**: obeying Ohm's law at all voltages is the definition of a LINEAR resistor.\n- **Option C (wrong)**: a straight line through the origin is the most linear element there is (ideal resistor).\n- **Option D (wrong)**: \"no resistance\" describes an ideal short circuit, which is linear.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is confusing \"nonlinear\" with \"non-ohmic and weird\". The ONLY test is the shape of the i-v graph: straight line = linear; anything else (exponential, square-law, piecewise) = nonlinear. In the written exam, state the test first, then give the diode as the example.\nr"
+  },
+  {
+    "id": "eee252_diodes_02",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "A silicon diode has saturation current $I_S = 10^{-15}$ A and is forward-biased with $v_D = 0.7$ V. Using the Shockley equation with $V_T = 25$ mV, the diode current $i_D$ is about:",
+    "options": [
+"1.45 mA",
+"14.5 mA",
+"0.145 mA",
+"10⁻¹⁵ A"
+    ],
+    "correct": 0,
+    "short": "$i_D = I_S(e^{v_D/V_T}-1) = 10^{-15}(e^{28}-1)$; $e^{28} \\approx 1.45\\times10^{12}$, so $i_D \\approx 1.45$ mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_S = 10^{-15}$ A, $v_D = 0.7$ V, $V_T = 25$ mV $= 0.025$ V.\nGoverning law — the Shockley (exponential) diode equation:\n$$i_D = I_S(e^{v_D/V_T} - 1)$$\n\n**Step 2: Full Mathematical Workings**\n\nCompute the exponent:\n$$\\frac{v_D}{V_T} = \\frac{0.7}{0.025}$$\n$$\\frac{0.7}{0.025} = 28$$\nSubstitute:\n$$i_D = 10^{-15}(e^{28} - 1)$$\n$$e^{28} = 1.4463 \\times 10^{12}$$\nSince $e^{28} \\gg 1$, the $-1$ is negligible:\n$$i_D = 10^{-15} \\times 1.4463 \\times 10^{12}$$\n$$i_D = 1.4463 \\times 10^{-3}$$\n$$i_D = 1.45\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\n0.7 V across a silicon junction drives about 1.45 mA — 28 thermal voltages of forward bias, consistent with the rule of thumb that every 60 mV decade multiplies the current tenfold. The $-1$ term matters only when $v_D$ is within a few $V_T$ of zero.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (14.5 mA)**: the student misplaces the exponent ($e^{29.9}$ style slip — i.e. using $v_D = 0.747$ V).\n- **Option C trap (0.145 mA)**: a factor-of-10 slip in $e^{28}$ — e.g. reading $10^{11}$ instead of $10^{12}$.\n- **Option D trap ($10^{-15}$ A)**: the student reports the SATURATION current $I_S$ itself, forgetting the exponential multiplication.\nr"
+  },
+  {
+    "id": "eee252_diodes_03",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "A diode conducts a DC current $I_D = 1$ mA at room temperature ($V_T = 25$ mV). Its small-signal (dynamic) resistance $r_d$ is:",
+    "options": [
+"25 Ω",
+"2.5 Ω",
+"250 Ω",
+"40 Ω"
+    ],
+    "correct": 0,
+    "short": "$r_d = V_T/I_D = 25\\text{ mV}/1\\text{ mA} = 25\\ \\Omega$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_D = 1$ mA $= 1 \\times 10^{-3}$ A, $V_T = 25$ mV $= 25 \\times 10^{-3}$ V.\nGoverning law — dynamic resistance of the diode:\n$$r_d = \\frac{V_T}{I_D}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$r_d = \\frac{25 \\times 10^{-3}}{1 \\times 10^{-3}}$$\nCancel the $10^{-3}$:\n$$r_d = \\frac{25}{1}$$\n$$r_d = 25\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe dynamic resistance is the slope resistance of the exponential curve at the bias point — the diode behaves like a 25 Ω resistor for SMALL signals about 1 mA. This is the single most useful diode number to memorise: \"1 mA gives 25 Ω\".\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2.5 Ω)**: the student divides $V_T$ by 10 mA.\n- **Option C trap (250 Ω)**: the student uses $I_D = 0.1$ mA.\n- **Option D trap (40 Ω)**: the student uses $r_d = V_T/I_D \\times \\ln 10$ style mix-up, or applies the 40 mA/V transistor rule to a diode.\nr"
+  },
+  {
+    "id": "eee252_diodes_04",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "Four identical diodes are connected in series with a resistor R across a 15 V supply. For each diode, $v_D = 0.75$ V at $i_D = 1$ mA, and $V_T = 25$ mV. The total voltage across the four diodes is 3.3 V. The current through the diodes is about:",
+    "options": [
+"20 mA",
+"1 mA",
+"4 mA",
+"12 mA"
+    ],
+    "correct": 0,
+    "short": "Per diode $v_D = 3.3/4 = 0.825$ V; $v_{D2}-v_{D1} = V_T\\ln(i_2/i_1)$ gives $0.075 = 0.025\\ln(i_2/1\\text{mA})$ ⇒ $i_2 = e^3$ mA ≈ 20 mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: four identical diodes in series; total voltage across them $4v_D = 3.3$ V; at reference current $i_{D1} = 1$ mA each diode drops $v_{D1} = 0.75$ V; $V_T = 25$ mV.\nGoverning law — the exponential diode relation between two operating points:\n$$v_{D2} - v_{D1} = V_T \\ln\\frac{i_{D2}}{i_{D1}}$$\n\n**Step 2: Full Mathematical Workings**\n\nVoltage per diode:\n$$v_{D2} = \\frac{3.3}{4}$$\n$$v_{D2} = 0.825\\ V$$\nVoltage difference from the reference point:\n$$v_{D2} - v_{D1} = 0.825 - 0.75$$\n$$v_{D2} - v_{D1} = 0.075\\ V$$\nSubstitute into the exponential relation:\n$$0.075 = 0.025 \\ln\\frac{i_{D2}}{1\\ mA}$$\n$$\\frac{0.075}{0.025} = 3$$\n$$\\ln\\frac{i_{D2}}{1\\ mA} = 3$$\nExponentiate both sides:\n$$\\frac{i_{D2}}{1\\ mA} = e^3$$\n$$e^3 = 20.09$$\n$$i_{D2} = 20.09\\ mA \\approx 20\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\nRaising the per-diode drop by 75 mV (three thermal voltages) multiplies the current by $e^3 \\approx 20$. The identical series diodes share the SAME current, so the string current is 20 mA.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1 mA)**: the student ignores the higher 0.825 V drop and quotes the reference current.\n- **Option C trap (4 mA)**: the student multiplies the reference current by the number of diodes.\n- **Option D trap (12 mA)**: the student divides 3.3 V by 0.275 Ω style shortcut, or assumes a linear $v_D$–$i_D$ law.\nr"
+  },
+  {
+    "id": "eee252_diodes_05",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "In the same four-diode string across 15 V (diode current ≈ 20 mA, total diode drop 3.3 V), the series resistor R is about:",
+    "options": [
+"585 Ω",
+"750 Ω",
+"150 Ω",
+"1.2 kΩ"
+    ],
+    "correct": 0,
+    "short": "R drops $15 - 3.3 = 11.7$ V at $20.09$ mA, so $R = 11.7/0.02009 = 582$ Ω ≈ 585 Ω.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: supply $V = 15$ V, total diode voltage $4v_D = 3.3$ V, string current $i_D = 20.09$ mA.\nGoverning law — Ohm's law for the series resistor:\n$$V = i_D R + 4v_D \\quad\\Rightarrow\\quad R = \\frac{V - 4v_D}{i_D}$$\n\n**Step 2: Full Mathematical Workings**\n\nVoltage across the resistor:\n$$V - 4v_D = 15 - 3.3$$\n$$V - 4v_D = 11.7\\ V$$\nResistor value:\n$$R = \\frac{11.7}{20.09 \\times 10^{-3}}$$\n$$R = \\frac{11.7}{0.02009}$$\n$$R = 582.4\\ \\Omega$$\n$$R \\approx 585\\ \\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe resistor drops the remaining 11.7 V while carrying the 20 mA string current. Checking the loop: $0.02009 \\times 582.4 + 3.3 = 11.7 + 3.3 = 15$ V — the KVL loop closes exactly.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (750 Ω)**: the student uses the reference current of 1 mA for four diodes — i.e. $R = 11.7/0.004$ style confusion.\n- **Option C trap (150 Ω)**: the student divides the diode drop (3.3 V) by the current instead of the resistor drop.\n- **Option D trap (1.2 kΩ)**: the student uses the per-diode 0.825 V instead of the total 3.3 V, giving $R = (15-0.825)/0.012$ style error.\nr"
+  },
+  {
+    "id": "eee252_diodes_06",
+    "topicId": "eee252-diodes",
+    "kind": "theory",
+    "question": "State three limitations of diode logic gates (as used in simple AND/OR gates).",
+    "options": [
+"A 0.7 V drop per stage degrades logic levels; there is no gain so signals cannot be restored; they cannot invert (no NOT function)",
+"They consume no power; they invert signals; they have unlimited fan-out",
+"They need a clock; they are faster than CMOS; they amplify the input",
+"They work only with germanium diodes; they have infinite gain; they oscillate"
+    ],
+    "correct": 0,
+    "short": "Diode logic loses 0.7 V per stage with no amplification, cannot restore levels, and provides no inversion.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nDiode logic gates (diode AND/OR with a pull-up/pull-down resistor) suffer from three fundamental limitations:\n1. **Level degradation**: each conducting diode drops $\\approx 0.7$ V, so cascaded gates progressively shift logic levels — a LOW propagating through n stages rises by $0.7n$ volts.\n2. **No gain/restoration**: diode gates are passive; they cannot restore a degraded level to a full 0/5 V rail, so cascading beyond a few stages fails.\n3. **No inversion**: diode logic cannot implement the NOT function; a complete logic family needs an inverting (active) element, which is why TTL/CMOS replaced diode logic.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: all three limitations stated.\n- **Option B (wrong)**: diode gates DO consume power through the pull-up resistor and cannot invert.\n- **Option C (wrong)**: diode gates are asynchronous (no clock) and slower/passive — they amplify nothing.\n- **Option D (wrong)**: they work with silicon diodes and have no gain.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is inventing \"advantages\" for diode logic. Remember the pattern: passive (no gain) + 0.7 V/stage + no inversion = why real gates use transistors.\nr"
+  },
+  {
+    "id": "eee252_diodes_07",
+    "topicId": "eee252-diodes",
+    "kind": "theory",
+    "question": "In a diode AND gate (diodes from inputs to output, pull-up resistor to $V_{CC} = 5$ V), both inputs are held at 5 V. The output voltage is:",
+    "options": [
+"5 V — both diodes are reverse/zero biased, so the pull-up holds the output at $V_{CC}$",
+"4.3 V — each diode drops 0.7 V",
+"0.7 V",
+"0 V"
+    ],
+    "correct": 0,
+    "short": "With both anodes at 5 V and the cathode (output) also at 5 V via the pull-up, the diodes conduct no current, so $V_{out} = V_{CC} = 5$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nIn the diode AND gate the output node is pulled HIGH by a resistor to $V_{CC} = 5$ V. A diode conducts only when its anode is about 0.7 V ABOVE its cathode. With both inputs at 5 V, each diode has anode = cathode = 5 V: the diode voltage is 0 V, below the 0.7 V threshold.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: no diode conducts, no current flows in the pull-up, so $V_{out} = V_{CC} = 5$ V with ZERO drop.\n- **Option B (wrong)**: the 0.7 V drop applies only when a diode CONDUCTS — here neither conducts.\n- **Option C (wrong)**: 0.7 V is the output when an input is LOW (diode conducting with anode at 0 V).\n- **Option D (wrong)**: 0 V appears only if a diode's anode is at 0 V and the gate is pulling the output to 0.7 V.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is blindly subtracting 0.7 V \"because there are diodes\". The correct reflex: ask WHICH diode conducts first — a conducting diode drops 0.7 V; a non-conducting one drops whatever the circuit imposes. All-high inputs → no conduction → full 5 V output.\nr"
+  },
+  {
+    "id": "eee252_diodes_08",
+    "topicId": "eee252-diodes",
+    "kind": "theory",
+    "question": "In the diode AND gate with a 0.7 V forward drop, the minimum voltage recognised as logic HIGH is 3.5 V. A LOW input (0 V) propagates through cascaded gates, each adding 0.7 V. The maximum number of cascaded stages that can be used before logic failure is:",
+    "options": [
+"4",
+"5",
+"10",
+"unlimited"
+    ],
+    "correct": 0,
+    "short": "Stage n low-level = 0.7n V; failure when 0.7n ≥ 3.5 V, i.e. n = 5 — so only 4 stages are safe.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nWhen an input is LOW (0 V), its diode conducts and the gate output becomes $0 + 0.7 = 0.7$ V. That 0.7 V feeds the next gate's input; if THAT gate's other input is HIGH, its conducting diode lifts the output to $0.7 + 0.7 = 1.4$ V. Each cascaded stage adds 0.7 V to the propagated LOW level:\n$$V_{LOW}(n) = 0.7 n$$\n\n**Step 2: Full Mathematical Workings**\n\nLogic failure occurs when the LOW level reaches the HIGH threshold, 3.5 V:\n$$0.7 n \\ge 3.5$$\n$$n \\ge \\frac{3.5}{0.7}$$\n$$n \\ge 5$$\nSo the 5th stage would produce a \"LOW\" of 3.5 V — indistinguishable from HIGH. Therefore only:\n$$n = 4$$\nstages can be cascaded safely; the 5th fails.\n\n**Step 3: Verification & Physical Interpretation**\n\nAt stage 4 the propagated low is $0.7 \\times 4 = 2.8$ V, still below 3.5 V; at stage 5 it is exactly 3.5 V — at the failure boundary. This is precisely why diode logic cannot be cascaded deeply and why active gates (with gain) won.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (5)**: the student counts the FIRST failing stage instead of the last SAFE one.\n- **Option C trap (10)**: the student divides 5 V by 0.7 V... no — by 0.5 V, i.e. uses the wrong threshold.\n- **Option D trap (unlimited)**: the student forgets the 0.7 V/stage degradation entirely.\nr"
+  },
+  {
+    "id": "eee252_diodes_09",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "A clamping circuit consists of a capacitor C in series with the input, and a diode from the output node to ground (anode at ground, cathode at output — a negative clamper). The input is a square wave with levels +3 V and −1 V; the diode has a 0.7 V forward drop. The capacitor charges to:",
+    "options": [
+"2.3 V, with its left (input-side) plate positive",
+"3.7 V, with its right plate positive",
+"0.7 V, with the left plate positive",
+"1 V, with the right plate positive"
+    ],
+    "correct": 0,
+    "short": "The diode conducts at the +3 V peak, clamping the output to +0.7 V, so the capacitor charges to 3 − 0.7 = 2.3 V (input plate positive).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: square wave input $v_i = +3$ V / $-1$ V; diode (anode to ground, cathode to output) with $V_D = 0.7$ V.\nCircuit layout (textual description): the input source connects to the LEFT plate of capacitor C; the RIGHT plate is the output node, where the diode's cathode is attached; the diode's anode is grounded. When the output tries to rise above $+0.7$ V the diode conducts and clamps it.\n\n**Step 2: Full Mathematical Workings**\n\nAt the positive input peak ($v_i = +3$ V), the diode conducts and pins the output to:\n$$v_o = +0.7\\ V$$\nCapacitor voltage (left plate relative to right):\n$$V_C = v_i - v_o$$\n$$V_C = 3 - 0.7$$\n$$V_C = 2.3\\ V$$\nThe left (input-side) plate is positive because $v_i > v_o$ during charging.\n\n**Step 3: Verification & Physical Interpretation**\n\nOnce charged to 2.3 V, the capacitor behaves as a fixed battery: the output equals $v_o = v_i - 2.3$ V. At $v_i = +3$ V: $v_o = 0.7$ V (just at conduction); at $v_i = -1$ V: $v_o = -3.3$ V (diode OFF). The waveform is the input shifted DOWN by 2.3 V, with its positive peak clamped to +0.7 V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (3.7 V)**: the student ADDS the diode drop to the peak (3 + 0.7) instead of subtracting.\n- **Option C trap (0.7 V)**: the student confuses the output clamp level with the CAPACITOR voltage.\n- **Option D trap (1 V)**: the student charges the capacitor with the negative peak (−1 + 0.7 mis-signed).\nr"
+  },
+  {
+    "id": "eee252_diodes_10",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "For the same negative clamper (input +3 V/−1 V, diode drop 0.7 V), the two output levels are:",
+    "options": [
+"+0.7 V and −3.3 V",
+"+3 V and −1 V",
+"+2.3 V and −1.7 V",
+"+3.7 V and −0.3 V"
+    ],
+    "correct": 0,
+    "short": "Output = input − 2.3 V: +3 − 2.3 = +0.7 V and −1 − 2.3 = −3.3 V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nCapacitor charged to $V_C = 2.3$ V (input plate positive). In steady state the output is the input shifted by the capacitor voltage:\n$$v_o = v_i - V_C = v_i - 2.3$$\n\n**Step 2: Full Mathematical Workings**\n\nPositive input level:\n$$v_o = 3 - 2.3$$\n$$v_o = +0.7\\ V$$\nNegative input level:\n$$v_o = -1 - 2.3$$\n$$v_o = -3.3\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe positive peak is clamped to +0.7 V (the diode just conducts there), and the entire waveform sits 2.3 V lower than the input — a perfect DC-level shift. Sketching: the output square wave toggles between +0.7 V and −3.3 V, the same peak-to-peak (4 V) as the input.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student forgot the clamping action and copied the input levels.\n- **Option C trap**: the student subtracted 0.7 V from BOTH levels instead of 2.3 V (i.e. treated the shift as the diode drop).\n- **Option D trap**: the student ADDED 0.7 V to the positive level and subtracted it from the negative.\nr"
+  },
+  {
+    "id": "eee252_diodes_11",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "For the same negative clamper, the input changes to +3 V / −5 V. The new output levels are:",
+    "options": [
+"+0.7 V and −7.3 V",
+"+0.7 V and −5 V",
+"+3 V and −5 V",
+"+2.3 V and −5.7 V"
+    ],
+    "correct": 0,
+    "short": "The positive peak still clamps to +0.7 V, so the shift remains 2.3 V: output = +0.7 V and −5 − 2.3 = −7.3 V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nThe clamping level depends only on the POSITIVE peak (+3 V) and the diode drop (0.7 V), so the capacitor still charges to:\n$$V_C = 3 - 0.7 = 2.3\\ V$$\nThe negative level changes to $-5$ V.\n\n**Step 2: Full Mathematical Workings**\n\n$$v_o = v_i - 2.3$$\nPositive peak:\n$$v_o = 3 - 2.3 = +0.7\\ V$$\nNegative peak:\n$$v_o = -5 - 2.3$$\n$$v_o = -7.3\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nOnly the extreme positive value sets the clamp; making the negative excursion bigger simply pushes the lower output level further down by the same amount. The waveform is the same 2.3 V-down shift: +0.7 V / −7.3 V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student clamped only the top level and left the bottom at −5 V — forgetting the capacitor shift applies to ALL levels.\n- **Option C trap**: no clamping considered at all.\n- **Option D trap**: the student re-derived the shift from the new peak-to-peak (8 V) instead of the positive peak.\nr"
+  },
+  {
+    "id": "eee252_diodes_12",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "Incremental (small-signal) analysis: a voltage source $v = V + \\Delta v$ (with $V = 30$ V DC, $\\Delta v = 200$ mV AC) drives a network through $R_1 = 4\\ \\Omega$ to node X; $R_2 = 4\\ \\Omega$ runs from X to the output node o; at node o a nonlinear element $Z_D$ ($i_D = v_D + v_D^2$, in amperes) connects to ground, and a current source $i = I + \\Delta i$ ($I = 10$ A DC, $\\Delta i = 100$ mA AC) feeds current INTO node o. The DC output voltage $V_o$ is about:",
+    "options": [
+"3.19 V",
+"2.45 V",
+"5.0 V",
+"0.0 V"
+    ],
+    "correct": 0,
+    "short": "KCL at o with $v_X = (V + v_o)/2$: $(30-v_o)/8 + 10 = v_o + v_o^2$ ⇒ $v_o^2 + 1.125v_o - 13.75 = 0$ ⇒ $v_o \\approx 3.19$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V = 30$ V, $I = 10$ A, $R_1 = R_2 = 4\\ \\Omega$, element law $i_D = v_D + v_D^2$ (with $v_D = v_o$).\nSchematic layout (textual): source v → $R_1$ → node X → $R_2$ → output node o; element $Z_D$ from o to ground; current source i (arrow INTO node o) from ground to o.\nGoverning laws — KCL at node X and node o:\n$$\\frac{v - v_X}{R_1} = \\frac{v_X - v_o}{R_2} \\qquad \\frac{v_X - v_o}{R_2} + i = i_D(v_o)$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — from KCL at X with $R_1 = R_2$:\n$$\\frac{v - v_X}{4} = \\frac{v_X - v_o}{4}$$\n$$v - v_X = v_X - v_o$$\n$$2v_X = v + v_o$$\n$$v_X = \\frac{v + v_o}{2}$$\nStep B — substitute into KCL at o:\n$$\\frac{(v + v_o)/2 - v_o}{4} + i = v_o + v_o^2$$\n$$\\frac{v - v_o}{8} + i = v_o + v_o^2$$\nStep C — DC solution ($v = 30$, $i = 10$):\n$$\\frac{30 - V_o}{8} + 10 = V_o + V_o^2$$\n$$3.75 - 0.125V_o + 10 = V_o + V_o^2$$\n$$V_o^2 + 1.125V_o - 13.75 = 0$$\nQuadratic formula:\n$$V_o = \\frac{-1.125 + \\sqrt{1.125^2 + 4 \\times 13.75}}{2}$$\n$$1.125^2 = 1.266 \\qquad 4 \\times 13.75 = 55$$\n$$V_o = \\frac{-1.125 + \\sqrt{56.27}}{2}$$\n$$\\sqrt{56.27} = 7.501$$\n$$V_o = \\frac{6.376}{2}$$\n$$V_o = 3.188\\ V \\approx 3.19\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nBack-substitution: $i_D = 3.188 + 10.16 = 13.35$ A; LHS $= (30-3.188)/8 + 10 = 3.35 + 10 = 13.35$ A — KCL balances exactly. The nonlinear element's quadratic term adds about 10 A of extra current at this bias point.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2.45 V)**: the student places the nonlinear element at the MIDDLE node X instead of the output (different topology).\n- **Option C trap (5.0 V)**: the student drops the $v_o^2$ term entirely and solves the linear equation.\n- **Option D trap (0.0 V)**: the student solves the wrong root of the quadratic or assumes the output node is grounded.\nr"
+  },
+  {
+    "id": "eee252_diodes_13",
+    "topicId": "eee252-diodes",
+    "kind": "calc",
+    "question": "For the SAME incremental-analysis circuit (V = 30 V, I = 10 A, Δv = 200 mV, Δi = 100 mA, R₁ = R₂ = 4 Ω, i_D = v_D + v_D², DC solution V_o ≈ 3.19 V), the AC component of the output voltage is about:",
+    "options": [
+"16.7 mV",
+"167 mV",
+"1.67 mV",
+"33.3 mV"
+    ],
+    "correct": 0,
+    "short": "Incremental conductance $g_D = 1 + 2V_o = 7.38$ S; KCL: $(\\Delta v - v_o)/8 + \\Delta i = g_D v_o$ ⇒ $v_o = (0.025 + 0.1)/7.505 = 16.7$ mV.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\Delta v = 200$ mV $= 0.2$ V, $\\Delta i = 100$ mA $= 0.1$ A, DC bias $V_o = 3.188$ V.\nGoverning laws — the incremental conductance of the element and the small-signal KCL:\n$$g_D = \\left.\\frac{di_D}{dv_D}\\right|_{V_o} = 1 + 2V_o \\qquad \\frac{\\Delta v - v_o}{8} + \\Delta i = g_D v_o$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — conductance at the bias point:\n$$g_D = 1 + 2 \\times 3.188$$\n$$g_D = 1 + 6.376$$\n$$g_D = 7.376\\ S$$\nStep B — small-signal KCL (with $v_X = (\\Delta v + v_o)/2$ as before):\n$$\\frac{\\Delta v - v_o}{8} + \\Delta i = g_D v_o$$\n$$\\frac{0.2 - v_o}{8} + 0.1 = 7.376 v_o$$\n$$0.025 - 0.125v_o + 0.1 = 7.376 v_o$$\n$$0.125 = 7.501 v_o$$\n$$v_o = \\frac{0.125}{7.501}$$\n$$v_o = 0.01666\\ V = 16.7\\ mV$$\n\n**Step 3: Verification & Physical Interpretation**\n\nA 200 mV input perturbation produces only 16.7 mV at the output — the low 4 Ω resistors fight the high conductance (7.4 S) of the nonlinear element, so most of the perturbation is absorbed by the current-source path. The AC gain is $\\Delta v_o/\\Delta v = 0.0167/0.2 = 0.083$ (−21.6 dB).\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (167 mV)**: the student forgets the $-1$ in the conductance derivative ($g_D = 2V_o$ alone → larger... actually uses $g_D = 2V_o$ and drops Δi).\n- **Option C trap (1.67 mV)**: a factor-of-10 slip in the denominator (7.5 → 75).\n- **Option D trap (33.3 mV)**: the student doubles the perturbation (uses 400 mV) or halves the denominator.\nr"
+  },
+  {
+    "id": "eee252_rectifiers_01",
+    "topicId": "eee252-rectifiers",
+    "kind": "theory",
+    "question": "Match each rectifier to its diode count and PIV: (a) half-wave (b) centre-tapped full-wave (c) bridge full-wave.",
+    "options": [
+"1 diode, PIV = Vₘ; 2 diodes, PIV = 2Vₘ; 4 diodes, PIV = Vₘ",
+"1 diode, PIV = 2Vₘ; 2 diodes, PIV = Vₘ; 4 diodes, PIV = 2Vₘ",
+"2 diodes, PIV = Vₘ; 1 diode, PIV = 2Vₘ; 4 diodes, PIV = 2Vₘ",
+"1 diode, PIV = Vₘ/2; 2 diodes, PIV = Vₘ; 4 diodes, PIV = Vₘ/2"
+    ],
+    "correct": 0,
+    "short": "Half-wave: 1 diode, PIV = Vₘ. Centre-tap: 2 diodes, PIV = 2Vₘ. Bridge: 4 diodes, PIV = Vₘ.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\n- Half-wave: one diode conducts on alternate half-cycles; the OFF diode blocks the full peak $V_m$.\n- Centre-tapped full-wave: two diodes conduct alternately; the OFF diode sees the FULL secondary winding, i.e. $2V_m$.\n- Bridge full-wave: four diodes, two conducting at a time; each OFF diode blocks only $V_m$ (the other series diode shares the voltage).\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: 1/Vₘ, 2/2Vₘ, 4/Vₘ — the standard summary table.\n- **Option B (wrong)**: swaps the half-wave and centre-tap PIVs, and gives the bridge 2Vₘ.\n- **Option C (wrong)**: wrong diode counts (half-wave uses 1, not 2).\n- **Option D (wrong)**: halves the PIV values.\n\n**Step 3: Exam Trap Summary**\n\nThe centre-tap $2V_m$ vs bridge $V_m$ distinction is the classic PIV trap. Anchor: the OFF diode in the centre-tap circuit sees the whole secondary (two halves in series); in the bridge it sees only one winding voltage.\nr"
+  },
+  {
+    "id": "eee252_rectifiers_02",
+    "topicId": "eee252-rectifiers",
+    "kind": "calc",
+    "question": "A centre-tapped full-wave rectifier is fed from a transformer whose total secondary voltage is 200 V r.m.s. (100–0–100 V). The PIV rating each diode must withstand is:",
+    "options": [
+"282.8 V",
+"141.4 V",
+"200 V",
+"100 V"
+    ],
+    "correct": 0,
+    "short": "PIV = 2Vₘ where $V_m = \\sqrt{2}\\times100 = 141.4$ V, so PIV = 282.8 V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: centre-tapped secondary, 100–0–100 V r.m.s. (each half = 100 V r.m.s.).\nGoverning laws:\n$$V_m = \\sqrt{2}\\,V_{rms} \\qquad \\text{PIV}_{CT} = 2V_m$$\n\n**Step 2: Full Mathematical Workings**\n\nPeak voltage per half-winding:\n$$V_m = \\sqrt{2} \\times 100$$\n$$V_m = 1.414 \\times 100$$\n$$V_m = 141.4\\ V$$\nPIV of the centre-tapped rectifier:\n$$\\text{PIV} = 2V_m$$\n$$\\text{PIV} = 2 \\times 141.4$$\n$$\\text{PIV} = 282.8\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nWhen diode D1 conducts, diode D2 is OFF and must block the sum of the two half-winding peaks — hence $2V_m$. The design rule: choose diodes rated comfortably above 282.8 V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (141.4 V)**: the student uses $V_m$ only — the BRIDGE PIV, not the centre-tap.\n- **Option C trap (200 V)**: the student forgets the $\\sqrt{2}$ peak conversion.\n- **Option D trap (100 V)**: the student uses the r.m.s. value of one half-winding.\nr"
+  },
+  {
+    "id": "eee252_rectifiers_03",
+    "topicId": "eee252-rectifiers",
+    "kind": "calc",
+    "question": "A bridge rectifier is fed from a 50 V r.m.s. secondary. The DC output voltage of the unfiltered rectifier is about:",
+    "options": [
+"45.0 V",
+"31.8 V",
+"70.7 V",
+"22.5 V"
+    ],
+    "correct": 0,
+    "short": "$V_{DC} = 2V_m/\\pi$ with $V_m = \\sqrt{2}\\times50 = 70.71$ V ⇒ $V_{DC} = 141.4/\\pi = 45.0$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{rms} = 50$ V (bridge full-wave).\nGoverning laws:\n$$V_m = \\sqrt{2}\\,V_{rms} \\qquad V_{DC} = \\frac{2V_m}{\\pi}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_m = 1.414 \\times 50$$\n$$V_m = 70.71\\ V$$\n$$V_{DC} = \\frac{2 \\times 70.71}{\\pi}$$\n$$V_{DC} = \\frac{141.42}{3.1416}$$\n$$V_{DC} = 45.0\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe full-wave DC average is $0.636V_m$; the two diode drops (≈1.4 V) are neglected under the ideal assumption, so the unfiltered output averages 45 V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (31.8 V)**: the student uses the HALF-wave average $V_m/\\pi$.\n- **Option C trap (70.7 V)**: the student reports the PEAK value.\n- **Option D trap (22.5 V)**: the student halves the full-wave average.\nr"
+  },
+  {
+    "id": "eee252_rectifiers_04",
+    "topicId": "eee252-rectifiers",
+    "kind": "calc",
+    "question": "A full-wave rectifier with a capacitor filter supplies a load current of 100 mA. The line frequency is 50 Hz and the filter capacitor is 1000 µF. The approximate ripple voltage is:",
+    "options": [
+"1 V",
+"2 V",
+"0.5 V",
+"10 V"
+    ],
+    "correct": 0,
+    "short": "Full-wave: $V_r = I_L/(2fC) = 0.1/(2\\times50\\times10^{-3}) = 1$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_L = 100$ mA $= 0.1$ A, $f = 50$ Hz, $C = 1000\\ \\mu F = 10^{-3}$ F.\nGoverning law — ripple of a full-wave rectifier with capacitor filter:\n$$V_r = \\frac{I_L}{2fC}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_r = \\frac{0.1}{2 \\times 50 \\times 10^{-3}}$$\n$$2 \\times 50 = 100$$\n$$100 \\times 10^{-3} = 0.1$$\n$$V_r = \\frac{0.1}{0.1}$$\n$$V_r = 1\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe capacitor discharges for half a line period (10 ms) between peaks; 100 mA draining a 1000 µF capacitor for 10 ms drops it by $\\Delta V = I\\Delta t/C = 0.1 \\times 0.01/10^{-3} = 1$ V — matching the formula. Note the ripple FREQUENCY is 100 Hz (2f), which halves the discharge time relative to half-wave.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2 V)**: the student uses the HALF-wave formula ($I_L/fC$).\n- **Option C trap (0.5 V)**: the student uses 200 Hz (or 2f for a 100 Hz line).\n- **Option D trap (10 V)**: a factor-of-10 slip in the capacitance (100 µF).\nr"
+  },
+  {
+    "id": "eee252_rectifiers_05",
+    "topicId": "eee252-rectifiers",
+    "kind": "theory",
+    "question": "Which list correctly ranks the three rectifier circuits by ripple factor (highest to lowest)?",
+    "options": [
+"Half-wave (121%), centre-tap full-wave (48%), bridge full-wave (48%)",
+"Bridge (121%), centre-tap (48%), half-wave (48%)",
+"All three have the same ripple factor",
+"Half-wave (48%), full-wave (121%)"
+    ],
+    "correct": 0,
+    "short": "Half-wave ripple factor ≈ 1.21; both full-wave types ≈ 0.48.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nRipple factor $\\gamma = V_{r(rms)}/V_{DC}$: half-wave rectification leaves large gaps (γ ≈ 1.21, i.e. 121% of the DC value is AC ripple). Full-wave rectification (centre-tap OR bridge — they produce identical output waveforms) fills the negative half-cycles, cutting the ripple to γ ≈ 0.48.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: 121% then 48% then 48%.\n- **Option B (wrong)**: attributes 121% to the bridge.\n- **Option C (wrong)**: the waveforms are objectively different.\n- **Option D (wrong)**: reverses the ranking.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is treating the bridge as \"better\" than the centre-tap for RIPPLE — they are electrically identical outputs (both full-wave). They differ only in PIV and diode count.\nr"
+  },
+  {
+    "id": "eee252_rectifiers_06",
+    "topicId": "eee252-rectifiers",
+    "kind": "calc",
+    "question": "For the same load and capacitor, a full-wave rectifier's ripple is 1 V. If the circuit were changed to HALF-wave (same C, same load, same frequency), the ripple would become about:",
+    "options": [
+"2 V",
+"0.5 V",
+"1 V",
+"4 V"
+    ],
+    "correct": 0,
+    "short": "Half-wave discharges for a FULL period (twice as long), so $V_r$ doubles: 2 V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGoverning laws:\n$$V_{r(HW)} = \\frac{I_L}{fC} \\qquad V_{r(FW)} = \\frac{I_L}{2fC}$$\nThe half-wave capacitor must support the load for the FULL line period between peaks, exactly twice the full-wave discharge time.\n\n**Step 2: Full Mathematical Workings**\n\n$$\\frac{V_{r(HW)}}{V_{r(FW)}} = \\frac{I_L/(fC)}{I_L/(2fC)}$$\n$$\\frac{V_{r(HW)}}{V_{r(FW)}} = 2$$\n$$V_{r(HW)} = 2 \\times 1\\ V = 2\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nWith only one peak per cycle, the capacitor discharges for 20 ms instead of 10 ms, losing twice the voltage. This is a major reason full-wave rectification is standard in power supplies.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.5 V)**: the student halves instead of doubles (thinking \"full-wave is worse\").\n- **Option C trap (1 V)**: the student assumes ripple is independent of the rectifier type.\n- **Option D trap (4 V)**: the student doubles twice (also changing the frequency term).\nr"
+  },
+  {
+    "id": "eee252_opamp_01",
+    "topicId": "eee252-opamp",
+    "kind": "theory",
+    "question": "State the ideal op-amp assumptions and the resulting virtual-short rule.",
+    "options": [
+"Infinite open-loop gain, infinite input impedance, zero output impedance; with negative feedback v₊ = v₋ and i₊ = i₋ = 0",
+"Finite gain of 10, low input impedance, high output impedance; v₊ > v₋ always",
+"Unity gain, input currents set by the source, output depends on load",
+"Infinite gain only; the input currents are arbitrary"
+    ],
+    "correct": 0,
+    "short": "Ideal: A→∞, R_in→∞, R_out = 0; with negative feedback the virtual short gives v₊ = v₋, i₊ = i₋ = 0.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe ideal op-amp has: (1) infinite open-loop gain $A \\to \\infty$; (2) infinite input impedance (no input currents); (3) zero output impedance; (4) infinite bandwidth. Under NEGATIVE feedback, finite output requires $v_+ - v_- = v_o/A \\to 0$, giving the VIRTUAL SHORT: $v_+ = v_-$, and since input impedance is infinite, $i_+ = i_- = 0$.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the full set of ideal assumptions plus the virtual-short consequence.\n- **Option B (wrong)**: those are non-ideal, low-quality characteristics.\n- **Option C (wrong)**: the gain is infinite, not unity; input currents are zero.\n- **Option D (wrong)**: incomplete — the input currents must be zero too.\n\n**Step 3: Exam Trap Summary**\n\nThe virtual short requires NEGATIVE FEEDBACK — with positive feedback or open loop it does NOT apply. State that condition explicitly in every exam answer.\nr"
+  },
+  {
+    "id": "eee252_opamp_02",
+    "topicId": "eee252-opamp",
+    "kind": "calc",
+    "question": "An inverting amplifier has $R_1 = 10$ kΩ (input) and $R_2 = 100$ kΩ (feedback). The closed-loop voltage gain is:",
+    "options": [
+"−10",
+"+10",
+"−11",
+"+11"
+    ],
+    "correct": 0,
+    "short": "$A_v = -R_2/R_1 = -100/10 = -10$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_1 = 10$ kΩ, $R_2 = 100$ kΩ.\nGoverning law — inverting amplifier gain:\n$$A_v = -\\frac{R_2}{R_1}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$A_v = -\\frac{100\\ k\\Omega}{10\\ k\\Omega}$$\n$$A_v = -\\frac{100}{10}$$\n$$A_v = -10$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe inverting node is a virtual ground; the input current $v_i/10$k flows through the feedback resistor, producing $v_o = -100k \\times v_i/10k = -10v_i$. The minus sign reflects the phase inversion of the inverting topology.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (+10)**: the student drops the minus sign — the #1 inverting-amplifier error.\n- **Option C trap (−11)**: the student uses the NON-inverting formula $1 + R_2/R_1$.\n- **Option D trap (+11)**: both errors combined.\nr"
+  },
+  {
+    "id": "eee252_opamp_03",
+    "topicId": "eee252-opamp",
+    "kind": "calc",
+    "question": "A non-inverting amplifier uses $R_1 = 20$ kΩ (to ground) and $R_2 = 80$ kΩ (feedback). The gain is:",
+    "options": [
+"+5",
+"−5",
+"+4",
+"−4"
+    ],
+    "correct": 0,
+    "short": "$A_v = 1 + R_2/R_1 = 1 + 80/20 = 5$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_1 = 20$ kΩ, $R_2 = 80$ kΩ.\nGoverning law — non-inverting amplifier:\n$$A_v = 1 + \\frac{R_2}{R_1}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$A_v = 1 + \\frac{80}{20}$$\n$$A_v = 1 + 4$$\n$$A_v = +5$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe feedback divider feeds $v_- = v_o R_1/(R_1+R_2)$ back; the virtual short sets it equal to $v_i$: $v_i = v_o \\times 20/100 \\Rightarrow v_o = 5v_i$. Gain is positive (no inversion) and always ≥ 1.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−5)**: the student applies the inverting sign convention.\n- **Option C trap (+4)**: the student forgets the leading \"1\" (uses $R_2/R_1$ only).\n- **Option D trap (−4)**: both errors.\nr"
+  },
+  {
+    "id": "eee252_opamp_04",
+    "topicId": "eee252-opamp",
+    "kind": "calc",
+    "question": "A summing amplifier has $R_1 = 10$ kΩ, $R_2 = 20$ kΩ and feedback $R_f = 100$ kΩ. With $v_1 = 0.5$ V and $v_2 = 0.4$ V (both fed to the inverting node), the output is:",
+    "options": [
+"−7 V",
+"+7 V",
+"−5 V",
+"−3 V"
+    ],
+    "correct": 0,
+    "short": "$v_o = -R_f(v_1/R_1 + v_2/R_2) = -100k(0.5/10k + 0.4/20k) = -(5 + 2) = -7$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_1 = 10$ kΩ, $R_2 = 20$ kΩ, $R_f = 100$ kΩ, $v_1 = 0.5$ V, $v_2 = 0.4$ V.\nGoverning law — inverting summing amplifier:\n$$v_o = -R_f\\left(\\frac{v_1}{R_1} + \\frac{v_2}{R_2}\\right)$$\n\n**Step 2: Full Mathematical Workings**\n\nFirst term:\n$$\\frac{v_1}{R_1} = \\frac{0.5}{10\\ k} = 50\\ \\mu A$$\nSecond term:\n$$\\frac{v_2}{R_2} = \\frac{0.4}{20\\ k} = 20\\ \\mu A$$\nSum of input currents (virtual ground at the inverting node):\n$$50 + 20 = 70\\ \\mu A$$\nOutput:\n$$v_o = -100\\ k \\times 70\\ \\mu A$$\n$$v_o = -7\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nEach input contributes its own weighted gain ($-R_f/R_1 = -10$ and $-R_f/R_2 = -5$): $v_o = -10 \\times 0.5 - 5 \\times 0.4 = -5 - 2 = -7$ V. The summing junction performs a weighted average with inversion.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (+7 V)**: sign error.\n- **Option C trap (−5 V)**: the student includes only the $v_1$ term.\n- **Option D trap (−3 V)**: the student averages the gains wrongly (e.g. $(10+5)/2 \\times 0.45$).\nr"
+  },
+  {
+    "id": "eee252_opamp_05",
+    "topicId": "eee252-opamp",
+    "kind": "calc",
+    "question": "A difference amplifier has $R_1 = R_3 = 10$ kΩ and $R_2 = R_4 = 100$ kΩ. With $v_1 = 0.1$ V at the inverting input and $v_2 = 0.3$ V at the non-inverting input, the output is:",
+    "options": [
+"+2 V",
+"−2 V",
+"+4 V",
+"−4 V"
+    ],
+    "correct": 0,
+    "short": "$v_o = (R_2/R_1)(v_2 - v_1) = 10 \\times 0.2 = +2$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_1 = R_3 = 10$ kΩ, $R_2 = R_4 = 100$ kΩ, $v_1 = 0.1$ V, $v_2 = 0.3$ V.\nGoverning law — difference amplifier with matched resistor ratios:\n$$v_o = \\frac{R_2}{R_1}(v_2 - v_1)$$\n\n**Step 2: Full Mathematical Workings**\n\nDifferential gain:\n$$\\frac{R_2}{R_1} = \\frac{100}{10} = 10$$\nInput difference:\n$$v_2 - v_1 = 0.3 - 0.1 = 0.2\\ V$$\nOutput:\n$$v_o = 10 \\times 0.2$$\n$$v_o = +2\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe non-inverting path divides $v_2$ by $R_3/(R_3+R_4) = 1/11$ and the inverting path superimposes; with matched pairs the result is the clean difference scaled by $R_2/R_1$. The output is positive because $v_2 > v_1$.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−2 V)**: the student subtracts in the wrong order ($v_1 - v_2$).\n- **Option C trap (+4 V)**: the student adds the inputs ($0.1 + 0.3 = 0.4$) before scaling.\n- **Option D trap (−4 V)**: both errors.\nr"
+  },
+  {
+    "id": "eee252_opamp_06",
+    "topicId": "eee252-opamp",
+    "kind": "theory",
+    "question": "Which transfer function belongs to a Miller (inverting) integrator built with input resistor R and feedback capacitor C?",
+    "options": [
+"$T(s) = -1/(sRC)$",
+"$T(s) = -sRC$",
+"$T(s) = 1 + sRC$",
+"$T(s) = -RC$"
+    ],
+    "correct": 0,
+    "short": "Integrator: $v_o = -(1/RC)\\int v_i\\,dt$ ⇔ $T(s) = -1/(sRC)$ (a pole at the origin).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nWith the inverting node at virtual ground, $i_R = v_i/R$ flows into the feedback capacitor, so $v_o = -\\frac{1}{C}\\int i_R\\,dt = -\\frac{1}{RC}\\int v_i\\,dt$. In the s-domain (capacitor impedance $1/sC$):\n$$T(s) = \\frac{V_o}{V_i} = -\\frac{1/(sC)}{R} = -\\frac{1}{sRC}$$\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: $-1/(sRC)$ — a pole at the origin, infinite DC gain.\n- **Option B (wrong)**: $-sRC$ is the DIFFERENTIATOR.\n- **Option C (wrong)**: $1 + sRC$ is a lead network, not an integrator.\n- **Option D (wrong)**: a constant — no frequency dependence at all.\n\n**Step 3: Exam Trap Summary**\n\nIntegrator ↔ differentiator reversal is the classic trap: integration ⇒ $1/s$ (pole at origin, passes DC infinitely), differentiation ⇒ $s$ (zero at origin, blocks DC). Also, the inverting integrator's sign is negative.\nr"
+  },
+  {
+    "id": "eee252_opamp_07",
+    "topicId": "eee252-opamp",
+    "kind": "theory",
+    "question": "CMRR of an op-amp is defined as:",
+    "options": [
+"$CMRR = |A_d/A_{cm}|$, where $A_d$ is the differential gain and $A_{cm}$ the common-mode gain; often quoted as $20\\log_{10}CMRR$ dB",
+"$CMRR = A_d \\times A_{cm}$",
+"$CMRR = A_{cm}/A_d$",
+"$CMRR = A_d + A_{cm}$"
+    ],
+    "correct": 0,
+    "short": "CMRR is the ratio of differential to common-mode gain; in dB: 20log₁₀(CMRR).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nAn op-amp amplifies the differential signal $v_d = v_+ - v_-$ with gain $A_d$ and, ideally, rejects the common-mode signal $v_{cm}$. The common-mode rejection ratio quantifies the rejection:\n$$CMRR = \\left|\\frac{A_d}{A_{cm}}\\right|$$\nexpressed in decibels as $CMRR_{dB} = 20\\log_{10}(CMRR)$. Ideal op-amps have $A_{cm} = 0$ ⇒ infinite CMRR.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the ratio with its dB form.\n- **Option B (wrong)**: the product has no rejection meaning.\n- **Option C (wrong)**: the reciprocal — it would BLOW UP for a good amplifier.\n- **Option D (wrong)**: gains are ratios to be divided, not added.\n\n**Step 3: Exam Trap Summary**\n\nTwo traps: inverting the ratio (it must be large for a GOOD amplifier) and forgetting the dB form uses $20\\log_{10}$ (voltage gains), not $10\\log_{10}$ (power).\nr"
+  },
+  {
+    "id": "eee252_opamp_08",
+    "topicId": "eee252-opamp",
+    "kind": "calc",
+    "question": "An inverting op-amp circuit has feedback impedance formed by $R_2$ in parallel with capacitor C (from output to inverting node) and input resistor $R_L = 20$ kΩ. The low-frequency gain is −5 and the high-frequency gain is −3. The required $R_2$ and $R_3$ (where $R_3$ is in series with C inside the feedback branch) are:",
+    "options": [
+"$R_2 = 100$ kΩ, $R_3 = 150$ kΩ",
+"$R_2 = 60$ kΩ, $R_3 = 90$ kΩ",
+"$R_2 = 100$ kΩ, $R_3 = 100$ kΩ",
+"$R_2 = 150$ kΩ, $R_3 = 100$ kΩ"
+    ],
+    "correct": 0,
+    "short": "DC: $R_2/R_L = 5$ ⇒ $R_2 = 100$ kΩ; HF: $(R_2\\parallel R_3)/R_L = 3$ ⇒ $R_3 = 150$ kΩ.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_L = 20$ kΩ (input resistor), $|A_{DC}| = 5$, $|A_{HF}| = 3$.\nCircuit layout (textual): input $v_i$ → $R_L$ → inverting node; feedback branch from output to inverting node = $R_2$ in parallel with ($R_3$ in series with C).\nGoverning laws — inverting gain at the two extremes:\n$$|A_{DC}| = \\frac{R_2}{R_L} \\qquad |A_{HF}| = \\frac{R_2 \\parallel R_3}{R_L}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — at DC the capacitor is an open circuit, so only $R_2$ is in the feedback path:\n$$\\frac{R_2}{R_L} = 5$$\n$$R_2 = 5 \\times 20\\ k\\Omega = 100\\ k\\Omega$$\nStep B — at high frequency the capacitor is a short, so $R_3$ appears in parallel with $R_2$:\n$$\\frac{R_2 \\parallel R_3}{R_L} = 3$$\n$$\\frac{100k \\times R_3}{100k + R_3} = 3 \\times 20k = 60k$$\n$$100k \\times R_3 = 60k(100k + R_3)$$\n$$100R_3 = 6000k + 60R_3$$\n$$40R_3 = 6000k$$\n$$R_3 = 150\\ k\\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nChecking: $R_2 \\parallel R_3 = 100k \\parallel 150k = \\frac{100 \\times 150}{250}k = 60$ kΩ, and $60/20 = 3$ — the high-frequency gain. The circuit is a lead-lag (shelving) amplifier: gain falls from 5 to 3 as the capacitor shorts $R_3$ at high frequency.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student scales both resistors by the wrong input resistance (12 kΩ).\n- **Option C trap**: $R_2 = R_3$ would give HF gain $50/20 = 2.5$, not 3 — no parallel computation done.\n- **Option D trap**: the student swaps $R_2$ and $R_3$ in the DC/HF roles.\nr"
+  },
+  {
+    "id": "eee252_opamp_09",
+    "topicId": "eee252-opamp",
+    "kind": "theory",
+    "question": "For a second-order active filter with transfer function $T(s) = \\frac{K}{s^2/\\omega_0^2 + s/(Q\\omega_0) + 1}$, match the terms: (a) K (b) Q (c) $\\omega_0$.",
+    "options": [
+"DC (passband) gain; quality factor (sharpness of the peak); natural (pole) frequency",
+"corner frequency; gain; damping ratio",
+"quality factor; natural frequency; gain",
+"gain; natural frequency; quality factor"
+    ],
+    "correct": 0,
+    "short": "K = passband gain, Q = quality factor, ω₀ = natural frequency.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe standard second-order low-pass form is:\n$$T(s) = \\frac{K}{\\frac{s^2}{\\omega_0^2} + \\frac{s}{Q\\omega_0} + 1}$$\n- $K$: the passband (low-frequency, $s \\to 0$) gain.\n- $\\omega_0$: the natural (undamped) frequency — the location of the pole pair's radius.\n- $Q$: the quality factor — the ratio $\\omega_0/$bandwidth, measuring resonance sharpness ($Q = 0.707$ gives the maximally-flat Butterworth response).\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: gain, Q, natural frequency.\n- **Option B (wrong)**: mislabels all three.\n- **Option C (wrong)**: scrambles the three labels.\n- **Option D (wrong)**: swaps Q and $\\omega_0$.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is reading Q and $\\omega_0$ from the wrong coefficients. Always bring the denominator to the standard form with leading coefficient 1 and then read $\\omega_0$ from the $s^2$ term and Q from the $s$ term: $Q = \\omega_0/(\\text{coefficient of } s)$.\nr"
+  },
+  {
+    "id": "eee252_mosfet_01",
+    "topicId": "eee252-mosfet",
+    "kind": "theory",
+    "question": "State the two main types of MOSFET, and describe their structure and circuit symbols.",
+    "options": [
+"Enhancement type (normally OFF, needs a gate voltage to form the channel) and depletion type (channel exists at $V_{GS} = 0$); the symbol arrow points IN for NMOS and OUT for PMOS",
+"NPN and PNP types, with the arrow at the base",
+"Forward and reverse types, distinguished by the gate oxide colour",
+"Silicon and germanium types, with three and four terminals respectively"
+    ],
+    "correct": 0,
+    "short": "MOSFETs are enhancement (normally-off) or depletion (normally-on); NMOS arrow points in, PMOS out.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nMOSFETs come in two structural types:\n- ENHANCEMENT: no conducting channel at $V_{GS} = 0$ — a gate voltage above the threshold $V_t$ must INDUCE the channel (normally OFF). Cross-section: source and drain n⁺ regions separated by a p-substrate, with a thin oxide under the metal gate; the induced channel bridges source and drain.\n- DEPLETION: a channel is implanted so the device conducts at $V_{GS} = 0$ and the gate voltage can deplete it (normally ON).\nCircuit symbols: the arrow on the body/source terminal points INWARD (toward the channel) for NMOS and OUTWARD for PMOS; the depletion symbol has a solid channel bar, the enhancement symbol a broken bar.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: both types plus the arrow conventions.\n- **Option B (wrong)**: NPN/PNP are BJT types, and BJTs have three terminals.\n- **Option C (wrong)**: \"forward/reverse\" is not a MOSFET classification.\n- **Option D (wrong)**: silicon/germanium is a material choice, not a structural type.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is the arrow direction and the \"normally\" state. Anchor: eNhancement = No channel initially; NMOS arrow iN. In the written exam, sketch both cross-sections showing the oxide and the induced channel.\nr"
+  },
+  {
+    "id": "eee252_mosfet_02",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A process technology has $L_{min} = 0.4$ µm, $t_{ox} = 8$ nm, $\\mu_n = 450$ cm²/V·s, $V_t = 0.7$ V and $\\varepsilon_{ox} = 3.45\\times10^{-11}$ F/m. The oxide capacitance per unit area $C_{ox}$ is:",
+    "options": [
+"4.31 fF/µm²",
+"0.431 fF/µm²",
+"43.1 fF/µm²",
+"8.63 fF/µm²"
+    ],
+    "correct": 0,
+    "short": "$C_{ox} = \\varepsilon_{ox}/t_{ox} = 3.45\\times10^{-11}/(8\\times10^{-9}) = 4.31$ mF/m² = 4.31 fF/µm².",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $t_{ox} = 8$ nm $= 8 \\times 10^{-9}$ m, $\\varepsilon_{ox} = 3.45 \\times 10^{-11}$ F/m.\nGoverning law:\n$$C_{ox} = \\frac{\\varepsilon_{ox}}{t_{ox}}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$C_{ox} = \\frac{3.45 \\times 10^{-11}}{8 \\times 10^{-9}}$$\n$$C_{ox} = 4.3125 \\times 10^{-3}\\ F/m^2 = 4.31\\ mF/m^2$$\nConvert to the standard unit (fF/µm²):\n$$1\\ \\frac{F}{m^2} = \\frac{10^{15}\\ fF}{10^{12}\\ \\mu m^2} = 10^{3}\\ fF/\\mu m^2$$\n$$C_{ox} = 4.31\\ fF/\\mu m^2$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAbout 4.3 fF/µm² is a typical value for an 8 nm gate oxide — remember $C_{ox}$ grows as $t_{ox}$ shrinks (that is why modern processes scale the oxide down).\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.431)**: a factor-of-10 error in $t_{ox}$ (80 nm) or the unit conversion.\n- **Option C trap (43.1)**: the student treats $t_{ox}$ as 0.8 nm.\n- **Option D trap (8.63)**: the student divides by $t_{ox}^2$ or doubles $\\varepsilon_{ox}$.\nr"
+  },
+  {
+    "id": "eee252_mosfet_03",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same process ($C_{ox} = 4.31$ fF/µm², $\\mu_n = 450$ cm²/V·s), the process transconductance parameter $k'_n = \\mu_n C_{ox}$ is:",
+    "options": [
+"194 µA/V²",
+"19.4 µA/V²",
+"1.94 mA/V²",
+"97 µA/V²"
+    ],
+    "correct": 0,
+    "short": "$k'_n = \\mu_n C_{ox} = 0.045 \\times 4.3125\\times10^{-3} = 1.94\\times10^{-4}$ A/V² = 194 µA/V².",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\mu_n = 450$ cm²/V·s $= 450 \\times 10^{-4}$ m²/V·s $= 0.045$ m²/V·s, $C_{ox} = 4.3125 \\times 10^{-3}$ F/m².\nGoverning law:\n$$k'_n = \\mu_n C_{ox}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$k'_n = 0.045 \\times 4.3125 \\times 10^{-3}$$\n$$0.045 \\times 4.3125 = 0.19406$$\n$$k'_n = 0.19406 \\times 10^{-3}$$\n$$k'_n = 1.94 \\times 10^{-4}\\ A/V^2 = 194\\ \\mu A/V^2$$\n\n**Step 3: Verification & Physical Interpretation**\n\n194 µA/V² is a textbook-typical value for a 0.4 µm technology. The device parameter for a given geometry follows as $k_n = k'_n (W/L)$.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (19.4)**: the student forgets the cm²→m² conversion (divides by 10 again).\n- **Option C trap (1.94 mA/V²)**: the student keeps $C_{ox}$ in F/cm² without converting.\n- **Option D trap (97)**: the student halves $\\mu_n$ (thinks in terms of hole mobility).\nr"
+  },
+  {
+    "id": "eee252_mosfet_04",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A MOSFET in this process has $W/L = 8$ µm/0.8 µm (so $k_n = k'_n(W/L)$ with $k'_n = 194$ µA/V²) and $V_t = 0.7$ V. To operate in saturation at $I_D = 100$ µA, the required overdrive voltage $V_{OV}$ is:",
+    "options": [
+"0.321 V",
+"0.226 V",
+"0.103 V",
+"0.454 V"
+    ],
+    "correct": 0,
+    "short": "$k_n = 194\\mu \\times 10 = 1.94$ mA/V²; $V_{OV} = \\sqrt{2I_D/k_n} = \\sqrt{2\\times100\\mu/1.94m} = 0.321$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $W/L = 8/0.8 = 10$, $k'_n = 194$ µA/V², $I_D = 100$ µA, $V_t = 0.7$ V.\nGoverning laws:\n$$k_n = k'_n\\frac{W}{L} \\qquad I_D = \\frac{1}{2}k_n V_{OV}^2$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — device parameter:\n$$k_n = 194 \\times 10^{-6} \\times \\frac{8}{0.8}$$\n$$k_n = 194 \\times 10^{-6} \\times 10$$\n$$k_n = 1.94 \\times 10^{-3}\\ A/V^2$$\nStep B — solve the saturation equation for the overdrive:\n$$V_{OV} = \\sqrt{\\frac{2I_D}{k_n}}$$\n$$V_{OV} = \\sqrt{\\frac{2 \\times 100 \\times 10^{-6}}{1.94 \\times 10^{-3}}}$$\n$$V_{OV} = \\sqrt{0.10309}$$\n$$V_{OV} = 0.321\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nChecking: $I_D = \\frac{1}{2} \\times 1.94\\text{m} \\times 0.321^2 = 0.97\\text{m} \\times 0.103 = 100$ µA — exact. The overdrive of 0.32 V is the \"excess\" gate voltage above threshold that sets the channel current.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.226 V)**: the student forgets the factor 2 inside the square root.\n- **Option C trap (0.103 V)**: the student reports $V_{OV}^2$ instead of taking the root.\n- **Option D trap (0.454 V)**: the student uses $k_n = k'_n$ (forgets W/L = 10).\nr"
+  },
+  {
+    "id": "eee252_mosfet_05",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same device ($I_D = 100$ µA, $V_{OV} = 0.321$ V, $V_t = 0.7$ V), the required $V_{GS}$ and the minimum $V_{DS}$ for saturation are:",
+    "options": [
+"$V_{GS} = 1.021$ V, $V_{DS(min)} = 0.321$ V",
+"$V_{GS} = 1.021$ V, $V_{DS(min)} = 0.7$ V",
+"$V_{GS} = 0.321$ V, $V_{DS(min)} = 1.021$ V",
+"$V_{GS} = 1.4$ V, $V_{DS(min)} = 0.7$ V"
+    ],
+    "correct": 0,
+    "short": "$V_{GS} = V_t + V_{OV} = 0.7 + 0.321 = 1.021$ V; saturation needs $V_{DS} \\ge V_{OV} = 0.321$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_t = 0.7$ V, $V_{OV} = 0.321$ V.\nGoverning laws:\n$$V_{GS} = V_t + V_{OV} \\qquad V_{DS(min)} = V_{OV}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{GS} = 0.7 + 0.321$$\n$$V_{GS} = 1.021\\ V$$\n$$V_{DS(min)} = V_{OV} = 0.321\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe saturation boundary is the pinch-off condition $V_{DS} = V_{GS} - V_t = V_{OV}$: at 0.321 V of drain voltage the channel just pinches off. The gate needs 1.021 V — the threshold plus the overdrive needed for 100 µA.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student confuses $V_{DS(min)}$ with $V_t$ (pinch-off needs $V_{OV}$, not $V_t$).\n- **Option C trap**: the student swaps $V_{GS}$ and $V_{DS(min)}$.\n- **Option D trap**: the student takes $V_{OV} = 0.7$ V (forgets the calculation).\nr"
+  },
+  {
+    "id": "eee252_mosfet_06",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same device ($k_n = 1.94$ mA/V², $V_t = 0.7$ V), find $V_{OV}$ and $V_{GS}$ required for the MOSFET to operate as a 1000 Ω resistor for a very small $V_{DS}$.",
+    "options": [
+"$V_{OV} = 0.515$ V, $V_{GS} = 1.215$ V",
+"$V_{OV} = 0.515$ V, $V_{GS} = 0.515$ V",
+"$V_{OV} = 1.94$ V, $V_{GS} = 2.64$ V",
+"$V_{OV} = 0.258$ V, $V_{GS} = 0.958$ V"
+    ],
+    "correct": 0,
+    "short": "Triode region: $r_{DS} = 1/(k_n V_{OV})$ ⇒ $V_{OV} = 1/(1.94m \\times 1000) = 0.515$ V; $V_{GS} = 1.215$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $k_n = 1.94$ mA/V², $V_t = 0.7$ V, target resistance $r_{DS} = 1000$ Ω at very small $V_{DS}$.\nGoverning law — triode-region channel resistance for $V_{DS} \\ll V_{OV}$:\n$$r_{DS} = \\frac{1}{k_n(V_{GS} - V_t)} = \\frac{1}{k_n V_{OV}}$$\n\n**Step 2: Full Mathematical Workings**\n\nSolve for the overdrive:\n$$V_{OV} = \\frac{1}{k_n r_{DS}}$$\n$$V_{OV} = \\frac{1}{1.94 \\times 10^{-3} \\times 1000}$$\n$$V_{OV} = \\frac{1}{1.94}$$\n$$V_{OV} = 0.5155\\ V \\approx 0.515\\ V$$\nGate voltage:\n$$V_{GS} = V_t + V_{OV}$$\n$$V_{GS} = 0.7 + 0.5155$$\n$$V_{GS} = 1.2155\\ V \\approx 1.215\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nIn deep triode ($V_{DS} \\to 0$) the channel is a linear resistor controlled by the gate. Checking: $1/(1.94m \\times 0.5155) = 1000$ Ω — exact. This is how MOSFETs implement tunable resistances and switches in IC design.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student equates $V_{GS}$ with $V_{OV}$, forgetting to add $V_t$.\n- **Option C trap**: the student uses $V_{OV} = k_n$ numerically (unit confusion) and adds wrongly.\n- **Option D trap**: the student uses $r_{DS} = 2/(k_n V_{OV})$ (a factor-2 slip from the saturation formula).\nr"
+  },
+  {
+    "id": "eee252_mosfet_07",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A common-source amplifier operated from $V_{DD} = 2$ V has a maximum small-signal gain magnitude of 14 V/V. The overdrive voltage $V_{OV}$ at which the transistor operates is:",
+    "options": [
+"0.25 V",
+"0.143 V",
+"0.5 V",
+"0.125 V"
+    ],
+    "correct": 0,
+    "short": "$|A_v|_{max} = 2(V_{DD}-V_{OV})/V_{OV}$ ⇒ $14 = 2(2-V_{OV})/V_{OV}$ ⇒ $V_{OV} = 0.25$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{DD} = 2$ V, $|A_v|_{max} = 14$.\nGoverning law — CS gain with a resistive load, $A_v = -g_m R_D$, expressed through the bias point:\n$$|A_v| = \\frac{2(V_{DD} - V_{DS})}{V_{OV}}$$\nThe MAXIMUM gain occurs at the edge of saturation, $V_{DS} = V_{OV}$:\n$$|A_v|_{max} = \\frac{2(V_{DD} - V_{OV})}{V_{OV}}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$14 = \\frac{2(2 - V_{OV})}{V_{OV}}$$\nMultiply through by $V_{OV}$:\n$$14V_{OV} = 4 - 2V_{OV}$$\n$$14V_{OV} + 2V_{OV} = 4$$\n$$16V_{OV} = 4$$\n$$V_{OV} = \\frac{4}{16}$$\n$$V_{OV} = 0.25\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nChecking: $|A_v|_{max} = 2(2 - 0.25)/0.25 = 3.5/0.25 = 14$ — exact. Biasing at the edge of saturation maximises $R_D$ while keeping the transistor in saturation, hence the maximum gain.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.143 V)**: the student uses $|A_v|_{max} = V_{DD}/V_{OV}$ (missing the factor 2 and the $V_{OV}$ in the numerator).\n- **Option C trap (0.5 V)**: the student uses $|A_v|_{max} = 2V_{DD}/V_{OV}$ without subtracting $V_{OV}$.\n- **Option D trap (0.125 V)**: the student misplaces a factor of 2 (uses 32 in the denominator).\nr"
+  },
+  {
+    "id": "eee252_mosfet_08",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "In the same amplifier ($V_{DD} = 2$ V, $V_{OV} = 0.25$ V), the bias point Q at which a gain of −12 V/V is obtained has:",
+    "options": [
+"$V_{DS} = 0.5$ V",
+"$V_{DS} = 0.25$ V",
+"$V_{DS} = 1.0$ V",
+"$V_{DS} = 0.75$ V"
+    ],
+    "correct": 0,
+    "short": "$|A_v| = 2(V_{DD}-V_{DS})/V_{OV}$ ⇒ $12 = 2(2-V_{DS})/0.25$ ⇒ $V_{DS} = 0.5$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{DD} = 2$ V, $V_{OV} = 0.25$ V, target $|A_v| = 12$.\nGoverning law:\n$$|A_v| = \\frac{2(V_{DD} - V_{DS})}{V_{OV}}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$12 = \\frac{2(2 - V_{DS})}{0.25}$$\n$$12 \\times 0.25 = 2(2 - V_{DS})$$\n$$3 = 4 - 2V_{DS}$$\n$$2V_{DS} = 4 - 3$$\n$$2V_{DS} = 1$$\n$$V_{DS} = 0.5\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAt $V_{DS} = 0.5$ V (comfortably above $V_{OV} = 0.25$ V, so saturation holds), the gain drops from its 14 V/V maximum to 12 V/V because the larger $V_{DS}$ forces a smaller $R_D$ for the same current. The gain is thus a linear function of the bias point's drain voltage.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.25 V)**: the student reuses $V_{OV}$ — that would be the MAXIMUM-gain point (14 V/V), not 12.\n- **Option C trap (1.0 V)**: the student solves $12 = 2V_{DS}/0.25$ incorrectly.\n- **Option D trap (0.75 V)**: an arithmetic slip in rearranging $3 = 4 - 2V_{DS}$.\nr"
+  },
+  {
+    "id": "eee252_mosfet_09",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "An NMOS transistor has $k_n = 10$ mA/V² and is biased at $V_{OV} = 0.2$ V. The DC bias current $I_D$ is:",
+    "options": [
+"0.2 mA",
+"0.4 mA",
+"0.1 mA",
+"2 mA"
+    ],
+    "correct": 0,
+    "short": "$I_D = \\frac{1}{2}k_n V_{OV}^2 = 0.5 \\times 10m \\times 0.04 = 0.2$ mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $k_n = 10$ mA/V², $V_{OV} = 0.2$ V.\nGoverning law:\n$$I_D = \\frac{1}{2}k_n V_{OV}^2$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{OV}^2 = 0.2 \\times 0.2 = 0.04$$\n$$\\frac{1}{2}k_n = \\frac{10}{2} = 5\\ mA/V^2$$\n$$I_D = 5 \\times 0.04$$\n$$I_D = 0.2\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\n0.2 mA of drain current for a 0.2 V overdrive — the square law in action. Doubling $V_{OV}$ would QUADRUPLE the current.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.4 mA)**: the student forgets the ½ in the saturation formula.\n- **Option C trap (0.1 mA)**: the student squares the half instead of $V_{OV}$.\n- **Option D trap (2 mA)**: the student uses $I_D = k_n V_{OV}$ with a decimal slip.\nr"
+  },
+  {
+    "id": "eee252_mosfet_10",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same transistor ($k_n = 10$ mA/V², $V_{OV} = 0.2$ V), a +0.02 V signal is superimposed on $V_{GS}$. The increment in drain current (total current minus DC bias) is:",
+    "options": [
+"+0.042 mA",
+"+0.02 mA",
+"+0.002 mA",
+"+0.2 mA"
+    ],
+    "correct": 0,
+    "short": "Total $i_D = \\frac{1}{2}k_n(V_{OV}+v_{gs})^2 = 5m \\times 0.22^2 = 0.242$ mA; increment = 0.242 − 0.2 = +0.042 mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $k_n = 10$ mA/V², $V_{OV} = 0.2$ V, signal $v_{gs} = +0.02$ V.\nGoverning law — the total instantaneous drain current:\n$$i_D = \\frac{1}{2}k_n(V_{OV} + v_{gs})^2$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — total current with the signal:\n$$i_D = 5 \\times (0.2 + 0.02)^2$$\n$$0.2 + 0.02 = 0.22$$\n$$0.22^2 = 0.0484$$\n$$i_D = 5 \\times 0.0484$$\n$$i_D = 0.242\\ mA$$\nStep B — subtract the DC bias current $I_D = 0.2$ mA:\n$$\\Delta i_D = 0.242 - 0.2$$\n$$\\Delta i_D = +0.042\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe square law makes the response slightly asymmetric: the positive half-cycle adds +0.042 mA. (For a −0.02 V signal the decrement would be −0.038 mA — see next question.) This asymmetry IS the nonlinear distortion the small-signal model neglects.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (+0.02 mA)**: the student linearises with the WRONG $g_m$ (1 mA/V instead of 2).\n- **Option C trap (+0.002 mA)**: a factor-of-10 slip in $k_n$.\n- **Option D trap (+0.2 mA)**: the student reports the DC current itself.\nr"
+  },
+  {
+    "id": "eee252_mosfet_11",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "The average of the +0.02 V and −0.02 V current increments (0.042 mA and 0.038 mA) divided by the total 0.04 V signal swing estimates $g_m$ as:",
+    "options": [
+"2.0 mA/V, matching $g_m = k_n V_{OV}$ exactly",
+"1.0 mA/V, half the true value",
+"4.0 mA/V, double the true value",
+"0.5 mA/V"
+    ],
+    "correct": 0,
+    "short": "$g_m \\approx (0.042+0.038)/0.04 = 2.0$ mA/V $= k_n V_{OV} = 10m \\times 0.2$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: positive increment 0.042 mA (for +0.02 V), negative decrement 0.038 mA (for −0.02 V), total swing 0.04 V.\nGoverning law — finite-difference estimate of transconductance and the analytic formula:\n$$g_m \\approx \\frac{\\Delta i_D}{\\Delta v_{GS}} \\qquad g_m = k_n V_{OV}$$\n\n**Step 2: Full Mathematical Workings**\n\nTotal current change over the full swing:\n$$\\Delta i_D = 0.042 + 0.038 = 0.080\\ mA$$\nVoltage swing:\n$$\\Delta v_{GS} = 0.02 - (-0.02) = 0.04\\ V$$\nEstimate:\n$$g_m = \\frac{0.080}{0.04}$$\n$$g_m = 2.0\\ mA/V$$\nAnalytic check:\n$$g_m = k_n V_{OV} = 10 \\times 0.2$$\n$$g_m = 2.0\\ mA/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe chord-slope estimate equals the tangent-slope formula exactly for a pure square law — a satisfying confirmation that the small-signal model ($i_d = g_m v_{gs}$) is the linearisation of the square law about Q.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1.0 mA/V)**: the student uses only ONE increment over the full swing.\n- **Option C trap (4.0 mA/V)**: the student divides by 0.02 instead of 0.04.\n- **Option D trap (0.5 mA/V)**: the student inverts the slope.\nr"
+  },
+  {
+    "id": "eee252_mosfet_12",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A sine wave $v_{gs} = V_{gs}\\sin\\omega t$ drives a square-law MOSFET amplifier. Using $\\sin^2\\theta = \\frac{1}{2} - \\frac{1}{2}\\cos 2\\theta$, the second-harmonic distortion ratio (2ω component ÷ ω component) is:",
+    "options": [
+"$V_{gs}/(4V_{OV})$",
+"$V_{gs}/(2V_{OV})$",
+"$V_{gs}^2/(4V_{OV}^2)$",
+"$V_{OV}/(4V_{gs})$"
+    ],
+    "correct": 0,
+    "short": "The $v_{gs}^2$ term produces the 2ω component $\\frac{1}{4}k_nV_{gs}^2\\cos2\\omega t$; dividing by the fundamental $k_nV_{OV}V_{gs}\\sin\\omega t$ gives $V_{gs}/(4V_{OV})$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGoverning law — total drain current with the sine drive:\n$$i_D = \\frac{1}{2}k_n(V_{OV} + V_{gs}\\sin\\omega t)^2$$\n\n**Step 2: Full Mathematical Workings**\n\nExpand the square:\n$$i_D = \\frac{1}{2}k_n\\left(V_{OV}^2 + 2V_{OV}V_{gs}\\sin\\omega t + V_{gs}^2\\sin^2\\omega t\\right)$$\nApply the trigonometric identity to the last term:\n$$\\sin^2\\omega t = \\frac{1}{2} - \\frac{1}{2}\\cos 2\\omega t$$\n$$i_D = \\frac{1}{2}k_nV_{OV}^2 + k_nV_{OV}V_{gs}\\sin\\omega t + \\frac{1}{4}k_nV_{gs}^2 - \\frac{1}{4}k_nV_{gs}^2\\cos 2\\omega t$$\nIdentify the fundamental (ω) component and the second-harmonic (2ω) component:\n$$\\text{fundamental} = k_nV_{OV}V_{gs} \\qquad \\text{second harmonic} = \\frac{1}{4}k_nV_{gs}^2$$\nRatio:\n$$\\text{HD}_2 = \\frac{\\frac{1}{4}k_nV_{gs}^2}{k_nV_{OV}V_{gs}}$$\n$$\\text{HD}_2 = \\frac{V_{gs}}{4V_{OV}}$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe distortion grows linearly with the signal amplitude and inversely with the overdrive — biasing DEEPER into saturation (larger $V_{OV}$) makes the amplifier more linear.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student loses the factor 2 from the $2V_{OV}V_{gs}$ cross-term.\n- **Option C trap**: the student does not cancel $V_{gs}$ (ratio of powers, not amplitudes).\n- **Option D trap**: the student inverts the ratio.\nr"
+  },
+  {
+    "id": "eee252_mosfet_13",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the second-harmonic distortion to stay below 1% with $V_{gs} = 10$ mV, the minimum overdrive voltage is:",
+    "options": [
+"0.25 V",
+"0.1 V",
+"1.0 V",
+"0.4 V"
+    ],
+    "correct": 0,
+    "short": "$V_{gs}/(4V_{OV}) < 0.01$ ⇒ $V_{OV} > 10\\text{mV}/(4\\times0.01) = 0.25$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{gs} = 10$ mV, distortion limit 1%.\nGoverning law:\n$$\\text{HD}_2 = \\frac{V_{gs}}{4V_{OV}}$$\n\n**Step 2: Full Mathematical Workings**\n\nRequire:\n$$\\frac{V_{gs}}{4V_{OV}} < 0.01$$\n$$\\frac{0.010}{4V_{OV}} < 0.01$$\n$$4V_{OV} > \\frac{0.010}{0.01}$$\n$$4V_{OV} > 1$$\n$$V_{OV} > 0.25\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nBiasing at $V_{OV} \\ge 0.25$ V keeps the second harmonic at or below 1% — a 25:1 ratio between bias overdrive and signal amplitude. This is the standard \"small-signal is small\" criterion for square-law devices.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.1 V)**: the student uses 2.5% as the limit (drops a factor of 4).\n- **Option C trap (1.0 V)**: the student uses $V_{gs}/(2V_{OV})$ and flips a factor.\n- **Option D trap (0.4 V)**: arithmetic slip on $0.01 \\times 4 \\times 0.01$.\nr"
+  },
+  {
+    "id": "eee252_mosfet_14",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A common-source amplifier with $g_m = 2$ mA/V and $R_D = 10$ kΩ is fed from a 1 MΩ source and drives a 10 kΩ load. The overall voltage gain $G_v$ is:",
+    "options": [
+"−10 V/V",
+"−20 V/V",
+"−5 V/V",
+"−15 V/V"
+    ],
+    "correct": 0,
+    "short": "MOSFET input resistance is infinite, so $G_v = -g_m(R_D\\parallel R_L) = -2m \\times 5k = -10$ V/V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $g_m = 2$ mA/V, $R_D = 10$ kΩ, $R_{sig} = 1$ MΩ, $R_L = 10$ kΩ.\nGoverning law — overall gain of a CS amplifier:\n$$G_v = \\frac{R_{in}}{R_{in} + R_{sig}} \\times \\left[-g_m(R_D \\parallel R_L)\\right]$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — input resistance of a MOSFET gate is infinite, so the source-divider factor is unity:\n$$\\frac{R_{in}}{R_{in} + R_{sig}} = \\frac{\\infty}{\\infty + 1M} = 1$$\nStep B — load on the drain:\n$$R_D \\parallel R_L = \\frac{10 \\times 10}{10 + 10} = \\frac{100}{20} = 5\\ k\\Omega$$\nStep C — gain:\n$$G_v = -2 \\times 10^{-3} \\times 5 \\times 10^{3}$$\n$$G_v = -10\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe MOSFET's infinite input resistance is its great advantage: a 1 MΩ source loses nothing at the input, unlike a BJT stage. The gain is set purely by $g_m$ and the drain load.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−20)**: the student forgets the load $R_L$ (uses $R_D$ alone).\n- **Option C trap (−5)**: the student divides by 2 twice or uses $g_m = 1$ mA/V.\n- **Option D trap (−15)**: the student adds $R_D$ and $R_L$ instead of paralleling.\nr"
+  },
+  {
+    "id": "eee252_mosfet_15",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A common-source amplifier operates at $V_{OV} = 0.25$ V and must deliver an overall gain of −10 V/V into $R_L = 15$ kΩ, with the designer choosing $R_D = 2R_L = 30$ kΩ. The required $g_m$ and bias current $I_D$ are:",
+    "options": [
+"$g_m = 1$ mA/V, $I_D = 0.125$ mA",
+"$g_m = 2$ mA/V, $I_D = 0.25$ mA",
+"$g_m = 0.5$ mA/V, $I_D = 0.0625$ mA",
+"$g_m = 1$ mA/V, $I_D = 0.5$ mA"
+    ],
+    "correct": 0,
+    "short": "$R_D\\parallel R_L = 30\\parallel15 = 10$ kΩ; $g_m = 10/10k = 1$ mA/V; $I_D = \\frac{1}{2}g_m V_{OV} = 0.5\\times1m\\times0.25 = 0.125$ mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{OV} = 0.25$ V, $|G_v| = 10$, $R_L = 15$ kΩ, $R_D = 2R_L = 30$ kΩ.\nGoverning laws:\n$$|G_v| = g_m(R_D \\parallel R_L) \\qquad g_m = \\frac{2I_D}{V_{OV}}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — parallel load:\n$$R_D \\parallel R_L = \\frac{30 \\times 15}{30 + 15} = \\frac{450}{45} = 10\\ k\\Omega$$\nStep B — required transconductance:\n$$g_m = \\frac{10}{10\\ k\\Omega} = 1\\ mA/V$$\nStep C — bias current:\n$$I_D = \\frac{1}{2}g_m V_{OV}$$\n$$I_D = \\frac{1}{2} \\times 1 \\times 10^{-3} \\times 0.25$$\n$$I_D = 0.125\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\nWith the drain resistance fixed at twice the load, the parallel combination is 10 kΩ, so 1 mA/V of transconductance achieves the gain with a modest 0.125 mA of bias current.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student computes $I_D = g_m V_{OV}$ (forgets the ½).\n- **Option C trap**: the student uses $R_D$ alone (30 kΩ) in the gain equation.\n- **Option D trap**: the student computes $I_D = g_m V_{OV} \\times 2$.\nr"
+  },
+  {
+    "id": "eee252_mosfet_16",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "In the same amplifier ($g_m = 1$ mA/V, $R_L = 15$ kΩ), if $R_D$ is REDUCED to equal $R_L$ (15 kΩ) to increase the output swing, the new overall gain becomes:",
+    "options": [
+"−7.5 V/V",
+"−15 V/V",
+"−5 V/V",
+"−10 V/V"
+    ],
+    "correct": 0,
+    "short": "$G_v = -g_m(R_D\\parallel R_L) = -1m \\times 7.5k = -7.5$ V/V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $g_m = 1$ mA/V, $R_D = R_L = 15$ kΩ.\nGoverning law:\n$$G_v = -g_m(R_D \\parallel R_L)$$\n\n**Step 2: Full Mathematical Workings**\n\n$$R_D \\parallel R_L = \\frac{15 \\times 15}{15 + 15} = \\frac{225}{30} = 7.5\\ k\\Omega$$\n$$G_v = -1 \\times 10^{-3} \\times 7.5 \\times 10^{3}$$\n$$G_v = -7.5\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nHalving $R_D$ from 30 kΩ to 15 kΩ reduces the parallel load from 10 kΩ to 7.5 kΩ — the gain falls by the same 25%. This is the classic gain-vs-swing trade-off: larger $R_D$ gives more gain but less headroom.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−15)**: the student forgets the load resistance again.\n- **Option C trap (−5)**: the student uses $\\frac{1}{3}$ of the parallel value.\n- **Option D trap (−10)**: the student reuses the old gain without recomputing.\nr"
+  },
+  {
+    "id": "eee252_mosfet_17",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "Two identical CS amplifiers are cascaded; each stage has $I_D = 0.3$ mA, $V_{OV} = 0.2$ V and $R_D = 10$ kΩ. The source resistance is 200 kΩ and the final load is 10 kΩ. The overall gain $G_v$ is:",
+    "options": [
+"+450 V/V",
+"−450 V/V",
+"+225 V/V",
+"+900 V/V"
+    ],
+    "correct": 0,
+    "short": "Each stage: $g_m = 2\\times0.3m/0.2 = 3$ mA/V; stage 1: −30 (no load, infinite gate input); stage 2: $-3m\\times5k = -15$; total $= (-30)(-15) = +450$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_D = 0.3$ mA, $V_{OV} = 0.2$ V, $R_D = 10$ kΩ per stage, $R_{sig} = 200$ kΩ, $R_L = 10$ kΩ.\nGoverning laws:\n$$g_m = \\frac{2I_D}{V_{OV}} \\qquad A_{v} = -g_m(R_D \\parallel R_{in,next})$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — per-stage transconductance:\n$$g_m = \\frac{2 \\times 0.3 \\times 10^{-3}}{0.2} = 3\\ mA/V$$\nStep B — first stage: its \"load\" is the second stage's GATE (infinite input resistance), and the MOSFET gate draws nothing from the source:\n$$A_{v1} = -3m \\times 10k = -30\\ V/V$$\nStep C — second stage: its drain sees $R_D \\parallel R_L$:\n$$R_D \\parallel R_L = \\frac{10 \\times 10}{20} = 5\\ k\\Omega$$\n$$A_{v2} = -3m \\times 5k = -15\\ V/V$$\nStep D — cascade:\n$$G_v = A_{v1} \\times A_{v2}$$\n$$G_v = (-30)(-15)$$\n$$G_v = +450\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nTwo inverting stages in cascade give a NON-inverting overall response (+450). Because each MOSFET gate presents an open circuit, there is no interstage loading loss — a major advantage over BJT cascades.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−450)**: the student forgets that two inversions cancel.\n- **Option C trap (+225)**: the student loads the first stage with $R_D\\parallel R_L$ too.\n- **Option D trap (+900)**: the student uses $g_m = 6$ mA/V (forgets the ½ factor... uses $I_D/V_{OV}$).\nr"
+  },
+  {
+    "id": "eee252_mosfet_18",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "An amplifier replaces its load resistor with a second NMOS (Q2) connected as a two-terminal device ($v_{DG} = 0$, always in saturation). With equal thresholds $V_{t1} = V_{t2} = V_t$ and equal currents $i_{D1} = i_{D2}$, the output voltage for Q1 in saturation is:",
+    "options": [
+"$v_O = V_{DD} - V_t - \\sqrt{(W/L)_1/(W/L)_2}\\,(v_I - V_t)$",
+"$v_O = V_{DD} - V_t + \\sqrt{(W/L)_2/(W/L)_1}\\,(v_I - V_t)$",
+"$v_O = (W/L)_1/(W/L)_2 \\times v_I$",
+"$v_O = V_{DD} - v_I$"
+    ],
+    "correct": 0,
+    "short": "Equating $\\frac{1}{2}k'_n(W/L)_1(v_I-V_t)^2 = \\frac{1}{2}k'_n(W/L)_2(V_{DD}-v_O-V_t)^2$ and taking square roots gives the linear relation with gain $-\\sqrt{(W/L)_1/(W/L)_2}$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nSchematic layout (textual): $V_{DD}$ connects to the DRAIN of load device Q2; Q2's gate and drain are TIED together (two-terminal connection), so $V_{SG2} = V_{DG2} = 0$ relative to its own source — Q2's source is the output node. Q1's drain is the output node, its source is ground, and its gate is driven by $v_I$.\nGoverning law — saturation currents:\n$$i_{D1} = \\frac{1}{2}k'_n\\left(\\frac{W}{L}\\right)_1(v_I - V_t)^2 \\qquad i_{D2} = \\frac{1}{2}k'_n\\left(\\frac{W}{L}\\right)_2(V_{DD} - v_O - V_t)^2$$\n\n**Step 2: Full Mathematical Workings**\n\nEqual currents:\n$$\\frac{1}{2}k'_n\\left(\\frac{W}{L}\\right)_1(v_I - V_t)^2 = \\frac{1}{2}k'_n\\left(\\frac{W}{L}\\right)_2(V_{DD} - v_O - V_t)^2$$\nCancel $\\frac{1}{2}k'_n$ and take the positive square root of both sides:\n$$\\sqrt{\\left(\\frac{W}{L}\\right)_1}\\,(v_I - V_t) = \\sqrt{\\left(\\frac{W}{L}\\right)_2}\\,(V_{DD} - v_O - V_t)$$\nDivide through by $\\sqrt{(W/L)_2}$:\n$$V_{DD} - v_O - V_t = \\sqrt{\\frac{(W/L)_1}{(W/L)_2}}\\,(v_I - V_t)$$\nSolve for $v_O$:\n$$v_O = V_{DD} - V_t - \\sqrt{\\frac{(W/L)_1}{(W/L)_2}}\\,(v_I - V_t)$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe active (MOSFET) load acts like a current source with a square-law I-V, yet the equal-current constraint makes the transfer LINEAR — the amplifier is linear even for large signals, with gain $-\\sqrt{(W/L)_1/(W/L)_2}$.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the ratio under the root is inverted and the sign wrong.\n- **Option C trap**: the student neglects the $V_{DD}$ and $V_t$ offsets (assumes a pure resistive divider).\n- **Option D trap**: the student ignores the device geometry entirely.\nr"
+  },
+  {
+    "id": "eee252_mosfet_19",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same active-load amplifier with $(W/L)_1 = 50$ µm/0.5 µm and $(W/L)_2 = 5$ µm/0.5 µm, the voltage gain is:",
+    "options": [
+"−3.16 V/V",
+"−10 V/V",
+"+3.16 V/V",
+"−7.07 V/V"
+    ],
+    "correct": 0,
+    "short": "$A_v = -\\sqrt{(W/L)_1/(W/L)_2} = -\\sqrt{10} = -3.16$ V/V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $(W/L)_1 = 50/0.5 = 100$, $(W/L)_2 = 5/0.5 = 10$.\nGoverning law:\n$$A_v = -\\sqrt{\\frac{(W/L)_1}{(W/L)_2}}$$\n\n**Step 2: Full Mathematical Workings**\n\nRatio of geometries:\n$$\\frac{(W/L)_1}{(W/L)_2} = \\frac{100}{10} = 10$$\nGain:\n$$A_v = -\\sqrt{10}$$\n$$A_v = -3.162\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe gain is set purely by the geometry RATIO — process and temperature variations cancel out, which is why active-load amplifiers are preferred in IC design. The wide Q1 and narrow Q2 give a gain of about −3.16.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−10)**: the student forgets the square root (uses the ratio directly).\n- **Option C trap (+3.16)**: sign error — the CS stage inverts.\n- **Option D trap (−7.07)**: the student roots the wrong ratio ($\\sqrt{50}$).\nr"
+  },
+  {
+    "id": "eee252_mosfet_20",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A MOSFET amplifier (Fig. Q3a: $V_{DD} = 10$ V → $R_D = 10$ kΩ → drain; gate driven by $V_i$; source grounded) has $k = 2.5$ mA/V² and $V_t = 0.6$ V. To obtain a DC output $V_{out} = 5$ V in saturation, the DC input voltage $V_i$ is:",
+    "options": [
+"1.23 V",
+"0.63 V",
+"1.63 V",
+"2.23 V"
+    ],
+    "correct": 0,
+    "short": "$I_D = (10-5)/10k = 0.5$ mA; $V_{OV} = \\sqrt{2I_D/k} = \\sqrt{0.4} = 0.632$ V; $V_i = V_{GS} = 0.6 + 0.632 = 1.232$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{DD} = 10$ V, $R_D = 10$ kΩ, $V_{out} = 5$ V, $k = 2.5$ mA/V², $V_t = 0.6$ V.\nGoverning laws:\n$$I_D = \\frac{V_{DD} - V_{out}}{R_D} \\qquad I_D = \\frac{1}{2}k(V_{GS} - V_t)^2$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — drain current from the output condition:\n$$I_D = \\frac{10 - 5}{10 \\times 10^{3}}$$\n$$I_D = 0.5 \\times 10^{-3} = 0.5\\ mA$$\nStep B — overdrive voltage:\n$$V_{OV} = \\sqrt{\\frac{2I_D}{k}}$$\n$$V_{OV} = \\sqrt{\\frac{2 \\times 0.5 \\times 10^{-3}}{2.5 \\times 10^{-3}}}$$\n$$V_{OV} = \\sqrt{0.4}$$\n$$V_{OV} = 0.6325\\ V$$\nStep C — gate (input) voltage:\n$$V_{GS} = V_t + V_{OV}$$\n$$V_{GS} = 0.6 + 0.6325$$\n$$V_{GS} = 1.2325\\ V \\approx 1.23\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\n$V_i = 1.23$ V biases the drain at exactly half the supply (5 V) — the standard maximum-swing bias point. Since $V_i = V_{GS}$ in this grounded-source circuit, the input must supply this DC level directly.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.63 V)**: the student reports $V_{OV}$ instead of $V_{GS}$ (forgets $V_t$).\n- **Option C trap (1.63 V)**: the student uses $I_D = 1$ mA (from $V_{out} = 0$).\n- **Option D trap (2.23 V)**: the student adds $V_{OV}$ twice.\nr"
+  },
+  {
+    "id": "eee252_mosfet_21",
+    "topicId": "eee252-mosfet",
+    "kind": "theory",
+    "question": "For the same amplifier ($V_i = 1.23$ V, $V_{out} = 5$ V, $V_{OV} = 0.632$ V, $V_t = 0.6$ V), validate whether the MOSFET is truly in saturation.",
+    "options": [
+"Yes — $V_{DS} = 5$ V $\\ge V_{OV} = 0.632$ V and $V_{GS} > V_t$, so saturation holds",
+"No — $V_{DS}$ is below the threshold voltage",
+"No — the device is in the triode region",
+"Cannot be determined without $\\lambda$"
+    ],
+    "correct": 0,
+    "short": "Saturation requires $V_{GS} > V_t$ AND $V_{DS} \\ge V_{OV}$; here 1.23 > 0.6 and 5 ≥ 0.632 — both satisfied.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nThe two saturation conditions:\n$$V_{GS} > V_t \\qquad \\text{AND} \\qquad V_{DS} \\ge V_{GS} - V_t = V_{OV}$$\nWith the source grounded, $V_{DS} = V_{out}$ and $V_{GS} = V_i$.\n\n**Step 2: Full Mathematical Workings**\n\nCondition 1:\n$$V_{GS} = 1.2325\\ V > V_t = 0.6\\ V \\quad\\checkmark$$\nCondition 2:\n$$V_{OV} = V_{GS} - V_t = 1.2325 - 0.6 = 0.6325\\ V$$\n$$V_{DS} = V_{out} = 5\\ V \\ge 0.6325\\ V \\quad\\checkmark$$\nBoth conditions hold — the saturation assumption is VALIDATED.\n\n**Step 3: Verification & Physical Interpretation**\n\nThe drain sits 4.37 V above the pinch-off point, deep in saturation. If $V_{DS}$ had been less than $V_{OV}$, the original current equation would be wrong and the answer would have to be recomputed with the triode equation — always perform this validation after every bias calculation.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student compares $V_{DS}$ with $V_t$ instead of $V_{OV}$.\n- **Option C trap**: the student confuses the condition for triode ($V_{DS} < V_{OV}$) with saturation.\n- **Option D trap**: $\\lambda$ affects the current VALUE, not the region boundary.\nr"
+  },
+  {
+    "id": "eee252_mosfet_22",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same amplifier (bias $I_D = 0.5$ mA, $V_{OV} = 0.632$ V, $R_D = 10$ kΩ), the small-signal voltage gain is:",
+    "options": [
+"−15.8 V/V",
+"+15.8 V/V",
+"−6.3 V/V",
+"−31.6 V/V"
+    ],
+    "correct": 0,
+    "short": "$g_m = 2I_D/V_{OV} = 1.581$ mA/V; $A_v = -g_m R_D = -15.8$ V/V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_D = 0.5$ mA, $V_{OV} = 0.6325$ V, $R_D = 10$ kΩ.\nGoverning laws:\n$$g_m = \\frac{2I_D}{V_{OV}} \\qquad A_v = -g_m R_D$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — transconductance:\n$$g_m = \\frac{2 \\times 0.5 \\times 10^{-3}}{0.6325}$$\n$$g_m = \\frac{1 \\times 10^{-3}}{0.6325}$$\n$$g_m = 1.581\\ mA/V$$\nStep B — gain:\n$$A_v = -1.581 \\times 10^{-3} \\times 10 \\times 10^{3}$$\n$$A_v = -15.81\\ V/V \\approx -15.8\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe gain magnitude equals $2(V_{DD}-V_{out})/V_{OV} = 2 \\times 5/0.6325 = 15.8$ — the drain-bias form of the same result. The minus sign is the hallmark of the common-source stage.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (+15.8)**: sign error — CS stages invert.\n- **Option C trap (−6.3)**: the student uses $g_m = k_n V_{OV} \\times \\frac{1}{2}$ (forgets the factor 2 in $2I_D/V_{OV}$).\n- **Option D trap (−31.6)**: the student doubles the current in the $g_m$ formula.\nr"
+  },
+  {
+    "id": "eee252_mosfet_23",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "A MOSFET biasing circuit (Fig. 2) has $R_D = 1.5$ kΩ, $R_S = 500$ Ω, $R_1 = 400$ kΩ, $R_2 = 600$ kΩ and $V_{DD} = 12$ V. The PMOS parameters are $K_p = 0.5$ mA/V², $V_{tp} = -1.5$ V and $\\lambda = 0.01$. The drain current $I_D$ is about:",
+    "options": [
+"1.58 mA",
+"0.79 mA",
+"3.16 mA",
+"2.36 mA"
+    ],
+    "correct": 0,
+    "short": "PMOS: $V_G = 12\\times600/1000 = 7.2$ V; $V_{SG} = 12 - 500I_D - 7.2$; $I_D = \\frac{1}{2}K_p(V_{SG}-1.5)^2$ iterates to $I_D \\approx 1.58$ mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $R_D = 1.5$ kΩ, $R_S = 500$ Ω, $R_1 = 400$ kΩ, $R_2 = 600$ kΩ, $V_{DD} = 12$ V, $K_p = 0.5$ mA/V², $|V_{tp}| = 1.5$ V.\nSchematic layout (textual): PMOS source at the TOP — $V_{DD}$ → $R_S$ → source S; drain → $R_D$ → ground. The gate is fed by the divider $R_1$ (to $V_{DD}$) and $R_2$ (to ground). Governing laws:\n$$V_G = V_{DD}\\frac{R_2}{R_1+R_2} \\qquad I_D = \\frac{1}{2}K_p(V_{SG} - |V_{tp}|)^2$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — gate voltage:\n$$V_G = 12 \\times \\frac{600}{400 + 600} = 12 \\times 0.6 = 7.2\\ V$$\nStep B — source voltage and source-gate voltage:\n$$V_S = V_{DD} - I_D R_S = 12 - 500I_D$$\n$$V_{SG} = V_S - V_G = 12 - 500I_D - 7.2 = 4.8 - 500I_D$$\nStep C — solve $I_D = \\frac{1}{2}\\times0.5m\\times(4.8 - 500I_D - 1.5)^2$ by iteration:\n$$I_D = 0.25m(3.3 - 500I_D)^2$$\nIteration: start $I_D = 1$ mA → $0.25m(2.8)^2 = 1.96$ mA → $0.25m(3.3-0.98)^2 = 1.346$ mA → $0.25m(3.3-0.673)^2 = 1.725$ mA → $0.25m(3.3-0.8625)^2 = 1.485$ mA → $0.25m(3.3-0.7425)^2 = 1.635$ mA → $0.25m(3.3-0.8175)^2 = 1.541$ mA → $0.25m(3.3-0.7705)^2 = 1.599$ mA → converges:\n$$I_D \\approx 1.58\\ mA$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe iteration converges because the feedback through $R_S$ is negative: more current lowers $V_{SG}$, reducing the current. Checking: $V_{SG} = 4.8 - 0.79 = 4.01$ V, $I_D = 0.25m(4.01-1.5)^2 = 0.25m \\times 6.3 = 1.575$ mA ≈ 1.58 mA ✓.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.79 mA)**: the student forgets the ½ in the square law.\n- **Option C trap (3.16 mA)**: the student omits the $R_S$ feedback entirely ($V_{SG} = 4.8$ V fixed).\n- **Option D trap (2.36 mA)**: the student uses the NMOS sign conventions (wrong polarity).\nr"
+  },
+  {
+    "id": "eee252_mosfet_24",
+    "topicId": "eee252-mosfet",
+    "kind": "calc",
+    "question": "For the same PMOS bias point ($I_D = 1.58$ mA, $V_{SG} \\approx 4.01$ V), the gate-to-source voltage $V_{GS}$, transconductance $g_m$ and output resistance $r_o$ are:",
+    "options": [
+"$V_{GS} = -4.01$ V, $g_m = 1.26$ mA/V, $r_o = 63.3$ kΩ",
+"$V_{GS} = +4.01$ V, $g_m = 1.26$ mA/V, $r_o = 63.3$ kΩ",
+"$V_{GS} = -4.01$ V, $g_m = 2.52$ mA/V, $r_o = 126.6$ kΩ",
+"$V_{GS} = -2.51$ V, $g_m = 1.26$ mA/V, $r_o = 63.3$ kΩ"
+    ],
+    "correct": 0,
+    "short": "For a PMOS, $V_{GS} = -V_{SG} = -4.01$ V; $V_{OV} = 4.01 - 1.5 = 2.51$ V; $g_m = 2I_D/V_{OV} = 1.26$ mA/V; $r_o = 1/(\\lambda I_D) = 63.3$ kΩ.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_D = 1.58$ mA, $V_{SG} = 4.01$ V, $|V_{tp}| = 1.5$ V, $\\lambda = 0.01$ V⁻¹.\nGoverning laws:\n$$V_{GS} = -V_{SG} \\qquad g_m = \\frac{2I_D}{V_{OV}} \\qquad r_o = \\frac{1}{\\lambda I_D}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — gate-to-source voltage (PMOS convention):\n$$V_{GS} = -V_{SG} = -4.01\\ V$$\nStep B — overdrive:\n$$V_{OV} = V_{SG} - |V_{tp}| = 4.01 - 1.5 = 2.51\\ V$$\nStep C — transconductance:\n$$g_m = \\frac{2 \\times 1.58 \\times 10^{-3}}{2.51}$$\n$$g_m = 1.259\\ mA/V \\approx 1.26\\ mA/V$$\nStep D — output resistance:\n$$r_o = \\frac{1}{0.01 \\times 1.58 \\times 10^{-3}}$$\n$$r_o = \\frac{1}{1.58 \\times 10^{-5}}$$\n$$r_o = 63.3\\ k\\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nPMOS quantities carry the opposite sign convention: $V_{GS}$ is negative, $V_{DS}$ will be negative, but the MAGNITUDES satisfy the same square law. $r_o = 63.3$ kΩ quantifies the channel-length modulation (1% per volt).\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: positive $V_{GS}$ — the classic PMOS sign error.\n- **Option C trap**: the student uses $g_m = I_D/V_{OV}$ and doubles $r_o$.\n- **Option D trap**: the student reports $-V_{OV}$ as $V_{GS}$, forgetting the threshold.\nr"
+  },
+  {
+    "id": "eee252_mosfet_25",
+    "topicId": "eee252-mosfet",
+    "kind": "theory",
+    "question": "In NMOS logic circuits, how are AND and OR functions implemented, and what Boolean expression results for series/parallel combinations?",
+    "options": [
+"Series-connected NMOS transistors implement AND (all must conduct); parallel-connected implement OR (any conducts); e.g. Z = (A·B) + (C·D) for two series pairs in parallel",
+"Series implements OR and parallel implements AND",
+"Both series and parallel implement AND",
+"Logic functions cannot be built with NMOS transistors"
+    ],
+    "correct": 0,
+    "short": "Series = AND (all transistors ON to pull down), parallel = OR (any transistor ON pulls down).",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nAn NMOS conducts when its gate is HIGH. In a pull-down network:\n- SERIES connection: the output is pulled LOW only when ALL transistors conduct ⇒ the pull-down condition is $A \\cdot B \\cdot \\ldots$ (AND).\n- PARALLEL connection: the output is pulled LOW when ANY transistor conducts ⇒ the pull-down condition is $A + B + \\ldots$ (OR).\nWith a pull-up device on top, the output is the COMPLEMENT of the pull-down condition — which is how CMOS builds NAND/NOR, and how NMOS-only logic builds inverting gates.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: series = AND, parallel = OR, with the worked example.\n- **Option B (wrong)**: exactly backwards.\n- **Option C (wrong)**: parallel gives OR, not AND.\n- **Option D (wrong)**: NMOS (and PMOS) logic is the basis of all modern digital circuits.\n\n**Step 3: Exam Trap Summary**\n\nTwo traps: (1) forgetting that the pull-down network's conduction condition is the COMPLEMENT of the output; (2) swapping series/parallel. Anchor: \"series needs everyone (AND); parallel needs anyone (OR)\".\nr"
+  },
+  {
+    "id": "eee252_bjt_01",
+    "topicId": "eee252-bjt",
+    "kind": "theory",
+    "question": "Match the three BJT operating modes to their junction bias conditions: (a) active (b) saturation (c) cutoff.",
+    "options": [
+"EBJ forward + CBJ reverse; EBJ forward + CBJ forward; EBJ reverse + CBJ reverse",
+"EBJ reverse + CBJ reverse; EBJ forward + CBJ forward; EBJ forward + CBJ reverse",
+"EBJ forward + CBJ forward; EBJ reverse + CBJ reverse; EBJ forward + CBJ reverse",
+"All junctions forward in every mode"
+    ],
+    "correct": 0,
+    "short": "Active: EBJ fwd + CBJ rev. Saturation: both forward. Cutoff: both reverse.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\n- ACTIVE (amplifier): emitter–base junction (EBJ) forward-biased ($V_{BE} \\approx 0.7$ V), collector–base junction (CBJ) reverse-biased ($V_{CB} > 0$).\n- SATURATION (switch ON): BOTH junctions forward-biased; $V_{CE}$ collapses to $V_{CE(sat)} \\approx 0.2$ V.\n- CUTOFF (switch OFF): BOTH junctions reverse-biased; all currents ≈ 0.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the standard mode table.\n- **Option B (wrong)**: cutoff and active are swapped.\n- **Option C (wrong)**: active and saturation are swapped.\n- **Option D (wrong)**: modes are distinguished precisely by junction biases.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is remembering only $V_{BE}$. The mode is set by BOTH junctions — always check the CBJ too. Mnemonic: \"Active = amplifier (A for amplifier, CBJ reversed); Saturated = switch-on (both on)\".\nr"
+  },
+  {
+    "id": "eee252_bjt_02",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "An npn BJT has $\\beta = 100$ and $I_S = 10^{-15}$ A. With $v_{BE} = 0.7$ V and $V_T = 25$ mV, the collector current $i_C$ and base current $i_B$ are:",
+    "options": [
+"$i_C = 1.45$ mA, $i_B = 14.5$ µA",
+"$i_C = 0.145$ mA, $i_B = 1.45$ µA",
+"$i_C = 14.5$ mA, $i_B = 145$ µA",
+"$i_C = 1.45$ mA, $i_B = 1.45$ mA"
+    ],
+    "correct": 0,
+    "short": "$i_C = I_S e^{v_{BE}/V_T} = 10^{-15}e^{28} = 1.446$ mA; $i_B = i_C/\\beta = 14.46$ µA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\beta = 100$, $I_S = 10^{-15}$ A, $v_{BE} = 0.7$ V, $V_T = 25$ mV.\nGoverning laws:\n$$i_C = I_S e^{v_{BE}/V_T} \\qquad i_B = \\frac{i_C}{\\beta}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — collector current:\n$$\\frac{v_{BE}}{V_T} = \\frac{0.7}{0.025} = 28$$\n$$i_C = 10^{-15} \\times e^{28}$$\n$$e^{28} = 1.4463 \\times 10^{12}$$\n$$i_C = 1.446 \\times 10^{-3} = 1.446\\ mA$$\nStep B — base current:\n$$i_B = \\frac{1.446\\ mA}{100}$$\n$$i_B = 14.46\\ \\mu A$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe collector current is controlled by $v_{BE}$ exponentially, and the base current is the \"wasted\" 1/β fraction of it. Emitter current then follows as $i_E = i_C + i_B = 1.460$ mA.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: factor-of-10 slip in $e^{28}$.\n- **Option C trap**: the student multiplies by β instead of dividing for $i_B$.\n- **Option D trap**: the student sets $i_B = i_C$ (forgets the β division).\nr"
+  },
+  {
+    "id": "eee252_bjt_03",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "For the same transistor ($\\beta = 100$), the alpha $\\alpha$ and the emitter current $i_E$ are:",
+    "options": [
+"$\\alpha = 0.9901$, $i_E = 1.46$ mA",
+"$\\alpha = 100$, $i_E = 1.45$ mA",
+"$\\alpha = 0.99$, $i_E = 1.45$ mA",
+"$\\alpha = 0.909$, $i_E = 1.59$ mA"
+    ],
+    "correct": 0,
+    "short": "$\\alpha = \\beta/(\\beta+1) = 100/101 = 0.9901$; $i_E = i_C + i_B = 1.446 + 0.0145 = 1.46$ mA — and $i_E = i_C/\\alpha$ confirms it.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\beta = 100$, $i_C = 1.446$ mA, $i_B = 14.46$ µA.\nGoverning laws:\n$$\\alpha = \\frac{\\beta}{\\beta+1} \\qquad i_E = i_C + i_B$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — alpha:\n$$\\alpha = \\frac{100}{100+1} = \\frac{100}{101}$$\n$$\\alpha = 0.9901$$\nStep B — emitter current:\n$$i_E = 1.446 + 0.01446$$\n$$i_E = 1.460\\ mA$$\nStep C — numerical confirmation of $\\alpha = \\beta/(\\beta+1)$ via $i_E = i_C/\\alpha$:\n$$\\frac{i_C}{\\alpha} = \\frac{1.446}{0.9901} = 1.460\\ mA = i_E \\quad\\checkmark$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAlpha is the fraction of emitter current that reaches the collector — 99.01% for β = 100. The two relations $i_E = i_C + i_B$ and $\\alpha = \\beta/(\\beta+1)$ are mutually consistent, as the problem demands.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: α can never exceed 1 — quoting α = 100 is the β value.\n- **Option C trap**: $i_E$ must exceed $i_C$ by $i_B$; 1.45 mA neglects the base current.\n- **Option D trap**: the student uses $\\alpha = \\beta/(\\beta-1)$.\nr"
+  },
+  {
+    "id": "eee252_bjt_04",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "Consider the circuit of Fig. P6.51: $V_{CC} = +5$ V through $R_C = 1$ kΩ to the collector; $R_E = 1$ kΩ from emitter to ground; base driven directly by $V_B$; very high β. For $V_B = +2.0$ V, the emitter voltage $V_E$ and collector voltage $V_C$ are:",
+    "options": [
+"$V_E = 1.3$ V, $V_C = 3.7$ V (active)",
+"$V_E = 2.0$ V, $V_C = 3.0$ V",
+"$V_E = 1.3$ V, $V_C = 5.0$ V",
+"$V_E = 0$ V, $V_C = 5$ V"
+    ],
+    "correct": 0,
+    "short": "Active: $V_E = V_B - 0.7 = 1.3$ V; $I_E = 1.3$ mA ≈ $I_C$; $V_C = 5 - 1.3 = 3.7$ V; $V_{CB} = 3.7 - 2 = 1.7$ V > 0 ⇒ CBJ reverse — active confirmed.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{CC} = 5$ V, $R_C = R_E = 1$ kΩ, $V_B = 2$ V, very high β (so $i_B \\approx 0$ and $i_E \\approx i_C$).\nGoverning laws:\n$$V_E = V_B - V_{BE} \\qquad I_E = \\frac{V_E}{R_E} \\qquad V_C = V_{CC} - I_C R_C$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — assume ACTIVE mode, $V_{BE} = 0.7$ V:\n$$V_E = 2 - 0.7 = 1.3\\ V$$\nStep B — emitter current:\n$$I_E = \\frac{1.3}{1k} = 1.3\\ mA$$\nStep C — with very high β, $I_C \\approx I_E = 1.3$ mA:\n$$V_C = 5 - 1.3 \\times 10^{-3} \\times 10^{3} = 5 - 1.3 = 3.7\\ V$$\nStep D — verify the active assumption via the CBJ:\n$$V_{CB} = V_C - V_B = 3.7 - 2 = +1.7\\ V > 0$$\nCBJ reverse-biased ⇒ ACTIVE confirmed.\n\n**Step 3: Verification & Physical Interpretation**\n\nThe collector sits 1.7 V above the base, keeping the CBJ safely reverse-biased — the transistor amplifies in its active region with $V_{CE} = V_C - V_E = 2.4$ V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: $V_E = V_B$ forgets the 0.7 V EBJ drop.\n- **Option C trap**: $V_C = 5$ V implies zero collector current — the student neglected $I_C R_C$.\n- **Option D trap**: that is the cutoff case ($V_B$ too low to forward-bias the EBJ).\nr"
+  },
+  {
+    "id": "eee252_bjt_05",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "For the same circuit (Fig. P6.51, $V_{CC} = 5$ V, $R_C = R_E = 1$ kΩ, very high β), find $V_E$ and $V_C$ for $V_B = +1.7$ V.",
+    "options": [
+"$V_E = 1.0$ V, $V_C = 4.0$ V (active)",
+"$V_E = 1.7$ V, $V_C = 3.3$ V",
+"$V_E = 1.0$ V, $V_C = 5.0$ V",
+"$V_E = 0$ V, $V_C = 5$ V"
+    ],
+    "correct": 0,
+    "short": "$V_E = 1.7 - 0.7 = 1.0$ V; $I_E = 1$ mA; $V_C = 5 - 1 = 4.0$ V; $V_{CB} = 2.3$ V > 0 ⇒ active.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_B = 1.7$ V, $V_{CC} = 5$ V, $R_C = R_E = 1$ kΩ, very high β.\n\n**Step 2: Full Mathematical Workings**\n\nStep A — assume active, $V_{BE} = 0.7$ V:\n$$V_E = 1.7 - 0.7 = 1.0\\ V$$\nStep B:\n$$I_E = \\frac{1.0}{1k} = 1.0\\ mA \\approx I_C$$\nStep C:\n$$V_C = 5 - 1.0 = 4.0\\ V$$\nStep D — verify:\n$$V_{CB} = 4.0 - 1.7 = +2.3\\ V > 0$$\nCBJ reverse ⇒ ACTIVE confirmed.\n\n**Step 3: Verification & Physical Interpretation**\n\nLowering $V_B$ by 0.3 V reduces the emitter current by 0.3 mA and RAISES the collector voltage by 0.3 V (the stage inverts). The device remains comfortably active.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: $V_E = V_B$ — 0.7 V drop forgotten.\n- **Option C trap**: collector current neglected.\n- **Option D trap**: the cutoff case — requires $V_B < 0.7$ V.\nr"
+  },
+  {
+    "id": "eee252_bjt_06",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "For the same circuit (Fig. P6.51, very high β), find $V_E$, $V_C$ and the mode for $V_B = 0$ V.",
+    "options": [
+"$V_E = 0$ V, $V_C = 5$ V — CUTOFF (EBJ reverse-biased)",
+"$V_E = -0.7$ V, $V_C = 5$ V — active",
+"$V_E = 0$ V, $V_C = 0$ V — saturation",
+"$V_E = 0.7$ V, $V_C = 4.3$ V — active"
+    ],
+    "correct": 0,
+    "short": "With $V_B = 0$ the EBJ sees $V_{BE} = 0 < 0.7$ V — it is OFF, so $I_E = 0$, $V_E = 0$ and $V_C = V_{CC} = 5$ V: cutoff.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_B = 0$ V. The EBJ requires $V_{BE} \\approx 0.7$ V to conduct.\n\n**Step 2: Full Mathematical Workings**\n\nStep A — test the EBJ:\n$$V_{BE} = V_B - V_E = 0 - V_E$$\nFor the EBJ to conduct we would need $V_{BE} = 0.7$ V, i.e. $V_E = -0.7$ V — impossible since $V_E$ cannot go negative in this circuit (emitter grounded through a resistor, no negative supply).\nStep B — conclude CUTOFF:\n$$I_E = I_C = I_B = 0$$\n$$V_E = I_E R_E = 0\\ V$$\nStep C — collector voltage:\n$$V_C = V_{CC} - I_C R_C = 5 - 0 = 5\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nWith zero base drive the transistor behaves as an OPEN switch: the full supply appears at the collector. This is the OFF state of the transistor switch.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: a negative emitter voltage would require a negative supply.\n- **Option C trap**: in saturation $V_C$ collapses toward $V_E + 0.2$ V, not 0 V.\n- **Option D trap**: the student assumes conduction without checking whether $V_B$ can forward-bias the EBJ.\nr"
+  },
+  {
+    "id": "eee252_bjt_07",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "For the same circuit (Fig. P6.51, very high β, $V_{CC} = 5$ V, $R_C = R_E = 1$ kΩ), find the HIGHEST value of $V_B$ for which the transistor still operates in the active mode.",
+    "options": [
+"3.1 V",
+"3.7 V",
+"2.4 V",
+"4.3 V"
+    ],
+    "correct": 0,
+    "short": "Edge of saturation: $V_C = V_B - 0.5$ with $V_C = 5 - (V_B-0.7)$ ⇒ $V_B = 3.1$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{CC} = 5$ V, $R_C = R_E = 1$ kΩ, very high β ($I_C \\approx I_E$).\nActive mode is lost when the CBJ becomes forward-biased, i.e. when $V_C$ falls to $V_B - 0.5$ V (the CBJ just begins conducting; $V_{CE} = V_C - V_E = 0.2$ V at the edge of saturation).\n\n**Step 2: Full Mathematical Workings**\n\nIn active mode:\n$$V_E = V_B - 0.7$$\n$$I_E = \\frac{V_B - 0.7}{1k} = (V_B - 0.7)\\ mA$$\n$$V_C = 5 - (V_B - 0.7) = 5.7 - V_B$$\nAt the edge of saturation:\n$$V_C = V_B - 0.5$$\nEquate:\n$$5.7 - V_B = V_B - 0.5$$\n$$5.7 + 0.5 = 2V_B$$\n$$2V_B = 6.2$$\n$$V_B = 3.1\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nAt $V_B = 3.1$ V: $V_E = 2.4$ V, $I_C = 2.4$ mA, $V_C = 5 - 2.4 = 2.6$ V, and $V_C - V_B = -0.5$ V — the CBJ is exactly at the conduction edge. Any higher $V_B$ drives the transistor into saturation.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (3.7 V)**: the student uses the $V_C$ from the $V_B = 2$ V case as the boundary.\n- **Option C trap (2.4 V)**: the student equates $V_B$ with $V_E$'s value at the edge.\n- **Option D trap (4.3 V)**: the student uses $V_C = V_B - 0.7$ as the edge condition.\nr"
+  },
+  {
+    "id": "eee252_bjt_08",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "For the same circuit, find the value of $V_B$ at which the transistor operates in SATURATION with a forced β of 3.",
+    "options": [
+"3.44 V",
+"3.1 V",
+"3.9 V",
+"2.9 V"
+    ],
+    "correct": 0,
+    "short": "In saturation $V_{CE} = 0.2$ V and $I_C = 3I_B$ with $I_E = 4I_B$: $V_B - 0.5 = 5 - 3(V_B-0.7)/4$ ⇒ $V_B = 3.44$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: forced $\\beta_{forced} = 3$, $V_{CE(sat)} = 0.2$ V, $V_{BE} = 0.7$ V.\nIn saturation: $I_C = \\beta_{forced} I_B = 3I_B$, and $I_E = I_C + I_B = 4I_B$.\n\n**Step 2: Full Mathematical Workings**\n\nStep A — emitter voltage and current:\n$$V_E = V_B - 0.7$$\n$$I_E = \\frac{V_B - 0.7}{1k} = 4I_B \\quad\\Rightarrow\\quad I_B = \\frac{V_B - 0.7}{4k}$$\nStep B — collector current and voltage:\n$$I_C = 3I_B = \\frac{3(V_B - 0.7)}{4k}$$\n$$V_C = 5 - I_C \\times 1k = 5 - \\frac{3(V_B - 0.7)}{4}$$\nStep C — saturation condition $V_C = V_E + 0.2$:\n$$V_C = V_B - 0.7 + 0.2 = V_B - 0.5$$\nEquate:\n$$5 - \\frac{3(V_B - 0.7)}{4} = V_B - 0.5$$\n$$5 + 0.5 = V_B + \\frac{3(V_B - 0.7)}{4}$$\nMultiply by 4:\n$$22 = 4V_B + 3V_B - 2.1$$\n$$22 + 2.1 = 7V_B$$\n$$V_B = \\frac{24.1}{7} = 3.443\\ V \\approx 3.44\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nChecking: $V_E = 2.743$ V, $I_E = 2.743$ mA, $I_B = 0.686$ mA, $I_C = 2.057$ mA — ratio $I_C/I_B = 3$ exactly (the forced β). The forced-β concept quantifies HOW DEEP the saturation is: 3 means well into saturation.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (3.1 V)**: that is the EDGE of saturation (forced β → β), not the deep-saturation point.\n- **Option C trap (3.9 V)**: the student uses $I_E = 3I_B$ (forgets $I_E = I_C + I_B$).\n- **Option D trap (2.9 V)**: arithmetic slip in clearing the fraction.\nr"
+  },
+  {
+    "id": "eee252_bjt_09",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "Consider the fixed-bias circuit: $V_{CC} = 12$ V → $R_B = 1$ MΩ → base; $V_{CC} = 12$ V → $R_C = 3$ kΩ → collector; emitter grounded; $V_{BE} = 0.7$ V. For β = 100, the quiescent $I_C$ and $V_{CE}$ are:",
+    "options": [
+"$I_C = 1.13$ mA, $V_{CE} = 8.61$ V",
+"$I_C = 11.3$ mA, $V_{CE} = -21.9$ V",
+"$I_C = 1.13$ mA, $V_{CE} = 3.39$ V",
+"$I_C = 0.113$ mA, $V_{CE} = 11.66$ V"
+    ],
+    "correct": 0,
+    "short": "$I_B = (12-0.7)/1M = 11.3$ µA; $I_C = 100 \\times 11.3\\mu = 1.13$ mA; $V_{CE} = 12 - 1.13m\\times3k = 8.61$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{CC} = 12$ V, $R_B = 1$ MΩ, $R_C = 3$ kΩ, $V_{BE} = 0.7$ V, $\\beta = 100$.\nGoverning laws — fixed bias:\n$$I_B = \\frac{V_{CC} - V_{BE}}{R_B} \\qquad I_C = \\beta I_B \\qquad V_{CE} = V_{CC} - I_C R_C$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — base current:\n$$I_B = \\frac{12 - 0.7}{10^{6}}$$\n$$I_B = \\frac{11.3}{10^{6}} = 11.3\\ \\mu A$$\nStep B — collector current:\n$$I_C = 100 \\times 11.3 \\times 10^{-6}$$\n$$I_C = 1.13 \\times 10^{-3} = 1.13\\ mA$$\nStep C — collector-emitter voltage:\n$$V_{CE} = 12 - 1.13 \\times 10^{-3} \\times 3 \\times 10^{3}$$\n$$V_{CE} = 12 - 3.39$$\n$$V_{CE} = 8.61\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe quiescent point (1.13 mA, 8.61 V) sits in the active region with $V_{CE}$ well above $V_{CE(sat)}$ — the transistor is a valid amplifier at this bias.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student computes $I_B = 113$ µA (uses $R_B = 100$ kΩ).\n- **Option C trap**: the student drops the $I_C R_C$ term from $V_{CE}$... (3.39 = the DROP, reported as $V_{CE}$).\n- **Option D trap**: the student forgets β (uses $I_C = I_B$).\nr"
+  },
+  {
+    "id": "eee252_bjt_10",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "The fixed-bias circuit (same values) is rebuilt with a different transistor of the same part number having β = 200. The new $I_C$ and $V_{CE}$ are:",
+    "options": [
+"$I_C = 2.26$ mA, $V_{CE} = 5.22$ V",
+"$I_C = 1.13$ mA, $V_{CE} = 8.61$ V",
+"$I_C = 2.26$ mA, $V_{CE} = 10.87$ V",
+"$I_C = 0.565$ mA, $V_{CE} = 10.3$ V"
+    ],
+    "correct": 0,
+    "short": "$I_B$ is unchanged (11.3 µA — set only by $V_{CC}, R_B, V_{BE}$); $I_C = 200 \\times 11.3\\mu = 2.26$ mA; $V_{CE} = 12 - 6.78 = 5.22$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\beta = 200$; circuit values unchanged.\nKey observation: the base current of fixed bias does NOT depend on β:\n$$I_B = \\frac{V_{CC} - V_{BE}}{R_B}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — base current (unchanged):\n$$I_B = \\frac{11.3}{10^{6}} = 11.3\\ \\mu A$$\nStep B — new collector current:\n$$I_C = 200 \\times 11.3 \\times 10^{-6}$$\n$$I_C = 2.26\\ mA$$\nStep C — new $V_{CE}$:\n$$V_{CE} = 12 - 2.26 \\times 10^{-3} \\times 3 \\times 10^{3}$$\n$$V_{CE} = 12 - 6.78$$\n$$V_{CE} = 5.22\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nDoubling β doubled $I_C$ and nearly halved $V_{CE}$ (from 8.61 V to 5.22 V). The Q-point is still active, but it has moved dramatically — this β-dependence is exactly why fixed bias is unacceptable in production.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student assumes $I_C$ is β-independent (that is the WISH, not the behaviour).\n- **Option C trap**: the student adds instead of subtracting the collector drop.\n- **Option D trap**: the student divides by β twice.\nr"
+  },
+  {
+    "id": "eee252_bjt_11",
+    "topicId": "eee252-bjt",
+    "kind": "calc",
+    "question": "Between the β = 100 and β = 200 transistors in the same fixed-bias circuit, the percentage change in $I_C$ is:",
+    "options": [
+"+100%",
+"+50%",
+"+200%",
+"+25%"
+    ],
+    "correct": 0,
+    "short": "$\\Delta I_C/I_C = (2.26 - 1.13)/1.13 = 100\\%$ — $I_C$ scales directly with β in fixed bias.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_C(100) = 1.13$ mA, $I_C(200) = 2.26$ mA.\nGoverning law:\n$$\\text{percentage change} = \\frac{I_C(200) - I_C(100)}{I_C(100)} \\times 100\\%$$\n\n**Step 2: Full Mathematical Workings**\n\n$$\\text{percentage change} = \\frac{2.26 - 1.13}{1.13} \\times 100\\%$$\n$$\\frac{2.26 - 1.13}{1.13} = \\frac{1.13}{1.13} = 1$$\n$$\\text{percentage change} = 100\\%$$\n\n**Step 3: Verification & Physical Interpretation**\n\nIn fixed bias $I_C = \\beta I_B$ with $I_B$ fixed, so $I_C$ tracks β ONE-FOR-ONE: a 100% change in β produces a 100% change in $I_C$. No other biasing scheme behaves this badly.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (50%)**: the student divides the change by the NEW current.\n- **Option C trap (200%)**: the student divides by $I_B$ instead of $I_C$.\n- **Option D trap (25%)**: the student compares $V_{CE}$ changes instead of $I_C$.\nr"
+  },
+  {
+    "id": "eee252_bjt_12",
+    "topicId": "eee252-bjt",
+    "kind": "theory",
+    "question": "Is the fixed-bias circuit ($V_{CC} = 12$ V, $R_B = 1$ MΩ, $R_C = 3$ kΩ) acceptable as the front end of an amplifier, and why?",
+    "options": [
+"No — the bias point depends directly on β, which varies enormously between transistors, making the design unreproducible",
+"Yes — it is the most stable biasing scheme available",
+"Yes — $V_{CE}$ stays constant regardless of β",
+"No — the circuit cannot amplify at all"
+    ],
+    "correct": 0,
+    "short": "Fixed bias is β-unstable: $I_C = β(V_{CC}-V_{BE})/R_B$ moves one-for-one with β.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nFixed bias sets $I_B = (V_{CC}-V_{BE})/R_B$ and therefore $I_C = \\beta I_B$. Since β varies widely between individual transistors (even of the same part number) and with temperature, the quiescent point wanders correspondingly.\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: the bias point is β-dependent and therefore unreproducible — a production amplifier cannot tolerate a 100% current change for a 2:1 β spread.\n- **Option B (wrong)**: fixed bias is the LEAST stable of the standard schemes (emitter-degeneration and divider bias stabilise the point).\n- **Option C (wrong)**: we computed $V_{CE}$ changing from 8.61 V to 5.22 V.\n- **Option D (wrong)**: the circuit DOES amplify — its fault is instability, not incapability.\n\n**Step 3: Exam Trap Summary**\n\nThis is the classic \"criticise the bias scheme\" question. The answer is always about β-STABILITY: state the equation $I_C = \\beta(V_{CC}-V_{BE})/R_B$, point out the one-for-one β dependence, and note the fix (emitter resistor/voltage-divider bias).\nr"
+  },
+  {
+    "id": "eee252_small-signal_01",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "Consider the amplifier of Fig. 1 operated with $V_{CC} = +3$ V (collector load $R_C$, input applied to the base). The theoretical maximum voltage gain is:",
+    "options": [
+"−120 V/V",
+"−60 V/V",
+"−3 V/V",
+"+120 V/V"
+    ],
+    "correct": 0,
+    "short": "$A_{v,max} = -V_{CC}/V_T = -3/0.025 = -120$ V/V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{CC} = 3$ V, $V_T = 25$ mV.\nGoverning law — the maximum CE gain is set by the supply and the thermal voltage:\n$$A_{v,max} = -\\frac{V_{CC}}{V_T}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$A_{v,max} = -\\frac{3}{0.025}$$\n$$A_{v,max} = -\\frac{3}{25 \\times 10^{-3}}$$\n$$A_{v,max} = -120\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe gain ceiling arises because $g_m = I_C/V_T$ while $R_C$ is limited by $I_C R_C = V_{CC} - V_{CE}$, so the product $g_m R_C$ peaks at $V_{CC}/V_T$. For a 3 V supply the theoretical ceiling is 120.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (−60)**: the student uses $V_{CC}/2$ in the numerator.\n- **Option C trap (−3)**: the student divides by 1 V instead of $V_T$.\n- **Option D trap (+120)**: sign error — CE stages invert.\nr"
+  },
+  {
+    "id": "eee252_small-signal_02",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "For the same amplifier ($V_{CC} = 3$ V), the bias $V_{CE}$ needed to provide a gain of −60 V/V is:",
+    "options": [
+"1.5 V",
+"2.4 V",
+"0.6 V",
+"1.2 V"
+    ],
+    "correct": 0,
+    "short": "$|A_v| = (V_{CC}-V_{CE})/V_T$ ⇒ $V_{CE} = V_{CC} - |A_v|V_T = 3 - 60\\times0.025 = 1.5$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $V_{CC} = 3$ V, target $|A_v| = 60$.\nGoverning law — CE gain in terms of the bias point:\n$$|A_v| = \\frac{V_{CC} - V_{CE}}{V_T}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{CE} = V_{CC} - |A_v| V_T$$\n$$V_{CE} = 3 - 60 \\times 0.025$$\n$$60 \\times 0.025 = 1.5$$\n$$V_{CE} = 3 - 1.5 = 1.5\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nBiasing at $V_{CE} = 1.5$ V leaves exactly $V_{CC} - V_{CE} = 1.5$ V across the collector resistor. Since $g_m R_C = (I_C/V_T)(V_{RC}/I_C) = V_{RC}/V_T = 1.5/0.025 = 60$, the gain is −60 V/V.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (2.4 V)**: the student uses $V_T = 10$ mV.\n- **Option C trap (0.6 V)**: the student computes $|A_v|V_T$ and forgets to subtract from $V_{CC}$... reports $V_{CC}-2.4$ as 0.6 — arithmetic slip.\n- **Option D trap (1.2 V)**: the student uses $V_{CC}/2.5$ style shortcut.\nr"
+  },
+  {
+    "id": "eee252_small-signal_03",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "If the DC collector current at the bias point is to be 0.5 mA (with $V_{CE} = 1.5$ V, $V_{CC} = 3$ V), the required collector resistance $R_C$ is:",
+    "options": [
+"3 kΩ",
+"1.5 kΩ",
+"6 kΩ",
+"0.33 kΩ"
+    ],
+    "correct": 0,
+    "short": "$R_C = (V_{CC}-V_{CE})/I_C = (3-1.5)/0.5m = 3$ kΩ.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_C = 0.5$ mA, $V_{CE} = 1.5$ V, $V_{CC} = 3$ V.\nGoverning law:\n$$R_C = \\frac{V_{CC} - V_{CE}}{I_C}$$\n\n**Step 2: Full Mathematical Workings**\n\n$$V_{CC} - V_{CE} = 3 - 1.5 = 1.5\\ V$$\n$$R_C = \\frac{1.5}{0.5 \\times 10^{-3}}$$\n$$R_C = 3 \\times 10^{3} = 3\\ k\\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe 3 kΩ collector resistor drops exactly half the supply at the 0.5 mA bias point. Checking the gain: $g_m = 0.5m/0.025 = 20$ mA/V, $g_m R_C = 20m \\times 3k = 60$ — consistent with the −60 V/V target.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (1.5 kΩ)**: the student divides $V_{CE}$ by $I_C$ instead of the resistor drop.\n- **Option C trap (6 kΩ)**: the student uses $V_{CC}$ alone.\n- **Option D trap (0.33 kΩ)**: the student inverts the ratio.\nr"
+  },
+  {
+    "id": "eee252_small-signal_04",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "At the same bias point ($I_C = 0.5$ mA, $I_S = 10^{-15}$ A, $V_T = 25$ mV), the required $V_{BE}$ is:",
+    "options": [
+"0.673 V",
+"0.7 V",
+"0.635 V",
+"0.75 V"
+    ],
+    "correct": 0,
+    "short": "$V_{BE} = V_T\\ln(I_C/I_S) = 0.025\\ln(5\\times10^{11}) = 0.025 \\times 26.94 = 0.673$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_C = 0.5$ mA, $I_S = 10^{-15}$ A, $V_T = 25$ mV.\nGoverning law (active mode, inverted):\n$$V_{BE} = V_T \\ln\\frac{I_C}{I_S}$$\n\n**Step 2: Full Mathematical Workings**\n\nRatio:\n$$\\frac{I_C}{I_S} = \\frac{0.5 \\times 10^{-3}}{10^{-15}} = 5 \\times 10^{11}$$\nNatural log:\n$$\\ln(5 \\times 10^{11}) = \\ln 5 + 11\\ln 10$$\n$$\\ln 5 = 1.6094 \\qquad 11\\ln 10 = 11 \\times 2.3026 = 25.329$$\n$$\\ln(5 \\times 10^{11}) = 26.938$$\nMultiply:\n$$V_{BE} = 0.025 \\times 26.938$$\n$$V_{BE} = 0.6734\\ V \\approx 0.673\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe exact exponential model demands 0.673 V — slightly less than the 0.7 V rule of thumb, because 0.5 mA is below the ~1 mA where 0.7 V typically applies. In exams: use 0.7 V when told to; otherwise compute.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap (0.7 V)**: the student applies the rule of thumb instead of the exponential model.\n- **Option C trap (0.635 V)**: the student drops the $\\ln 5$ term (uses $11\\ln 10$ only).\n- **Option D trap (0.75 V)**: the student uses $I_C = 1$ mA.\nr"
+  },
+  {
+    "id": "eee252_small-signal_05",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "A 5 mV peak sine wave $v_{be}$ is superimposed on $V_{BE}$ at the bias point (gain −60 V/V, $g_m = 20$ mA/V). The output voltage signal $v_{ce}$ and the signal collector current $i_c$ are:",
+    "options": [
+"$v_{ce} = -300$ mV, $i_c = 0.1$ mA",
+"$v_{ce} = -300$ mV, $i_c = 1$ mA",
+"$v_{ce} = -60$ mV, $i_c = 0.1$ mA",
+"$v_{ce} = +300$ mV, $i_c = 0.1$ mA"
+    ],
+    "correct": 0,
+    "short": "$v_{ce} = A_v v_{be} = -60 \\times 5m = -300$ mV; $i_c = g_m v_{be} = 20m \\times 5m = 0.1$ mA.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $v_{be} = 5$ mV peak, $A_v = -60$, $g_m = 20$ mA/V.\nGoverning laws:\n$$v_{ce} = A_v v_{be} \\qquad i_c = g_m v_{be}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — output voltage:\n$$v_{ce} = -60 \\times 5 \\times 10^{-3}$$\n$$v_{ce} = -300 \\times 10^{-3} = -300\\ mV\\ \\text{peak}$$\nStep B — signal collector current:\n$$i_c = 20 \\times 10^{-3} \\times 5 \\times 10^{-3}$$\n$$i_c = 100 \\times 10^{-6} = 0.1\\ mA\\ \\text{peak}$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe collector current signal is $g_m v_{be}$ (20 mA/V transconductance), and the voltage swing is that current through the collector resistance: $0.1m \\times 3k = 0.3$ V — matching $-A_v v_{be}$ exactly. The signal stays linear because 5 mV ≪ 25 mV.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: $i_c = 1$ mA uses $g_m = 200$ mA/V.\n- **Option C trap**: $v_{ce}$ uses a gain of −12.\n- **Option D trap**: sign error on $v_{ce}$ (CE stages invert).\nr"
+  },
+  {
+    "id": "eee252_small-signal_06",
+    "topicId": "eee252-small-signal",
+    "kind": "theory",
+    "question": "A BJT biased at $I_C = 1$ mA has $\\beta = 100$ and $V_A = 100$ V ($V_T = 25$ mV). Compute the hybrid-π parameters $g_m$, $r_\\pi$, $r_e$ and $r_o$.",
+    "options": [
+"$g_m = 40$ mA/V, $r_\\pi = 2.5$ kΩ, $r_e = 24.8$ Ω, $r_o = 100$ kΩ",
+"$g_m = 40$ mA/V, $r_\\pi = 25$ kΩ, $r_e = 25$ Ω, $r_o = 100$ kΩ",
+"$g_m = 25$ mA/V, $r_\\pi = 2.5$ kΩ, $r_e = 25$ Ω, $r_o = 10$ kΩ",
+"$g_m = 40$ mA/V, $r_\\pi = 2.5$ kΩ, $r_e = 25$ Ω, $r_o = 1$ MΩ"
+    ],
+    "correct": 0,
+    "short": "$g_m = 1m/0.025 = 40$ mA/V; $r_\\pi = \\beta/g_m = 2.5$ kΩ; $r_e = V_T/I_E \\approx 24.8$ Ω; $r_o = V_A/I_C = 100$ kΩ.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $I_C = 1$ mA, $\\beta = 100$, $V_A = 100$ V, $V_T = 25$ mV.\nGoverning laws:\n$$g_m = \\frac{I_C}{V_T} \\qquad r_\\pi = \\frac{\\beta}{g_m} \\qquad r_e = \\frac{V_T}{I_E} \\qquad r_o = \\frac{V_A}{I_C}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — transconductance:\n$$g_m = \\frac{1 \\times 10^{-3}}{25 \\times 10^{-3}} = 40\\ mA/V$$\nStep B — base-emitter resistance:\n$$r_\\pi = \\frac{100}{40 \\times 10^{-3}} = 2500\\ \\Omega = 2.5\\ k\\Omega$$\nStep C — emitter resistance (T model), with $I_E = I_C + I_B = 1.01$ mA:\n$$r_e = \\frac{25 \\times 10^{-3}}{1.01 \\times 10^{-3}} = 24.75\\ \\Omega \\approx 24.8\\ \\Omega$$\nStep D — output resistance (Early effect):\n$$r_o = \\frac{100}{1 \\times 10^{-3}} = 100\\ k\\Omega$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe \"40 mA/V per mA\" rule and the $r_e = 25$ mV/$I_E$ rule hold. $r_o$ models the Early effect: the collector current rises 1% per volt of $V_{CE}$, i.e. a 100 kΩ slope resistance.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: $r_\\pi = \\beta \\times 25$mV confusion (uses $25k = \\beta r_e$ without dividing by $I_C$).\n- **Option C trap**: $g_m$ computed with $V_T = 40$ mV, and $r_o$ with $V_A = 10$ V.\n- **Option D trap**: $r_o$ computed with $I_B$ instead of $I_C$.\nr"
+  },
+  {
+    "id": "eee252_small-signal_07",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "A common-emitter amplifier uses a BJT with $\\beta = 100$ biased at $I_C = 0.5$ mA, with $R_C = 10$ kΩ. The input resistance $R_{in}$, output resistance $R_o$ and open-circuit gain $A_{vo}$ are:",
+    "options": [
+"$R_{in} = 5$ kΩ, $R_o = 10$ kΩ, $A_{vo} = -200$ V/V",
+"$R_{in} = 2.5$ kΩ, $R_o = 10$ kΩ, $A_{vo} = -100$ V/V",
+"$R_{in} = 5$ kΩ, $R_o = 5$ kΩ, $A_{vo} = -200$ V/V",
+"$R_{in} = 50$ kΩ, $R_o = 10$ kΩ, $A_{vo} = -200$ V/V"
+    ],
+    "correct": 0,
+    "short": "$g_m = 20$ mA/V; $r_\\pi = 100/20m = 5$ kΩ = $R_{in}$; $R_o = R_C = 10$ kΩ; $A_{vo} = -g_m R_C = -200$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $\\beta = 100$, $I_C = 0.5$ mA, $R_C = 10$ kΩ.\nGoverning laws:\n$$g_m = \\frac{I_C}{V_T} \\qquad R_{in} = r_\\pi = \\frac{\\beta}{g_m} \\qquad R_o = R_C \\qquad A_{vo} = -g_m R_C$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A:\n$$g_m = \\frac{0.5 \\times 10^{-3}}{0.025} = 20\\ mA/V$$\nStep B:\n$$R_{in} = r_\\pi = \\frac{100}{20 \\times 10^{-3}} = 5\\ k\\Omega$$\nStep C:\n$$R_o = R_C = 10\\ k\\Omega$$\nStep D:\n$$A_{vo} = -20 \\times 10^{-3} \\times 10 \\times 10^{3} = -200\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe CE stage offers a moderate input resistance (5 kΩ — limited by $r_\\pi$), an output resistance set by the collector resistor, and a large open-circuit gain. Note $R_{in}$ does NOT include any base biasing network — that would appear in parallel with $r_\\pi$.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student uses $I_C = 1$ mA (hence $g_m = 40$, $r_\\pi = 2.5$ k).\n- **Option C trap**: $R_o$ reported as $R_C \\parallel r_o$ with a wrongly small $r_o$.\n- **Option D trap**: $R_{in} = \\beta R_C$ — a classic dimensional mix-up.\nr"
+  },
+  {
+    "id": "eee252_small-signal_08",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "The same CE amplifier ($R_{in} = 5$ kΩ, $A_{vo} = -200$, $R_o = 10$ kΩ) is fed from a 10 kΩ source and drives a 10 kΩ load. The resulting $A_v$ and overall gain $G_v$ are:",
+    "options": [
+"$A_v = -100$, $G_v = -33.3$ V/V",
+"$A_v = -200$, $G_v = -200$ V/V",
+"$A_v = -66.7$, $G_v = -22.2$ V/V",
+"$A_v = -100$, $G_v = -100$ V/V"
+    ],
+    "correct": 0,
+    "short": "$A_v = A_{vo}\\times R_L/(R_L+R_o) = -200 \\times 10/20 = -100$; $G_v = A_v \\times R_{in}/(R_{in}+R_{sig}) = -100 \\times 5/15 = -33.3$.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $A_{vo} = -200$, $R_o = 10$ kΩ, $R_L = 10$ kΩ, $R_{in} = 5$ kΩ, $R_{sig} = 10$ kΩ.\nGoverning laws:\n$$A_v = A_{vo}\\frac{R_L}{R_L + R_o} \\qquad G_v = A_v\\frac{R_{in}}{R_{in} + R_{sig}}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — gain with the load attached:\n$$\\frac{R_L}{R_L + R_o} = \\frac{10}{10 + 10} = \\frac{10}{20} = 0.5$$\n$$A_v = -200 \\times 0.5 = -100\\ V/V$$\nStep B — overall gain with the source resistance:\n$$\\frac{R_{in}}{R_{in} + R_{sig}} = \\frac{5}{5 + 10} = \\frac{5}{15} = \\frac{1}{3}$$\n$$G_v = -100 \\times \\frac{1}{3} = -33.3\\ V/V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nBoth loading effects matter for a BJT stage: the load halves the gain, and the source divider cuts it by a further factor of 3. Equivalently, $G_v = -g_m(R_C \\parallel R_L) \\times r_\\pi/(r_\\pi + R_{sig}) = -20m \\times 5k \\times 1/3 = -33.3$ — identical.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student ignores BOTH loading effects (reports $A_{vo}$).\n- **Option C trap**: the student uses $R_{in} = 10$ kΩ (includes $R_{sig}$ wrongly).\n- **Option D trap**: the student applies only the load effect, forgetting the source divider.\nr"
+  },
+  {
+    "id": "eee252_small-signal_09",
+    "topicId": "eee252-small-signal",
+    "kind": "calc",
+    "question": "If the peak $v_{be}$ is to be limited to 5 mV (in the same amplifier: $r_\\pi = 5$ kΩ, $R_{sig} = 10$ kΩ, $G_v = -33.3$), the allowed peak $v_{sig}$ and the resulting load output are:",
+    "options": [
+"$v_{sig} = 15$ mV, $v_o = -0.5$ V",
+"$v_{sig} = 5$ mV, $v_o = -0.167$ V",
+"$v_{sig} = 10$ mV, $v_o = -0.333$ V",
+"$v_{sig} = 25$ mV, $v_o = -0.833$ V"
+    ],
+    "correct": 0,
+    "short": "$v_{be} = v_{sig}\\times r_\\pi/(r_\\pi+R_{sig}) = v_{sig}/3$ ⇒ $v_{sig} = 15$ mV; $v_o = G_v v_{sig} = -33.3 \\times 15m = -0.5$ V.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Identification of Given Parameters and Governing Laws**\n\nGiven: $v_{be,max} = 5$ mV, $r_\\pi = 5$ kΩ, $R_{sig} = 10$ kΩ, $G_v = -33.3$.\nGoverning laws:\n$$v_{be} = v_{sig}\\frac{r_\\pi}{r_\\pi + R_{sig}} \\qquad v_o = G_v v_{sig}$$\n\n**Step 2: Full Mathematical Workings**\n\nStep A — input division factor:\n$$\\frac{r_\\pi}{r_\\pi + R_{sig}} = \\frac{5}{15} = \\frac{1}{3}$$\nStep B — allowed source amplitude:\n$$5\\ mV = v_{sig} \\times \\frac{1}{3}$$\n$$v_{sig} = 15\\ mV$$\nStep C — output amplitude across the load:\n$$v_o = -33.3 \\times 15 \\times 10^{-3}$$\n$$v_o = -0.5\\ V$$\n\n**Step 3: Verification & Physical Interpretation**\n\nThe source must supply 15 mV because only one-third of it reaches the base-emitter junction; the 33.3-fold overall gain then produces a 0.5 V output swing. Keeping $v_{be} \\le 5$ mV preserves the small-signal (linear) assumption.\n\n**Step 4: Breakdown of Wrong Options / Common Student Mistakes**\n\n- **Option B trap**: the student equates $v_{sig}$ with $v_{be}$ (forgets the divider).\n- **Option C trap**: the student uses a ½ divider (wrong $r_\\pi$).\n- **Option D trap**: the student uses $v_{be,max} = 8.3$ mV (divides 25 by 3 instead of multiplying 5 by 3).\nr"
+  },
+  {
+    "id": "eee252_small-signal_10",
+    "topicId": "eee252-small-signal",
+    "kind": "theory",
+    "question": "Which small-signal model should be used for a common-collector (emitter-follower) analysis, and why?",
+    "options": [
+"The T model — with $r_e$ in the emitter leg, the follower's gain $R_E/(R_E + r_e)$ falls out of a simple voltage divider",
+"The hybrid-π model only — the T model cannot handle followers",
+"Neither — followers must be analysed with the full nonlinear equations",
+"The MOSFET model, because followers are field-effect circuits"
+    ],
+    "correct": 0,
+    "short": "The T model places r_e directly in the emitter, turning the follower into a voltage divider.",
+    "solution": "### Step-by-Step Derivation & Solution\n\n**Step 1: Core Principle**\n\nIn the T model the BJT is represented with $r_e = V_T/I_E$ in series with the EMITTER lead and a current source $i_e$ in the collector–emitter path. For the common-collector stage (signal into the base, output at the emitter through $R_E$), the circuit reduces to the divider $R_E/(R_E + r_e)$:\n$$A_v = \\frac{R_E}{R_E + r_e} \\approx 1$$\n\n**Step 2: Testing the Options**\n\n- **Option A (correct)**: T model + the one-line divider result.\n- **Option B (wrong)**: both models are exact and interchangeable; the T model is merely CLEANER here.\n- **Option C (wrong)**: small-signal analysis is precisely what linearised models are for.\n- **Option D (wrong)**: followers exist for BJTs too — this is the emitter follower.\n\n**Step 3: Exam Trap Summary**\n\nThe trap is model rigidity. Both hybrid-π and T are always valid; the exam skill is choosing the one that makes the algebra trivial: T for emitter-in-common circuits (CC, CB), hybrid-π for base-in-common analysis (CE).\nr"
+  }
+  ]
 
 }
