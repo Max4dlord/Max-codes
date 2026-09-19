@@ -3,3 +3,7 @@ dist/
 .vite/
 *.zip
 .github/
+
+.env
+.env.local
+.env*.local
